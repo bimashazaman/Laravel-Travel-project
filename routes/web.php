@@ -76,6 +76,25 @@ Route::get('/car', function () {
     return view('Frontend.Cars.Car');
 });
 
+Route::get('/c', function () {
+    return view('Frontend.Conferences.Conference');
+});
+
+Route::get('/cs', function () {
+    return view('Frontend.Conferences.Conferences');
+});
+
+
+Route::get('/h', function () {
+    return view('Frontend.Hotels.Hotel');
+});
+
+Route::get('/hs', function () {
+    return view('Frontend.Hotels.Hotels');
+});
+
+
+
 
 
 

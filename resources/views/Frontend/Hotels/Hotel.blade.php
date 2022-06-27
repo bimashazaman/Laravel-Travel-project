@@ -15,7 +15,7 @@
                             <div class="tour-descriptions-content-inner-left">
                                 <div class="tour-descriptions-content-inner-left-content">
                                     <h1>
-                                        Thieland, New Zealand
+                                        Name
                                     </h1>
                                 </div><!-- /.tour-descriptions-content-inner-left-content -->
                             </div><!-- /.tour-descriptions-content-inner-left -->
@@ -40,7 +40,7 @@
                                                 <li class="carousel__slide">
                                                     <figure>
                                                         <div>
-                                                            <img src="https://picsum.photos/id/1041/800/450" alt="">
+                                                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="">
                                                         </div>
 
                                                     </figure>
@@ -116,16 +116,7 @@
                                     </div>
                                 </section>
 
-                                <div class="uldescription">
-                                    <h2>Highlights</h2>
-                                    <ul>
-                                        <li>Lorem ipsum dolor sit.</li>
-                                        <li>Lorem, ipsum dolor.</li>
-                                        <li>Lorem ipsum dolor sit amet.</li>
-                                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                                        <li>Lorem, ipsum.</li>
-                                    </ul>
-                                </div>
+
 
 
 
@@ -141,10 +132,7 @@
                 <div class="col-md-6">
 
                     <div class="tour-descriptions-content-inner-left-content-title bb">
-                        <h2>
-                            Tour package
-                        </h2>
-
+                        
                         <!--Google map-->
                         <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
                             <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
@@ -173,14 +161,14 @@
     <!-- Tour description end -->
 
 
-<section id="gallery" class="pageov">
+<section id="" class="">
     <div class="container">
         <div class="row">
             <div class="col-sm-12">
                 <div class="">
-                    <div class="view-txt">
+                    <div>
                         <h2>
-                            Welcome to Tour Academy
+                            About The Hotel
                         </h2>
                         <p>
                             Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur temporibus
@@ -208,77 +196,31 @@
 </section>
 
 
-<section class="tableOfPrice">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm-12">
-                <div class="table-responsive">
-                    <table class="table table-bordered extraborder">
-                        <thead>
-                            <tr>
-                                <th scope="col">#</th>
-                                <th scope="col">First</th>
-                                <th scope="col">Last</th>
-                                <th scope="col">Handle</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <th scope="row">1</th>
-                                <td>Mark</td>
-                                <td>Otto</td>
-                                <td>@mdo</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">2</th>
-                                <td>Jacob</td>
-                                <td>Thornton</td>
-                                <td>@fat</td>
-                            </tr>
-                            <tr>
-                                <th scope="row">3</th>
-                                <td>Larry</td>
-                                <td>the Bird</td>
-                                <td>@twitter</td>
-                            </tr>
-                        </tbody>
-                    </table>
-                </div>
-            </div>
-        </div>
-    </div>
-</section>
-
-
 <!--packages start-->
 <section id="pack" class="packages">
     <div class="container">
         <div class="gallary-header text-center">
             <h2>
-                special packages
+                Related Hotels
             </h2>
-            <p>
-                Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.
-            </p>
+
         </div>
         <!--/.gallery-header-->
         <div class="packages-content">
             <div class="row">
 
                 <div class="col-md-4 col-sm-6">
-                    <h3>Day one</h3>
+
                     <div class="single-package-item">
 
-                        <img src="assets/images/packages/p1.jpg" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
                         <div class="package-txt">
                             <h4>
                                 <a href="#">
                                     package one
                                 </a>
                             </h4>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                            </p>
+
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
@@ -308,19 +250,17 @@
                 <!--/.col-->
 
                 <div class="col-md-4 col-sm-6">
-                    <h3>Day one</h3>
+
                     <div class="single-package-item">
 
-                        <img src="assets/images/packages/p1.jpg" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
                         <div class="package-txt">
                             <h4>
                                 <a href="#">
                                     package one
                                 </a>
                             </h4>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                            </p>
+
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
@@ -349,19 +289,17 @@
                 </div>
                 <!--/.col-->
                 <div class="col-md-4 col-sm-6">
-                    <h3>Day one</h3>
+
                     <div class="single-package-item">
 
-                        <img src="assets/images/packages/p1.jpg" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
                         <div class="package-txt">
                             <h4>
                                 <a href="#">
                                     package one
                                 </a>
                             </h4>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                            </p>
+
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
@@ -390,19 +328,17 @@
                 </div>
                 <!--/.col-->
                 <div class="col-md-4 col-sm-6">
-                    <h3>Day one</h3>
+
                     <div class="single-package-item">
 
-                        <img src="assets/images/packages/p1.jpg" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
                         <div class="package-txt">
                             <h4>
                                 <a href="#">
                                     package one
                                 </a>
                             </h4>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                            </p>
+
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
@@ -431,19 +367,17 @@
                 </div>
                 <!--/.col-->
                 <div class="col-md-4 col-sm-6">
-                    <h3>Day one</h3>
+
                     <div class="single-package-item">
 
-                        <img src="assets/images/packages/p1.jpg" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
                         <div class="package-txt">
                             <h4>
                                 <a href="#">
                                     package one
                                 </a>
                             </h4>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                            </p>
+
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
@@ -473,19 +407,17 @@
                 <!--/.col-->
 
                 <div class="col-md-4 col-sm-6">
-                    <h3>Day one</h3>
+
                     <div class="single-package-item">
 
-                        <img src="assets/images/packages/p1.jpg" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
                         <div class="package-txt">
                             <h4>
                                 <a href="#">
                                     package one
                                 </a>
                             </h4>
-                            <p>
-                                Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                            </p>
+
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">

@@ -149,7 +149,7 @@
     </section><!-- /.tour-descriptions -->
     <!-- Tour description end -->
 
-    <section id="gallery" class="pageov">
+    {{-- <section id="gallery" class="pageov">
         <div class="container">
             <div class="row">
                 <div class="col-sm-12">
@@ -181,7 +181,7 @@
         </div>
         <!--/.container-->
 
-    </section>
+    </section> --}}
 
 
     <section class="tableOfPrice">
@@ -242,23 +242,21 @@
                 <div class="row">
 
                     <div class="col-md-4 col-sm-6">
-                        <h3>Day one</h3>
+
                         <div class="single-package-item">
 
-                            <img src="assets/images/packages/p1.jpg" alt="package-place">
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
                             <div class="package-txt">
                                 <h4>
                                     <a href="#">
                                         package one
                                     </a>
                                 </h4>
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                                </p>
+
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                    <span><i class="fa-solid fa-receipt"></i></span> Tesla
                                 </div>
 
                                 <div class="packageOffer">
@@ -284,23 +282,21 @@
                     <!--/.col-->
 
                     <div class="col-md-4 col-sm-6">
-                        <h3>Day one</h3>
+
                         <div class="single-package-item">
 
-                            <img src="assets/images/packages/p1.jpg" alt="package-place">
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
                             <div class="package-txt">
                                 <h4>
                                     <a href="#">
                                         package one
                                     </a>
                                 </h4>
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                                </p>
+
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                    <span><i class="fa-solid fa-receipt"></i></span> Tesla
                                 </div>
 
                                 <div class="packageOffer">
@@ -326,27 +322,25 @@
                     <!--/.col-->
 
                     <div class="col-md-4 col-sm-6">
-                        <h3>Day one</h3>
+
                         <div class="single-package-item">
 
-                            <img src="assets/images/packages/p1.jpg" alt="package-place">
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
                             <div class="package-txt">
                                 <h4>
                                     <a href="#">
                                         package one
                                     </a>
                                 </h4>
-                                <p>
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                                </p>
+
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                    <span><i class="fa-solid fa-receipt"></i></span> Tesla
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Date
+                                    <span><i class="fa-solid fa-calendar"></i></span> 2 seats
                                 </div>
 
                                 <div class="packageOffer">
@@ -357,8 +351,6 @@
                                 <button class="package-view">
                                     view more
                                 </button>
-
-
                             </div>
 
                         </div>
