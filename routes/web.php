@@ -24,6 +24,20 @@ Route::get('/RentACar', function () {
     return view('partials.RentACar');
 });
 
+Route::get('/Rt', function () {
+    return view('partials.RequestTour');
+});
+
+
+Route::get('/c', function () {
+    return view('partials.Contact');
+});
+
+Route::get('/c2', function () {
+    return view('Frontend.About.AboutUs');
+});
+
+
 
 
 

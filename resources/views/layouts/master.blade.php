@@ -100,6 +100,8 @@
     <!--jquery-ui.min.js-->
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
 
+    <script src="{{ asset('js/form.js') }}"></script>
+
     <!-- counter js -->
     <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
     <script src="{{ asset('js/waypoints.min.js') }}"></script>

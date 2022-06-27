@@ -15,7 +15,7 @@ body {
     position: relative;
     font-size: 14px;
     color: #222222;
-    background: rgb(236, 233, 233);
+    background: #F7F6F4;
     font-family: "Poppins", sans-serif;
     max-width: 1920px;
     margin: 0 auto;
@@ -106,6 +106,8 @@ body {
     background-color: #ffffff;
     justify-content: space-between;
 }
+
+
 
 .overview {
     align-items: center;
@@ -352,6 +354,10 @@ body {
 /* .about-us-content {
     margin: -175px 0 0 0;
 } */
+
+.requestTour {
+
+}
 
 .about-us h2 {
     color: #fff;
@@ -1124,3 +1130,138 @@ body {
     color: #304424;
     font-size: 3rem;
 }
+
+
+#multistepsform {
+    padding-right: 10%;
+    width: 700px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+  }
+
+  @media screen and (max-width: 600px) {
+    #multistepsform {
+      width: 100%;
+    }
+
+  }
+  #multistepsform fieldset {
+    background: white;
+    border: 0 none;
+    border-radius: 3px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.4);
+    padding: 20px 30px;
+    box-sizing: border-box;
+    width: 80%;
+    margin: 0 10%;
+    position: relative;
+  }
+  #multistepsform fieldset:not(:first-of-type) {
+    display: none;
+  }
+  #multistepsform input,
+  #multistepsform textarea {
+    padding: 15px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 10px;
+    width: 100%;
+    box-sizing: border-box;
+    font-family: montserrat;
+    color: #2c3e50;
+    font-size: 13px;
+  }
+  #multistepsform input:focus,
+  #multistepsform textarea:focus {
+    border-color: #679b9b;
+    outline: none;
+    color: #637373;
+  }
+  #multistepsform .action-button {
+    width: 100px;
+    background: #304424;
+    font-weight: bold;
+    color: #fff;
+    transition: 150ms;
+    border: 0 none;
+    border-radius: 1px;
+    cursor: pointer;
+    padding: 10px 5px;
+    margin: 10px 5px;
+  }
+  #multistepsform .action-button:hover,
+  #multistepsform .action-button:focus {
+    box-shadow: 0 0 0 2px #304424, 0 0 0 3px #304424;
+    color: #fff;
+  }
+  #multistepsform .fs-title {
+    font-size: 15px;
+    text-transform: uppercase;
+    color: #2c3e50;
+    margin-bottom: 10px;
+  }
+  #multistepsform .fs-subtitle {
+    font-weight: normal;
+    font-size: 13px;
+    color: #666;
+    margin-bottom: 20px;
+  }
+  #multistepsform #progressbar {
+    margin-bottom: 30px;
+    overflow: hidden;
+    counter-reset: step;
+  }
+  #multistepsform #progressbar li {
+    list-style-type: none;
+    color: #304424;
+    text-transform: uppercase;
+    font-size: 9px;
+    width: 33.33%;
+    float: left;
+    position: relative;
+  }
+  #multistepsform #progressbar li:before {
+    content: counter(step);
+    counter-increment: step;
+    width: 20px;
+    line-height: 20px;
+    display: block;
+    font-size: 10px;
+    color: #fff;
+    background: #679b9b;
+    border-radius: 3px;
+    margin: 0 auto 5px auto;
+  }
+  #multistepsform #progressbar li:after {
+    content: "";
+    width: 100%;
+    height: 2px;
+    background: #679b9b;
+    position: absolute;
+    left: -50%;
+    top: 9px;
+    z-index: -1;
+  }
+  #multistepsform #progressbar li:first-child:after {
+    content: none;
+  }
+  #multistepsform #progressbar li.active {
+    color: #1d7239;
+  }
+  #multistepsform #progressbar li.active:before, #multistepsform #progressbar li.active:after {
+    background: #304424;
+    color: white;
+  }
+
+
+  .aboutUs p {
+    font-size: 1.5rem;
+    text-align: center;
+    font-weight: 400;
+    padding-right: 10%;
+    padding-left: 10%;
+    color: #181717;
+    line-height: 1.5;
+    margin: 20px;
+  }
