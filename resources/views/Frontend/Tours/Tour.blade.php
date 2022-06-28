@@ -247,7 +247,7 @@
 						<h3>Day one</h3>
 						<div class="single-package-item">
 
-							<img src="assets/images/packages/p1.jpg" alt="package-place">
+							<img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="package-place">
 							<div class="package-txt">
 								<h4>
 									<a href="#">
@@ -289,7 +289,7 @@
 						<h3>Day one</h3>
 						<div class="single-package-item">
 
-							<img src="assets/images/packages/p1.jpg" alt="package-place">
+							<img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="package-place">
 							<div class="package-txt">
 								<h4>
 									<a href="#">
@@ -331,7 +331,7 @@
 						<h3>Day one</h3>
 						<div class="single-package-item">
 
-							<img src="assets/images/packages/p1.jpg" alt="package-place">
+							<img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="package-place">
 							<div class="package-txt">
 								<h4>
 									<a href="#">

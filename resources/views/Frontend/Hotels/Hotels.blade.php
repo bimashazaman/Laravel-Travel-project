@@ -50,10 +50,10 @@
                             <span class=""><i class="fa-solid fa-star"></i></span>
                         </div>
                         <div class="package-btn">
-                            <button class="package-view">
+                            <a href="{{ url('h') }}"><button class="package-view">
                                 view more
                             </button>
-
+                            </a>
                         </div>
 
 
@@ -101,10 +101,10 @@
                             <span class=""><i class="fa-solid fa-star"></i></span>
                         </div>
                         <div class="package-btn">
-                            <button class="package-view">
+                            <a href="{{ url('h') }}"><button class="package-view">
                                 view more
                             </button>
-
+                            </a>
                         </div>
 
 
@@ -151,10 +151,10 @@
                             <span class=""><i class="fa-solid fa-star"></i></span>
                         </div>
                         <div class="package-btn">
-                            <button class="package-view">
+                            <a href="{{ url('h') }}"><button class="package-view">
                                 view more
                             </button>
-
+                            </a>
                         </div>
 
 
@@ -201,10 +201,10 @@
                             <span class=""><i class="fa-solid fa-star"></i></span>
                         </div>
                         <div class="package-btn">
-                            <button class="package-view">
+                            <a href="{{ url('h') }}"><button class="package-view">
                                 view more
                             </button>
-
+                            </a>
                         </div>
 
 
@@ -251,10 +251,10 @@
                             <span class=""><i class="fa-solid fa-star"></i></span>
                         </div>
                         <div class="package-btn">
-                            <button class="package-view">
+                            <a href="{{ url('h') }}"><button class="package-view">
                                 view more
                             </button>
-
+                            </a>
                         </div>
 
 
@@ -301,10 +301,10 @@
                             <span class=""><i class="fa-solid fa-star"></i></span>
                         </div>
                         <div class="package-btn">
-                            <button class="package-view">
+                            <a href="{{ url('h') }}"><button class="package-view">
                                 view more
                             </button>
-
+                            </a>
                         </div>
 
 
@@ -351,10 +351,10 @@
                             <span class=""><i class="fa-solid fa-star"></i></span>
                         </div>
                         <div class="package-btn">
-                            <button class="package-view">
+                            <a href="{{ url('h') }}"><button class="package-view">
                                 view more
                             </button>
-
+                            </a>
                         </div>
 
 
@@ -401,10 +401,10 @@
                             <span class=""><i class="fa-solid fa-star"></i></span>
                         </div>
                         <div class="package-btn">
-                            <button class="package-view">
+                            <a href="{{ url('h') }}"><button class="package-view">
                                 view more
                             </button>
-
+                            </a>
                         </div>
 
 
@@ -451,10 +451,10 @@
                             <span class=""><i class="fa-solid fa-star"></i></span>
                         </div>
                         <div class="package-btn">
-                            <button class="package-view">
+                            <a href="{{ url('h') }}"><button class="package-view">
                                 view more
                             </button>
-
+                            </a>
                         </div>
 
 

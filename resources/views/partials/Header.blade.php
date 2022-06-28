@@ -4,7 +4,7 @@
 				<div class="row">
 					<div class="col-sm-2">
 						<div class="logo">
-							<a href="index.html">
+							<a href="{{ url('/') }}">
 								<img src="{{ asset('images/Tour-Logo.png') }}" alt="">
 							</a>
 						</div><!-- /.logo-->
@@ -21,10 +21,13 @@
 							</div><!-- /.navbar-header-->
 							<div class="collapse navbar-collapse bg-white">
 								<ul class="nav navbar-nav navbar-right">
-									<li class="smooth-menu"><a href="#home">home</a></li>
-									<li class="smooth-menu"><a href="#gallery">Destination</a></li>
-									<li class="smooth-menu"><a href="#pack">Packages </a></li>
-
+									<li class=""><a href="{{ route('home') }}">home</a></li>
+									<li class=""><a href="{{ url('/tours') }}">Tours</a></li>
+									<li class=""><a href="{{ url('/hs') }}">Hotels</a></li>
+                                    <li class=""><a href="{{ url('/cars') }}">Cars</a></li>
+                                    <li class=""><a href="{{ url('/cs') }}">Events</a></li>
+                                    <li class=""><a href="{{ url('/c2') }}">About Us</a></li>
+                                    <li class=""><a href="{{ url('/contact') }}">Contact</a></li>
 									<li>
 										<input type="text" placeholder="Search" class="searchHeader">
 									</li>
