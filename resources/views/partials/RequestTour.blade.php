@@ -3,7 +3,7 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="requestTour__title">
-                    <h2>Request a tour</h2>
+                    <h2 style="text-align: center">Request a tour</h2>
 
             </div>
         </div>
@@ -57,7 +57,3 @@
         </div>
     </div>
 </section>
- <br>
- <br>
- <br>
- <br>

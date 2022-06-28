@@ -6,7 +6,7 @@
 					<div class="overview-content">
 						<div class="overview-txt">
 							<h2>
-								Welcome to Tour Academy
+								Welcome to Tour Academy!
 							</h2>
 							<p>
 								Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur temporibus
