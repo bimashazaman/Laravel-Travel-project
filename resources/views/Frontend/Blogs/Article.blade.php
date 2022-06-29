@@ -2,8 +2,17 @@
 @section('content')
     <br>
     <br>
-    <br>
-    <br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br>
+<br><br>
+
+<br><br>
+<br><br>
     <h2 class="" style="text-align: center">
         Articel Title
     </h2>

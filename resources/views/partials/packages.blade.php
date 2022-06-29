@@ -1,4 +1,7 @@
 	<!--packages start-->
+
+
+
     <section id="pack" class="packages">
         <div class="container">
 
@@ -15,15 +18,10 @@
                                 Something
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="kki">
+
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
                                     perspiciatis!
-                                </p>
+
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
@@ -59,7 +57,6 @@
 
                     </div>
                     <!--/.col-->
-
                     <div class="col-md-4 col-sm-6">
                         <h3 style="text-align: center">Day one</h3>
                         <div class="single-package-item">
@@ -69,15 +66,10 @@
                                 Something
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="kki">
+
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
                                     perspiciatis!
-                                </p>
+
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
@@ -112,7 +104,6 @@
                         <!--/.single-package-item-->
 
                     </div>
-
                     <div class="col-md-4 col-sm-6">
                         <h3 style="text-align: center">Day one</h3>
                         <div class="single-package-item">
@@ -122,15 +113,10 @@
                                 Something
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="kki">
+
                                     Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
                                     perspiciatis!
-                                </p>
+
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">

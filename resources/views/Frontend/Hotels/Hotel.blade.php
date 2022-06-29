@@ -5,6 +5,12 @@
 <br>
 <br>
 <br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+<br><br>
+
     <!-- Tour description start -->
     <section class="tour-descriptions">
         <div class="container">
@@ -132,7 +138,7 @@
                 <div class="col-md-6">
 
                     <div class="tour-descriptions-content-inner-left-content-title bb">
-                        
+
                         <!--Google map-->
                         <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
                             <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"

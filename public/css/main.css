@@ -173,7 +173,6 @@ body {
     font-size: 16px;
     font-weight: 400;
     color: rgb(0, 0, 0);
-    margin-bottom: 20px;
     line-height: 1.5;
 }
 
@@ -181,31 +180,25 @@ body {
     font-size: 35px;
     font-weight: bold;
     color: rgb(0, 0, 0);
-    margin-bottom: 20px;
+
 }
 
 .packageName {
     font-size: 16px;
     font-weight: 500;
     color: rgb(0, 0, 0);
-    margin-bottom: 20px;
+    margin-bottom: 10px;
     line-height: 1.5;
     text-align: center;
 
 }
 
-.kki {
+
+.package-txt p {
     font-size: 16px;
     font-weight: 900;
-    color: rgb(0, 0, 0);
+    color: black;
 
-}
-
-.package-txt h4 {
-    margin-left: 15px;
-    font-size: 27px;
-    font-weight: 700;
-    text-decoration: underline;
 }
 
 .create-own-trip-form {
@@ -527,6 +520,8 @@ body {
 
 /*single-package-item */
 .single-package-item {
+    margin-bottom: 30px;
+    margin-top: 30px;
    margin-left: 30px;
     margin-right: 30px;
     margin-top: 15px;
@@ -598,13 +593,11 @@ body {
 .package-view {
     padding: 15px;
     background-color: #E5A686;
-    color: #fff;
-    font-size: 16px;
+    color: #181717;
+    font-size: 17px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
-    line-height: 1.4;
     text-align: center;
-    border-radius: 10px;
     border: none;
     box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
