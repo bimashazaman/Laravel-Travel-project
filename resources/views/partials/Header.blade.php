@@ -30,6 +30,7 @@
                                           <a class="dropdown-item" href="{{ url('/cars')}}">Rent a transport</a>
                                           <a class="dropdown-item" href="{{ url('/hs') }}">Hotels</a>
                                           <a class="dropdown-item" href="{{ url('/acs') }}">Tour Accessories</a>
+                                          <a class="dropdown-item" href="{{ url('/mice') }}">MICE</a>
                                         </div>
                                       </li>
                                     <li class="sp"><a href="">Armenia</a></li>

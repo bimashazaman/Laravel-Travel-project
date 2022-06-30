@@ -71,6 +71,13 @@ Route::get('/ac', function () {
     return view('Frontend.TourAccesories.Accesiorieses');
 });
 
+Route::get('/TentForm', function () {
+    return view('Frontend.TourAccesories.TentForm');
+});
+
+Route::get('/mice', function () {
+    return view('Frontend.Mice.MICE');
+});
 
 
 

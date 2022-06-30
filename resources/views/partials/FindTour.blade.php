@@ -3,36 +3,17 @@
         Find Your Tour Here
     </h2>
 <div class="container">
-        <div class="row">
-            <div class="col-md-3">
-                <div class="single-card">
-                    <input type="text" placeholder="Search">
-                </div>
-                <!--/.single-card-->
-            </div>
-            <div class="col-md-3">
-                <div class="single-card">
-                    <input type="text" placeholder="Destination">
-                </div>
-                <!--/.single-card-->
-            </div>
-            <div class="col-md-3">
-                <div class="single-card">
-                    <input type="number" placeholder="Duration">
-                </div>
-                <!--/.single-card-->
-            </div>
-            <!--/.col-->
-            <div class="col-md-3">
-                <div class="single-card">
-                    <input type="date">
-                </div>
-                <!--/.single-card-->
-            </div>
 
-
-            <!--/.col-->
+    <div class="parentCard">
+        <div class="div1Card"><div class="single-card"> <input type="text" placeholder="Search"> </div> </div>
+        <div class="div2Card"><div class="single-card"> <input type="text" placeholder="Destination"> </div> </div>
+        <div class="div3Card"><div class="single-card"> <input type="number" placeholder="Duration"></div> </div>
+        <div class="div4Card"><div class="single-card"> <input type="date"> </div></div>
         </div>
+
+      
+
+
         <button class="package-view">
             Find Tour
         </button>
