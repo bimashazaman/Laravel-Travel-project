@@ -1,61 +1,24 @@
 @extends('layouts.master')
 @section('content')
+    <br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br>
+    <section id="pack" class="packages">
+        @include('partials.CarCard')
 
-<br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<section id="pack" class="packages">
-    <h2 style="text-align: center; padding-bottom:60px">
-        Rent a car for your next trip
-    </h2>
-    <div class="container">
-
-        <div class="row">
-            <div class="col-sm-4">
-                <div class="single-card">
-                    <i class="fa-solid fa-car-side CarCardI"></i>
-                    <div class="CardCar" style="text-align: center; align-items:center">
-                        Req a car
-                    </div>
-
-                </div>
-                <!--/.single-card-->
-            </div>
-            <!--/.col-->
-            <div class="col-sm-4">
-                <div class="single-card">
-                    <i class="fa-solid fa-car-side CarCardI"></i>
-                    <div class="CardCar" style="text-align: center; align-items:center">
-                        Req a car
-                    </div>
-                </div>
-                <!--/.single-card-->
-            </div>
-            <!--/.col-->
-            <div class="col-sm-4">
-                <div class="single-card">
-                    <i class="fa-solid fa-car-side CarCardI"></i>
-<div class="CardCar" style="text-align: center; align-items:center">
-Req a car
-</div>
-                </div>
-                <!--/.single-card-->
-            </div>
-            <!--/.col-->
-        </div>
-
-        <!--/.gallery-header-->
         <div class="packages-content">
-            <div class="" style="text-align: center; padding:40px">
+
+            <div class="RentCar">
             <h2>
                 Rent a Car
             </h2>
             <p>
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Delectus laboriosam quo unde quis doloremque illum necessitatibus aut placeat illo fugiat modi sapiente voluptatibus obcaecati sit eaque molestiae debitis at fuga, dolorum, numquam commodi! Cum assumenda numquam maxime dolores cumque natus!
+                On our web page you can find prices for individual, group and corporate tours with specially developed and multiply realized programs. The variety of trips is as diverse as our country itself – from classical sightseeing tours to food and wine tours as well as guided backpacking trips, hiking and trekking in mountains. You can also get therapeutic tours to popular Jermuk resort and Tsaghkadzor winter ski resort. We offer the largest choice of hotels in Yerevan and regions of Armenia, with seasonal prices. All the rates, mentioned on our web page for 2020, are valid and refreshed depending on season, discount availability, special offers and hot tours.
             </p>
         </div>
             <div class="row">
@@ -64,21 +27,20 @@ Req a car
 
                     <div class="single-package-item">
 
-                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="package-place">
                         <div class="packageName">
 
                         </div>
-                        <div class="package-txt">
+                        <div class="Car-txt">
                             <h4>
-                                <a href="#">
-                                    package one
-                                </a>
+                               Tesla
                             </h4>
 
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> Tesla
+                                <span><i class="fa-regular fa-clock"></i></span> Tesla
                             </div>
 
                             <div class="packageOffer">
@@ -98,7 +60,7 @@ Req a car
                         </div>
                         <div class="package-btn">
                             <button class="package-view">
-                                view more
+                                Details
                             </button>
 
                         </div>
@@ -115,21 +77,20 @@ Req a car
 
                     <div class="single-package-item">
 
-                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="package-place">
                         <div class="packageName">
 
                         </div>
-                        <div class="package-txt">
+                        <div class="Car-txt">
                             <h4>
-                                <a href="#">
-                                    package one
-                                </a>
+                               Tesla
                             </h4>
 
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> Tesla
+                                <span><i class="fa-regular fa-clock"></i></span> Tesla
                             </div>
 
                             <div class="packageOffer">
@@ -149,7 +110,7 @@ Req a car
                         </div>
                         <div class="package-btn">
                             <button class="package-view">
-                                view more
+                                Details
                             </button>
 
                         </div>
@@ -165,21 +126,20 @@ Req a car
 
                     <div class="single-package-item">
 
-                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="package-place">
                         <div class="packageName">
 
                         </div>
-                        <div class="package-txt">
+                        <div class="Car-txt">
                             <h4>
-                                <a href="#">
-                                    package one
-                                </a>
+                               Tesla
                             </h4>
 
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> Tesla
+                                <span><i class="fa-regular fa-clock"></i></span> Tesla
                             </div>
 
                             <div class="packageOffer">
@@ -199,7 +159,7 @@ Req a car
                         </div>
                         <div class="package-btn">
                             <button class="package-view">
-                                view more
+                                Details
                             </button>
 
                         </div>
@@ -215,21 +175,20 @@ Req a car
 
                     <div class="single-package-item">
 
-                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="package-place">
                         <div class="packageName">
 
                         </div>
-                        <div class="package-txt">
+                        <div class="Car-txt">
                             <h4>
-                                <a href="#">
-                                    package one
-                                </a>
+                               Tesla
                             </h4>
 
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> Tesla
+                                <span><i class="fa-regular fa-clock"></i></span> Tesla
                             </div>
 
                             <div class="packageOffer">
@@ -249,7 +208,7 @@ Req a car
                         </div>
                         <div class="package-btn">
                             <button class="package-view">
-                                view more
+                                Details
                             </button>
 
                         </div>
@@ -265,21 +224,20 @@ Req a car
 
                     <div class="single-package-item">
 
-                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="package-place">
                         <div class="packageName">
 
                         </div>
-                        <div class="package-txt">
+                        <div class="Car-txt">
                             <h4>
-                                <a href="#">
-                                    package one
-                                </a>
+                               Tesla
                             </h4>
 
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> Tesla
+                                <span><i class="fa-regular fa-clock"></i></span> Tesla
                             </div>
 
                             <div class="packageOffer">
@@ -299,7 +257,7 @@ Req a car
                         </div>
                         <div class="package-btn">
                             <button class="package-view">
-                                view more
+                                Details
                             </button>
 
                         </div>
@@ -315,21 +273,20 @@ Req a car
 
                     <div class="single-package-item">
 
-                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="package-place">
                         <div class="packageName">
 
                         </div>
-                        <div class="package-txt">
+                        <div class="Car-txt">
                             <h4>
-                                <a href="#">
-                                    package one
-                                </a>
+                               Tesla
                             </h4>
 
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> Tesla
+                                <span><i class="fa-regular fa-clock"></i></span> Tesla
                             </div>
 
                             <div class="packageOffer">
@@ -349,7 +306,7 @@ Req a car
                         </div>
                         <div class="package-btn">
                             <button class="package-view">
-                                view more
+                                Details
                             </button>
 
                         </div>
@@ -365,21 +322,20 @@ Req a car
 
                     <div class="single-package-item">
 
-                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="package-place">
                         <div class="packageName">
 
                         </div>
-                        <div class="package-txt">
+                        <div class="Car-txt">
                             <h4>
-                                <a href="#">
-                                    package one
-                                </a>
+                               Tesla
                             </h4>
 
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> Tesla
+                                <span><i class="fa-regular fa-clock"></i></span> Tesla
                             </div>
 
                             <div class="packageOffer">
@@ -399,7 +355,7 @@ Req a car
                         </div>
                         <div class="package-btn">
                             <button class="package-view">
-                                view more
+                                Details
                             </button>
 
                         </div>
@@ -415,21 +371,20 @@ Req a car
 
                     <div class="single-package-item">
 
-                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="package-place">
                         <div class="packageName">
 
                         </div>
-                        <div class="package-txt">
+                        <div class="Car-txt">
                             <h4>
-                                <a href="#">
-                                    package one
-                                </a>
+                               Tesla
                             </h4>
 
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> Tesla
+                                <span><i class="fa-regular fa-clock"></i></span> Tesla
                             </div>
 
                             <div class="packageOffer">
@@ -449,7 +404,7 @@ Req a car
                         </div>
                         <div class="package-btn">
                             <button class="package-view">
-                                view more
+                                Details
                             </button>
 
                         </div>
@@ -465,21 +420,20 @@ Req a car
 
                     <div class="single-package-item">
 
-                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="package-place">
+                        <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            alt="package-place">
                         <div class="packageName">
 
                         </div>
-                        <div class="package-txt">
+                        <div class="Car-txt">
                             <h4>
-                                <a href="#">
-                                    package one
-                                </a>
+                               Tesla
                             </h4>
 
                         </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> Tesla
+                                <span><i class="fa-regular fa-clock"></i></span> Tesla
                             </div>
 
                             <div class="packageOffer">
@@ -499,7 +453,7 @@ Req a car
                         </div>
                         <div class="package-btn">
                             <button class="package-view">
-                                view more
+                                Details
                             </button>
 
                         </div>
@@ -517,11 +471,5 @@ Req a car
             </div>
             <!--/.row-->
         </div>
-        <!--/.packages-content-->
-    </div>
-    <!--/.container-->
-</section>
-
-
-
+    </section>
 @endsection

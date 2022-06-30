@@ -3,31 +3,40 @@
         <div class="row">
             <div class="col-md-12">
                 <div class="requestTour__title">
-                    <h2 style="text-align: center">Request a tour</h2>
-
+                    <h2 style="text-align: center">
+                        Choose one of our tours or create your own trip!
+                    </h2>
             </div>
+            <ul id="progressbar">
+                <li class="active">Account Setup</li>
+                <li>Personal Details</li>
+                <li>Social Profiles</li>
+
+              </ul>
         </div>
         <div class="row">
             <div class="col-md-6">
-                <img src="{{ asset('images/ReqTour.png') }}" alt="">
+                <img src="{{ asset('images/ReqTour1.png') }}" alt="">
             </div>
             <div class="col-md-6">
 
                 <form id="multistepsform">
                     <!-- progressbar -->
-                    <ul id="progressbar">
-                      <li class="active">Account Setup</li>
-                      <li>Personal Details</li>
-                      <li>Social Profiles</li>
 
-                    </ul>
                     <!-- fieldsets -->
                     <fieldset>
-                      <h2 class="fs-title">Create your account</h2>
+
                       <h3 class="fs-subtitle"></h3>
-                      <input type="text" name="email" placeholder="Email" />
-                      <input type="password" name="pass" placeholder="Password" />
-                      <input type="password" name="cpass" placeholder="Confirm Password" />
+                      <input type="text" placeholder="Name">
+                      <input type="date" >
+                      <input type="text" list="cars" placeholder="Destination"/>
+                      <datalist id="cars">
+                        <option>Volvo</option>
+                        <option>Saab</option>
+                        <option>Mercedes</option>
+                        <option>Audi</option>
+                      </datalist>
+                        <input type="number" placeholder="Number of people">
                       <input type="button" name="next" class="next action-button" value="Next" />
                     </fieldset>
 

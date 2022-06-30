@@ -20,16 +20,23 @@
 								</button><!-- / button-->
 							</div><!-- /.navbar-header-->
 							<div class="collapse navbar-collapse bg-white">
-								<ul class="nav navbar-nav navbar-right" style=" text-align: center;">
+								<ul class="nav navbar-nav navbar-center" >
                                     <li class="sp"><a href="{{ url('/tours') }}">Tours</a></li>
-                                    <li class="sp"><a href="">Services</a></li>
+                                    <li class="nav-item dropdown">
+                                        <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                         Services
+                                        </a>
+                                        <div class="dropdown-menu dm" aria-labelledby="navbarDropdown">
+                                          <a class="dropdown-item" href="{{ url('/cars')}}">Rent a transport</a>
+                                          <a class="dropdown-item" href="{{ url('/hs') }}">Hotels</a>
+                                          <a class="dropdown-item" href="#">Tour Accessories</a>
+                                        </div>
+                                      </li>
                                     <li class="sp"><a href="">Armenia</a></li>
                                     <li class="sp"><a href="">About Us</a></li>
 
-									{{-- <li class="sp"><a href="{{ url('/hs') }}">Hotels</a></li>
-                                    <li class="sp"><a href="{{ url('/cars') }}">Cars</a></li>
-                                    <li class="sp"><a href="{{ url('/cs') }}">Events</a></li> --}}
-
+									<li class="language">ENG</li>
+                                      <li class="USD">USD</li>
 
 									<li>
 										<input type="text" placeholder="Search" class="searchHeader">
@@ -44,7 +51,7 @@
 			</div><!-- /.container-->
 		</div><!-- /.header-area -->
         <div class="fullBanner">
-            <img src="{{ asset('images/DefaultBanner.jpg') }}" alt="">
+            <img src="{{ asset('images/DefaultBanner.png') }}" alt="">
         </div>
 
 	</header><!-- /.top-area-->

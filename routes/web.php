@@ -51,8 +51,28 @@ Route::get('/b', function () {
     return view('Frontend.Brochures.Brochures');
 });
 
+Route::get('/withDriver', function () {
+    return view('Frontend.Cars.WithDriver');
+});
+
+Route::get('/MT', function () {
+    return view('Frontend.Cars.MeetTheTransfer');
+});
+
+Route::get('/RF', function () {
+    return view('Frontend.Cars.RentACarForm');
+});
+
+
+
+
+
 Route::get('/cars', function () {
     return view('Frontend.Cars.Cars');
+});
+
+Route::get('/RenACar', function () {
+    return view('Frontend.Cars.RentACar');
 });
 
 Route::get('/car', function () {
