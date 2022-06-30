@@ -1,7 +1,55 @@
 @extends('layouts.master')
 @section('content')
 
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br><br>
+<br>
+<br>
+<br><br><br>
 
+
+<form action="" class="hotelForm">
+    <div class="form-group htt">
+
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option class="chooseO">Choose Country</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group htt">
+
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option class="chooseO">Choose region</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group htt">
+
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option class="chooseO">Choose Type</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+</form>
+
+<p class="hotelDes">
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sequi reprehenderit, nam laborum architecto accusantium temporibus deleniti quam, nisi sint tenetur nihil ipsam maiores minus eius assumenda officia debitis? Autem hic quae aliquam consequatur maxime dolorum quisquam illum dignissimos iste eaque sit architecto laudantium magnam sint error, dolorem aperiam quos voluptates sequi dolore. Eveniet aspernatur at excepturi ad deleniti asperiores quasi beatae totam officiis accusamus. Eos reiciendis molestias vero repellat atque! Cupiditate, doloremque nostrum aperiam in dolore provident praesentium voluptatum hic voluptas cum quis animi harum deserunt unde distinctio aut.
+</p>
 
 <section id="pack" class="packages">
     <div class="container">
@@ -9,7 +57,7 @@
         <!--/.gallery-header-->
         <div class="packages-content">
             <h2 style="text-align: center; padding-bottom:60px">
-                <span class="title-head">Hotels</span>
+                <span class="title-head">Most Populer Hotels</span>
             </h2>
             <div class="row">
 
@@ -18,24 +66,23 @@
                     <div class="single-package-item">
 
                         <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                        <div class="packageName">
-                            Something
-                        </div>
-                        <div class="package-txt">
-                            <h4>
-                                <a href="#">
-                                    package one
-                                </a>
-                            </h4>
-
-                        </div>
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-calendar"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span> Date
                             </div>
 
                             <div class="packageOffer">
@@ -69,24 +116,23 @@
                     <div class="single-package-item">
 
                         <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                        <div class="packageName">
-                            Something
-                        </div>
-                        <div class="package-txt">
-                            <h4>
-                                <a href="#">
-                                    package one
-                                </a>
-                            </h4>
-
-                        </div>
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-calendar"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span> Date
                             </div>
 
                             <div class="packageOffer">
@@ -119,24 +165,23 @@
                     <div class="single-package-item">
 
                         <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                        <div class="packageName">
-                            Something
-                        </div>
-                        <div class="package-txt">
-                            <h4>
-                                <a href="#">
-                                    package one
-                                </a>
-                            </h4>
-
-                        </div>
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-calendar"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span> Date
                             </div>
 
                             <div class="packageOffer">
@@ -169,24 +214,23 @@
                     <div class="single-package-item">
 
                         <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                        <div class="packageName">
-                            Something
-                        </div>
-                        <div class="package-txt">
-                            <h4>
-                                <a href="#">
-                                    package one
-                                </a>
-                            </h4>
-
-                        </div>
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-calendar"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span> Date
                             </div>
 
                             <div class="packageOffer">
@@ -219,24 +263,23 @@
                     <div class="single-package-item">
 
                         <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                        <div class="packageName">
-                            Something
-                        </div>
-                        <div class="package-txt">
-                            <h4>
-                                <a href="#">
-                                    package one
-                                </a>
-                            </h4>
-
-                        </div>
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-calendar"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span> Date
                             </div>
 
                             <div class="packageOffer">
@@ -269,24 +312,23 @@
                     <div class="single-package-item">
 
                         <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                        <div class="packageName">
-                            Something
-                        </div>
-                        <div class="package-txt">
-                            <h4>
-                                <a href="#">
-                                    package one
-                                </a>
-                            </h4>
-
-                        </div>
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-calendar"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span> Date
                             </div>
 
                             <div class="packageOffer">
@@ -319,24 +361,23 @@
                     <div class="single-package-item">
 
                         <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                        <div class="packageName">
-                            Something
-                        </div>
-                        <div class="package-txt">
-                            <h4>
-                                <a href="#">
-                                    package one
-                                </a>
-                            </h4>
-
-                        </div>
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-calendar"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span> Date
                             </div>
 
                             <div class="packageOffer">
@@ -369,24 +410,23 @@
                     <div class="single-package-item">
 
                         <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                        <div class="packageName">
-                            Something
-                        </div>
-                        <div class="package-txt">
-                            <h4>
-                                <a href="#">
-                                    package one
-                                </a>
-                            </h4>
-
-                        </div>
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-calendar"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span> Date
                             </div>
 
                             <div class="packageOffer">
@@ -419,24 +459,23 @@
                     <div class="single-package-item">
 
                         <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                        <div class="packageName">
-                            Something
-                        </div>
-                        <div class="package-txt">
-                            <h4>
-                                <a href="#">
-                                    package one
-                                </a>
-                            </h4>
-
-                        </div>
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
                         <div class="pacdet">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-receipt"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-calendar"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span> Date
                             </div>
 
                             <div class="packageOffer">

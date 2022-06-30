@@ -63,6 +63,17 @@ Route::get('/RF', function () {
     return view('Frontend.Cars.RentACarForm');
 });
 
+Route::get('/acs', function () {
+    return view('Frontend.TourAccesories.Accesories');
+});
+
+Route::get('/ac', function () {
+    return view('Frontend.TourAccesories.Accesiorieses');
+});
+
+
+
+
 
 
 
@@ -98,6 +109,10 @@ Route::get('/hs', function () {
 
 Route::get('/contact', function () {
     return view('Frontend.Contact.Contact');
+});
+
+Route::get('/BookHotel', function () {
+    return view('Frontend.Hotels.BookHotelForm');
 });
 
 

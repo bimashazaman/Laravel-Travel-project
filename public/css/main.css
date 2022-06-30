@@ -2777,3 +2777,62 @@ body {
 
 
 
+.hotelForm {
+    text-align: center;
+    align-items: center;
+    justify-content: center;
+    margin: auto;
+    display: flex;
+}
+
+.htt {
+    margin-left: 40px;
+    width: 200px;
+}
+
+.htt select {
+    border: none;
+    border-bottom: 1px solid #757575;
+}
+
+.chooseO {
+    color: #beb2b2;
+}
+
+.hotelDes {
+    padding-left: 90px;
+    padding-right: 90px;
+    padding-top: 60px;
+    color: #181717;
+    text-align: center;
+    font-weight: 500;
+}
+
+.hotelDesccription p {
+    color: #181717;
+    font-size: 13px;
+    margin-top: 10px;
+
+}
+
+.HotelName h4 {
+    margin-top: 10px;
+    font-size: 17px;
+    font-weight: 700;
+    align-items: center;
+    text-align: center;
+}
+
+
+.highlights li {
+    font-size: 16px;
+    font-weight: 500;
+    line-height: 1.8;
+}
+.highlights {
+    padding-left: 30px;
+}
+
+.highlights h3 {
+    margin-bottom: 20px;
+}
