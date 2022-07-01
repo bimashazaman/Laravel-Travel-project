@@ -31,7 +31,7 @@
             <!--/.gallery-header-->
             <div class="packages-content">
                 <h2 style="text-align: center; ">
-                    Basic Tours
+                   Guarantee Departures
                 </h2>
                 <div class="overview">
 

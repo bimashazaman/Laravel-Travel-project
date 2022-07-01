@@ -1,12 +1,57 @@
 @extends('layouts.master')
 @section('content')
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+<br><br><br>
+<br>
+<br>
+<br><br><br>
+
+
+<form action="" class="hotelForm">
+    <div class="form-group htt">
+
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option class="chooseO">Choose Country</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group htt">
+
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option class="chooseO">Choose region</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+      <div class="form-group htt">
+
+        <select class="form-control" id="exampleFormControlSelect1">
+          <option class="chooseO">Choose Type</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5</option>
+        </select>
+      </div>
+</form>
     <section id="pack" class="packages">
         <div class="container">
 
             <!--/.gallery-header-->
             <div class="packages-content">
                 <h2 style="text-align: center; padding-bottom:60px">
-                    Conferences
+                    Events
                 </h2>
                 <div class="row">
 

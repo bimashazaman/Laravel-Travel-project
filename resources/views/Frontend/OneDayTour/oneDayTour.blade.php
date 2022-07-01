@@ -17,7 +17,7 @@
 
 
  <h2 style="text-align: center; padding-bottom:60px">
-                  Tours To Armenia
+                 One Day Tour
                 </h2>
 
 

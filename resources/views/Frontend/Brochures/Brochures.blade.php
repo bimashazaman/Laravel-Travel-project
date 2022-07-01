@@ -1,5 +1,20 @@
 @extends('layouts.master')
 @section('content')
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br><br>
+<br>
+<br>
+<br>
+
 
 <section id="pack" class="packages">
     <div class="container">
@@ -16,11 +31,11 @@
             <div class="row">
 
                 <div class="col-md-4 col-sm-6">
-                    
+
                     <div class="single-package-item">
 
-                        <img src="https://bimasha.com/assets/images/about-banner.png" alt="package-place">
-                        <div class="packageName">
+                        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSd9g1wgv4kWYZZKLtOPaJXK8P0hG53tDve8POpApaRnc7IzyC6Bc5l2FDog2Rb9L5iaB7WVnTRF0zsmqZvu061KA" alt="package-place">
+                        <div class="">
                             Something
                         </div>
 
@@ -41,11 +56,11 @@
                 <!--/.col-->
 
                 <div class="col-md-4 col-sm-6">
-                    
+
                     <div class="single-package-item">
 
-                        <img src="https://bimasha.com/assets/images/about-banner.png" alt="package-place">
-                        <div class="packageName">
+                        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSd9g1wgv4kWYZZKLtOPaJXK8P0hG53tDve8POpApaRnc7IzyC6Bc5l2FDog2Rb9L5iaB7WVnTRF0zsmqZvu061KA" alt="package-place">
+                        <div class="">
                             Something
                         </div>
 
@@ -65,11 +80,11 @@
                 </div>
                 <!--/.col-->
                 <div class="col-md-4 col-sm-6">
-                    
+
                     <div class="single-package-item">
 
-                        <img src="https://bimasha.com/assets/images/about-banner.png" alt="package-place">
-                        <div class="packageName">
+                        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSd9g1wgv4kWYZZKLtOPaJXK8P0hG53tDve8POpApaRnc7IzyC6Bc5l2FDog2Rb9L5iaB7WVnTRF0zsmqZvu061KA" alt="package-place">
+                        <div class="">
                             Something
                         </div>
 
@@ -89,11 +104,11 @@
                 </div>
                 <!--/.col-->
                 <div class="col-md-4 col-sm-6">
-                    
+
                     <div class="single-package-item">
 
-                        <img src="https://bimasha.com/assets/images/about-banner.png" alt="package-place">
-                        <div class="packageName">
+                        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSd9g1wgv4kWYZZKLtOPaJXK8P0hG53tDve8POpApaRnc7IzyC6Bc5l2FDog2Rb9L5iaB7WVnTRF0zsmqZvu061KA" alt="package-place">
+                        <div class="">
                             Something
                         </div>
 
@@ -113,11 +128,11 @@
                 </div>
                 <!--/.col-->
                 <div class="col-md-4 col-sm-6">
-                    
+
                     <div class="single-package-item">
 
-                        <img src="https://bimasha.com/assets/images/about-banner.png" alt="package-place">
-                        <div class="packageName">
+                        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSd9g1wgv4kWYZZKLtOPaJXK8P0hG53tDve8POpApaRnc7IzyC6Bc5l2FDog2Rb9L5iaB7WVnTRF0zsmqZvu061KA" alt="package-place">
+                        <div class="">
                             Something
                         </div>
 
@@ -137,11 +152,11 @@
                 </div>
                 <!--/.col-->
                 <div class="col-md-4 col-sm-6">
-                    
+
                     <div class="single-package-item">
 
-                        <img src="https://bimasha.com/assets/images/about-banner.png" alt="package-place">
-                        <div class="packageName">
+                        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSd9g1wgv4kWYZZKLtOPaJXK8P0hG53tDve8POpApaRnc7IzyC6Bc5l2FDog2Rb9L5iaB7WVnTRF0zsmqZvu061KA" alt="package-place">
+                        <div class="">
                             Something
                         </div>
 
@@ -161,11 +176,11 @@
                 </div>
                 <!--/.col-->
                 <div class="col-md-4 col-sm-6">
-                    
+
                     <div class="single-package-item">
 
-                        <img src="https://bimasha.com/assets/images/about-banner.png" alt="package-place">
-                        <div class="packageName">
+                        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSd9g1wgv4kWYZZKLtOPaJXK8P0hG53tDve8POpApaRnc7IzyC6Bc5l2FDog2Rb9L5iaB7WVnTRF0zsmqZvu061KA" alt="package-place">
+                        <div class="">
                             Something
                         </div>
 
@@ -185,11 +200,11 @@
                 </div>
                 <!--/.col-->
                 <div class="col-md-4 col-sm-6">
-                    
+
                     <div class="single-package-item">
 
-                        <img src="https://bimasha.com/assets/images/about-banner.png" alt="package-place">
-                        <div class="packageName">
+                        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSd9g1wgv4kWYZZKLtOPaJXK8P0hG53tDve8POpApaRnc7IzyC6Bc5l2FDog2Rb9L5iaB7WVnTRF0zsmqZvu061KA" alt="package-place">
+                        <div class="">
                             Something
                         </div>
 
@@ -209,11 +224,11 @@
                 </div>
                 <!--/.col-->
                 <div class="col-md-4 col-sm-6">
-                    
+
                     <div class="single-package-item">
 
-                        <img src="https://bimasha.com/assets/images/about-banner.png" alt="package-place">
-                        <div class="packageName">
+                        <img src="https://encrypted-tbn0.gstatic.com/licensed-image?q=tbn:ANd9GcSd9g1wgv4kWYZZKLtOPaJXK8P0hG53tDve8POpApaRnc7IzyC6Bc5l2FDog2Rb9L5iaB7WVnTRF0zsmqZvu061KA" alt="package-place">
+                        <div class="">
                             Something
                         </div>
 

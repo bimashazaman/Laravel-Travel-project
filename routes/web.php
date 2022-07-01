@@ -13,6 +13,11 @@ Route::get('/c2', function () {
     return view('Frontend.About.AboutUs');
 });
 
+Route::get('/ways', function () {
+    return view('Frontend.About.waysToBook');
+});
+
+
 
 Route::get('/tours', function () {
     return view('Frontend.Tours.Tours');
@@ -21,8 +26,6 @@ Route::get('/tours', function () {
 Route::get('/Tour', function () {
     return view('Frontend.Tours.Tour');
 })->name('tour')->name('Tour');
-
-
 
 
 Route::get('/BT', function () {
@@ -79,11 +82,32 @@ Route::get('/mice', function () {
     return view('Frontend.Mice.MICE');
 });
 
+Route::get('/oneDay', function () {
+    return view('Frontend.OneDayTour.OneDayTour');
+});
+
+Route::get('/gurantee', function () {
+    return view('Frontend.GuaranteeTour.Guarantee');
+});
+
+Route::get('/themed', function () {
+    return view('Frontend.ThemedTours.ThemedTours');
+});
+
+
+Route::get('/activeTours', function () {
+    return view('Frontend.ActiveTours.ActiveTours');
+});
+
+Route::get('/gastroTours', function () {
+    return view('Frontend.GastroTours.GastroTours');
+});
 
 
 
-
-
+Route::get('/ClassicTour', function () {
+    return view('Frontend.BasicTours.BasicTours');
+});
 
 Route::get('/cars', function () {
     return view('Frontend.Cars.Cars');
@@ -124,6 +148,19 @@ Route::get('/BookHotel', function () {
 
 
 
+
+Route::get('/tts', function () {
+    return view('Frontend.Armenia.ThingsToSee');
+});
+
+
+Route::get('/ttdd', function () {
+    return view('Frontend.Armenia.ThingsToDo');
+});
+
+Route::get('/food', function () {
+    return view('Frontend.Armenia.Foods');
+});
 
 
 
