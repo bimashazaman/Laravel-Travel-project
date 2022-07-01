@@ -1,0 +1,63 @@
+.main-heading {
+    padding-top: 310px;
+    padding-bottom: 50px;
+}
+.heading {
+    font-weight: 600;
+    font-size: 24px;
+}
+.pl-20 {
+    padding-left: 20px !important;
+}
+.pr-20 {
+    padding-right: 20px !important;
+}
+.pl-10 {
+    padding-left: 10px !important;
+}
+.pr-10 {
+    padding-right: 10px !important;
+}
+.pr-0 {
+    padding-right: 0px !important;
+}
+.pt-0 {
+    padding-top: 0px !important;
+}
+.pb-0 {
+    padding-bottom: 0px !important;
+}
+.pt-10 {
+    padding-top: 10px !important;
+}
+.pb-10 {
+    padding-bottom: 10px !important;
+}
+.mt-30 {
+    margin-top: 30px !important;
+}
+.change-font {
+    font-size: 15px !important;
+    font-weight: 400 !important;
+}
+.rating-pack {
+    border: 1px solid #eeeeee !important;
+    border-radius: 5% !important;
+    padding: 5px !important;
+}
+.paginate {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.pagination {
+    display: inline-block;
+}
+.pagination a {
+    color: black;
+    float: left;
+    padding: 8px 16px;
+    text-decoration: none;
+}
+
+
