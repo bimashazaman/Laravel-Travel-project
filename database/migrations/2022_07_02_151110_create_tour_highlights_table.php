@@ -15,6 +15,9 @@ class CreateTourHighlightsTable extends Migration
     {
         Schema::create('tour_highlights', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('tour_id');
+            $table->string('name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

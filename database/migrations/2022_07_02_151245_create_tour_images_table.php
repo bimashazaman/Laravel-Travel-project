@@ -15,6 +15,8 @@ class CreateTourImagesTable extends Migration
     {
         Schema::create('tour_images', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('tour_id');
+            $table->unsignedBigInteger('image_id');
             $table->timestamps();
         });
     }

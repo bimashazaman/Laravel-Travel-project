@@ -15,6 +15,8 @@ class CreateTourFacilitiesTable extends Migration
     {
         Schema::create('tour_facilities', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('tour_id');
+            $table->unsignedBigInteger('facility_id');
             $table->timestamps();
         });
     }

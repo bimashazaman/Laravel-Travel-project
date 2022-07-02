@@ -15,6 +15,8 @@ class CreateTourUsersTable extends Migration
     {
         Schema::create('tour_users', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('tour_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }
