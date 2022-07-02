@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRequestToursTable extends Migration
+class CreateTourHighlightsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRequestToursTable extends Migration
      */
     public function up()
     {
-        Schema::create('request_tours', function (Blueprint $table) {
+        Schema::create('tour_highlights', function (Blueprint $table) {
             $table->id();
             $table->timestamps();
         });
@@ -26,6 +26,6 @@ class CreateRequestToursTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('request_tours');
+        Schema::dropIfExists('tour_highlights');
     }
 }

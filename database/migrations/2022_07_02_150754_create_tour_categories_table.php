@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRentTourAccesioriesTable extends Migration
+class CreateTourCategoriesTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,10 @@ class CreateRentTourAccesioriesTable extends Migration
      */
     public function up()
     {
-        Schema::create('rent_tour_accesiories', function (Blueprint $table) {
+        Schema::create('tour_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -26,6 +28,6 @@ class CreateRentTourAccesioriesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('rent_tour_accesiories');
+        Schema::dropIfExists('tour_categories');
     }
 }
