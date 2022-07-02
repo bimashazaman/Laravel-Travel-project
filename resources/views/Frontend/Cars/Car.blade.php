@@ -14,7 +14,7 @@
             Tesla
         </h1>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="tour-descriptions-content">
                     <div class="tour-descriptions-content-inner">
                         <div class="tour-descriptions-content-inner-left">
@@ -125,11 +125,13 @@
                 </div><!-- /.tour-descriptions-content -->
             </div><!-- /.col -->
 
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="tour-descriptions-content-inner-left-content-title bb">
                     <h2>
                         Key Points
                     </h2>
+
+
                     <div class="detailespackage">
                         <span><i class="fa-solid fa-car"></i></span> Type <span class="rightspan">Skiing</span>
                     </div>
@@ -170,40 +172,40 @@
 
     <section class="tableOfPrice">
         <div class="container">
-            <h3 style="text-align: center; margin-bottom:10px">
-                The price table
+            <h3 style="font-weight: 600">
+                The price
             </h3>
+            <br>
             <table class="table table-bordered tble">
                 <thead>
                     <tr>
-                        <th>1 Day</th>
-                        <th>1 Week</th>
-                        <th>1 Mounth</th>
+                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Day</th>
+                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Week</th>
+                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Mounth</th>
 
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Mark</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
+                        <td>25000</td>
+                        <td> 35000</td>
+                        <td>45000</td>
 
                     </tr>
-                    <tr>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
+
 
                 </tbody>
             </table>
 
         </div>
-        <button class="package-view" style="text-align: center; align-items:center; margin:20px">
-            Book Now
-        </button>
+        <a href="{{ url('/RenACar') }}">
+            <button class="package-view" style="text-align: center; align-items:center; margin:20px">
+                Book Now
+            </button>
+        </a>
     </section>
 
+<br>
 
     {{-- <!--packages start-->
     <section id="pack" class="packages">

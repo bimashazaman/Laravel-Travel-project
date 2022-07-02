@@ -14,7 +14,7 @@
             Rent A Car With Driver
         </h1>
         <div class="row">
-            <div class="col-md-6">
+            <div class="col-md-7">
                 <div class="tour-descriptions-content">
                     <div class="tour-descriptions-content-inner">
                         <div class="tour-descriptions-content-inner-left">
@@ -125,7 +125,7 @@
                 </div><!-- /.tour-descriptions-content -->
             </div><!-- /.col -->
 
-            <div class="col-md-6">
+            <div class="col-md-5">
                 <div class="tour-descriptions-content-inner-left-content-title bb">
                     <h2>
                         Key Points

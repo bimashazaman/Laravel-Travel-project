@@ -56,8 +56,8 @@
 
         <!--/.gallery-header-->
         <div class="packages-content">
-            <h2 style="text-align: center; padding-bottom:60px">
-                <span class="title-head">Most Populer Hotels</span>
+            <h2 style="text-align: center; padding-bottom:25px">
+                <span class="title-head">Most populer hotels</span>
             </h2>
             <div class="row">
 

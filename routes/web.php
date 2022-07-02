@@ -13,15 +13,25 @@ Route::get('/c2', function () {
     return view('Frontend.About.AboutUs');
 });
 
+
+Route::get('/privacy', function () {
+    return view('Frontend.About.PrivacyPolicy');
+});
+
 Route::get('/ways', function () {
     return view('Frontend.About.waysToBook');
 });
+
+Route::get('/admin11', function () {
+    return view('Backend.Admin.AdminHome');
+});
+
 
 
 
 Route::get('/tours', function () {
     return view('Frontend.Tours.Tours');
-})->name('tours');
+});
 
 Route::get('/Tour', function () {
     return view('Frontend.Tours.Tour');
@@ -70,6 +80,8 @@ Route::get('/acs', function () {
     return view('Frontend.TourAccesories.Accesories');
 });
 
+
+
 Route::get('/ac', function () {
     return view('Frontend.TourAccesories.Accesiorieses');
 });
@@ -78,8 +90,12 @@ Route::get('/TentForm', function () {
     return view('Frontend.TourAccesories.TentForm');
 });
 
+Route::get('/mices', function () {
+    return view('Frontend.Mice.Mices');
+});
+
 Route::get('/mice', function () {
-    return view('Frontend.Mice.MICE');
+    return view('Frontend.Mice.Micee');
 });
 
 Route::get('/oneDay', function () {
@@ -114,7 +130,7 @@ Route::get('/cars', function () {
 });
 
 Route::get('/RenACar', function () {
-    return view('Frontend.Cars.RentACar');
+    return view('Frontend.Cars.RentACarForm');
 });
 
 Route::get('/car', function () {
@@ -165,4 +181,16 @@ Route::get('/food', function () {
 
 
 
+
+Route::get('/adminClassicTour', function () {
+    return view('Backend.Admin.classicTours.ClassicTour');
+});
+
+Route::get('/CreateClassicTour', function () {
+    return view('Backend.Admin.classicTours.CreateClassicTour');
+});
+
+Route::get('/UpdateClassicTour', function () {
+    return view('Backend.Admin.classicTours.UpdateClassicTour');
+});
 

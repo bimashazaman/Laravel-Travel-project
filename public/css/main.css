@@ -11,6 +11,10 @@
     box-sizing: border-box;
 }
 
+.mice {
+    padding: 100px;
+}
+
 body {
     position: relative;
     font-size: 14px;
@@ -553,11 +557,11 @@ body {
 }
 
 .packageOffer {
-    font-size: 16px;
+    font-size: 17px;
     font-family: "Poppins", sans-serif;
     font-weight: 600;
     line-height: 1.4;
-    color: #3d3c3c;
+    color: #252424;
     margin-bottom: 10px;
 }
 
@@ -573,7 +577,7 @@ body {
     text-align: left;
     padding-left: 40px;
     padding-right: 40px;
-    padding-top: 20px;
+    padding-top: 15px;
     padding-bottom: 20px;
 }
 
@@ -607,8 +611,7 @@ body {
     width: 150px;
 }
 
-.dm li {
-}
+
 
 .rating {
     text-align: end;
@@ -626,15 +629,18 @@ body {
 }
 
 .package-view {
-    padding: 15px;
+    padding-top: 6px;
+    padding-bottom: 6px;
+    padding-right: 30px;
+    padding-left: 30px;
     background-color: #e5a686;
-    color: #181717;
+    color: #222121;
     font-size: 17px;
     font-family: "Poppins", sans-serif;
     font-weight: 500;
     text-align: center;
     border: none;
-    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    box-shadow: rgba(0, 0, 0, 0.4) 0px 2px 4px, rgba(0, 0, 0, 0.3) 0px 7px 13px -3px, rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
 .package-view:hover {
@@ -938,8 +944,9 @@ body {
 
 .ha {
     margin-bottom: 20px;
-    padding: 0 20px;
-    font-weight: 600;
+    padding-left: 150px;
+    padding-right: 150px;
+    font-weight: 500;
     font-size: 14px;
     text-align: center;
     justify-content: center;
@@ -1261,9 +1268,12 @@ body {
 }
 
 .headlineRent {
-    font-size: 4rem;
+    margin-bottom: 20px;
+    font-size: 3rem;
+    font-weight: 500;
     text-align: center;
     margin-top: 5%;
+    color: #181717;
 }
 
 .reqDetails {
@@ -2656,7 +2666,7 @@ body {
 .parent i {
     margin-top: 20px;
     font-size: 30px;
-    color: #284525;
+    color: #545823;
 }
 
 .div1 {
@@ -2717,7 +2727,7 @@ body {
     padding: 40px;
     margin-right: 40px;
     margin-left: 40px;
-    color: #181717;
+    color: #140B0A;
     line-height: 1.3;
 }
 
@@ -2739,7 +2749,7 @@ body {
     align-items: center;
     margin: auto;
     width: 60%;
-    border: 1px solid rgb(110, 107, 107);
+    border: 2px solid rgb(136, 131, 131);
     margin-bottom: 30px;
     font-weight: 500;
 }
@@ -2762,6 +2772,8 @@ body {
     grid-column-gap: 25px;
     grid-row-gap: 7px;
 }
+
+
 
 .divv1 {
     grid-area: 1 / 1 / 2 / 2;
@@ -2792,24 +2804,33 @@ body {
     border-bottom: 1px solid #757575;
 }
 
+.title-head {
+    font-weight: 600;
+}
+
 .chooseO {
     color: #beb2b2;
 }
 
 .hotelDes {
-    padding-left: 90px;
-    padding-right: 90px;
-    padding-top: 60px;
+    padding-left: 150px;
+    padding-right: 150px;
+    padding-top: 25px;
     color: #181717;
     text-align: center;
     font-weight: 500;
 }
 
 .hotelDesccription p {
-    color: #181717;
-    font-size: 13px;
+    color: #0e0d0d;
+    font-size: 14px;
     margin-top: 10px;
+    margin-left: 20px;
 }
+
+.grayAc {
+    background-color: #F5F5F5;
+    padding: 40px;}
 
 .HotelName h4 {
     margin-top: 10px;
@@ -2938,7 +2959,7 @@ body {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    grid-row-gap: 18px;
+    grid-row-gap: 40px;
 }
 
 .EightCards1 {

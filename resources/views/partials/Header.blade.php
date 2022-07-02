@@ -42,7 +42,7 @@
                                           <a class="dropdown-item" href="{{ url('/cars')}}">Rent a transport</a>
                                           <a class="dropdown-item" href="{{ url('/hs') }}">Hotels</a>
                                           <a class="dropdown-item" href="{{ url('/acs') }}">Tour Accessories</a>
-                                          <a class="dropdown-item" href="{{ url('/mice') }}">MICE</a>
+                                          <a class="dropdown-item" href="{{ url('/mices') }}">MICE</a>
                                         </div>
                                       </li>
 
@@ -68,7 +68,7 @@
                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                           <a class="dropdown-item ru" href="{{ url('/c2') }}">Who are we</a>
                                           <a class="dropdown-item ru" href="{{ url('/ways') }}">3 ways to book a tour</a>
-                                          <a class="dropdown-item ru" href="">Privacy Policy</a>
+                                          <a class="dropdown-item ru" href="{{ url('/privacy') }}">Privacy Policy</a>
                                           <a class="dropdown-item ru" href="">Vacancy</a>
                                           <a class="dropdown-item ru" href="">Reviews</a>
                                           <a class="dropdown-item ru" href="{{ url('/contact') }}">Contact us</a>

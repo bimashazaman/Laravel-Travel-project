@@ -8,7 +8,7 @@
         <a href="{{ url('/car') }}">
             <div class="div1">
                 <i class="fa-solid fa-car-side"></i>
-                <h4 style="margin: 10px">
+                <h4 style="margin: 10px;">
                     Rent a car
                 </h4>
             </div>

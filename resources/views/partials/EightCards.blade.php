@@ -1,43 +1,44 @@
 <div class="container" style="text-align:center">
     <div class="EightCards">
-        <div class="EightCards1"><i class="fa-solid fa-car-side"></i>
+        <div class="EightCards1"><i class="fa-solid fa-mosque"></i>
             <h4 style="margin: 10px">
-                Rent a car
+                Churches And Monasteries
             </h4>
         </div>
-        <div class="EightCards2"><i class="fa-solid fa-car-side"></i>
+        <div class="EightCards2"><i class="fa-solid fa-road"></i>
             <h4 style="margin: 10px">
-                Rent a car
+                Old Roads
             </h4>
         </div>
-        <div class="EightCards3"><i class="fa-solid fa-car-side"></i>
+        <div class="EightCards3"><i class="fa-solid fa-tree"></i>
             <h4 style="margin: 10px">
-                Rent a car
+                Archeological Sites
+                and foundings
             </h4>
         </div>
-        <div class="EightCards4"> <i class="fa-solid fa-car-side"></i>
+        <div class="EightCards4"> <i class="fa-solid fa-landmark"></i>
             <h4 style="margin: 10px">
-                Rent a car
+                Museums
             </h4>
         </div>
-        <div class="EightCards5"> <i class="fa-solid fa-car-side"></i>
+        <div class="EightCards5"><i class="fa-regular fa-tree"></i>
             <h4 style="margin: 10px">
-                Rent a car
+                Natural Sites
             </h4>
         </div>
-        <div class="EightCards6"> <i class="fa-solid fa-car-side"></i>
+        <div class="EightCards6"> <i class="fa-brands fa-sourcetree"></i>
             <h4 style="margin: 10px">
-                Rent a car
+                Abandoned Places
             </h4>
         </div>
         <div class="EightCards7"> <i class="fa-solid fa-car-side"></i>
             <h4 style="margin: 10px">
-                Rent a car
+               Soviet
             </h4>
         </div>
-        <div class="EightCards8"> <i class="fa-solid fa-car-side"></i>
+        <div class="EightCards8"> <i class="fa-brands fa-pagelines"></i>
             <h4 style="margin: 10px">
-                Rent a car
+               Statues
             </h4>
         </div>
     </div>
