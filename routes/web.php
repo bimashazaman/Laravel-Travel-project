@@ -186,3 +186,11 @@ Route::get('/adminClassicTour', function () {
     return view('Backend.Admin.classicTours.ClassicTour');
 });
 
+Route::get('/CreateClassicTour', function () {
+    return view('Backend.Admin.classicTours.CreateClassicTour');
+});
+
+Route::get('/UpdateClassicTour', function () {
+    return view('Backend.Admin.classicTours.UpdateClassicTour');
+});
+
