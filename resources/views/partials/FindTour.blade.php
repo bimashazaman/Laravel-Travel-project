@@ -2,7 +2,7 @@
     <h2>
         Find Your Tour Here
     </h2>
-{{-- <div class="container">
+
 
     <div class="parentCard">
 
@@ -15,10 +15,10 @@
         <button class="package-view">
             Find Tour
         </button>
-    </div> --}}
+    </div>
 
 
-<div class="row" style="align-items: center;">
+{{-- <div class="row" style="align-items: center;">
     <div class="col-md-3">
         <div></div>
     </div>
@@ -36,6 +36,6 @@
 </div>
 <button class="package-view">
     Find Tour
-</button>
+</button> --}}
 
-</div>
+{{-- </div> --}}

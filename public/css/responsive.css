@@ -92,7 +92,8 @@
 @media screen and (max-width:767px){
 	#sticky-wrapper{background: rgba(77,78,84,1);}
 	.sticky-wrapper .navbar-collapse.collapse.in{width: 112%;margin-left: -14px;padding-left: 27px;}
-	.logo {float: left;}
+	.logo {float: left;
+    }
 	.main-menu .navbar-toggle {float: right;margin: 17px 0;}
 	.navbar-collapse {padding-right: 15px;padding-left: 15px;}
 	.main-menu .nav li a {font-size: 14px;padding: 0px 1px 10px;display: inline-block;}
@@ -125,8 +126,28 @@
 
 @media screen and (max-width: 660px){
 
+   .parentCard {
+   justify-content: center;
+   display: block;
+   margin-left: 120px;
+
+   }
+    .logo {
+        float: left;
+        width: 30%;
+        height: 30%;
+    }
+
 	.home1-testm-single {max-width: 350px;margin: 0 auto;}
-	.main-menu .nav li a {font-size: 14px;}
+	.main-menu .nav li a {
+        font-size: 16px;
+        padding-left: 12px;
+        display: block;
+       background-color: white;
+
+
+
+    }
 
 }/*max-width:660px*/
 
@@ -143,6 +164,18 @@
 
 
 @media screen and (max-width: 540px){
+
+
+
+    .logo {
+        float: left;
+        width: 30%;
+        height: 30%;
+    }
+
+.searchHeader {
+    float: left;
+}
 
 	.filtr-item {max-width: 350px;margin: 0 auto;}
 

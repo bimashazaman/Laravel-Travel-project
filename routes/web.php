@@ -183,7 +183,7 @@ Route::get('/food', function () {
 
 
 Route::get('/adminClassicTour', function () {
-    return view('Backend.Admin.classicTours.ClassicTour');
+    return view('Backend.Admin.Tours.classicTours.ClassicTour');
 });
 
 Route::get('/CreateClassicTour', function () {
