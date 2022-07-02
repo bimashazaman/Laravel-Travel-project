@@ -187,10 +187,10 @@ Route::get('/adminClassicTour', function () {
 });
 
 Route::get('/CreateClassicTour', function () {
-    return view('Backend.Admin.classicTours.CreateClassicTour');
+    return view('Backend.Admin.Tours.classicTours.CreateClassicTour');
 });
 
 Route::get('/UpdateClassicTour', function () {
-    return view('Backend.Admin.classicTours.UpdateClassicTour');
+    return view('Backend.Admin.Tours.classicTours.UpdateClassicTour');
 });
 
