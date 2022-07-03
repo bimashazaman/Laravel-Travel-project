@@ -1,7 +1,9 @@
 <?php
 
+use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 
+Route::get('/check',[TourController::class,'index']);
 
 Route::get('/', function () {
     return view('Home');

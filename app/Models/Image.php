@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Image extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        "filename",
+        "path"
+    ];
+
+    //relations
+
+    public function tour(){
+        return $this->belongsToMany(Tour::class,'tour_images');
+    }
 }

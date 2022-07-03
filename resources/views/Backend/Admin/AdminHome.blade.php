@@ -44,6 +44,7 @@
     <script src="{{ asset('assets/plugins/slimscroll/jquery.slimscroll.min.js') }}"></script>
 
     <script src="{{ asset('assets/js/script.js') }}"></script>
+    <script src="{{ asset('js/tour.js')}}"></script>
 </body>
 
 </html>

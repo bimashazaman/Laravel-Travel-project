@@ -1,5 +1,7 @@
 <?php
 
+use App\Http\Controllers\TourCategoryController;
+use App\Http\Controllers\TourController;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 
@@ -14,6 +16,14 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
-    return $request->user();
-});
+// Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
+//     return $request->user();
+// });
+
+Route::get('/check', [TourController::class, 'index']);
+
+//--------- Tour categgories ----------
+Route::resource("/tour/category", TourCategoryController::class);
+
+//-------- Tour --------------
+Route::resource("/tour", TourController::class);
