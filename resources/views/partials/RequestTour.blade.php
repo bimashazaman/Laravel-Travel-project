@@ -7,29 +7,13 @@
                         Choose one of our tours or create your own trip!
                     </h2>
             </div>
-            {{-- <ul id="progressbar">
-                <li class="active">Account Setup</li>
-                <li>Personal Details</li>
-                <li>Social Profiles</li>
-
-              </ul> --}}
-
-              {{-- <div class="progress" style="background-color: #D1D1D1; padding:-0.5px">
-                <div class="progress-bar bg-success" role="progressbar" style="width: 75%;background-color: #284525;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div>
-              </div> --}}
-
-              {{-- <ul id="progressbar" class="progress" style="-webkit-column-count: 3; -moz-column-count: 3; column-count: 3;">
-                <li class="active" style="background-color: #284525;"></li>
-                <li></li>
-                <li></li>
-
-              </ul> --}}
+            
 
 
               <ul class="list-group" style="display: flex;">
-                <li class="list-group-item" style="background-color:#F7F6F4; border:none">Account Setup</li>
-                <li class="list-group-item" style="background-color:#F7F6F4; border:none; margin-left:15%">Personal Details</li>
-                <li class="list-group-item" style="background-color:#F7F6F4; border:none; margin-left:20%">Social Profiles</li>
+                <li class="list-group-item ProgressBarItem" style="background-color:#F7F6F4; border:none"><i>Information about the group</i></li>
+                <li class="list-group-item ProgressBarItem" style="background-color:#F7F6F4; border:none; margin-left:13.5%"><i>Select the destination</i></li>
+                <li class="list-group-item ProgressBarItem" style="background-color:#F7F6F4; border:none; margin-left:17%"><i>Submit for a quote</i></li>
 
             </ul>
             <ul class="progress list-group" style="-webkit-column-count: 3; -moz-column-count: 3; column-count: 3;">
