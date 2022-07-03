@@ -3,7 +3,7 @@
 
  <div class="about-us-content">
 
- <img src="{{ asset('images/MainBanner.png') }}" alt="">\
+ <img src="{{ asset('images/MainBanner.png') }}" alt="">
 
  </div>
  <!--/.about-us-content-->

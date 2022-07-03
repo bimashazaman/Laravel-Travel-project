@@ -234,6 +234,10 @@ body {
     width: 100%;
 }
 
+.progress {
+    color: #1d7239;
+}
+
 .about-us-content img {
     margin-top: 300px;
     width: 100%;
@@ -3307,4 +3311,11 @@ body {
     grid-area: 7 / 6 / 8 / 7;
     border: 0.5px solid #d3d3d3;
     padding: 20px;
+}
+
+
+.factBox {
+    border: 0.5px solid #666060;
+    padding: 200px;
+    margin: 60px;
 }

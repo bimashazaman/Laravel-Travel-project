@@ -2,14 +2,14 @@
      <div class="header-area">
          <div class="container">
              <div class="row">
-                 <div class="col-sm-2">
+                <div class="col-md-2">
                      <div class="logo">
                          <a href="{{ url('/') }}">
-                             <img src="{{ asset('images/Tour-Logo.png') }}" alt="">
+                            <img src="{{ asset('images/Tour-Logo.png') }}" style="width:165px; height:76px" alt="">
                          </a>
                      </div><!-- /.logo-->
                  </div><!-- /.col-->
-                 <div class="col-sm-10">
+                 <div class="col-md-10">
                      <div class="main-menu">
 
                          <!-- Brand and toggle get grouped for better mobile display -->
@@ -20,7 +20,7 @@
                              </button><!-- / button-->
                          </div><!-- /.navbar-header-->
                          <div class="collapse navbar-collapse bg-white">
-                             <ul class="nav navbar-nav navbar-center">
+                             <ul class="nav navbar-nav navbar-center" style="margin-top: 14px;">
                                  <li class="nav-item dropdown">
                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                          role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -65,7 +65,7 @@
                                          <a class="dropdown-item" href="{{ url('/usefulToKnow') }}">Useful to know</a>
                                          <a class="dropdown-item" href="{{ url('/cs') }}">Events</a>
                                          <a class="dropdown-item" href="{{ url('/b') }}">Brochure</a>
-                                         <a class="dropdown-item" href="">Travel Blog</a>
+                                         <a class="dropdown-item" href="{{ url('/Articles') }}">Travel Blog</a>
                                      </div>
                                  </li>
                                  <li class="nav-item dropdown ">
@@ -89,11 +89,11 @@
                              </ul>
                              {{-- <li class="language">ENG</li>
                                       <li class="USD">USD</li> --}}
-                             <ul class="nav navbar-nav navbar-right">
+                             <ul class="nav navbar-nav navbar-right" style="margin-top: 14px;">
                                  <li class="nav-item" style="text-decoration: underline; margin-top:10px">USD</li>
                                     <li class="nav-item" style="text-decoration: underline; margin-top:10px">ENG</li>
                                  <li>
-                                     <input type="text" placeholder="Search" class="searchHeader">
+                                     <input type="text" placeholder="Search" class="searchHeader" style="margin-top: 1px;">
                                  </li>
                              </ul>
                          </div><!-- /.navbar-collapse -->
