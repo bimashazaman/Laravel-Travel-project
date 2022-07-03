@@ -3361,8 +3361,8 @@ grid-row-gap: 0px;
 }
 
 .Progress-border {
-
+    background-color: #D1D1D1;
     border: 0.5px solid;
-    border-color: lightgray;
+    border-color: rgb(138, 136, 136);
     border-radius: 0;
 }
