@@ -59,7 +59,8 @@
 
             </ul> --}}
             </div>
-            <div class="row">
+
+            {{-- <div class="row">
 <div class="col-md-12 col-xs-12">
     <div class="col-md-6 col-xs-6">
         <img src="{{ asset('images/ReqTour1.png') }}" alt="">
@@ -71,8 +72,6 @@
 
             <!-- fieldsets -->
             <fieldset>
-
-
                 <input type="text" placeholder="Name">
                 <input type="Text" placeholder="Start Date">
                 <input type="text" list="cars" placeholder="Destination" />
@@ -121,6 +120,64 @@
    </div>
 </div>
 
+            </div> --}}
+
+
+            <div class="row">
+                <div class="col-md-12 col-xs-12">
+                    <div class="col-md-6 col-xs-6">
+                        <img src="{{ asset('images/ReqTour1.png') }}" alt="">
+                    </div>
+                    <div class="col-md-6 col-xs-6">
+                        <form>
+                            <fieldset>
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                        <input type="text" placeholder="Name" style="width:100%">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                        <input type="Text" placeholder="Start Date" style="width:100%">
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                    <input type="text" list="cars" placeholder="Destination" style="width:100%"/>
+                                    <datalist id="Starting Destination">
+                                        <option>Volvo</option>
+                                        <option>Saab</option>
+                                        <option>Mercedes</option>
+                                        <option>Audi</option>
+                                    </datalist>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col-md-12 col-xs-12">
+                                        <div class="col-md-4 col-xs-4" style="background-color: white;">
+                                            <label for="" >Adult</label>
+                                        </div>
+                                        <div class="col-md-2 col-xs-2" style="display: flex">
+                                            <button>-</button>
+                                            <input type="text" style="width:5px">
+                                            <button>+</button>
+                                        </div>
+                                        <div class="col-md-4 col-xs-4" style="background-color: white;">
+                                            <label for="">Child</label>
+                                        </div>
+                                        <div class="col-md-4 col-xs-2" style="display: flex">
+                                            <button>-</button>
+                                            <input type="text" style="width: 2px">
+                                            <button>+</button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                            </fieldset>
+
+                        </form>
+                    </div>
+                </div>
             </div>
         </div>
 </section>

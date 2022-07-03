@@ -1367,7 +1367,7 @@ body {
 
 #multistepsform {
     padding: 10%;
-    width: 1000px;
+    width: 100%;
     margin: auto;
     text-align: center;
     position: relative;
@@ -3344,16 +3344,16 @@ grid-row-gap: 0px;
 }
 
 .parentForm i {
-    color: gray;
+    color: rgb(161, 157, 157);
     font-size: 3rem;
 }
 
-.divForm1 { grid-area: 1 / 1 / 2 / 2; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:30px; margin:5px; background-color: white; }
-.divForm2 { grid-area: 1 / 2 / 2 / 3; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:30px; margin:5px; background-color: white; }
-.divForm3 { grid-area: 1 / 3 / 2 / 4; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:30px; margin:5px; background-color: white; }
-.divForm4 { grid-area: 1 / 4 / 2 / 5; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:30px; margin:5px; background-color: white; }
-.divForm5 { grid-area: 1 / 5 / 2 / 6; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:30px; margin:5px; background-color: white; }
-.divForm6 { grid-area: 1 / 6 / 2 / 7; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:30px; margin:5px; background-color: white; }
+.divForm1 { grid-area: 1 / 1 / 2 / 2; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:17px; margin:5px; background-color: white; }
+.divForm2 { grid-area: 1 / 2 / 2 / 3; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:17px; margin:5px; background-color: white; }
+.divForm3 { grid-area: 1 / 3 / 2 / 4; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:17px; margin:5px; background-color: white; }
+.divForm4 { grid-area: 1 / 4 / 2 / 5; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:17px; margin:5px; background-color: white; }
+.divForm5 { grid-area: 1 / 5 / 2 / 6; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:17px; margin:5px; background-color: white; }
+.divForm6 { grid-area: 1 / 6 / 2 / 7; box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;; padding:17px; margin:5px; background-color: white; }
 
 
 .padding-0 {
