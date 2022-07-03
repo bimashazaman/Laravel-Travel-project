@@ -126,6 +126,9 @@
 
 @media screen and (max-width: 660px){
 
+    /* .resMargin {
+        margin-left: 1px;
+    } */
    .parentCard {
    justify-content: center;
    display: block;

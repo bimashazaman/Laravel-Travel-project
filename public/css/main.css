@@ -3323,5 +3323,7 @@ body {
 }
 
 .ProgressBarItem {
-    
+    margin-bottom: 0px;
+    font-size: 1.6rem;
+    font-weight: 450;
 }

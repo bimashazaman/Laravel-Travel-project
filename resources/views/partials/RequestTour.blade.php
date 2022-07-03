@@ -7,16 +7,16 @@
                         Choose one of our tours or create your own trip!
                     </h2>
             </div>
-            
 
 
-              <ul class="list-group" style="display: flex;">
-                <li class="list-group-item ProgressBarItem" style="background-color:#F7F6F4; border:none"><i>Information about the group</i></li>
-                <li class="list-group-item ProgressBarItem" style="background-color:#F7F6F4; border:none; margin-left:13.5%"><i>Select the destination</i></li>
-                <li class="list-group-item ProgressBarItem" style="background-color:#F7F6F4; border:none; margin-left:17%"><i>Submit for a quote</i></li>
+
+              <ul class="list-group ProgressBarItem" style="display: flex;">
+                <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none;"><i>Information about the group</i></li>
+                <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none; margin-left:10%"><i>Select the destination</i></li>
+                <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none; margin-left:17%"><i>Submit for a quote</i></li>
 
             </ul>
-            <ul class="progress list-group" style="-webkit-column-count: 3; -moz-column-count: 3; column-count: 3;">
+            <ul class="progress list-group ProgressBarItem" style="-webkit-column-count: 3; -moz-column-count: 3; column-count: 3;">
                 <li class="list-group-item" style="background-color: #284525;"></li>
                 <li class="list-group-item"></li>
                 <li class="list-group-item"></li>
