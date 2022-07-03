@@ -197,3 +197,8 @@ Route::get('/UpdateClassicTour', function () {
 Route::get('/driver', function () {
     return view('Frontend.Cars.DriverCar');
 });
+
+
+Route::get('/usefulToKnow', function () {
+    return view('Frontend.Armenia.UsefulToKnow');
+});

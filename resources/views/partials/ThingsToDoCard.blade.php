@@ -5,28 +5,36 @@
     <div class="parent" align="center">
         <a href="">
             <div class="div1">
-                <i class="fa-solid fa-car-side"></i>
+                <i class="fa-solid fa-utensils"></i>
                 <h4 style="margin: 10px">
-                   Things to do
+                   Tourist Experiences
                 </h4>
             </div>
         </a>
         <a href="">
             <div class="div2">
-                <i class="fa-solid fa-car-side"></i>
+                <i class="fa-solid fa-mask"></i>
                 <h4 style="margin: 10px">
-                   Transfers With drivers
+                   Festivals
                 </h4>
             </div>
         </a>
         <a href="">
         <div class="div3">
-            <i class="fa-solid fa-car-side"></i>
+            <i class="fa-solid fa-camera"></i>
             <h4 style="margin: 10px">
-               Meet the transfer at airport
+               Entertainment
             </h4>
         </div>
     </a>
 
+    <a href="">
+        <div class="div3">
+            <i class="fa-solid fa-bag-shopping"></i>
+            <h4 style="margin: 10px">
+               Shopping
+            </h4>
+        </div>
+    </a>
     </div>
 </div>

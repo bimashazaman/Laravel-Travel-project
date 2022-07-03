@@ -2705,7 +2705,7 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
-    grid-area: 1 / 2 / 2 / 3;
+    grid-area: 1 / 1 / 2 / 2;
     height: 120px;
     width: 200px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -2728,7 +2728,7 @@ body {
     align-items: center;
     text-align: center;
     justify-content: center;
-    grid-area: 1 / 1 / 2 / 2;
+    grid-area: 1 / 2 / 2 / 3;
     height: 120px;
     width: 200px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
@@ -2743,6 +2743,18 @@ body {
     width: 200px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
 }
+.div4 {
+    margin: 15px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    grid-area: 1 / 4 / 2 / 5;
+    height: 120px;
+    width: 200px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+
 
 .RentCar h2 {
     font-size: 30px;

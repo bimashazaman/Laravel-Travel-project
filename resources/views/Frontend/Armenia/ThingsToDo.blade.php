@@ -66,7 +66,7 @@
                         </div>
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                view more
+                                More
                             </button>
                             </a>
                         </div>
@@ -116,7 +116,7 @@
                         </div>
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                view more
+                                More
                             </button>
                             </a>
                         </div>
@@ -165,7 +165,7 @@
                         </div>
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                view more
+                                More
                             </button>
                             </a>
                         </div>
@@ -214,7 +214,7 @@
                         </div>
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                view more
+                                More
                             </button>
                             </a>
                         </div>
@@ -263,7 +263,7 @@
                         </div>
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                view more
+                                More
                             </button>
                             </a>
                         </div>
@@ -312,7 +312,7 @@
                         </div>
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                view more
+                                More
                             </button>
                             </a>
                         </div>
@@ -361,7 +361,7 @@
                         </div>
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                view more
+                                More
                             </button>
                             </a>
                         </div>
@@ -410,7 +410,7 @@
                         </div>
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                view more
+                                More
                             </button>
                             </a>
                         </div>
@@ -459,7 +459,7 @@
                         </div>
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                view more
+                                More
                             </button>
                             </a>
                         </div>
