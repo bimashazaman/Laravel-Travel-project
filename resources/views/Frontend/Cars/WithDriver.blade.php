@@ -1,223 +1,67 @@
-
-    <!--packages start-->
-    @extends('layouts.master')
+@extends('layouts.master')
 @section('content')
     <br>
-    <br>
     <br><br>
-
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
+    <br><br>
     <br>
-    <br>
-    <br>
-    <section class="tour-descriptions">
-        <h1 style="text-align: center">
-            Rent A Car With Driver
-        </h1>
-        <div class="row">
-            <div class="col-md-7">
-                <div class="tour-descriptions-content">
-                    <div class="tour-descriptions-content-inner">
-                        <div class="tour-descriptions-content-inner-left">
-                            <div class="tour-descriptions-content-inner-left-content">
-
-                            </div><!-- /.tour-descriptions-content-inner-left-content -->
-                        </div><!-- /.tour-descriptions-content-inner-left -->
-                        <div class="tour-descriptions-content-inner-right">
-
-
-                            <section class="imgC">
-                                <div class="imgCcontainer">
-                                    <div class="carousel">
-                                        <input type="radio" name="slides" checked="checked" id="slide-1">
-                                        <input type="radio" name="slides" id="slide-2">
-                                        <input type="radio" name="slides" id="slide-3">
-                                        <input type="radio" name="slides" id="slide-4">
-                                        <input type="radio" name="slides" id="slide-5">
-                                        <input type="radio" name="slides" id="slide-6">
-                                        <ul class="carousel__slides">
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1041/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1043/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1044/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1045/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1049/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1052/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                        </ul>
-                                        <ul class="carousel__thumbnails">
-                                            <li>
-                                                <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                        </ul>
-                                    </div>
-
-                            </section>
-
-
-
-
-
-
-
-                        </div><!-- /.tour-descriptions-content-inner-right -->
-                    </div><!-- /.tour-descriptions-content-inner -->
-                </div><!-- /.tour-descriptions-content -->
-            </div><!-- /.col -->
-
-            <div class="col-md-5">
-                <div class="tour-descriptions-content-inner-left-content-title bb">
-                    <h2>
-                        Key Points
-                    </h2>
-                    <div class="detailespackage">
-                        <span><i class="fa-solid fa-car"></i></span> Type <span class="rightspan">Skiing</span>
-                    </div>
-                    <div class="detailespackage">
-                        <span><i class="fa-solid fa-person"></i></span> Group size <span class="rightspan">2</span>
-                    </div>
-
-                    <div class="detailespackage">
-                        <span><i class="fa-solid fa-calendar-check"></i></span> Date <span
-                            class="rightspan">2.12.2022</span>
-                    </div>
-
-                    <div class="detailespackage">
-                        <span><i class="fa-solid fa-calendar"></i></span> Date <span class="rightspan">2.12.2022</span>
-                    </div>
-
-
-                </div><!-- /.tour-descriptions-content-inner-left-content-title -->
-
-            </div><!-- /.row -->
-        </div><!-- /.container -->
-    </section><!-- /.tour-descriptions -->
-    <!-- Tour description end -->
-
-    <section class="carDes">
-        <h2>
-            Overview
-        </h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cum hic totam ducimus repudiandae in cupiditate
-            deleniti velit accusantium ut consequuntur tempora veritatis explicabo dignissimos quaerat, eius illum alias id
-            nihil placeat inventore voluptate animi natus nam. Veritatis quaerat doloremque asperiores, in ad provident,
-            quae ut sunt delectus quibusdam voluptate, perspiciatis recusandae officiis! Fugiat voluptate neque optio
-            reprehenderit magni eveniet eum suscipit quam, ducimus, odio ex sed vero dolorum! Ratione.
-        </p>
-    </section>
-
-
-    <section class="tableOfPrice">
-        <div class="container">
-            <h3 style="text-align: center; margin-bottom:10px">
-                The price table
-            </h3>
-            <table class="table table-bordered tble">
-                <thead>
-                    <tr>
-                        <th>1 Day</th>
-                        <th>1 Week</th>
-                        <th>1 Mounth</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>Mark</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
-
-                    </tr>
-                    <tr>
-                        <td>Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
-                    </tr>
-
-                </tbody>
-            </table>
-
-        </div>
-        <button class="package-view" style="text-align: center; align-items:center; margin:20px">
-            Book Now
-        </button>
-    </section>
-
-
-    {{-- <!--packages start-->
     <section id="pack" class="packages">
         <div class="container">
-            <div class="gallary-header text-center">
-                <h2>
-                    special packages
-                </h2>
-                <p>
-                    Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.
-                </p>
+            <h2 style="text-align: center; padding-bottom:60px">
+                Rent a transport
+            </h2>
+
+            <div class="container">
+
+                <div class="parent" align="center">
+                    <a href="{{ url('/driver') }}">
+                        <div class="div1">
+                            <i class="fa-solid fa-car-side"></i>
+                            <h4 style="margin: 10px;">
+                                Rent a car
+                            </h4>
+                        </div>
+                    </a>
+                    <a href="{{ url('/withDriver')}}">
+                        <div class="div2" style="background-color: #FAEFD7; box-shadow:none; border:0.1px solid rgb(212, 211, 211)">
+                            <i class="fa-solid fa-car-side"></i>
+                            <h4 style="margin: 10px">
+                               Transfers With drivers
+                            </h4>
+                        </div>
+                    </a>
+                    <a href="{{ url('/MT') }}">
+                    <div class="div3">
+                        <i class="fa-solid fa-car-side"></i>
+                        <h4 style="margin: 10px">
+                           Meet the transfer at airport
+                        </h4>
+                    </div>
+                </a>
+
+                </div>
             </div>
-            <!--/.gallery-header-->
+
+
             <div class="packages-content">
+
+                <div class="RentCar">
+                    <h2 style="color:black; font-weidth:500">
+                        Rent a car with driver
+                    </h2>
+                    <p>
+                        On our web page you can find prices for individual, group and corporate tours with specially
+                        developed and multiply realized programs. The variety of trips is as diverse as our country itself –
+                        from classical sightseeing tours to food and wine tours as well as guided backpacking trips, hiking
+                        and trekking in mountains. You can also get therapeutic tours to popular Jermuk resort and
+                        Tsaghkadzor winter ski resort. We offer the largest choice of hotels in Yerevan and regions of
+                        Armenia, with seasonal prices. All the rates, mentioned on our web page for 2020, are valid and
+                        refreshed depending on season, discount availability, special offers and hot tours.
+                    </p>
+                </div>
                 <div class="row">
 
                     <div class="col-md-4 col-sm-6">
@@ -231,21 +75,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                   Tesla
+                                    Tesla
                                 </h4>
 
                             </div>
                             <div class="pacdet">
-                                <div class="packageOffer">
+                                <div class="packageOffer" style="margin-left: 20px">
                                     <span><i class="fa-regular fa-clock"></i></span> Tesla
                                 </div>
 
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
                                 </div>
 
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
                                 </div>
                             </div>
                             <div class="rating">
@@ -256,15 +100,18 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <button class="package-view">
+                               <a href="{{ url('/driver') }}">
+                                 <button class="package-view">
                                     Details
                                 </button>
 
+                               </a>
                             </div>
 
 
 
                         </div>
+                        <!--/.single-package-item-->
 
                     </div>
                     <!--/.col-->
@@ -280,21 +127,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                   Tesla
+                                    Tesla
                                 </h4>
 
                             </div>
                             <div class="pacdet">
-                                <div class="packageOffer">
+                                <div class="packageOffer" style="margin-left: 20px">
                                     <span><i class="fa-regular fa-clock"></i></span> Tesla
                                 </div>
 
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
                                 </div>
 
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
                                 </div>
                             </div>
                             <div class="rating">
@@ -305,19 +152,21 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <button class="package-view">
+                               <a href="{{ url('/driver') }}">
+                                 <button class="package-view">
                                     Details
                                 </button>
 
+                               </a>
                             </div>
 
 
 
                         </div>
+                        <!--/.single-package-item-->
 
                     </div>
                     <!--/.col-->
-
                     <div class="col-md-4 col-sm-6">
 
                         <div class="single-package-item">
@@ -329,21 +178,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                   Tesla
+                                    Tesla
                                 </h4>
 
                             </div>
                             <div class="pacdet">
-                                <div class="packageOffer">
+                                <div class="packageOffer" style="margin-left: 20px">
                                     <span><i class="fa-regular fa-clock"></i></span> Tesla
                                 </div>
 
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
                                 </div>
 
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
                                 </div>
                             </div>
                             <div class="rating">
@@ -354,38 +203,333 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <button class="package-view">
+                               <a href="{{ url('/driver') }}">
+                                 <button class="package-view">
                                     Details
                                 </button>
 
+                               </a>
                             </div>
 
 
 
                         </div>
+                        <!--/.single-package-item-->
+
                     </div>
                     <!--/.col-->
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="single-package-item">
+
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                alt="package-place">
+                            <div class="packageName">
+
+                            </div>
+                            <div class="Car-txt">
+                                <h4>
+                                    Tesla
+                                </h4>
+
+                            </div>
+                            <div class="pacdet">
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="package-btn">
+                               <a href="{{ url('/driver') }}">
+                                 <button class="package-view">
+                                    Details
+                                </button>
+
+                               </a>
+                            </div>
+
+
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="single-package-item">
+
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                alt="package-place">
+                            <div class="packageName">
+
+                            </div>
+                            <div class="Car-txt">
+                                <h4>
+                                    Tesla
+                                </h4>
+
+                            </div>
+                            <div class="pacdet">
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="package-btn">
+                               <a href="{{ url('/driver') }}">
+                                 <button class="package-view">
+                                    Details
+                                </button>
+
+                               </a>
+                            </div>
+
+
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="single-package-item">
+
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                alt="package-place">
+                            <div class="packageName">
+
+                            </div>
+                            <div class="Car-txt">
+                                <h4>
+                                    Tesla
+                                </h4>
+
+                            </div>
+                            <div class="pacdet">
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="package-btn">
+                               <a href="{{ url('/driver') }}">
+                                 <button class="package-view">
+                                    Details
+                                </button>
+
+                               </a>
+                            </div>
+
+
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="single-package-item">
+
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                alt="package-place">
+                            <div class="packageName">
+
+                            </div>
+                            <div class="Car-txt">
+                                <h4>
+                                    Tesla
+                                </h4>
+
+                            </div>
+                            <div class="pacdet">
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="package-btn">
+                               <a href="{{ url('/driver') }}">
+                                 <button class="package-view">
+                                    Details
+                                </button>
+
+                               </a>
+                            </div>
+
+
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="single-package-item">
+
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                alt="package-place">
+                            <div class="packageName">
+
+                            </div>
+                            <div class="Car-txt">
+                                <h4>
+                                    Tesla
+                                </h4>
+
+                            </div>
+                            <div class="pacdet">
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="package-btn">
+                               <a href="{{ url('/driver') }}">
+                                 <button class="package-view">
+                                    Details
+                                </button>
+
+                               </a>
+                            </div>
+
+
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="single-package-item">
+
+                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                                alt="package-place">
+                            <div class="packageName">
+
+                            </div>
+                            <div class="Car-txt">
+                                <h4>
+                                    Tesla
+                                </h4>
+
+                            </div>
+                            <div class="pacdet">
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
+                                </div>
+
+                                <div class="packageOffer" style="margin-left: 20px">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="package-btn">
+                               <a href="{{ url('/driver') }}">
+                                 <button class="package-view">
+                                    Details
+                                </button>
+
+                               </a>
+                            </div>
+
+
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+
+
 
                 </div>
                 <!--/.row-->
             </div>
-            <!--/.packages-content-->
         </div>
-        <!--/.container-->
-    </section> --}}
+    </section>
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

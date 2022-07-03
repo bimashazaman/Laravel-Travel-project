@@ -171,31 +171,50 @@
 
     <section class="tableOfPrice">
         <div class="container">
-            <h3 style="font-weight: 600">
-                The price
-            </h3>
-            <br>
-            <table class="table table-bordered tble">
-                <thead>
-                    <tr>
-                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Day</th>
-                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Week</th>
-                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Mounth</th>
-
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr>
-                        <td>25000</td>
-                        <td> 35000</td>
-                        <td>45000</td>
-
-                    </tr>
-
-
-                </tbody>
-            </table>
-
+            <div class="parentDriver">
+                <div class="Driver1"> </div>
+                <div class="divDriver2"> 3 seats </div>
+                <div class="divDriver3"> 7 Seats </div>
+                <div class="divDriver4"> 16 Seats</div>
+                <div class="divDriver5"> 29 Seats</div>
+                <div class="divDriver6"> 49 Seats</div>
+                <div class="divDriver7"> </div>
+                <div class="divDriver8"> </div>
+                <div class="divDriver9"> </div>
+                <div class="divDriver10"> </div>
+                <div class="divDriver11"> </div>
+                <div class="divDriver12"> </div>
+                <div class="divDriver13"> </div>
+                <div class="divDriver14"> </div>
+                <div class="divDriver15"> </div>
+                <div class="divDriver16"> </div>
+                <div class="divDriver17"> </div>
+                <div class="divDriver18"> </div>
+                <div class="divDriver19"> </div>
+                <div class="divDriver20"> </div>
+                <div class="divDriver21"> </div>
+                <div class="divDriver22"> </div>
+                <div class="divDriver23"> </div>
+                <div class="divDriver24"> </div>
+                <div class="divDriver25"> </div>
+                <div class="divDriver26"> </div>
+                <div class="divDriver27"> </div>
+                <div class="divDriver28"> </div>
+                <div class="divDriver29"> </div>
+                <div class="divDriver30"> </div>
+                <div class="divDriver31"> </div>
+                <div class="divDriver32"> </div>
+                <div class="divDriver33"> </div>
+                <div class="divDriver34"> </div>
+                <div class="divDriver35"> </div>
+                <div class="divDriver36"> </div>
+                <div class="divDriver37"> </div>
+                <div class="divDriver38"> </div>
+                <div class="divDriver39"> </div>
+                <div class="divDriver40"> </div>
+                <div class="divDriver41"> </div>
+                <div class="divDriver42"> </div>
+                </div>
         </div>
         <a href="{{ url('/RenACar') }}">
             <button class="package-view" style="text-align: center; align-items:center; margin:20px">
@@ -206,174 +225,7 @@
 
 <br>
 
-    {{-- <!--packages start-->
-    <section id="pack" class="packages">
-        <div class="container">
-            <div class="gallary-header text-center">
-                <h2>
-                    special packages
-                </h2>
-                <p>
-                    Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.
-                </p>
-            </div>
-            <!--/.gallery-header-->
-            <div class="packages-content">
-                <div class="row">
 
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                   Tesla
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <button class="package-view">
-                                    Details
-                                </button>
-
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-                    <!--/.col-->
-
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                   Tesla
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <button class="package-view">
-                                    Details
-                                </button>
-
-                            </div>
-
-
-
-                        </div>
-
-                    </div>
-                    <!--/.col-->
-
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                   Tesla
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <button class="package-view">
-                                    Details
-                                </button>
-
-                            </div>
-
-
-
-                        </div>
-                    </div>
-                    <!--/.col-->
-
-                </div>
-                <!--/.row-->
-            </div>
-            <!--/.packages-content-->
-        </div>
-        <!--/.container-->
-    </section> --}}
 @endsection
 
 

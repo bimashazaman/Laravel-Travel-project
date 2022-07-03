@@ -154,21 +154,19 @@
                         Key Points
                     </h3>
                     <div class="detailespackage">
-                        <span><i class="fa-solid fa-person-skiing"></i></span> Type <span class="rightspan">Skiing</span>
+                        <div><i class="fa-solid fa-car"></i> Parking </div>
                     </div>
                     <div class="detailespackage">
-                        <span><i class="fa-solid fa-person"></i></span> Group size <span class="rightspan">2</span>
+                        <div><i class="fa-solid fa-wifi"></i> Internet WIFI </div>
                     </div>
                     <div class="detailespackage">
-                        <span><i class="fa-solid fa-money-check-dollar"></i></span> Date <span
-                            class="rightspan">2.12.2022</span>
+                        <div><i class="fa-solid fa-credit-card"></i> Pay by card </div>
                     </div>
                     <div class="detailespackage">
-                        <span><i class="fa-solid fa-receipt"></i></span> Date <span class="rightspan">2.12.2022</span>
+                        <div><i class="fa-solid fa-ban"></i> Free cancellation </div>
                     </div>
                     <div class="detailespackage">
-                        <span><i class="fa-solid fa-person-running"></i></span> Date <span
-                            class="rightspan">2.12.2022</span>
+                        <div><i class="fa-solid fa-person-running"></i> In the city center </div>
                     </div>
 
 
@@ -192,6 +190,9 @@
             reprehenderit magni eveniet eum suscipit quam, ducimus, odio ex sed vero dolorum! Ratione.
         </p>
     </section>
+
+
+
 
     <section class="tableOfPrice" style="background-color: #F5F5F5; padding:60px">
         <div class="container">
@@ -238,11 +239,37 @@
         </a>
     </section>
 
+    <section class="useFull">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                   <div class="uselist">
+                    <h3 style="padding: 10px; color:white">
+                        UseFul To know
+                    </h3>
+                    <ul>
+                        <li>Lorem ipsum dolor sit.</li>
+                        <li>Lorem ipsum dolor sit amet consectetur.</li>
+                        <li>Lorem ipsum dolor sit amet.</li>
+                        <li>Lorem, ipsum dolor.</li>
+                        <li>Lorem ipsum dolor sit.</li>
+                    </ul>
+                   </div>
+                   <img src="{{ asset('images/usefull.png') }}" alt="">
+                </div>
+                <div class="col-md-6">
+                    <img class="listImg" src="{{ asset('images/list.png') }}" alt="">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
 
 
 
     <!--packages start-->
-    <section id="pack" class="packages">
+    <section id="pack" class="packages" style="background-color: #F5F5F5">
         <div class="container">
             <div class="gallary-header text-center">
                 <h2>
@@ -255,19 +282,18 @@
                 <div class="row">
                     <div class="col-md-4 col-sm-6">
 
-                        <div class="single-package-item">
+                        <div class="single-package-item" style="background-color:white">
 
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                         <div class="HotelName">
-                            <h4>
-                                Hotel Name
-                            </h4>
-                         </div>
-                         <div class="hotelDesccription">
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                            </p>
-                         </div>
+                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                alt="package-place">
+                            <div class="HotelName">
+                                <h4>
+                                    Hotel Name
+                                </h4>
+                            </div>
+                            <div class="hotelDesccription">
+
+                            </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
                                     <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
@@ -288,34 +314,33 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                    view more
-                                </button>
-                                </a>
-                            </div>
 
 
 
                         </div>
                         <!--/.single-package-item-->
+                        <div class="package-btn">
+                            <a href="{{ url('h') }}"><button class="package-view">
+                                    view more
+                                </button>
+                            </a>
+                        </div>
 
                     </div>
                     <div class="col-md-4 col-sm-6">
 
-                        <div class="single-package-item">
+                        <div class="single-package-item" style="background-color:white">
 
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                         <div class="HotelName">
-                            <h4>
-                                Hotel Name
-                            </h4>
-                         </div>
-                         <div class="hotelDesccription">
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                            </p>
-                         </div>
+                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                alt="package-place">
+                            <div class="HotelName">
+                                <h4>
+                                    Hotel Name
+                                </h4>
+                            </div>
+                            <div class="hotelDesccription">
+
+                            </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
                                     <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
@@ -336,34 +361,33 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                    view more
-                                </button>
-                                </a>
-                            </div>
 
 
 
                         </div>
                         <!--/.single-package-item-->
+                        <div class="package-btn">
+                            <a href="{{ url('h') }}"><button class="package-view">
+                                    view more
+                                </button>
+                            </a>
+                        </div>
 
                     </div>
                     <div class="col-md-4 col-sm-6">
 
-                        <div class="single-package-item">
+                        <div class="single-package-item" style="background-color:white">
 
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                         <div class="HotelName">
-                            <h4>
-                                Hotel Name
-                            </h4>
-                         </div>
-                         <div class="hotelDesccription">
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                            </p>
-                         </div>
+                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                alt="package-place">
+                            <div class="HotelName">
+                                <h4>
+                                    Hotel Name
+                                </h4>
+                            </div>
+                            <div class="hotelDesccription">
+
+                            </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
                                     <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
@@ -384,34 +408,90 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
+
+
+
+                        </div>
+                        <!--/.single-package-item-->
+                        <div class="package-btn">
+                            <a href="{{ url('h') }}"><button class="package-view">
                                     view more
                                 </button>
-                                </a>
+                            </a>
+                        </div>
+
+                    </div>
+
+                   <div>
+                    <br>
+<br>
+<br>
+                    <h3 style="text-align: center; padding:50px; margin-top:40px">
+                        What to do nearby
+                    </h3>
+                   </div>
+
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="single-package-item" style="background-color:white">
+
+                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                alt="package-place">
+                            <div class="HotelName">
+                                <h4>
+                                    Hotel Name
+                                </h4>
+                            </div>
+                            <div class="hotelDesccription">
+
+                            </div>
+                            <div class="pacdet">
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                </div>
+
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-star"></i></span> Date
+                                </div>
+
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
 
 
 
                         </div>
                         <!--/.single-package-item-->
+                        <div class="package-btn">
+                            <a href="{{ url('h') }}"><button class="package-view">
+                                    view more
+                                </button>
+                            </a>
+                        </div>
 
                     </div>
                     <div class="col-md-4 col-sm-6">
 
-                        <div class="single-package-item">
+                        <div class="single-package-item" style="background-color:white">
 
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                         <div class="HotelName">
-                            <h4>
-                                Hotel Name
-                            </h4>
-                         </div>
-                         <div class="hotelDesccription">
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                            </p>
-                         </div>
+                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                alt="package-place">
+                            <div class="HotelName">
+                                <h4>
+                                    Hotel Name
+                                </h4>
+                            </div>
+                            <div class="hotelDesccription">
+
+                            </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
                                     <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
@@ -432,34 +512,33 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                    view more
-                                </button>
-                                </a>
-                            </div>
 
 
 
                         </div>
                         <!--/.single-package-item-->
+                        <div class="package-btn">
+                            <a href="{{ url('h') }}"><button class="package-view">
+                                    view more
+                                </button>
+                            </a>
+                        </div>
 
                     </div>
                     <div class="col-md-4 col-sm-6">
 
-                        <div class="single-package-item">
+                        <div class="single-package-item" style="background-color:white">
 
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                         <div class="HotelName">
-                            <h4>
-                                Hotel Name
-                            </h4>
-                         </div>
-                         <div class="hotelDesccription">
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                            </p>
-                         </div>
+                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                alt="package-place">
+                            <div class="HotelName">
+                                <h4>
+                                    Hotel Name
+                                </h4>
+                            </div>
+                            <div class="hotelDesccription">
+
+                            </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
                                     <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
@@ -480,65 +559,17 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                    view more
-                                </button>
-                                </a>
-                            </div>
 
 
 
                         </div>
                         <!--/.single-package-item-->
-
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                         <div class="HotelName">
-                            <h4>
-                                Hotel Name
-                            </h4>
-                         </div>
-                         <div class="hotelDesccription">
-                            <p>
-                                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                            </p>
-                         </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-star"></i></span> Date
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
+                        <div class="package-btn">
+                            <a href="{{ url('h') }}"><button class="package-view">
                                     view more
                                 </button>
-                                </a>
-                            </div>
-
-
-
+                            </a>
                         </div>
-                        <!--/.single-package-item-->
 
                     </div>
                 </div>

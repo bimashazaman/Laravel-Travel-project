@@ -37,11 +37,11 @@
             <div class="form-row">
                 <div class="form-group col-md-6">
 
-                    <input type="date" class="form-control" id="inputEmail4" placeholder="StartDate">
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="Start Date*">
                 </div>
                 <div class="form-group col-md-6">
 
-                    <input type="date" class="form-control" id="inputPassword4" placeholder="EndDate">
+                    <input type="text" class="form-control" id="inputPassword4" placeholder="End Date*">
                 </div>
             </div>
             <div class="form-group">

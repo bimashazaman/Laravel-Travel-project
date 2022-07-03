@@ -129,14 +129,21 @@
    .parentCard {
    justify-content: center;
    display: block;
-   margin-left: 120px;
 
+
+   }
+
+   .single-card {
+    width: 100%;
+    margin: 6px;
    }
     .logo {
         float: left;
         width: 30%;
         height: 30%;
     }
+
+
 
 	.home1-testm-single {max-width: 350px;margin: 0 auto;}
 	.main-menu .nav li a {

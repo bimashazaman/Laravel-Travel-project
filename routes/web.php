@@ -194,3 +194,6 @@ Route::get('/UpdateClassicTour', function () {
     return view('Backend.Admin.Tours.classicTours.UpdateClassicTour');
 });
 
+Route::get('/driver', function () {
+    return view('Frontend.Cars.DriverCar');
+});
