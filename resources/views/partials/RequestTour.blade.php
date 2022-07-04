@@ -183,10 +183,10 @@
             </div> --}}
             <div class="row">
                 <div class="col-md-12 col-xs-12">
-                    <div class="col-md-6 col-xs-6">
+                    <div class="col-md-5 col-xs-12">
                         <img src="{{ asset('images/ReqTour1.png') }}" alt="">
                     </div>
-                    <div class="col-md-6 col-xs-6">
+                    <div class="col-md-7 col-xs-12">
                         <form>
                             <fieldset>
                                 <div class="col-md-12 col-xs-12">
@@ -209,28 +209,21 @@
                                 <div class="col-md-12 col-xs-12">
 
                                     <div class="col-md-6 col-xs-12">
-                                        <div class="col-md-12 col-xs-12" style="display: flex">
-                                            <div class="col-md-6 col-xs-6">
-                                                <label for="" style="float: left;background-color: white; padding-right: 15%;"
-                                                class="reqTourInput">Adult</label>
+                                        <span><label for="" style="float: left;background-color: white; padding-right: 30%;"
+                                            class="reqTourInput">Adult</label></span>
+                                        <span>
+                                            <div class="number" style="float:left;">
+                                                <button class="minus"
+                                                    style="width:25px; color: black; border:none; font-size:3rem">-</button>
+                                                <input type="text" value="1"
+                                                    style="width: 40px; text-align: center;" class="reqTourInput" />
+                                                <button class="plus"
+                                                    style="width:25px; color: black; border:none; font-size:3rem">+</button>
                                             </div>
-                                            <div class="col-md-6 col-xs-6">
-                                                <div class="number" style="float:left;">
-                                                    <button class="minus"
-                                                        style="width:25px; color: black; border:none; font-size:3rem">-</button>
-                                                    <input type="text" value="1"
-                                                        style="width: 40px; text-align: center;" class="reqTourInput" />
-                                                    <button class="plus"
-                                                        style="width:25px; color: black; border:none; font-size:3rem">+</button>
-                                                </div>
-                                            </div>
-                                        </div>
-
-
-
+                                        </span>
                                     </div>
                                     <div class="col-md-6 col-xs-12" style="">
-                                        <label for="" style="float: left;background-color: white; padding-right: 15%;"
+                                        <label for="" style="float: left;background-color: white; padding-right: 30%;"
                                             class="reqTourInput">Child</label>
                                         <div class="number" style="float:left;">
                                             <button class="minus"
@@ -244,6 +237,9 @@
                                 </div>
                                 <div class="row">
                                     <div class="col">
+                                        <input type="text" class="reqTourInput" style="width: 140px; float:left;" placeholder="Type">
+                                    </div>
+                                    <div class="col">
                                         <div class="ReqBox" style="width: 100px; float:left;"><i
                                                 class="fa-solid fa-car"></i>
                                             <div>Car</div>
@@ -251,22 +247,18 @@
                                     </div>
                                     <div class="col">
                                         <div class="ReqBox" style="width: 100px; float:left;"> <i
-                                                class="fa-solid fa-bicycle"></i> Cycle</div>
-                                    </div>
-                                    <div class="col">
-                                        <div class="ReqBox" style="width: 100px; float:left;"> <i
-                                                class="fa-solid fa-person-hiking"></i> Hiking</div>
+                                                class="fa-solid fa-bicycle"></i> Motorcycle</div>
                                     </div>
                                     <div class="col">
                                         <div class="ReqBox" style="width: 100px; float:left;"><i
                                                 class="fa-solid fa-person-biking"></i> Bike </div>
                                     </div>
                                     <div class="col">
-                                        <div class="ReqBox" style="width: 100px; float:left;"><i
-                                                class="fa-solid fa-bus"></i>
-                                            <div>Bus</div>
-                                        </div>
+                                        <div class="ReqBox" style="width: 100px; float:left;"> <i
+                                                class="fa-solid fa-person-hiking"></i> Hiking</div>
                                     </div>
+
+
                                 </div>
 
                                 {{-- <div class="col-md-12 col-xs-12 col-sm-12" style="margin: 0; align-items: start; display: contents;">
