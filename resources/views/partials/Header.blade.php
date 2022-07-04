@@ -79,8 +79,8 @@
                                          <a class="dropdown-item ru" href="{{ url('/ways') }}">3 ways to book a
                                              tour</a>
                                          <a class="dropdown-item ru" href="{{ url('/privacy') }}">Privacy Policy</a>
-                                         <a class="dropdown-item ru" href="">Vacancy</a>
-                                         <a class="dropdown-item ru" href="">Reviews</a>
+                                         {{-- <a class="dropdown-item ru" href="">Vacancy</a>
+                                         <a class="dropdown-item ru" href="">Reviews</a> --}}
                                          <a class="dropdown-item ru" href="{{ url('/contact') }}">Contact us</a>
                                      </div>
 

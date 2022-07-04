@@ -7,7 +7,7 @@
 
             <div class="row justify-content-center">
 
-                <div class="col-sm-4 col-md-3 item">
+                <div class="col-sm-3 col-md-2 item">
                     <h3>Tours</h3>
                     <ul>
                         <li><a href="#">Classic Tours</a></li>
@@ -18,7 +18,7 @@
                         <li><a href="#">Themed Tours</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4 col-md-3 item">
+                <div class="col-sm-3 col-md-2 item">
                     <h3>Services</h3>
                     <ul>
                         <li><a href="#">Rent a transport</a></li>
@@ -29,7 +29,7 @@
                         <li><a href="#">MICE</a></li>
                     </ul>
                 </div>
-                <div class="col-sm-4 col-md-3 item">
+                <div class="col-sm-3 col-md-2 item">
                     <h3>For Tourists</h3>
                     <ul>
                         <li><a href="#">Who are we</a></li>
@@ -41,7 +41,7 @@
                     </ul>
                 </div>
 
-                <div class="col-sm-4 col-md-3 item">
+                <div class="col-sm-3 col-md-2 item">
                     <h3>Contact us</h3>
                     <ul>
                         <li><a href="#">Mail: touracademy@gmail.com</a></li>
@@ -49,6 +49,11 @@
                         <li><a href="#">Phone: +37410525225</a></li>
                         <li><a href="#">Address: Yerevan</a></li>
                     </ul>
+                </div>
+
+                  <div class="col-sm-5 col-md-4 item">
+                    <h3>Follow us</h3>
+                        <img src="{{ asset('images/contact.png') }}" alt="">
                 </div>
 
 
