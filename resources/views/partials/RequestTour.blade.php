@@ -209,8 +209,10 @@
                                 <div class="col-md-12 col-xs-12">
 
                                     <div class="col-md-6 col-xs-12">
-                                        <span><label for="" style="float: left;background-color: white; padding-right: 30%;"
-                                            class="reqTourInput">Adult</label></span>
+                                        <span><label for=""
+                                                style="float: left;background-color: white; padding-right: 30%;"
+                                                class="reqTourInput"><i
+                                                    style="font-weight: 400">Adult</i></label></span>
                                         <span>
                                             <div class="number" style="float:left;">
                                                 <button class="minus"
@@ -223,8 +225,9 @@
                                         </span>
                                     </div>
                                     <div class="col-md-6 col-xs-12" style="">
-                                        <label for="" style="float: left;background-color: white; padding-right: 30%;"
-                                            class="reqTourInput">Child</label>
+                                        <label for=""
+                                            style="float: left;background-color: white; padding-right: 30%;"
+                                            class="reqTourInput"><i style="font-weight: 400">Child</i></label>
                                         <div class="number" style="float:left;">
                                             <button class="minus"
                                                 style="width:25px; color: black; border:none; font-size:3rem">-</button>
@@ -235,9 +238,10 @@
                                         </div>
                                     </div>
                                 </div>
-                                <div class="row">
+                                <div class="col-md-12 col-xs-12" style="margin: 16px">
                                     <div class="col">
-                                        <input type="text" class="reqTourInput" style="width: 140px; float:left;" placeholder="Type">
+                                        <input type="text" class="reqTourInput" style="width: 140px; float:left; margin-top: 2.5%;P{}"
+                                            placeholder="Type">
                                     </div>
                                     <div class="col">
                                         <div class="ReqBox" style="width: 100px; float:left;"><i
@@ -246,8 +250,8 @@
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <div class="ReqBox" style="width: 100px; float:left;"> <i
-                                                class="fa-solid fa-bicycle"></i> Motorcycle</div>
+                                        <div class="ReqBox" style="width: 100px; float:left;"><i
+                                                class="fa-solid fa-motorcycle"></i> Motorcycle</div>
                                     </div>
                                     <div class="col">
                                         <div class="ReqBox" style="width: 100px; float:left;"><i
