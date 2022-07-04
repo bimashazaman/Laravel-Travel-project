@@ -27,10 +27,11 @@
         @include('Backend.Admin.AdminSidebar')
 
 
-
         <div class="page-wrapper">
             <div class="content container-fluid">
-                @yield('admin-content')
+            
+      
+            @yield('admin-content')
             </div>
         </div>
 
@@ -45,6 +46,17 @@
 
     <script src="{{ asset('assets/js/script.js') }}"></script>
     <script src="{{ asset('js/tour.js')}}"></script>
+<script>
+window.onload = () => {
+
+            fetch("/api/tour/category").then(res => {
+                console.log(res);
+                res.json().then(payload => {
+                    console.log(payload, 'this is payload')
+                })
+            })
+        }
+</script>
 </body>
 
 </html>

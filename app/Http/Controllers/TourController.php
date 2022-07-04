@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Image;
 use App\Models\Tour;
+use App\Models\TourCategory;
 use App\Models\TourFacility;
 use App\Models\TourHighlight;
 use App\Models\TourImage;
@@ -20,14 +21,22 @@ class TourController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index($name)
     {
         //
-        $tours = Tour::with('images')
-            ->with('highlights')
-            ->whereNull('deleted_at')
-            ->get();
-        return $tours;
+        $cat = TourCategory::where('name', $name)->first();
+        if ($cat) {
+
+            $tours = Tour::with('images')
+                ->with('highlights')
+                ->where("category_id", $cat->id)
+                ->whereNull('deleted_at')
+                ->get();
+            // return response()->json(["tour"=>$tours]);
+            return view("Backend.Admin.classicTours.ClassicTour", [
+                "tour" => $tours
+            ]);
+        }
     }
 
     /**
@@ -261,7 +270,11 @@ class TourController extends Controller
     {
         //
         $tour = Tour::whereNull('deleted_at')->where('id', $id)->first();
+    //    dd($tour);
         if ($tour) {
+            return view("Backend.Admin.classicTours.TourDescription", [
+                "tour" => $tour
+            ]);
             return self::success("Tour retrieved!", ["data" => $tour]);
         }
         return self::failure("No such tour exist!");

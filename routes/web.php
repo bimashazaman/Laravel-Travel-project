@@ -1,15 +1,26 @@
 <?php
 
+use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 
-Route::get('/check',[TourController::class,'index']);
+
+
+
+//----- dashboard page ---------
+Route::get("/dashboard", [DashboardController::class, 'index']);
+
+//---- tour page ---------
+Route::get("/admin/tours/{name}", [TourController::class, "index"]);
+Route::get("/admin/tours/detail/{id}",[TourController::class,"show"]);
+
+Route::get('/check', [TourController::class, 'index']);
 
 Route::get('/', function () {
     return view('Home');
 })->name('home');
 
-
+Route::get("/dashboard/hello",[TourController::class,"index"]);
 
 Route::get('/c2', function () {
     return view('Frontend.About.AboutUs');
@@ -184,9 +195,9 @@ Route::get('/food', function () {
 
 
 
-Route::get('/adminClassicTour', function () {
-    return view('Backend.Admin.classicTours.ClassicTour');
-});
+// Route::get('/adminClassicTour', function () {
+//     return view('Backend.Admin.classicTours.ClassicTour');
+// });
 
 Route::get('/CreateClassicTour', function () {
     return view('Backend.Admin.classicTours.CreateClassicTour');
@@ -195,4 +206,3 @@ Route::get('/CreateClassicTour', function () {
 Route::get('/UpdateClassicTour', function () {
     return view('Backend.Admin.classicTours.UpdateClassicTour');
 });
-
