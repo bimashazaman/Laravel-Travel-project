@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTourFacilitiesTable extends Migration
+class CreateMealsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,11 @@ class CreateTourFacilitiesTable extends Migration
      */
     public function up()
     {
-        Schema::create('tour_facilities', function (Blueprint $table) {
+        Schema::create('meals', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('tour_id');
-            $table->string('name');
+            $table->string("name");
+            //price
+            //package
             $table->timestamps();
         });
     }
@@ -28,6 +29,6 @@ class CreateTourFacilitiesTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('tour_facilities');
+        Schema::dropIfExists('meals');
     }
 }

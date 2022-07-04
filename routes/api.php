@@ -27,3 +27,17 @@ Route::resource("/tour/category", TourCategoryController::class);
 
 //-------- Tour --------------
 Route::resource("/tour", TourController::class);
+
+//-------- Tour Highlight ----------
+Route::post("/tour/highlight",[TourController::class,"addTourHighlights"]);
+Route::delete("/tour/highlight/{id}",[TourController::class,"deleteHighlights"]);
+
+//-------- Tour Facility -----------
+Route::post("/tour/facility",[TourController::class,"addTourFacility"]);
+Route::delete("/tour/facility/{id}",[TourController::class,"deleteTourFacility"]);
+
+//-------- Tour Program ------------
+Route::post("/tour/program",[TourController::class,"addTourProgram"]);
+Route::delete("/tour/program/{id}",[TourController::class,"deleteTourProgram"]);
+
+//------- Tour Images ------------

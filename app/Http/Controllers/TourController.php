@@ -4,8 +4,10 @@ namespace App\Http\Controllers;
 
 use App\Models\Image;
 use App\Models\Tour;
+use App\Models\TourFacility;
 use App\Models\TourHighlight;
 use App\Models\TourImage;
+use App\Models\TourProgram;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\DB;
@@ -99,7 +101,7 @@ class TourController extends Controller
     /**
      * Add tour highlights.
      *
-     * @param  int  $id
+     * @param  Request  $request
      * @return \Illuminate\Http\Response
      */
     function addTourHighlights(Request $request)
@@ -128,6 +130,127 @@ class TourController extends Controller
     }
 
 
+    /**
+     * Delete tour highlights.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    function deleteHighlights($id)
+    {
+        $highlight = TourHighlight::whereNull('deleted_at')->where('id', $id)->first();
+        if ($highlight) {
+            $highlight->delete();
+            return self::success("Highlight Deleted");
+        }
+        return self::failure("Not Found!", [], 404);
+    }
+
+
+    /**
+     * Add tour facility.
+     *
+     * @param  Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    function addTourFacility(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            "name" => "required|string",
+            "tour_id" => "required|integer"
+        ]);
+        if ($validator->fails()) {
+            return self::failure($validator->errors()->first());
+        }
+        $exist = TourFacility::whereNull("deleted_at")
+            ->where('name', $request->name)
+            ->where('tour_id', $request->tour_id)
+            ->first();
+        if ($exist) {
+            return self::failure("Already Exist!", [], 400);
+        }
+        $tourFacility = new TourFacility();
+        $tourFacility->fill($request->all());
+        $tourFacility->save();
+        return self::success("Tour Facility added!");
+    }
+
+
+    /**
+     * Add tour facility.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    function deleteTourFacility($id)
+    {
+        $tourFacility = TourFacility::whereNull("deleted_at")
+            ->where('id', $id)
+            ->first();
+        if ($tourFacility) {
+            $tourFacility->delete();
+            return self::success("Tour Facility deleted!");
+        }
+        return self::failure("Not Found!", [], 404);
+    }
+
+    /**
+     * Remove the tour image.
+     *
+     * @param  Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    function removeTourImage($id)
+    {
+        $image = Image::whereNull('deleted_at')
+            ->where('id', $id)
+            ->first();
+        //complete it.      
+    }
+
+
+    /**
+     * Add tour program.
+     *
+     * @param  Request  $request
+     * @return \Illuminate\Http\Response
+     */
+    function addTourProgram(Request $request)
+    {
+        $validator = Validator::make($request->all(), [
+            "tour_id" => "required|integer",
+            "destination_id" => "required|integer",
+            "parent_destination_id" => "required|integer",
+            "day" => "required|integer",
+            "date" => "required"
+        ]);
+        if ($validator->fails()) {
+            return self::failure($validator->errors()->first());
+        }
+        $tourProgram = new TourProgram();
+        $tourProgram->fill($request->all());
+        $tourProgram->save();
+        return self::success("Tour program added", ["data" => $tourProgram]);
+    }
+
+
+    /**
+     * delete tour program.
+     *
+     * @param  int  $id
+     * @return \Illuminate\Http\Response
+     */
+    function deleteTourProgram($id)
+    {
+        $tourProgram = TourProgram::whereNull('deleted_at')
+            ->where('id', $id)
+            ->first();
+        if ($tourProgram) {
+            $tourProgram->delete();
+            return self::success("Tour program deleted");
+        }
+        return self::failure("Not Found!", [], 404);
+    }
     /**
      * Display the specified resource.
      *

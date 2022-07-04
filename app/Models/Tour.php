@@ -13,20 +13,34 @@ class Tour extends Model
         "category_id",
         "start_date",
         "end_date",
-         "duration",
-         "price",
-         "description"
+        "duration",
+        "price",
+        "description"
     ];
 
     //----------- relations ---------
 
     //tour images
-    public function images(){
-        return $this->belongsToMany(Image::class,'tour_images');
+    public function images()
+    {
+        return $this->belongsToMany(Image::class, 'tour_images');
     }
 
     //highlights
-    public function highlights(){
-        return $this->hasMany(TourHighlight::class,'tour_id');
+    public function highlights()
+    {
+        return $this->hasMany(TourHighlight::class, 'tour_id');
+    }
+
+    //facility
+    public function facility()
+    {
+        return $this->hasMany(TourFacility::class);
+    }
+
+    //program
+    public function program()
+    {
+        return $this->hasMany(TourProgram::class);
     }
 }
