@@ -12,7 +12,8 @@
                         <div class="col-sm-4 col-xs-12 padding-0 ">
                             <ul class="list-group ProgressBarItem" style="display: flex;">
                                 <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none;">
-                                    <i>Information about the group</i></li>
+                                    <i>Information about the group</i>
+                                </li>
                             </ul>
                             <div class="progress Progress-border ProgressBarSize">
                                 <div class="progress-bar bg-success" role="progressbar"
@@ -23,7 +24,8 @@
                         <div class="col-sm-4 col-xs-12 padding-0 ">
                             <ul class="list-group ProgressBarItem" style="display: flex;">
                                 <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none; ">
-                                    <i>Select the destination</i></li>
+                                    <i>Select the destination</i>
+                                </li>
                             </ul>
                             <div class="progress Progress-border ProgressBarSize">
                                 <div class="progress-bar bg-success " role="progressbar"
@@ -34,7 +36,8 @@
                         <div class="col-sm-4 col-xs-12 padding-0 ">
                             <ul class="list-group ProgressBarItem" style="display: flex;">
                                 <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none;">
-                                    <i>Submit for a quote</i></li>
+                                    <i>Submit for a quote</i>
+                                </li>
                             </ul>
                             <div class="progress Progress-border ProgressBarSize">
                                 <div class="progress-bar bg-success " role="progressbar"
@@ -122,8 +125,7 @@
 
             </div> --}}
 
-{{--
-            <div class="row">
+            {{-- <div class="row">
                 <div class="col-md-12 col-xs-12">
                     <div class="col-md-6 col-xs-6">
                         <img src="{{ asset('images/ReqTour1.png') }}" alt="">
@@ -187,49 +189,111 @@
                     <div class="col-md-6 col-xs-6">
                         <form>
                             <fieldset>
-                                    <div class="col-md-12 col-xs-12">
-                                        <input class="reqTourInput" type="text" placeholder="Name" style="width:100%">
-                                    </div>
-                                    <div class="col-md-12 col-xs-12">
-                                        <input class="reqTourInput" type="Text" placeholder="Start Date" style="width:100%">
-                                    </div>
-                                    <div class="col-md-12 col-xs-12">
-                                    <input class="reqTourInput" type="text" list="cars" placeholder="Destination" style="width:100%"/>
+                                <div class="col-md-12 col-xs-12">
+                                    <input class="reqTourInput" type="text" placeholder="Name" style="width:100%">
+                                </div>
+                                <div class="col-md-12 col-xs-12">
+                                    <input class="reqTourInput" type="Text" placeholder="Start Date"
+                                        style="width:100%">
+                                </div>
+                                <div class="col-md-12 col-xs-12">
+                                    <input class="reqTourInput" type="text" list="cars" placeholder="Destination"
+                                        style="width:100%" />
                                     <datalist id="Starting Destination">
                                         <option>Volvo</option>
                                         <option>Saab</option>
                                         <option>Mercedes</option>
                                         <option>Audi</option>
                                     </datalist>
-                                    </div>
-                                    <div class="col-md-12 col-xs-12">
-                                        <div class="col-md-6 col-xs-12">
-                                            <label for="" style="float: left;background-color: white;" class="reqTourInput">Adult</label>
-                                            <div class="number" style="float:right;">
-                                                <button class="minus" style="width:25px; background-color: #284525; color: #ffff;">-</button>
-                                                <input type="text" value="1" style="width: 40px; text-align: center;" class="reqTourInput"/>
-                                                <button class="plus" style="width:25px; background-color: #284525; color: #ffff">+</button>
-                                            </div>
-                                        </div>
-                                        <div class="col-md-6 col-xs-12">
-                                            <label for="" style="float: left;background-color: white;" class="reqTourInput">Child</label>
-                                            <div class="number" style="float:right;">
-                                                <button class="minus" style="width:25px; background-color: #284525; color: #ffff">-</button>
-                                                <input type="text" value="1" style="width: 40px; text-align: center;" class="reqTourInput"/>
-                                                <button class="plus" style="width:25px; background-color: #284525; color: #ffff">+</button>
-                                            </div>
-                                        </div>
                                 </div>
-                                <div class="col-md-12 col-xs-12" style="margin: 0; align-items: start; display: contents;">
+                                <div class="col-md-12 col-xs-12">
+
+                                    <div class="col-md-6 col-xs-12">
+                                        <div class="col-md-12 col-xs-12" style="display: flex">
+                                            <div class="col-md-6 col-xs-6">
+                                                <label for="" style="float: left;background-color: white; padding-right: 15%;"
+                                                class="reqTourInput">Adult</label>
+                                            </div>
+                                            <div class="col-md-6 col-xs-6">
+                                                <div class="number" style="float:left;">
+                                                    <button class="minus"
+                                                        style="width:25px; color: black; border:none; font-size:3rem">-</button>
+                                                    <input type="text" value="1"
+                                                        style="width: 40px; text-align: center;" class="reqTourInput" />
+                                                    <button class="plus"
+                                                        style="width:25px; color: black; border:none; font-size:3rem">+</button>
+                                                </div>
+                                            </div>
+                                        </div>
+
+
+
+                                    </div>
+                                    <div class="col-md-6 col-xs-12" style="">
+                                        <label for="" style="float: left;background-color: white; padding-right: 15%;"
+                                            class="reqTourInput">Child</label>
+                                        <div class="number" style="float:left;">
+                                            <button class="minus"
+                                                style="width:25px; color: black; border:none; font-size:3rem">-</button>
+                                            <input type="text" value="1"
+                                                style="width: 40px; text-align: center;" class="reqTourInput" />
+                                            <button class="plus"
+                                                style="width:25px; color: black; border:none; font-size:3rem">+</button>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row">
+                                    <div class="col">
+                                        <div class="ReqBox" style="width: 100px; float:left;"><i
+                                                class="fa-solid fa-car"></i>
+                                            <div>Car</div>
+                                        </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="ReqBox" style="width: 100px; float:left;"> <i
+                                                class="fa-solid fa-bicycle"></i> Cycle</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="ReqBox" style="width: 100px; float:left;"> <i
+                                                class="fa-solid fa-person-hiking"></i> Hiking</div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="ReqBox" style="width: 100px; float:left;"><i
+                                                class="fa-solid fa-person-biking"></i> Bike </div>
+                                    </div>
+                                    <div class="col">
+                                        <div class="ReqBox" style="width: 100px; float:left;"><i
+                                                class="fa-solid fa-bus"></i>
+                                            <div>Bus</div>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                {{-- <div class="col-md-12 col-xs-12 col-sm-12" style="margin: 0; align-items: start; display: contents;">
+
                                     <div class="ReqBox" style="width: 100px; float:left;"><i class="fa-solid fa-car" ></i> <div>Car</div> </div>
                                     <div class="ReqBox" style="width: 100px; float:left;"> <i class="fa-solid fa-bicycle" ></i> Cycle</div>
                                     <div class="ReqBox" style="width: 100px; float:left;"> <i class="fa-solid fa-person-hiking"></i> Hiking</div>
                                     <div class="ReqBox" style="width: 100px; float:left;"><i class="fa-solid fa-person-biking"></i> Bike </div>
                                     <div class="ReqBox" style="width: 100px; float:left;"><i class="fa-solid fa-bus"></i><div>Bus</div> </div>
 
+                                </div> --}}
+                                <div class="col-md-12 col-xs-12">
+                                    <div class="col-md-9 col-xs-9">
+                                        <input class="reqTourInput" type="Text"
+                                            placeholder="Meals (10$ Per one pax)" style="width:100%; ">
+                                    </div>
+                                    <div class="col-md-3 col-xs-3">
+                                        <div class="checkIcon"><i class="fa-solid fa-check" style="width:100%"></i>
+                                        </div>
+                                    </div>
 
                                 </div>
-
+                                <div class="col-xs-12 col-md-12">
+                                    <button class="package-view" style="margin: 20px">
+                                        Create trip
+                                    </button>
+                                </div>
                             </fieldset>
 
                         </form>

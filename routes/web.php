@@ -202,3 +202,8 @@ Route::get('/driver', function () {
 Route::get('/usefulToKnow', function () {
     return view('Frontend.Armenia.UsefulToKnow');
 });
+
+
+Route::get('/todoSorrounding', function () {
+    return view('Frontend.Armenia.nearby');
+});

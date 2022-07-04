@@ -275,6 +275,7 @@ body {
 } */
 
 .searchHeader {
+    border: 0.2px solid rgb(221, 214, 214);
     list-style: none;
     float: right;
     margin-top: 5px;
@@ -282,6 +283,7 @@ body {
     align-items: left;
     justify-content: left;
     text-align: left;
+    margin-left: 5px;
 }
 
 /*.sticky-wrapper */
@@ -3449,4 +3451,33 @@ body {
     width: 100%;
     height: 100%;
     object-fit: cover;
+}
+
+.checkIcon {
+
+    width: 100%;
+    float: right;
+    background-color: white;
+    margin-top: 10px;
+    padding: 5px;
+    border: none;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 3rem;
+
+}
+
+
+.TwoCardNearby {
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    padding: 35px;
+    width: 200px;
+    align-items: center;
+    text-align: center;
+}
+
+.TwoCardNearby i {
+    color: rgb(161, 157, 157);
+    font-size: 2rem;
 }

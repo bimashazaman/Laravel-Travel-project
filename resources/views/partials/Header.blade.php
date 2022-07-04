@@ -61,7 +61,7 @@
                                          <a class="dropdown-item" href="{{ url('/tts') }}">Things to see</a>
                                          <a class="dropdown-item" href="{{ url('/ttdd') }}">Things to do</a>
                                          <a class="dropdown-item" href="{{ url('/food') }}">Food and drink</a>
-                                         {{-- <a class="dropdown-item" href="">Todo in sorrounding</a> --}}
+                                         <a class="dropdown-item" href="{{ url('/todoSorrounding') }}">Todo in sorrounding</a>
                                          <a class="dropdown-item" href="{{ url('/usefulToKnow') }}">Useful to know</a>
                                          <a class="dropdown-item" href="{{ url('/cs') }}">Events</a>
                                          <a class="dropdown-item" href="{{ url('/b') }}">Brochure</a>
@@ -79,8 +79,8 @@
                                          <a class="dropdown-item ru" href="{{ url('/ways') }}">3 ways to book a
                                              tour</a>
                                          <a class="dropdown-item ru" href="{{ url('/privacy') }}">Privacy Policy</a>
-                                         {{-- <a class="dropdown-item ru" href="">Vacancy</a>
-                                         <a class="dropdown-item ru" href="">Reviews</a> --}}
+                                         <a class="dropdown-item ru" href="">Vacancy</a>
+                                         <a class="dropdown-item ru" href="">Reviews</a>
                                          <a class="dropdown-item ru" href="{{ url('/contact') }}">Contact us</a>
                                      </div>
 
@@ -92,8 +92,9 @@
                              <ul class="nav navbar-nav navbar-right" style="margin-top: 14px;">
                                  <li class="nav-item" style="text-decoration: underline; margin-top:10px">USD</li>
                                     <li class="nav-item" style="text-decoration: underline; margin-top:10px">ENG</li>
-                                 <li>
+                                 <li style="display: flex">
                                      <input type="text" placeholder="Search" class="searchHeader" style="margin-top: 1px;">
+                                     <i class="fa-solid fa-magnifying-glass" style="color: rgb(192, 181, 181); margin-top:10px; margin-left: 10px"></i>
                                  </li>
                              </ul>
                          </div><!-- /.navbar-collapse -->
