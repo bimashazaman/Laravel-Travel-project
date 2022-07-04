@@ -61,7 +61,7 @@
                                          <a class="dropdown-item" href="{{ url('/tts') }}">Things to see</a>
                                          <a class="dropdown-item" href="{{ url('/ttdd') }}">Things to do</a>
                                          <a class="dropdown-item" href="{{ url('/food') }}">Food and drink</a>
-                                         <a class="dropdown-item" href="">Todo in sorrounding</a>
+                                         {{-- <a class="dropdown-item" href="">Todo in sorrounding</a> --}}
                                          <a class="dropdown-item" href="{{ url('/usefulToKnow') }}">Useful to know</a>
                                          <a class="dropdown-item" href="{{ url('/cs') }}">Events</a>
                                          <a class="dropdown-item" href="{{ url('/b') }}">Brochure</a>
