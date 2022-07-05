@@ -8,4 +8,8 @@ use Illuminate\Database\Eloquent\Model;
 class TourHighlight extends Model
 {
     use HasFactory;
+    protected $fillable = [
+        "name",
+        "tour_id"
+    ];
 }

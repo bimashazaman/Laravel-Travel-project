@@ -12,15 +12,24 @@ Route::get("/dashboard", [DashboardController::class, 'index']);
 
 //---- tour page ---------
 Route::get("/admin/tours/{name}", [TourController::class, "index"]);
-Route::get("/admin/tours/detail/{id}",[TourController::class,"show"]);
+Route::get("/admin/tours/detail/{id}", [TourController::class, "show"]);
+Route::post("/admin/tours/add", [TourController::class, "store"]);
+// Route::get("/admin/tours/createpage", [TourController::class, "create"]);
+Route::get('/admin/CreateClassicTour',[TourController::class, "create"]);
+Route::post("/admin/highlight/{id}",[TourController::class,"addTourHighlights"])->name('addHighlight');
+Route::post("/admin/facility/{id}",[TourController::class,"addTourFacility"])->name('addFacility');
+Route::post("/admin/tourprogram/{id}",[TourController::class,"addTourProgram"])->name('addTourProgram');
+
+//-------- end -------------
 
 Route::get('/check', [TourController::class, 'index']);
+Route::post('/checkpost', [TourController::class, 'checkStore']);
 
 Route::get('/', function () {
     return view('Home');
 })->name('home');
 
-Route::get("/dashboard/hello",[TourController::class,"index"]);
+Route::get("/dashboard/hello", [TourController::class, "index"]);
 
 Route::get('/c2', function () {
     return view('Frontend.About.AboutUs');
@@ -199,9 +208,6 @@ Route::get('/food', function () {
 //     return view('Backend.Admin.classicTours.ClassicTour');
 // });
 
-Route::get('/CreateClassicTour', function () {
-    return view('Backend.Admin.classicTours.CreateClassicTour');
-});
 
 Route::get('/UpdateClassicTour', function () {
     return view('Backend.Admin.classicTours.UpdateClassicTour');

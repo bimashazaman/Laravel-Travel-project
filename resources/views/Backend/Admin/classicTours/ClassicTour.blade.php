@@ -14,7 +14,7 @@
                         <button class="btn" type="submit"><i class="fa fa-search"></i></button>
                     </div>
 
-                    <a href="{{ url('/CreateClassicTour') }}" style="margin-right: 20px">
+                    <a href="{{ url('/admin/CreateClassicTour') }}" style="margin-right: 20px">
                         <button type="button" class="btn btn-primary">Create Classic Tour</button>
                     </a>
                 </div>
