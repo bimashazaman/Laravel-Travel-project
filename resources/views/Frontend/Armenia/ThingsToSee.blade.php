@@ -53,7 +53,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -68,8 +68,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -104,7 +104,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -119,8 +119,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -154,7 +154,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -169,8 +169,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -204,7 +204,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -219,8 +219,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -254,7 +254,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -269,8 +269,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -304,7 +304,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -319,8 +319,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -354,7 +354,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -369,8 +369,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -404,7 +404,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -419,8 +419,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -454,7 +454,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -469,8 +469,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>

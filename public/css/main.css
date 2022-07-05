@@ -721,6 +721,17 @@ body {
     padding: 70px;
 }
 
+.WR {
+    display: flex; color:#2194E3; 
+    font-size: 20px;
+    font-weight: 500;
+    margin-left: 35px;
+    margin-bottom: 40px;
+}
+.WR i {
+    text-decoration: none;
+}
+
 .FormTour {
     background-color:#F7F7F7;
     padding: 40px;

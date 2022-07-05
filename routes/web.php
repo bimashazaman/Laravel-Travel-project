@@ -227,3 +227,9 @@ Route::get('/todoSorrounding', function () {
 Route::get('/review', function () {
     return view('Frontend.About.reviews');
 });
+
+Route::get('/pageSee', function () {
+    return view('Frontend.Armenia.ThingsToSeePage');
+});
+
+
