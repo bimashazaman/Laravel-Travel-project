@@ -17,6 +17,9 @@
         <h2>
             Contact us
         </h2>
+        <p>
+            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, nisi modi suscipit harum excepturi cum aut quia enim ratione rerum similique, libero eligendi molestias ab iusto aperiam repellendus rem repellat nihil deserunt at accusantium earum! Nihil iste magni suscipit soluta?
+        </p>
         <br>
         <form>
 
@@ -40,10 +43,10 @@
 
     <button type="submit" class="package-view" style="text-align: center">Send</button>
     </form>
-
-        
+    <img src="{{ asset('images/ci.png') }}" style="width: 100%; text-align:center; align-items:center" alt="">
+       
     </div>
-
+   
     <br>
     <br>
     <br>
