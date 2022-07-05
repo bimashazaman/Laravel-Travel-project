@@ -65,31 +65,29 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
+                                <h4 style="text-align: center">
+                                    Event Name
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-regular fa-newspaper"></i></span> Culture
                                 </div>
                             </div>
 
                             <div class="package-btn">
                                 <a href="{{ url('/c') }}">
                                     <button class="package-view">
-                                        view more
+                                        Details
                                     </button>
 
                                 </a>
@@ -114,31 +112,29 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
+                                <h4 style="text-align: center">
+                                    Event Name
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-regular fa-newspaper"></i></span> Culture
                                 </div>
                             </div>
 
                             <div class="package-btn">
                                 <a href="{{ url('/c') }}">
                                     <button class="package-view">
-                                        view more
+                                        Details
                                     </button>
 
                                 </a>
@@ -162,31 +158,29 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
+                                <h4 style="text-align: center">
+                                    Event Name
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-regular fa-newspaper"></i></span> Culture
                                 </div>
                             </div>
 
                             <div class="package-btn">
                                 <a href="{{ url('/c') }}">
                                     <button class="package-view">
-                                        view more
+                                        Details
                                     </button>
 
                                 </a>
@@ -210,31 +204,29 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
+                                <h4 style="text-align: center">
+                                    Event Name
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-regular fa-newspaper"></i></span> Culture
                                 </div>
                             </div>
 
                             <div class="package-btn">
                                 <a href="{{ url('/c') }}">
                                     <button class="package-view">
-                                        view more
+                                        Details
                                     </button>
 
                                 </a>
@@ -258,31 +250,29 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
+                                <h4 style="text-align: center">
+                                    Event Name
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-regular fa-newspaper"></i></span> Culture
                                 </div>
                             </div>
 
                             <div class="package-btn">
                                 <a href="{{ url('/c') }}">
                                     <button class="package-view">
-                                        view more
+                                        Details
                                     </button>
 
                                 </a>
@@ -306,31 +296,29 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
+                                <h4 style="text-align: center">
+                                    Event Name
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-regular fa-newspaper"></i></span> Culture
                                 </div>
                             </div>
 
                             <div class="package-btn">
                                 <a href="{{ url('/c') }}">
                                     <button class="package-view">
-                                        view more
+                                        Details
                                     </button>
 
                                 </a>
@@ -354,31 +342,29 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
+                                <h4 style="text-align: center">
+                                    Event Name
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-regular fa-newspaper"></i></span> Culture
                                 </div>
                             </div>
 
                             <div class="package-btn">
                                 <a href="{{ url('/c') }}">
                                     <button class="package-view">
-                                        view more
+                                        Details
                                     </button>
 
                                 </a>
@@ -402,31 +388,29 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
+                                <h4 style="text-align: center">
+                                    Event Name
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-regular fa-newspaper"></i></span> Culture
                                 </div>
                             </div>
 
                             <div class="package-btn">
                                 <a href="{{ url('/c') }}">
                                     <button class="package-view">
-                                        view more
+                                        Details
                                     </button>
 
                                 </a>
@@ -450,31 +434,29 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
+                                <h4 style="text-align: center">
+                                    Event Name
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-receipt"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-regular fa-newspaper"></i></span> Culture
                                 </div>
                             </div>
 
                             <div class="package-btn">
                                 <a href="{{ url('/c') }}">
                                     <button class="package-view">
-                                        view more
+                                        Details
                                     </button>
 
                                 </a>
