@@ -186,8 +186,8 @@
     <!-- Tour description start -->
     <section class="container-fluid">
 
-        <div class="row">
-            <div class="col-md-2-md-7">
+        <div class="">
+            <div class="col-md-7">
                 <div class="tour-descriptions-content">
                     <div class="tour-descriptions-content-inner">
                         <div class="tour-descriptions-content-inner-left">
@@ -769,26 +769,66 @@
     </section>
 
 
-      {{-- <div class="container-fluid">
+       <div class="container-fluid">
         <h2 style="padding:60px">
             Reviews
         </h2>
         <div class="row" style="padding:60px">
-            <div class="col-md-3">
-                <img src="{{ asset('images/revieww.png') }}"  style="width: 100%" alt="">
+            <div class="col-md-3 col-xs-12">
+                <img style="border-radius: 50%; width:26%" src="https://img.freepik.com/free-vector/cute-swag-polar-bear-with-hat-gold-chain-necklace-cartoon-illustration-flat-cartoon-style_138676-2719.jpg?w=2000" alt="">
+                <h5>
+                    Name
+                </h5>
+                <h5>
+                    Date
+                </h5>
+                  <h5>
+                    Write your story
+                </h5>
+                
             </div>
-            <div class="col-md-3">
-                <img src="{{ asset('images/revieww.png') }}"  style="width: 100%"alt="">
+            <div class="col-md-3 col-xs-12">
+                <img style="border-radius: 50%; width:26%" src="https://img.freepik.com/free-vector/cute-swag-polar-bear-with-hat-gold-chain-necklace-cartoon-illustration-flat-cartoon-style_138676-2719.jpg?w=2000" alt="">
+                <h5>
+                    Name
+                </h5>
+                <h5>
+                    Date
+                </h5>
+                  <h5>
+                    Write your story
+                </h5>
+                
             </div>
-            <div class="col-md-3">
-                <img src="{{ asset('images/revieww.png') }}"  style="width: 100%"alt="">
+            <div class="col-md-3 col-xs-12">
+                <img style="border-radius: 50%; width:26%" src="https://img.freepik.com/free-vector/cute-swag-polar-bear-with-hat-gold-chain-necklace-cartoon-illustration-flat-cartoon-style_138676-2719.jpg?w=2000" alt="">
+                <h5>
+                    Name
+                </h5>
+                <h5>
+                    Date
+                </h5>
+                  <h5>
+                    Write your story
+                </h5>
+                
             </div>
-            <div class="col-md-3">
-                <img src="{{ asset('images/revieww.png') }}"  style="width: 100%"alt="">
+            <div class="col-md-3 col-xs-12">
+                <img style="border-radius: 50%; width:26%" src="https://img.freepik.com/free-vector/cute-swag-polar-bear-with-hat-gold-chain-necklace-cartoon-illustration-flat-cartoon-style_138676-2719.jpg?w=2000" alt="">
+                <h5>
+                    Name
+                </h5>
+                <h5>
+                    Date
+                </h5>
+                  <h5>
+                    Write your story
+                </h5>
+                
             </div>
             
             
         </div>
     
-     </div>  --}}
+     </div>  
 @endsection
