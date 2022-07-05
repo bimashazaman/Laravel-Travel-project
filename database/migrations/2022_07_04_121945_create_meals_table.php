@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRequestCarsTable extends Migration
+class CreateMealsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateRequestCarsTable extends Migration
      */
     public function up()
     {
-        Schema::create('request_cars', function (Blueprint $table) {
+        Schema::create('meals', function (Blueprint $table) {
             $table->id();
+            $table->string("name");
+            //price
+            //package
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateRequestCarsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('request_cars');
+        Schema::dropIfExists('meals');
     }
 }

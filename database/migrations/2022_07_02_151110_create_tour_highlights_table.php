@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBookHotelRequestsTable extends Migration
+class CreateTourHighlightsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,8 +13,11 @@ class CreateBookHotelRequestsTable extends Migration
      */
     public function up()
     {
-        Schema::create('book_hotel_requests', function (Blueprint $table) {
+        Schema::create('tour_highlights', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('tour_id');
+            $table->string('name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
@@ -26,6 +29,6 @@ class CreateBookHotelRequestsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('book_hotel_requests');
+        Schema::dropIfExists('tour_highlights');
     }
 }
