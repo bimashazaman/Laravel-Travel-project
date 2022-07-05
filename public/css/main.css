@@ -801,7 +801,7 @@ body {
 .footer-clean ul a {
     text-decoration: none;
     opacity: 0.8;
-    font-size: 12px;
+    font-size: 1.4rem;
     color: #F1DBAA;
 }
 
@@ -931,7 +931,7 @@ body {
 
 .tour-descriptions {
     margin-top: 100px;
-    padding: 50px;
+    padding-top: 50px;
 }
 
 .ok {
@@ -949,6 +949,14 @@ body {
     max-width: 1044px;
     margin: 0 auto;
     padding: 0 20px;
+}
+
+
+.blah {
+    background-color:#2A3C24;
+    padding-left:50px;
+    padding-right:50px;
+    
 }
 
 .detailespackage {
@@ -1042,24 +1050,125 @@ body {
 }
 
 .uldescription {
-    margin-top: 20px;
-    padding: 0 20px;
+    margin-top: 5%;
+   margin-left: 10%;
     font-weight: 600;
     font-size: 14px;
 }
 
-.uldescription ul {
+
+.timeline {
+    position: relative;
+    max-width: 1200px;
+    margin: 0 auto;
+  }
+
+
+  .timeline::after {
+    position: absolute;
+    width: 2px;
+    background-color: #7e5d33;
+    top: 0;
+    bottom: 0;
+    left: 50%;
+    margin-left: -299px;
+  }
+
+  .containerA {
+    padding: 10px 40px;
+    position: relative;
+    background-color: inherit;
+    /* width: 50%; */
+    margin-left: 8%;
+  }
+
+  .containerA::after {
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -17px;
+    background-color: #845C27;
+    border: 4px solid #845C27;
+    top: 15px;
+    border-radius: 50%;
+    z-index: 1;
+  }
+
+  /* .left {
+    left: 0;
+  } */
+  
+  /* Place the container to the right */
+  /* .right {
+    left: 50%;
+  }
+   */
+  /* Add arrows to the left container (pointing right) */
+  .left::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    right: 30px;
+    border: medium solid rgb(107, 18, 18);
+    border-width: 10px 0 10px 10px;
+    border-color: transparent transparent transparent white;
+  }
+  
+  /* Add arrows to the right container (pointing left) */
+  .right::before {
+    content: " ";
+    height: 0;
+    position: absolute;
+    top: 22px;
+    width: 0;
+    z-index: 1;
+    left: 30px;
+    border: medium solid rgb(218, 131, 131);
+    border-width: 10px 10px 10px 0;
+    border-color: transparent rgb(173, 126, 126) transparent transparent;
+  }
+  
+  /* Fix the circle for containers on the right side */
+  .right::after {
+    left: -16px;
+  }
+  
+  /* The actual content */
+  .content {
+    padding: 20px 30px;
+    background-color: transparent;
+    position: relative;
+    border-radius: 6px;
+    text-align: start;
+  }
+  
+  
+
+.uldescription li::before {
+    content: "\2022";
+    color: #e5a686;
+    font-weight: bold;
+    display: inline-block; 
+    width: 1em;
+    margin-left: -1em;
+    font-size: 2rem;
+  }
+
+/* .uldescription ul {
     padding: 2;
     line-height: 1.6;
     font-size: 14px;
     margin-bottom: 0;
-}
+} */
 
-.uldescription ul li {
-    list-style: bullet;
+/* .uldescription ul li {
     letter-spacing: 0.2px;
     margin-bottom: 10px;
-}
+} */
 
 .detailespackage i {
     color: #e5a686;
