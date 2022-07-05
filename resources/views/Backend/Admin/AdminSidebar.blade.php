@@ -11,13 +11,13 @@
                 <li class="submenu">
                     <a href="#"><i class="fe fe-users"></i> <span> Tours</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
-                     
+
                         <li><a href="{{ url('/admin/tours/ClassicTours')}}">Classic Tours</a></li>
-                        <li><a href="blocked-users.html">Tours With Guarantee Departures</a></li>
-                        <li><a href="report-users.html">Gastro Tours</a></li>
-                        <li><a href="report-users.html">Active Tours</a></li>
-                        <li><a href="report-users.html">One Day</a></li>
-                        <li><a href="report-users.html">Themed Tours</a></li>
+                        <li><a href="{{ url('/admin/tours/ToursWithGuranteeDepartures')}}">Tours With Guarantee Departures</a></li>
+                        <li><a href="{{ url('/admin/tours/GastroTours')}}">Gastro Tours</a></li>
+                        <li><a href="{{ url('/admin/tours/ActiveTours')}}">Active Tours</a></li>
+                        <li><a href="{{ url('/admin/tours/OneDay')}}">One Day</a></li>
+                        <li><a href="{{ url('/admin/tours/ThemedTours')}}">Themed Tours</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
@@ -60,6 +60,6 @@
         </div>
     </div>
     <script>
-        
+
     </script>
 </div>

@@ -16,14 +16,24 @@ class TourTypeSeeder extends Seeder
         //
         TourCategory::insert([
             [
-                "name"=> "Classic Tours"
+                "name"=> "ClassicTours"
             ],
             [
-                "name"=> "Tours With Gurantee Departures"
+                "name"=> "ToursWithGuranteeDepartures"
             ],
             [
-                "name"=> "Gastro Tours"
-            ]
+                "name"=> "GastroTours"
+            ],
+            [
+                "name"=> "ActiveTours"
+            ],
+            [
+                "name"=> "OneDay"
+            ],
+            [
+                "name"=> "ThemedTours"
+            ],
+
         ]);
     }
 }
