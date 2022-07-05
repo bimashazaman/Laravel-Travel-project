@@ -713,7 +713,17 @@ body {
 }
 
 .footo {
-    background-color: #284525;
+    background-color: #2A3C24;
+}
+
+.TWOFORMS {
+    background-color: #2A3C24;
+    padding: 70px;
+}
+
+.FormTour {
+    background-color:#F7F7F7;
+    padding: 40px;
 }
 
 /*-------------------------------------
@@ -1065,13 +1075,16 @@ body {
 
 
   .timeline::after {
+    content: '';
     position: absolute;
     width: 2px;
     background-color: #7e5d33;
     top: 0;
     bottom: 0;
     left: 50%;
-    margin-left: -299px;
+    
+    margin-left: -255px;
+
   }
 
   .containerA {
@@ -1102,8 +1115,8 @@ body {
   /* Place the container to the right */
   /* .right {
     left: 50%;
-  }
-   */
+  } */
+  
   /* Add arrows to the left container (pointing right) */
   .left::before {
     content: " ";
@@ -1134,12 +1147,13 @@ body {
   
   /* Fix the circle for containers on the right side */
   .right::after {
-    left: -16px;
-  }
+    left: -1px;
+}
   
   /* The actual content */
   .content {
-    padding: 20px 30px;
+    padding-left: 20px;
+    padding-top: 5px;
     background-color: transparent;
     position: relative;
     border-radius: 6px;
@@ -1622,15 +1636,14 @@ body {
     margin: 20px;
 }
 
-.timeline {
+/* .timeline {
     list-style: none;
-    background-image: url(http://demos.themelize.me/appstrap3.3.2/theme/assets/img/misc/bg_timeline-line.png);
     background-repeat: repeat-y;
     background-position: center top;
     padding: 0;
     margin: 2em 0;
     text-align: center;
-}
+} */
 
 @media all and (-webkit-min-device-pixel-ratio: 1.5),
     all and (-o-min-device-pixel-ratio: 3 / 2),
@@ -1642,7 +1655,7 @@ body {
     }
 }
 
-.timeline::after {
+/* .timeline::after {
     display: block;
     clear: both;
     content: "";
@@ -2372,9 +2385,9 @@ body {
     .timeline.timeline-right .timeline-item.right {
         width: 96%;
     }
-}
+} */
 
-.carousel-timeline-nav .owl-nav div {
+/* .carousel-timeline-nav .owl-nav div {
     margin-top: -2px;
 }
 
@@ -2800,7 +2813,7 @@ body {
 
 .list-timeline.list-timeline-green-bright .list-timeline-item:before {
     border-color: #2ecc71;
-}
+} */
 
 .articleBody {
     font-size: 16px;

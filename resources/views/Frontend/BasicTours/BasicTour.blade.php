@@ -4,8 +4,18 @@
     <br>
     <br>
     <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
     <!-- Tour description start -->
-    <section class="tour-descriptions">
+    <section class="container-fluid">
 
         <div class="row">
             <div class="col-md-7">
@@ -190,125 +200,124 @@
     </section><!-- /.tour-descriptions -->
     <!-- Tour description end -->
 
-    <div class="blah">
-        <h3 style="color:white; padding-top:30px">
-            Itenanary
-        </h3>
-        <p style="color:white; font-size: 1.4rem;  font-weight: 300; padding-top:30px; padding-bottom:70px">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur
-            temporibus
-            deserunt distinctio, debitis impedit enim officiis aperiam tenetur? Aliquid
-            voluptatibus
-            dolorem dignissimos iure in incidunt. Vero laboriosam dolore, quidem cumque
-            voluptates
-            provident voluptatibus ipsam corporis sequi voluptatem, repellendus autem
-            accusantium ex
-            velit minus sapiente, praesentium iure ullam qui a nostrum labore natus. Non
-            deleniti
-            dignissimos ipsum odit. Voluptatibus ducimus, alias quis reiciendis consequatur
-            cumque
-            sint aut enim quam nulla. Velit numquam aliquam corrupti libero sunt laboriosam
-           
-        </p>
+    <div class="container-fluid">
+        <div class="col-md-12 col-xs-12">
+            <div class="blah">
+                <h3 style="color:white; padding-top:3%">
+                    Itenanary
+                </h3>
+                <p style="color:white; font-size: 1.4rem;  font-weight: 300; padding-bottom:3%">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur
+                    temporibus
+                    deserunt distinctio, debitis impedit enim officiis aperiam tenetur? Aliquid
+                    voluptatibus
+                    dolorem dignissimos iure in incidunt. Vero laboriosam dolore, quidem cumque
+                    voluptates
+                    provident voluptatibus ipsam corporis sequi voluptatem, repellendus autem
+                    accusantium ex
+                    velit minus sapiente, praesentium iure ullam qui a nostrum labore natus. Non
+                    deleniti
+                    dignissimos ipsum odit. Voluptatibus ducimus, alias quis reiciendis consequatur
+                    cumque
+                    sint aut enim quam nulla. Velit numquam aliquam corrupti libero sunt laboriosam
+
+                </p>
+
+            </div>
+        </div>
 
     </div>
 
 
-    <div class="container-fluid">
 
-
+    <div class="container-fluid" style="background-color: #EEF0ED; padding-left: 40px; padding-right:40px">
         <div class="col-md-6">
             <div class="timeline">
-                
+
                 <div class="containerA right">
-                  <div class="content">
-                    <h2>2016</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                  </div>
+                    <div class="content">
+                        <h2 style="font-weight: 400; font-size:2rem" style="text-align: center">Day One</h2>
+                        <p style="color:black">CANADA- USA - CHINA</p>
+                    </div>
                 </div>
-               
+
                 <div class="containerA right">
-                  <div class="content">
-                    <h2>2012</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                  </div>
+                    <div class="content">
+                        <h2 style="font-weight: 400; font-size:2rem">Day 2</h2>
+                        <p style="color:black">Japan- india- USA</p>
+                    </div>
                 </div>
-               
+
                 <div class="containerA right">
-                  <div class="content">
-                    <h2>2007</h2>
-                    <p>Lorem ipsum dolor sit amet, quo ei simul congue exerci, ad nec admodum perfecto mnesarchum, vim ea mazim fierent detracto. Ea quis iuvaret expetendis his, te elit voluptua dignissim per, habeo iusto primis ea eam.</p>
-                  </div>
+                    <div class="content">
+                        <h2 style="font-weight: 400; font-size:2rem">Day 2</h2>
+                        <p style="color:black">Japan- india- USA</p>
+                    </div>
                 </div>
-              </div>
+            </div>
         </div>
         <div class="col-md-6">
-
+            <img src="{{ asset('images/i.png') }}" alt="" style="width: 80%">
         </div>
-
     </div>
 
-        {{-- <div class="col-md-12" style="background-color: white">
-            <link rel='stylesheet' type='text/css'
-                href='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css'>
-            <div class="container animated animated-done bootdey" data-animate="fadeIn" data-animate-delay="0.05"
-                style="animation-delay: 0.05s;">
-                <hr class="hr-lg mt-0 mb-2 w-10 mx-auto hr-primary">
-                <h2 class="text-slab text-center text-uppercase mt-0 mb-5">
-                    <span class="font-weight-bold">Tour Programm</span>
-                </h2>
-                <div class="timeline timeline-left mx-lg-10">
-                    <div class="timeline-breaker">Monday</div>
-                    <!--Timeline item 1-->
-                    <div class="timeline-item mt-3 row text-center p-2">
-                        <div class="col font-weight-bold text-md-right">West Ham</div>
-                        <div class="col-1">vs</div>
-                        <div class="col font-weight-bold text-md-left">Chelsea</div>
-                        <div class="col-12 text-xs text-muted">Football - English Premier League - 19:45 GMT</div>
-                    </div>
-                    <!--Timeline item 2 - NOTE: the .right class-->
-                    <div class="timeline-item mt-3 row text-center p-2">
-                        <div class="col font-weight-bold text-md-right">Man Utd</div>
-                        <div class="col-1">vs</div>
-                        <div class="col font-weight-bold text-md-left">Liverpool</div>
-                        <div class="col-12 text-xs text-muted">Football - English Premier League - 19:45 GMT</div>
-                    </div>
-                    <div class="timeline-breaker timeline-breaker-middle">Tuesday</div>
-                    <div class="timeline-item mt-3 row text-center p-2">
-                        <div class="col font-weight-bold text-md-right">England</div>
-                        <div class="col-1">vs</div>
-                        <div class="col font-weight-bold text-md-left">India</div>
-                        <div class="col-12 text-xs text-muted">Cricket - 3rd test - from 10:45 GMT</div>
-                    </div>
-                    <div class="timeline-item mt-3 row text-center p-2">
-                        <div class="col font-weight-bold text-md-right">New Zealand</div>
-                        <div class="col-1">vs</div>
-                        <div class="col font-weight-bold text-md-left">South Africa</div>
-                        <div class="col-12 text-xs text-muted">Cricket - 5th test - from 15:45 GMT</div>
-                    </div>
-                    <div class="timeline-item mt-3 row text-center p-2">
-                        <div class="col font-weight-bold text-md-right">Man Utd</div>
-                        <div class="col-1">vs</div>
-                        <div class="col font-weight-bold text-md-left">Liverpool</div>
-                        <div class="col-12 text-xs text-muted">Football - Europa League - 19:45 GMT</div>
-                    </div>
-                    <div class="timeline-breaker timeline-breaker-middle">Saturday</div>
-                    <div class="timeline-item mt-3 row text-center p-2">
-                        <div class="col font-weight-bold text-md-right">England</div>
-                        <div class="col-1">vs</div>
-                        <div class="col font-weight-bold text-md-left">India</div>
-                        <div class="col-12 text-xs text-muted">Cricket - 3rd test - from 10:45 GMT</div>
-                    </div>
-                    <div class="timeline-item mt-3 row text-center p-2">
-                        <div class="col font-weight-bold text-md-right">New Zealand</div>
-                        <div class="col-1">vs</div>
-                        <div class="col font-weight-bold text-md-left">South Africa</div>
-                        <div class="col-12 text-xs text-muted">Cricket - 5th test - from 15:45 GMT</div>
-                    </div>
-                    <div class="timeline-breaker timeline-breaker-bottom">More next week........</div>
-                </div>
+
+    <section class="TWOFORMS">
+        <div class="container-fluid">
+            <div class="FormTour">
+                <h3 style="text-align: center">
+                    The price per 1 pax
+                </h3>
+                <table class="table table-bordered tble">
+
+                    <thead>
+                        <tr>
+                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Day</th>
+                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Week</th>
+                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Mounth</th>
+
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25000</td>
+                            <td> 35000</td>
+                            <td>45000</td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+                <br>
+                <br>
+                <table class="table table-bordered tble">
+                    <h3 style="text-align: center">
+                        The Tours with guaranteed departures
+                    </h3>
+                    <thead>
+                        <tr>
+                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Day</th>
+                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Week</th>
+                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Mounth</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>25000</td>
+                            <td> 35000</td>
+                            <td>45000</td>
+
+                        </tr>
+
+
+                    </tbody>
+                </table>
+
             </div>
+            <img src="{{ asset('images/tt.png') }}" alt="" style="width:100%">
         </div>
+    </section>
 
 
 
@@ -320,329 +329,285 @@
 
 
 
-        <section class="" style="background-color: rgb(238, 235, 235)">
-            <div class="container">
+
+
+
+
+    <!--packages start-->
+    <section id="pack" class="packages">
+        <div class="container">
+            <div class="gallary-header text-center">
+                <h2>
+                    special packages
+                </h2>
+                <p>
+                    Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.
+                </p>
+            </div>
+            <!--/.gallery-header-->
+            <div class="packages-content">
                 <div class="row">
-                    <div class="col-sm-12">
-                        <div class="table-responsive">
-                            <table class="table table-striped">
-                                <thead>
-                                    <tr>
-                                        <th>#</th>
-                                        <th>Subject</th>
-                                        <th>Marks</th>
-                                    </tr>
-                                </thead>
-                                <tbody>
-                                    <tr>
-                                        <th>1</th>
-                                        <td>Computer Science</td>
-                                        <td>92</td>
-                                    </tr>
-                                    <tr>
-                                        <th>2</th>
-                                        <td>English </td>
-                                        <td>85</td>
-                                    </tr>
-                                    <tr>
-                                        <th>3</th>
-                                        <td>History</td>
-                                        <td>60</td>
-                                    </tr>
-                                    <tr>
-                                        <th>4</th>
-                                        <td>Mathematics</td>
-                                        <td>90</td>
-                                    </tr>
-                                    <tr>
-                                        <th>5</th>
-                                        <td>Science</td>
-                                        <td>77</td>
-                                    </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section> --}}
 
+                    <div class="col-md-4 col-sm-6">
+                        <h3 style="text-align: center">Day one</h3>
+                        <div class="single-package-item">
 
-        <!--packages start-->
-        <section id="pack" class="packages">
-            <div class="container">
-                <div class="gallary-header text-center">
-                    <h2>
-                        special packages
-                    </h2>
-                    <p>
-                        Duis aute irure dolor in velit esse cillum dolore eu fugiat nulla.
-                    </p>
-                </div>
-                <!--/.gallery-header-->
-                <div class="packages-content">
-                    <div class="row">
+                            <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
+                                alt="package-place">
+                            <div class="package-txt">
+                                <h4>
+                                    <a href="#">
+                                        package one
+                                    </a>
+                                </h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
+                                </p>
+                            </div>
+                                 <div class="pacdet">
+                             <div class="packageOffer">
+                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                             </div>
 
-                        <div class="col-md-4 col-sm-6">
-                            <h3>Day one</h3>
-                            <div class="single-package-item">
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                             </div>
 
-                                <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
-                                    alt="package-place">
-                                <div class="package-txt">
-                                    <h4>
-                                        <a href="#">
-                                            package one
-                                        </a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                                    </p>
-                                </div>
-                                <div class="pacdet">
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-receipt"></i></span> 2 Days
-                                    </div>
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                             </div>
+                         </div>
+                            <div class="package-btn">
+                                <button class="package-view">
+                                    view more
+                                </button>
 
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-calendar"></i></span> Date
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                    </div>
-                                </div>
-                                <div class="package-btn">
-                                    <button class="package-view">
-                                        view more
-                                    </button>
-
-
-                                </div>
 
                             </div>
-                            <!--/.single-package-item-->
 
                         </div>
-                        <!--/.col-->
-
-                        <div class="col-md-4 col-sm-6">
-                            <h3>Day one</h3>
-                            <div class="single-package-item">
-
-                                <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
-                                    alt="package-place">
-                                <div class="package-txt">
-                                    <h4>
-                                        <a href="#">
-                                            package one
-                                        </a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                                    </p>
-                                </div>
-                                <div class="pacdet">
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-receipt"></i></span> 2 Days
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-calendar"></i></span> Date
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                    </div>
-                                </div>
-                                <div class="package-btn">
-                                    <button class="package-view">
-                                        view more
-                                    </button>
-
-
-                                </div>
-
-                            </div>
-                            <!--/.single-package-item-->
-
-                        </div>
-                        <!--/.col-->
-                        <div class="col-md-4 col-sm-6">
-                            <h3>Day one</h3>
-                            <div class="single-package-item">
-
-                                <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
-                                    alt="package-place">
-                                <div class="package-txt">
-                                    <h4>
-                                        <a href="#">
-                                            package one
-                                        </a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                                    </p>
-                                </div>
-                                <div class="pacdet">
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-receipt"></i></span> 2 Days
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-calendar"></i></span> Date
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                    </div>
-                                </div>
-                                <div class="package-btn">
-                                    <button class="package-view">
-                                        view more
-                                    </button>
-
-
-                                </div>
-
-                            </div>
-                            <!--/.single-package-item-->
-
-                        </div>
-                        <!--/.col-->
-                        <div class="col-md-4 col-sm-6">
-                            <h3>Day one</h3>
-                            <div class="single-package-item">
-
-                                <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
-                                    alt="package-place">
-                                <div class="package-txt">
-                                    <h4>
-                                        <a href="#">
-                                            package one
-                                        </a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                                    </p>
-                                </div>
-                                <div class="pacdet">
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-receipt"></i></span> 2 Days
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-calendar"></i></span> Date
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                    </div>
-                                </div>
-                                <div class="package-btn">
-                                    <button class="package-view">
-                                        view more
-                                    </button>
-
-
-                                </div>
-
-                            </div>
-                            <!--/.single-package-item-->
-
-                        </div>
-                        <!--/.col-->
-                        <div class="col-md-4 col-sm-6">
-                            <h3>Day one</h3>
-                            <div class="single-package-item">
-
-                                <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
-                                    alt="package-place">
-                                <div class="package-txt">
-                                    <h4>
-                                        <a href="#">
-                                            package one
-                                        </a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                                    </p>
-                                </div>
-                                <div class="pacdet">
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-receipt"></i></span> 2 Days
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-calendar"></i></span> Date
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                    </div>
-                                </div>
-                                <div class="package-btn">
-                                    <button class="package-view">
-                                        view more
-                                    </button>
-
-
-                                </div>
-
-                            </div>
-                            <!--/.single-package-item-->
-
-                        </div>
-                        <!--/.col-->
-
-                        <div class="col-md-4 col-sm-6">
-                            <h3>Day one</h3>
-                            <div class="single-package-item">
-
-                                <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
-                                    alt="package-place">
-                                <div class="package-txt">
-                                    <h4>
-                                        <a href="#">
-                                            package one
-                                        </a>
-                                    </h4>
-                                    <p>
-                                        Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
-                                    </p>
-                                </div>
-                                <div class="pacdet">
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-receipt"></i></span> 2 Days
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-calendar"></i></span> Date
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                    </div>
-                                </div>
-                                <div class="package-btn">
-                                    <button class="package-view">
-                                        view more
-                                    </button>
-
-
-                                </div>
-
-                            </div>
-                            <!--/.single-package-item-->
-
-                        </div>
-                        <!--/.col-->
+                        <!--/.single-package-item-->
 
                     </div>
-                    <!--/.row-->
+                    <!--/.col-->
+
+                    <div class="col-md-4 col-sm-6">
+                        <h3 style="text-align: center">Day one</h3>
+                        <div class="single-package-item">
+
+                            <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
+                                alt="package-place">
+                            <div class="package-txt">
+                                <h4>
+                                    <a href="#">
+                                        package one
+                                    </a>
+                                </h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
+                                </p>
+                            </div>
+                                 <div class="pacdet">
+                             <div class="packageOffer">
+                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                             </div>
+
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                             </div>
+
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                             </div>
+                         </div>
+                            <div class="package-btn">
+                                <button class="package-view">
+                                    view more
+                                </button>
+
+
+                            </div>
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+                    <div class="col-md-4 col-sm-6">
+                        <h3 style="text-align: center">Day one</h3>
+                        <div class="single-package-item">
+
+                            <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
+                                alt="package-place">
+                            <div class="package-txt">
+                                <h4>
+                                    <a href="#">
+                                        package one
+                                    </a>
+                                </h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
+                                </p>
+                            </div>
+                                 <div class="pacdet">
+                             <div class="packageOffer">
+                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                             </div>
+
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                             </div>
+
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                             </div>
+                         </div>
+                            <div class="package-btn">
+                                <button class="package-view">
+                                    view more
+                                </button>
+
+
+                            </div>
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+                    <div class="col-md-4 col-sm-6">
+                        <h3 style="text-align: center">Day one</h3>
+                        <div class="single-package-item">
+
+                            <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
+                                alt="package-place">
+                            <div class="package-txt">
+                                <h4>
+                                    <a href="#">
+                                        package one
+                                    </a>
+                                </h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
+                                </p>
+                            </div>
+                                 <div class="pacdet">
+                             <div class="packageOffer">
+                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                             </div>
+
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                             </div>
+
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                             </div>
+                         </div>
+                            <div class="package-btn">
+                                <button class="package-view">
+                                    view more
+                                </button>
+
+
+                            </div>
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+                    <div class="col-md-4 col-sm-6">
+                        <h3 style="text-align: center">Day one</h3>
+                        <div class="single-package-item">
+
+                            <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
+                                alt="package-place">
+                            <div class="package-txt">
+                                <h4>
+                                    <a href="#">
+                                        package one
+                                    </a>
+                                </h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
+                                </p>
+                            </div>
+                                 <div class="pacdet">
+                             <div class="packageOffer">
+                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                             </div>
+
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                             </div>
+
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                             </div>
+                         </div>
+                            <div class="package-btn">
+                                <button class="package-view">
+                                    view more
+                                </button>
+
+
+                            </div>
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+
+                    <div class="col-md-4 col-sm-6">
+                        <h3 style="text-align: center">Day one</h3>
+                        <div class="single-package-item">
+
+                            <img src="https://thumbs.dreamstime.com/b/beautiful-iland-sea-montains-beautiful-landscape-water-montains-blue-sky-nature-lush-147918456.jpg"
+                                alt="package-place">
+                            <div class="package-txt">
+                                <h4>
+                                    <a href="#">
+                                        package one
+                                    </a>
+                                </h4>
+                                <p>
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur, perspiciatis!
+                                </p>
+                            </div>
+                                 <div class="pacdet">
+                             <div class="packageOffer">
+                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                             </div>
+
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                             </div>
+
+                             <div class="packageOffer">
+                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                             </div>
+                         </div>
+                            <div class="package-btn">
+                                <button class="package-view">
+                                    view more
+                                </button>
+
+
+                            </div>
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+
                 </div>
-                <!--/.packages-content-->
+                <!--/.row-->
             </div>
-            <!--/.container-->
-        </section>
-    @endsection
+            <!--/.packages-content-->
+        </div>
+        <!--/.container-->
+    </section>
+@endsection

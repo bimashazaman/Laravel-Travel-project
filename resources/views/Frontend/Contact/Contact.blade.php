@@ -15,7 +15,7 @@
     <div class="RentForm">
 
         <h2>
-           Contact us
+            Contact us
         </h2>
         <br>
         <form>
@@ -30,37 +30,21 @@
             </div>
             <div class="form-group">
 
-                <input type="text" class="form-control" id="inputAddress" placeholder="Email Address*">
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Last Name*">
             </div>
-            <div class="form-group">
-
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Telephone*">
-            </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
-
-                    <input type="date" class="form-control" id="inputEmail4" placeholder="StartDate">
-                </div>
-                <div class="form-group col-md-6">
-
-                    <input type="date" class="form-control" id="inputPassword4" placeholder="EndDate">
-                </div>
-            </div>
-            <div class="form-group">
-
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Car Type*">
-            </div>
-            <div class="form-group">
-
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Messege">
+             <div class="form-group">
+            <textarea name="" id="" cols="85" rows="7" style="background-color:#F7F6F4; border:none"></textarea>
             </div>
 
-            <button type="submit" class="package-view">Submit</button>
-        </form>
+
+
+    <button type="submit" class="package-view" style="text-align: center">Send</button>
+    </form>
+
+        
     </div>
 
     <br>
     <br>
     <br>
 @endsection
-

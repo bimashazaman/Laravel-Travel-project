@@ -207,3 +207,9 @@ Route::get('/usefulToKnow', function () {
 Route::get('/todoSorrounding', function () {
     return view('Frontend.Armenia.nearby');
 });
+
+
+Route::get('/review', function () {
+    return view('Frontend.About.reviews');
+});
+

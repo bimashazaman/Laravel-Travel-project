@@ -244,7 +244,7 @@
 				<div class="row">
 
 					<div class="col-md-4 col-sm-6">
-						<h3>Day one</h3>
+						<h3 style="text-align:center">Day one</h3>
 						<div class="single-package-item">
 
 							<img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="package-place">
@@ -286,7 +286,7 @@
 					<!--/.col-->
 
 					<div class="col-md-4 col-sm-6">
-						<h3>Day one</h3>
+						<h3 style="text-align:center">Day one</h3>
 						<div class="single-package-item">
 
 							<img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="package-place">
@@ -328,7 +328,7 @@
 					<!--/.col-->
 
 					<div class="col-md-4 col-sm-6">
-						<h3>Day one</h3>
+						<h3 style="text-align:center">Day one</h3>
 						<div class="single-package-item">
 
 							<img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="package-place">
