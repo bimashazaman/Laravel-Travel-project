@@ -40,21 +40,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    conference
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> conference
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                    <span><i class="fa-solid fa-person"></i></span> 14 person
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
                                 </div>
                             </div>
                             <div class="rating">
@@ -91,21 +91,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    conference
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> conference
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                    <span><i class="fa-solid fa-person"></i></span> 14 person
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
                                 </div>
                             </div>
                             <div class="rating">
@@ -141,21 +141,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    conference
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> conference
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                    <span><i class="fa-solid fa-person"></i></span> 14 person
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
                                 </div>
                             </div>
                             <div class="rating">
@@ -191,21 +191,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    conference
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> conference
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                    <span><i class="fa-solid fa-person"></i></span> 14 person
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
                                 </div>
                             </div>
                             <div class="rating">
@@ -241,21 +241,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    conference
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> conference
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                    <span><i class="fa-solid fa-person"></i></span> 14 person
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
                                 </div>
                             </div>
                             <div class="rating">
@@ -291,21 +291,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    conference
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> conference
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                    <span><i class="fa-solid fa-person"></i></span> 14 person
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
                                 </div>
                             </div>
                             <div class="rating">
@@ -341,21 +341,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    conference
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> conference
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                    <span><i class="fa-solid fa-person"></i></span> 14 person
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
                                 </div>
                             </div>
                             <div class="rating">
@@ -391,21 +391,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    conference
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> conference
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                    <span><i class="fa-solid fa-person"></i></span> 14 person
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
                                 </div>
                             </div>
                             <div class="rating">
@@ -441,21 +441,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    conference
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> conference
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar"></i></span> Two Seats
+                                    <span><i class="fa-solid fa-person"></i></span> 14 person
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
                                 </div>
                             </div>
                             <div class="rating">
