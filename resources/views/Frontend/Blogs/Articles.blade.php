@@ -81,53 +81,7 @@
                                 </p>
                             </div>
 
-                            <div style="text-align: center; padding-left: 10px; padding-right: 22px">
-                                <span>
-                                    May 5, 2022
-                                </span>
-                                  <span style="float:right">
-                                    <a href="">
-                                        2expedition
-                                    </a>
-                                </span>
-                            </div>
-
-                            <div class="package-btn">
-                                <button class="package-view">
-                                    Read More
-                                </button>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://neilpatel.com/wp-content/uploads/2017/08/blog.jpg" alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="">
-                                <h4 style="text-align:center;">
-                                    <a href="#"
-                                        style="text-align:center; font-size:1.6rem; text-decoration:underline">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="" style="text-align: center; font-size:1.5rem; color:black">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-
-                            <div style="text-align: center; padding-left: 10px; padding-right: 22px">
+                            <div style="width: 70%;margin-left: 17%">
                                 <span>
                                     May 5, 2022
                                 </span>
@@ -173,11 +127,11 @@
                                 </p>
                             </div>
 
-                            <div style="text-align: center; padding-left: 10px; padding-right: 22px">
+                            <div style="width: 70%; margin-left: 17%">
                                 <span>
                                     May 5, 2022
                                 </span>
-                                  <span style="float:right">
+                                <span style="float:right">
                                     <a href="">
                                         2expedition
                                     </a>
@@ -219,11 +173,11 @@
                                 </p>
                             </div>
 
-                            <div style="text-align: center; padding-left: 10px; padding-right: 22px">
+                            <div style="width: 70%; margin-left: 17%">
                                 <span>
                                     May 5, 2022
                                 </span>
-                                  <span style="float:right">
+                                <span style="float:right">
                                     <a href="">
                                         2expedition
                                     </a>
@@ -265,11 +219,11 @@
                                 </p>
                             </div>
 
-                            <div style="text-align: center; padding-left: 10px; padding-right: 22px">
+                            <div style="width: 70%; margin-left: 17%">
                                 <span>
                                     May 5, 2022
                                 </span>
-                                  <span style="float:right">
+                                <span style="float:right">
                                     <a href="">
                                         2expedition
                                     </a>
@@ -311,11 +265,11 @@
                                 </p>
                             </div>
 
-                            <div style="text-align: center; padding-left: 10px; padding-right: 22px">
+                            <div style="width: 70%; margin-left: 17%">
                                 <span>
                                     May 5, 2022
                                 </span>
-                                  <span style="float:right">
+                                <span style="float:right">
                                     <a href="">
                                         2expedition
                                     </a>
@@ -357,11 +311,11 @@
                                 </p>
                             </div>
 
-                            <div style="text-align: center; padding-left: 10px; padding-right: 22px">
+                            <div style="width: 70%; margin-left: 17%">
                                 <span>
                                     May 5, 2022
                                 </span>
-                                  <span style="float:right">
+                                <span style="float:right">
                                     <a href="">
                                         2expedition
                                     </a>
@@ -403,11 +357,57 @@
                                 </p>
                             </div>
 
-                            <div style="text-align: center; padding-left: 10px; padding-right: 22px">
+                            <div style="width: 70%; margin-left: 17%">
                                 <span>
                                     May 5, 2022
                                 </span>
-                                  <span style="float:right">
+                                <span style="float:right">
+                                    <a href="">
+                                        2expedition
+                                    </a>
+                                </span>
+                            </div>
+
+                            <div class="package-btn">
+                                <button class="package-view">
+                                    Read More
+                                </button>
+
+                            </div>
+
+
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="single-package-item">
+
+                            <img src="https://neilpatel.com/wp-content/uploads/2017/08/blog.jpg" alt="package-place">
+                            <div class="packageName">
+                                Something
+                            </div>
+                            <div class="">
+                                <h4 style="text-align:center;">
+                                    <a href="#"
+                                        style="text-align:center; font-size:1.6rem; text-decoration:underline">
+                                        package one
+                                    </a>
+                                </h4>
+                                <p class="" style="text-align: center; font-size:1.5rem; color:black">
+                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
+                                    perspiciatis!
+                                </p>
+                            </div>
+
+                            <div style="width: 70%; margin-left: 17%">
+                                <span>
+                                    May 5, 2022
+                                </span>
+                                <span style="float:right">
                                     <a href="">
                                         2expedition
                                     </a>

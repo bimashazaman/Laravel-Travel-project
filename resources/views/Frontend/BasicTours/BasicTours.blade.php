@@ -62,9 +62,12 @@
                             <div class="packageName">
                                 Something
                             </div>
-                            <div class="package-txt">
+                            <div class="package-txt" style="margin-left: -7%;">
                                 <h4>
-                                    <a href="#">
+                                    <a href="#"
+                                        style="    margin-left: 15%;
+    font-weight: 400;
+    font-size: 1.5rem;">
                                         package one
                                     </a>
                                 </h4>
@@ -73,19 +76,19 @@
                                     perspiciatis!
                                 </p>
                             </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
+                            <div class="pacdet" style="margin-left: -7%;">
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                                </div>
+                            </div>
                             <div class="rating">
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
@@ -95,9 +98,9 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
+                                    <button class="package-view">
+                                        Details
+                                    </button>
                                 </a>
 
                             </div>
@@ -119,9 +122,12 @@
                             <div class="packageName">
                                 Something
                             </div>
-                            <div class="package-txt">
+                            <div class="package-txt" style="margin-left: -7%;">
                                 <h4>
-                                    <a href="#">
+                                    <a href="#"
+                                        style="    margin-left: 15%;
+    font-weight: 400;
+    font-size: 1.5rem;">
                                         package one
                                     </a>
                                 </h4>
@@ -130,19 +136,19 @@
                                     perspiciatis!
                                 </p>
                             </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
+                            <div class="pacdet" style="margin-left: -7%;">
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                                </div>
+                            </div>
                             <div class="rating">
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
@@ -152,9 +158,9 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
+                                    <button class="package-view">
+                                        Details
+                                    </button>
                                 </a>
 
                             </div>
@@ -175,9 +181,12 @@
                             <div class="packageName">
                                 Something
                             </div>
-                            <div class="package-txt">
+                            <div class="package-txt" style="margin-left: -7%;">
                                 <h4>
-                                    <a href="#">
+                                    <a href="#"
+                                        style="    margin-left: 15%;
+    font-weight: 400;
+    font-size: 1.5rem;">
                                         package one
                                     </a>
                                 </h4>
@@ -186,19 +195,19 @@
                                     perspiciatis!
                                 </p>
                             </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
+                            <div class="pacdet" style="margin-left: -7%;">
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                                </div>
+                            </div>
                             <div class="rating">
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
@@ -208,9 +217,9 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
+                                    <button class="package-view">
+                                        Details
+                                    </button>
                                 </a>
 
                             </div>
@@ -231,9 +240,12 @@
                             <div class="packageName">
                                 Something
                             </div>
-                            <div class="package-txt">
+                            <div class="package-txt" style="margin-left: -7%;">
                                 <h4>
-                                    <a href="#">
+                                    <a href="#"
+                                        style="    margin-left: 15%;
+    font-weight: 400;
+    font-size: 1.5rem;">
                                         package one
                                     </a>
                                 </h4>
@@ -242,19 +254,19 @@
                                     perspiciatis!
                                 </p>
                             </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
+                            <div class="pacdet" style="margin-left: -7%;">
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                                </div>
+                            </div>
                             <div class="rating">
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
@@ -264,9 +276,9 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
+                                    <button class="package-view">
+                                        Details
+                                    </button>
                                 </a>
 
                             </div>
@@ -287,9 +299,12 @@
                             <div class="packageName">
                                 Something
                             </div>
-                            <div class="package-txt">
+                            <div class="package-txt" style="margin-left: -7%;">
                                 <h4>
-                                    <a href="#">
+                                    <a href="#"
+                                        style="    margin-left: 15%;
+    font-weight: 400;
+    font-size: 1.5rem;">
                                         package one
                                     </a>
                                 </h4>
@@ -298,19 +313,19 @@
                                     perspiciatis!
                                 </p>
                             </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
+                            <div class="pacdet" style="margin-left: -7%;">
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                                </div>
+                            </div>
                             <div class="rating">
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
@@ -320,9 +335,9 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
+                                    <button class="package-view">
+                                        Details
+                                    </button>
                                 </a>
 
                             </div>
@@ -343,9 +358,12 @@
                             <div class="packageName">
                                 Something
                             </div>
-                            <div class="package-txt">
+                            <div class="package-txt" style="margin-left: -7%;">
                                 <h4>
-                                    <a href="#">
+                                    <a href="#"
+                                        style="    margin-left: 15%;
+    font-weight: 400;
+    font-size: 1.5rem;">
                                         package one
                                     </a>
                                 </h4>
@@ -354,19 +372,19 @@
                                     perspiciatis!
                                 </p>
                             </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
+                            <div class="pacdet" style="margin-left: -7%;">
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                                </div>
+                            </div>
                             <div class="rating">
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
@@ -376,9 +394,9 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
+                                    <button class="package-view">
+                                        Details
+                                    </button>
                                 </a>
 
                             </div>
@@ -399,9 +417,12 @@
                             <div class="packageName">
                                 Something
                             </div>
-                            <div class="package-txt">
+                            <div class="package-txt" style="margin-left: -7%;">
                                 <h4>
-                                    <a href="#">
+                                    <a href="#"
+                                        style="    margin-left: 15%;
+    font-weight: 400;
+    font-size: 1.5rem;">
                                         package one
                                     </a>
                                 </h4>
@@ -410,19 +431,19 @@
                                     perspiciatis!
                                 </p>
                             </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
+                            <div class="pacdet" style="margin-left: -7%;">
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                                </div>
+                            </div>
                             <div class="rating">
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
@@ -432,9 +453,9 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
+                                    <button class="package-view">
+                                        Details
+                                    </button>
                                 </a>
 
                             </div>
@@ -455,9 +476,12 @@
                             <div class="packageName">
                                 Something
                             </div>
-                            <div class="package-txt">
+                            <div class="package-txt" style="margin-left: -7%;">
                                 <h4>
-                                    <a href="#">
+                                    <a href="#"
+                                        style="    margin-left: 15%;
+    font-weight: 400;
+    font-size: 1.5rem;">
                                         package one
                                     </a>
                                 </h4>
@@ -466,19 +490,19 @@
                                     perspiciatis!
                                 </p>
                             </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
+                            <div class="pacdet" style="margin-left: -7%;">
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                                </div>
+                            </div>
                             <div class="rating">
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
@@ -488,9 +512,9 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
+                                    <button class="package-view">
+                                        Details
+                                    </button>
                                 </a>
 
                             </div>
@@ -511,9 +535,12 @@
                             <div class="packageName">
                                 Something
                             </div>
-                            <div class="package-txt">
+                            <div class="package-txt" style="margin-left: -7%;">
                                 <h4>
-                                    <a href="#">
+                                    <a href="#"
+                                        style="    margin-left: 15%;
+    font-weight: 400;
+    font-size: 1.5rem;">
                                         package one
                                     </a>
                                 </h4>
@@ -522,19 +549,19 @@
                                     perspiciatis!
                                 </p>
                             </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
+                            <div class="pacdet" style="margin-left: -7%;">
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                                </div>
+                            </div>
                             <div class="rating">
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
@@ -544,9 +571,9 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
+                                    <button class="package-view">
+                                        Details
+                                    </button>
                                 </a>
 
                             </div>
