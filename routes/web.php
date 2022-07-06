@@ -9,6 +9,11 @@ Route::get('/login', function () {
     return view('Backend.Admin.login.login');
 });
 
+//Dashboard page
+Route::get('/main', function () {
+    return view('Backend.Admin.Dashboard');
+});
+
 
 
 // Add facility page
