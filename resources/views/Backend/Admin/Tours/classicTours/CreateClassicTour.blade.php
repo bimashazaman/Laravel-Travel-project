@@ -15,7 +15,7 @@
 <div class="page-header">
     <div class="row">
         <div class="col-sm-12">
-            <h3 class="page-title">Basic Inputs</h3>
+            <h3 class="page-title">Create Tours</h3>
             <ul class="breadcrumb">
                 <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
                 <li class="breadcrumb-item active">Basic Inputs</li>

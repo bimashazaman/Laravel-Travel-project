@@ -25,12 +25,8 @@
                                 <tr>
                                     <th>Name</th>
                                     <th class="text-center">Start Date</th>
-                                    <th class="text-center">Duration</th>
-                                    <th class="text-center">Cetagory</th>
-                                    <th class="text-center">Destination</th>
                                     <th class="text-center">End Date</th>
                                     <th class="text-center">Price</th>
-                                    <th class="text-center">Image</th>
                                     <th class="text-end">Status</th>
                                 </tr>
                             </thead>
@@ -44,7 +40,7 @@
                                         {{$touritem->end_date}}
                                     </td>
                                     <td class="text-center">
-                                        {{$touritem->price}}
+                                        {{$touritem->price}} AMD
                                     </td>
                                     <td class="text-end">
                                         <div class="font-weight-600 text-danger">
