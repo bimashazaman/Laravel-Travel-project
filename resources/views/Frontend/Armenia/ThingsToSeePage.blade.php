@@ -12,7 +12,7 @@
     <!-- Tour description start -->
     <section class="tour-descriptions">
 
-        <div class="row">
+        <div class="row" style="margin-right: 49px; margin-left: 42px;">
             <div class="col-md-7">
                 <div class="tour-descriptions-content">
                     <div class="tour-descriptions-content-inner">
@@ -118,44 +118,39 @@
                     </div><!-- /.tour-descriptions-content-inner -->
                 </div><!-- /.tour-descriptions-content -->
             </div><!-- /.col -->
+            <div class="tour-descriptions-content-inner-left-content-title bb">
+                <h2>
+                    Key Points
+                </h2>
 
-            <div class="col-md-4">
 
-                <div class="tour-descriptions-content-inner-left-content-title bb">
+               <div>
+                <div class="detailespackage" style="justify-content:space-between">
+                    <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>  <div>Sedan</div>
+                </div>
+                <div class="detailespackage" style="justify-content:space-between">
+                    <div><i class="fa-solid fa-person"></i>Number of seats</div> <div>3 seats</div>
+                </div>
 
-                    <!--Google map-->
-                   
-                    <h3 style="margin-top: 25px; font-weight: 600;">
-                        Key Points
-                    </h3>
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-car"></i> Parking </div>
-                    </div>
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-wifi"></i> Internet WIFI </div>
-                    </div>
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-credit-card"></i> Pay by card </div>
-                    </div>
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-ban"></i> Free cancellation </div>
-                    </div>
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-person-running"></i> In the city center </div>
-                    </div>
-                    <br>
-                    <br>
+                <div class="detailespackage" style="justify-content:space-between">
+                    <div><i class="fa-solid fa-calendar-check"></i>Year</div>  <div>2004 Air conditionar</div>
+                </div>
 
-                    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
-                        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" style="border:0" allowfullscreen></iframe>
-                    </div>
+                <div class="detailespackage" style="justify-content:space-between">
+                    <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>  <div>3 days ago</div>
+                </div>
+                <div>
+                    <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                    frameborder="0" style="width:40%; height:40%;" allowfullscreen></iframe>
+                </div>
+               </div>
+
+               
+                
+                
 
                     <br>
                     <br>
-
-
-
                 </div><!-- /.tour-descriptions-content-inner-left-content-title -->
 
             </div><!-- /.row -->
