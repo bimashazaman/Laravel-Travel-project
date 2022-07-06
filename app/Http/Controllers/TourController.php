@@ -35,7 +35,7 @@ class TourController extends Controller
                 ->whereNull('deleted_at')
                 ->get();
             // return response()->json(["tour"=>$tours]);
-            return view("Backend.Admin.classicTours.ClassicTour", [
+            return view("Backend.Admin.Tours.classicTours.ClassicTour", [
                 "tour" => $tours
             ]);
         }
@@ -50,7 +50,7 @@ class TourController extends Controller
     {
         $destinations = Destination::all();
         $categories = TourCategory::all();
-        return view('Backend.Admin.classicTours.CreateClassicTour', [
+        return view('Backend.Admin.Tours.classicTours.CreateClassicTour', [
             "categories" => $categories,
             "destinations" => $destinations
         ]);
@@ -351,7 +351,7 @@ class TourController extends Controller
         //    dd($tour);
         $destination = Destination::all();
         if ($tour) {
-            return view("Backend.Admin.classicTours.TourDescription", [
+            return view("Backend.Admin.Tours.classicTours.TourDescription", [
                 "tour" => $tour,
                 "destination" => $destination
             ]);
