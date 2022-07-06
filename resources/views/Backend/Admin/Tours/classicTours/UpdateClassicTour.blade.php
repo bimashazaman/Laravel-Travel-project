@@ -13,23 +13,15 @@
 
     <div class="content container-fluid">
 
-        <div class="page-header">
-            <div class="row">
-                <div class="col-sm-12">
-                    <h3 class="page-title">Horizontal Form</h3>
-                    <ul class="breadcrumb">
-                        <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                        <li class="breadcrumb-item active">Horizontal Form</li>
-                    </ul>
-                </div>
-            </div>
-        </div>
+        <h2>
+            Update Tour
+        </h2>
 
         <div class="row">
             <div class="col-xl-6 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header">
-                        <h4 class="card-title">Basic Form</h4>
+                        <h4 class="card-title">Basic Information</h4>
                     </div>
                     <div class="card-body">
                         <form action="#">
@@ -79,7 +71,7 @@
             <div class="col-xl-6 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header">
-                        <h4 class="card-title">Address Form</h4>
+                        <h4 class="card-title">Facility</h4>
                     </div>
                     <div class="card-body">
                         <form action="#">
@@ -131,10 +123,10 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Two Column Horizontal Form</h4>
+                        <h4 class="card-title">Highlights</h4>
                     </div>
                     <div class="card-body">
-                        <h4 class="card-title">Personal Information</h4>
+                       
                         <form action="#">
                             <div class="row">
                                 <div class="col-xl-6">
@@ -274,13 +266,13 @@
             <div class="col-md-12">
                 <div class="card">
                     <div class="card-header">
-                        <h4 class="card-title">Two Column Horizontal Form</h4>
+                        <h4 class="card-title">Programs</h4>
                     </div>
                     <div class="card-body">
                         <form action="#">
                             <div class="row">
                                 <div class="col-xl-6">
-                                    <h4 class="card-title">Personal Details</h4>
+                                    
                                     <div class="form-group row">
                                         <label class="col-lg-3 col-form-label">First Name</label>
                                         <div class="col-lg-9">

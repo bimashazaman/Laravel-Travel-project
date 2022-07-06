@@ -34,7 +34,7 @@
                                 @foreach($tour as $touritem)
                                 <tr>
 
-                                    <td class="text-nowrap">tour name</td>
+                                    <td class="text-nowrap">{{$touritem->name}}</td>
                                     <td class="text-center">{{$touritem->start_date}}</td>
                                     <td class="text-center">
                                         {{$touritem->end_date}}
