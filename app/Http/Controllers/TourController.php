@@ -408,8 +408,30 @@ class TourController extends Controller
             $tour->delete();
             //delete images
             //delete highlights 
-            return self::success("Tour deleted!", ["data" => $tour]);
+
+            //retrieving all the tours
+            $tours = Tour::with('images')
+                ->with('highlights')
+                ->with('facility')
+                ->where("category_id", $tour->category_id)
+                ->whereNull('deleted_at')
+                ->get();
+
+            //retrieving the category for category name
+            $cat = TourCategory::find($tour->category_id);
+
+            // return response()->json(["tour"=>$tours]);
+            return redirect('/admin/tours/' . $cat->name)
+                ->with("tour", $tours)
+                ->with('success', true)
+                ->with('msg', 'Tour Deleted!');
+
+            // return self::success("Tour deleted!", ["data" => $tour]);
         }
-        return self::failure('Not Found', [], 404);
+        return redirect('/admin/tours/' . $cat->name)
+            ->with("tour", $tours)
+            ->with('fail', true)
+            ->with('msg', "Not Found");
+        // return self::failure('Not Found', [], 404);
     }
 }

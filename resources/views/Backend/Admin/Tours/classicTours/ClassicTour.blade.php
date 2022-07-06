@@ -56,7 +56,15 @@
                                                </a>
                                             </span>
                                             <span>
-                                                <button type="button" class="btn btn-danger">Delete</button>
+                                            <form method="POST" action="/admin/tour/delete/{{$touritem->id}}">
+        {{ csrf_field() }}
+        {{ method_field('DELETE') }}
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-danger delete-user" value="Delete">
+        </div>
+    </form>
+                                                <!-- <button type="button" class="btn btn-danger">Delete</button> -->
                                             </span>
                                         </div>
                                     </td>

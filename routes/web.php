@@ -19,6 +19,7 @@ Route::get('/admin/CreateClassicTour',[TourController::class, "create"]);
 Route::post("/admin/highlight/{id}",[TourController::class,"addTourHighlights"])->name('addHighlight');
 Route::post("/admin/facility/{id}",[TourController::class,"addTourFacility"])->name('addFacility');
 Route::post("/admin/tourprogram/{id}",[TourController::class,"addTourProgram"])->name('addTourProgram');
+Route::delete("/admin/tour/delete/{id}",[TourController::class,"destroy"])->name('tourDelete');
 
 //-------- end -------------
 
