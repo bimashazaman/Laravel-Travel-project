@@ -1,4 +1,4 @@
-@extends('Backend.Admin.AdminHome')
+{{-- @extends('Backend.Admin.AdminHome')
 @section('admin-content')
 
 <!-- added successfully or not -->
@@ -51,4 +51,4 @@
 </div>
 </div>
 <!-- <script src="url('js/tour.js')"></script> -->
-@endsection
+@endsection --}}

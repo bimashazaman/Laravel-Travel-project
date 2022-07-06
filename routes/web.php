@@ -4,6 +4,12 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 
+// Add facility page
+Route::get('/login', function () {
+    return view('Backend.Admin.login.login');
+});
+
+
 
 // Add facility page
 Route::get('/AddFacility', function () {

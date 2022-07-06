@@ -54,16 +54,6 @@
                                                </a>
                                             </span>
                                             <span>
-                                                <a href="{{ url('/AddHighlight') }}">
-                                                 <button type="button" class="btn btn-info">Add Highlights</button>
-                                                </a>
-                                             </span>
-                                             <span>
-                                                <a href="{{ url('/AddFacility') }}">
-                                                 <button type="button" class="btn btn-success">Add Facility</button>
-                                                </a>
-                                             </span>
-                                            <span>
                                                <a href="{{ url('/UpdateClassicTour') }}">
                                                 <button type="button" class="btn btn-success">Update</button>
                                                </a>
