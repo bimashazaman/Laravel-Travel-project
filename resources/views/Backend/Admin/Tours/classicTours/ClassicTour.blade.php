@@ -51,7 +51,7 @@
                                             </span>
                                             <span>
                                                <a href="{{ url('/UpdateClassicTour') }}">
-                                                <button type="button" class="btn btn-success">Update</button>
+                                                <button type="button" class="btn btn-info">Update</button>
                                                </a>
                                             </span>
                                             <span>
