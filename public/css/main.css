@@ -1637,11 +1637,11 @@ body {
 }
 
 .aboutUs p {
-    font-size: 1.5rem;
-    text-align: center;
+    font-size: 1.7rem;
+    text-align: left;
     font-weight: 400;
     padding-right: 10%;
-    padding-left: 10%;
+    padding-left: 5%;
     color: #181717;
     line-height: 1.5;
     margin: 20px;

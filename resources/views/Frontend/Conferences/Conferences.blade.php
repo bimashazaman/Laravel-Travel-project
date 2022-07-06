@@ -1,57 +1,57 @@
 @extends('layouts.master')
 @section('content')
-<br>
-<br>
-<br>
-<br><br>
-<br>
-<br>
-<br>
-<br><br><br>
-<br>
-<br>
-<br><br><br>
+    <br>
+    <br>
+    <br>
+    <br><br>
+    <br>
+    <br>
+    <br>
+    <br><br><br>
+    <br>
+    <br>
+    <br><br><br>
 
 
-<form action="" class="hotelForm">
-    <div class="form-group htt">
+    <form action="" class="hotelForm">
+        <div class="form-group htt">
 
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option class="chooseO">Choose Country</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class="form-group htt">
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option class="chooseO">Type</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group htt">
 
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option class="chooseO">Choose region</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-      <div class="form-group htt">
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option class="chooseO">Date</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+        <div class="form-group htt">
 
-        <select class="form-control" id="exampleFormControlSelect1">
-          <option class="chooseO">Choose Type</option>
-          <option>2</option>
-          <option>3</option>
-          <option>4</option>
-          <option>5</option>
-        </select>
-      </div>
-</form>
+            <select class="form-control" id="exampleFormControlSelect1">
+                <option class="chooseO">Region</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+            </select>
+        </div>
+    </form>
     <section id="pack" class="packages">
         <div class="container">
 
             <!--/.gallery-header-->
             <div class="packages-content">
                 <h2 style="text-align: center; padding-bottom:60px">
-                    Events
+                    Events in Armenia
                 </h2>
                 <div class="row">
 
@@ -65,18 +65,18 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4 style="text-align: center">
-                                    Event Name
+                                <h4 style="text-align: center; font-weight: 700;">
+                                    Best Western Congress Hotel
                                 </h4>
 
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -9%;">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Yerevan
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> November
                                 </div>
 
                                 <div class="packageOffer">
@@ -85,7 +85,7 @@
                             </div>
 
                             <div class="package-btn">
-                                <a href="{{ url('/c') }}">
+                                <a href="{{ url('/pageSee') }}">
                                     <button class="package-view">
                                         Details
                                     </button>
@@ -112,18 +112,18 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4 style="text-align: center">
-                                    Event Name
+                                <h4 style="text-align: center; font-weight: 700;">
+                                    Best Western Congress Hotel
                                 </h4>
 
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -9%;">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Yerevan
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> November
                                 </div>
 
                                 <div class="packageOffer">
@@ -132,7 +132,7 @@
                             </div>
 
                             <div class="package-btn">
-                                <a href="{{ url('/c') }}">
+                                <a href="{{ url('/pageSee') }}">
                                     <button class="package-view">
                                         Details
                                     </button>
@@ -158,18 +158,18 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4 style="text-align: center">
-                                    Event Name
+                                <h4 style="text-align: center; font-weight: 700;">
+                                    Best Western Congress Hotel
                                 </h4>
 
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -9%;">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Yerevan
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> November
                                 </div>
 
                                 <div class="packageOffer">
@@ -178,7 +178,7 @@
                             </div>
 
                             <div class="package-btn">
-                                <a href="{{ url('/c') }}">
+                                <a href="{{ url('/pageSee') }}">
                                     <button class="package-view">
                                         Details
                                     </button>
@@ -204,18 +204,18 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4 style="text-align: center">
-                                    Event Name
+                                <h4 style="text-align: center; font-weight: 700;">
+                                    Best Western Congress Hotel
                                 </h4>
 
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -9%;">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Yerevan
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> November
                                 </div>
 
                                 <div class="packageOffer">
@@ -224,7 +224,7 @@
                             </div>
 
                             <div class="package-btn">
-                                <a href="{{ url('/c') }}">
+                                <a href="{{ url('/pageSee') }}">
                                     <button class="package-view">
                                         Details
                                     </button>
@@ -250,18 +250,18 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4 style="text-align: center">
-                                    Event Name
+                                <h4 style="text-align: center; font-weight: 700;">
+                                    Best Western Congress Hotel
                                 </h4>
 
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -9%;">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Yerevan
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> November
                                 </div>
 
                                 <div class="packageOffer">
@@ -270,7 +270,7 @@
                             </div>
 
                             <div class="package-btn">
-                                <a href="{{ url('/c') }}">
+                                <a href="{{ url('/pageSee') }}">
                                     <button class="package-view">
                                         Details
                                     </button>
@@ -296,18 +296,18 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4 style="text-align: center">
-                                    Event Name
+                                <h4 style="text-align: center; font-weight: 700;">
+                                    Best Western Congress Hotel
                                 </h4>
 
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -9%;">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Yerevan
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> November
                                 </div>
 
                                 <div class="packageOffer">
@@ -316,7 +316,7 @@
                             </div>
 
                             <div class="package-btn">
-                                <a href="{{ url('/c') }}">
+                                <a href="{{ url('/pageSee') }}">
                                     <button class="package-view">
                                         Details
                                     </button>
@@ -342,18 +342,18 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4 style="text-align: center">
-                                    Event Name
+                                <h4 style="text-align: center; font-weight: 700;">
+                                    Best Western Congress Hotel
                                 </h4>
 
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -9%;">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Yerevan
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> November
                                 </div>
 
                                 <div class="packageOffer">
@@ -362,7 +362,7 @@
                             </div>
 
                             <div class="package-btn">
-                                <a href="{{ url('/c') }}">
+                                <a href="{{ url('/pageSee') }}">
                                     <button class="package-view">
                                         Details
                                     </button>
@@ -388,18 +388,18 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4 style="text-align: center">
-                                    Event Name
+                                <h4 style="text-align: center; font-weight: 700;">
+                                    Best Western Congress Hotel
                                 </h4>
 
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -9%;">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Yerevan
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> November
                                 </div>
 
                                 <div class="packageOffer">
@@ -408,7 +408,7 @@
                             </div>
 
                             <div class="package-btn">
-                                <a href="{{ url('/c') }}">
+                                <a href="{{ url('/pageSee') }}">
                                     <button class="package-view">
                                         Details
                                     </button>
@@ -434,18 +434,18 @@
 
                             </div>
                             <div class="package-txt">
-                                <h4 style="text-align: center">
-                                    Event Name
+                                <h4 style="text-align: center; font-weight: 700;">
+                                    Best Western Congress Hotel
                                 </h4>
 
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -9%;">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2nd Conversation
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Yerevan
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-calendar"></i></span> jan 01
+                                    <span><i class="fa-regular fa-calendar"></i></span> November
                                 </div>
 
                                 <div class="packageOffer">
@@ -454,7 +454,7 @@
                             </div>
 
                             <div class="package-btn">
-                                <a href="{{ url('/c') }}">
+                                <a href="{{ url('/pageSee') }}">
                                     <button class="package-view">
                                         Details
                                     </button>

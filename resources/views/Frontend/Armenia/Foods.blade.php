@@ -84,13 +84,13 @@
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                                 </p>
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -7%;">
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-calendar"></i></span> 7th Century
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -105,8 +105,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -135,13 +135,13 @@
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                                 </p>
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -7%;">
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-calendar"></i></span> 7th Century
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -156,8 +156,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -185,13 +185,13 @@
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                                 </p>
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -7%;">
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-calendar"></i></span> 7th Century
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -206,8 +206,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -235,13 +235,13 @@
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                                 </p>
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -7%;">
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-calendar"></i></span> 7th Century
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -256,8 +256,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -285,13 +285,13 @@
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                                 </p>
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -7%;">
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-calendar"></i></span> 7th Century
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -306,8 +306,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -335,13 +335,13 @@
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                                 </p>
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -7%;">
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-calendar"></i></span> 7th Century
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -356,8 +356,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -385,13 +385,13 @@
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                                 </p>
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -7%;">
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-calendar"></i></span> 7th Century
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -406,8 +406,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -435,13 +435,13 @@
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                                 </p>
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -7%;">
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-calendar"></i></span> 7th Century
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -456,8 +456,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
@@ -485,13 +485,13 @@
                                     Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                                 </p>
                             </div>
-                            <div class="pacdet">
+                            <div class="pacdet" style="margin-left: -7%;">
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-calendar"></i></span> 7th Century
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> Date
+                                    <span><i class="fa-solid fa-location-dot"></i></span> Etchmiadzin
                                 </div>
 
                                 <div class="packageOffer">
@@ -506,8 +506,8 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        view more
+                                <a href="{{ url('/pageSee') }}"><button class="package-view">
+                                        More
                                     </button>
                                 </a>
                             </div>
