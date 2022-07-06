@@ -205,9 +205,16 @@ Route::get('/food', function () {
 
 
 
+ Route::get('/adminClassicTour', function () {
+     return view('Backend.Admin.classicTours.ClassicTour');
+ });
+
+
+
 Route::get('/UpdateClassicTour', function () {
     return view('Backend.Admin.Tours.classicTours.UpdateClassicTour');
 });
+
 
 Route::get('/driver', function () {
     return view('Frontend.Cars.DriverCar');
@@ -231,5 +238,6 @@ Route::get('/review', function () {
 Route::get('/pageSee', function () {
     return view('Frontend.Armenia.ThingsToSeePage');
 });
+
 
 
