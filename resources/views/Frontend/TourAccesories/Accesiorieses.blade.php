@@ -8,6 +8,8 @@
 
     <br>
     <br>
+    <br>
+    <br>
 
     <section class="tour-descriptions">
         <h1 style="text-align: center">

@@ -1078,6 +1078,7 @@ body {
 }
 
 
+
 .timeline {
     position: relative;
     max-width: 1200px;
@@ -3042,6 +3043,8 @@ body {
     font-weight: 500;
     line-height: 1.8;
 }
+
+
 .highlights {
     padding-left: 30px;
 }

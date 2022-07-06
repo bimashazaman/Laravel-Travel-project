@@ -118,7 +118,7 @@
                             <h3>
                                 Highlights
                             </h3>
-                            <ul>
+                            <ul class="uldescription" style="margin-left: 3%">
                                 <li>
                                     Lorem ipsum dolor sit amet.
                                 </li>
@@ -199,10 +199,14 @@
             <h3 style="text-align: center; margin-bottom:10px">
                 The price table
             </h3>
+            <h4 style="text-transform: none;">
+                For individual tours if the group are:
+            </h4>
+            <br>
             <table class="table table-bordered tble">
                 <thead>
                     <tr>
-                        <th>1 Day</th>
+                        <th style="background-color: #FFF1E9">1 Day</th>
                         <th>1 Week</th>
                         <th>1 Mounth</th>
 
@@ -210,19 +214,19 @@
                 </thead>
                 <tbody>
                     <tr>
-                        <td>Mark</td>
+                        <td style="background-color: #FFF1E9">Mark</td>
                         <td>Mark</td>
                         <td>Otto</td>
 
                     </tr>
                     <tr>
-                        <td>Jacob</td>
+                        <td style="background-color: #FFF1E9">Jacob</td>
                         <td>Thornton</td>
                         <td>@fat</td>
 
                     </tr>
                     <tr>
-                        <td>Jacob</td>
+                        <td style="background-color: #FFF1E9">Jacob</td>
                         <td>Thornton</td>
                         <td>@fat</td>
 
@@ -300,7 +304,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-star"></i></span> Date
+                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
                                 </div>
 
                                 <div class="packageOffer">
@@ -321,7 +325,7 @@
                         <!--/.single-package-item-->
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                    view more
+                                    Details
                                 </button>
                             </a>
                         </div>
@@ -347,7 +351,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-star"></i></span> Date
+                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
                                 </div>
 
                                 <div class="packageOffer">
@@ -368,7 +372,7 @@
                         <!--/.single-package-item-->
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                    view more
+                                    Details
                                 </button>
                             </a>
                         </div>
@@ -394,7 +398,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-star"></i></span> Date
+                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
                                 </div>
 
                                 <div class="packageOffer">
@@ -415,7 +419,7 @@
                         <!--/.single-package-item-->
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                    view more
+                                    Details
                                 </button>
                             </a>
                         </div>
@@ -451,7 +455,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-star"></i></span> Date
+                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
                                 </div>
 
                                 <div class="packageOffer">
@@ -472,7 +476,7 @@
                         <!--/.single-package-item-->
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                    view more
+                                    Details
                                 </button>
                             </a>
                         </div>
@@ -498,7 +502,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-star"></i></span> Date
+                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
                                 </div>
 
                                 <div class="packageOffer">
@@ -519,7 +523,7 @@
                         <!--/.single-package-item-->
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                    view more
+                                    Details
                                 </button>
                             </a>
                         </div>
@@ -545,7 +549,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-star"></i></span> Date
+                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
                                 </div>
 
                                 <div class="packageOffer">
@@ -566,7 +570,7 @@
                         <!--/.single-package-item-->
                         <div class="package-btn">
                             <a href="{{ url('h') }}"><button class="package-view">
-                                    view more
+                                    Details
                                 </button>
                             </a>
                         </div>
