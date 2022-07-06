@@ -1,11 +1,11 @@
 <div class="header">
 
     <div class="header-left">
-        <a href="{{ url('/admin') }}" class="logo">
-            Admin Panel
+        <a href="{{ url('/main') }}" class="logo">
+            <img src="{{ asset('images/Tour-Logo.png') }}" style="width:auto; height:auto" alt="">
         </a>
-        <a href="index.html" class="logo logo-small">
-            <img src="{{ asset('assets/img/logo-small.png') }}" alt="Logo" width="30" height="30">
+        <a href="{{ url('/main') }}" class="logo logo-small">
+            <img src="{{ asset('images/Tour-Logo.png') }}" style="width:auto; height:auto" alt="">
         </a>
     </div>
   
@@ -24,7 +24,7 @@
     </a>
 
 
-    <ul class="nav user-menu">
+    {{-- <ul class="nav user-menu">
 
         <li class="nav-item dropdown noti-dropdown">
             <a href="#" class="dropdown-toggle nav-link" data-bs-toggle="dropdown">
@@ -136,6 +136,6 @@
             </div>
         </li>
 
-    </ul>
+    </ul> --}}
 
 </div>
