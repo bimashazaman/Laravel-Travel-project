@@ -148,8 +148,8 @@
 
                </div>
 
-               <div class="row" style="height:605px">
-                    <div class="col-md-12" style="height:605px">
+               <div class="row" style="height:420px">
+                    <div class="col-md-12" style="height:100%">
                     <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height ="100%"
                     frameborder="0" allowfullscreen></iframe>
                     </div>
