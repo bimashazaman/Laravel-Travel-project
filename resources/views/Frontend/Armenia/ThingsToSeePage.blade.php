@@ -12,7 +12,7 @@
     <!-- Tour description start -->
     <section class="tour-descriptions">
 
-        <div class="row" style="margin-right: 49px; margin-left: 42px;">
+        <div class="row">
             <div class="col-md-7">
                 <div class="tour-descriptions-content">
                     <div class="tour-descriptions-content-inner">
@@ -24,7 +24,7 @@
                             </div><!-- /.tour-descriptions-content-inner-left-content -->
                         </div><!-- /.tour-descriptions-content-inner-left -->
                         <div class="tour-descriptions-content-inner-right">
-                            <section class="imgC">
+                            <section class="imgC" style="padding:0;">
                                 <div class="imgCcontainer">
                                     <div class="carousel">
                                         <input type="radio" name="slides" checked="checked" id="slide-1">
@@ -118,8 +118,10 @@
                     </div><!-- /.tour-descriptions-content-inner -->
                 </div><!-- /.tour-descriptions-content -->
             </div><!-- /.col -->
-            <div class="tour-descriptions-content-inner-left-content-title bb">
-                <h2>
+            <div class="col-md-5 tour-descriptions-content-inner-left-content-title">
+                <div class="row">
+                    <div class="col-md-12">
+                    <h2>
                     Key Points
                 </h2>
 
@@ -139,13 +141,19 @@
                 <div class="detailespackage" style="justify-content:space-between">
                     <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>  <div>3 days ago</div>
                 </div>
-                <div>
-                    <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                    frameborder="0" style="width:40%; height:40%;" allowfullscreen></iframe>
+                    </div>
+
                 </div>
+               
+
                </div>
 
-               
+               <div class="row" style="height:605px">
+                    <div class="col-md-12" style="height:605px">
+                    <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height ="100%"
+                    frameborder="0" allowfullscreen></iframe>
+                    </div>
+                </div>
                 
                 
 
@@ -351,6 +359,11 @@
    
                 </div>
                 <!--/.row-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <h2>Your code here</h2>
+                    </div>
+                </div>
             </div>
             <!--/.packages-content-->
         </div>
