@@ -75,13 +75,13 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    Merceders C180
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
                                 </div>
 
                                 <div class="packageOffer" style="margin-left: 20px">
@@ -127,13 +127,13 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    Merceders C180
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
                                 </div>
 
                                 <div class="packageOffer" style="margin-left: 20px">
@@ -178,13 +178,13 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    Merceders C180
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
                                 </div>
 
                                 <div class="packageOffer" style="margin-left: 20px">
@@ -229,13 +229,13 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    Merceders C180
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
                                 </div>
 
                                 <div class="packageOffer" style="margin-left: 20px">
@@ -280,13 +280,13 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    Merceders C180
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
                                 </div>
 
                                 <div class="packageOffer" style="margin-left: 20px">
@@ -331,13 +331,13 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    Merceders C180
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
                                 </div>
 
                                 <div class="packageOffer" style="margin-left: 20px">
@@ -382,13 +382,13 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    Merceders C180
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
                                 </div>
 
                                 <div class="packageOffer" style="margin-left: 20px">
@@ -433,13 +433,13 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    Merceders C180
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
                                 </div>
 
                                 <div class="packageOffer" style="margin-left: 20px">
@@ -484,13 +484,13 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Tesla
+                                    Merceders C180
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Tesla
+                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
                                 </div>
 
                                 <div class="packageOffer" style="margin-left: 20px">

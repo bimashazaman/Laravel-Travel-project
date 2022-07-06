@@ -76,13 +76,13 @@
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                         </p>
                      </div>
-                        <div class="pacdet">
+                        <div class="pacdet" style="margin-left: -7%;">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-star"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span>Hotel 4 stars
                             </div>
 
                             <div class="packageOffer">
@@ -126,62 +126,13 @@
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                         </p>
                      </div>
-                        <div class="pacdet">
+                        <div class="pacdet" style="margin-left: -7%;">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-star"></i></span> Date
-                            </div>
-
-                            <div class="packageOffer">
-                                <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                            </div>
-                        </div>
-                        <div class="rating">
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <div class="package-btn">
-                            <a href="{{ url('h') }}"><button class="package-view">
-                                view more
-                            </button>
-                            </a>
-                        </div>
-
-
-
-                    </div>
-                    <!--/.single-package-item-->
-
-                </div>
-                <!--/.col-->
-                <div class="col-md-4 col-sm-6">
-
-                    <div class="single-package-item">
-
-                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                     <div class="HotelName">
-                        <h4>
-                            Hotel Name
-                        </h4>
-                     </div>
-                     <div class="hotelDesccription">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                        </p>
-                     </div>
-                        <div class="pacdet">
-                            <div class="packageOffer">
-                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
-                            </div>
-
-                            <div class="packageOffer">
-                                <span><i class="fa-solid fa-star"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span>Hotel 4 stars
                             </div>
 
                             <div class="packageOffer">
@@ -224,62 +175,13 @@
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                         </p>
                      </div>
-                        <div class="pacdet">
+                        <div class="pacdet" style="margin-left: -7%;">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-star"></i></span> Date
-                            </div>
-
-                            <div class="packageOffer">
-                                <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                            </div>
-                        </div>
-                        <div class="rating">
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <div class="package-btn">
-                            <a href="{{ url('h') }}"><button class="package-view">
-                                view more
-                            </button>
-                            </a>
-                        </div>
-
-
-
-                    </div>
-                    <!--/.single-package-item-->
-
-                </div>
-                <!--/.col-->
-                <div class="col-md-4 col-sm-6">
-
-                    <div class="single-package-item">
-
-                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                     <div class="HotelName">
-                        <h4>
-                            Hotel Name
-                        </h4>
-                     </div>
-                     <div class="hotelDesccription">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                        </p>
-                     </div>
-                        <div class="pacdet">
-                            <div class="packageOffer">
-                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
-                            </div>
-
-                            <div class="packageOffer">
-                                <span><i class="fa-solid fa-star"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span>Hotel 4 stars
                             </div>
 
                             <div class="packageOffer">
@@ -322,62 +224,13 @@
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                         </p>
                      </div>
-                        <div class="pacdet">
+                        <div class="pacdet" style="margin-left: -7%;">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-star"></i></span> Date
-                            </div>
-
-                            <div class="packageOffer">
-                                <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                            </div>
-                        </div>
-                        <div class="rating">
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                            <span class=""><i class="fa-solid fa-star"></i></span>
-                        </div>
-                        <div class="package-btn">
-                            <a href="{{ url('h') }}"><button class="package-view">
-                                view more
-                            </button>
-                            </a>
-                        </div>
-
-
-
-                    </div>
-                    <!--/.single-package-item-->
-
-                </div>
-                <!--/.col-->
-                <div class="col-md-4 col-sm-6">
-
-                    <div class="single-package-item">
-
-                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
-                     <div class="HotelName">
-                        <h4>
-                            Hotel Name
-                        </h4>
-                     </div>
-                     <div class="hotelDesccription">
-                        <p>
-                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                        </p>
-                     </div>
-                        <div class="pacdet">
-                            <div class="packageOffer">
-                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
-                            </div>
-
-                            <div class="packageOffer">
-                                <span><i class="fa-solid fa-star"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span>Hotel 4 stars
                             </div>
 
                             <div class="packageOffer">
@@ -420,13 +273,13 @@
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                         </p>
                      </div>
-                        <div class="pacdet">
+                        <div class="pacdet" style="margin-left: -7%;">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-star"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span>Hotel 4 stars
                             </div>
 
                             <div class="packageOffer">
@@ -469,13 +322,160 @@
                             Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
                         </p>
                      </div>
-                        <div class="pacdet">
+                        <div class="pacdet" style="margin-left: -7%;">
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
                             </div>
 
                             <div class="packageOffer">
-                                <span><i class="fa-solid fa-star"></i></span> Date
+                                <span><i class="fa-solid fa-star"></i></span>Hotel 4 stars
+                            </div>
+
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                        </div>
+                        <div class="package-btn">
+                            <a href="{{ url('h') }}"><button class="package-view">
+                                view more
+                            </button>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                    <!--/.single-package-item-->
+
+                </div>
+                <!--/.col-->
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="single-package-item">
+
+                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
+                        <div class="pacdet" style="margin-left: -7%;">
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
+                            </div>
+
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-star"></i></span>Hotel 4 stars
+                            </div>
+
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                        </div>
+                        <div class="package-btn">
+                            <a href="{{ url('h') }}"><button class="package-view">
+                                view more
+                            </button>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                    <!--/.single-package-item-->
+
+                </div>
+                <!--/.col-->
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="single-package-item">
+
+                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
+                        <div class="pacdet" style="margin-left: -7%;">
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
+                            </div>
+
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-star"></i></span>Hotel 4 stars
+                            </div>
+
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                        </div>
+                        <div class="package-btn">
+                            <a href="{{ url('h') }}"><button class="package-view">
+                                view more
+                            </button>
+                            </a>
+                        </div>
+
+
+
+                    </div>
+                    <!--/.single-package-item-->
+
+                </div>
+                <!--/.col-->
+                <div class="col-md-4 col-sm-6">
+
+                    <div class="single-package-item">
+
+                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80" alt="package-place">
+                     <div class="HotelName">
+                        <h4>
+                            Hotel Name
+                        </h4>
+                     </div>
+                     <div class="hotelDesccription">
+                        <p>
+                            Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
+                        </p>
+                     </div>
+                        <div class="pacdet" style="margin-left: -7%;">
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
+                            </div>
+
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-star"></i></span>Hotel 4 stars
                             </div>
 
                             <div class="packageOffer">
