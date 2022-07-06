@@ -5,6 +5,15 @@ use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 
 
+// Add facility page
+Route::get('/AddFacility', function () {
+    return view('Backend.Admin.Tours.classicTours.AddFacility');
+});
+
+//add highlight
+Route::get('/AddHighlight', function () {
+    return view('Backend.Admin.Tours.classicTours.AddHighlights');
+});
 
 
 //----- dashboard page ---------

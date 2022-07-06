@@ -23,11 +23,14 @@
                         <table class="table table-hover table-center">
                             <thead>
                                 <tr>
-
                                     <th>Name</th>
                                     <th class="text-center">Start Date</th>
+                                    <th class="text-center">Duration</th>
+                                    <th class="text-center">Cetagory</th>
+                                    <th class="text-center">Destination</th>
                                     <th class="text-center">End Date</th>
                                     <th class="text-center">Price</th>
+                                    <th class="text-center">Image</th>
                                     <th class="text-end">Status</th>
                                 </tr>
                             </thead>
@@ -50,6 +53,16 @@
                                                 <button type="button" class="btn btn-success">Detail</button>
                                                </a>
                                             </span>
+                                            <span>
+                                                <a href="{{ url('/AddHighlight') }}">
+                                                 <button type="button" class="btn btn-info">Add Highlights</button>
+                                                </a>
+                                             </span>
+                                             <span>
+                                                <a href="{{ url('/AddFacility') }}">
+                                                 <button type="button" class="btn btn-success">Add Facility</button>
+                                                </a>
+                                             </span>
                                             <span>
                                                <a href="{{ url('/UpdateClassicTour') }}">
                                                 <button type="button" class="btn btn-success">Update</button>
