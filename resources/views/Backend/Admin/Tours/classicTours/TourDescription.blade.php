@@ -1,16 +1,16 @@
 @extends('Backend.Admin.AdminHome')
 @section('admin-content')
-<div class="row">
+
     {{-- {{$tour}} --}}
 
     <!-- highlights part -->
-   <div class="container-fluid" style="padding: 100px">
+   <div class="container-fluid">
     <h2 class="text-center font-weight-bold">
        
         Tour Description
     </h2>
     <div class="row">
-        <div class="col-md-12">
+        <div class="col-md-7">
          <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="padding: 20px; ">
              <div class="carousel-indicators">
                <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
@@ -37,193 +37,196 @@
                <span class="visually-hidden">Next</span>
              </button>
            </div>
- 
-           <div class="col-md-12 text-center">
-             <h2>
-                 Singapur Tour
-             </h2>
-             <p>
-                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorum vel nesciunt libero ut officia aliquid fuga quod dicta nemo nam excepturi recusandae inventore quisquam sunt sapiente beatae, id facere reiciendis voluptates magnam delectus consectetur non quis! Eos, magni deleniti.
-             </p>
-           </div>
-             <div class="col-md-12">
-         
-                <div>
-                   <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
-                       <h3 class="">
-                           More Informations
-                       </h3>
-                           <hr>
-       
-                       <div class="d-flex justify-content-between">
-                       <div class="col-md-3">
-                           <div class="mb-3">
-                               Price
-                           </div>
-                           <div class="mb-3">
-                               Duration
-                           </div>
-                           <div class="mb-3">
-                              Start Date
-                           </div>
-                           <div class="mb-3">
-                               End date
-                           </div>
-                           <div class="mb-3">
-                            One day price
-                        </div>
-                        <div class="mb-3">
-                            One week price
-                        </div>
-                        <div class="mb-3">
-                            One mounth
-                        </div>
-                       </div>
-                       <div class="col-md-2">
-                           <div class="mb-3">
-                               300 AMD
-                           </div>
-                           <div class="mb-3">
-                               2 days
-                           </div>
-                           <div class="mb-3">
-                               2020-01-01
-                           </div>
-                           <div class="mb-3">
-                               2022-01-01
-                           </div>
-                           <div class="mb-3">
-                            2000 AMD
-                        </div>
-                        <div class="mb-3">
-                            3000 AMD
-                        </div>
-                        <div class="mb-3">
-                            5000 AMD
-                        </div>
-                       </div>
-                   </div>
-                       
-                  </div>
-                   
-                </div>
-       
-            </div>
-
-            <div class="col-md-12">
-         
-                <div>
-                   <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
-                       <h3 class="">
-                          Facilities
-                       </h3>
-                           <hr>
-       
-                           <div class="list-group list-group-light">
-                            <button type="button" class="list-group-item list-group-item-action  px-3 border-0 " aria-current="true">
-                              Cras justo odio
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
-                              Dapibus ac facilisis in
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
-                              Morbi leo risus
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
-                              Porta ac consectetur ac
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0" disabled>
-                              Vestibulum at eros
-                            </button>
-                          </div>
-                   </div>
-                       
-                  </div>
-                   
-                </div>
-       
-            </div>
-
-            <div class="col-md-12">
-         
-                <div>
-                   <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
-                       <h3 class="">
-                          Highlights
-                       </h3>
-                           <hr>
-       
-                           <div class="list-group list-group-light">
-                            <button type="button" class="list-group-item list-group-item-action  px-3 border-0 " aria-current="true">
-                              Cras justo odio
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
-                              Dapibus ac facilisis in
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
-                              Morbi leo risus
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
-                              Porta ac consectetur ac
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0" disabled>
-                              Vestibulum at eros
-                            </button>
-                          </div>
-                   </div>
-                       
-                  </div>
-                   
-                </div>
-       
-            </div>
-
-            <div class="col-md-12">
-         
-                <div>
-                   <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
-                       <h3 class="">
-                          Tour Program
-                       </h3>
-                           <hr>
-       
-                           <div class="list-group list-group-light">
-                            <button type="button" class="list-group-item list-group-item-action  px-3 border-0 " aria-current="true">
-                              Cras justo odio
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
-                              Dapibus ac facilisis in
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
-                              Morbi leo risus
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
-                              Porta ac consectetur ac
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action px-3 border-0" disabled>
-                              Vestibulum at eros
-                            </button>
-                          </div>
-                   </div>
-                       
-                  </div>
-                   
-                </div>
-       
-            </div>
-             
-           </div>
         </div>
- 
-       
-        </div>
-   </div>
 
+        <div class="col-md-5">
+     
+            <div>
+               <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
+                   <h3 class="">
+                      Facilities
+                   </h3>
+                       <hr>
+   
+                       <div class="list-group list-group-light">
+                        <button type="button" class="list-group-item list-group-item-action  px-3 border-0 " aria-current="true">
+                          Cras justo odio
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                          Dapibus ac facilisis in
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                          Morbi leo risus
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                          Porta ac consectetur ac
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0" disabled>
+                          Vestibulum at eros
+                        </button>
+                      </div>
+               </div>
+                   
+              </div>
+               
+            </div>
+   
+        </div>
+        </div>
+        <div class="row">
+        <div class="col-md-12 text-center">
+            <h2>
+                Singapur Tour
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorum vel nesciunt libero ut officia aliquid fuga quod dicta nemo nam excepturi recusandae inventore quisquam sunt sapiente beatae, id facere reiciendis voluptates magnam delectus consectetur non quis! Eos, magni deleniti.
+            </p>
+          </div>
+        </div>
+
+     <div class="row">
+        <div class="col-md-6">
+     
+            <div>
+               <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
+                   <h3 class="">
+                      Highlights
+                   </h3>
+                       <hr>
+   
+                       <div class="list-group list-group-light">
+                        <button type="button" class="list-group-item list-group-item-action  px-3 border-0 " aria-current="true">
+                          Cras justo odio
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                          Dapibus ac facilisis in
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                          Morbi leo risus
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                          Porta ac consectetur ac
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0" disabled>
+                          Vestibulum at eros
+                        </button>
+                      </div>
+               </div>
+                   
+              </div>
+               
+            </div>
+   
+        
+
+        <div class="col-md-6">
+     
+            <div>
+               <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
+                   <h3 class="">
+                      Tour Program
+                   </h3>
+                       <hr>
+   
+                       <div class="list-group list-group-light">
+                        <button type="button" class="list-group-item list-group-item-action  px-3 border-0 " aria-current="true">
+                          Cras justo odio
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                          Dapibus ac facilisis in
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                          Morbi leo risus
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                          Porta ac consectetur ac
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action px-3 border-0" disabled>
+                          Vestibulum at eros
+                        </button>
+                      </div>
+               </div>
+                   
+              </div>
+               
+            </div>
+   
+        </div>
+    
+     
+
+        <div class="col-md-12">
+         
+            <div>
+               <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
+                   <h3 class="">
+                       More Informations
+                   </h3>
+                       <hr>
+   
+                   <div class="d-flex justify-content-between">
+                   <div class="col-md-3">
+                       <div class="mb-3">
+                           Price
+                       </div>
+                       <div class="mb-3">
+                           Duration
+                       </div>
+                       <div class="mb-3">
+                          Start Date
+                       </div>
+                       <div class="mb-3">
+                           End date
+                       </div>
+                       <div class="mb-3">
+                        One day price
+                    </div>
+                    <div class="mb-3">
+                        One week price
+                    </div>
+                    <div class="mb-3">
+                        One mounth
+                    </div>
+                   </div>
+                   <div class="col-md-2">
+                       <div class="mb-3">
+                           300 AMD
+                       </div>
+                       <div class="mb-3">
+                           2 days
+                       </div>
+                       <div class="mb-3">
+                           2020-01-01
+                       </div>
+                       <div class="mb-3">
+                           2022-01-01
+                       </div>
+                       <div class="mb-3">
+                        2000 AMD
+                    </div>
+                    <div class="mb-3">
+                        3000 AMD
+                    </div>
+                    <div class="mb-3">
+                        5000 AMD
+                    </div>
+                   </div>
+               </div>
+                   
+              </div>
+               
+            </div>
+   
+        </div>
+        
+           
+           
+      
        
     
         
 
     
 
-</div>
+
 @endsection

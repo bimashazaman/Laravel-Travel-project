@@ -325,10 +325,22 @@ Route::get('/admin/thingstoSeeCreate', function () {
     return view('Backend.Admin.Armenia.ThingsToSee.create');
 });
 
+Route::get('/admin/accCreate', function () {
+    return view('Backend.Admin.Services.Accessiories.create');
+});
 
 
+Route::get('/admin/createHotel', function () {
+    return view('Backend.Admin.Services.Hotels.create');
+});
 
+Route::get('/admin/createCar', function () {
+    return view('Backend.Admin.Services.Car.create');
+});
 
+Route::get('/admin/createMice', function () {
+    return view('Backend.Admin.Services.MICE.create');
+});
 
 
 

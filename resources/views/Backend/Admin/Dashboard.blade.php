@@ -150,7 +150,10 @@
                 <div class="card-body" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
                     <div class="dash-widget-header">
                         <button class="btn btn-info" style="color: white; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
-                           Add Car
+                           <a href="{{ url('/admin/createCar') }}" style="color: white">
+                            Add Car
+                        </a>
+                            
                         </button>
                         <div class="dash-count">
                             <a href="#" class="count-title">Cars</a>
@@ -165,7 +168,8 @@
                <div class="card-body" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
                     <div class="dash-widget-header">
                         <button class="btn btn-info" style="color: white; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
-                           Add Hotels
+                           <a href="{{ url('/admin/createHotel') }}" style="color: white">Add Hotels</a>
+                            
                         </button>
                         <div class="dash-count">
                             <a href="#" class="count-title">Hotels</a>
@@ -175,15 +179,17 @@
                 </div>
             </div>
         </div>
+        
         <div class="col-xl-4 col-sm-4 col-12">
             <div class="card">
                 <div class="card-body" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
                     <div class="dash-widget-header">
                         <button class="btn btn-info" style="color: white; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
-                           Add Packages
+                           <a href="{{ url('/admin/accCreate') }}" style="color: white">Add Packages</a>
+                            
                         </button>
                         <div class="dash-count">
-                            <a href="#" class="count-title">Accessiories</a>
+                            <a href="" class="count-title">Accessiories</a>
                             <a href="#" class="count">10 Active</a>
                         </div>
                     </div>
@@ -212,7 +218,10 @@
                <div class="card-body" style="box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
                     <div class="dash-widget-header">
                         <button class="btn btn-info" style="color: white; box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;">
-                           Add MICE
+                        <a href="{{ url('/admin/createMice') }}" style="color: white">
+                            Add MICE
+                        </a>
+                            
                         </button>
                         <div class="dash-count">
                             <a href="#" class="count-title">MICE</a>
