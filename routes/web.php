@@ -261,3 +261,77 @@ Route::get('/pageSee', function () {
 
 
 
+
+
+
+Route::get('/admin/thingstoSee', function () {
+    return view('Backend.Admin.Armenia.ThingsToSee.view');
+});
+
+Route::get('/admin/thingstoDo', function () {
+    return view('Backend.Admin.Armenia.ThingsToDo.view');
+});
+
+Route::get('/admin/food', function () {
+    return view('Backend.Admin.Armenia.FoodAndDrink.view');
+});
+
+Route::get('/admin/TODO', function () {
+    return view('Backend.Admin.Armenia.TODO.view');
+});
+
+Route::get('/admin/usefulToKnow', function () {
+    return view('Backend.Admin.Armenia.Informations.view');
+});
+
+Route::get('/admin/events', function () {
+    return view('Backend.Admin.Armenia.Events.view');
+});
+
+Route::get('/admin/brochure', function () {
+    return view('Backend.Admin.Armenia.Brochure.view');
+});
+
+Route::get('/admin/TravelBlog', function () {
+    return view('Backend.Admin.Armenia.TravelBlog.view');
+});
+
+Route::get('/admin/Accessiories', function () {
+    return view('Backend.Admin.Services.Accessiories.view');
+});
+
+Route::get('/admin/CarAtAirport', function () {
+    return view('Backend.Admin.Services.CarAtAirport.view');
+});
+
+Route::get('/admin/CarWithDriver', function () {
+    return view('Backend.Admin.Services.CarWithDriver.view');
+});
+
+Route::get('/admin/Hotel', function () {
+    return view('Backend.Admin.Services.Hotels.view');
+});
+
+Route::get('/admin/Mice', function () {
+    return view('Backend.Admin.Services.Mice.view');
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

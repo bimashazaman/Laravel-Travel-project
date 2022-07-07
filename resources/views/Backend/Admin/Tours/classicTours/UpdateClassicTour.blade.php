@@ -23,7 +23,7 @@
                     <div class="card-header">
                         <h4 class="card-title">Basic Information</h4>
                     </div>
-                    <div class="card-body" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                    <div class="card-body" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;">
                         <form id="tourForm" action="" method="POST" enctype="multipart/form-data">
                             {{csrf_field()}}
                             <div class="form-group row">
@@ -107,7 +107,7 @@
                     <div class="card-header">
                         <h4 class="card-title">Programs</h4>
                     </div>
-                    <div class="card-body" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                    <div class="card-body" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;">
                         <form action="#">
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label">Name</label>
@@ -127,7 +127,7 @@
                     <div class="card-header">
                         <h4 class="card-title">Facility</h4>
                     </div>
-                    <div class="card-body" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                    <div class="card-body" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;">
                         <form action="#">
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label">Name</label>
@@ -147,7 +147,7 @@
                     <div class="card-header">
                         <h4 class="card-title">Highlights</h4>
                     </div>
-                    <div class="card-body" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                    <div class="card-body" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;">
                         <form action="#">
                             <div class="form-group row">
                                 <label class="col-lg-3 col-form-label">Name</label>
@@ -171,7 +171,7 @@
                     <div class="card-header">
                         <h4 class="card-title">Highlights</h4>
                     </div>
-                    <div class="card-body" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                    <div class="card-body" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;">
                        
                         <form action="#">
                             <div class="row">
@@ -314,7 +314,7 @@
                     <div class="card-header">
                         <h4 class="card-title">Programs</h4>
                     </div>
-                    <div class="card-body" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                    <div class="card-body" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;">
                         <form action="#">
                             <div class="row">
                                 <div class="col-xl-6">

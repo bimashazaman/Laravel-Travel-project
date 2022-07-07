@@ -23,25 +23,25 @@
                 <li class="submenu">
                     <a href="#"><i class="fe fe-sync"></i> <span> Armenia </span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
-                        <li><a href="call-history.html"> Things To see </a></li>
-                        <li><a href="group-history.html"> Things to Do </a></li>
-                        <li><a href="call-history.html"> Food and Drink </a></li>
-                        <li><a href="group-history.html"> Todo In sorrounding </a></li>
-                        <li><a href="call-history.html"> Useful to know</a></li>
-                        <li><a href="group-history.html">Events </a></li>
-                        <li><a href="group-history.html">Brochure </a></li>
-                        <li><a href="group-history.html">Travel Blog </a></li>
+                        <li><a href="{{ url('/admin/thingstoSee') }}"> Things To see </a></li>
+                        <li><a href="{{ url('/admin/thingstoDo') }}"> Things to Do </a></li>
+                        <li><a href="{{ url('/admin/food') }}"> Food and Drink </a></li>
+                        <li><a href="{{ url('/admin/TODO') }}"> Todo In sorrounding </a></li>
+                        <li><a href="{{ url('/admin/usefulToKnow') }}"> Useful to know</a></li>
+                        <li><a href="{{ url('/admin/events') }}">Events </a></li>
+                        <li><a href="{{ url('/admin/brochure') }}">Brochure </a></li>
+                        <li><a href="{{ url('/admin/TravelBlog') }}">Travel Blog </a></li>
                     </ul>
                 </li>
                 <li class="submenu">
                     <a href="#"><i class="fe fe-layout"></i> <span> Services <span class="menu-arrow"></span></span></a>
                     <ul style="display: none;">
                         <li><a href="form-basic-inputs.html">Car</a></li>
-                        <li><a href="form-input-groups.html">Car with driver</a></li>
-                        <li><a href="form-horizontal.html">Car for airport</a></li>
-                        <li><a href="form-vertical.html">Hotels </a></li>
-                        <li><a href="form-mask.html">Tour Accessiories</a></li>
-                        <li><a href="form-validation.html">Mice</a></li>
+                        <li><a href="{{ url('/admin/CarWithDriver') }}">Car with driver</a></li>
+                        <li><a href="{{ url('/admin/CarAtAirport') }}">Car for airport</a></li>
+                        <li><a href="{{ url('/admin/Hotel') }}">Hotels </a></li>
+                        <li><a href="{{ url('/admin/Accessiories') }}">Tour Accessiories</a></li>
+                        <li><a href="{{ url('/admin/Mice') }}">Mice</a></li>
                     </ul>
                 </li>
                 <li class="submenu">
