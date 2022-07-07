@@ -18,7 +18,7 @@
         </h2>
 
         <div class="row">
-            <div class="col-xl-7 d-flex">
+            <div class="col-xl-12 d-flex">
                 <div class="card flex-fill">
                     <div class="card-header">
                         <h4 class="card-title">Basic Information</h4>
@@ -102,7 +102,7 @@
                     </div>
                 </div>
             </div>
-            <div class="col-xl-5">
+            {{-- <div class="col-xl-5">
                 <div class="card flex-fill">
                     <div class="card-header">
                         <h4 class="card-title">Programs</h4>
@@ -163,7 +163,7 @@
                         </form>
                     </div>
                 </div>
-            </div>
+            </div> --}}
         </div>
         {{-- <div class="row">
             <div class="col-md-12">
