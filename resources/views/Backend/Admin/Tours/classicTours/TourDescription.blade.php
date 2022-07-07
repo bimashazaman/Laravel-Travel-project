@@ -109,6 +109,108 @@
                 </div>
        
             </div>
+
+            <div class="col-md-12">
+         
+                <div>
+                   <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
+                       <h3 class="">
+                          Facilities
+                       </h3>
+                           <hr>
+       
+                           <div class="list-group list-group-light">
+                            <button type="button" class="list-group-item list-group-item-action  px-3 border-0 " aria-current="true">
+                              Cras justo odio
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                              Dapibus ac facilisis in
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                              Morbi leo risus
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                              Porta ac consectetur ac
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0" disabled>
+                              Vestibulum at eros
+                            </button>
+                          </div>
+                   </div>
+                       
+                  </div>
+                   
+                </div>
+       
+            </div>
+
+            <div class="col-md-12">
+         
+                <div>
+                   <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
+                       <h3 class="">
+                          Highlights
+                       </h3>
+                           <hr>
+       
+                           <div class="list-group list-group-light">
+                            <button type="button" class="list-group-item list-group-item-action  px-3 border-0 " aria-current="true">
+                              Cras justo odio
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                              Dapibus ac facilisis in
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                              Morbi leo risus
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                              Porta ac consectetur ac
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0" disabled>
+                              Vestibulum at eros
+                            </button>
+                          </div>
+                   </div>
+                       
+                  </div>
+                   
+                </div>
+       
+            </div>
+
+            <div class="col-md-12">
+         
+                <div>
+                   <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
+                       <h3 class="">
+                          Tour Program
+                       </h3>
+                           <hr>
+       
+                           <div class="list-group list-group-light">
+                            <button type="button" class="list-group-item list-group-item-action  px-3 border-0 " aria-current="true">
+                              Cras justo odio
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                              Dapibus ac facilisis in
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                              Morbi leo risus
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0">
+                              Porta ac consectetur ac
+                            </button>
+                            <button type="button" class="list-group-item list-group-item-action px-3 border-0" disabled>
+                              Vestibulum at eros
+                            </button>
+                          </div>
+                   </div>
+                       
+                  </div>
+                   
+                </div>
+       
+            </div>
              
            </div>
         </div>
