@@ -263,6 +263,8 @@ Route::get('/pageSee', function () {
 
 
 
+//================ view routes ====================
+
 
 Route::get('/admin/thingstoSee', function () {
     return view('Backend.Admin.Armenia.ThingsToSee.view');
@@ -314,6 +316,13 @@ Route::get('/admin/Hotel', function () {
 
 Route::get('/admin/Mice', function () {
     return view('Backend.Admin.Services.Mice.view');
+});
+
+
+//===============Create routes=============
+
+Route::get('/admin/thingstoSeeCreate', function () {
+    return view('Backend.Admin.Armenia.ThingsToSee.create');
 });
 
 
