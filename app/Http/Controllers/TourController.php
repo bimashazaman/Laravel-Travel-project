@@ -12,6 +12,7 @@ use App\Models\TourImage;
 use App\Models\TourProgram;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
 use Illuminate\Support\Facades\Validator;
 
@@ -190,9 +191,23 @@ class TourController extends Controller
         $highlight = TourHighlight::whereNull('deleted_at')->where('id', $id)->first();
         if ($highlight) {
             $highlight->delete();
-            return self::success("Highlight Deleted");
+            $tour = Tour::with('images')
+                ->with('highlights')
+                ->with('facility')
+                ->with('program')
+                ->where("id", $highlight->tour_id)
+                ->whereNull('deleted_at')
+                ->first();
+
+            return redirect("/admin/tours/detail/" . $highlight->tour_id)
+                ->with("msg", "Tour Highlight Deleted!")
+                ->with("success", true)
+                ->with('tour', $tour);
         }
-        return self::failure("Not Found!", [], 404);
+        return redirect("/admin/tours/detail/" . $highlight->tour_id)
+            ->with("msg", "Not Found!")
+            ->with("fail", true);
+        // ->with('tour', $tour);
     }
 
 
@@ -256,9 +271,25 @@ class TourController extends Controller
             ->first();
         if ($tourFacility) {
             $tourFacility->delete();
-            return self::success("Tour Facility deleted!");
+            $tour = Tour::with('images')
+                ->with('highlights')
+                ->with('facility')
+                ->with('program')
+                ->where("id", $tourFacility->tour_id)
+                ->whereNull('deleted_at')
+                ->first();
+
+            return redirect("/admin/tours/detail/" . $tourFacility->tour_id)
+                ->with("msg", "Tour Facility Deleted!")
+                ->with("success", true)
+                ->with('tour', $tour);
+            // return self::success("Tour Facility deleted!");
         }
-        return self::failure("Not Found!", [], 404);
+        return redirect("/admin/tours/detail/" . $tourFacility->tour_id)
+            ->with("msg", "Not Found")
+            ->with("fail", true);
+        // ->with('tour', $tour);
+        // return self::failure("Not Found!", [], 404);
     }
 
     /**
@@ -329,9 +360,26 @@ class TourController extends Controller
             ->first();
         if ($tourProgram) {
             $tourProgram->delete();
-            return self::success("Tour program deleted");
+
+            $tour = Tour::with('images')
+                ->with('highlights')
+                ->with('facility')
+                ->with('program')
+                ->where("id", $tourProgram->tour_id)
+                ->whereNull('deleted_at')
+                ->first();
+
+            return redirect("/admin/tours/detail/" . $tourProgram->tour_id)
+                ->with("msg", "Tour Program Deleted!")
+                ->with("success", true)
+                ->with('tour', $tour);
+            // return self::success("Tour program deleted");
         }
-        return self::failure("Not Found!", [], 404);
+        return redirect("/admin/tours/detail/" . $tourProgram->tour_id)
+            ->with("msg", "Not Found!")
+            ->with("fail", true);
+        // ->with('tour', $tour);
+        // return self::failure("Not Found!", [], 404);
     }
     /**
      * Display the specified resource.
@@ -355,7 +403,7 @@ class TourController extends Controller
                 "tour" => $tour,
                 "destination" => $destination
             ]);
-            return self::success("Tour retrieved!", ["data" => $tour]);
+            // return self::success("Tour retrieved!", ["data" => $tour]);
         }
         return self::failure("No such tour exist!");
     }
@@ -369,6 +417,23 @@ class TourController extends Controller
     public function edit($id)
     {
         //
+        $destinations = Destination::all();
+        $categories = TourCategory::all();
+        $tour = Tour::with('images')
+            ->with('highlights')
+            ->with('facility')
+            ->with('program')
+            ->where('id', $id)
+            ->first();
+            // $tour["start_date"] = Carbon::createFromFormat('mm/dd/yyyy',$tour["start_date"]);
+            // dd($tour["start_date"]);
+            //  $tour['check'] = Carbon::createFromFormat('mm/dd/yyyy',$tour["start_date"])->format('m-d-y');
+            //  dd($tour['check']);
+        return view('Backend.Admin.Tours.classicTours.UpdateClassicTour', [
+            "categories" => $categories,
+            "destinations" => $destinations,
+            "tour" => $tour
+        ]);
     }
 
     /**
@@ -385,13 +450,23 @@ class TourController extends Controller
         if ($tour) {
             $tour->fill($request->all());
             $tour->save();
-            $tour = Tour::with('images')
-                ->with('highlights')
-                ->where('id', $id)
+            $tour = Tour::whereNull('deleted_at')
                 ->get();
-            return self::success("Tour updated", ["data" => $tour]);
+            return redirect('Backend.Admin.Tours.classicTours.ClassicTour')
+                ->with('msg', 'Tour updated!')
+                ->with('success', true)
+                ->with('tours', $tour);
+            // return self::success("Tour updated", ["data" => $tour]);
         }
-        return self::failure('Not Found', [], 404);
+        return redirect('/admin/UpdateTourPage/{id}')
+            ->with('msg', 'Not Found')
+            ->with('fail', true);
+        // , [
+        //     "categories" => $categories,
+        //     "destinations" => $destinations,
+        //     "tour" => $tour
+        // ]);
+        // return self::failure('Not Found', [], 404);
     }
 
     /**
@@ -422,14 +497,14 @@ class TourController extends Controller
 
             // return response()->json(["tour"=>$tours]);
             return redirect('/admin/tours/' . $cat->name)
-                ->with("tour", $tours)
+                // ->with("tour", $tours)
                 ->with('success', true)
                 ->with('msg', 'Tour Deleted!');
 
             // return self::success("Tour deleted!", ["data" => $tour]);
         }
         return redirect('/admin/tours/' . $cat->name)
-            ->with("tour", $tours)
+            // ->with("tour", $tours)
             ->with('fail', true)
             ->with('msg', "Not Found");
         // return self::failure('Not Found', [], 404);

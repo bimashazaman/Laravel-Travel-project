@@ -20,7 +20,7 @@ class DashboardController extends Controller
         //return admin home view
         $tourCategories = TourCategory::whereNull('deleted_at')
             ->get();
-        return view("Backend.Admin.AdminHome", ["tourCat"=>$tourCategories,'hello'=>"hello"]);
+        return view("Backend.Admin.Dashboard", ["tourCat"=>$tourCategories,'hello'=>"hello"]);
     }
 
     /**

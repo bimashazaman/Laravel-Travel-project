@@ -10,9 +10,9 @@ Route::get('/login', function () {
 });
 
 //Dashboard page
-Route::get('/main', function () {
-    return view('Backend.Admin.Dashboard');
-});
+// Route::get('/main', function () {
+//     return view('Backend.Admin.Dashboard');
+// });
 
 
 
@@ -26,7 +26,7 @@ Route::get('/AddHighlight', function () {
     return view('Backend.Admin.Tours.classicTours.AddHighlights');
 });
 
-
+//----------- section wajiha ----------------
 //----- dashboard page ---------
 Route::get("/dashboard", [DashboardController::class, 'index']);
 
@@ -34,12 +34,13 @@ Route::get("/dashboard", [DashboardController::class, 'index']);
 Route::get("/admin/tours/{name}", [TourController::class, "index"]);
 Route::get("/admin/tours/detail/{id}", [TourController::class, "show"]);
 Route::post("/admin/tours/add", [TourController::class, "store"]);
-// Route::get("/admin/tours/createpage", [TourController::class, "create"]);
 Route::get('/admin/CreateClassicTour',[TourController::class, "create"]);
+Route::delete("/admin/tour/delete/{id}",[TourController::class,"destroy"])->name('tourDelete');
+Route::get('/admin/UpdateTourPage/{id}',[TourController::class,'edit']);
+Route::put('/admin/tour/update/{id}',[TourController::class,'update']);
 Route::post("/admin/highlight/{id}",[TourController::class,"addTourHighlights"])->name('addHighlight');
 Route::post("/admin/facility/{id}",[TourController::class,"addTourFacility"])->name('addFacility');
 Route::post("/admin/tourprogram/{id}",[TourController::class,"addTourProgram"])->name('addTourProgram');
-Route::delete("/admin/tour/delete/{id}",[TourController::class,"destroy"])->name('tourDelete');
 
 //-------- end -------------
 
