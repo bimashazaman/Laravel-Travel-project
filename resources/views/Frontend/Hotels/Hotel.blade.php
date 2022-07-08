@@ -247,19 +247,19 @@
         <div class="container">
             <div class="row">
                 <div class="col-md-6">
-                   <div class="uselist">
-                    <h3 style="padding: 10px; color:white">
-                        UseFul To know
-                    </h3>
-                    <ul>
-                        <li>Lorem ipsum dolor sit.</li>
-                        <li>Lorem ipsum dolor sit amet consectetur.</li>
-                        <li>Lorem ipsum dolor sit amet.</li>
-                        <li>Lorem, ipsum dolor.</li>
-                        <li>Lorem ipsum dolor sit.</li>
-                    </ul>
-                   </div>
-                   <img src="{{ asset('images/usefull.png') }}" alt="">
+                    <div class="uselist">
+                        <h3 style="padding: 10px; color:white">
+                            UseFul To know
+                        </h3>
+                        <ul>
+                            <li>Lorem ipsum dolor sit.</li>
+                            <li>Lorem ipsum dolor sit amet consectetur.</li>
+                            <li>Lorem ipsum dolor sit amet.</li>
+                            <li>Lorem, ipsum dolor.</li>
+                            <li>Lorem ipsum dolor sit.</li>
+                        </ul>
+                    </div>
+                    <img src="{{ asset('images/usefull.png') }}" alt="">
                 </div>
                 <div class="col-md-6">
                     <img class="listImg" src="{{ asset('images/list.png') }}" alt="">
@@ -426,14 +426,14 @@
 
                     </div>
 
-                   <div>
-                    <br>
-<br>
-<br>
-                    <h3 style="text-align: center; padding:50px; margin-top:40px">
-                        What to do nearby
-                    </h3>
-                   </div>
+                    <div>
+                        <br>
+                        <br>
+                        <br>
+                        <h3 style="text-align: center; padding:50px; margin-top:40px">
+                            What to do nearby
+                        </h3>
+                    </div>
 
                     <div class="col-md-4 col-sm-6">
 
