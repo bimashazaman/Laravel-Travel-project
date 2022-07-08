@@ -2,10 +2,9 @@
 
 namespace App\Http\Controllers;
 
-use App\Models\TourCategory;
 use Illuminate\Http\Request;
 
-class DashboardController extends Controller
+class TripController extends Controller
 {
     /**
      * Display a listing of the resource.
@@ -14,13 +13,7 @@ class DashboardController extends Controller
      */
     public function index()
     {
-        //get tour types
-        //get services types
-        //get armenia types
-        //return admin home view
-        $tourCategories = TourCategory::whereNull('deleted_at')
-            ->get();
-        return view("Backend.Admin.Dashboard", ["tourCat"=>$tourCategories,'hello'=>"hello"]);
+        //
     }
 
     /**

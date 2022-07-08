@@ -48,12 +48,21 @@
                                                </a>
                                             </span>
                                             <span>
-                                               <a href="{{ url('/UpdateClassicTour') }}">
+                                            <!-- <a href="{{ url('/admin/UpdateClassicTour') }}"> -->
+                                               <a href="/admin/UpdateTourPage/{{$touritem->id}}">
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; color:white" class="btn btn-info">Update</button>
                                                </a>
                                             </span>
                                             <span>
-                                                <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="btn btn-danger">Delete</button>
+                                            <form method="POST" action="/admin/tour/delete/{{$touritem->id}}">
+        {{ csrf_field() }}
+        {{ method_field('DELETE') }}
+
+        <div class="form-group">
+            <input type="submit" class="btn btn-danger delete-user" value="Delete">
+        </div>
+    </form>
+                                                <!-- <button type="button" class="btn btn-danger">Delete</button> -->
                                             </span>
                                         </div>
                                     </td>
