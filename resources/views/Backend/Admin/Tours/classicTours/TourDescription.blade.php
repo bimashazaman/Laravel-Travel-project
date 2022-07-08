@@ -221,8 +221,68 @@
         
         
         <div class="row">
+          <div class="text-center">
+            <h2>
+              Interested to add more info?
+            </h2>
+          </div>
+        <div class="col-md-4">
+          <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
+            <h3 class="">
+               Facilities
+            </h3>
+                <hr>
 
+              <form>
+                <div class="">
+                  <input type="text" class="form-control" placeholder="Add facility">
+                  <hr>
+                  <button class="btn btn-info text-white">
+                    Submit
+                  </button>
+              </div>
 
+              </form>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
+            <h3 class="">
+               Tour Program
+            </h3>
+                <hr>
+
+              <form>
+                <div class="">
+                  <input type="text" class="form-control" placeholder="Add programs">
+                  <hr>
+                  <button class="btn btn-info text-white">
+                    Submit
+                  </button>
+              </div>
+
+              </form>
+        </div>
+        </div>
+        <div class="col-md-4">
+          <div  style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center" >
+            <h3 class="">
+               Highlights
+            </h3>
+                <hr>
+
+              <form>
+                <div class="">
+                  <input type="text" class="form-control" placeholder="Add Highlights">
+                  <hr>
+                  <button class="btn btn-info text-white">
+                    Submit
+                  </button>
+              </div>
+
+              </form>
+        </div>
+        </div>
         </div>
       
        
