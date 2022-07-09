@@ -346,6 +346,11 @@ Route::get('/admin/createMice', function () {
 
 
 
+//============destination routes=============
+
+Route::get('/admin/d', function () {
+    return view('Backend.Admin.Destination.view');
+});
 
 
 
