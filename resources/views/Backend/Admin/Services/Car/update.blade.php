@@ -5,11 +5,8 @@
             <div class="page-header">
                 <div class="row">
                     <div class="col-sm-12">
-                        <h3 class="page-title">Basic Inputs</h3>
-                        <ul class="breadcrumb">
-                            <li class="breadcrumb-item"><a href="index.html">Dashboard</a></li>
-                            <li class="breadcrumb-item active">Basic Inputs</li>
-                        </ul>
+                        <h3 class="page-title">Update Informations</h3>
+                       
                     </div>
                 </div>
             </div>
@@ -18,7 +15,7 @@
                 <div class="col-sm-12">
                     <div class="card">
                         <div class="card-header">
-                            <h4 class="card-title">Basic Inputs</h4>
+                            <h4 class="card-title">Car information </h4>
                         </div>
                         <div class="card-body">
                             <form action="#">

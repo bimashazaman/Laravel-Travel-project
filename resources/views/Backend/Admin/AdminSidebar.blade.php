@@ -37,7 +37,7 @@
                     <a href="#"><i class="fe fe-layout"></i> <span> Services <span class="menu-arrow"></span></span></a>
                     <ul style="display: none;">
                         <li><a href="{{ url('/admin/d') }}">Destination</a></li>
-                        <li><a href="form-basic-inputs.html">Car</a></li>
+                        <li><a href="{{ url('/admin/car') }}">Car</a></li>
                         <li><a href="{{ url('/admin/CarWithDriver') }}">Car with driver</a></li>
                         <li><a href="{{ url('/admin/CarAtAirport') }}">Car for airport</a></li>
                         <li><a href="{{ url('/admin/Hotel') }}">Hotels </a></li>
