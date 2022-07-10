@@ -190,17 +190,17 @@
                         <form>
                             <fieldset>
                                 <div class="col-md-12 col-xs-12">
-                                    <input class="reqTourInput" type="text" placeholder="Name" style="width:100%">
+                                    <input class="reqTourInput" type="text" placeholder="Name" style="width:100%" name="name">
                                 </div>
                                 <div class="col-md-12 col-xs-12">
-                                    <input class="reqTourInput" type="Text" placeholder="Start Date"
+                                    <input class="reqTourInput" type="date" placeholder="Start Date" name="start_date"
                                         style="width:100%">
                                 </div>
                                 <div class="col-md-12 col-xs-12">
                                     <input class="reqTourInput" type="text" list="cars" placeholder="Destination"
                                         style="width:100%" />
                                     <datalist id="Starting Destination">
-                                        <option>Volvo</option>
+                                        
                                         <option>Saab</option>
                                         <option>Mercedes</option>
                                         <option>Audi</option>
