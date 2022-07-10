@@ -16,6 +16,7 @@ class CreateTripTypesTable extends Migration
         Schema::create('trip_types', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

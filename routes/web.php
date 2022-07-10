@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 
@@ -42,14 +43,17 @@ Route::post("/admin/highlight/{id}",[TourController::class,"addTourHighlights"])
 Route::post("/admin/facility/{id}",[TourController::class,"addTourFacility"])->name('addFacility');
 Route::post("/admin/tourprogram/{id}",[TourController::class,"addTourProgram"])->name('addTourProgram');
 
+//----------- Frontend -------------
+Route::get('/', [FrontendController::class,'index'])->name('home');
+
 //-------- end -------------
 
 Route::get('/check', [TourController::class, 'index']);
 Route::post('/checkpost', [TourController::class, 'checkStore']);
 
-Route::get('/', function () {
-    return view('Home');
-})->name('home');
+// Route::get('/', function () {
+//     return view('Home');
+// })->name('home');
 
 Route::get("/dashboard/hello", [TourController::class, "index"]);
 
