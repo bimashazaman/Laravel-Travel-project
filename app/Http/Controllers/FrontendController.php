@@ -11,9 +11,9 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
     /**
-     * Display a listing of the resource.
+     * render the home page
      *
-     * @return \Illuminate\Http\Response
+     * @return \Illuminate\Http\View
      */
     public function index()
     {
@@ -24,6 +24,7 @@ class FrontendController extends Controller
         //get trip typs
 
         $tours = Tour::with('images')
+            ->with('category')
             ->whereNull('deleted_at')
             ->latest()
             ->take(3)
@@ -32,7 +33,7 @@ class FrontendController extends Controller
             ->get();
         $types = TripType::all();
         $meals = Meal::all();
-        
+
         return view('Home', [
             "tours" => $tours,
             "destinations" => $destinations,
@@ -40,7 +41,25 @@ class FrontendController extends Controller
             "meals" => $meals
         ]);
     }
-
+    /**
+     * render the tour detail page
+     *
+     * @return \Illuminate\Http\View
+     */
+    public function tourDescription($id)
+    {
+        //get tour
+        $tour = Tour::with('images')
+            ->with('facility')
+            ->with('highlights')
+            ->with('program')
+            ->with('category')
+            ->where('id', $id)
+            ->first();
+        return view('Frontend.Tours.Tour', [
+            "tour" => $tour
+        ]);
+    }
     /**
      * Show the form for creating a new resource.
      *

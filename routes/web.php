@@ -45,7 +45,7 @@ Route::post("/admin/tourprogram/{id}",[TourController::class,"addTourProgram"])-
 
 //----------- Frontend -------------
 Route::get('/', [FrontendController::class,'index'])->name('home');
-
+Route::get('/tour/detail/{id}',[FrontendController::class,'tourDescription'])->name('tourDescription');
 //-------- end -------------
 
 Route::get('/check', [TourController::class, 'index']);
