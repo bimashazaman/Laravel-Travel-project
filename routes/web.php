@@ -11,9 +11,9 @@ Route::get('/login', function () {
 });
 
 //Dashboard page
-// Route::get('/main', function () {
-//     return view('Backend.Admin.Dashboard');
-// });
+Route::get('/main', function () {
+    return view('Backend.Admin.Dashboard');
+});
 
 
 
@@ -324,6 +324,12 @@ Route::get('/admin/Mice', function () {
     return view('Backend.Admin.Services.Mice.view');
 });
 
+Route::get('/admin/car', function () {
+    return view('Backend.Admin.Services.Car.view');
+});
+
+
+
 
 //===============Create routes=============
 
@@ -350,12 +356,45 @@ Route::get('/admin/createMice', function () {
 
 
 
+//============destination routes=============
+
+Route::get('/admin/d', function () {
+    return view('Backend.Admin.Destination.view');
+});
 
 
 
+//===============Update routes=============
+
+Route::get('/admin/UpdateCar', function () {
+    return view('Backend.Admin.Services.Car.update');
+});
+
+
+Route::get('/admin/UpdateCarWithDriver', function () {
+    return view('Backend.Admin.Services.CarWithDriver.update');
+});
+
+
+Route::get('/admin/UpdateCarAtAirport', function () {
+    return view('Backend.Admin.Services.CarAtAirport.update');
+});
+
+
+Route::get('/admin/updateHotel', function () {
+    return view('Backend.Admin.Services.Hotels.update');
+});
 
 
 
+Route::get('/admin/updateAccessiories', function () {
+    return view('Backend.Admin.Services.Accessiories.update');
+});
+
+
+Route::get('/admin/updateMice', function () {
+    return view('Backend.Admin.Services.MICE.update');
+});
 
 
 
