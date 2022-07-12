@@ -8,7 +8,7 @@
                     <h4 class="card-title float-start">Nearby</h4>
 
                     <button class="btn btn-info" style="color: white; margin-left:15px">
-                        <a href="" style="color: white">
+                        <a href="{{ url('/admin/createTODO') }}" style="color: white">
                             <i class="fa fa-plus" style="color: white"></i>
                             Add 
                         </a>
@@ -53,7 +53,7 @@
                                                </a>
                                             </span>
                                             <span>
-                                               <a href="">
+                                               <a href="{{ url('/admin/TODOnearbyUpdate') }}">
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; color:white" class="btn btn-info">Update</button>
                                                </a>
                                             </span>

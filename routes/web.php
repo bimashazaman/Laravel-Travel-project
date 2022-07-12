@@ -424,6 +424,14 @@ Route::get('/admin/createThingsToSee', function () {
     return view('Backend.Admin.Armenia.ThingsToSee.create');
 });
 
+Route::get('/admin/createTravelBlog', function () {
+    return view('Backend.Admin.Armenia.TravelBlog.create');
+});
+
+Route::get('/admin/createTODO', function () {
+    return view('Backend.Admin.Armenia.TODO.create');
+});
+
 
 
 
@@ -448,6 +456,13 @@ Route::get('/admin/updateInformation', function () {
 
 Route::get('/admin/updateThingsToDo', function () {
     return view('Backend.Admin.Armenia.ThingsToDo.update');
+});
+Route::get('/admin/updateTravelBlog', function () {
+    return view('Backend.Admin.Armenia.TravelBlog.update');
+});
+
+Route::get('/admin/TODOnearbyUpdate', function () {
+    return view('Backend.Admin.Armenia.TODO.update');
 });
 
 
