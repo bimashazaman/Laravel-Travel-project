@@ -3620,3 +3620,26 @@ body {
     color: rgb(161, 157, 157);
     font-size: 2rem;
 }
+
+
+.parentReqSecond {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: 1fr;
+    grid-column-gap: 0px;
+    grid-row-gap: 0px;
+    margin: 50px;
+    }
+    
+    .div1ReqSecond { grid-area: 1 / 1 / 2 / 2; }
+    .div2ReqSecond { grid-area: 1 / 2 / 2 / 3; box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px; }
+
+    @media (min-width: 900px) {
+        .parentReqSecond { display: flex; }
+      }
+
+      .formReqSec {
+        box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+        padding: 3.5%;
+        color: #e5a686;
+      }

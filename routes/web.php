@@ -360,7 +360,7 @@ Route::get('/admin/d', function () {
 
 
 
-//===============Update routes=============
+//===============Services Update routes=============
 
 Route::get('/admin/UpdateCar', function () {
     return view('Backend.Admin.Services.Car.update');
@@ -393,6 +393,13 @@ Route::get('/admin/updateMice', function () {
 });
 
 
+
+//======frontend send step route ==========
+
+
+Route::get('/secondStep', function () {
+    return view('partials.secondStepReq');
+});
 
 
 

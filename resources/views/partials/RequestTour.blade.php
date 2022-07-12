@@ -29,7 +29,7 @@
                             </ul>
                             <div class="progress Progress-border ProgressBarSize">
                                 <div class="progress-bar bg-success " role="progressbar"
-                                    style="width: 50%; background-color: #284525;" aria-valuenow="0" aria-valuemin="0"
+                                    style="width: 0%; background-color: #284525;" aria-valuenow="0" aria-valuemin="0"
                                     aria-valuemax="100"></div>
                             </div>
                         </div>
@@ -240,8 +240,8 @@
                                 </div>
                                 <div class="col-md-12 col-xs-12" style="margin: 16px">
                                     <div class="col">
-                                        <input type="text" class="reqTourInput" style="width: 140px; float:left; margin-top: 2.5%;P{}"
-                                            placeholder="Type">
+                                        <input type="text" class="reqTourInput"
+                                            style="width: 140px; float:left; margin-top: 2.5%;P{}" placeholder="Type">
                                     </div>
                                     <div class="col">
                                         <div class="ReqBox" style="width: 100px; float:left;"><i
@@ -287,7 +287,10 @@
                                 </div>
                                 <div class="col-xs-12 col-md-12">
                                     <button class="package-view" style="margin: 20px">
-                                        Create trip
+                                        <a style="text-decoration: none; color:black; font-weight:600; padding:5px " href="{{ url('/secondStep') }}">
+                                            Create trip
+                                        </a>
+
                                     </button>
                                 </div>
                             </fieldset>
