@@ -262,7 +262,16 @@
                     <img src="{{ asset('images/usefull.png') }}" alt="">
                 </div>
                 <div class="col-md-6">
-                    <img class="listImg" src="{{ asset('images/list.png') }}" alt="">
+                    <h3 style="padding-top: 50px; padding-left: 100px; color: white">
+                        What is included
+                    </h3>
+                    <br>
+                <ul style="padding-left: 100px; list-style:none">
+                <li>
+                    <i class="fa-regular fa-square-plus" style="margin-right: 10px; color:#e5a686;"></i> Lorem ipsum dolor sit.    
+                </li>    
+                </ul>   
+                
                 </div>
             </div>
         </div>
