@@ -81,9 +81,9 @@ Route::get('/tours', function () {
     return view('Frontend.Tours.Tours');
 });
 
-Route::get('/Tour', function () {
+Route::get('/TourFrontPage', function () {
     return view('Frontend.Tours.Tour');
-})->name('tour')->name('Tour');
+});
 
 
 Route::get('/BT', function () {
