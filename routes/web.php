@@ -401,6 +401,10 @@ Route::get('/secondStep', function () {
     return view('partials.secondStepReq');
 });
 
+Route::get('/ThirdStep', function () {
+    return view('partials.SendAMsg');
+});
+
 
 
 
