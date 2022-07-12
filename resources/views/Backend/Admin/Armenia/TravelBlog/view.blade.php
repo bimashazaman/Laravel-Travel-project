@@ -7,7 +7,12 @@
                 <div class="card-header">
                     <h4 class="card-title float-start">Blogs</h4>
 
-
+                    <button class="btn btn-info" style="color: white; margin-left:15px">
+                        <a href="" style="color: white">
+                            <i class="fa fa-plus" style="color: white"></i>
+                            Add Blogs
+                        </a>
+                    </button>
 
                     <div class="table-search float-end">
                         <input type="text" class="form-control" placeholder="Search">

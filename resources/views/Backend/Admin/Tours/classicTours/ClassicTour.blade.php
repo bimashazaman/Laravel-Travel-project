@@ -6,7 +6,12 @@
             <div class="card card-table flex-fill">
                 <div class="card-header">
                     <h4 class="card-title float-start"> Tours</h4>
-
+                    <button class="btn btn-info" style="color: white; margin-left:15px">
+                        <a href="{{url('/admin/CreateClassicTour')}}" style="color: white">
+                            <i class="fa fa-plus" style="color: white"></i>
+                            Add Tour
+                        </a>
+                    </button>
 
 
                     <div class="table-search float-end">

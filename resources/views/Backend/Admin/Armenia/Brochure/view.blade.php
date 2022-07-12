@@ -7,7 +7,12 @@
                 <div class="card-header">
                     <h4 class="card-title float-start">Brochures</h4>
 
-
+                    <button class="btn btn-info" style="color: white; margin-left:15px">
+                        <a href="{{ url('/admin/createBrochur') }}" style="color: white">
+                            <i class="fa fa-plus" style="color: white"></i>
+                            Add Brochure
+                        </a>
+                    </button>
 
                     <div class="table-search float-end">
                         <input type="text" class="form-control" placeholder="Search">
@@ -48,7 +53,7 @@
                                                </a>
                                             </span>
                                             <span>
-                                               <a href="">
+                                               <a href="{{ url('/admin/Brochure') }}">
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; color:white" class="btn btn-info">Update</button>
                                                </a>
                                             </span>

@@ -6,7 +6,12 @@
             <div class="card card-table flex-fill">
                 <div class="card-header">
                     <h4 class="card-title float-start">Events</h4>
-
+                    <button class="btn btn-info" style="color: white; margin-left:15px">
+                        <a href="{{ url('/admin/createEvent') }}" style="color: white">
+                            <i class="fa fa-plus" style="color: white"></i>
+                            Add Event
+                        </a>
+                    </button>
 
 
                     <div class="table-search float-end">
@@ -48,7 +53,7 @@
                                                </a>
                                             </span>
                                             <span>
-                                               <a href="">
+                                               <a href="{{ url('/admin/updateEvent') }}">
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; color:white" class="btn btn-info">Update</button>
                                                </a>
                                             </span>

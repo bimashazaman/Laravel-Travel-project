@@ -399,6 +399,42 @@ Route::get('/admin/updateMice', function () {
 });
 
 
+//============Armenia Create routes=============
+
+Route::get('/admin/createBrochur', function () {
+    return view('Backend.Admin.Armenia.Brochure.create');
+});
+Route::get('/admin/createEvent', function () {
+    return view('Backend.Admin.Armenia.Events.create');
+});
+
+Route::get('/admin/createFD', function () {
+    return view('Backend.Admin.Armenia.FoodAndDrink.create');
+});
+
+Route::get('/admin/createInformation', function () {
+    return view('Backend.Admin.Armenia.Informations.create');
+});
+
+
+
+//=============Armenia Update routes=============
+Route::get('/admin/Brochure', function () {
+    return view('Backend.Admin.Armenia.Brochure.update');
+});
+
+Route::get('/admin/updateEvent', function () {
+    return view('Backend.Admin.Armenia.Events.update');
+});
+
+Route::get('/admin/updateFoodAndDrnk', function () {
+    return view('Backend.Admin.Armenia.FoodAndDrink.update');
+});
+
+Route::get('/admin/updateInformation', function () {
+    return view('Backend.Admin.Armenia.Informations.update');
+});
+
 
 //======frontend send step route ==========
 
