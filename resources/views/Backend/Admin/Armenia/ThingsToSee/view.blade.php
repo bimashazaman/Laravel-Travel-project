@@ -8,7 +8,7 @@
                     <h4 class="card-title float-start">Things to see</h4>
 
                     <button class="btn btn-info" style="color: white; margin-left:15px">
-                        <a href="" style="color: white">
+                        <a href="{{ url('/admin/createThingsToSee') }}" style="color: white">
                             <i class="fa fa-plus" style="color: white"></i>
                             Add 
                         </a>

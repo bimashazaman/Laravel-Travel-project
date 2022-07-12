@@ -416,9 +416,20 @@ Route::get('/admin/createInformation', function () {
     return view('Backend.Admin.Armenia.Informations.create');
 });
 
+Route::get('/admin/createThingsToDo', function () {
+    return view('Backend.Admin.Armenia.ThingsToDo.create');
+});
+
+Route::get('/admin/createThingsToSee', function () {
+    return view('Backend.Admin.Armenia.ThingsToSee.create');
+});
+
+
 
 
 //=============Armenia Update routes=============
+
+
 Route::get('/admin/Brochure', function () {
     return view('Backend.Admin.Armenia.Brochure.update');
 });
@@ -433,6 +444,10 @@ Route::get('/admin/updateFoodAndDrnk', function () {
 
 Route::get('/admin/updateInformation', function () {
     return view('Backend.Admin.Armenia.Informations.update');
+});
+
+Route::get('/admin/updateThingsToDo', function () {
+    return view('Backend.Admin.Armenia.ThingsToDo.update');
 });
 
 
