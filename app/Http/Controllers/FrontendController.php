@@ -5,16 +5,29 @@ namespace App\Http\Controllers;
 use App\Models\Destination;
 use App\Models\Meal;
 use App\Models\Tour;
+use App\Models\TourCategory;
 use App\Models\TripType;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
-    /**
-     * render the home page
-     *
-     * @return \Illuminate\Http\View
-     */
+   public function getTours($name) {
+    $cat = TourCategory::where('name', $name)->first();
+    if ($cat) {
+
+        $tours = Tour::with('images')
+            ->with('highlights')
+            ->with('facility')
+            ->where("category_id", $cat->id)
+            ->whereNull('deleted_at')
+            ->get();
+        // return response()->json(["tour"=>$tours]);
+        return view("Frontend.Tours.Tour", [
+            "tour" => $tours
+        ]);
+    }
+   }
+
     public function index()
     {
         //
@@ -60,33 +73,19 @@ class FrontendController extends Controller
             "tour" => $tour
         ]);
     }
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function create()
     {
         //
     }
 
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function store(Request $request)
     {
         //
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+  
     public function show($id)
     {
         //

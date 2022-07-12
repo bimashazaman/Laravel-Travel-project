@@ -7,4 +7,4 @@
 @include('partials.TourPackages')
 @include('partials.RequestTour')
 @endsection
-{{$tours}}
+{{-- {{$tours}} --}}

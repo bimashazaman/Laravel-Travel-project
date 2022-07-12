@@ -42,7 +42,7 @@ Route::put('/admin/tour/update/{id}',[TourController::class,'update']);
 Route::post("/admin/highlight/{id}",[TourController::class,"addTourHighlights"])->name('addHighlight');
 Route::post("/admin/facility/{id}",[TourController::class,"addTourFacility"])->name('addFacility');
 Route::post("/admin/tourprogram/{id}",[TourController::class,"addTourProgram"])->name('addTourProgram');
-
+Route::delete("/admin/highlight/delete/{id}",[TourController::class,"deleteHighlights"])->name('highlightDelete');
 //----------- Frontend -------------
 Route::get('/', [FrontendController::class,'index'])->name('home');
 Route::get('/tour/detail/{id}',[FrontendController::class,'tourDescription'])->name('tourDescription');
