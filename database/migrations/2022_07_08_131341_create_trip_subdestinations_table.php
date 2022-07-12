@@ -16,11 +16,12 @@ class CreateTripSubdestinationsTable extends Migration
         Schema::create('trip_subdestinations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('trip_id');
-            $table->unsignedBigInteger('parent_destination_id');
+            // $table->unsignedBigInteger('parent_destination_id');
             $table->unsignedBigInteger('destination_id');
             $table->string('name');
             $table->string('latitude')->nullable();
             $table->string('longitude')->nullable();
+         
             $table->timestamps();
         });
     }

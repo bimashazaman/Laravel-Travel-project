@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateTripMealsTable extends Migration
+class CreateTripUsersTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,10 +13,10 @@ class CreateTripMealsTable extends Migration
      */
     public function up()
     {
-        Schema::create('trip_meals', function (Blueprint $table) {
+        Schema::create('trip_users', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('trip_id');
-            $table->unsignedBigInteger('meal_id');
+            $table->unsignedBigInteger('user_id');
             $table->timestamps();
         });
     }
@@ -28,6 +28,6 @@ class CreateTripMealsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('trip_meals');
+        Schema::dropIfExists('trip_users');
     }
 }
