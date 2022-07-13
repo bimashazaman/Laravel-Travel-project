@@ -266,12 +266,13 @@
                         What is included
                     </h3>
                     <br>
-                <ul style="padding-left: 100px; list-style:none">
-                <li>
-                    <i class="fa-regular fa-square-plus" style="margin-right: 10px; color:#e5a686;"></i> Lorem ipsum dolor sit.    
-                </li>    
-                </ul>   
-                
+                    <ul style="padding-left: 100px; list-style:none">
+                        <li>
+                            <i class="fa-regular fa-square-plus" style="margin-right: 10px; color:#e5a686;"></i> Lorem
+                            ipsum dolor sit.
+                        </li>
+                    </ul>
+
                 </div>
             </div>
         </div>
