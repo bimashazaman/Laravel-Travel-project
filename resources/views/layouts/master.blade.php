@@ -45,6 +45,9 @@
     <link rel="stylesheet" href="{{ asset('css/responsive.css') }}" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
 
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css"/>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+ 
 
 </head>
 
@@ -99,6 +102,7 @@
     <script src="{{ asset('js/jquery-ui.min.js') }}"></script>
 
     <script src="{{ asset('js/form.js') }}"></script>
+    <script src="{{ asset('js/script.js') }}"></script>
 
     <!-- counter js -->
     <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
@@ -115,7 +119,7 @@
 
     <!--Custom JS-->
     <script src="{{ asset('js/custom.js') }}"></script>
-
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.min.js"></script>
 
 </body>
 

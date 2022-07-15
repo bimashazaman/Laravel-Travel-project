@@ -34,6 +34,7 @@
                 <option>5</option>
             </select>
         </div>
+        
         <div class="form-group htt">
 
             <select class="form-control" id="exampleFormControlSelect1">
@@ -44,6 +45,12 @@
                 <option>5</option>
             </select>
         </div>
+
+        <div class="form-group" style="padding-left:65px; color:rgb(179, 179, 179); font-size:17px; cursor:pointer"> 
+
+            <i class="fa-solid fa-magnifying-glass"></i>
+        </div>
+           
     </form>
 
     <p class="hotelDes">

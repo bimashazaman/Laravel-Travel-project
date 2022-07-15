@@ -40,7 +40,7 @@ class FrontendController extends Controller
             ->with('category')
             ->whereNull('deleted_at')
             ->latest()
-            ->take(3)
+            // ->take(8)
             ->get();
         $destinations = Destination::whereNull('deleted_at')
             ->get();

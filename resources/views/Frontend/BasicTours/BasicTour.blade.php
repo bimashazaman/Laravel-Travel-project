@@ -184,7 +184,7 @@
         <!-- Tour description end --> --}}
 
     <!-- Tour description start -->
-    <section class="container-fluid">
+    <section class="container-fluid" style="">
 
         <div class="">
             <div class="col-md-7">
@@ -318,9 +318,11 @@
                 <div class="tour-descriptions-content-inner-left-content-title bb">
 
                     <!--Google map-->
-                    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
-                        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 400px; width: 85%">
+                        {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" style="border:0" allowfullscreen></iframe> --}}
+
+                            <img src="{{ asset('images/Tour.png') }}" alt="">
                     </div>
 
 
@@ -401,6 +403,10 @@
 
     <div class="container-fluid" style="background-color: #EEF0ED; padding-left: 40px; padding-right:40px">
         <div class="col-md-6">
+            <h3 style="margin-left: 40px; margin-top: 10px">
+                Tour Program
+            </h3>
+            <br>
             <div class="timeline">
 
                 <div class="containerA right">
@@ -423,10 +429,33 @@
                         <p style="color:black">Japan- india- USA</p>
                     </div>
                 </div>
+
+            </div>
+            <div style="margin: 30px; padding-left: 50px">
+                <span style="color: #e5a686; font-size: 25px; font-weight:500; margin-right:24px">$</span>
+                <span style="font-size: 20px; font-weight:400; margin-right:24px">Price</span>
+                <span style="font-size: 20px; font-weight:600;">250$</span>
+            </div>
+            <div style="margin: 30px; padding-left: 50px">
+                <button class="package-view">
+                    Tour Request
+                </button>
             </div>
         </div>
         <div class="col-md-6">
-            <img src="{{ asset('images/i.png') }}" alt="" style="width: 80%">
+            {{-- <img src="{{ asset('images/i.png') }}" alt="" style="width: 80%"> --}}
+            <br>
+           <h3>
+            What is included
+           </h3>
+           <br>
+           <ul style="list-style: none">
+            
+            <li style="margin:10px"><span><img src="{{ asset('images/ullist.png') }}" style="width: 24px; margin-right: 10px" alt=""></span> Lorem ipsum dolor sit.</li>
+            <li style="margin:10px"><span><img src="{{ asset('images/ullist.png') }}" style="width: 24px; margin-right: 10px" alt=""></span> Lorem ipsum dolor sit.</li>
+            <li style="margin:10px"><span><img src="{{ asset('images/ullist.png') }}" style="width: 24px; margin-right: 10px" alt=""></span> Lorem ipsum dolor sit.</li>
+            <li style="margin:10px"><span><img src="{{ asset('images/ullist.png') }}" style="width: 24px; margin-right: 10px" alt=""></span> Lorem ipsum dolor sit.</li>
+           </ul>
         </div>
     </div>
 
@@ -437,55 +466,82 @@
                 <h3 style="text-align: center">
                     The price per 1 pax
                 </h3>
-                <table class="table table-bordered tble">
-
-                    <thead>
-                        <tr>
-                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Day</th>
-                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Week</th>
-                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Mounth</th>
-
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>25000</td>
-                            <td> 35000</td>
-                            <td>45000</td>
-
-                        </tr>
-
-
-                    </tbody>
-                </table>
+                <div class="row">
+                    <div class="col-md-9 col-xs-9">
+                        <table class="table table-bordered tble" style="width: 100%; margin-top: 20px;">
+    
+                            <thead>
+                                <tr>
+                                    <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px;">1 Day</th>
+                                    <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px;">1 Week</th>
+                                    <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px;">1 Mounth</th>
+                                    <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px;">1 Mounth</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td style="padding: 15px;">25000</td>
+                                    <td style="padding: 15px;"> 35000</td>
+                                    <td style="padding: 15px;">45000</td>
+                                    <td style="padding: 15px;">45000</td>
+                                </tr>
+                            </tbody>
+                           
+                        </table>
+                    </div>
+                    <div class="col-md-3">
+                        <span><button class="package-view" style="margin-top: 80px;">Book Now</button></span>
+                    </div>
+                </div>
+                
                 <br>
                 <br>
-                <table class="table table-bordered tble">
-                    <h3 style="text-align: center">
-                        The Tours with guaranteed departures
-                    </h3>
-                    <thead>
-                        <tr>
-                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Day</th>
-                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Week</th>
-                            <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Mounth</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>25000</td>
-                            <td> 35000</td>
-                            <td>45000</td>
-
-                        </tr>
-
-
-                    </tbody>
-                </table>
+               <div class="row">
+                <div class="col-md-9">
+                    <table class="table table-bordered tble" style="width: 100%; margin-top: 20px;">
+                        <h3 style="text-align: center">
+                            The Tours with guaranteed departures
+                        </h3>
+                        <br>
+                        <thead>
+                            <tr>
+                                <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px;">1 Day</th>
+                                <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px;">1 Week</th>
+                                <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px;">1 Mounth</th>
+                                <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px;">1 Mounth</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td style="padding: 15px;">25000</td>
+                                <td style="padding: 15px;"> 35000</td>
+                                <td style="padding: 15px;">45000</td>
+                                <td style="padding: 15px;">45000</td>
+    
+                            </tr>
+                            <tr>
+                                <td style="padding: 15px;">25000</td>
+                                <td style="padding: 15px;"> 35000</td>
+                                <td style="padding: 15px;">45000</td>
+                                <td style="padding: 15px;">45000</td>
+    
+                            </tr>
+    
+    
+                        </tbody>
+                    </table>
+                </div>
+                <div class="col-md-3">
+                    
+                    <span><button class="package-view" style="margin-top: 138px;">Book Now</button></span>
+                    <span><button class="package-view" style="margin-top: 10px;">Book Now</button></span>
+                </div>
+               </div>
 
             </div>
             <img src="{{ asset('images/tt.png') }}" alt="" style="width:100%">
         </div>
+
     </section>
 
 

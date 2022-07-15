@@ -20,7 +20,7 @@
                 </h4>
             </div>
         </a>
-        <a href="{{ url('/withDriver')}}">
+        <a href="{{ url('/driver')}}">
             <div class="div2">
                 <i class="fa-solid fa-car-side"></i>
                 <h4 style="margin: 10px">

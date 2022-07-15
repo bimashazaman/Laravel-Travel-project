@@ -10,7 +10,7 @@
 
 
     <!-- Tour description start -->
-    <section class="tour-descriptions">
+    <section class="tour-descriptions" style="padding: 40px">
 
         <div class="row">
             <div class="col-md-7">
@@ -146,8 +146,9 @@
 
                     <!--Google map-->
                     <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
-                        <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" style="border:0" allowfullscreen></iframe>
+                        {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
+                            frameborder="0" style="border:0" allowfullscreen></iframe> --}}
+                            <img src="{{ asset('images/map.png') }}" alt="">
                     </div>
 
                     <h3 style="margin-top: 25px; font-weight: 600;">
@@ -267,7 +268,7 @@
                     </h3>
                     <br>
                     <ul style="padding-left: 100px; list-style:none">
-                        <li>
+                        <li style="color: white">
                             <i class="fa-regular fa-square-plus" style="margin-right: 10px; color:#e5a686;"></i> Lorem
                             ipsum dolor sit.
                         </li>

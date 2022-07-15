@@ -18,11 +18,7 @@ use Illuminate\Support\Facades\Validator;
 
 class TourController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+    
     public function index($name)
     {
         //
@@ -42,11 +38,7 @@ class TourController extends Controller
         }
     }
 
-    /**
-     * Show the form for creating a new resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+   
     public function create()
     {
         $destinations = Destination::all();
@@ -57,23 +49,12 @@ class TourController extends Controller
         ]);
     }
 
-    /**
-     * Store a newly created tour with basic info and pictures.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     function checkStore(Request $request)
     {
         dd($request->all());
     }
 
-    /**
-     * Store a newly created tour with basic info and pictures.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     public function store(Request $request)
     {
 
@@ -134,12 +115,7 @@ class TourController extends Controller
         }
     }
 
-    /**
-     * Add tour highlights.
-     *
-     * @param  Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     function addTourHighlights(Request $request, $id)
     {
         $validate = Validator::make($request->all(), [
@@ -180,12 +156,6 @@ class TourController extends Controller
     }
 
 
-    /**
-     * Delete tour highlights.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     function deleteHighlights($id)
     {
         $highlight = TourHighlight::whereNull('deleted_at')->where('id', $id)->first();
@@ -211,12 +181,7 @@ class TourController extends Controller
     }
 
 
-    /**
-     * Add tour facility.
-     *
-     * @param  Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     function addTourFacility(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
@@ -258,12 +223,6 @@ class TourController extends Controller
     }
 
 
-    /**
-     * delete tour facility.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     function deleteTourFacility($id)
     {
         $tourFacility = TourFacility::whereNull("deleted_at")
@@ -292,12 +251,7 @@ class TourController extends Controller
         // return self::failure("Not Found!", [], 404);
     }
 
-    /**
-     * Remove the tour image.
-     *
-     * @param  Request  $request
-     * @return \Illuminate\Http\Response
-     */
+   
     function removeTourImage($id)
     {
         $image = Image::whereNull('deleted_at')
@@ -307,12 +261,7 @@ class TourController extends Controller
     }
 
 
-    /**
-     * Add tour program.
-     *
-     * @param  Request  $request
-     * @return \Illuminate\Http\Response
-     */
+    
     function addTourProgram(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
@@ -347,12 +296,7 @@ class TourController extends Controller
     }
 
 
-    /**
-     * delete tour program.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+    
     function deleteTourProgram($id)
     {
         $tourProgram = TourProgram::whereNull('deleted_at')
@@ -381,12 +325,7 @@ class TourController extends Controller
         // ->with('tour', $tour);
         // return self::failure("Not Found!", [], 404);
     }
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+  
     public function show($id)
     {
         //
@@ -408,12 +347,7 @@ class TourController extends Controller
         return self::failure("No such tour exist!");
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+ 
     public function edit($id)
     {
         //
@@ -436,13 +370,7 @@ class TourController extends Controller
         ]);
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+  
     public function update(Request $request, $id)
     {
         //
@@ -469,12 +397,7 @@ class TourController extends Controller
         // return self::failure('Not Found', [], 404);
     }
 
-    /**
-     * Remove the tour and its images and highlights.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
+   
     public function destroy($id)
     {
         //
