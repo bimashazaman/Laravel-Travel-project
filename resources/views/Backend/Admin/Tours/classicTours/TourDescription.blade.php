@@ -9,7 +9,7 @@
             Tour Description
         </h2>
         <div class="row">
-            <div class="col-md-7">
+            <div class="col-md-12 w-75 align-content-center justify-content-center m-auto">
                 <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="padding: 20px; ">
                     <div class="carousel-indicators">
                         <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
@@ -47,96 +47,90 @@
                 </div>
             </div>
 
-            <div class="col-md-5">
-
-                <div>
-                    <div
-                        style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-                        <h3 class="">
-                            Facilities
-                        </h3>
-                        <hr>
-
-                        <div class="list-group list-group-light">
-                            <button type="button" class="list-group-item list-group-item-action  px-3 border-0 "
-                                aria-current="true">
-                                Cras justo odio <a href="{{ url('/admin/facility/delete/{id}') }}">
-                                <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="red"
-                                    class="bi bi-trash" viewBox="0 0 16 16">
-                                    <path
-                                        d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                    <path fill-rule="evenodd"
-                                        d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                                </svg>
-                            </a>
-                             <a href="">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                                <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
-                            </svg>
-                            </a>
-                        
-                            </button>
-                            <button type="button" class="list-group-item list-group-item-action  px-3 border-0 "
-                            aria-current="true">
-                            Cras justo odio <a href="{{ url('/admin/facility/delete/{id}') }}">
-                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="red"
-                                class="bi bi-trash" viewBox="0 0 16 16">
-                                <path
-                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                                <path fill-rule="evenodd"
-                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                            </svg>
-                        </a>
-                         <a href="">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                            <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
-                        </svg>
-                        </a>
-                    
-                        </button>
-                        <button type="button" class="list-group-item list-group-item-action  px-3 border-0 "
-                        aria-current="true">
-                        Cras justo odio <a href="{{ url('/admin/facility/delete/{id}') }}">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="red"
-                            class="bi bi-trash" viewBox="0 0 16 16">
-                            <path
-                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
-                            <path fill-rule="evenodd"
-                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
-                        </svg>
-                    </a>
-                     <a href="">
-                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
-                        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
-                    </svg>
-                    </a>
-                
-                    </button>
-                            
-                        </div>
-                    </div>
-
-                </div>
-
-            </div>
+         
 
         </div>
     </div>
     <div class="row">
         <div class="col-md-12 text-center">
             <h2>
-                Singapur Tour
+            {{ $tour->name }}
             </h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Doloribus dolorum vel nesciunt libero ut officia
-                aliquid fuga quod dicta nemo nam excepturi recusandae inventore quisquam sunt sapiente beatae, id facere
-                reiciendis voluptates magnam delectus consectetur non quis! Eos, magni deleniti.
+                {{ $tour->description }}
             </p>
         </div>
     </div>
 
+    
+    <div class="col-md-12">
+
+        <div>
+            <div
+                style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+                <h3 class="">
+                    More Informations
+                </h3>
+                <hr>
+
+                <div class="d-flex justify-content-between">
+                    <div class="col-md-3">
+                        <div class="mb-3">
+                            Price
+                        </div>
+                        <div class="mb-3">
+                            Duration
+                        </div>
+                        <div class="mb-3">
+                            Start Date
+                        </div>
+                        <div class="mb-3">
+                            End date
+                        </div>
+                        <div class="mb-3">
+                            One day price
+                        </div>
+                        <div class="mb-3">
+                            One week price
+                        </div>
+                        <div class="mb-3">
+                            One mounth
+                        </div>
+                    </div>
+                    <div class="col-md-2">
+                        <div class="mb-3">
+                            {{ $tour->price }}
+                        </div>
+                        <div class="mb-3">
+                            {{ $tour->duration }}
+                        </div>
+                        <div class="mb-3">
+                            {{ $tour->start_date }}
+                        </div>
+                        <div class="mb-3">
+                            {{ $tour->end_date }}
+                        </div>
+                        <div class="mb-3">
+                            {{ $tour->one_day_price }}
+                        </div>
+                        <div class="mb-3">
+                            {{ $tour->one_week_price }}
+
+                        </div>
+                        <div class="mb-3">
+                            {{ $tour->one_month_price }}
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
     <div class="row">
-        <div class="col-md-6">
+        <div class="col-md-4">
 
             <div>
                 <div
@@ -228,7 +222,7 @@
 
 
 
-        <div class="col-md-6">
+        <div class="col-md-4">
 
             <div>
                 <div
@@ -303,66 +297,72 @@
 
         </div>
 
-    </div>
+        <div class="col-md-4">
 
+            <div>
+                <div
+                    style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+                    <h3 class="">
+                        Facilities
+                    </h3>
+                    <hr>
 
-
-    <div class="col-md-12">
-
-        <div>
-            <div
-                style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-                <h3 class="">
-                    More Informations
-                </h3>
-                <hr>
-
-                <div class="d-flex justify-content-between">
-                    <div class="col-md-3">
-                        <div class="mb-3">
-                            Price
-                        </div>
-                        <div class="mb-3">
-                            Duration
-                        </div>
-                        <div class="mb-3">
-                            Start Date
-                        </div>
-                        <div class="mb-3">
-                            End date
-                        </div>
-                        <div class="mb-3">
-                            One day price
-                        </div>
-                        <div class="mb-3">
-                            One week price
-                        </div>
-                        <div class="mb-3">
-                            One mounth
-                        </div>
-                    </div>
-                    <div class="col-md-2">
-                        <div class="mb-3">
-                            300 AMD
-                        </div>
-                        <div class="mb-3">
-                            2 days
-                        </div>
-                        <div class="mb-3">
-                            2020-01-01
-                        </div>
-                        <div class="mb-3">
-                            2022-01-01
-                        </div>
-                        <div class="mb-3">
-                            2000 AMD
-                        </div>
-                        <div class="mb-3">
-                            3000 AMD
-                        </div>
-                        <div class="mb-3">
-                            5000 AMD
-                        </div>
+                    <div class="list-group list-group-light">
+                        <button type="button" class="list-group-item list-group-item-action  px-3 border-0 "
+                            aria-current="true">
+                            Cras justo odio <a href="{{ url('/admin/facility/delete/{id}') }}">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="red"
+                                class="bi bi-trash" viewBox="0 0 16 16">
+                                <path
+                                    d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                                <path fill-rule="evenodd"
+                                    d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                            </svg>
+                        </a>
+                         <a href="">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                            <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                        </svg>
+                        </a>
+                    
+                        </button>
+                        <button type="button" class="list-group-item list-group-item-action  px-3 border-0 "
+                        aria-current="true">
+                        Cras justo odio <a href="{{ url('/admin/facility/delete/{id}') }}">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="red"
+                            class="bi bi-trash" viewBox="0 0 16 16">
+                            <path
+                                d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                            <path fill-rule="evenodd"
+                                d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                        </svg>
+                    </a>
+                     <a href="">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                        <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                    </svg>
+                    </a>
+                
+                    </button>
+                    <button type="button" class="list-group-item list-group-item-action  px-3 border-0 "
+                    aria-current="true">
+                    Cras justo odio <a href="{{ url('/admin/facility/delete/{id}') }}">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="17" height="17" fill="red"
+                        class="bi bi-trash" viewBox="0 0 16 16">
+                        <path
+                            d="M5.5 5.5A.5.5 0 0 1 6 6v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm2.5 0a.5.5 0 0 1 .5.5v6a.5.5 0 0 1-1 0V6a.5.5 0 0 1 .5-.5zm3 .5a.5.5 0 0 0-1 0v6a.5.5 0 0 0 1 0V6z" />
+                        <path fill-rule="evenodd"
+                            d="M14.5 3a1 1 0 0 1-1 1H13v9a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V4h-.5a1 1 0 0 1-1-1V2a1 1 0 0 1 1-1H6a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1h3.5a1 1 0 0 1 1 1v1zM4.118 4 4 4.059V13a1 1 0 0 0 1 1h6a1 1 0 0 0 1-1V4.059L11.882 4H4.118zM2.5 3V2h11v1h-11z" />
+                    </svg>
+                </a>
+                 <a href="">
+                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-pen" viewBox="0 0 16 16">
+                    <path d="m13.498.795.149-.149a1.207 1.207 0 1 1 1.707 1.708l-.149.148a1.5 1.5 0 0 1-.059 2.059L4.854 14.854a.5.5 0 0 1-.233.131l-4 1a.5.5 0 0 1-.606-.606l1-4a.5.5 0 0 1 .131-.232l9.642-9.642a.5.5 0 0 0-.642.056L6.854 4.854a.5.5 0 1 1-.708-.708L9.44.854A1.5 1.5 0 0 1 11.5.796a1.5 1.5 0 0 1 1.998-.001zm-.644.766a.5.5 0 0 0-.707 0L1.95 11.756l-.764 3.057 3.057-.764L14.44 3.854a.5.5 0 0 0 0-.708l-1.585-1.585z"/>
+                </svg>
+                </a>
+            
+                </button>
+                        
                     </div>
                 </div>
 
@@ -371,6 +371,9 @@
         </div>
 
     </div>
+
+
+
 
 
     <div class="row">
@@ -427,9 +430,11 @@
                 </h3>
                 <hr>
 
-                <form>
+                <form  action="/admin/highlight/{id}" method="POST" enctype="multipart/form-data">
+                    {{csrf_field()}}
                     <div class="">
-                        <input type="text" class="form-control" placeholder="Add Highlights">
+                        <input type="text" class="form-control" placeholder="Add Highlights" name="highlights">
+                        
                         <hr>
                         <button class="btn btn-info text-white">
                             Submit

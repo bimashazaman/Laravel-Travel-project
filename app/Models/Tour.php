@@ -15,6 +15,9 @@ class Tour extends Model
         "start_date",
         "end_date",
         "duration",
+        "one_day_price",
+        "one_week_price",
+        "one_month_price",
         "price",
         "description"
     ];

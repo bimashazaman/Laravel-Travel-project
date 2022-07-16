@@ -3,20 +3,14 @@
 use App\Http\Controllers\ClassicTour;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\GuranteeTour;
 use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 
-// Add facility page
+//login 
 Route::get('/login', function () {
     return view('Backend.Admin.login.login');
 });
-
-//Dashboard page
-Route::get('/main', function () {
-    return view('Backend.Admin.Dashboard');
-});
-
-
 
 // Add facility page
 Route::get('/AddFacility', function () {
@@ -30,7 +24,7 @@ Route::get('/AddHighlight', function () {
 
 //----------- section wajiha ----------------
 //----- dashboard page ---------
-Route::get("/dashboard", [DashboardController::class, 'index']);
+Route::get("/main", [DashboardController::class, 'index']);
 
 //---- tour page ---------
 Route::get("/admin/tours/{name}", [TourController::class, "index"]);
@@ -46,6 +40,8 @@ Route::post("/admin/tourprogram/{id}",[TourController::class,"addTourProgram"])-
 Route::delete("/admin/highlight/delete/{id}",[TourController::class,"deleteHighlights"])->name('highlightDelete');
 Route::delete("/admin/facility/delete/{id}",[TourController::class,"deleteTourFacility"])->name('facilityDelete');
 Route::delete("/admin/tourprogram/delete/{id}",[TourController::class,"deleteTourProgram"])->name('tourProgramDelete');
+
+
 //----------- Frontend -------------
 Route::get('/', [FrontendController::class,'index'])->name('home');
 Route::get('/tour/detail/{id}',[FrontendController::class,'tourDescription'])->name('tourDescription');
@@ -53,22 +49,23 @@ Route::get('/tour/{name}',[FrontendController::class,'getTours'])->name('getTour
 
 
 
-//get classic tours
+//=========== classic tours==========
 Route::get('/Bv', [ClassicTour::class, 'getClasicTours']);
 Route::get('/getClassicTour/{id}', [ClassicTour::class, 'getClassicTour']);
 
+//=====gurantee Tour=====
+Route::get('/guaranteeTour',[GuranteeTour::class,'getTours']);
 
-// Route::get('/Bv',[FrontendController::class,'getClasicTours']);
+
 //-------- end -------------
 
 Route::get('/check', [TourController::class, 'index']);
 Route::post('/checkpost', [TourController::class, 'checkStore']);
 
-// Route::get('/', function () {
-//     return view('Home');
-// })->name('home');
 
 Route::get("/dashboard/hello", [TourController::class, "index"]);
+
+
 
 Route::get('/c2', function () {
     return view('Frontend.About.AboutUs');
@@ -90,16 +87,9 @@ Route::get('/admin11', function () {
 
 
 
-// Route::get('/tours',FrontendController::class, 'getTours');
-
 Route::get('/TourFrontPage', function () {
     return view('Frontend.Tours.Tour');
 });
-
-
-// Route::get('/BT', function () {
-//     return view('Frontend.BasicTours.BasicTour');
-// });
 
 
 
@@ -159,9 +149,7 @@ Route::get('/oneDay', function () {
     return view('Frontend.OneDayTour.OneDayTour');
 });
 
-Route::get('/gurantee', function () {
-    return view('Frontend.GuaranteeTour.Guarantee');
-});
+
 
 Route::get('/themed', function () {
     return view('Frontend.ThemedTours.ThemedTours');

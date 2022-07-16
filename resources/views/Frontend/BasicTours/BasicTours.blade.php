@@ -19,14 +19,7 @@
     <h2 style="text-align: center; padding-bottom:60px">
         Tours To Armenia
     </h2>
-    {{-- @php
-
-    $tour = DB::table('tours')
-        ->where('category_id', '=', '1')
-        ->get();
-
-    @endphp --}}
-
+  
     @include('partials.sixCards')
 
 
@@ -36,7 +29,7 @@
             <!--/.gallery-header-->
             <div class="packages-content">
                 <h2 style="text-align: center; ">
-                    Basic Tours
+                    {{ $category->name }}
                 </h2>
                 <div class="overview">
 

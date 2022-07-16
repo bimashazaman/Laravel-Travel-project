@@ -33,7 +33,7 @@
                              </div>
 
                              <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>{{date_format(date_create($tour->start_date),'d/m')}} - {{date_format(date_create($tour->end_date),'d/m')}}
+                                 <span><i class="fa-solid fa-calendar-check"></i></span>{{$tour->start_date.' - '.$tour->end_date}}
                              </div>
 
                              <div class="packageOffer">

@@ -22,6 +22,9 @@ class CreateToursTable extends Migration
             $table->string('start_date');
             $table->string('end_date');
             $table->double("price");
+            $table->string("one_day_price");
+            $table->string("one_week_price");
+            $table->string("one_month_price");
             $table->string('description')->nullable();
             $table->softDeletes();
             $table->timestamps();

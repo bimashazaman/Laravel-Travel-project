@@ -24,9 +24,11 @@
                     <div class="tour-descriptions-content-inner">
                         <div class="tour-descriptions-content-inner-left">
                             <div class="tour-descriptions-content-inner-left-content">
-                                <h1>
-                                    Classic Tour
-                                </h1>
+                                <center>
+                                   <h2>
+                                        {{$tour->name}}
+                                   </h2>
+                                </center>
                             </div><!-- /.tour-descriptions-content-inner-left-content -->
                         </div><!-- /.tour-descriptions-content-inner-left -->
                         <div class="tour-descriptions-content-inner-right">

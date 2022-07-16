@@ -29,7 +29,7 @@
                                      </a>
                                      <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                                          <a class="dropdown-item" href="{{ url('/Bv') }}">Classic Tours</a>
-                                         <a class="dropdown-item" href="{{ url('/gurantee') }}">Tours with guarantee
+                                         <a class="dropdown-item" href="{{ url('/guaranteeTour') }}">Tours with guarantee
                                              departures</a>
                                          <a class="dropdown-item" href="{{ url('/gastroTours') }}">Gastro tours</a>
                                          <a class="dropdown-item" href="{{ url('activeTours') }}">Active Tours</a>
