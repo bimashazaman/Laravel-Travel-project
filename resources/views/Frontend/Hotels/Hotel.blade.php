@@ -204,7 +204,7 @@
                 For individual tours if the group are:
             </h4>
             <br>
-            <table class="table table-bordered tble">
+            <table class="table table-bordered tble" style="margin: auto">
                 <thead>
                     <tr>
                         <th style="background-color: #FFF1E9">1 Day</th>

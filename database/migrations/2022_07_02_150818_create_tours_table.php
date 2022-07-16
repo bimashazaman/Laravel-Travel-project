@@ -19,8 +19,8 @@ class CreateToursTable extends Migration
             $table->unsignedBigInteger('destination_id');
             $table->string("name");
             $table->string("duration");
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
+            $table->string('start_date');
+            $table->string('end_date');
             $table->double("price");
             $table->string('description')->nullable();
             $table->softDeletes();

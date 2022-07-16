@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\ClassicTour;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\TourController;
@@ -48,6 +49,16 @@ Route::delete("/admin/tourprogram/delete/{id}",[TourController::class,"deleteTou
 //----------- Frontend -------------
 Route::get('/', [FrontendController::class,'index'])->name('home');
 Route::get('/tour/detail/{id}',[FrontendController::class,'tourDescription'])->name('tourDescription');
+Route::get('/tour/{name}',[FrontendController::class,'getTours'])->name('getTours');
+
+
+
+//get classic tours
+Route::get('/Bv', [ClassicTour::class, 'getClasicTours']);
+Route::get('/getClassicTour/{id}', [ClassicTour::class, 'getClassicTour']);
+
+
+// Route::get('/Bv',[FrontendController::class,'getClasicTours']);
 //-------- end -------------
 
 Route::get('/check', [TourController::class, 'index']);
@@ -79,22 +90,18 @@ Route::get('/admin11', function () {
 
 
 
-Route::get('/tours', function () {
-    return view('Frontend.Tours.Tours');
-});
+// Route::get('/tours',FrontendController::class, 'getTours');
 
 Route::get('/TourFrontPage', function () {
     return view('Frontend.Tours.Tour');
 });
 
 
-Route::get('/BT', function () {
-    return view('Frontend.BasicTours.BasicTour');
-});
+// Route::get('/BT', function () {
+//     return view('Frontend.BasicTours.BasicTour');
+// });
 
-Route::get('/Bv', function () {
-    return view('Frontend.BasicTours.BasicTours');
-});
+
 
 
 Route::get('/Rv', function () {

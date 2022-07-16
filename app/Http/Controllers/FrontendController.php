@@ -11,6 +11,14 @@ use Illuminate\Http\Request;
 
 class FrontendController extends Controller
 {
+
+    // public function getClasicTours()
+    // {
+    //     $tours = Tour::where('tour_category_id', 1)->get();
+    //     return view('Frontend.BasicTours.BasicTours', compact('tours'));
+    // }
+
+
    public function getTours($name) {
     $cat = TourCategory::where('name', $name)->first();
     if ($cat) {
