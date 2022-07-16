@@ -61,7 +61,7 @@
                         </h3> --}}
                             <div class="single-package-item">
 
-                                <img src="https://bimasha.com/assets/images/about-banner.png" alt="">
+                                <img src="https://www.trolleytours.com/wp-content/uploads/2016/07/trolley-tours-of-key-west.jpg" alt="">
 
 
 

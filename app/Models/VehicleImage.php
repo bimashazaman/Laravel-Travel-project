@@ -9,4 +9,7 @@ class VehicleImage extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+
+    
 }

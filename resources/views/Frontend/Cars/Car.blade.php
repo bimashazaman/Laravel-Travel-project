@@ -1,5 +1,4 @@
 
-    <!--packages start-->
     @extends('layouts.master')
 @section('content')
     <br>
@@ -9,9 +8,11 @@
     <br>
     <br>
     <br>
-    <section class="tour-descriptions">
+    <br>
+    <br>
+    <section class="tour-descriptions" style="padding: 30px">
         <h1 style="text-align: center">
-            Tesla
+           {{ $car->name }}
         </h1>
         <div class="row">
             <div class="col-md-7">
@@ -133,18 +134,20 @@
 
 
                     <div class="detailespackage">
-                        <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>  <div>Sedan</div>
+                        <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>  <div>{{ $car->car_type }}</div>
                     </div>
                     <div class="detailespackage">
-                        <div><i class="fa-solid fa-person"></i>Number of seats</div> <div>3 seats</div>
-                    </div>
-
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-calendar-check"></i>Year</div>  <div>2004 Air conditionar</div>
+                        <div><i class="fa-solid fa-person"></i>Number of seats</div> <div>{{ $car->seats }} seats</div>
                     </div>
 
                     <div class="detailespackage">
-                        <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>  <div>3 days ago</div>
+                        <div><i class="fa-solid fa-calendar-check"></i>Year</div>  <div>
+                            {{ $car->car_model }}
+                        </div>
+                    </div>
+
+                    <div class="detailespackage">
+                        <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>  <div>{{ $car->free_cancelation }}</div>
                     </div>
 
 
@@ -175,20 +178,26 @@
                 The price
             </h3>
             <br>
-            <table class="table table-bordered tble">
+            <table class="table table-bordered tble" style="margin: auto">
                 <thead>
                     <tr>
-                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Day</th>
-                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Week</th>
-                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Mounth</th>
+                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">Daily Price</th>
+                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">Weekly Price</th>
+                        <th  style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">Monthly Price</th>
 
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>25000</td>
-                        <td> 35000</td>
-                        <td>45000</td>
+                        <td>
+                            {{ $car->daily_price }}
+                        </td>
+                        <td> 
+                            {{ $car->weekly_price }}
+                        </td>
+                        <td>
+                            {{ $car->monthly_price }}
+                        </td>
 
                     </tr>
 

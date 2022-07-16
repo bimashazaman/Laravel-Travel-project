@@ -7,7 +7,9 @@
                 <div class="card-header">
                     <h4 class="card-title float-start">Cars</h4>
 
-
+                    <a href="{{ url('/car/create') }}">
+                        <button class="btn btn-primary float-right">Add Car</button>
+                    </a>
 
                     <div class="table-search float-end">
                         <input type="text" class="form-control" placeholder="Search">
@@ -22,29 +24,58 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th class="text-center">Start Date</th>
-                                    <th class="text-center">End Date</th>
-                                    <th class="text-center">Price</th>
-                                    <th class="text-end">Status</th>
+                                    <th class="text-center">Seats</th>
+                                    <th class="text-center">Daily Price</th>
+                                    <th class="text-center">Weekly price</th>
+                                    <th class="text-end">Monthly price</th>
+                                    <th class="text-end">Action</th>
                                 </tr>
                             </thead>
+
+
+                            {{-- // if car is not available --}}
+                            @if (count($cars) == 0)
+                                <tr>
+                                    <td colspan="6" class="text-center">
+                                     <a href="{{ url('/car/create') }}">
+                                        <h4>
+                                            Click me
+                                         </h4>
+                                     </a>
+                                     <span>
+                                        to add a car
+                                     </span>
+                                    </td>
+                                </tr>
+                            @endif
                             <tbody>
-                                
+                                @foreach ($cars as$car )
+                                    
+                               
                                 <tr>
 
                                     
-                                    <td class="text-nowrap">Dummy Name</td>
-                                    <td class="text-center">22-02-2002</td>
-                                    <td class="text-center">
-                                        02-02-2002
+                                    <td class="text-nowrap">
+                                        <a href="{{ url('/car/'.$car->id) }}">{{ $car->name }}</a>
                                     </td>
                                     <td class="text-center">
-                                        7000 AMD
+                                        {{ $car->seats }}
                                     </td>
-                                    <td class="text-end">
-                                        <div class="font-weight-600 text-danger">
+                                    <td class="text-center">
+                                        {{ $car->daily_price }}
+                                    </td>
+                                    <td class="text-center">
+                                        {{ $car->weekly_price }}
+                                    </td>
+                                    <td class="text-center">
+                                        {{ $car->monthly_price }}
+                                    </td>
+
+                                    
+                                    <td class="text-end" >
+                                        <div class="font-weight-600 text-danger float-end" style="display: flex">
                                             <span>
-                                               <a href="">
+                                               <a href="{{ url('/car',$car->id) }}"> 
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="btn btn-success">Detail</button>
                                                </a>
                                             </span>
@@ -53,12 +84,25 @@
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; color:white" class="btn btn-info">Update</button>
                                                </a>
                                             </span>
-                                            <span>
-                                                <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="btn btn-danger">Delete</button>
-                                            </span>
+                                           
+
+                                                <form method="POST" action="/car/delete/{{$car->id}}">
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('DELETE') }}
+                                            
+                                                   <span>
+                                                    <div class="form-group">
+                                                        <input type="submit" class="btn btn-danger delete-user" value="Delete">
+                                                    </div>
+                                                   </span>
+                                                </form>
+                                
+                                            
                                         </div>
                                     </td>
                                 </tr>
+
+                                @endforeach
                                
                                 
                             </tbody>

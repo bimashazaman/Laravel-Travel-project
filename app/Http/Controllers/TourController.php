@@ -66,9 +66,6 @@ class TourController extends Controller
             "price" => "required",
             "start_date" => "required",
             "end_date" => "required",
-            'one_day_price' => 'required',
-            'one_week_price' => 'required',
-            'one_month_price' => 'required',
             "description" => "sometimes",
             "images" => "required"
         ]);

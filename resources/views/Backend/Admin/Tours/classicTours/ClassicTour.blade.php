@@ -46,7 +46,7 @@
                                         {{$touritem->price}} AMD
                                     </td>
                                     <td class="text-end">
-                                        <div class="font-weight-600 text-danger">
+                                        <div class="font-weight-600 text-danger float-end" style="display: flex">
                                             <span>
                                                <a href="{{ url('/admin/tours/detail',$touritem->id) }}">
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="btn btn-success">Detail</button>

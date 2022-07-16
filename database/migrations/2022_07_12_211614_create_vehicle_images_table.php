@@ -15,8 +15,8 @@ class CreateVehicleImagesTable extends Migration
     {
         Schema::create('vehicle_images', function (Blueprint $table) {
             $table->id();
-            $table->string('image');
             $table->unsignedBigInteger('vehicle_id');
+            $table->unsignedBigInteger('image_id');
             $table->softDeletes();
             $table->timestamps();
         });

@@ -1,3 +1,6 @@
+
+
+
 @extends('layouts.master')
 @section('content')
     <br>
@@ -13,15 +16,13 @@
     <br>
     <br>
     <br>
-<br>
+    <br>
 
 
- <h2 style="text-align: center; padding-bottom:60px">
-                  Tours To Armenia
-                </h2>
-
-
-
+    <h2 style="text-align: center; padding-bottom:60px">
+        Tours To Armenia
+    </h2>
+  
     @include('partials.sixCards')
 
 
@@ -31,7 +32,7 @@
             <!--/.gallery-header-->
             <div class="packages-content">
                 <h2 style="text-align: center; ">
-                   Themed Tours
+                    {{ $category->name }}
                 </h2>
                 <div class="overview">
 
@@ -53,511 +54,73 @@
                 <br>
                 <div class="row">
 
-                    <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center">Day one</h3>
-                        <div class="single-package-item">
+                    @foreach ($tour as $item)
+                        <div class="col-md-4 col-sm-6">
+                            {{-- <h3 style="text-align: center">
+                            {{$item->name}}
+                        </h3> --}}
+                            <div class="single-package-item">
 
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2ScjWmkwnM0u-QB-00glXeIv-RPcrsfY8RwqA7Y2MxkPzAKB2WdLN9PJZQfpiLWDNaE&usqp=CAU"
-                                alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
+                                <img src="https://bimasha.com/assets/images/about-banner.png" alt="">
+
+
+
+                                <div class="packageName">
+
+                                    {{ $item->name }}
+
+                                </div>
+                                <div class="package-txt" style="margin-left: -7%;">
+                                    <h4>
+                                        <a href="#" style="margin-left: 15%;font-weight: 400; font-size: 1.5rem;">
+                                            package one
+                                        </a>
+                                    </h4>
+                                    <p class="kki">
+                                        {{ $item->description }}
+                                    </p>
+                                </div>
+                                <div class="pacdet" style="margin-left: -7%;">
+                                    <div class="packageOffer">
+                                        <span><i class="fa-regular fa-clock"></i></span> {{ $item->duration }}
+                                    </div>
+
+                                    <div class="packageOffer">
+                                        <span><i class="fa-solid fa-calendar-check"></i></span>
+                                        {{ //just date and month
+                                        
+                                            $item->start_date . ' - ' . $item->end_date }}
+                                    </div>
+
+                                    <div class="packageOffer">
+                                        <span><i class="fa-solid fa-dollar-sign"></i></span> {{ $item->price }}
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                </div>
+                                <div class="package-btn">
+                                    <a href="{{ url('/getClassicTour/'.$item->id) }}">
+                                        
+                                        <button class="package-view">
+                                            Details
+                                        </button>
                                     </a>
-                                </h4>
-                                <p class="kki">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
+                                </div>
 
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
-                                </a>
+
 
                             </div>
-
-
+                            <!--/.single-package-item-->
 
                         </div>
-                        <!--/.single-package-item-->
+                    @endforeach
 
-                    </div>
-                    <!--/.col-->
-
-                    <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center">Day one</h3>
-                        <div class="single-package-item">
-
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2ScjWmkwnM0u-QB-00glXeIv-RPcrsfY8RwqA7Y2MxkPzAKB2WdLN9PJZQfpiLWDNaE&usqp=CAU"
-                                alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="kki">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center">Day one</h3>
-                        <div class="single-package-item">
-
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2ScjWmkwnM0u-QB-00glXeIv-RPcrsfY8RwqA7Y2MxkPzAKB2WdLN9PJZQfpiLWDNaE&usqp=CAU"
-                                alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="kki">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center">Day one</h3>
-                        <div class="single-package-item">
-
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2ScjWmkwnM0u-QB-00glXeIv-RPcrsfY8RwqA7Y2MxkPzAKB2WdLN9PJZQfpiLWDNaE&usqp=CAU"
-                                alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="kki">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center">Day one</h3>
-                        <div class="single-package-item">
-
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2ScjWmkwnM0u-QB-00glXeIv-RPcrsfY8RwqA7Y2MxkPzAKB2WdLN9PJZQfpiLWDNaE&usqp=CAU"
-                                alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="kki">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center">Day one</h3>
-                        <div class="single-package-item">
-
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2ScjWmkwnM0u-QB-00glXeIv-RPcrsfY8RwqA7Y2MxkPzAKB2WdLN9PJZQfpiLWDNaE&usqp=CAU"
-                                alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="kki">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center">Day one</h3>
-                        <div class="single-package-item">
-
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2ScjWmkwnM0u-QB-00glXeIv-RPcrsfY8RwqA7Y2MxkPzAKB2WdLN9PJZQfpiLWDNaE&usqp=CAU"
-                                alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="kki">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center">Day one</h3>
-                        <div class="single-package-item">
-
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2ScjWmkwnM0u-QB-00glXeIv-RPcrsfY8RwqA7Y2MxkPzAKB2WdLN9PJZQfpiLWDNaE&usqp=CAU"
-                                alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="kki">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center">Day one</h3>
-                        <div class="single-package-item">
-
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTQ2ScjWmkwnM0u-QB-00glXeIv-RPcrsfY8RwqA7Y2MxkPzAKB2WdLN9PJZQfpiLWDNaE&usqp=CAU"
-                                alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="package-txt">
-                                <h4>
-                                    <a href="#">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="kki">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-                                   <div class="pacdet">
-                             <div class="packageOffer">
-                                 <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                             </div>
-
-                             <div class="packageOffer">
-                                 <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                             </div>
-                         </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/BT') }}">
-                                <button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
 
 
 

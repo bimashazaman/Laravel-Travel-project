@@ -10,10 +10,12 @@
                  @foreach($tours as $tour)
                  <div class="col-md-4 col-sm-6">
                      <h3 style="text-align: center;  font-weight: 600;">{{$tour->category->name}}</h3>
-
+                         
                      <div class="single-package-item">
 
-                         <img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="package-place">
+                        {{-- {{ var_dump($tour->image) }} --}}
+
+                        <img src="https://www.trolleytours.com/wp-content/uploads/2016/07/trolley-tours-of-key-west.jpg" alt="package-place">
                          <div class="packageName">
                              {{$tour->name}}
                          </div>

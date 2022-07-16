@@ -1,9 +1,13 @@
 <?php
 
+use App\Http\Controllers\ActiveTour;
+use App\Http\Controllers\CarController;
 use App\Http\Controllers\ClassicTour;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
+use App\Http\Controllers\GastroTour;
 use App\Http\Controllers\GuranteeTour;
+use App\Http\Controllers\ThemedTour;
 use App\Http\Controllers\TourController;
 use Illuminate\Support\Facades\Route;
 
@@ -56,11 +60,34 @@ Route::get('/getClassicTour/{id}', [ClassicTour::class, 'getClassicTour']);
 //=====gurantee Tour=====
 Route::get('/guaranteeTour',[GuranteeTour::class,'getTours']);
 
+//=========Gastro Tours=========
+Route::get('/GastroTours',[GastroTour::class,'getTours']);
 
-//-------- end -------------
+//=========Active Tours=========
+Route::get('/activeTours', [ActiveTour::class, 'getTours']);
+
+//=======theme tours==========
+Route::get('/themed',[ThemedTour::class,'getTours']);
 
 Route::get('/check', [TourController::class, 'index']);
 Route::post('/checkpost', [TourController::class, 'checkStore']);
+
+//========Admin Car=========
+
+Route::get('/cars', [CarController::class, 'index'])->named('cars');
+Route::get('/car/create', [CarController::class, 'create']);
+Route::get('/car/{id}', [CarController::class, 'show']);
+Route::post('/car/store', [CarController::class, 'store']);
+Route::get('/car/edit/{id}', [CarController::class, 'edit']);
+Route::put('/car/update/{id}', [CarController::class, 'update']);
+Route::delete('/car/delete/{id}', [CarController::class, 'destroy']);
+
+//============= car frontend==============
+
+Route::get('caa', [CarController::class, 'getCars']);
+Route::get('/car/detail/{id}', [CarController::class, 'getCarDetails']);
+
+
 
 
 Route::get("/dashboard/hello", [TourController::class, "index"]);
@@ -115,6 +142,8 @@ Route::get('/withDriver', function () {
     return view('Frontend.Cars.WithDriver');
 });
 
+
+
 Route::get('/MT', function () {
     return view('Frontend.Cars.MeetTheTransfer');
 });
@@ -151,18 +180,8 @@ Route::get('/oneDay', function () {
 
 
 
-Route::get('/themed', function () {
-    return view('Frontend.ThemedTours.ThemedTours');
-});
 
 
-Route::get('/activeTours', function () {
-    return view('Frontend.ActiveTours.ActiveTours');
-});
-
-Route::get('/gastroTours', function () {
-    return view('Frontend.GastroTours.GastroTours');
-});
 
 
 
@@ -170,17 +189,11 @@ Route::get('/ClassicTour', function () {
     return view('Frontend.BasicTours.BasicTours');
 });
 
-Route::get('/cars', function () {
-    return view('Frontend.Cars.Cars');
-});
 
 Route::get('/RenACar', function () {
     return view('Frontend.Cars.RentACarForm');
 });
 
-Route::get('/car', function () {
-    return view('Frontend.Cars.Car');
-});
 
 Route::get('/c', function () {
     return view('Frontend.Conferences.Conference');
@@ -321,9 +334,9 @@ Route::get('/admin/Mice', function () {
     return view('Backend.Admin.Services.Mice.view');
 });
 
-Route::get('/admin/car', function () {
-    return view('Backend.Admin.Services.Car.view');
-});
+// Route::get('/admin/car', function () {
+//     return view('Backend.Admin.Services.Car.view');
+// });
 
 
 

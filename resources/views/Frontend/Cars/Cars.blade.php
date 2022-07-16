@@ -64,6 +64,21 @@
                 </div>
                 <div class="row">
 
+
+                    @if (count($cars) == 0)
+                        <div class="col-md-12">
+                           
+                               <center>
+                                    <h3 class="" style="margin-top: 20px">
+                                        Cars will be available soon
+                                    </h3>
+                               </center>
+                            
+                        </div>
+                        
+                    @endif
+
+                    @foreach ($cars as $car )
                     <div class="col-md-4 col-sm-6">
 
                         <div class="single-package-item">
@@ -75,21 +90,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    Merceders C180
+                                    {{ $car->name }}
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
+                                    <span><i class="fa-regular fa-clock"></i></span> {{ $car->car_model }}
                                 </div>
 
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> {{ $car->seats }} Seats
                                 </div>
 
                                 <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From {{ $car->daily_price }} AMD
                                 </div>
                             </div>
                             <div class="rating">
@@ -100,7 +115,7 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                               <a href="{{ url('/car') }}">
+                               <a href="{{ url('/car/detail/'.$car->id) }}">
                                  <button class="package-view">
                                     Details
                                 </button>
@@ -114,415 +129,9 @@
                         <!--/.single-package-item-->
 
                     </div>
-                    <!--/.col-->
+                    @endforeach
 
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    Merceders C180
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                               <a href="{{ url('/car') }}">
-                                 <button class="package-view">
-                                    Details
-                                </button>
-
-                               </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    Merceders C180
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                               <a href="{{ url('/car') }}">
-                                 <button class="package-view">
-                                    Details
-                                </button>
-
-                               </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    Merceders C180
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                               <a href="{{ url('/car') }}">
-                                 <button class="package-view">
-                                    Details
-                                </button>
-
-                               </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    Merceders C180
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                               <a href="{{ url('/car') }}">
-                                 <button class="package-view">
-                                    Details
-                                </button>
-
-                               </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    Merceders C180
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                               <a href="{{ url('/car') }}">
-                                 <button class="package-view">
-                                    Details
-                                </button>
-
-                               </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    Merceders C180
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                               <a href="{{ url('/car') }}">
-                                 <button class="package-view">
-                                    Details
-                                </button>
-
-                               </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    Merceders C180
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                               <a href="{{ url('/car') }}">
-                                 <button class="package-view">
-                                    Details
-                                </button>
-
-                               </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    Merceders C180
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-regular fa-clock"></i></span> Merceders C180
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> Two Seats
-                                </div>
-
-                                <div class="packageOffer" style="margin-left: 20px">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> From 15000 AMD
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                               <a href="{{ url('/car') }}">
-                                 <button class="package-view">
-                                    Details
-                                </button>
-
-                               </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
+                  
                     <!--/.col-->
 
 

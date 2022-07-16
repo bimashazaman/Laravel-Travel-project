@@ -31,7 +31,7 @@
                                          <a class="dropdown-item" href="{{ url('/Bv') }}">Classic Tours</a>
                                          <a class="dropdown-item" href="{{ url('/guaranteeTour') }}">Tours with guarantee
                                              departures</a>
-                                         <a class="dropdown-item" href="{{ url('/gastroTours') }}">Gastro tours</a>
+                                         <a class="dropdown-item" href="{{ url('/GastroTours') }}">Gastro tours</a>
                                          <a class="dropdown-item" href="{{ url('activeTours') }}">Active Tours</a>
                                          <a class="dropdown-item" href="{{ url('/oneDay') }}">Oneday Tours</a>
                                          <a class="dropdown-item" href="{{ url('/themed') }}">Themed Tours</a>
@@ -44,7 +44,7 @@
                                          Services
                                      </a>
                                      <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                         <a class="dropdown-item" href="{{ url('/cars') }}">Rent a transport</a>
+                                         <a class="dropdown-item" href="{{ url('/caa') }}">Rent a transport</a>
                                          <a class="dropdown-item" href="{{ url('/hs') }}">Hotels</a>
                                          <a class="dropdown-item" href="{{ url('/acs') }}">Tour Accessories</a>
                                          <a class="dropdown-item" href="{{ url('/mices') }}">MICE</a>

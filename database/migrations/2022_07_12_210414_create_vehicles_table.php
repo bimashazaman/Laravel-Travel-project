@@ -15,9 +15,10 @@ class CreateVehiclesTable extends Migration
     {
         Schema::create('vehicles', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('type_id');
             $table->string('name');
+            $table->string('car_type');
             $table->string('seats');
+            $table->string('car_model');
             $table->double('daily_price');
             $table->double('weekly_price');
             $table->double('monthly_price');
