@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\ActiveTour;
+use App\Http\Controllers\CarAirportController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\ClassicTour;
 use App\Http\Controllers\DashboardController;
@@ -82,6 +83,23 @@ Route::get('/car/edit/{id}', [CarController::class, 'edit']);
 Route::put('/car/update/{id}', [CarController::class, 'update']);
 Route::delete('/car/delete/{id}', [CarController::class, 'destroy']);
 
+
+//========Admin CarAirport=========
+Route::get('/admin/CarAtAirport',[CarAirportController::class,'index']);
+Route::get('/admin/CarAtAirport/create',[CarAirportController::class,'create']);
+Route::get('/admin/CarAtAirport/{id}',[CarAirportController::class,'show']);
+Route::post('/admin/CarAtAirport/store',[CarAirportController::class,'store']);
+Route::get('/admin/CarAtAirport/edit/{id}',[CarAirportController::class,'edit']);
+Route::put('/admin/CarAtAirport/update/{id}',[CarAirportController::class,'update']);
+
+
+
+//========Frontend CarAirport=========
+
+
+Route::get('/MT',[CarAirportController::class,'getAllCarAirport']);
+
+
 //============= car frontend==============
 
 Route::get('caa', [CarController::class, 'getCars']);
@@ -107,9 +125,7 @@ Route::get('/ways', function () {
     return view('Frontend.About.waysToBook');
 });
 
-Route::get('/admin11', function () {
-    return view('Backend.Admin.AdminHome');
-});
+
 
 
 
@@ -144,9 +160,7 @@ Route::get('/withDriver', function () {
 
 
 
-Route::get('/MT', function () {
-    return view('Frontend.Cars.MeetTheTransfer');
-});
+
 
 Route::get('/RF', function () {
     return view('Frontend.Cars.RentACarForm');
@@ -318,9 +332,6 @@ Route::get('/admin/Accessiories', function () {
     return view('Backend.Admin.Services.Accessiories.view');
 });
 
-Route::get('/admin/CarAtAirport', function () {
-    return view('Backend.Admin.Services.CarAtAirport.view');
-});
 
 Route::get('/admin/CarWithDriver', function () {
     return view('Backend.Admin.Services.CarWithDriver.view');

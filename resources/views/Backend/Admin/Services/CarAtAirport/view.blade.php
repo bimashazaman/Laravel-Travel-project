@@ -3,68 +3,75 @@
     <div class="row">
         <div class="col-md-12 d-flex">
 
-            <div class="card card-table flex-fill">
-                <div class="card-header">
-                    <h4 class="card-title float-start">Car at Airport</h4>
+           <div class="card w-100">
+            <div class="card-header " style="display: flex">
+               <span>
+                <h4 class="card-title">Car at airport</h4>
+               </span>
+               <span>
+                
+                @if(count($carAirports)>0)
+                <button class="btn btn-info" style="color: white; margin-left:15px">
+                    <a href="" style="color: white">
+                        <i class="fa fa-plus" style="color: white"></i>
+                        Edit
+                    </a>
+                   </button>
+                @endif
 
+               
+                @if(count($carAirports)==0)
+                <button class="btn btn-info" style="color: white; margin-left:15px">
+                    <a href="{{ url('/admin/CarAtAirport/create') }}" style="color: white">
+                        <i class="fa fa-plus" style="color: white"></i>
+                        Add Information
+                    </a>
+                   </button>
+                @endif
 
-
-                    <div class="table-search float-end">
-                        <input type="text" class="form-control" placeholder="Search">
-                        <button class="btn" type="submit"><i class="fa fa-search"></i></button>
-                    </div>
-
-                    
-                </div>
-                <div class="card-body" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;">
-                    <div class="table-responsive no-radius">
-                        <table class="table table-hover table-center">
-                            <thead>
-                                <tr>
-                                    <th>Name</th>
-                                    <th class="text-center">Start Date</th>
-                                    <th class="text-center">End Date</th>
-                                    <th class="text-center">Price</th>
-                                    <th class="text-end">Status</th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                
-                                <tr>
-
-                                    <td class="text-nowrap">Dummy Name</td>
-                                    <td class="text-center">22-02-2002</td>
-                                    <td class="text-center">
-                                        02-02-2002
-                                    </td>
-                                    <td class="text-center">
-                                        7000 AMD
-                                    </td>
-                                    <td class="text-end">
-                                        <div class="font-weight-600 text-danger">
-                                            <span>
-                                               <a href="">
-                                                <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="btn btn-success">Detail</button>
-                                               </a>
-                                            </span>
-                                            <span>
-                                               <a href="{{ url('/admin/UpdateCarAtAirport') }}">
-                                                <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; color:white" class="btn btn-info">Update</button>
-                                               </a>
-                                            </span>
-                                            <span>
-                                                <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="btn btn-danger">Delete</button>
-                                            </span>
-                                        </div>
-                                    </td>
-                                </tr>
-                               
-                                
-                            </tbody>
-                        </table>
-                    </div>
-                </div>
+               </span>
             </div>
+
+          {{-- if no information found: --}}
+
+            @if(count($carAirports) == 0)
+                <div class="card-body">
+                    <div class="row">
+                        <div class="col-md-12">
+                            <center>
+                                <h3>No Information Found</h3>
+                            </center>
+                        </div>
+                    </div>
+                </div>
+          @endif
+
+            {{-- if information found: --}}
+                
+            @foreach ($carAirports as $carAirport)
+           <div style="padding: 40px">
+            <h3>
+                Details
+            </h3>
+            <hr>
+            <p>
+                {{$carAirport->details}}
+            </p>
+
+            <br>
+
+            <h3>
+                More Details
+            </h3>
+            <hr>
+            <p>
+                {{$carAirport->more_details}}
+            </p>
+           </div>
+            @endforeach
+                
+           
+
 
         </div>
     </div>

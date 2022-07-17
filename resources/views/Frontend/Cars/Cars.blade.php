@@ -17,7 +17,7 @@
             <div class="container">
 
                 <div class="parent" align="center">
-                    <a href="{{ url('/car') }}">
+                    <a href="{{ url('/caa') }}">
                         <div class="div1" style="background-color: #FAEFD7; box-shadow:none; border:0.1px solid rgb(212, 211, 211)">
                             <i class="fa-solid fa-car-side"></i>
                             <h4 style="margin: 10px;">

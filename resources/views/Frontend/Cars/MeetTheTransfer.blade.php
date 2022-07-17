@@ -46,15 +46,11 @@
         Meet and transfer at the airport
     </p>
 
+    @foreach ($carAirports as $carAirport)
+        
+    
     <p class="ha">
-        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis mollitia, distinctio vero esse eum nam
-        voluptatem iure sit, consectetur aut et rerum incidunt dolores repellat quasi unde molestiae dicta cum
-        temporibus id sapiente ea omnis! Reiciendis, ipsum sapiente cum itaque atque libero ab voluptatibus quisquam
-        accusantium facilis adipisci nesciunt praesentium doloremque veniam odio rerum aut aspernatur assumenda.
-        Asperiores, cupiditate nesciunt? Aperiam pariatur vero culpa animi nesciunt maiores veritatis cupiditate
-        quas voluptatum temporibus repellendus, mollitia ipsam? Architecto numquam impedit nisi vitae doloremque!
-        Veritatis minima laudantium est perspiciatis saepe harum quam deserunt unde obcaecati magni sequi, incidunt
-        dignissimos asperiores. Soluta, sed consequuntur.
+        {{$carAirport->details}}
     </p>
 
     <br>
@@ -74,15 +70,10 @@
         <br>
         <p class="ReqCarDet" style="font-weight: 500;
         font-size: 14px;">
-            Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis mollitia, distinctio vero esse eum
-            nam voluptatem iure sit, consectetur aut et rerum incidunt dolores repellat quasi unde molestiae dicta
-            cum temporibus id sapiente ea omnis! Reiciendis, ipsum sapiente cum itaque atque libero ab voluptatibus
-            quisquam accusantium facilis adipisci nesciunt praesentium doloremque veniam odio rerum aut aspernatur
-            assumenda. Asperiores, cupiditate nesciunt? Aperiam pariatur vero culpa animi nesciunt maiores veritatis
-            cupiditate quas voluptatum temporibus repellendus, mollitia ipsam? Architecto numquam impedit nisi vitae
-            doloremque! Veritatis minima laudantium est perspiciatis saepe harum quam deserunt unde obcaecati magni
-            sequi, incidunt dignissimos asperiores. Soluta, sed consequuntur.
+            {{ $carAirport->more_details }}
         </p>
+
+        @endforeach
 
         <button class="package-view">Send Request</button>
     </div>
