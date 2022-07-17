@@ -1,17 +1,13 @@
-
-    <!--packages start-->
-    @extends('layouts.master')
+<!--packages start-->
+@extends('layouts.master')
 @section('content')
-    <br>
-    <br>
-    <br><br>
+<div class="fullBanner">
+    @include('partials.DefaultBanner')
+</div>
 
-    <br>
-    <br>
-    <br>
-    <section class="tour-descriptions">
+    <section class="tour-descriptions" style="padding: 50px">
         <h1 style="text-align: center">
-            Conferences
+           {{ $mice->name }}
         </h1>
         <div class="row">
             <div class="col-md-7">
@@ -133,19 +129,36 @@
 
 
                     <div class="detailespackage">
-                        <span><i class="fa-solid fa-car"></i></span> Type <span class="rightspan">Skiing</span>
+                        <div style="float: left"><i class="fa-solid fa-calendar-check"></i>Best Travel Time</div>
+                        <div>
+                            {{ $mice->available }}
+                        </div>
                     </div>
                     <div class="detailespackage">
-                        <span><i class="fa-solid fa-person"></i></span> Group size <span class="rightspan">2</span>
+                        <div><i class="fa-solid fa-person"></i>Max in the group</div>
+                        <div>
+                            {{ $mice->total_pax }}
+                        </div>
                     </div>
 
                     <div class="detailespackage">
-                        <span><i class="fa-solid fa-calendar-check"></i></span> Date <span
-                            class="rightspan">2.12.2022</span>
+                        <div><i class="fa-solid fa-folder"></i>Products</div>
+                        <div>
+                           {{ $mice->Products }}
+                        </div>
                     </div>
 
                     <div class="detailespackage">
-                        <span><i class="fa-solid fa-calendar"></i></span> Date <span class="rightspan">2.12.2022</span>
+                        <div><i class="fa-solid fa-user-plus"></i>Extra</div>
+                        <div>
+                            {{ $mice->Extra }}
+                        </div>
+                    </div>
+                    <div class="detailespackage">
+                        <div><i class="fa-solid fa-syringe"></i>Personal</div>
+                        <div>
+                            {{ $mice->personal }}
+                        </div>
                     </div>
 
 
@@ -176,22 +189,5 @@
         </button>
     </section>
 
-<br>
-
-
+    <br>
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

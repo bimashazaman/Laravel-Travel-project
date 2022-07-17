@@ -40,7 +40,7 @@ class HotelController extends Controller
         $hotel->price = $request->price;
         $hotel->free_cancelation = $request->free_cancelation;
         $hotel->save();
-        return redirect()->back()->with("msg", "Upadated successfully!")
+        return redirect()->back()->with("msg", "Created successfully!")
         ->with("success", true);
     }
 

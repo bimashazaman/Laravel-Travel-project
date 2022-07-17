@@ -15,6 +15,12 @@ class CreateMicesTable extends Migration
     {
         Schema::create('mices', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('available');
+            $table->string('total_pax');
+            $table->string('personal');
+            $table->string('Products');
+            $table->string('Extra');
             $table->timestamps();
         });
     }

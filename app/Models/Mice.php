@@ -8,4 +8,14 @@ use Illuminate\Database\Eloquent\Model;
 class Mice extends Model
 {
     use HasFactory;
+
+
+    protected $fillable = [
+        'name',
+        'available',
+        'total_pax',
+        'personal',
+        'Products',
+        'Extra',
+    ];
 }

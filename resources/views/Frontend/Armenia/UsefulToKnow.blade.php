@@ -1,12 +1,11 @@
 @extends('layouts.master')
 
 @section('content')
-    <br><br>
-    <br><br>
-    <br>
-    <br>
-    <br><br><br><br><br><br><br>
-    <br><br><br>
+
+<div class="fullBanner">
+    @include('partials.DefaultBanner')
+</div>
+
 
     <div class="row">
         <div class="container" style="color: black;">

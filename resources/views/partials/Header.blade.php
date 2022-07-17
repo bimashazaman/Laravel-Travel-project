@@ -104,8 +104,6 @@
              <div class="home-border"></div><!-- /.home-border-->
          </div><!-- /.container-->
      </div><!-- /.header-area -->
-     <div class="fullBanner">
-         <img src="{{ asset('images/DefaultBanner.png') }}" alt="">
-     </div>
+    
 
  </header><!-- /.top-area-->

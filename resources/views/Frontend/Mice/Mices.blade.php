@@ -1,12 +1,9 @@
 @extends('layouts.master')
 @section('content')
-    <br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br><br>
-    <br>
+<div class="fullBanner">
+    @include('partials.DefaultBanner')
+</div>
+
     <section id="pack" class="packages">
 
         <div class="container">
@@ -29,6 +26,7 @@
                 </div>
                 <div class="row">
 
+                    @foreach ($mices as $m )
                     <div class="col-md-4 col-sm-6">
 
                         <div class="single-package-item">
@@ -40,21 +38,21 @@
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    conference
+                                    {{ $m->name }}
                                 </h4>
 
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> conference
+                                    <span><i class="fa-regular fa-clock"></i></span> {{ $m->available }}
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person"></i></span> 14 person
+                                    <span><i class="fa-solid fa-person"></i></span> {{ $m->total_pax }}
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
+                                    <span><i class="fa-solid fa-syringe"></i></span> {{ $m->personal }}
                                 </div>
                             </div>
                             <div class="rating">
@@ -65,7 +63,7 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('/mice') }}"><button class="package-view">
+                                <a href="{{ url('/mices/'.$m->id) }}"><button class="package-view">
                                     Details
                                 </button>
                                 </a>
@@ -79,409 +77,9 @@
 
                     </div>
                     <!--/.col-->
+                    @endforeach
 
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    conference
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> conference
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person"></i></span> 14 person
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/mice') }}"><button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    conference
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> conference
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person"></i></span> 14 person
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/mice') }}"><button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    conference
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> conference
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person"></i></span> 14 person
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/mice') }}"><button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    conference
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> conference
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person"></i></span> 14 person
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/mice') }}"><button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    conference
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> conference
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person"></i></span> 14 person
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/mice') }}"><button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    conference
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> conference
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person"></i></span> 14 person
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/mice') }}"><button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    conference
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> conference
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person"></i></span> 14 person
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/mice') }}"><button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                                alt="package-place">
-                            <div class="packageName">
-
-                            </div>
-                            <div class="Car-txt">
-                                <h4>
-                                    conference
-                                </h4>
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> conference
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person"></i></span> 14 person
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-syringe"></i></span> Vaccined
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/mice') }}"><button class="package-view">
-                                    Details
-                                </button>
-                                </a>
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-
-
+                    
 
                 </div>
                 <!--/.row-->

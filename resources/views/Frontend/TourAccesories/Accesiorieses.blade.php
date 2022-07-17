@@ -1,13 +1,10 @@
 <!--packages start-->
 @extends('layouts.master')
 @section('content')
-    <br>
-    <br>
-    <br><br>
+<div class="fullBanner">
+    @include('partials.DefaultBanner')
+</div>
 
-    <br>
-    <br>
-    <br>
 
     <section class="tour-descriptions">
         <h1 style="text-align: center">

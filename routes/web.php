@@ -10,6 +10,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GastroTour;
 use App\Http\Controllers\GuranteeTour;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\MiceController;
 use App\Http\Controllers\ThemedTour;
 use App\Http\Controllers\TourController;
 use App\Models\Accessiories;
@@ -40,7 +41,6 @@ Route::get("/main", [DashboardController::class, 'index']);
 
 
 //---- tour page ---------
-
 
 Route::get("/admin/tours/{name}", [TourController::class, "index"]);
 Route::get("/admin/tours/detail/{id}", [TourController::class, "show"]);
@@ -132,12 +132,25 @@ Route::post('/admin/Hotel/store',[HotelController::class,'store']);
 Route::put('/admin/Hotel/update/{id}',[HotelController::class,'update']);
 Route::delete('/admin/Hotel/delete/{id}',[HotelController::class,'destroy']);
 
+//===========Admin Mice=========
+
+Route::get('/admin/Mice',[MiceController::class,'index']);
+Route::get('/admin/Mice/create',[MiceController::class,'create']);
+Route::get('/admin/Mice/{id}',[MiceController::class,'show']);
+Route::post('/admin/Mice/store',[MiceController::class,'store']);
+Route::put('/admin/Mice/update/{id}',[MiceController::class,'update']);
+Route::delete('/admin/Mice/delete/{id}',[MiceController::class,'destroy']);
+
 
 //==========Frontend Hotel=========
+
 Route::get('/hs',[HotelController::class,'getHotels']);
 Route::get('/h/{id}', [HotelController::class, 'getHotelDetails']);
 
+
+
 //==========Frontend Accessiories=========
+
 Route::get('/acs',[AccessioriesController::class,'getAccessiories']);
 Route::get('/ac/{id}',[AccessioriesController::class,'getAccessioriesDetails']);
 
@@ -151,7 +164,10 @@ Route::get('/MT',[CarAirportController::class,'getAllCarAirport']);
 Route::get('caa', [CarController::class, 'getCars']);
 Route::get('/car/detail/{id}', [CarController::class, 'getCarDetails']);
 
+//=========Mice frontend=========
 
+Route::get('/mices', [MiceController::class, 'showMice']);
+Route::get('/mices/{id}', [MiceController::class, 'showMiceDetails']);
 
 
 Route::get("/dashboard/hello", [TourController::class, "index"]);
@@ -220,9 +236,6 @@ Route::get('/TentForm', function () {
     return view('Frontend.TourAccesories.TentForm');
 });
 
-Route::get('/mices', function () {
-    return view('Frontend.Mice.Mices');
-});
 
 Route::get('/mice', function () {
     return view('Frontend.Mice.Micee');
@@ -369,10 +382,6 @@ Route::get('/admin/CarWithDriver', function () {
 });
 
 
-Route::get('/admin/Mice', function () {
-    return view('Backend.Admin.Services.Mice.view');
-});
-
 
 
 
@@ -388,10 +397,6 @@ Route::get('/admin/createHotel', function () {
     return view('Backend.Admin.Services.Hotels.create');
 });
 
-
-Route::get('/admin/createMice', function () {
-    return view('Backend.Admin.Services.MICE.create');
-});
 
 
 
@@ -425,9 +430,7 @@ Route::get('/admin/updateHotel', function () {
 
 
 
-Route::get('/admin/updateMice', function () {
-    return view('Backend.Admin.Services.MICE.update');
-});
+
 
 
 //============Armenia Create routes=============

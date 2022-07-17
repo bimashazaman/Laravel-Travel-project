@@ -4,14 +4,12 @@
     <!--packages start-->
 
   
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
-<br><br>
+    <div class="fullBanner">
+        @include('partials.DefaultBanner')
+    </div>
+    
 
-    <section class="tour-descriptions">
+    <section class="tour-descriptions" >
         <div class="container">
             <div class="row">
                 <div class="col-md-6">

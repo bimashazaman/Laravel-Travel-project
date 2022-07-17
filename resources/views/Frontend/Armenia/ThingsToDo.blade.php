@@ -1,16 +1,9 @@
 @extends('layouts.master')
 @section('content')
-    <br>
-    <br>
-    <br>
-    <br><br>
-    <br>
-    <br>
-    <br>
-    <br><br><br>
-    <br>
-    <br>
-    <br><br><br>
+<div class="fullBanner">
+    @include('partials.DefaultBanner')
+</div>
+
 
 
     <h2 class="title-head" style="text-align: center">Things To Do in Armenia</h2>

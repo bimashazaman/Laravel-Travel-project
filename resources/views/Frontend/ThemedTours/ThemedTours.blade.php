@@ -3,20 +3,9 @@
 
 @extends('layouts.master')
 @section('content')
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
-    <br>
+<div class="fullBanner">
+    @include('partials.DefaultBanner')
+</div>
 
 
     <h2 style="text-align: center; padding-bottom:60px">

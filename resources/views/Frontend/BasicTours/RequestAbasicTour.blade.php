@@ -1,9 +1,9 @@
 @extends('layouts.master')
 @section('content')
-    <br><br><br><br>
-    <br>
+<div class="fullBanner">
+    @include('partials.DefaultBanner')
+</div>
 
-    <br><br><br><br><br><br><br><br><br><br><br><br>
 
     <div class="container">
         <div class=" text-center mt-5 ">

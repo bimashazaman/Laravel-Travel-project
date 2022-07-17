@@ -1,0 +1,1 @@
+<img src="{{ asset('images/DefaultBanner.png') }}" alt="">
