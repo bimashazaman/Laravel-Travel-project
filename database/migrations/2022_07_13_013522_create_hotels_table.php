@@ -18,8 +18,8 @@ class CreateHotelsTable extends Migration
             $table->string('name');
             $table->string('description');
             $table->string('address');
-            $table->integer('stars');
-            $table->double('price');
+            $table->string('stars');
+            $table->string('price');
             $table->string('free_cancelation');
             $table->softDeletes();
             $table->timestamps();

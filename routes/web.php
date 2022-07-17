@@ -133,7 +133,9 @@ Route::put('/admin/Hotel/update/{id}',[HotelController::class,'update']);
 Route::delete('/admin/Hotel/delete/{id}',[HotelController::class,'destroy']);
 
 
-
+//==========Frontend Hotel=========
+Route::get('/hs',[HotelController::class,'getHotels']);
+Route::get('/h/{id}', [HotelController::class, 'getHotelDetails']);
 
 //==========Frontend Accessiories=========
 Route::get('/acs',[AccessioriesController::class,'getAccessiories']);
@@ -141,8 +143,6 @@ Route::get('/ac/{id}',[AccessioriesController::class,'getAccessioriesDetails']);
 
 
 //========Frontend CarAirport=========
-
-
 Route::get('/MT',[CarAirportController::class,'getAllCarAirport']);
 
 
@@ -258,13 +258,7 @@ Route::get('/cs', function () {
 });
 
 
-Route::get('/h', function () {
-    return view('Frontend.Hotels.Hotel');
-});
 
-Route::get('/hs', function () {
-    return view('Frontend.Hotels.Hotels');
-});
 
 Route::get('/contact', function () {
     return view('Frontend.Contact.Contact');

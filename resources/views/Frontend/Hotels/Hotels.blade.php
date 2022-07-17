@@ -73,405 +73,48 @@
                 </h2>
                 <div class="row">
 
-                    <div class="col-md-4 col-sm-6">
+                   @foreach ($hotels as $hotel)
+                   <div class="col-md-4 col-sm-6">
 
-                        <div class="single-package-item">
+                    <div class="single-package-item">
 
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet" style="margin-left: -7%;">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span>Hotel 4 stars
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>From 15000 AMD
-                                </div>
-                            </div>
-                           
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-
-
+                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                            alt="package-place">
+                        <div class="HotelName">
+                            <h4>
+                               {{ $hotel->name }}
+                            </h4>
                         </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet" style="margin-left: -7%;">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span>Hotel 4 stars
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>From 15000 AMD
-                                </div>
-                            </div>
-                           
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-
-
+                        <div class="hotelDesccription">
+                            <p>
+                                {{ $hotel->description }}
+                            </p>
                         </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet" style="margin-left: -7%;">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span>Hotel 4 stars
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>From 15000 AMD
-                                </div>
-                            </div>
-                           
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
+                        <div class="pacdet" style="margin-left: -7%;">
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-location-dot"></i></span>{{ $hotel->location }}
                             </div>
 
+                            <div class="packageOffer">
+                                <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span>{{ $hotel->stars }}
+                            </div>
 
-
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-dollar-sign"></i></span>{{ $hotel->price }}
+                            </div>
                         </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet" style="margin-left: -7%;">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span>Hotel 4 stars
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>From 15000 AMD
-                                </div>
-                            </div>
-                           
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-
-
+                       
+                        <div class="package-btn">
+                            <a href="{{ url('/h/'.$hotel->id) }}"><button class="package-view">
+                                    Details
+                                </button>
+                            </a>
                         </div>
-                        <!--/.single-package-item-->
-
                     </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet" style="margin-left: -7%;">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span>Hotel 4 stars
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>From 15000 AMD
-                                </div>
-                            </div>
-                           
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet" style="margin-left: -7%;">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span>Hotel 4 stars
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>From 15000 AMD
-                                </div>
-                            </div>
-                           
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet" style="margin-left: -7%;">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span>Hotel 4 stars
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>From 15000 AMD
-                                </div>
-                            </div>
-                           
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet" style="margin-left: -7%;">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span>Hotel 4 stars
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>From 15000 AMD
-                                </div>
-                            </div>
-                           
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet" style="margin-left: -7%;">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span>Yerevan
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span>Hotel 4 stars
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>From 15000 AMD
-                                </div>
-                            </div>
-                           
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-
-
+                    <!--/.single-package-item-->
+                </div>
+                
+                   @endforeach
 
                 </div>
                 <!--/.row-->

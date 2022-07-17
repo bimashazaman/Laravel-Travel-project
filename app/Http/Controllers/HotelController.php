@@ -30,6 +30,7 @@ class HotelController extends Controller
             'stars' => 'required',
             'price' => 'required',
             'free_cancelation' => 'required',
+            
         ]);
         $hotel = new Hotel();
         $hotel->name = $request->name;
@@ -81,5 +82,20 @@ class HotelController extends Controller
         return redirect()->back()->with("msg", "Deleted successfully!")
         ->with("success", true);
 
+    }
+
+
+    // get the hotels in the frontend
+    public function getHotels()
+    {
+        $hotels = Hotel::all();
+        return view('Frontend.Hotels.Hotels', compact('hotels'));
+    }
+
+    // get the hotel details in the frontend
+    public function getHotelDetails($id)
+    {
+        $hotels = Hotel::find($id);
+        return view('Frontend.Hotels.Hotel', compact('hotels'));
     }
 }
