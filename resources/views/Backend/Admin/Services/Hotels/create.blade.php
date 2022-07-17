@@ -27,10 +27,10 @@
                 <h4 class="card-title">Add Information</h4>
             </div>
             <div class="card-body">
-                <form id="tourForm" action="" method="POST" enctype="multipart/form-data">
+                <form id="tourForm" action="/admin/Hotel/store" method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
                     <div class="form-group row">
-                        <label class="col-form-label col-md-2">Tour name</label>
+                        <label class="col-form-label col-md-2">Hotel Name</label>
                         <div class="col-md-10">
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="name">
                         </div>

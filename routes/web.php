@@ -9,6 +9,7 @@ use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GastroTour;
 use App\Http\Controllers\GuranteeTour;
+use App\Http\Controllers\HotelController;
 use App\Http\Controllers\ThemedTour;
 use App\Http\Controllers\TourController;
 use App\Models\Accessiories;
@@ -120,6 +121,18 @@ Route::post('/admin/accessiories/store',[AccessioriesController::class,'store'])
 Route::get('/admin/accessiories/edit/{id}',[AccessioriesController::class,'edit']);
 Route::put('/admin/accessiories/update/{id}',[AccessioriesController::class,'update']);
 Route::delete('/admin/accessiories/delete/{id}',[AccessioriesController::class,'destroy']);
+
+
+//==========Admin Hotel=========
+
+Route::get('/admin/Hotel',[HotelController::class,'index']);
+Route::get('/admin/Hotel/create',[HotelController::class,'create']);
+Route::get('/admin/Hotel/{id}',[HotelController::class,'show']);
+Route::post('/admin/Hotel/store',[HotelController::class,'store']);
+Route::put('/admin/Hotel/update/{id}',[HotelController::class,'update']);
+Route::delete('/admin/Hotel/delete/{id}',[HotelController::class,'destroy']);
+
+
 
 
 //==========Frontend Accessiories=========
@@ -361,17 +374,11 @@ Route::get('/admin/CarWithDriver', function () {
     return view('Backend.Admin.Services.CarWithDriver.view');
 });
 
-Route::get('/admin/Hotel', function () {
-    return view('Backend.Admin.Services.Hotels.view');
-});
 
 Route::get('/admin/Mice', function () {
     return view('Backend.Admin.Services.Mice.view');
 });
 
-// Route::get('/admin/car', function () {
-//     return view('Backend.Admin.Services.Car.view');
-// });
 
 
 
