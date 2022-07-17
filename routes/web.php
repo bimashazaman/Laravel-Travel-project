@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AccessioriesController;
 use App\Http\Controllers\ActiveTour;
 use App\Http\Controllers\CarAirportController;
 use App\Http\Controllers\CarController;
@@ -10,28 +11,36 @@ use App\Http\Controllers\GastroTour;
 use App\Http\Controllers\GuranteeTour;
 use App\Http\Controllers\ThemedTour;
 use App\Http\Controllers\TourController;
+use App\Models\Accessiories;
 use Illuminate\Support\Facades\Route;
 
-//login 
+//============login===============
+
 Route::get('/login', function () {
     return view('Backend.Admin.login.login');
 });
 
-// Add facility page
+//============ Add facility page==============
+
 Route::get('/AddFacility', function () {
     return view('Backend.Admin.Tours.classicTours.AddFacility');
 });
 
-//add highlight
+//================add highlight============
+
 Route::get('/AddHighlight', function () {
     return view('Backend.Admin.Tours.classicTours.AddHighlights');
 });
 
-//----------- section wajiha ----------------
+
 //----- dashboard page ---------
+
 Route::get("/main", [DashboardController::class, 'index']);
 
+
 //---- tour page ---------
+
+
 Route::get("/admin/tours/{name}", [TourController::class, "index"]);
 Route::get("/admin/tours/detail/{id}", [TourController::class, "show"]);
 Route::post("/admin/tours/add", [TourController::class, "store"]);
@@ -48,6 +57,7 @@ Route::delete("/admin/tourprogram/delete/{id}",[TourController::class,"deleteTou
 
 
 //----------- Frontend -------------
+
 Route::get('/', [FrontendController::class,'index'])->name('home');
 Route::get('/tour/detail/{id}',[FrontendController::class,'tourDescription'])->name('tourDescription');
 Route::get('/tour/{name}',[FrontendController::class,'getTours'])->name('getTours');
@@ -55,19 +65,25 @@ Route::get('/tour/{name}',[FrontendController::class,'getTours'])->name('getTour
 
 
 //=========== classic tours==========
+
 Route::get('/Bv', [ClassicTour::class, 'getClasicTours']);
 Route::get('/getClassicTour/{id}', [ClassicTour::class, 'getClassicTour']);
 
-//=====gurantee Tour=====
+//=====gurantee Tour===========
+
 Route::get('/guaranteeTour',[GuranteeTour::class,'getTours']);
 
 //=========Gastro Tours=========
+
+
 Route::get('/GastroTours',[GastroTour::class,'getTours']);
 
 //=========Active Tours=========
+
 Route::get('/activeTours', [ActiveTour::class, 'getTours']);
 
 //=======theme tours==========
+
 Route::get('/themed',[ThemedTour::class,'getTours']);
 
 Route::get('/check', [TourController::class, 'index']);
@@ -85,6 +101,7 @@ Route::delete('/car/delete/{id}', [CarController::class, 'destroy']);
 
 
 //========Admin CarAirport=========
+
 Route::get('/admin/CarAtAirport',[CarAirportController::class,'index']);
 Route::get('/admin/CarAtAirport/create',[CarAirportController::class,'create']);
 Route::get('/admin/CarAtAirport/{id}',[CarAirportController::class,'show']);
@@ -92,6 +109,22 @@ Route::post('/admin/CarAtAirport/store',[CarAirportController::class,'store']);
 Route::get('/admin/CarAtAirport/edit/{id}',[CarAirportController::class,'edit']);
 Route::put('/admin/CarAtAirport/update/{id}',[CarAirportController::class,'update']);
 
+
+
+//==========Admin Accessiories=========
+
+Route::get('/admin/Accessiories',[AccessioriesController::class,'index']);
+Route::get('/admin/accessiories/create',[AccessioriesController::class,'create']);
+Route::get('/admin/accessiories/{id}',[AccessioriesController::class,'show']);
+Route::post('/admin/accessiories/store',[AccessioriesController::class,'store']);
+Route::get('/admin/accessiories/edit/{id}',[AccessioriesController::class,'edit']);
+Route::put('/admin/accessiories/update/{id}',[AccessioriesController::class,'update']);
+Route::delete('/admin/accessiories/delete/{id}',[AccessioriesController::class,'destroy']);
+
+
+//==========Frontend Accessiories=========
+Route::get('/acs',[AccessioriesController::class,'getAccessiories']);
+Route::get('/ac/{id}',[AccessioriesController::class,'getAccessioriesDetails']);
 
 
 //========Frontend CarAirport=========
@@ -166,15 +199,9 @@ Route::get('/RF', function () {
     return view('Frontend.Cars.RentACarForm');
 });
 
-Route::get('/acs', function () {
-    return view('Frontend.TourAccesories.Accesories');
-});
 
 
 
-Route::get('/ac', function () {
-    return view('Frontend.TourAccesories.Accesiorieses');
-});
 
 Route::get('/TentForm', function () {
     return view('Frontend.TourAccesories.TentForm');
@@ -328,9 +355,6 @@ Route::get('/admin/TravelBlog', function () {
     return view('Backend.Admin.Armenia.TravelBlog.view');
 });
 
-Route::get('/admin/Accessiories', function () {
-    return view('Backend.Admin.Services.Accessiories.view');
-});
 
 
 Route::get('/admin/CarWithDriver', function () {
@@ -358,18 +382,11 @@ Route::get('/admin/thingstoSeeCreate', function () {
     return view('Backend.Admin.Armenia.ThingsToSee.create');
 });
 
-Route::get('/admin/accCreate', function () {
-    return view('Backend.Admin.Services.Accessiories.create');
-});
-
 
 Route::get('/admin/createHotel', function () {
     return view('Backend.Admin.Services.Hotels.create');
 });
 
-Route::get('/admin/createCar', function () {
-    return view('Backend.Admin.Services.Car.create');
-});
 
 Route::get('/admin/createMice', function () {
     return view('Backend.Admin.Services.MICE.create');
@@ -397,9 +414,6 @@ Route::get('/admin/UpdateCarWithDriver', function () {
 });
 
 
-Route::get('/admin/UpdateCarAtAirport', function () {
-    return view('Backend.Admin.Services.CarAtAirport.update');
-});
 
 
 Route::get('/admin/updateHotel', function () {
@@ -408,9 +422,6 @@ Route::get('/admin/updateHotel', function () {
 
 
 
-Route::get('/admin/updateAccessiories', function () {
-    return view('Backend.Admin.Services.Accessiories.update');
-});
 
 
 Route::get('/admin/updateMice', function () {

@@ -34,7 +34,7 @@ class AccessioriesController extends Controller
         $a->one_week_price = $request->one_week_price;
         $a->one_month_price = $request->one_month_price;
         $a->save();
-        return redirect()->back()->with("msg", "Upadated successfully!")
+        return redirect()->back()->with("msg", "Created successfully!")
         ->with("success", true);
     }
 
@@ -45,7 +45,7 @@ class AccessioriesController extends Controller
 
         $a = Accessiories::find($id);
         return view('Backend.Admin.Services.Accessiories.show', compact('a'));
-        
+
     }
 
   
@@ -83,4 +83,22 @@ class AccessioriesController extends Controller
         ->with("success", true);
 
     }
+
+
+    //get the datas on frontend for the accessiories pass compact
+    public function getAccessiories()
+    {
+        $a = Accessiories::all();
+        return view('Frontend.TourAccesories.Accesories', compact('a'));
+    }
+
+    //get the details of the selected accessiories
+    public function getAccessioriesDetails($id)
+    {
+        $a = Accessiories::find($id);
+        return view('Frontend.TourAccesories.Accesiorieses', compact('a'));
+    }
+
+    
+    
 }

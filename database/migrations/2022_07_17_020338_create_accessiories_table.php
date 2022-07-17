@@ -15,15 +15,15 @@ class CreateAccessioriesTable extends Migration
     {
         Schema::create('accessiories', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('description');
-            $table->string('availability');
-            $table->string('type');
-            $table->string('total_pax');
-            $table->string('free_cancellation');
-            $table->string('one_day_price');
-            $table->string('one_week_price');
-            $table->string('one_month_price');
+            $table->string('name')->nullable();
+            $table->string('description')->nullable();
+            $table->string('availability')->nullable();
+            $table->string('type')->nullable();
+            $table->string('total_pax')->nullable();
+            $table->string('free_cancellation')->nullable();
+            $table->string('one_day_price')->nullable();
+            $table->string('one_week_price')->nullable();
+            $table->string('one_month_price')->nullable();
             $table->timestamps();
         });
     }

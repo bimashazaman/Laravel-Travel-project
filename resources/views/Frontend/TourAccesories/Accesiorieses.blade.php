@@ -120,11 +120,15 @@
 
                     <div class="detailespackage">
                         <div style="float: left"><i class="fa-solid fa-person-hiking"></i>Type</div>
-                        <div>grdfgf</div>
+                        <div>
+                            {{ $a->type }}
+                        </div>
                     </div>
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-person"></i>Per Pax</div>
-                        <div> seats</div>
+                        <div>
+                            {{ $a->total_pax }}
+                        </div>
                     </div>
 
                     <div class="detailespackage">
@@ -132,12 +136,14 @@
                             Available
                         </div>
                         <div>
-                            year
+                            {{ $a->availability }}
                         </div>
                     </div>
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>
-                        <div>bfhf</div>
+                        <div>
+                            {{ $a->free_cancellation }}
+                        </div>
                     </div>
 
 
@@ -175,15 +181,21 @@
                     <tr>
                         <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Day</th>
                         <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Week</th>
-                        <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Mounth</th>
+                        <th style="text-align: center; margin-bottom:10px; background-color: #FFF1EA">1 Month</th>
 
                     </tr>
                 </thead>
                 <tbody>
                     <tr>
-                        <td>25000</td>
-                        <td> 35000</td>
-                        <td>45000</td>
+                        <td>
+                            {{ $a->one_day_price }}
+                        </td>
+                        <td>
+                            {{ $a->one_week_price }}
+                        </td>
+                        <td>
+                            {{ $a->one_month_price }}
+                        </td>
 
                     </tr>
 
