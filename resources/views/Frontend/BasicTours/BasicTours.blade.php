@@ -59,7 +59,7 @@
                                 <div class="package-txt" style="margin-left: -7%;">
                                     <h4>
                                         <a href="#" style="margin-left: 15%;font-weight: 400; font-size: 1.5rem;">
-                                            package one
+                                            {{ $item->type }}
                                         </a>
                                     </h4>
                                     <p class="kki">

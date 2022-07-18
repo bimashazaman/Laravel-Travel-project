@@ -22,7 +22,7 @@
                          <div>
                              <h4 class="package-txt">
                                  <a href="#">
-                                     package one
+                                     {{ $tour->type }}
                                  </a>
                              </h4>
                              <p class="kki">
@@ -50,7 +50,7 @@
                              <span class=""><i class="fa-solid fa-star"></i></span>
                          </div>
                          <div class="package-btn">
-                             <a href="{{ url('/tour/detail/{id}') }}"> <button class="package-view">
+                             <a href="{{ url('/Bv') }}"> <button class="package-view">
                                      Details
                                  </button>
                              </a>

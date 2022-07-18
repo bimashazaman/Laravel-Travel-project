@@ -60,11 +60,11 @@ a,
 a:hover,
 a:active,
 a:focus {
-    display: inline-block;
+    /* display: inline-block;
     text-decoration: none;
-    font-size: 13px;
-    padding: 0;
-    margin: 0;
+    font-size: 13px; */
+    /* padding: 0;
+    margin: 0; */
 }
 
 h1,
@@ -186,6 +186,14 @@ body {
     font-weight: 600;
     color: rgb(17, 16, 16);
     margin-bottom: 20px;
+}
+
+.mewmew {
+    margin:10px; color:black; font-size:17px;
+}
+
+.plusImg {
+    width: 24px; margin-right: 10px;
 }
 
 .overview p {

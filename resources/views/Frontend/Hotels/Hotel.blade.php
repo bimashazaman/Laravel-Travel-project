@@ -259,17 +259,29 @@
                     <img src="{{ asset('images/usefull.png') }}" alt="">
                 </div>
                 <div class="col-md-6">
-                    <h3 style="padding-top: 50px; padding-left: 100px; color: white">
+                    {{-- <img src="{{ asset('images/i.png') }}" alt="" style="width: 80%"> --}}
+                    <br>
+                    <h3>
                         What is included
                     </h3>
                     <br>
-                    <ul style="padding-left: 100px; list-style:none">
-                        <li style="color: white">
-                            <i class="fa-regular fa-square-plus" style="margin-right: 10px; color:#e5a686;"></i> Lorem
-                            ipsum dolor sit.
-                        </li>
+                    <ul style="list-style: none">
+        
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
                     </ul>
-
                 </div>
             </div>
         </div>
@@ -432,16 +444,17 @@
                         </div>
 
                     </div>
+                    <br>
+                    <br>
+                    <br>
+                   
+                    <center style="margin: 20px">
+                        <h2>
+                            Related Hotels
+                        </h2>
+                    </center>
 
-                    <div>
-                        <br>
-                        <br>
-                        <br>
-                        <h3 style="text-align: center; padding:50px; margin-top:40px">
-                            What to do nearby
-                        </h3>
-                    </div>
-
+                  <div class="row">
                     <div class="col-md-4 col-sm-6">
 
                         <div class="single-package-item" style="background-color:white">
@@ -583,6 +596,7 @@
                         </div>
 
                     </div>
+                  </div>
                 </div>
                 <!--/.row-->
             </div>

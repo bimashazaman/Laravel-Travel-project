@@ -60,6 +60,7 @@ class TourController extends Controller
 
         $validate = Validator::make($request->all(), [
             "name" => "required|string",
+            "type" => "required|string",
             "category_id" => "required|integer",
             "destination_id" => "required|integer",
             "duration" => "required",

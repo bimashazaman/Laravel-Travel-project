@@ -76,6 +76,9 @@
                 <div class="d-flex justify-content-between">
                     <div class="col-md-3">
                         <div class="mb-3">
+                           Type
+                        </div>
+                        <div class="mb-3">
                             Price
                         </div>
                         <div class="mb-3">
@@ -98,6 +101,9 @@
                         </div>
                     </div>
                     <div class="col-md-2">
+                        <div class="mb-3">
+                            {{ $tour->type }}
+                        </div>
                         <div class="mb-3">
                             {{ $tour->price }}
                         </div>

@@ -1,14 +1,14 @@
 @extends('layouts.master')
 @section('content')
-<div class="fullBanner">
-    @include('partials.DefaultBanner')
-</div>
+    <div class="fullBanner">
+        @include('partials.DefaultBanner')
+    </div>
 
 
 
 
     <!-- Tour description start -->
-    <section class="tour-descriptions">
+    <section class="tour-descriptions" style="padding-left: 40px;padding-right: 40px;margin-top: -59px;">
 
         <div class="row">
             <div class="col-md-7">
@@ -112,85 +112,112 @@
 
                             </section>
                         </div><!-- /.tour-_descriptions-content-inner-right -->
-                       
+
                     </div><!-- /.tour-descriptions-content-inner -->
                 </div><!-- /.tour-descriptions-content -->
             </div><!-- /.col -->
             <div class="col-md-5 tour-descriptions-content-inner-left-content-title">
                 <div class="row">
                     <div class="col-md-12">
-                    <h2>
-                    Key Points
-                </h2>
+                        <br>
+                        <h2>
+                            Key Points
+                        </h2>
 
 
-               <div>
-                <div class="detailespackage" style="justify-content:space-between">
-                    <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>  <div>Sedan</div>
-                </div>
-                <div class="detailespackage" style="justify-content:space-between">
-                    <div><i class="fa-solid fa-person"></i>Number of seats</div> <div>3 seats</div>
-                </div>
+                        <div>
+                            <div class="detailespackage" style="justify-content:space-between">
+                                <div style="float: left"><i class="fa-solid fa-calendar"></i>
+                                    Period
+                                </div>
+                                <div>
+                                    7th c
+                                </div>
+                            </div>
+                            <div class="detailespackage" style="justify-content:space-between">
+                                <div><i class="fa-solid fa-location-dot"></i>
+                                Settlement
+                                </div>
+                                <div>3 seats</div>
+                            </div>
 
-                <div class="detailespackage" style="justify-content:space-between">
-                    <div><i class="fa-solid fa-calendar-check"></i>Year</div>  <div>2004 Air conditionar</div>
-                </div>
+                            <div class="detailespackage" style="justify-content:space-between">
+                                <div><i class="fa-solid fa-clock"></i>
+                                From yerevan
+                                </div>
+                                <div>2004 Air conditionar</div>
+                            </div>
 
-                <div class="detailespackage" style="justify-content:space-between">
-                    <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>  <div>3 days ago</div>
-                </div>
+                            <div class="detailespackage" style="justify-content:space-between">
+                                <div><i class="fa-solid fa-file"></i>
+                                    Working Hours
+                                </div>
+                                <div>3 days ago</div>
+                            </div>
+                            <div class="detailespackage" style="justify-content:space-between">
+                                <div><i class="fa-solid fa-dollar-sign"></i>
+                                    Enterence
+                                </div>
+                                <div>3 days ago</div>
+                            </div>
+                        </div>
+
                     </div>
 
+
                 </div>
-               
+                <br>
 
-               </div>
-
-               <div class="row" style="height:420px">
-                    <div class="col-md-12" style="height:100%">
-                    <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height ="100%"
-                    frameborder="0" allowfullscreen></iframe>
+                <div class="row" style="">
+                    <div class="col-md-12">
+                        {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height ="100%"
+                    frameborder="0" allowfullscreen></iframe> --}}
+                        <img src="{{ asset('images/map.png') }}" alt="" style="height:310px; width: 530px;">
                     </div>
                 </div>
-                
-                
 
-                    <br>
-                    <br>
-                </div><!-- /.tour-descriptions-content-inner-left-content-title -->
 
-            </div><!-- /.row -->
+
+                <br>
+                <br>
+            </div><!-- /.tour-descriptions-content-inner-left-content-title -->
+
+        </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.tour-descriptions -->
     <!-- Tour description end -->
 
+    <div class="row">
 
-    <section class="carDes">
-        <h2>
-            Overview
-        </h2>
-        <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cum hic totam ducimus repudiandae in cupiditate
-            deleniti velit accusantium ut consequuntur tempora veritatis explicabo dignissimos quaerat, eius illum alias id
-            nihil placeat inventore voluptate animi natus nam. Veritatis quaerat doloremque asperiores, in ad provident,
-            quae ut sunt delectus quibusdam voluptate, perspiciatis recusandae officiis! Fugiat voluptate neque optio
-            reprehenderit magni eveniet eum suscipit quam, ducimus, odio ex sed vero dolorum! Ratione.
-        </p>
-    </section>
+        <section class="carDes">
+            <h2>
+                Overview
+            </h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cum hic totam ducimus repudiandae in
+                cupiditate
+                deleniti velit accusantium ut consequuntur tempora veritatis explicabo dignissimos quaerat, eius illum alias
+                id
+                nihil placeat inventore voluptate animi natus nam. Veritatis quaerat doloremque asperiores, in ad provident,
+                quae ut sunt delectus quibusdam voluptate, perspiciatis recusandae officiis! Fugiat voluptate neque optio
+                reprehenderit magni eveniet eum suscipit quam, ducimus, odio ex sed vero dolorum! Ratione.
+            </p>
+        </section>
+    </div>
 
 
     <section id="pack" class="packages">
         <div class="container">
-   
+
             <!--/.gallery-header-->
             <div class="packages-content">
                 <div class="row">
-   
+
                     <div class="col-md-4 col-sm-6">
-                        
-   
+
+
                         <div class="single-package-item">
-   
+
                             <img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                 alt="package-place">
                             <div class="packageName">
@@ -211,11 +238,11 @@
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
                                 </div>
-   
+
                                 <div class="packageOffer">
                                     <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
                                 </div>
-   
+
                                 <div class="packageOffer">
                                     <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
                                 </div>
@@ -229,26 +256,26 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/pageSee') }}"> <button class="package-view">
-                                      More
+                                        More
                                     </button>
                                 </a>
-   
+
                             </div>
-   
-   
-   
+
+
+
                         </div>
-   
+
                         <!--/.single-package-item-->
-   
+
                     </div>
-   
+
                     <!--/.col-->
-   
+
                     <div class="col-md-4 col-sm-6">
-                        
+
                         <div class="single-package-item">
-   
+
                             <img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                 alt="package-place">
                             <div class="packageName">
@@ -266,18 +293,18 @@
                                 </p>
                             </div>
                             <div class="pacdet">
-                               <div class="packageOffer">
-                                   <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                               </div>
-   
-                               <div class="packageOffer">
-                                   <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                               </div>
-   
-                               <div class="packageOffer">
-                                   <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                               </div>
-                           </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                                </div>
+
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                                </div>
+
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                                </div>
+                            </div>
                             <div class="rating">
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
@@ -287,23 +314,23 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/pageSee') }}"> <button class="package-view">
-                                      More
+                                        More
                                     </button>
                                 </a>
-   
+
                             </div>
-   
-   
-   
+
+
+
                         </div>
                         <!--/.single-package-item-->
-   
+
                     </div>
                     <!--/.col-->
                     <div class="col-md-4 col-sm-6">
-                        
+
                         <div class="single-package-item">
-   
+
                             <img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                 alt="package-place">
                             <div class="packageName">
@@ -321,18 +348,18 @@
                                 </p>
                             </div>
                             <div class="pacdet">
-                               <div class="packageOffer">
-                                   <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
-                               </div>
-   
-                               <div class="packageOffer">
-                                   <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
-                               </div>
-   
-                               <div class="packageOffer">
-                                   <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
-                               </div>
-                           </div>
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span>4 Days / 3 Days
+                                </div>
+
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-calendar-check"></i></span>10 - 15 Feb
+                                </div>
+
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$1,000
+                                </div>
+                            </div>
                             <div class="rating">
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                                 <span class=""><i class="fa-solid fa-star"></i></span>
@@ -342,24 +369,24 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/pageSee') }}"> <button class="package-view">
-                                      More
+                                        More
                                     </button>
                                 </a>
                             </div>
-   
-   
-   
+
+
+
                         </div>
                         <!--/.single-package-item-->
-   
+
                     </div>
-   
-   
+
+
                 </div>
                 <!--/.row-->
                 <div class="row">
                     <div class="col-md-12">
-                        
+
                     </div>
                 </div>
             </div>
@@ -367,11 +394,4 @@
         </div>
         <!--/.container-->
     </section>
-
-    
-
-
-
-
-
 @endsection

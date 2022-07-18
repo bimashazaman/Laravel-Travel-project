@@ -18,10 +18,11 @@ class CreateToursTable extends Migration
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('destination_id');
             $table->string("name");
+            $table->string("type")->default("hiking");
             $table->string("duration");
             $table->string('start_date');
-            $table->string('end_date');
-            $table->double("price");
+            $table->string('end_date')->nullable();
+            $table->string("price");
             $table->string("one_day_price");
             $table->string("one_week_price");
             $table->string("one_month_price");
