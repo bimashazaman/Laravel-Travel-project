@@ -13,6 +13,7 @@ use App\Http\Controllers\HotelController;
 use App\Http\Controllers\MiceController;
 use App\Http\Controllers\ThemedTour;
 use App\Http\Controllers\TourController;
+use App\Http\Controllers\TourEventController;
 use App\Models\Accessiories;
 use Illuminate\Support\Facades\Route;
 
@@ -141,6 +142,19 @@ Route::post('/admin/Mice/store',[MiceController::class,'store']);
 Route::put('/admin/Mice/update/{id}',[MiceController::class,'update']);
 Route::delete('/admin/Mice/delete/{id}',[MiceController::class,'destroy']);
 
+//===========Admin Tour Events=========
+
+Route::get('/admin/events',[TourEventController::class,'index']);
+Route::get('/admin/events/create',[TourEventController::class,'create']);
+Route::get('/admin/events/{id}',[TourEventController::class,'show']);
+Route::post('/admin/events/store',[TourEventController::class,'store']);
+Route::put('/admin/events/update/{id}',[TourEventController::class,'update']);
+Route::delete('/admin/events/delete/{id}',[TourEventController::class,'destroy']);
+
+//===========Frontend Tour Events=========
+Route::get('/cs',[TourEventController::class,'showFrontend']);
+Route::get('/c',[TourEventController::class,'showFrontendDetails']);
+
 
 //==========Frontend Hotel=========
 
@@ -262,14 +276,6 @@ Route::get('/RenACar', function () {
 });
 
 
-Route::get('/c', function () {
-    return view('Frontend.Conferences.Conference');
-});
-
-Route::get('/cs', function () {
-    return view('Frontend.Conferences.Conferences');
-});
-
 
 
 
@@ -363,9 +369,7 @@ Route::get('/admin/usefulToKnow', function () {
     return view('Backend.Admin.Armenia.Informations.view');
 });
 
-Route::get('/admin/events', function () {
-    return view('Backend.Admin.Armenia.Events.view');
-});
+
 
 Route::get('/admin/brochure', function () {
     return view('Backend.Admin.Armenia.Brochure.view');
@@ -438,9 +442,7 @@ Route::get('/admin/updateHotel', function () {
 Route::get('/admin/createBrochur', function () {
     return view('Backend.Admin.Armenia.Brochure.create');
 });
-Route::get('/admin/createEvent', function () {
-    return view('Backend.Admin.Armenia.Events.create');
-});
+
 
 Route::get('/admin/createFD', function () {
     return view('Backend.Admin.Armenia.FoodAndDrink.create');
@@ -476,9 +478,6 @@ Route::get('/admin/Brochure', function () {
     return view('Backend.Admin.Armenia.Brochure.update');
 });
 
-Route::get('/admin/updateEvent', function () {
-    return view('Backend.Admin.Armenia.Events.update');
-});
 
 Route::get('/admin/updateFoodAndDrnk', function () {
     return view('Backend.Admin.Armenia.FoodAndDrink.update');

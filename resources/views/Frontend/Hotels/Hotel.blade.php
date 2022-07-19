@@ -6,7 +6,7 @@
 
 
     <!-- Tour description start -->
-    <section class="tour-descriptions" style="padding: 40px">
+    <section class="tour-descriptions" style="padding: 40px; margin-top: -92px;">
 
         <div class="row">
             <div class="col-md-7">
@@ -194,38 +194,75 @@
     <section class="tableOfPrice" style="background-color: #F5F5F5; padding:60px">
         <div class="container">
             <h3 style="text-align: center; margin-bottom:10px">
-                The price table
+                The price Per 1 Pax
             </h3>
             <h4 style="text-transform: none;">
-                For individual tours if the group are:
+                For individual tours if in the group are:
             </h4>
             <br>
             <table class="table table-bordered tble" style="margin: auto">
-                <thead>
-                    <tr>
-                        <th style="background-color: #FFF1E9">1 Day</th>
-                        <th>1 Week</th>
-                        <th>1 Mounth</th>
-
-                    </tr>
-                </thead>
+                
+           
                 <tbody>
                     <tr>
-                        <td style="background-color: #FFF1E9">Mark</td>
-                        <td>Mark</td>
-                        <td>Otto</td>
+                        <td style="background-color: #FFF1E9">
+                        Stadart
+                        <div>
+                             SGL
+                        </div>
+                        </td>
+                        <td>
+                            5000 AMD
+                        </td>
+                        <td>
+                            5000 AMD
+                        </td>
 
                     </tr>
                     <tr>
-                        <td style="background-color: #FFF1E9">Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td style="background-color: #FFF1E9">
+                            
+                                Stadart
+                            <div>
+                                DBL
+                            </div>
+                            
+                        
+                        </td>
+                        <td>
+                            5000 AMD
+                        </td>
+                        <td>
+                            5000 AMD
+                        </td>
 
                     </tr>
                     <tr>
-                        <td style="background-color: #FFF1E9">Jacob</td>
-                        <td>Thornton</td>
-                        <td>@fat</td>
+                        <td style="background-color: #FFF1E9">
+                            Stadart
+                            <div>
+                                TWN
+                            </div>
+                        </td>
+                        <td>
+                            5000 AMD
+                        </td>
+                        <td>
+                            5000 AMD
+                        </td>
+
+                    </tr>
+
+                    <tr>
+                        <td style="background-color: #FFF1E9">
+                            Luxe
+                        </td>
+                        <td>
+                            5000 AMD
+                        </td>
+                        <td>
+                            5000 AMD
+                        </td>
 
                     </tr>
 
@@ -296,7 +333,7 @@
         <div class="container">
             <div class="gallary-header text-center">
                 <h2>
-                    Related Hotels
+                    What to eat nearby
                 </h2>
 
             </div>
@@ -442,7 +479,7 @@
                                 </button>
                             </a>
                         </div>
-
+                        <br>
                     </div>
                     <br>
                     <br>
@@ -450,7 +487,7 @@
                    
                     <center style="margin: 20px">
                         <h2>
-                            Related Hotels
+                            What to do nearby
                         </h2>
                     </center>
 

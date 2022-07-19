@@ -7,7 +7,7 @@
                 <div class="card-header">
                     <h4 class="card-title float-start">Events</h4>
                     <button class="btn btn-info" style="color: white; margin-left:15px">
-                        <a href="{{ url('/admin/createEvent') }}" style="color: white">
+                        <a href="{{ url('/admin/events/create') }}" style="color: white">
                             <i class="fa fa-plus" style="color: white"></i>
                             Add Event
                         </a>
@@ -27,23 +27,39 @@
                             <thead>
                                 <tr>
                                     <th>Name</th>
-                                    <th class="text-center">Start Date</th>
-                                    <th class="text-center">End Date</th>
+                                    <th class="text-center">Location</th>
+                                    <th class="text-center">Time</th>
                                     <th class="text-center">Price</th>
-                                    <th class="text-end">Status</th>
+                                    <th class="text-center">Distance</th>
+                                    <th class="text-center">Duration</th>
+                                    <th class="text-center">Period</th>
+                                    <th class="text-end">action</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                @foreach ($tour_events as $t )
                                 <tr>
 
-                                    <td class="text-nowrap">Dummy Name</td>
-                                    <td class="text-center">22-02-2002</td>
-                                    <td class="text-center">
-                                        02-02-2002
+                                    <td class="text-nowrap">
+                                        {{ $t->name }}
                                     </td>
                                     <td class="text-center">
-                                        7000 AMD
+                                        {{ $t->location }}
+                                    </td>
+                                    <td class="text-center">
+                                        {{ $t->time }}
+                                    </td>
+                                    <td class="text-center">
+                                        {{ $t->distance }}
+                                    </td>
+                                    <td class="text-center">
+                                        {{ $t->duration }}
+                                    </td>
+                                    <td class="text-center">
+                                        {{ $t->period }}
+                                    </td>
+                                    <td class="text-center">
+                                        {{ $t->price }}
                                     </td>
                                     <td class="text-end">
                                         <div class="font-weight-600 text-danger">
@@ -62,7 +78,9 @@
                                             </span>
                                         </div>
                                     </td>
-                                </tr>
+                                </tr> 
+                                @endforeach
+                              
                                
                                 
                             </tbody>

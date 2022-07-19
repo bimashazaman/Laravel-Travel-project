@@ -145,55 +145,47 @@
                 <div class="tour-descriptions-content-inner-left-content-title bb">
 
                     <!--Google map-->
-                    <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 400px; width: 85%">
+                    <div id="map-container-google-1" class="z-depth-1-half map-container" style=" width: 85%; height: 577px;">
                         {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
                             frameborder="0" style="border:0" allowfullscreen></iframe> --}}
 
-                        <img src="{{ asset('images/Tour.png') }}" alt="">
-                    </div>
+                        <img src="{{ asset('images/Tour.png') }}" alt="" style="height: 577px;">
 
+                                
 
-                    <div class="blah">
-
-                        <h3 style="color:white; padding-top:30px">
-                            Itenanary
-                        </h3>
-                        <p style="color:white; font-size: 1.4rem;  font-weight: 300; padding-top:15px">
-                            If you are planning your first trip to Armenia this tour package is
-
-                            just for you! The itinerary gives you opportunity to discover the
-                            country: traditions, lots of interesting historic facts, visit the most
-
-
-
-                            lorem50 important historic, cultural and religious centers, communicate
-                            with local people. As presumed, our tour has gastronomic
-                            emphasis and you can taste old, originally Armenian national
-                            dishes made from natural products, even take part in baking
-                            process of Armenian national bread - lavash and learn how to
-                            cook Sevan goods from a real chef. We will not forget about the
-                            drinks - you will observe the preparation process of Armenian
-                            wine and legendary brandy (Cognac), as well as taste it.
-
-                            lorem50 important historic, cultural and religious centers, communicate
-                            with local people. As presumed, our tour has gastronomic
-                            emphasis and you can taste old, originally Armenian national
-                            dishes made from natural products, even take part in baking
-                            process of Armenian national bread - lavash and learn how to
-                            cook Sevan goods from a real chef. We will not forget about the
-                            drinks - you will observe the preparation process of Armenian
-                            wine and legendary brandy (Cognac), as well as taste it.
-
-                            lorem50 important historic, cultural and religious centers, communicate
-                            with local people. As presumed, our tour has gastronomic
-                            emphasis and you can taste old, originally Armenian national
-
-                        </p>
-                    </div>
-
+                       
 
                 </div><!-- /.tour-descriptions-content-inner-left-content-title -->
             </div><!-- /.row -->
+            <div class="tour-descriptions-content-inner-left-content-title bb">
+                <h2>
+                    Key Points
+                </h2>
+
+
+                <div class="detailespackage">
+                    <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>  <div>lkgd</div>
+                </div>
+                <div class="detailespackage">
+                    <div><i class="fa-solid fa-person"></i>Number of seats</div> <div> seats</div>
+                </div>
+
+                <div class="detailespackage">
+                    <div><i class="fa-solid fa-calendar-check"></i>Year</div>  <div>
+                        hjnfg
+                    </div>
+                </div>
+
+                <div class="detailespackage">
+                    <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>  <div>
+                        fkvdfv
+                    </div>
+                </div>
+
+
+            </div><!-- /.tour-descriptions-content-inner-left-content-title -->
+       
+
         </div><!-- /.container -->
     </section><!-- /.tour-descriptions -->
     <!-- Tour description end -->
@@ -279,11 +271,11 @@
 
 
             </div>
-            <div style="margin-left: 30px; padding-left: 50px">
+            {{-- <div style="margin-left: 30px; padding-left: 50px">
                 <span style="color: #e5a686; font-size: 25px; font-weight:500; margin-right:24px">$</span>
                 <span style="font-size: 20px; font-weight:400; margin-right:24px">Price</span>
                 <span style="font-size: 20px; font-weight:600;">250$</span>
-            </div>
+            </div> --}}
             <div style="margin: 30px; padding-left: 50px">
                 <button class="package-view">
                     Tour Request
@@ -314,6 +306,8 @@
                 <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
                             style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
             </ul>
+            <br>
+            <br>
         </div>
     </div>
 

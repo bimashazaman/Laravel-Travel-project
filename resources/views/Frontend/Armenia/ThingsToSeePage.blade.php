@@ -117,6 +117,18 @@
                 </div><!-- /.tour-descriptions-content -->
             </div><!-- /.col -->
             <div class="col-md-5 tour-descriptions-content-inner-left-content-title">
+                
+               
+                
+
+                <div class="row" style="">
+                    <div class="col-md-12">
+                        {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height ="100%"
+                    frameborder="0" allowfullscreen></iframe> --}}
+                        <img src="{{ asset('images/map.png') }}" alt="" style="height:310px; width: 530px; margin-top: 52px;">
+                    </div>
+                </div>
+                <br>
                 <div class="row">
                     <div class="col-md-12">
                         <br>
@@ -166,16 +178,6 @@
 
 
                 </div>
-                <br>
-
-                <div class="row" style="">
-                    <div class="col-md-12">
-                        {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height ="100%"
-                    frameborder="0" allowfullscreen></iframe> --}}
-                        <img src="{{ asset('images/map.png') }}" alt="" style="height:310px; width: 530px;">
-                    </div>
-                </div>
-
 
 
                 <br>
