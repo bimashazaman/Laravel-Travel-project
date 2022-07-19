@@ -76,10 +76,9 @@
                                      </a>
                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                          <a class="dropdown-item ru" href="{{ url('/c2') }}">Who are we</a>
-                                         <a class="dropdown-item ru" href="{{ url('/ways') }}">3 ways to book a
-                                             tour</a>
-                                         <a class="dropdown-item ru" href="{{ url('/privacy') }}">Privacy Policy</a>
-                                         <a class="dropdown-item ru" href="">Vacancy</a>
+                                         <a class="dropdown-item ru" href="{{ url('/ways') }}">How To Book A Tour</a>
+                                         {{-- <a class="dropdown-item ru" href="{{ url('/privacy') }}">Privacy Policy</a> --}}
+                                         <a class="dropdown-item ru" href="{{ url('/vacancy') }}">Vacancy</a>
                                          <a class="dropdown-item ru" href="{{ url('/review') }}">Reviews</a>
                                          <a class="dropdown-item ru" href="{{ url('/contact') }}">Contact us</a>
                                      </div>

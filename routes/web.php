@@ -202,6 +202,13 @@ Route::get('/ways', function () {
 });
 
 
+Route::get('/vacancy', function () {
+    return view('Frontend.Vacancy.vacancy');
+});
+
+
+
+
 
 
 
@@ -337,6 +344,11 @@ Route::get('/todoSorrounding', function () {
 Route::get('/review', function () {
     return view('Frontend.About.reviews');
 });
+
+Route::get('/AddReview', function () {
+    return view('Frontend.Reviews.AddReview');
+});
+
 
 Route::get('/pageSee', function () {
     return view('Frontend.Armenia.ThingsToSeePage');

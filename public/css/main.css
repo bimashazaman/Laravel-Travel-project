@@ -2641,11 +2641,11 @@ body {
 .list-timeline.list-timeline-warning .list-timeline-item.active:before,
 .list-timeline.list-timeline-warning .list-timeline-item.show:before,
 .list-timeline.list-timeline-warning:before {
-    background: #ffc107;
+    background: #d38621;
 }
 
 .list-timeline.list-timeline-warning .list-timeline-item:before {
-    border-color: #ffc107;
+    border-color: #d38621;
 }
 
 .list-timeline.list-timeline-danger .list-timeline-item.active:before,
@@ -3682,4 +3682,82 @@ body {
 
 
 
-      
+      .star-rating form {
+        display: none;
+    }
+    .star-rating .thanks-msg {
+        display: none;
+        font-size: 20px;
+        margin: 40px auto;
+        color: #4caf50;
+        background-color: rgba(76, 175, 80, 0.1411764705882353);
+        padding: 8px 20px;
+        border-left: 3px solid #4caf50;
+        border-radius: 20px;
+    }
+    .star-rating input {
+        display: none;
+    }
+    .star-rating {
+        margin: -4px;
+        
+    }
+    .star-rating label {
+        padding: 1px;
+    float: right;
+    font-size: 20px;
+        color: rgb(185, 184, 184);
+    }
+    .star-rating input:not(:checked) ~ label:hover,
+    .star-rating input:not(:checked) ~ label:hover ~ label {
+        color: #d38621;
+    }
+    .star-rating input:checked ~ label {
+        color: #d38621;
+    }
+    .star-rating form .rating-reaction:before {
+        width: 100%;
+        float: left;
+        color: #d38621;
+    }
+    .star-rating #rating-1:checked ~ form .rating-reaction:before {
+        content: "I hate it";
+    }
+    .star-rating #rating-2:checked ~ form .rating-reaction:before {
+        content: "I don't like it";
+    }
+    .star-rating #rating-3:checked ~ form .rating-reaction:before {
+        content: "It is good";
+    }
+    .star-rating #rating-4:checked ~ form .rating-reaction:before {
+        content: "I like it";
+    }
+    .star-rating #rating-5:checked ~ form .rating-reaction:before {
+        content: "I love it";
+    }
+    .star-rating input:checked ~ form {
+        border-top: 1px solid #ddd;
+        width: 100%;
+        padding-top: 15px;
+        margin-top: 15px;
+        display: inline-block;
+    }
+    .star-rating form .rating-reaction {
+        font-size: 24px;
+        float: left;
+        text-transform: capitalize;
+    }
+    .star-rating form .submit-rating {
+        border: none;
+        outline: none;
+        background: #0e2e72;
+        color: #ffffff;
+        font-size: 18px;
+        border-radius: 4px;
+        padding: 5px 15px;
+        cursor: pointer;
+        float: right;
+    }
+    form .submit-rating:hover {
+        background-color: #333;
+    }

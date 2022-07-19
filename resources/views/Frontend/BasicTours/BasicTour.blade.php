@@ -728,7 +728,7 @@
             </div>
         </div>
         <div class="WR">
-            <a class="WR" href="" style="text-decoration:underline;">Write Review</a> <i
+            <a class="WR" href="{{ url('/AddReview') }}" style="text-decoration:underline;">Write Review</a> <i
                 class="fa-solid fa-pen-clip" style="text-decoration: none"></i>
         </div>
     </div>
