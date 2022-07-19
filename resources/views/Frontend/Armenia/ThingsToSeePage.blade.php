@@ -206,10 +206,17 @@
             </p>
         </section>
     </div>
+    <br>
 
 
     <section id="pack" class="packages">
         <div class="container">
+
+            <center>
+                <h3>
+                    Related Tours
+                </h3>
+            </center>
 
             <!--/.gallery-header-->
             <div class="packages-content">
