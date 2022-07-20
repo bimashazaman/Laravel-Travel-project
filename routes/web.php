@@ -286,6 +286,12 @@ Route::get('/RenACar', function () {
 
 
 
+Route::get('/article', function () {
+    return view('Frontend.Blogs.Article');
+});
+
+
+
 Route::get('/contact', function () {
     return view('Frontend.Contact.Contact');
 });

@@ -3761,3 +3761,68 @@ body {
     form .submit-rating:hover {
         background-color: #333;
     }
+
+
+    .single-row input[type="radio"] {
+        display: none;
+    }
+
+    .intro {
+        display: block;
+    }
+
+    .arrow {
+        margin-left: 18em;
+        width: 22px;
+        float: right;
+      }
+      
+      .arrow::before {
+        position: absolute;
+        content: '';
+        width: 0;
+        height: 0;
+        border: .5em solid transparent;
+        border-left-color: gray;
+        transform-origin: 0 50%;
+        transition: transform .25s;
+      }
+      
+      .arrow.down::before {
+        transform: rotate(90deg);
+        transition: transform .25s;
+      }
+
+    .intro .fa {
+        -webkit-transform: rotate(-90deg);
+        -moz-transform: rotate(-90deg);
+        -o-transform: rotate(-90deg);
+        transform: rotate(-90deg);
+        -webkit-transition: -webkit-transform 250ms ease-in-out;
+        -moz-transition: -moz-transform 250ms ease-in-out;
+        -o-transition: -o-transform 250ms ease-in-out;
+        transition: transform 250ms ease-in-out;
+    }
+
+    .content {
+        max-height: 0;
+        overflow: hidden;
+        -webkit-transition: max-height 250ms ease-in-out;
+        -moz-transition: max-height 250ms ease-in-out;
+        -o-transition: max-height 250ms ease-in-out;
+        transition: max-height 250ms ease-in-out;
+    }
+
+    .opener:checked+label .content {
+        
+        transition-timing-function: cubic-bezier(0.25, 0.1, 0.25, 1);
+        display: block;
+        max-height: 100%;
+    }
+
+    .opener:checked+label .intro .fa {
+        -webkit-transform: rotate(0);
+        -moz-transform: rotate(0);
+        -o-transform: rotate(0);
+        transform: rotate(0);
+    }

@@ -4,6 +4,7 @@
         @include('partials.DefaultBanner')
     </div>
 
+
     <center>
         <h2>
             {{ $tour->name }}
@@ -145,48 +146,53 @@
                 <div class="tour-descriptions-content-inner-left-content-title bb">
 
                     <!--Google map-->
-                    <div id="map-container-google-1" class="z-depth-1-half map-container" style=" width: 85%; height: 577px;">
+                    <div id="map-container-google-1" class="z-depth-1-half map-container"
+                        style=" width: 85%; height: 577px;">
                         {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
                             frameborder="0" style="border:0" allowfullscreen></iframe> --}}
 
                         <img src="{{ asset('images/Tour.png') }}" alt="" style="height: 577px;">
 
-                                
 
-                       
+
+
+
+                    </div><!-- /.tour-descriptions-content-inner-left-content-title -->
+                </div><!-- /.row -->
+                <div class="tour-descriptions-content-inner-left-content-title bb">
+                    <h2>
+                        Key Points
+                    </h2>
+
+
+                    <div class="detailespackage">
+                        <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>
+                        <div>lkgd</div>
+                    </div>
+                    <div class="detailespackage">
+                        <div><i class="fa-solid fa-person"></i>Number of seats</div>
+                        <div> seats</div>
+                    </div>
+
+                    <div class="detailespackage">
+                        <div><i class="fa-solid fa-calendar-check"></i>Year</div>
+                        <div>
+                            hjnfg
+                        </div>
+                    </div>
+
+                    <div class="detailespackage">
+                        <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>
+                        <div>
+                            fkvdfv
+                        </div>
+                    </div>
+
 
                 </div><!-- /.tour-descriptions-content-inner-left-content-title -->
-            </div><!-- /.row -->
-            <div class="tour-descriptions-content-inner-left-content-title bb">
-                <h2>
-                    Key Points
-                </h2>
 
 
-                <div class="detailespackage">
-                    <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>  <div>lkgd</div>
-                </div>
-                <div class="detailespackage">
-                    <div><i class="fa-solid fa-person"></i>Number of seats</div> <div> seats</div>
-                </div>
-
-                <div class="detailespackage">
-                    <div><i class="fa-solid fa-calendar-check"></i>Year</div>  <div>
-                        hjnfg
-                    </div>
-                </div>
-
-                <div class="detailespackage">
-                    <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>  <div>
-                        fkvdfv
-                    </div>
-                </div>
-
-
-            </div><!-- /.tour-descriptions-content-inner-left-content-title -->
-       
-
-        </div><!-- /.container -->
+            </div><!-- /.container -->
     </section><!-- /.tour-descriptions -->
     <!-- Tour description end -->
 
@@ -233,9 +239,32 @@
                     <h3>
                         Day 1
                     </h3>
-                    <p>
+                    <p style="color: black">
                         india - canada - nepal
                     </p>
+                    <div class="single-row">
+                        <input name="collapsable" type="radio" id="col-1" class="opener" />
+                        <label for="col-1">
+                           <div class="content">
+                                <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint reprehenderit, numquam cumque ut itaque.
+                                </p>
+
+                                <br>
+                                <div style="display: flex"  style="font-size: 1.5rem;font-weight:500 ">
+                                    <span style="font-weight:600"><i class="fa-solid fa-road" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-bed" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                </div>
+                            </div>
+                          
+                            <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}" class="arrow"
+                                alt=""></span>
+                       
+                           
+                        </label>
+                    </div>
 
                     <br>
                     <br>
@@ -246,27 +275,94 @@
                     </h3>
 
 
-                    <p>
+                    <p style="color: black">
                         india - canada - nepal
                     </p>
+
+                    <div class="single-row">
+                        <input name="collapsable" type="radio" id="col-2" class="opener" />
+                        <label for="col-2">
+                           <div class="content">
+                                <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint reprehenderit, numquam cumque ut itaque.
+                                </p>
+
+                                <br>
+                                <div style="display: flex"  style="font-size: 1.5rem;font-weight:500 ">
+                                    <span style="font-weight:600"><i class="fa-solid fa-road" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-bed" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                </div>
+                            </div>
+                            <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}" class="arrow"
+                                    alt=""></span>
+                           
+                        </label>
+                    </div>
 
 
 
                     <h3>
                         Day 3
                     </h3>
-                    <p>
+                    <p style="color: black">
                         india - canada - nepal
                     </p>
+
+                    <div class="single-row">
+                        <input name="collapsable" type="radio" id="col-3" class="opener" />
+                        <label for="col-3">
+                           <div class="content">
+                                <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint reprehenderit, numquam cumque ut itaque.
+                                </p>
+
+                                <br>
+                                <div style="display: flex"  style="font-size: 1.5rem;font-weight:500 ">
+                                    <span style="font-weight:600"><i class="fa-solid fa-road" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-bed" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                </div>
+                            </div>
+                            <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}" class="arrow"
+                                    alt=""></span>
+                           
+                        </label>
+                    </div>
+
+
                     <br>
 
 
                     <h3>
                         Day 4
                     </h3>
-                    <p>
+                    <p style="color: black">
                         india - canada - nepal
                     </p>
+                    <div class="single-row">
+                        <input name="collapsable" type="radio" id="col-4" class="opener" />
+                        <label for="col-4">
+                           <div class="content">
+                                <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
+                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint reprehenderit, numquam cumque ut itaque.
+                                </p>
+
+                                <br>
+                                <div style="display: flex"  style="font-size: 1.5rem;font-weight:500 ">
+                                    <span style="font-weight:600"><i class="fa-solid fa-road" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <span style="font-weight:600"><i class="fa-regular fa-bed" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                </div>
+                            </div>
+                            <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}" class="arrow"
+                                    alt=""></span>
+                           
+                        </label>
+                    </div>
                 </div>
 
 
@@ -276,11 +372,11 @@
                 <span style="font-size: 20px; font-weight:400; margin-right:24px">Price</span>
                 <span style="font-size: 20px; font-weight:600;">250$</span>
             </div> --}}
-            <div style="margin: 30px; padding-left: 50px">
+            {{-- <div style="margin: 30px; padding-left: 50px">
                 <button class="package-view">
                     Tour Request
                 </button>
-            </div>
+            </div> --}}
         </div>
         <div class="col-md-6">
             {{-- <img src="{{ asset('images/i.png') }}" alt="" style="width: 80%"> --}}
@@ -291,12 +387,18 @@
             <br>
             <ul style="list-style: none">
 
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
+                    ipsum dolor sit.</li>
+                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
+                    ipsum dolor sit.</li>
+                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
+                    ipsum dolor sit.</li>
+                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
+                    ipsum dolor sit.</li>
+                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
+                    ipsum dolor sit.</li>
+                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
+                    ipsum dolor sit.</li>
                 <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
                             style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
                 <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
@@ -732,4 +834,11 @@
                 class="fa-solid fa-pen-clip" style="text-decoration: none"></i>
         </div>
     </div>
+
+    <script>
+        var arr = document.querySelector('.arrow');
+        arr.addEventListener('click', function(event) {
+            event.target.classList.toggle('down');
+        });
+    </script>
 @endsection

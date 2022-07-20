@@ -91,9 +91,11 @@
                             </div>
 
                             <div class="package-btn">
-                                <button class="package-view">
+                                <a href="{{ url('/article') }}">
+                                 <button class="package-view">
                                     Read More
-                                </button>
+                                </button></a>
+                               
 
                             </div>
 
@@ -137,9 +139,11 @@
                             </div>
 
                             <div class="package-btn">
-                                <button class="package-view">
+                                <a href="{{ url('/article') }}">
+                                 <button class="package-view">
                                     Read More
-                                </button>
+                                </button></a>
+                               
 
                             </div>
 
@@ -183,9 +187,11 @@
                             </div>
 
                             <div class="package-btn">
-                                <button class="package-view">
+                                <a href="{{ url('/article') }}">
+                                 <button class="package-view">
                                     Read More
-                                </button>
+                                </button></a>
+                               
 
                             </div>
 
@@ -229,9 +235,11 @@
                             </div>
 
                             <div class="package-btn">
-                                <button class="package-view">
+                                <a href="{{ url('/article') }}">
+                                 <button class="package-view">
                                     Read More
-                                </button>
+                                </button></a>
+                               
 
                             </div>
 
@@ -275,9 +283,11 @@
                             </div>
 
                             <div class="package-btn">
-                                <button class="package-view">
+                                <a href="{{ url('/article') }}">
+                                 <button class="package-view">
                                     Read More
-                                </button>
+                                </button></a>
+                               
 
                             </div>
 
@@ -321,9 +331,11 @@
                             </div>
 
                             <div class="package-btn">
-                                <button class="package-view">
+                                <a href="{{ url('/article') }}">
+                                 <button class="package-view">
                                     Read More
-                                </button>
+                                </button></a>
+                               
 
                             </div>
 
@@ -367,9 +379,11 @@
                             </div>
 
                             <div class="package-btn">
-                                <button class="package-view">
+                                <a href="{{ url('/article') }}">
+                                 <button class="package-view">
                                     Read More
-                                </button>
+                                </button></a>
+                               
 
                             </div>
 
@@ -413,9 +427,11 @@
                             </div>
 
                             <div class="package-btn">
-                                <button class="package-view">
+                                <a href="{{ url('/article') }}">
+                                 <button class="package-view">
                                     Read More
-                                </button>
+                                </button></a>
+                               
 
                             </div>
 
