@@ -15,6 +15,14 @@ class CreateThingsToDosTable extends Migration
     {
         Schema::create('things_to_dos', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->string('description')->nullable();
+            $table->string('time');    
+            $table->string('address');
+            $table->string('duration');
+            $table->string('period');
+            $table->string('distance');
+            $table->string('price');
             $table->timestamps();
         });
     }

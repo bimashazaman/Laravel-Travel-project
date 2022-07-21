@@ -15,6 +15,7 @@ class CreateThingsToSeeCategoriesTable extends Migration
     {
         Schema::create('things_to_see_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->timestamps();
         });
     }

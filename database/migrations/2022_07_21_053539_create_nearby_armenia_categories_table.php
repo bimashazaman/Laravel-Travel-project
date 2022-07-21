@@ -15,6 +15,7 @@ class CreateNearbyArmeniaCategoriesTable extends Migration
     {
         Schema::create('nearby_armenia_categories', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
             $table->timestamps();
         });
     }
