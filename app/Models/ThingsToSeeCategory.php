@@ -9,4 +9,10 @@ class ThingsToSeeCategory extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+
+    //relations
+    public function thingsToSee(){
+        return $this->hasMany(ThingsToSee::class);
+    }
 }

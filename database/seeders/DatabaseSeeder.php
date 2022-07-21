@@ -3,6 +3,7 @@
 namespace Database\Seeders;
 
 use Illuminate\Database\Seeder;
+use Database\Seeders\Food;
 
 class DatabaseSeeder extends Seeder
 {
@@ -15,7 +16,13 @@ class DatabaseSeeder extends Seeder
     {
         $this->call([
             DestinationSeeder::class,
-            TourTypeSeeder::class
+            TourTypeSeeder::class,
+            Food::class,
+            NearbyArmenia::class,
+            ThingsToDo::class,
+            ThingsToSee::class,
+
+
         ]);
     }
 }

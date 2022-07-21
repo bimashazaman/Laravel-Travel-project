@@ -12,9 +12,11 @@ use App\Http\Controllers\GuranteeTour;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\MiceController;
 use App\Http\Controllers\ThemedTour;
+use App\Http\Controllers\ThingsToSeeController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourEventController;
 use App\Models\Accessiories;
+use App\Models\ThingsToSeeCategory;
 use Illuminate\Support\Facades\Route;
 
 //============login===============
@@ -150,6 +152,23 @@ Route::get('/admin/events/{id}',[TourEventController::class,'show']);
 Route::post('/admin/events/store',[TourEventController::class,'store']);
 Route::put('/admin/events/update/{id}',[TourEventController::class,'update']);
 Route::delete('/admin/events/delete/{id}',[TourEventController::class,'destroy']);
+
+//===========Admin Things to see=========
+
+Route::get('/admin/thingsToSee',[ThingsToSeeController::class,'index']);
+Route::get('/admin//admin/thingstoSeeCreate',[ThingsToSeeController::class,'create']);
+Route::get('/admin/thingsToSee/{id}',[ThingsToSeeController::class,'show']);
+Route::post('/admin/thingsToSee/store',[ThingsToSeeController::class,'store']);
+Route::put('/admin/thingsToSee/update/{id}',[ThingsToSeeController::class,'update']);
+Route::delete('/admin/thingsToSee/delete/{id}',[ThingsToSeeController::class,'destroy']);
+
+//==========Things to see Frontend=========
+Route::get('/getAllThingsToSee',[ThingsToSeeController::class,'getAllThingsToSee']);
+//things to see by category id
+Route::get('/getThingsToSeeByCategoryId/{id}',[ThingsToSeeController::class,'getThingsToSeeByCategory']);
+//things to see by id
+Route::get('/getThingsToSeeById/{id}',[ThingsToSeeController::class,'getThingsToSeeById']);
+
 
 //===========Frontend Tour Events=========
 Route::get('/cs',[TourEventController::class,'showFrontend']);
@@ -303,9 +322,6 @@ Route::get('/BookHotel', function () {
 
 
 
-Route::get('/tts', function () {
-    return view('Frontend.Armenia.ThingsToSee');
-});
 
 
 Route::get('/ttdd', function () {
@@ -367,10 +383,6 @@ Route::get('/pageSee', function () {
 //================ view routes ====================
 
 
-Route::get('/admin/thingstoSee', function () {
-    return view('Backend.Admin.Armenia.ThingsToSee.view');
-});
-
 Route::get('/admin/thingstoDo', function () {
     return view('Backend.Admin.Armenia.ThingsToDo.view');
 });
@@ -409,10 +421,6 @@ Route::get('/admin/CarWithDriver', function () {
 
 
 //===============Create routes=============
-
-Route::get('/admin/thingstoSeeCreate', function () {
-    return view('Backend.Admin.Armenia.ThingsToSee.create');
-});
 
 
 Route::get('/admin/createHotel', function () {

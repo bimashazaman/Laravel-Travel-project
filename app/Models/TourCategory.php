@@ -15,7 +15,8 @@ class TourCategory extends Model
 
     //relations
 
-    public function tour(){
-        return HasMany(Tour::class);
+    public function tours()
+    {
+        return $this->hasMany(Tour::class);
     }
 }

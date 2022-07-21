@@ -58,7 +58,7 @@
                                          Armenia
                                      </a>
                                      <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                         <a class="dropdown-item" href="{{ url('/tts') }}">Things to see</a>
+                                         <a class="dropdown-item" href="{{ url('/getThingsToSeeByCategoryId/1') }}">Things to see</a>
                                          <a class="dropdown-item" href="{{ url('/ttdd') }}">Things to do</a>
                                          <a class="dropdown-item" href="{{ url('/food') }}">Food and drink</a>
                                          <a class="dropdown-item" href="{{ url('/todoSorrounding') }}">Todo in Surrounding</a>
