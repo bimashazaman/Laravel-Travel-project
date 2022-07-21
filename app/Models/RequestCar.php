@@ -8,4 +8,5 @@ use Illuminate\Database\Eloquent\Model;
 class RequestCar extends Model
 {
     use HasFactory;
+    protected $guarded = [];
 }
