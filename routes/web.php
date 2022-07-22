@@ -18,6 +18,7 @@ use App\Http\Controllers\ThingsToDoController;
 use App\Http\Controllers\ThingsToSeeController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourEventController;
+use App\Http\Controllers\UsefulInfoController;
 use App\Models\NearbyArmenia;
 use Illuminate\Support\Facades\Route;
 
@@ -182,6 +183,20 @@ Route::get('/admin/nearby/{id}',[NearbyArmeniaController::class,'show']);
 Route::post('/admin/nearby/store',[NearbyArmeniaController::class,'store']);
 Route::put('/admin/nearby/update/{id}',[NearbyArmeniaController::class,'update']);
 Route::delete('/admin/nearby/delete/{id}',[NearbyArmeniaController::class,'destroy']);
+
+
+//==========Admin useful info ======
+
+
+Route::get('/admin/usefulToKnow', [UsefulInfoController::class, 'index']);
+Route::get('/admin/usefulToKnow/create', [UsefulInfoController::class, 'create']);
+Route::get('/admin/usefulToKnow/{id}', [UsefulInfoController::class, 'show']);
+Route::post('/admin/usefulToKnow/store', [UsefulInfoController::class, 'store']);
+Route::put('/admin/usefulToKnow/update/{id}', [UsefulInfoController::class, 'update']);
+Route::delete('/admin/usefulToKnow/delete/{id}', [UsefulInfoController::class, 'destroy']);
+Route::get('/usefulToKnow', [UsefulInfoController::class, 'getUsefulInfo']);
+
+
 
 //=============Frontend Nearby ===========
 Route::get('/getAllThingsToSee',[ThingsToSeeController::class,'getAllThingsToSee']);
@@ -386,9 +401,6 @@ Route::get('/driver', function () {
 });
 
 
-Route::get('/usefulToKnow', function () {
-    return view('Frontend.Armenia.UsefulToKnow');
-});
 
 
 
@@ -418,10 +430,6 @@ Route::get('/admin/thingstoDo', function () {
 });
 
 
-
-Route::get('/admin/usefulToKnow', function () {
-    return view('Backend.Admin.Armenia.Informations.view');
-});
 
 
 
