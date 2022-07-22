@@ -9,4 +9,10 @@ class FoodArmenia extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    //relation with category
+    public function category()
+    {
+        return $this->belongsTo(FoodArmeniaCategory::class, 'category_id');
+    }
 }

@@ -6,12 +6,14 @@ use App\Http\Controllers\CarAirportController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\ClassicTour;
 use App\Http\Controllers\DashboardController;
+use App\Http\Controllers\FoodArmeniaController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GastroTour;
 use App\Http\Controllers\GuranteeTour;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\MiceController;
 use App\Http\Controllers\ThemedTour;
+use App\Http\Controllers\ThingsToDoController;
 use App\Http\Controllers\ThingsToSeeController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourEventController;
@@ -162,12 +164,34 @@ Route::post('/admin/thingsToSee/store',[ThingsToSeeController::class,'store']);
 Route::put('/admin/thingsToSee/update/{id}',[ThingsToSeeController::class,'update']);
 Route::delete('/admin/thingsToSee/delete/{id}',[ThingsToSeeController::class,'destroy']);
 
+//=====Admin things to do=========
+Route::get('/admin/thingsToDo',[ThingsToDoController::class,'index']);
+Route::get('/admin/admin/thingstoDoCreate',[ThingsToDoController::class,'create']);
+Route::get('/admin/thingsToDo/{id}',[ThingsToDoController::class,'show']);
+Route::post('/admin/thingsToDo/store',[ThingsToDoController::class,'store']);
+Route::put('/admin/thingsToDo/update/{id}',[ThingsToDoController::class,'update']);
+Route::delete('/admin/thingsToDo/delete/{id}',[ThingsToDoController::class,'destroy']);
+
 //==========Things to see Frontend=========
 Route::get('/getAllThingsToSee',[ThingsToSeeController::class,'getAllThingsToSee']);
-//things to see by category id
 Route::get('/getThingsToSeeByCategoryId/{id}',[ThingsToSeeController::class,'getThingsToSeeByCategory']);
-//things to see by id
 Route::get('/getThingsToSeeById/{id}',[ThingsToSeeController::class,'getThingsToSeeById']);
+
+
+
+//==========Armenia admin food=========
+Route::get('/admin/foods',[FoodArmeniaController::class,'index']);
+Route::get('/admin/foods/create',[FoodArmeniaController::class,'create']);
+Route::get('/admin/foods/{id}',[FoodArmeniaController::class,'show']);
+Route::post('/admin/foods/store',[FoodArmeniaController::class,'store']);
+Route::put('/admin/foods/update/{id}',[FoodArmeniaController::class,'update']);
+Route::delete('/admin/foods/delete/{id}',[FoodArmeniaController::class,'destroy']);
+
+
+//==========Armenia Frontend food=========
+Route::get('/food',[FoodArmeniaController::class,'getAllFoods']);
+Route::get('/getfoodsByCategory/{id}',[FoodArmeniaController::class,'getfoodsByCategory']);
+Route::get('/getfoodsById/{id}',[FoodArmeniaController::class,'getfoodsById']);
 
 
 //===========Frontend Tour Events=========
@@ -328,11 +352,6 @@ Route::get('/ttdd', function () {
     return view('Frontend.Armenia.ThingsToDo');
 });
 
-Route::get('/food', function () {
-    return view('Frontend.Armenia.Foods');
-});
-
-
 
 
 
@@ -387,9 +406,6 @@ Route::get('/admin/thingstoDo', function () {
     return view('Backend.Admin.Armenia.ThingsToDo.view');
 });
 
-Route::get('/admin/food', function () {
-    return view('Backend.Admin.Armenia.FoodAndDrink.view');
-});
 
 Route::get('/admin/TODO', function () {
     return view('Backend.Admin.Armenia.TODO.view');

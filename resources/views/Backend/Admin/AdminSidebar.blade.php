@@ -37,8 +37,8 @@
                     <a href="#"><i class="fe fe-sync"></i> <span> Armenia </span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
                         <li><a href="{{ url('/admin/thingsToSee') }}"> Things To see </a></li>
-                        <li><a href="{{ url('/admin/thingstoDo') }}"> Things to Do </a></li>
-                        <li><a href="{{ url('/admin/food') }}"> Food and Drink </a></li>
+                        <li><a href="{{ url('/admin/thingsToDo') }}"> Things to Do </a></li>
+                        <li><a href="{{ url('/admin/foods') }}"> Food and Drink </a></li>
                         <li><a href="{{ url('/admin/TODO') }}"> Todo In sorrounding </a></li>
                         <li><a href="{{ url('/admin/usefulToKnow') }}"> Useful to know</a></li>
                         <li><a href="{{ url('/admin/events') }}">Events </a></li>

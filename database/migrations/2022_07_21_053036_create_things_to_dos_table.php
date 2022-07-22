@@ -17,6 +17,7 @@ class CreateThingsToDosTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('description')->nullable();
+            $table->unsignedBigInteger('category_id');
             $table->string('time');    
             $table->string('address');
             $table->string('duration');
