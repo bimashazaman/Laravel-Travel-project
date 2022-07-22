@@ -50,6 +50,9 @@
                                         <td class="text-center">
                                             {{ $t->duration }}
                                         </td>
+                                        <td class="text-center">
+                                            {{ $t->price }}
+                                        </td>
                                         <td class="text-end">
                                             <div class="font-weight-600 text-danger">
                                                 <span>

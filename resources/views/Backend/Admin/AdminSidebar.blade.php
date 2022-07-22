@@ -12,12 +12,12 @@
                     <a href="#"><i class="fe fe-users"></i> <span> Tours</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
 
-                        <li><a href="{{ url('/admin/tours/ClassicTours')}}">Classic Tours</a></li>
-                        <li><a href="{{ url('/admin/tours/ToursWithGuranteeDepartures')}}">Tours With Guarantee Departures</a></li>
-                        <li><a href="{{ url('/admin/tours/GastroTours')}}">Gastro Tours</a></li>
-                        <li><a href="{{ url('/admin/tours/ActiveTours')}}">Active Tours</a></li>
-                        <li><a href="{{ url('/admin/tours/OneDay')}}">One Day</a></li>
-                        <li><a href="{{ url('/admin/tours/ThemedTours')}}">Themed Tours</a></li>
+                        <li><a href="{{ url('/getTourByCategory/1')}}">Classic Tours</a></li>
+                        <li><a href="{{ url('/getTourByCategory/2')}}">Tours With Guarantee Departures</a></li>
+                        <li><a href="{{ url('/getTourByCategory/3')}}">Gastro Tours</a></li>
+                        <li><a href="{{ url('/getTourByCategory/4')}}">Active Tours</a></li>
+                        <li><a href="{{ url('/getTourByCategory/5')}}">One Day</a></li>
+                        <li><a href="{{ url('/getTourByCategory/6')}}">Themed Tours</a></li>
                     </ul>
                 </li>
 

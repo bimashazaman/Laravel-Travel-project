@@ -434,17 +434,20 @@ class TourController extends Controller
         // return self::failure('Not Found', [], 404);
     }
 
-    // public function getTourByCategory($category)
-    // {
-    //     //
-    //     $tours = Tour::with('images')
-    //         ->with('highlights')
-    //         ->with('facility')
-    //         ->where("category_id", $category)
-    //         ->whereNull('deleted_at')
-    //         ->get();
-    //     return view('Backend.Admin.Tours.classicTours.ClassicTour', [
-    //         "tours" => $tours
-    //     ]);
-    // }
+    public function getToursByCategory($id)
+    {
+
+        
+        $tour = Tour::where('category_id', $id)->get();
+        $cat = TourCategory::where('id', $id)->first();
+        return view('Backend.Admin.Tours.classicTours.ClassicTour', compact('tour', 'cat'));
+       
+         
+        // $tour = Tour::all();
+        //     $cat = TourCategory::where('id', $id)->first();
+        // return view('Backend.Admin.Tours.classicTours.ClassicTour', [
+        //     "tour" => $tour,
+        //     "category" => $cat
+        // ]);
+    }
 }

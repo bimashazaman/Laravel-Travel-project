@@ -13,7 +13,6 @@ use App\Http\Controllers\GuranteeTour;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\MiceController;
 use App\Http\Controllers\NearbyArmeniaController;
-use App\Http\Controllers\OneDayController;
 use App\Http\Controllers\ThemedTour;
 use App\Http\Controllers\ThingsToDoController;
 use App\Http\Controllers\ThingsToSeeController;
@@ -61,6 +60,8 @@ Route::post("/admin/tourprogram/{id}",[TourController::class,"addTourProgram"])-
 Route::delete("/admin/highlight/delete/{id}",[TourController::class,"deleteHighlights"])->name('highlightDelete');
 Route::delete("/admin/facility/delete/{id}",[TourController::class,"deleteTourFacility"])->name('facilityDelete');
 Route::delete("/admin/tourprogram/delete/{id}",[TourController::class,"deleteTourProgram"])->name('tourProgramDelete');
+Route::get('/getTourByCategory/{id}',[TourController::class,'getToursByCategory']);
+
 
 
 //----------- Frontend -------------
@@ -318,6 +319,8 @@ Route::get('/RF', function () {
 
 
 
+
+
 Route::get('/TentForm', function () {
     return view('Frontend.TourAccesories.TentForm');
 });
@@ -327,7 +330,7 @@ Route::get('/mice', function () {
     return view('Frontend.Mice.Micee');
 });
 
-Route::get('/oneDay',[OneDayController::class,'index']);
+
 
 
 
