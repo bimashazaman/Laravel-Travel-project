@@ -39,7 +39,7 @@
                         <li><a href="{{ url('/admin/thingsToSee') }}"> Things To see </a></li>
                         <li><a href="{{ url('/admin/thingsToDo') }}"> Things to Do </a></li>
                         <li><a href="{{ url('/admin/foods') }}"> Food and Drink </a></li>
-                        <li><a href="{{ url('/admin/TODO') }}"> Todo In sorrounding </a></li>
+                        <li><a href="{{ url('/admin/nearby') }}"> Todo In sorrounding </a></li>
                         <li><a href="{{ url('/admin/usefulToKnow') }}"> Useful to know</a></li>
                         <li><a href="{{ url('/admin/events') }}">Events </a></li>
                         <li><a href="{{ url('/admin/brochure') }}">Brochure </a></li>

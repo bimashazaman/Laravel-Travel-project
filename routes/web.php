@@ -12,11 +12,13 @@ use App\Http\Controllers\GastroTour;
 use App\Http\Controllers\GuranteeTour;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\MiceController;
+use App\Http\Controllers\NearbyArmeniaController;
 use App\Http\Controllers\ThemedTour;
 use App\Http\Controllers\ThingsToDoController;
 use App\Http\Controllers\ThingsToSeeController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourEventController;
+use App\Models\NearbyArmenia;
 use Illuminate\Support\Facades\Route;
 
 //============login===============
@@ -170,10 +172,25 @@ Route::post('/admin/thingsToDo/store',[ThingsToDoController::class,'store']);
 Route::put('/admin/thingsToDo/update/{id}',[ThingsToDoController::class,'update']);
 Route::delete('/admin/thingsToDo/delete/{id}',[ThingsToDoController::class,'destroy']);
 
-//==========Things to see Frontend=========
+
+//========Admin Nearby=========
+Route::get('/admin/nearby',[NearbyArmeniaController::class,'index']);
+Route::get('/admin/nearby/Create',[NearbyArmeniaController::class,'create']);
+Route::get('/admin/nearby/{id}',[NearbyArmeniaController::class,'show']);
+Route::post('/admin/nearby/store',[NearbyArmeniaController::class,'store']);
+Route::put('/admin/nearby/update/{id}',[NearbyArmeniaController::class,'update']);
+Route::delete('/admin/nearby/delete/{id}',[NearbyArmeniaController::class,'destroy']);
+
+//=============Frontend Nearby ===========
 Route::get('/getAllThingsToSee',[ThingsToSeeController::class,'getAllThingsToSee']);
 Route::get('/getThingsToSeeByCategoryId/{id}',[ThingsToSeeController::class,'getThingsToSeeByCategory']);
 Route::get('/getThingsToSeeById/{id}',[ThingsToSeeController::class,'getThingsToSeeById']);
+
+
+//==========Things to see Frontend=========
+Route::get('/todoSorrounding',[NearbyArmeniaController::class,'getAllNearby']);
+Route::get('/nearbyByCategoryId/{id}',[NearbyArmeniaController::class,'getNearbyByCategory']);
+Route::get('/nearbyById/{id}',[NearbyArmeniaController::class,'getNearbyById']);
 
 
 //==========Things to do Frontend=========
@@ -372,9 +389,6 @@ Route::get('/usefulToKnow', function () {
 });
 
 
-Route::get('/todoSorrounding', function () {
-    return view('Frontend.Armenia.nearby');
-});
 
 
 Route::get('/review', function () {
@@ -402,9 +416,6 @@ Route::get('/admin/thingstoDo', function () {
 });
 
 
-Route::get('/admin/TODO', function () {
-    return view('Backend.Admin.Armenia.TODO.view');
-});
 
 Route::get('/admin/usefulToKnow', function () {
     return view('Backend.Admin.Armenia.Informations.view');
@@ -482,11 +493,6 @@ Route::get('/admin/createTravelBlog', function () {
     return view('Backend.Admin.Armenia.TravelBlog.create');
 });
 
-Route::get('/admin/createTODO', function () {
-    return view('Backend.Admin.Armenia.TODO.create');
-});
-
-
 
 
 //=============Armenia Update routes=============
@@ -512,9 +518,6 @@ Route::get('/admin/updateTravelBlog', function () {
     return view('Backend.Admin.Armenia.TravelBlog.update');
 });
 
-Route::get('/admin/TODOnearbyUpdate', function () {
-    return view('Backend.Admin.Armenia.TODO.update');
-});
 
 
 //======frontend send step route ==========

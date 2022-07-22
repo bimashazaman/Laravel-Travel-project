@@ -11,8 +11,8 @@ class NearbyArmeniaCategory extends Model
     protected $guarded = [];
 
     //relation with model
-    public function model()
+    public function things()
     {
-        return $this->belongsTo(NearbyArmenia::class, 'category_id');
+        return $this->hasMany(NearbyArmenia::class);
     }
 }
