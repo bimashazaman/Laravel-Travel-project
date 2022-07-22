@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AccessioriesController;
 use App\Http\Controllers\ActiveTour;
 use App\Http\Controllers\CarAirportController;
@@ -13,6 +14,8 @@ use App\Http\Controllers\GuranteeTour;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\MiceController;
 use App\Http\Controllers\NearbyArmeniaController;
+use App\Http\Controllers\OneDayController;
+use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ThemedTour;
 use App\Http\Controllers\ThingsToDoController;
 use App\Http\Controllers\ThingsToSeeController;
@@ -51,25 +54,25 @@ Route::get("/main", [DashboardController::class, 'index']);
 Route::get("/admin/tours/{name}", [TourController::class, "index"]);
 Route::get("/admin/tours/detail/{id}", [TourController::class, "show"]);
 Route::post("/admin/tours/add", [TourController::class, "store"]);
-Route::get('/admin/CreateClassicTour',[TourController::class, "create"]);
-Route::delete("/admin/tour/delete/{id}",[TourController::class,"destroy"])->name('tourDelete');
-Route::get('/admin/UpdateTourPage/{id}',[TourController::class,'edit']);
-Route::put('/admin/tour/update/{id}',[TourController::class,'update']);
-Route::post("/admin/highlight/{id}",[TourController::class,"addTourHighlights"])->name('addHighlight');
-Route::post("/admin/facility/{id}",[TourController::class,"addTourFacility"])->name('addFacility');
-Route::post("/admin/tourprogram/{id}",[TourController::class,"addTourProgram"])->name('addTourProgram');
-Route::delete("/admin/highlight/delete/{id}",[TourController::class,"deleteHighlights"])->name('highlightDelete');
-Route::delete("/admin/facility/delete/{id}",[TourController::class,"deleteTourFacility"])->name('facilityDelete');
-Route::delete("/admin/tourprogram/delete/{id}",[TourController::class,"deleteTourProgram"])->name('tourProgramDelete');
-Route::get('/getTourByCategory/{id}',[TourController::class,'getToursByCategory']);
+Route::get('/admin/CreateClassicTour', [TourController::class, "create"]);
+Route::delete("/admin/tour/delete/{id}", [TourController::class, "destroy"])->name('tourDelete');
+Route::get('/admin/UpdateTourPage/{id}', [TourController::class, 'edit']);
+Route::put('/admin/tour/update/{id}', [TourController::class, 'update']);
+Route::post("/admin/highlight/{id}", [TourController::class, "addTourHighlights"])->name('addHighlight');
+Route::post("/admin/facility/{id}", [TourController::class, "addTourFacility"])->name('addFacility');
+Route::post("/admin/tourprogram/{id}", [TourController::class, "addTourProgram"])->name('addTourProgram');
+Route::delete("/admin/highlight/delete/{id}", [TourController::class, "deleteHighlights"])->name('highlightDelete');
+Route::delete("/admin/facility/delete/{id}", [TourController::class, "deleteTourFacility"])->name('facilityDelete');
+Route::delete("/admin/tourprogram/delete/{id}", [TourController::class, "deleteTourProgram"])->name('tourProgramDelete');
+Route::get('/getTourByCategory/{id}', [TourController::class, 'getToursByCategory']);
 
 
 
 //----------- Frontend -------------
 
-Route::get('/', [FrontendController::class,'index'])->name('home');
-Route::get('/tour/detail/{id}',[FrontendController::class,'tourDescription'])->name('tourDescription');
-Route::get('/tour/{name}',[FrontendController::class,'getTours'])->name('getTours');
+Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::get('/tour/detail/{id}', [FrontendController::class, 'tourDescription'])->name('tourDescription');
+Route::get('/tour/{name}', [FrontendController::class, 'getTours'])->name('getTours');
 
 
 
@@ -80,20 +83,25 @@ Route::get('/getClassicTour/{id}', [ClassicTour::class, 'getClassicTour']);
 
 //=====gurantee Tour===========
 
-Route::get('/guaranteeTour',[GuranteeTour::class,'getTours']);
+Route::get('/guaranteeTour', [GuranteeTour::class, 'getTours']);
 
 //=========Gastro Tours=========
 
 
-Route::get('/GastroTours',[GastroTour::class,'getTours']);
+Route::get('/GastroTours', [GastroTour::class, 'getTours']);
 
 //=========Active Tours=========
 
 Route::get('/activeTours', [ActiveTour::class, 'getTours']);
 
+
+//=========OneDay Tours=========
+
+Route::get('/oneDay', [OneDayController::class, 'index']);
+
 //=======theme tours==========
 
-Route::get('/themed',[ThemedTour::class,'getTours']);
+Route::get('/themed', [ThemedTour::class, 'getTours']);
 
 Route::get('/check', [TourController::class, 'index']);
 Route::post('/checkpost', [TourController::class, 'checkStore']);
@@ -111,78 +119,89 @@ Route::delete('/car/delete/{id}', [CarController::class, 'destroy']);
 
 //========Admin CarAirport=========
 
-Route::get('/admin/CarAtAirport',[CarAirportController::class,'index']);
-Route::get('/admin/CarAtAirport/create',[CarAirportController::class,'create']);
-Route::get('/admin/CarAtAirport/{id}',[CarAirportController::class,'show']);
-Route::post('/admin/CarAtAirport/store',[CarAirportController::class,'store']);
-Route::get('/admin/CarAtAirport/edit/{id}',[CarAirportController::class,'edit']);
-Route::put('/admin/CarAtAirport/update/{id}',[CarAirportController::class,'update']);
+Route::get('/admin/CarAtAirport', [CarAirportController::class, 'index']);
+Route::get('/admin/CarAtAirport/create', [CarAirportController::class, 'create']);
+Route::get('/admin/CarAtAirport/{id}', [CarAirportController::class, 'show']);
+Route::post('/admin/CarAtAirport/store', [CarAirportController::class, 'store']);
+Route::get('/admin/CarAtAirport/edit/{id}', [CarAirportController::class, 'edit']);
+Route::put('/admin/CarAtAirport/update/{id}', [CarAirportController::class, 'update']);
 
 
 
 //==========Admin Accessiories=========
 
-Route::get('/admin/Accessiories',[AccessioriesController::class,'index']);
-Route::get('/admin/accessiories/create',[AccessioriesController::class,'create']);
-Route::get('/admin/accessiories/{id}',[AccessioriesController::class,'show']);
-Route::post('/admin/accessiories/store',[AccessioriesController::class,'store']);
-Route::get('/admin/accessiories/edit/{id}',[AccessioriesController::class,'edit']);
-Route::put('/admin/accessiories/update/{id}',[AccessioriesController::class,'update']);
-Route::delete('/admin/accessiories/delete/{id}',[AccessioriesController::class,'destroy']);
+Route::get('/admin/Accessiories', [AccessioriesController::class, 'index']);
+Route::get('/admin/accessiories/create', [AccessioriesController::class, 'create']);
+Route::get('/admin/accessiories/{id}', [AccessioriesController::class, 'show']);
+Route::post('/admin/accessiories/store', [AccessioriesController::class, 'store']);
+Route::get('/admin/accessiories/edit/{id}', [AccessioriesController::class, 'edit']);
+Route::put('/admin/accessiories/update/{id}', [AccessioriesController::class, 'update']);
+Route::delete('/admin/accessiories/delete/{id}', [AccessioriesController::class, 'destroy']);
 
 
 //==========Admin Hotel=========
 
-Route::get('/admin/Hotel',[HotelController::class,'index']);
-Route::get('/admin/Hotel/create',[HotelController::class,'create']);
-Route::get('/admin/Hotel/{id}',[HotelController::class,'show']);
-Route::post('/admin/Hotel/store',[HotelController::class,'store']);
-Route::put('/admin/Hotel/update/{id}',[HotelController::class,'update']);
-Route::delete('/admin/Hotel/delete/{id}',[HotelController::class,'destroy']);
+Route::get('/admin/Hotel', [HotelController::class, 'index']);
+Route::get('/admin/Hotel/create', [HotelController::class, 'create']);
+Route::get('/admin/Hotel/{id}', [HotelController::class, 'show']);
+Route::post('/admin/Hotel/store', [HotelController::class, 'store']);
+Route::put('/admin/Hotel/update/{id}', [HotelController::class, 'update']);
+Route::delete('/admin/Hotel/delete/{id}', [HotelController::class, 'destroy']);
 
 //===========Admin Mice=========
 
-Route::get('/admin/Mice',[MiceController::class,'index']);
-Route::get('/admin/Mice/create',[MiceController::class,'create']);
-Route::get('/admin/Mice/{id}',[MiceController::class,'show']);
-Route::post('/admin/Mice/store',[MiceController::class,'store']);
-Route::put('/admin/Mice/update/{id}',[MiceController::class,'update']);
-Route::delete('/admin/Mice/delete/{id}',[MiceController::class,'destroy']);
+Route::get('/admin/Mice', [MiceController::class, 'index']);
+Route::get('/admin/Mice/create', [MiceController::class, 'create']);
+Route::get('/admin/Mice/{id}', [MiceController::class, 'show']);
+Route::post('/admin/Mice/store', [MiceController::class, 'store']);
+Route::put('/admin/Mice/update/{id}', [MiceController::class, 'update']);
+Route::delete('/admin/Mice/delete/{id}', [MiceController::class, 'destroy']);
 
 //===========Admin Tour Events=========
 
-Route::get('/admin/events',[TourEventController::class,'index']);
-Route::get('/admin/events/create',[TourEventController::class,'create']);
-Route::get('/admin/events/{id}',[TourEventController::class,'show']);
-Route::post('/admin/events/store',[TourEventController::class,'store']);
-Route::put('/admin/events/update/{id}',[TourEventController::class,'update']);
-Route::delete('/admin/events/delete/{id}',[TourEventController::class,'destroy']);
+Route::get('/admin/events', [TourEventController::class, 'index']);
+Route::get('/admin/events/create', [TourEventController::class, 'create']);
+Route::get('/admin/events/{id}', [TourEventController::class, 'show']);
+Route::post('/admin/events/store', [TourEventController::class, 'store']);
+Route::put('/admin/events/update/{id}', [TourEventController::class, 'update']);
+Route::delete('/admin/events/delete/{id}', [TourEventController::class, 'destroy']);
 
 //===========Admin Things to see=========
 
-Route::get('/admin/thingsToSee',[ThingsToSeeController::class,'index']);
-Route::get('/admin//admin/thingstoSeeCreate',[ThingsToSeeController::class,'create']);
-Route::get('/admin/thingsToSee/{id}',[ThingsToSeeController::class,'show']);
-Route::post('/admin/thingsToSee/store',[ThingsToSeeController::class,'store']);
-Route::put('/admin/thingsToSee/update/{id}',[ThingsToSeeController::class,'update']);
-Route::delete('/admin/thingsToSee/delete/{id}',[ThingsToSeeController::class,'destroy']);
+Route::get('/admin/thingsToSee', [ThingsToSeeController::class, 'index']);
+Route::get('/admin//admin/thingstoSeeCreate', [ThingsToSeeController::class, 'create']);
+Route::get('/admin/thingsToSee/{id}', [ThingsToSeeController::class, 'show']);
+Route::post('/admin/thingsToSee/store', [ThingsToSeeController::class, 'store']);
+Route::put('/admin/thingsToSee/update/{id}', [ThingsToSeeController::class, 'update']);
+Route::delete('/admin/thingsToSee/delete/{id}', [ThingsToSeeController::class, 'destroy']);
 
 //=====Admin things to do=========
-Route::get('/admin/thingsToDo',[ThingsToDoController::class,'index']);
-Route::get('/admin/admin/thingstoDoCreate',[ThingsToDoController::class,'create']);
-Route::get('/admin/thingsToDo/{id}',[ThingsToDoController::class,'show']);
-Route::post('/admin/thingsToDo/store',[ThingsToDoController::class,'store']);
-Route::put('/admin/thingsToDo/update/{id}',[ThingsToDoController::class,'update']);
-Route::delete('/admin/thingsToDo/delete/{id}',[ThingsToDoController::class,'destroy']);
+Route::get('/admin/thingsToDo', [ThingsToDoController::class, 'index']);
+Route::get('/admin/admin/thingstoDoCreate', [ThingsToDoController::class, 'create']);
+Route::get('/admin/thingsToDo/{id}', [ThingsToDoController::class, 'show']);
+Route::post('/admin/thingsToDo/store', [ThingsToDoController::class, 'store']);
+Route::put('/admin/thingsToDo/update/{id}', [ThingsToDoController::class, 'update']);
+Route::delete('/admin/thingsToDo/delete/{id}', [ThingsToDoController::class, 'destroy']);
 
 
 //========Admin Nearby=========
-Route::get('/admin/nearby',[NearbyArmeniaController::class,'index']);
-Route::get('/admin/nearby/Create',[NearbyArmeniaController::class,'create']);
-Route::get('/admin/nearby/{id}',[NearbyArmeniaController::class,'show']);
-Route::post('/admin/nearby/store',[NearbyArmeniaController::class,'store']);
-Route::put('/admin/nearby/update/{id}',[NearbyArmeniaController::class,'update']);
-Route::delete('/admin/nearby/delete/{id}',[NearbyArmeniaController::class,'destroy']);
+Route::get('/admin/nearby', [NearbyArmeniaController::class, 'index']);
+Route::get('/admin/nearby/Create', [NearbyArmeniaController::class, 'create']);
+Route::get('/admin/nearby/{id}', [NearbyArmeniaController::class, 'show']);
+Route::post('/admin/nearby/store', [NearbyArmeniaController::class, 'store']);
+Route::put('/admin/nearby/update/{id}', [NearbyArmeniaController::class, 'update']);
+Route::delete('/admin/nearby/delete/{id}', [NearbyArmeniaController::class, 'destroy']);
+
+//=========About us=========
+Route::get('/aboutUs', [AboutUsController::class, 'index']);
+Route::get('/aboutUs/create', [AboutUsController::class, 'create']);
+Route::get('/aboutUs/{id}', [AboutUsController::class, 'show']);
+Route::post('/aboutUs/store', [AboutUsController::class, 'store']);
+Route::put('/aboutUs/update/{id}', [AboutUsController::class, 'update']);
+Route::delete('/aboutUs/delete/{id}', [AboutUsController::class, 'destroy']);
+Route::get('/admin/aboutUs', [AboutUsController::class, 'index2']);
+
+
 
 
 //==========Admin useful info ======
@@ -199,59 +218,68 @@ Route::get('/usefulToKnow', [UsefulInfoController::class, 'getUsefulInfo']);
 
 
 //=============Frontend Nearby ===========
-Route::get('/getAllThingsToSee',[ThingsToSeeController::class,'getAllThingsToSee']);
-Route::get('/getThingsToSeeByCategoryId/{id}',[ThingsToSeeController::class,'getThingsToSeeByCategory']);
-Route::get('/getThingsToSeeById/{id}',[ThingsToSeeController::class,'getThingsToSeeById']);
+Route::get('/getAllThingsToSee', [ThingsToSeeController::class, 'getAllThingsToSee']);
+Route::get('/getThingsToSeeByCategoryId/{id}', [ThingsToSeeController::class, 'getThingsToSeeByCategory']);
+Route::get('/getThingsToSeeById/{id}', [ThingsToSeeController::class, 'getThingsToSeeById']);
 
 
 //==========Things to see Frontend=========
-Route::get('/todoSorrounding',[NearbyArmeniaController::class,'getAllNearby']);
-Route::get('/nearbyByCategoryId/{id}',[NearbyArmeniaController::class,'getNearbyByCategory']);
-Route::get('/nearbyById/{id}',[NearbyArmeniaController::class,'getNearbyById']);
+Route::get('/todoSorrounding', [NearbyArmeniaController::class, 'getAllNearby']);
+Route::get('/nearbyByCategoryId/{id}', [NearbyArmeniaController::class, 'getNearbyByCategory']);
+Route::get('/nearbyById/{id}', [NearbyArmeniaController::class, 'getNearbyById']);
 
 
 //==========Things to do Frontend=========
-Route::get('/getAllThingsToDo',[ThingsToDoController::class,'getAllThingsToDo']);
-Route::get('/getThingsToDoByCategoryId/{id}',[ThingsToDoController::class,'getThingsToDoByCategory']);
-Route::get('/getThingsToDoById/{id}',[ThingsToDoController::class,'getThingsToDoById']);
+Route::get('/getAllThingsToDo', [ThingsToDoController::class, 'getAllThingsToDo']);
+Route::get('/getThingsToDoByCategoryId/{id}', [ThingsToDoController::class, 'getThingsToDoByCategory']);
+Route::get('/getThingsToDoById/{id}', [ThingsToDoController::class, 'getThingsToDoById']);
 
 
 
 //==========Armenia admin food=========
-Route::get('/admin/foods',[FoodArmeniaController::class,'index']);
-Route::get('/admin/foods/create',[FoodArmeniaController::class,'create']);
-Route::get('/admin/foods/{id}',[FoodArmeniaController::class,'show']);
-Route::post('/admin/foods/store',[FoodArmeniaController::class,'store']);
-Route::put('/admin/foods/update/{id}',[FoodArmeniaController::class,'update']);
-Route::delete('/admin/foods/delete/{id}',[FoodArmeniaController::class,'destroy']);
+Route::get('/admin/foods', [FoodArmeniaController::class, 'index']);
+Route::get('/admin/foods/create', [FoodArmeniaController::class, 'create']);
+Route::get('/admin/foods/{id}', [FoodArmeniaController::class, 'show']);
+Route::post('/admin/foods/store', [FoodArmeniaController::class, 'store']);
+Route::put('/admin/foods/update/{id}', [FoodArmeniaController::class, 'update']);
+Route::delete('/admin/foods/delete/{id}', [FoodArmeniaController::class, 'destroy']);
 
 
 //==========Armenia Frontend food=========
-Route::get('/food',[FoodArmeniaController::class,'getAllFoods']);
-Route::get('/getfoodsByCategory/{id}',[FoodArmeniaController::class,'getfoodsByCategory']);
-Route::get('/getfoodsById/{id}',[FoodArmeniaController::class,'getfoodsById']);
+Route::get('/food', [FoodArmeniaController::class, 'getAllFoods']);
+Route::get('/getfoodsByCategory/{id}', [FoodArmeniaController::class, 'getfoodsByCategory']);
+Route::get('/getfoodsById/{id}', [FoodArmeniaController::class, 'getfoodsById']);
 
 
 //===========Frontend Tour Events=========
-Route::get('/cs',[TourEventController::class,'showFrontend']);
-Route::get('/c',[TourEventController::class,'showFrontendDetails']);
+Route::get('/cs', [TourEventController::class, 'showFrontend']);
+Route::get('/c', [TourEventController::class, 'showFrontendDetails']);
+
+//===============reviews===============
+
+Route::get('/review', [ReviewController::class, 'index']);
+Route::get('/AddReview', [ReviewController::class, 'create']);
+Route::post('/review/store', [ReviewController::class, 'store']);
+
+
+
 
 
 //==========Frontend Hotel=========
 
-Route::get('/hs',[HotelController::class,'getHotels']);
+Route::get('/hs', [HotelController::class, 'getHotels']);
 Route::get('/h/{id}', [HotelController::class, 'getHotelDetails']);
 
 
 
 //==========Frontend Accessiories=========
 
-Route::get('/acs',[AccessioriesController::class,'getAccessiories']);
-Route::get('/ac/{id}',[AccessioriesController::class,'getAccessioriesDetails']);
+Route::get('/acs', [AccessioriesController::class, 'getAccessiories']);
+Route::get('/ac/{id}', [AccessioriesController::class, 'getAccessioriesDetails']);
 
 
 //========Frontend CarAirport=========
-Route::get('/MT',[CarAirportController::class,'getAllCarAirport']);
+Route::get('/MT', [CarAirportController::class, 'getAllCarAirport']);
 
 
 //============= car frontend==============
@@ -267,11 +295,6 @@ Route::get('/mices/{id}', [MiceController::class, 'showMiceDetails']);
 
 Route::get("/dashboard/hello", [TourController::class, "index"]);
 
-
-
-Route::get('/c2', function () {
-    return view('Frontend.About.AboutUs');
-});
 
 
 Route::get('/privacy', function () {
@@ -405,14 +428,6 @@ Route::get('/driver', function () {
 
 
 
-Route::get('/review', function () {
-    return view('Frontend.About.reviews');
-});
-
-Route::get('/AddReview', function () {
-    return view('Frontend.Reviews.AddReview');
-});
-
 
 Route::get('/pageSee', function () {
     return view('Frontend.Armenia.ThingsToSeePage');
@@ -423,11 +438,6 @@ Route::get('/pageSee', function () {
 
 
 //================ view routes ====================
-
-
-Route::get('/admin/thingstoDo', function () {
-    return view('Backend.Admin.Armenia.ThingsToDo.view');
-});
 
 
 
@@ -484,17 +494,10 @@ Route::get('/admin/updateHotel', function () {
 
 
 
-
-
 //============Armenia Create routes=============
 
 Route::get('/admin/createBrochur', function () {
     return view('Backend.Admin.Armenia.Brochure.create');
-});
-
-
-Route::get('/admin/createInformation', function () {
-    return view('Backend.Admin.Armenia.Informations.create');
 });
 
 
@@ -540,7 +543,3 @@ Route::get('/secondStep', function () {
 Route::get('/ThirdStep', function () {
     return view('partials.SendAMsg');
 });
-
-
-
-

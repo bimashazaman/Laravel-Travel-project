@@ -75,7 +75,7 @@
                                          About Us
                                      </a>
                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                         <a class="dropdown-item ru" href="{{ url('/c2') }}">Who are we</a>
+                                         <a class="dropdown-item ru" href="{{ url('/aboutUs') }}">Who are we</a>
                                          <a class="dropdown-item ru" href="{{ url('/ways') }}">How To Book A Tour</a>
                                          {{-- <a class="dropdown-item ru" href="{{ url('/privacy') }}">Privacy Policy</a> --}}
                                          <a class="dropdown-item ru" href="{{ url('/vacancy') }}">Vacancy</a>

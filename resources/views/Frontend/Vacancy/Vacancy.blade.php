@@ -4,12 +4,6 @@
         @include('partials.DefaultBanner')
     </div>
 
-
-
-
-
-
-
     <div class="container" style="padding: 30px">
         <h2 style="text-align: center">
             Classic Budget Tour
@@ -41,7 +35,7 @@
                                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, aliquid! Lorem ipsum
                                     dolor sit amet.
                                 </p>
-                             
+
 
                                 <div class="" style="font-weight: 500; font-size:16px; margin-top:10px">
 
@@ -49,7 +43,7 @@
                                     <br>
                                     <br>
                                     <br>
-                                   
+
                                     <div style="">
                                         <button class="package-view">
                                             Show more
@@ -70,11 +64,12 @@
 
                 </div>
                 <form action="">
-                    <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" placeholder="Add a Review">
+                    <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text"
+                        class="form-control" placeholder="Add a Review">
                 </form>
                 <br>
                 <div class="star-rating">
-                  
+
                     <div class="thanks-msg">Thanks for your feedback !!!</div>
                     <div class="star-input">
                         <input type="radio" name="rating" id="rating-5">
@@ -87,7 +82,7 @@
                         <label for="rating-2" class="fas fa-star"></label>
                         <input type="radio" name="rating" id="rating-1">
                         <label for="rating-1" class="fas fa-star"></label>
-        
+
                         <!-- Rating Submit Form -->
                         <form>
                             <span class="rating-reaction"></span>
@@ -108,11 +103,11 @@
         const btn = document.querySelector(".submit-rating");
         const thanksmsg = document.querySelector(".thanks-msg");
         const starRating = document.querySelector(".star-input");
-// Success msg show/hide
-btn.onclick = () => {
-    starRating.style.display = "none";
-    thanksmsg.style.display = "table";
-    return false;
-};
+        // Success msg show/hide
+        btn.onclick = () => {
+            starRating.style.display = "none";
+            thanksmsg.style.display = "table";
+            return false;
+        };
     </script>
 @endsection

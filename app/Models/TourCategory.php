@@ -19,4 +19,10 @@ class TourCategory extends Model
     {
         return $this->hasMany(Tour::class);
     }
+
+    //relation with review
+    public function reviews()
+    {
+        return $this->hasMany(Review::class);
+    }
 }

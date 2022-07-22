@@ -25,26 +25,29 @@
 
         <div class="row" style="padding: 40px">
             <div class="col-md-7">
+
+                @foreach ($reviews as $r)
                 <div class="row" style="margin-bottom: 40px">
                     <div>
                         <div style="display: flex">
                             <img src="{{ asset('https://bimasha.com/assets/images/about-banner.png') }}"
                                 style="border-radius: 50%; width:15%; margin-right: 20px" alt="">
                             <div>
-                                <span>Name</span>
+                                <span>
+                                    {{$r->name}}
+                                </span>
                                 <div>
-                                    Date
+                                   {{ $r->created_at->diffForHumans() }}
                                 </div>
                             </div>
                             <div style="margin-left: 20px">
 
                                 <h5 style="font-weight: 600">
-                                    Title
+                                    {{ $r->title }}
                                 </h5>
 
                                 <p style="color: black; margin-top:10px">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, aliquid! Lorem ipsum
-                                    dolor sit amet.
+                                    {{ $r->review }}
                                 </p>
                             </div>
 
@@ -59,75 +62,9 @@
                     </div>
 
                 </div>
-                <div class="row" style="margin-bottom: 40px">
-                    <div>
-                        <div style="display: flex">
-                            <img src="{{ asset('https://bimasha.com/assets/images/about-banner.png') }}"
-                                style="border-radius: 50%; width:15%; margin-right: 20px" alt="">
-                            <div>
-                                <span>Name</span>
-                                <div>
-                                    Date
-                                </div>
-                            </div>
-                            <div style="margin-left: 20px">
-
-                                <h5 style="font-weight: 600">
-                                    Title
-                                </h5>
-
-                                <p style="color: black; margin-top:10px">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, aliquid! Lorem ipsum
-                                    dolor sit amet.
-                                </p>
-                            </div>
-
-
-                        </div>
-
-                        <div style="float: right">
-                            <button class="package-view">
-                                Show more
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
-
-                <div class="row" style="margin-bottom: 40px">
-                    <div>
-                        <div style="display: flex">
-                            <img src="{{ asset('https://bimasha.com/assets/images/about-banner.png') }}"
-                                style="border-radius: 50%; width:15%; margin-right: 20px" alt="">
-                            <div>
-                                <span>Name</span>
-                                <div>
-                                    Date
-                                </div>
-                            </div>
-                            <div style="margin-left: 20px">
-
-                                <h5 style="font-weight: 600">
-                                    Title
-                                </h5>
-
-                                <p style="color: black; margin-top:10px">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, aliquid! Lorem ipsum
-                                    dolor sit amet.
-                                </p>
-                            </div>
-
-
-                        </div>
-
-                        <div style="float: right">
-                            <button class="package-view">
-                                Show more
-                            </button>
-                        </div>
-                    </div>
-
-                </div>
+                @endforeach
+               
+              
 
                 <div class="WR">
                     <a class="WR" href="{{ url('/AddReview') }}" style="text-decoration:underline;">Write Review</a> <i

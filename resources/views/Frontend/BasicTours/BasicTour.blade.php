@@ -358,7 +358,7 @@
                                     <span style="font-weight:600"><i class="fa-regular fa-bed" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
                                 </div>
                             </div>
-                            <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}" class="arrow"
+                            <span class="intro" style="width: 70%; margin-top: -39px"><img src="{{ asset('images/drop.png') }}" class="arrow"
                                     alt=""></span>
                            
                         </label>

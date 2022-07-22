@@ -55,9 +55,9 @@
                 <li class="submenu">
                     <a href="#"><i class="fe fe-table"></i> <span> About Us <span class="menu-arrow"></span></span></a>
                     <ul style="display: none;">
-                        <li><a href="tables-basic.html">Who we are </a></li>
+                        <li><a href="{{ url('/admin/aboutUs') }}">Who we are </a></li>
                         <li><a href="data-tables.html">Ways to book</a></li>
-                        <li><a href="tables-basic.html">Privacy policy </a></li>
+                        {{-- <li><a href="tables-basic.html">Privacy policy </a></li> --}}
                         <li><a href="tables-basic.html">Vacancy</a></li>
                         <li><a href="tables-basic.html">Reviews</a></li>
                         <li><a href="tables-basic.html">Contact us</a></li>
