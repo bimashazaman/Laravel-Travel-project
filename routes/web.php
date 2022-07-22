@@ -13,6 +13,7 @@ use App\Http\Controllers\GuranteeTour;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\MiceController;
 use App\Http\Controllers\NearbyArmeniaController;
+use App\Http\Controllers\OneDayController;
 use App\Http\Controllers\ThemedTour;
 use App\Http\Controllers\ThingsToDoController;
 use App\Http\Controllers\ThingsToSeeController;
@@ -326,9 +327,7 @@ Route::get('/mice', function () {
     return view('Frontend.Mice.Micee');
 });
 
-Route::get('/oneDay', function () {
-    return view('Frontend.OneDayTour.OneDayTour');
-});
+Route::get('/oneDay',[OneDayController::class,'index']);
 
 
 

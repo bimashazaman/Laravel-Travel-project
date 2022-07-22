@@ -433,4 +433,18 @@ class TourController extends Controller
             ->with('msg', "Not Found");
         // return self::failure('Not Found', [], 404);
     }
+
+    // public function getTourByCategory($category)
+    // {
+    //     //
+    //     $tours = Tour::with('images')
+    //         ->with('highlights')
+    //         ->with('facility')
+    //         ->where("category_id", $category)
+    //         ->whereNull('deleted_at')
+    //         ->get();
+    //     return view('Backend.Admin.Tours.classicTours.ClassicTour', [
+    //         "tours" => $tours
+    //     ]);
+    // }
 }

@@ -16,6 +16,8 @@ class ClassicTour extends Controller
         return view('Frontend.BasicTours.BasicTours', compact('tour', 'category'));
     }
 
+    //get one day tour
+
     public function getClassicTour($id)
     {
         $tour = Tour::find($id);
