@@ -17,8 +17,6 @@ use App\Http\Controllers\ThingsToDoController;
 use App\Http\Controllers\ThingsToSeeController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourEventController;
-use App\Models\Accessiories;
-use App\Models\ThingsToSeeCategory;
 use Illuminate\Support\Facades\Route;
 
 //============login===============
@@ -176,6 +174,12 @@ Route::delete('/admin/thingsToDo/delete/{id}',[ThingsToDoController::class,'dest
 Route::get('/getAllThingsToSee',[ThingsToSeeController::class,'getAllThingsToSee']);
 Route::get('/getThingsToSeeByCategoryId/{id}',[ThingsToSeeController::class,'getThingsToSeeByCategory']);
 Route::get('/getThingsToSeeById/{id}',[ThingsToSeeController::class,'getThingsToSeeById']);
+
+
+//==========Things to do Frontend=========
+Route::get('/getAllThingsToDo',[ThingsToDoController::class,'getAllThingsToDo']);
+Route::get('/getThingsToDoByCategoryId/{id}',[ThingsToDoController::class,'getThingsToDoByCategory']);
+Route::get('/getThingsToDoById/{id}',[ThingsToDoController::class,'getThingsToDoById']);
 
 
 
@@ -348,17 +352,8 @@ Route::get('/BookHotel', function () {
 
 
 
-Route::get('/ttdd', function () {
-    return view('Frontend.Armenia.ThingsToDo');
-});
 
 
-
-
-
- Route::get('/adminClassicTour', function () {
-     return view('Backend.Admin.classicTours.ClassicTour');
- });
 
 
 
@@ -436,15 +431,6 @@ Route::get('/admin/CarWithDriver', function () {
 
 
 
-//===============Create routes=============
-
-
-Route::get('/admin/createHotel', function () {
-    return view('Backend.Admin.Services.Hotels.create');
-});
-
-
-
 
 //============destination routes=============
 
@@ -486,21 +472,11 @@ Route::get('/admin/createBrochur', function () {
 });
 
 
-Route::get('/admin/createFD', function () {
-    return view('Backend.Admin.Armenia.FoodAndDrink.create');
-});
-
 Route::get('/admin/createInformation', function () {
     return view('Backend.Admin.Armenia.Informations.create');
 });
 
-Route::get('/admin/createThingsToDo', function () {
-    return view('Backend.Admin.Armenia.ThingsToDo.create');
-});
 
-Route::get('/admin/createThingsToSee', function () {
-    return view('Backend.Admin.Armenia.ThingsToSee.create');
-});
 
 Route::get('/admin/createTravelBlog', function () {
     return view('Backend.Admin.Armenia.TravelBlog.create');

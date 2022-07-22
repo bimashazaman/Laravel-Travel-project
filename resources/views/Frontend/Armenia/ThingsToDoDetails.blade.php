@@ -17,7 +17,7 @@
                         <div class="tour-descriptions-content-inner-left">
                             <div class="tour-descriptions-content-inner-left-content">
                                 <h1>
-                                    {{ $foods->name }}
+                                   {{ $things->name }}
                                 </h1>
                             </div><!-- /.tour-descriptions-content-inner-left-content -->
                         </div><!-- /.tour-descriptions-content-inner-left -->
@@ -143,7 +143,7 @@
                                     Period
                                 </div>
                                 <div>
-                                    {{ $foods->period }}
+                                    {{ $things->period }}
                                 </div>
                             </div>
                             <div class="detailespackage" style="justify-content:space-between">
@@ -151,7 +151,7 @@
                                 Settlement
                                 </div>
                                 <div>
-                                    {{ $foods->address }}
+                                    {{ $things->address }}
                                 </div>
                             </div>
 
@@ -160,7 +160,7 @@
                                 From yerevan
                                 </div>
                                 <div>
-                                    {{ $foods->distance }}
+                                    {{ $things->distance }}
                                 </div>
                             </div>
 
@@ -169,7 +169,7 @@
                                     Working Hours
                                 </div>
                                 <div>
-                                    {{ $foods->duration }}
+                                    {{ $things->duration }}
                                 </div>
                             </div>
                             <div class="detailespackage" style="justify-content:space-between">
@@ -177,7 +177,7 @@
                                     Enterence
                                 </div>
                                 <div>
-                                    {{ $foods->price }}
+                                    {{ $things->price }}
                                 </div>
                             </div>
                         </div>

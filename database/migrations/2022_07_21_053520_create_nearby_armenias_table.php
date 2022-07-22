@@ -16,6 +16,7 @@ class CreateNearbyArmeniasTable extends Migration
         Schema::create('nearby_armenias', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->unsignedBigInteger('category_id');
             $table->string('description')->nullable();
             $table->string('time');    
             $table->string('address');

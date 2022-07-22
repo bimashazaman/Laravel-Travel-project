@@ -9,4 +9,10 @@ class NearbyArmeniaCategory extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    //relation with model
+    public function model()
+    {
+        return $this->belongsTo(NearbyArmenia::class, 'category_id');
+    }
 }

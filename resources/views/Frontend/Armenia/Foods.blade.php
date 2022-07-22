@@ -71,7 +71,7 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('/getThingsToSeeById/'.$thing->id) }}"><button class="package-view">
+                                <a href="{{ url('/getfoodsById/'.$thing->id) }}"><button class="package-view">
                                         More
                                     </button>
                                 </a>
