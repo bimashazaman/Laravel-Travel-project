@@ -1,8 +1,8 @@
 @extends('layouts.master')
 @section('content')
-<div class="fullBanner">
-    @include('partials.DefaultBanner')
-</div>
+    <div class="fullBanner">
+        @include('partials.DefaultBanner')
+    </div>
 
 
     <!-- Tour description start -->
@@ -144,7 +144,7 @@
                     <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
                         {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
                             frameborder="0" style="border:0" allowfullscreen></iframe> --}}
-                            <img src="{{ asset('images/map.png') }}" alt="">
+                        <img src="{{ asset('images/map.png') }}" alt="">
                     </div>
 
                     <h3 style="margin-top: 25px; font-weight: 600;">
@@ -194,76 +194,127 @@
     <section class="tableOfPrice" style="background-color: #F5F5F5; padding:60px">
         <div class="container">
             <h3 style="text-align: center; margin-bottom:10px">
-                The price Per 1 Pax
+                The price
             </h3>
-            <h4 style="text-transform: none;">
-                For individual tours if in the group are:
-            </h4>
+
             <br>
             <table class="table table-bordered tble" style="margin: auto">
-                
-           
+
+
                 <tbody>
-                    <tr>
+                    <tr style="font-weight: 600">
                         <td style="background-color: #FFF1E9">
-                        Stadart
-                        <div>
-                             SGL
-                        </div>
+                            Rooms
                         </td>
-                        <td>
-                            5000 AMD
-                        </td>
-                        <td>
-                            5000 AMD
-                        </td>
-
-                    </tr>
-                    <tr>
                         <td style="background-color: #FFF1E9">
-                            
-                                Stadart
+                            07.01-15.03
                             <div>
-                                DBL
-                            </div>
-                            
-                        
-                        </td>
-                        <td>
-                            5000 AMD
-                        </td>
-                        <td>
-                            5000 AMD
-                        </td>
-
-                    </tr>
-                    <tr>
-                        <td style="background-color: #FFF1E9">
-                            Stadart
-                            <div>
-                                TWN
+                                01.11-29.12
                             </div>
                         </td>
+                        <td style="background-color: #FFF1E9">
+                            16.03-31.10
+                            <div>
+                                30.12-06.01
+                            </div>
+                        </td>
+
+                    </tr>
+                    <tr>
                         <td>
-                            5000 AMD
+                            Standard Single
                         </td>
                         <td>
                             5000 AMD
                         </td>
+                        <td>
+                            5000 AMD
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Standard Double
+                        </td>
+                        <td>
+                            $300
+                        </td>
+                        <td>
+                            $400
+                        </td>
+                    </tr>
+
+                    <tr>
+                        <td>
+                            Classic Single
+                        </td>
+                        <td>
+                            $300
+                        </td>
+                        <td>
+                            $400
+                        </td>
+
 
                     </tr>
 
                     <tr>
-                        <td style="background-color: #FFF1E9">
-                            Luxe
+
+                        <td>
+                            Classic Double
                         </td>
                         <td>
-                            5000 AMD
+                            $300
                         </td>
                         <td>
-                            5000 AMD
+                            $400
                         </td>
 
+                    </tr>
+                    <tr>
+                        <td>
+                            Deluxe Single
+                        </td>
+                        <td>
+                            $300
+                        </td>
+                        <td>
+                            $400
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Deluxe Double
+                        </td>
+                        <td>
+                            $300
+                        </td>
+                        <td>
+                            $400
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            Luxe Single
+                        </td>
+                        <td>
+                            $300
+                        </td>
+                        <td>
+                            $400
+                        </td>
+                    </tr>
+
+                    <tr>
+
+                        <td>
+                            Luxe Double
+                        </td>
+                        <td>
+                            $300
+                        </td>
+                        <td>
+                            $400
+                        </td>
                     </tr>
 
                 </tbody>
@@ -298,26 +349,36 @@
                 <div class="col-md-6">
                     {{-- <img src="{{ asset('images/i.png') }}" alt="" style="width: 80%"> --}}
                     <br>
-                    <h3>
+                    <h3 style="color: white">
                         What is included
                     </h3>
                     <br>
-                    <ul style="list-style: none">
-        
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}" class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                    <ul style="list-style: none; padding-left:30px">
+
                         <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
                         <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
                         <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
                         <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
                     </ul>
                 </div>
             </div>
@@ -484,156 +545,156 @@
                     <br>
                     <br>
                     <br>
-                   
+
                     <center style="margin: 20px">
                         <h2>
                             What to do nearby
                         </h2>
                     </center>
 
-                  <div class="row">
-                    <div class="col-md-4 col-sm-6">
+                    <div class="row">
+                        <div class="col-md-4 col-sm-6">
 
-                        <div class="single-package-item" style="background-color:white">
+                            <div class="single-package-item" style="background-color:white">
 
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
+                                <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                    alt="package-place">
+                                <div class="HotelName">
+                                    <h4>
+                                        Hotel Name
+                                    </h4>
+                                </div>
+                                <div class="hotelDesccription">
 
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                </div>
+                                <div class="pacdet">
+                                    <div class="packageOffer">
+                                        <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                    </div>
+
+                                    <div class="packageOffer">
+                                        <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
+                                    </div>
+
+                                    <div class="packageOffer">
+                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
                                 </div>
 
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
-                                </div>
 
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
+
                             </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
+                            <!--/.single-package-item-->
+                            <div class="package-btn">
+                                <a href="{{ url('h') }}"><button class="package-view">
+                                        Details
+                                    </button>
+                                </a>
                             </div>
-
-
 
                         </div>
-                        <!--/.single-package-item-->
-                        <div class="package-btn">
-                            <a href="{{ url('h') }}"><button class="package-view">
-                                    Details
-                                </button>
-                            </a>
-                        </div>
+                        <div class="col-md-4 col-sm-6">
 
+                            <div class="single-package-item" style="background-color:white">
+
+                                <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                    alt="package-place">
+                                <div class="HotelName">
+                                    <h4>
+                                        Hotel Name
+                                    </h4>
+                                </div>
+                                <div class="hotelDesccription">
+
+                                </div>
+                                <div class="pacdet">
+                                    <div class="packageOffer">
+                                        <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                    </div>
+
+                                    <div class="packageOffer">
+                                        <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
+                                    </div>
+
+                                    <div class="packageOffer">
+                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                </div>
+
+
+
+                            </div>
+                            <!--/.single-package-item-->
+                            <div class="package-btn">
+                                <a href="{{ url('h') }}"><button class="package-view">
+                                        Details
+                                    </button>
+                                </a>
+                            </div>
+
+                        </div>
+                        <div class="col-md-4 col-sm-6">
+
+                            <div class="single-package-item" style="background-color:white">
+
+                                <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                    alt="package-place">
+                                <div class="HotelName">
+                                    <h4>
+                                        Hotel Name
+                                    </h4>
+                                </div>
+                                <div class="hotelDesccription">
+
+                                </div>
+                                <div class="pacdet">
+                                    <div class="packageOffer">
+                                        <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                    </div>
+
+                                    <div class="packageOffer">
+                                        <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
+                                    </div>
+
+                                    <div class="packageOffer">
+                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                    </div>
+                                </div>
+                                <div class="rating">
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                </div>
+
+
+
+                            </div>
+                            <!--/.single-package-item-->
+                            <div class="package-btn">
+                                <a href="{{ url('h') }}"><button class="package-view">
+                                        Details
+                                    </button>
+                                </a>
+                            </div>
+
+                        </div>
                     </div>
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item" style="background-color:white">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-                        <div class="package-btn">
-                            <a href="{{ url('h') }}"><button class="package-view">
-                                    Details
-                                </button>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item" style="background-color:white">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-                        <div class="package-btn">
-                            <a href="{{ url('h') }}"><button class="package-view">
-                                    Details
-                                </button>
-                            </a>
-                        </div>
-
-                    </div>
-                  </div>
                 </div>
                 <!--/.row-->
             </div>

@@ -10,8 +10,9 @@ class ClassicTour extends Controller
 {
     public function getClasicTours()
     {
-        $tour = Tour::where('category_id', 1)->get();
+        $tour = Tour::with('images')->where('category_id', 1)->get();
         $category = TourCategory::where('id', 1)->first();
+
         
         return view('Frontend.BasicTours.BasicTours', compact('tour', 'category'));
     }

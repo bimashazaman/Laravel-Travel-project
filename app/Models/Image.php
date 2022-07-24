@@ -13,11 +13,12 @@ class Image extends Model
         "path"
     ];
 
-    //relations
-
-    public function tour(){
-        return $this->belongsToMany(Tour::class,'tour_images');
+    //----------- relations ---------
+    public function tourImages(){
+        return $this->hasMany(TourImage::class);
     }
+  
+ 
 
     public function vehicle(){
         return $this->belongsToMany(Vehicle::class,'vehicle_images');

@@ -12,4 +12,17 @@ class TourImage extends Model
         "tour_id",
         "image_id"
     ];
+
+    //----------- relations ---------
+    public function tour(){
+        return $this->belongsTo(Tour::class);
+    }
+    public function image(){
+        return $this->belongsTo(Image::class);
+    }
+    
+
+
+
+    
 }

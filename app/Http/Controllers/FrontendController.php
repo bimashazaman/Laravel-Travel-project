@@ -31,7 +31,8 @@ class FrontendController extends Controller
             ->get();
         // return response()->json(["tour"=>$tours]);
         return view("Frontend.Tours.Tour", [
-            "tour" => $tours
+            "tour" => $tours,
+            
         ]);
     }
    }

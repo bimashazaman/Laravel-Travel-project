@@ -47,8 +47,14 @@
                         </h3> --}}
                             <div class="single-package-item">
 
-                                <img src="https://bimasha.com/assets/images/about-banner.png" alt="">
+                                {{-- {{ $item->images->json() }}
+                                 --}}
+                                
+                                {{-- //show the image from images/tours --}}
+                                <img src="{{ $item->images }}" alt="">
 
+
+                                <img src="{{asset('tour/14/bn.png')}}">
 
 
                                 <div class="packageName">

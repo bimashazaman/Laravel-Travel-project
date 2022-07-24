@@ -8,27 +8,26 @@ use Illuminate\Database\Eloquent\Model;
 class Tour extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        "name",
-        "destination_id",
-        "category_id",
-        "start_date",
-        "end_date",
-        "duration",
-        "one_day_price",
-        "one_week_price",
-        "one_month_price",
-        "price",
-        "description"
-    ];
+    protected $guarded = [];
+  
+    //each tour has many tourImages
+    public function tourImages(){
+        return $this->hasMany(TourImage::class);
+    }
 
-    //----------- relations ---------
-
-    //tour images
+    //with image
     public function images()
     {
         return $this->belongsToMany(Image::class, 'tour_images');
     }
+
+
+    
+
+    
+
+
+
 
     //highlights
     public function highlights()

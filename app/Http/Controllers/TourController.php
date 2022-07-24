@@ -33,7 +33,7 @@ class TourController extends Controller
                 ->get();
             // return response()->json(["tour"=>$tours]);
             return view("Backend.Admin.Tours.classicTours.ClassicTour", [
-                "tour" => $tours
+                "tour" => $tours,
             ]);
         }
     }
@@ -65,47 +65,110 @@ class TourController extends Controller
             "destination_id" => "required|integer",
             "duration" => "required",
             "price" => "required",
-            "start_date" => "required",
-            "end_date" => "required",
+            "one_day_price"=>"required",
+            "one_week_price"=>"required",
+            "one_month_price"=>"required",
+            "one_year_price"=>"required",
+            "start_date" => "",
+            "end_date" => "",
             "description" => "sometimes",
-            "images" => "required"
+            "images" => "required",
         ]);
+
         if ($validate->fails()) {
-            // return self::failure($validate->errors()->first());
-            return redirect('/admin/CreateClassicTour')
-                ->with("msg", $validate->errors()->first())
-                ->with("fail", true);
+            return redirect()->back()->withErrors($validate)->withInput();
         }
         try {
-            // dd($request->all());
             DB::beginTransaction();
-            //basic tour info
-            $tour = new Tour();
-            $tour->fill($request->all());
-            $tour->save();
 
-            //saving tour images
-            foreach ($request->file('images') as $key => $file) {
+            $tour = Tour::create([
+                "name" => $request->name,
+                "type" => $request->type,
+                "category_id" => $request->category_id,
+                "destination_id" => $request->destination_id,
+                "duration" => $request->duration,
+                "price" => $request->price,
+                "one_day_price"=>$request->one_day_price,
+                "one_week_price"=>$request->one_week_price,
+                "one_month_price"=>$request->one_month_price,
+                "one_year_price"=>$request->one_year_price,
+                "start_date" => $request->start_date,
+                "end_date" => $request->end_date,
+                "description" => $request->description,
+            ]);
 
-                $fileOrignalName = $file->getClientOriginalName();
-                // return $fileOrignalName;
-                $fileNameArray = explode('.', $fileOrignalName);
-                $fileExtension = end($fileNameArray);
-                $newFilename = $key . now()->timestamp . "." . $fileExtension;
-                $path = "tour/" . $tour->id . "/";
-                $file->move($path, $newFilename);
-                $image = new Image();
-                $image["filename"] = $newFilename;
-                $image["path"] = $path . $newFilename;
-                $image->save();
-                TourImage::create([
-                    "tour_id" => $tour->id,
-                    "image_id" => $image->id
-                ]);
+
+            
+            // foreach ($request->file('images') as $key => $file) {
+
+            //     $fileOrignalName = $file->getClientOriginalName();
+            //     // return $fileOrignalName;
+            //     $fileNameArray = explode('.', $fileOrignalName);
+            //     $fileExtension = end($fileNameArray);
+            //     $newFilename = $key . now()->timestamp . "." . $fileExtension;
+            //     $path = "tour/" . $tour->id . "/";
+            //     $file->move($path, $newFilename);
+            //     $image = new Image();
+            //     $image["filename"] = $newFilename;
+            //     $image["path"] = $path . $newFilename;
+            //     $image->save();
+            //     TourImage::create([
+            //         "tour_id" => $tour->id,
+            //         "image_id" => $image->id
+            //     ]);
+            // }
+
+            //use intervention.io
+            $image = $request->file('images');
+            $imageOrignalName = $image->getClientOriginalName();
+            $imageNameArray = explode('.', $imageOrignalName);
+            $imageExtension = end($imageNameArray);
+            $newImageName = now()->timestamp . "." . $imageExtension;
+            $path = "tour/" . $tour->id . "/";
+            $image->move($path, $newImageName);
+            $image = new Image();
+            $image["filename"] = $newImageName;
+            $image["path"] = $path . $newImageName;
+            $image->save();
+            TourImage::create([
+                "tour_id" => $tour->id,
+                "image_id" => $image->id
+            ]);
+            //end use intervention.io
+
+
+
+
+            if ($request->highlights) {
+                foreach ($request->highlights as $highlight) {
+                    TourHighlight::create([
+                        "tour_id" => $tour->id,
+                        "highlight_id" => $highlight
+                    ]);
+                }
+            }
+            if ($request->facilities) {
+                foreach ($request->facilities as $facility) {
+                    TourFacility::create([
+                        "tour_id" => $tour->id,
+                        "facility_id" => $facility
+                    ]);
+                }
+            }
+            if ($request->program) {
+                foreach ($request->program as $program) {
+                    TourProgram::create([
+                        "tour_id" => $tour->id,
+                        "program_id" => $program
+                    ]);
+                }
             }
 
+
+
+
             DB::commit();
-            // return self::success("Tour added successfully!", ["data" => $tour]);
+            // return self::success("Tour added successfully!", ["data" => $image]);
             return redirect('/admin/CreateClassicTour')
                 ->with("msg", "Tour added successfully!")
                 ->with("success", true);
@@ -451,3 +514,45 @@ class TourController extends Controller
         // ]);
     }
 }
+
+
+
+
+
+
+
+
+
+// if ($validate->fails()) {
+//     // return self::failure($validate->errors()->first());
+//     return redirect('/admin/CreateClassicTour')
+//         ->with("msg", $validate->errors()->first())
+//         ->with("fail", true);
+// }
+// try {
+//     // dd($request->all());
+//     DB::beginTransaction();
+//     //basic tour info
+//     $tour = new Tour();
+//     $tour->fill($request->all());
+//     $tour->save();
+
+//     //saving tour images
+//     foreach ($request->file('images') as $key => $file) {
+
+//         $fileOrignalName = $file->getClientOriginalName();
+//         // return $fileOrignalName;
+//         $fileNameArray = explode('.', $fileOrignalName);
+//         $fileExtension = end($fileNameArray);
+//         $newFilename = $key . now()->timestamp . "." . $fileExtension;
+//         $path = "tour/" . $tour->id . "/";
+//         $file->move($path, $newFilename);
+//         $image = new Image();
+//         $image["filename"] = $newFilename;
+//         $image["path"] = $path . $newFilename;
+//         $image->save();
+//         TourImage::create([
+//             "tour_id" => $tour->id,
+//             "image_id" => $image->id
+//         ]);
+//     }

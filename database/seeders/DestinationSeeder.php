@@ -16,13 +16,13 @@ class DestinationSeeder extends Seeder
         //
         Destination::insert([
             [
-                "name"=> "Destination 1"
+                "name"=> "Armenia"
             ],
             [
-                "name"=> "Destination 2"
+                "name"=> "Georgia"
             ],
             [
-                "name"=> "Destination 3"
+                "name"=> "Iran"
             ]
         ]);
     }
