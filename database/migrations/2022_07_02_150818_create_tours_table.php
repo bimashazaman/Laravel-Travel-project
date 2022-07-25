@@ -17,17 +17,16 @@ class CreateToursTable extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('destination_id');
-            $table->string("name");
-            $table->string("type");
-            $table->string("duration");
-            $table->string('start_date');
+            $table->string("name")->nullable();
+            $table->string("type")->nullable();
+            $table->string("duration")->nullable();
+            $table->string('start_date')->nullable();
             $table->string('end_date')->nullable();
-            $table->string("price");
-            $table->string("one_day_price");
-            $table->string("one_week_price");
-            $table->string("one_month_price");
-            $table->string("one_year_price");
-            
+            $table->string("price")->nullable();
+            $table->string("one_day_price")->nullable();
+            $table->string("one_week_price")->nullable();
+            $table->string("one_month_price")->nullable();
+            $table->string("one_year_price")->nullable();
             $table->string('description')->nullable();
             $table->softDeletes();
             $table->timestamps();

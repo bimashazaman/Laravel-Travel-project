@@ -10,7 +10,8 @@ class ActiveTour extends Controller
 {
     public function getTours()
     {
-        $tour = Tour::where('category_id', 4)->get();
+        $tour = Tour::with('images')->where('category_id', 4)->get();
+        
         $category = TourCategory::where('id', 4)->first();
         
         return view('Frontend.ActiveTours.ActiveTours', compact('tour', 'category'));

@@ -19,7 +19,7 @@ use Illuminate\Support\Facades\Validator;
 
 class TourController extends Controller
 {
-    
+
     public function index($name)
     {
         //
@@ -39,7 +39,7 @@ class TourController extends Controller
         }
     }
 
-   
+
     public function create()
     {
         $destinations = Destination::all();
@@ -55,7 +55,7 @@ class TourController extends Controller
         dd($request->all());
     }
 
-   
+
     public function store(Request $request)
     {
 
@@ -66,10 +66,10 @@ class TourController extends Controller
             "destination_id" => "required|integer",
             "duration" => "required",
             "price" => "required",
-            "one_day_price"=>"required",
-            "one_week_price"=>"required",
-            "one_month_price"=>"required",
-            "one_year_price"=>"required",
+            "one_day_price" => "required",
+            "one_week_price" => "required",
+            "one_month_price" => "required",
+            "one_year_price" => "required",
             "start_date" => "",
             "end_date" => "",
             "description" => "sometimes",
@@ -89,45 +89,44 @@ class TourController extends Controller
                 "destination_id" => $request->destination_id,
                 "duration" => $request->duration,
                 "price" => $request->price,
-                "one_day_price"=>$request->one_day_price,
-                "one_week_price"=>$request->one_week_price,
-                "one_month_price"=>$request->one_month_price,
-                "one_year_price"=>$request->one_year_price,
+                "one_day_price" => $request->one_day_price,
+                "one_week_price" => $request->one_week_price,
+                "one_month_price" => $request->one_month_price,
+                "one_year_price" => $request->one_year_price,
                 "start_date" => $request->start_date,
                 "end_date" => $request->end_date,
                 "description" => $request->description,
             ]);
 
 
-            
-         
-           
 
-           
+
+
+
+
             foreach ($request->file('images') as  $image) {
-               
-            
 
-            //use intervention.io
-            
-            $imageOrignalName = $image->getClientOriginalName();
-            $imageNameArray = explode('.', $imageOrignalName);
-            $imageExtension = end($imageNameArray);
-            $newImageName = now()->timestamp . "." . $imageExtension;
-            $path = "tour/" . $tour->id . "/";
-            $image->move($path, $newImageName);
-            $image = new Image();
-            $image["filename"] = $newImageName;
-            $image["path"] = $path . $newImageName;
-            $image->save();
-            TourImage::create([
-                "tour_id" => $tour->id,
-                "image_id" => $image->id
-            ]);
 
-        }
-    
-           
+
+                //use intervention.io
+
+                $imageOrignalName = $image->getClientOriginalName();
+                $imageNameArray = explode('.', $imageOrignalName);
+                $imageExtension = end($imageNameArray);
+                $newImageName = now()->timestamp . "." . $imageExtension;
+                $path = "tour/" . $tour->id . "/";
+                $image->move($path, $newImageName);
+                $image = new Image();
+                $image["filename"] = $newImageName;
+                $image["path"] = $path . $newImageName;
+                $image->save();
+                TourImage::create([
+                    "tour_id" => $tour->id,
+                    "image_id" => $image->id
+                ]);
+            }
+
+
 
 
 
@@ -143,10 +142,10 @@ class TourController extends Controller
         }
     }
 
-    
+
     function addTourHighlights(Request $request, $id)
     {
-        
+
 
         $validate = Validator::make($request->all(), [
             // "tour_id" => "required|integer",
@@ -183,13 +182,12 @@ class TourController extends Controller
                 ->with("fail", true);
             // return self::failure("Error in adding tour highlight", $e->getMessage());
         }
-
     }
 
 
     function addDeparture(Request $request, $id)
     {
-        
+
 
         $validate = Validator::make($request->all(), [
             // "tour_id" => "required|integer",
@@ -212,7 +210,7 @@ class TourController extends Controller
                 "price" => $request->price,
                 "pax" => $request->pax,
                 "tour_id" => $id
-            
+
             ]);
             // dd($tt);
             $tour = Tour::with('images')
@@ -234,7 +232,6 @@ class TourController extends Controller
                 ->with("fail", true);
             // return self::failure("Error in adding tour highlight", $e->getMessage());
         }
-
     }
 
 
@@ -263,7 +260,7 @@ class TourController extends Controller
     }
 
 
-    
+
     function addTourFacility(Request $request, $id)
     {
         // $validate = Validator::make($request->all(), [
@@ -332,15 +329,11 @@ class TourController extends Controller
                 ->with("msg", "Tour Facility added successfully!")
                 ->with("success", true)
                 ->with('tour', $tour);
-           
         } catch (Exception $e) {
             return redirect("/admin/tours/detail/" . $id)
                 ->with("msg", $e->getMessage())
                 ->with("fail", true);
-            
         }
-
-
     }
 
 
@@ -372,7 +365,7 @@ class TourController extends Controller
         // return self::failure("Not Found!", [], 404);
     }
 
-   
+
     function removeTourImage($id)
     {
         $image = Image::whereNull('deleted_at')
@@ -382,18 +375,18 @@ class TourController extends Controller
     }
 
 
-    
+
     function addTourProgram(Request $request, $id)
     {
         $validator = Validator::make($request->all(), [
             // "tour_id" => "required|integer",
-            "day"=>"required",
-            "fromTo"=>"required",
-            "description"=>"",
-            "distance"=>"required",
-            "duration"=>"required",
-            "food"=>"",
-            "location"=>"required",
+            "day" => "required",
+            "fromTo" => "required",
+            "description" => "",
+            "distance" => "required",
+            "duration" => "required",
+            "food" => "",
+            "location" => "required",
 
         ]);
         if ($validator->fails()) {
@@ -421,7 +414,7 @@ class TourController extends Controller
     }
 
 
-    
+
     function deleteTourProgram($id)
     {
         $tourProgram = TourProgram::whereNull('deleted_at')
@@ -450,7 +443,7 @@ class TourController extends Controller
         // ->with('tour', $tour);
         // return self::failure("Not Found!", [], 404);
     }
-  
+
     public function show($id)
     {
         //
@@ -472,7 +465,7 @@ class TourController extends Controller
         return self::failure("No such tour exist!");
     }
 
- 
+
     public function edit($id)
     {
         //
@@ -484,10 +477,10 @@ class TourController extends Controller
             ->with('program')
             ->where('id', $id)
             ->first();
-            // $tour["start_date"] = Carbon::createFromFormat('mm/dd/yyyy',$tour["start_date"]);
-            // dd($tour["start_date"]);
-            //  $tour['check'] = Carbon::createFromFormat('mm/dd/yyyy',$tour["start_date"])->format('m-d-y');
-            //  dd($tour['check']);
+        // $tour["start_date"] = Carbon::createFromFormat('mm/dd/yyyy',$tour["start_date"]);
+        // dd($tour["start_date"]);
+        //  $tour['check'] = Carbon::createFromFormat('mm/dd/yyyy',$tour["start_date"])->format('m-d-y');
+        //  dd($tour['check']);
         return view('Backend.Admin.Tours.classicTours.UpdateClassicTour', [
             "categories" => $categories,
             "destinations" => $destinations,
@@ -495,34 +488,45 @@ class TourController extends Controller
         ]);
     }
 
-  
+
     public function update(Request $request, $id)
     {
         //
         $tour = Tour::find($id);
-        if ($tour) {
-            $tour->fill($request->all());
-            $tour->save();
-            $tour = Tour::whereNull('deleted_at')
-                ->get();
-            return redirect('Backend.Admin.Tours.classicTours.ClassicTour')
-                ->with('msg', 'Tour updated!')
-                ->with('success', true)
-                ->with('tours', $tour);
-            // return self::success("Tour updated", ["data" => $tour]);
-        }
-        return redirect('/admin/UpdateTourPage/{id}')
-            ->with('msg', 'Not Found')
-            ->with('fail', true);
-        // , [
-        //     "categories" => $categories,
-        //     "destinations" => $destinations,
-        //     "tour" => $tour
-        // ]);
-        // return self::failure('Not Found', [], 404);
+        
+        $tour->fill($request->all());
+        $tour->save();
+        // foreach ($request->file('images') as  $image) {
+
+
+
+        //     //use intervention.io
+
+        //     $imageOrignalName = $image->getClientOriginalName();
+        //     $imageNameArray = explode('.', $imageOrignalName);
+        //     $imageExtension = end($imageNameArray);
+        //     $newImageName = now()->timestamp . "." . $imageExtension;
+        //     $path = "tour/" . $tour->id . "/";
+        //     $image->move($path, $newImageName);
+        //     $image = new Image();
+        //     $image["filename"] = $newImageName;
+        //     $image["path"] = $path . $newImageName;
+        //     $image->save();
+        //     TourImage::create([
+        //         "tour_id" => $tour->id,
+        //         "image_id" => $image->id
+        //     ]);
+        // }
+        return redirect()
+            ->back()
+            ->with("msg", "Tour Updated!")
+            ->with("success", true);
+      
+
+
     }
 
-   
+
     public function destroy($id)
     {
         //
@@ -561,12 +565,12 @@ class TourController extends Controller
     public function getToursByCategory($id)
     {
 
-        
+
         $tour = Tour::where('category_id', $id)->get();
         $cat = TourCategory::where('id', $id)->first();
         return view('Backend.Admin.Tours.classicTours.ClassicTour', compact('tour', 'cat'));
-       
-         
+
+
         // $tour = Tour::all();
         //     $cat = TourCategory::where('id', $id)->first();
         // return view('Backend.Admin.Tours.classicTours.ClassicTour', [
@@ -583,59 +587,48 @@ class TourController extends Controller
 
 
 
-public function createMoreImages($id)
-{
-    $tour = Tour::find($id);
-    if ($tour) {
-        return view('Backend.Admin.Tours.classicTours.TourDescription', [
-            "tour" => $tour
-        ]);
-    }
-    return self::failure('Not Found', [], 404);
-}
-
-//store multiple images for id
-public function moreImagestore(Request $request, $id)
-{
-    $validate = Validator::make($request->all(), [
-       
-        "images" => "required",
-    ]);
-
-   //store all the images
-    if ($validate->fails()) {
-        return redirect('/admin/tours/detail/' . $id)
-            ->with('msg', 'Not Found')
-            ->with('fail', true);
-    } else {
+    public function createMoreImages($id)
+    {
         $tour = Tour::find($id);
         if ($tour) {
-            $images = $request->file('images');
-            foreach ($images as $image) {
-                $imageName = $image->getClientOriginalName();
-                $image->move(public_path('images/tours/' . $tour->id), $imageName);
-                $tour->images()->create([
-                    "image" => $imageName
-                ]);
+            return view('Backend.Admin.Tours.classicTours.TourDescription', [
+                "tour" => $tour
+            ]);
+        }
+        return self::failure('Not Found', [], 404);
+    }
+
+    //store multiple images for id
+    public function moreImagestore(Request $request, $id)
+    {
+        $validate = Validator::make($request->all(), [
+
+            "images" => "required",
+        ]);
+
+        //store all the images
+        if ($validate->fails()) {
+            return redirect('/admin/tours/detail/' . $id)
+                ->with('msg', 'Not Found')
+                ->with('fail', true);
+        } else {
+            $tour = Tour::find($id);
+            if ($tour) {
+                $images = $request->file('images');
+                foreach ($images as $image) {
+                    $imageName = $image->getClientOriginalName();
+                    $image->move(public_path('images/tours/' . $tour->id), $imageName);
+                    $tour->images()->create([
+                        "image" => $imageName
+                    ]);
+                }
+                return redirect('/admin/tours/detail/' . $id)
+                    ->with('msg', 'Images Added!')
+                    ->with('success', true);
             }
             return redirect('/admin/tours/detail/' . $id)
-                ->with('msg', 'Images Added!')
-                ->with('success', true);
+                ->with('msg', 'Not Found')
+                ->with('fail', true);
         }
-        return redirect('/admin/tours/detail/' . $id)
-            ->with('msg', 'Not Found')
-            ->with('fail', true);
     }
-    
-
-    
-        
-
- 
-
-
-
-}
-
-
 }

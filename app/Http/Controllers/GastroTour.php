@@ -10,7 +10,7 @@ class GastroTour extends Controller
 {
     public function getTours()
     {
-        $tour = Tour::where('category_id', 3)->get();
+        $tour = Tour::with('images')->where('category_id', 3)->get();
         $category = TourCategory::where('id', 3)->first();
         
         return view('Frontend.GastroTours.gastroTours', compact('tour', 'category'));

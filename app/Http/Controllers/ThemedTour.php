@@ -10,7 +10,7 @@ class ThemedTour extends Controller
 {
     public function getTours()
     {
-        $tour = Tour::where('category_id', 6)->get();
+        $tour = Tour::with('images')->where('category_id', 6)->get();
         $category = TourCategory::where('id', 6)->first();
         
         return view('Frontend.ThemedTours.ThemedTours', compact('tour', 'category'));

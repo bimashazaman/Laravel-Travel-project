@@ -1,12 +1,8 @@
-
-
-
 @extends('layouts.master')
 @section('content')
 <div class="fullBanner">
     @include('partials.DefaultBanner')
 </div>
-
 
 
     <h2 style="text-align: center; padding-bottom:60px">
@@ -51,8 +47,16 @@
                         </h3> --}}
                             <div class="single-package-item">
 
-                                <img src="https://bimasha.com/assets/images/about-banner.png" alt="">
+                                {{-- {{ $item->images->json() }}
+                                 --}}
+                                
+                                {{-- //show the image from images/tours
+                                <img src="{{ $item->images }}" alt=""> --}}
+                                {{-- {{ $item->images }} --}}
 
+
+                                <img src="{{$item->images->first()->path}}" alt="">
+                               
 
 
                                 <div class="packageName">
@@ -63,7 +67,7 @@
                                 <div class="package-txt" style="margin-left: -7%;">
                                     <h4>
                                         <a href="#" style="margin-left: 15%;font-weight: 400; font-size: 1.5rem;">
-                                            package one
+                                            {{ $item->type }}
                                         </a>
                                     </h4>
                                     <p class="kki">
