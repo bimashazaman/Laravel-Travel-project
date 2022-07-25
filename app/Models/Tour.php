@@ -21,6 +21,11 @@ class Tour extends Model
         return $this->belongsToMany(Image::class, 'tour_images');
     }
 
+    //relation with departureTable
+    public function departureTable(){
+        return $this->hasMany(DepartureTable::class);
+    }
+
 
     
 

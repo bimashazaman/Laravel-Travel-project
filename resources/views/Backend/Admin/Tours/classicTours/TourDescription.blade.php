@@ -200,6 +200,59 @@
 
                 </form>
             </div>
+            <div>
+                <div
+                    style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+                    <h3 class="">
+                        Departures
+                    </h3>
+                    <hr>
+
+                    <div class="list-group list-group-light">
+
+                        @foreach ($tour->departureTable as $departure)
+                            <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                                style="display: flex">
+
+
+                                <div style="display: block; background-color:rgb(248, 251, 253); border-radius:20px"
+                                    class="w-100 p-3">
+                                    <div>
+                                        <p>
+                                            <b>Start Date:</b> {{ $departure->start_date }}
+                                        </p>
+                                        <p>
+                                           <b> End Date:</b> {{ $departure->end_date }}
+                                        </p>
+                                        <p>
+                                          <b> Max Pax:</b> {{ $departure->pax }}
+                                        </p>
+                                        <p>
+                                            <b>Price:</b>{{ $departure->price }}
+                                        </p>
+
+                                    </div>
+                                    <div style="float: right">
+                                        <form action=""
+                                            method="POST" enctype="multipart/form-data">
+                                            {{ csrf_field() }}
+                                            {{ method_field('DELETE') }}
+
+                                            <button type="submit" class="btn btn-danger btn-sm ">
+                                                Detete
+                                            </button>
+                                        </form>
+                                    </div>
+
+                                </div>
+
+                            </div>
+                            <hr>
+                        @endforeach
+                    </div>
+                </div>
+
+            </div>
         </div>
         <div class="col-md-4">
             <div
@@ -222,7 +275,31 @@
 
                 </form>
             </div>
+            <div
+            style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+            <h3 class="">
+                Guarantee Departure 
+            </h3>
+            <hr>
+
+            <form action="{{ url('/admin/departure/' . $tour->id) }}" method="POST" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <div class="">
+                    <input type="text" class="form-control" placeholder="Start Date" name="start_date">
+                    <input type="text" class="form-control mt-1" placeholder="End Date" name="end_date">
+                    <input type="text" class="form-control mt-1" placeholder="Max Pax" name="price">
+                    <input type="text" class="form-control mt-1" placeholder="Price" name="pax">
+
+                    <hr>
+                    <button class="btn btn-info text-white">
+                        Submit
+                    </button>
+                </div>
+
+            </form>
         </div>
+        </div>
+        
     </div>
 
     <div class="row">

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\DepartureTable;
 use App\Models\Destination;
 use App\Models\Image;
 use App\Models\Tour;
@@ -173,6 +174,57 @@ class TourController extends Controller
                 ->first();
             return redirect("/admin/tours/detail/" . $id)
                 ->with("msg", "Tour Highlight added successfully!")
+                ->with("success", true)
+                ->with('tour', $tour);
+            // return self::success("Tour highlights added!", $tourHighlights);
+        } catch (Exception $e) {
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", $e->getMessage())
+                ->with("fail", true);
+            // return self::failure("Error in adding tour highlight", $e->getMessage());
+        }
+
+    }
+
+
+    function addDeparture(Request $request, $id)
+    {
+        
+
+        $validate = Validator::make($request->all(), [
+            // "tour_id" => "required|integer",
+            "start_date" => "required",
+            "end_date" => "required",
+            "price" => "required",
+            "pax" => "required",
+        ]);
+        if ($validate->fails()) {
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", $validate->errors()->first())
+                ->with("fail", true);
+
+            // return self::failure($validate->errors()->first());
+        }
+        try {
+            $tt = DepartureTable::create([
+                "start_date" => $request->start_date,
+                "end_date" => $request->end_date,
+                "price" => $request->price,
+                "pax" => $request->pax,
+                "tour_id" => $id
+            
+            ]);
+            // dd($tt);
+            $tour = Tour::with('images')
+                ->with('highlights')
+                ->with('program')
+                ->with('facility')
+                ->with('departureTable')
+                ->where("id", $id)
+                ->whereNull('deleted_at')
+                ->first();
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", "Added successfully!")
                 ->with("success", true)
                 ->with('tour', $tour);
             // return self::success("Tour highlights added!", $tourHighlights);

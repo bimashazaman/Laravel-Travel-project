@@ -59,6 +59,7 @@ Route::delete("/admin/tour/delete/{id}", [TourController::class, "destroy"])->na
 Route::get('/admin/UpdateTourPage/{id}', [TourController::class, 'edit']);
 Route::put('/admin/tour/update/{id}', [TourController::class, 'update']);
 Route::post("/admin/highlight/{id}", [TourController::class, "addTourHighlights"])->name('addHighlight');
+Route::post("/admin/departure/{id}", [TourController::class, "addDeparture"])->name('addDeparture');
 Route::post("/admin/facility/{id}", [TourController::class, "addTourFacility"])->name('addFacility');
 Route::post("/admin/tourprogram/{id}", [TourController::class, "addTourProgram"])->name('addTourProgram');
 Route::delete("/admin/highlight/delete/{id}", [TourController::class, "deleteHighlights"])->name('highlightDelete');
