@@ -8,11 +8,10 @@ use Illuminate\Database\Eloquent\Model;
 class TourProgram extends Model
 {
     use HasFactory;
-    protected $fillable = [
-        'day',
-        'date',
-        'destination_id',
-        'parent_destination_id',
-        'tour_id'
-    ];
+    protected $guarded = [];
+
+    public function tour()
+    {
+        return $this->belongsTo(Tour::class);
+    }
 }

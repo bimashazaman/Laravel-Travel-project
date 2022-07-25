@@ -50,11 +50,13 @@
                                 {{-- {{ $item->images->json() }}
                                  --}}
                                 
-                                {{-- //show the image from images/tours --}}
-                                <img src="{{ $item->images }}" alt="">
+                                {{-- //show the image from images/tours
+                                <img src="{{ $item->images }}" alt=""> --}}
+                                {{-- {{ $item->images }} --}}
 
 
-                                <img src="{{asset('tour/14/bn.png')}}">
+                                <img src="{{$item->images->first()->path}}" alt="">
+                               
 
 
                                 <div class="packageName">

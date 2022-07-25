@@ -13,7 +13,13 @@
                         
                         <div class="dash-count">
                             <a href="#" class="count-title">Tours</a>
-                            <a href="#" class="count">100 Tours</a>
+                            <a href="#" class="count">
+                                <?php
+                                    $tour = DB::table('tours')->get();
+                                    $count = count($tour);
+                                    echo $count." Tours";
+                                ?>
+                            </a>
                         </div>
                     </div>
                 </div>

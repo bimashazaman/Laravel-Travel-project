@@ -99,27 +99,16 @@ class TourController extends Controller
 
 
             
-            // foreach ($request->file('images') as $key => $file) {
+         
+           
 
-            //     $fileOrignalName = $file->getClientOriginalName();
-            //     // return $fileOrignalName;
-            //     $fileNameArray = explode('.', $fileOrignalName);
-            //     $fileExtension = end($fileNameArray);
-            //     $newFilename = $key . now()->timestamp . "." . $fileExtension;
-            //     $path = "tour/" . $tour->id . "/";
-            //     $file->move($path, $newFilename);
-            //     $image = new Image();
-            //     $image["filename"] = $newFilename;
-            //     $image["path"] = $path . $newFilename;
-            //     $image->save();
-            //     TourImage::create([
-            //         "tour_id" => $tour->id,
-            //         "image_id" => $image->id
-            //     ]);
-            // }
+           
+            foreach ($request->file('images') as  $image) {
+               
+            
 
             //use intervention.io
-            $image = $request->file('images');
+            
             $imageOrignalName = $image->getClientOriginalName();
             $imageNameArray = explode('.', $imageOrignalName);
             $imageExtension = end($imageNameArray);
@@ -134,36 +123,10 @@ class TourController extends Controller
                 "tour_id" => $tour->id,
                 "image_id" => $image->id
             ]);
-            //end use intervention.io
 
-
-
-
-            if ($request->highlights) {
-                foreach ($request->highlights as $highlight) {
-                    TourHighlight::create([
-                        "tour_id" => $tour->id,
-                        "highlight_id" => $highlight
-                    ]);
-                }
-            }
-            if ($request->facilities) {
-                foreach ($request->facilities as $facility) {
-                    TourFacility::create([
-                        "tour_id" => $tour->id,
-                        "facility_id" => $facility
-                    ]);
-                }
-            }
-            if ($request->program) {
-                foreach ($request->program as $program) {
-                    TourProgram::create([
-                        "tour_id" => $tour->id,
-                        "program_id" => $program
-                    ]);
-                }
-            }
-
+        }
+    
+           
 
 
 
@@ -182,6 +145,8 @@ class TourController extends Controller
     
     function addTourHighlights(Request $request, $id)
     {
+        
+
         $validate = Validator::make($request->all(), [
             // "tour_id" => "required|integer",
             "name" => "required"
@@ -217,6 +182,7 @@ class TourController extends Controller
                 ->with("fail", true);
             // return self::failure("Error in adding tour highlight", $e->getMessage());
         }
+
     }
 
 
@@ -248,42 +214,81 @@ class TourController extends Controller
     
     function addTourFacility(Request $request, $id)
     {
-        $validator = Validator::make($request->all(), [
-            "name" => "required|string",
-            // "tour_id" => "required|integer"
-        ]);
-        if ($validator->fails()) {
-            return redirect("/admin/tours/detail/" . $id)
-                ->with("msg", $validator->errors()->first())
-                ->with("fail", true);
-            // return self::failure($validator->errors()->first());
-        }
-        $exist = TourFacility::where('name', $request->name)
-            ->where('tour_id', $id)
-            ->first();
-        if ($exist) {
-            return redirect("/admin/tours/detail/" . $id)
-                ->with("msg", "Already Exist!")
-                ->with("fail", true);
-            // return self::failure("Already Exist!", [], 400);
-        }
-        $tourFacility = new TourFacility();
-        $tourFacility->fill($request->all());
-        $tourFacility["tour_id"] = $id;
-        $tourFacility->save();
-        $tour = Tour::with('images')
-            ->with('highlights')
-            ->with('facility')
-            ->with('program')
-            ->where("id", $id)
-            ->whereNull('deleted_at')
-            ->first();
+        // $validate = Validator::make($request->all(), [
+        //     // "tour_id" => "required|integer",
+        //     "name" => "required"
+        // ]);
+        // if ($validate->fails()) {
+        //     return redirect("/admin/tours/detail/" . $id)
+        //         ->with("msg", $validate->errors()->first())
+        //         ->with("fail", true);
 
-        return redirect("/admin/tours/detail/" . $id)
-            ->with("msg", "Tour Highlight added successfully!")
-            ->with("success", true)
-            ->with('tour', $tour);
-        // return self::success("Tour Facility added!");
+        //     // return self::failure($validate->errors()->first());
+        // }
+        // try {
+        //     $tt = TourFacility::create([
+        //         "name" => $request->name,
+        //         "tour_id" => $id
+        //     ]);
+        //     // dd($tt);
+        //     $tour = Tour::with('images')
+        //         ->with('highlights')
+        //         ->with('program')
+        //         ->with('facility')
+        //         ->where("id", $id)
+        //         ->whereNull('deleted_at')
+        //         ->first();
+        //     return redirect("/admin/tours/detail/" . $id)
+        //         ->with("msg", "Added successfully!")
+        //         ->with("success", true)
+        //         ->with('tour', $tour);
+        //     // return self::success("Tour highlights added!", $tourHighlights);
+        // } catch (Exception $e) {
+        //     return redirect("/admin/tours/detail/" . $id)
+        //         ->with("msg", $e->getMessage())
+        //         ->with("fail", true);
+        //     // return self::failure("Error in adding tour highlight", $e->getMessage());
+        // }
+
+        $validate = Validator::make($request->all(), [
+            // "tour_id" => "required|integer",
+            "name" => "required",
+            "unname" => ""
+        ]);
+        if ($validate->fails()) {
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", $validate->errors()->first())
+                ->with("fail", true);
+
+            // return self::failure($validate->errors()->first());
+        }
+        try {
+            $tt = TourFacility::create([
+                "name" => $request->name,
+                "unname" => $request->unname,
+                "tour_id" => $id
+            ]);
+            // dd($tt);
+            $tour = Tour::with('images')
+                ->with('highlights')
+                ->with('program')
+                ->with('facility')
+                ->where("id", $id)
+                ->whereNull('deleted_at')
+                ->first();
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", "Tour Facility added successfully!")
+                ->with("success", true)
+                ->with('tour', $tour);
+           
+        } catch (Exception $e) {
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", $e->getMessage())
+                ->with("fail", true);
+            
+        }
+
+
     }
 
 
@@ -330,10 +335,14 @@ class TourController extends Controller
     {
         $validator = Validator::make($request->all(), [
             // "tour_id" => "required|integer",
-            "destination_id" => "required|integer",
-            "parent_destination_id" => "required|integer",
-            "day" => "required|integer",
-            "date" => "required"
+            "day"=>"required",
+            "fromTo"=>"required",
+            "description"=>"",
+            "distance"=>"required",
+            "duration"=>"required",
+            "food"=>"",
+            "location"=>"required",
+
         ]);
         if ($validator->fails()) {
             return redirect("/admin/tours/detail/" . $id)
@@ -490,10 +499,10 @@ class TourController extends Controller
 
             // return self::success("Tour deleted!", ["data" => $tour]);
         }
-        return redirect('/admin/tours/' . $cat->name)
-            // ->with("tour", $tours)
-            ->with('fail', true)
-            ->with('msg', "Not Found");
+        // return redirect('/admin/tours/' . $cat->name)
+        //     // ->with("tour", $tours)
+        //     ->with('fail', true)
+        //     ->with('msg', "Not Found");
         // return self::failure('Not Found', [], 404);
     }
 
@@ -513,46 +522,68 @@ class TourController extends Controller
         //     "category" => $cat
         // ]);
     }
+
+
+
+
+
+
+
+
+
+public function createMoreImages($id)
+{
+    $tour = Tour::find($id);
+    if ($tour) {
+        return view('Backend.Admin.Tours.classicTours.TourDescription', [
+            "tour" => $tour
+        ]);
+    }
+    return self::failure('Not Found', [], 404);
+}
+
+//store multiple images for id
+public function moreImagestore(Request $request, $id)
+{
+    $validate = Validator::make($request->all(), [
+       
+        "images" => "required",
+    ]);
+
+   //store all the images
+    if ($validate->fails()) {
+        return redirect('/admin/tours/detail/' . $id)
+            ->with('msg', 'Not Found')
+            ->with('fail', true);
+    } else {
+        $tour = Tour::find($id);
+        if ($tour) {
+            $images = $request->file('images');
+            foreach ($images as $image) {
+                $imageName = $image->getClientOriginalName();
+                $image->move(public_path('images/tours/' . $tour->id), $imageName);
+                $tour->images()->create([
+                    "image" => $imageName
+                ]);
+            }
+            return redirect('/admin/tours/detail/' . $id)
+                ->with('msg', 'Images Added!')
+                ->with('success', true);
+        }
+        return redirect('/admin/tours/detail/' . $id)
+            ->with('msg', 'Not Found')
+            ->with('fail', true);
+    }
+    
+
+    
+        
+
+ 
+
+
+
 }
 
 
-
-
-
-
-
-
-
-// if ($validate->fails()) {
-//     // return self::failure($validate->errors()->first());
-//     return redirect('/admin/CreateClassicTour')
-//         ->with("msg", $validate->errors()->first())
-//         ->with("fail", true);
-// }
-// try {
-//     // dd($request->all());
-//     DB::beginTransaction();
-//     //basic tour info
-//     $tour = new Tour();
-//     $tour->fill($request->all());
-//     $tour->save();
-
-//     //saving tour images
-//     foreach ($request->file('images') as $key => $file) {
-
-//         $fileOrignalName = $file->getClientOriginalName();
-//         // return $fileOrignalName;
-//         $fileNameArray = explode('.', $fileOrignalName);
-//         $fileExtension = end($fileNameArray);
-//         $newFilename = $key . now()->timestamp . "." . $fileExtension;
-//         $path = "tour/" . $tour->id . "/";
-//         $file->move($path, $newFilename);
-//         $image = new Image();
-//         $image["filename"] = $newFilename;
-//         $image["path"] = $path . $newFilename;
-//         $image->save();
-//         TourImage::create([
-//             "tour_id" => $tour->id,
-//             "image_id" => $image->id
-//         ]);
-//     }
+}

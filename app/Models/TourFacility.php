@@ -10,6 +10,12 @@ class TourFacility extends Model
     use HasFactory;
     protected $fillable = [
         "name",
-        "tour_id"
+        "tour_id",
+        "unname"
     ];
+
+    public function tour()
+    {
+        return $this->belongsTo(Tour::class);
+    }
 }

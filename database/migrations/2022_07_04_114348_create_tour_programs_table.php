@@ -16,10 +16,13 @@ class CreateTourProgramsTable extends Migration
         Schema::create('tour_programs', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('tour_id');
-            $table->unsignedBigInteger('destination_id');
-            $table->unsignedBigInteger('parent_destination_id');
-            $table->integer("day");
-            $table->dateTime("date");
+            $table->string("day")->nullable();
+            $table->string("fromTo")->nullable();
+            $table->string("description")->nullable();
+            $table->string("distance")->nullable();
+            $table->string("duration")->nullable();
+            $table->string("food")->nullable();
+            $table->string("location")->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

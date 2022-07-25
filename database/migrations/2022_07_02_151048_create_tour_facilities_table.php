@@ -17,6 +17,9 @@ class CreateTourFacilitiesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('tour_id');
             $table->string('name');
+            $table->string('unname')->nullable();
+            //soft delete
+            $table->softDeletes();
             $table->timestamps();
         });
     }
