@@ -99,7 +99,7 @@
 
                             <div class="single-package-item">
 
-                                <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
+                                <img src="{{$hotel->images->first()->path}}"
                                     alt="package-place">
                                 <div class="HotelName">
                                     <h4>
@@ -113,7 +113,7 @@
                                 </div>
                                 <div class="pacdet" style="margin-left: -7%;">
                                     <div class="packageOffer">
-                                        <span><i class="fa-solid fa-location-dot"></i></span>{{ $hotel->location }}
+                                        <span><i class="fa-solid fa-location-dot"></i></span>{{ $hotel->address }}
                                     </div>
 
                                     <div class="packageOffer">

@@ -55,7 +55,7 @@
                                             {{ $hotel->free_cancelation }}
                                         </td>
                                         <td class="text-end">
-                                            <div class="font-weight-600 text-danger">
+                                            <div class="font-weight-600 text-danger float-end" style="display: flex">
                                                 <span>
                                                     <a href="{{ url('/admin/Hotel/'.$hotel->id) }}">
                                                         <button type="button"
@@ -70,11 +70,16 @@
                                                             class="btn btn-info">Update</button>
                                                     </a>
                                                 </span>
-                                                <span>
-                                                    <button type="button"
-                                                        style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;"
-                                                        class="btn btn-danger">Delete</button>
-                                                </span>
+                                                <form method="POST" action="/admin/Hotel/delete/{{$hotel->id}}">
+                                                    {{ csrf_field() }}
+                                                    {{ method_field('DELETE') }}
+                                            
+                                                   <span>
+                                                    <div class="form-group">
+                                                        <input type="submit" class="btn btn-danger delete-user" value="Delete">
+                                                    </div>
+                                                   </span>
+                                                </form>
                                             </div>
                                         </td>
                                     </tr>

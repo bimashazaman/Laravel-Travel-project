@@ -148,6 +148,10 @@ Route::get('/admin/Hotel/{id}', [HotelController::class, 'show']);
 Route::post('/admin/Hotel/store', [HotelController::class, 'store']);
 Route::put('/admin/Hotel/update/{id}', [HotelController::class, 'update']);
 Route::delete('/admin/Hotel/delete/{id}', [HotelController::class, 'destroy']);
+Route::post("/admin/hotel/highlight/{id}", [HotelController::class, "addHotelHighlights"]);
+Route::delete('/hotelHighlight/delete/{id}', [HotelController::class, 'deleteHotelHighlight']);
+Route::post("/admin/hotel/room/{id}", [HotelController::class, "addHotelRoom"]);
+Route::delete('/hotelRoom/delete/{id}', [HotelController::class, 'deleteHotelRoom']);
 
 //===========Admin Mice=========
 
