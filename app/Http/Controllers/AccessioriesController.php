@@ -77,6 +77,11 @@ class AccessioriesController extends Controller
   
     public function edit($id)
     {
+        $a = Accessiories::find($id)
+            ->with('images')
+            ->where('id', $id)
+            ->first();
+        return view('Backend.Admin.Services.Accessiories.update', compact('a'));
         
     }
 

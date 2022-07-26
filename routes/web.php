@@ -288,6 +288,7 @@ Route::get('/acs', [AccessioriesController::class, 'getAccessiories']);
 Route::get('/ac/{id}', [AccessioriesController::class, 'getAccessioriesDetails']);
 
 
+
 //========Frontend CarAirport=========
 Route::get('/MT', [CarAirportController::class, 'getAllCarAirport']);
 
