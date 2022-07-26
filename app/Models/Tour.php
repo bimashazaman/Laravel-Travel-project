@@ -27,12 +27,6 @@ class Tour extends Model
     }
 
 
-    
-
-    
-
-
-
 
     //highlights
     public function highlights()

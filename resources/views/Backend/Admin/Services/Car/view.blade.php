@@ -56,7 +56,7 @@
 
                                     
                                     <td class="text-nowrap">
-                                        <a href="{{ url('/car/'.$car->id) }}">{{ $car->name }}</a>
+                                        {{ $car->name }}
                                     </td>
                                     <td class="text-center">
                                         {{ $car->seats }}
@@ -75,12 +75,15 @@
                                     <td class="text-end" >
                                         <div class="font-weight-600 text-danger float-end" style="display: flex">
                                             <span>
-                                               <a href="{{ url('/car',$car->id) }}"> 
+                                               <a href="
+                                                {{ url('/carShow/' . $car->id) }}
+                                             
+                                               "> 
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="btn btn-success">Detail</button>
                                                </a>
                                             </span>
                                             <span>
-                                               <a href="{{ url('/admin/UpdateCar') }}">
+                                               <a href="{{ url('/car/edit/'.$car->id) }}">
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; color:white" class="btn btn-info">Update</button>
                                                </a>
                                             </span>

@@ -17,7 +17,7 @@
                     <div class="carousel-item active" data-bs-interval="1000">
                         <img src="{{ asset($tour->images->first()->path) }}" class="d-block w-100 " alt="...">
                     </div>
-                    
+
                     @foreach ($tour->images as $item)
                         @if ($item->id != $tour->images->first()->id)
                             <div class="carousel-item" data-bs-interval="1000">
@@ -173,6 +173,58 @@
                     </div>
 
                 </form>
+
+                <div class="list-group list-group-light">
+
+                    @foreach ($tour->program as $tourProgram)
+                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                            style="display: flex">
+
+
+                            <div style="display: block; background-color:rgb(248, 251, 253); border-radius:20px"
+                                class="w-100 p-3">
+                                <div>
+                                    <h4 class="text-center">
+                                        {{ $tourProgram->day }}
+                                    </h4>
+                                    <hr>
+                                    <div>
+                                        {{ $tourProgram->fromTo }}
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <p>
+                                            {{ $tourProgram->description }}
+                                        </p>
+                                    </div>
+                                    <hr>
+                                    <div>
+                                        <span style="margin-right: 5px"> {{ $tourProgram->distance }}</span> |
+                                        <span style="margin-right: 5px">{{ $tourProgram->duration }}</span> |
+                                        <span style="margin-right: 5px">{{ $tourProgram->location }}</span>
+                                    </div>
+                                    <div>
+                                        <span>{{ $tourProgram->food }}</span>
+                                    </div>
+                                </div>
+                                <div style="float: right">
+                                    <form action="{{ url('/admin/tourprogram/delete/' . $tourProgram->id) }}"
+                                        method="POST" enctype="multipart/form-data">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
+
+                                        <button type="submit" class="btn btn-danger btn-sm ">
+                                            Detete
+                                        </button>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+                        <hr>
+                    @endforeach
+                </div>
             </div>
         </div>
         <div class="col-md-4">
@@ -199,60 +251,39 @@
                     </div>
 
                 </form>
-            </div>
-            <div>
-                <div
-                    style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-                    <h3 class="">
-                        Departures
-                    </h3>
-                    <hr>
 
-                    <div class="list-group list-group-light">
+                <br>
+                <div class="list-group list-group-light">
+                    @foreach ($tour->facility as $tourFacility)
+                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                            style="display: flex">
 
-                        @foreach ($tour->departureTable as $departure)
-                            <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
-                                style="display: flex">
-
-
-                                <div style="display: block; background-color:rgb(248, 251, 253); border-radius:20px"
-                                    class="w-100 p-3">
-                                    <div>
-                                        <p>
-                                            <b>Start Date:</b> {{ $departure->start_date }}
-                                        </p>
-                                        <p>
-                                           <b> End Date:</b> {{ $departure->end_date }}
-                                        </p>
-                                        <p>
-                                          <b> Max Pax:</b> {{ $departure->pax }}
-                                        </p>
-                                        <p>
-                                            <b>Price:</b>{{ $departure->price }}
-                                        </p>
-
-                                    </div>
-                                    <div style="float: right">
-                                        <form action=""
-                                            method="POST" enctype="multipart/form-data">
-                                            {{ csrf_field() }}
-                                            {{ method_field('DELETE') }}
-
-                                            <button type="submit" class="btn btn-danger btn-sm ">
-                                                Detete
-                                            </button>
-                                        </form>
-                                    </div>
-
-                                </div>
-
-                            </div>
+                            {{ $tourFacility->name }}
                             <hr>
-                        @endforeach
-                    </div>
-                </div>
 
+
+                            {{-- {{ $tourFacility->unname }} --}}
+
+
+                            <form action="{{ url('/admin/facility/delete/' . $tourFacility->id) }}" method="POST"
+                                enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+
+                                <button type="submit" class="btn btn-danger btn-sm ">
+                                    Detete
+                                </button>
+                            </form>
+
+
+
+
+                        </div>
+                    @endforeach
+
+                </div>
             </div>
+         
         </div>
         <div class="col-md-4">
             <div
@@ -274,188 +305,101 @@
                     </div>
 
                 </form>
+                <br>
+                <div class="list-group list-group-light">
+
+                    @foreach ($tour->highlights as $highlight)
+                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                            style="display: flex">
+
+                            {{ $highlight->name }}
+
+
+                            <form action="{{ url('/admin/highlight/delete/' . $highlight->id) }}" method="POST"
+                                enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+
+                                <button type="submit" class="btn btn-danger btn-sm ">
+                                    Detete
+                                </button>
+                            </form>
+
+
+
+
+                        </div>
+                    @endforeach
+                </div>
             </div>
             <div
-            style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-            <h3 class="">
-                Guarantee Departure 
-            </h3>
-            <hr>
+                style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+                <h3 class="">
+                    Guarantee Departure
+                </h3>
+                <hr>
 
-            <form action="{{ url('/admin/departure/' . $tour->id) }}" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
-                <div class="">
-                    <input type="text" class="form-control" placeholder="Start Date" name="start_date">
-                    <input type="text" class="form-control mt-1" placeholder="End Date" name="end_date">
-                    <input type="text" class="form-control mt-1" placeholder="Max Pax" name="price">
-                    <input type="text" class="form-control mt-1" placeholder="Price" name="pax">
+                <form action="{{ url('/admin/departure/' . $tour->id) }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="">
+                        <input type="text" class="form-control" placeholder="Start Date" name="start_date">
+                        <input type="text" class="form-control mt-1" placeholder="End Date" name="end_date">
+                        <input type="text" class="form-control mt-1" placeholder="Max Pax" name="price">
+                        <input type="text" class="form-control mt-1" placeholder="Price" name="pax">
 
-                    <hr>
-                    <button class="btn btn-info text-white">
-                        Submit
-                    </button>
-                </div>
-
-            </form>
-        </div>
-        </div>
-        
-    </div>
-
-    <div class="row">
-        <div class="col-md-4">
-
-            <div>
-                <div
-                    style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-                    <h3 class="">
-                        Highlights
-                    </h3>
-                    <hr>
-
-                    <div class="list-group list-group-light">
-
-                        @foreach ($tour->highlights as $highlight)
-                            <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
-                                style="display: flex">
-
-                                {{ $highlight->name }}
-
-
-                                <form action="{{ url('/admin/highlight/delete/' . $highlight->id) }}" method="POST"
-                                    enctype="multipart/form-data">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}
-
-                                    <button type="submit" class="btn btn-danger btn-sm ">
-                                        Detete
-                                    </button>
-                                </form>
-
-
-
-
-                            </div>
-                        @endforeach
+                        <hr>
+                        <button class="btn btn-info text-white">
+                            Submit
+                        </button>
                     </div>
-                </div>
 
-            </div>
-        </div>
+                </form>
 
+                <div class="list-group list-group-light">
 
-
-        <div class="col-md-4">
-
-            <div>
-                <div
-                    style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-                    <h3 class="">
-                        Facilities
-                    </h3>
-                    <hr>
-
-                    <div class="list-group list-group-light">
-                        @foreach ($tour->facility as $tourFacility)
-                            <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
-                                style="display: flex">
-
-                                {{ $tourFacility->name }}
-                                <hr>
+                    @foreach ($tour->departureTable as $departure)
+                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                            style="display: flex">
 
 
-                                {{-- {{ $tourFacility->unname }} --}}
+                            <div style="display: block; background-color:rgb(248, 251, 253); border-radius:20px"
+                                class="w-100 p-3">
+                                <div>
+                                    <p>
+                                        <b>Start Date:</b> {{ $departure->start_date }}
+                                    </p>
+                                    <p>
+                                        <b> End Date:</b> {{ $departure->end_date }}
+                                    </p>
+                                    <p>
+                                        <b> Max Pax:</b> {{ $departure->pax }}
+                                    </p>
+                                    <p>
+                                        <b>Price:</b>{{ $departure->price }}
+                                    </p>
 
+                                </div>
+                                <div style="float: right">
+                                    <form action="" method="POST" enctype="multipart/form-data">
+                                        {{ csrf_field() }}
+                                        {{ method_field('DELETE') }}
 
-                                <form action="{{ url('/admin/facility/delete/' . $tourFacility->id) }}" method="POST"
-                                    enctype="multipart/form-data">
-                                    {{ csrf_field() }}
-                                    {{ method_field('DELETE') }}
-
-                                    <button type="submit" class="btn btn-danger btn-sm ">
-                                        Detete
-                                    </button>
-                                </form>
-
-
-
-
-                            </div>
-                        @endforeach
-
-                    </div>
-                </div>
-
-            </div>
-
-        </div>
-
-        <div class="col-md-4">
-
-            <div>
-                <div
-                    style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-                    <h3 class="">
-                        Tour Program
-                    </h3>
-                    <hr>
-
-                    <div class="list-group list-group-light">
-
-                        @foreach ($tour->program as $tourProgram)
-                            <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
-                                style="display: flex">
-
-
-                                <div style="display: block; background-color:rgb(248, 251, 253); border-radius:20px"
-                                    class="w-100 p-3">
-                                    <div>
-                                        <h4 class="text-center">
-                                            {{ $tourProgram->day }}
-                                        </h4>
-                                        <hr>
-                                        <div>
-                                            {{ $tourProgram->fromTo }}
-                                        </div>
-                                        <hr>
-                                        <div>
-                                            <p>
-                                                {{ $tourProgram->description }}
-                                            </p>
-                                        </div>
-                                        <hr>
-                                        <div>
-                                            <span style="margin-right: 5px"> {{ $tourProgram->distance }}</span> |
-                                            <span style="margin-right: 5px">{{ $tourProgram->duration }}</span> |
-                                            <span style="margin-right: 5px">{{ $tourProgram->location }}</span>
-                                        </div>
-                                        <div>
-                                            <span>{{ $tourProgram->food }}</span>
-                                        </div>
-                                    </div>
-                                    <div style="float: right">
-                                        <form action="{{ url('/admin/tourprogram/delete/' . $tourProgram->id) }}"
-                                            method="POST" enctype="multipart/form-data">
-                                            {{ csrf_field() }}
-                                            {{ method_field('DELETE') }}
-
-                                            <button type="submit" class="btn btn-danger btn-sm ">
-                                                Detete
-                                            </button>
-                                        </form>
-                                    </div>
-
+                                        <button type="submit" class="btn btn-danger btn-sm ">
+                                            Detete
+                                        </button>
+                                    </form>
                                 </div>
 
                             </div>
-                            <hr>
-                        @endforeach
-                    </div>
+
+                        </div>
+                        <hr>
+                    @endforeach
                 </div>
-
             </div>
-
         </div>
 
     </div>
+
+ 
 @endsection

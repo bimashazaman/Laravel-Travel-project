@@ -18,11 +18,33 @@ class Vehicle extends Model
         return $this->belongsTo(VehicleType::class);
     }
 
-  
     public function images()
     {
         return $this->belongsToMany(Image::class, 'vehicle_images');
     }
+
+    // public function images()
+    // {
+    //     return $this->belongsToMany(Image::class, 'vehicle_images');
+    // }
+
+
+    public function vehicleImages()
+    {
+        return $this->hasMany(VehicleImage::class);
+    }
+
+
+
+
+
+    // public function vehicleImages()
+    // {
+    //     return $this->hasMany(VehicleImage::class);
+    // }
+
+  
+
 
 }
 

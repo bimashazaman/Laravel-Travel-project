@@ -16,9 +16,9 @@ class CarController extends Controller
     public function index()
     {
         
-        $cars = Vehicle::all();
-        $image = VehicleImage::all();
-        return view('Backend.Admin.Services.Car.view', compact('cars','image'));
+        $cars = Vehicle::with('images')->get();
+        // $image = VehicleImage::all();
+        return view('Backend.Admin.Services.Car.view', compact('cars'));
     }
 
   
@@ -34,11 +34,13 @@ class CarController extends Controller
             'name' => 'required',
             'car_type' => 'required',
             'car_model' => 'required',
-            'images' => '',
+            'images' => 'required',
             'daily_price' => 'required',
             'weekly_price' => 'required',
             'monthly_price' => 'required',
+            'seats' => 'required',
             'free_cancelation' => 'required',
+           
             
         ]);
         if ($validate->fails()) {
@@ -51,34 +53,59 @@ class CarController extends Controller
             // dd($request->all());
             DB::beginTransaction();
             
-            $vehicle = new Vehicle();
-            $vehicle->fill($request->all());
-            $vehicle->save();
+            $vehicle = Vehicle::create([
+                'name' => $request->name,
+                'car_type' => $request->car_type,
+                'car_model' => $request->car_model,
+                'seats' => $request->seats,
+                'daily_price' => $request->daily_price,
+                'weekly_price' => $request->weekly_price,
+                'monthly_price' => $request->monthly_price,
+                'free_cancelation' => $request->free_cancelation,
+                 
+            ]);
 
-            //saving tour images
-            // foreach ($request->file('images') as $key => $file) {
+            foreach ($request->file('images') as  $image) {
 
-            //     $fileOrignalName = $file->getClientOriginalName();
-            //     // return $fileOrignalName;
-            //     $fileNameArray = explode('.', $fileOrignalName);
-            //     $fileExtension = end($fileNameArray);
-            //     $newFilename = $key . now()->timestamp . "." . $fileExtension;
-            //     $path = "vehicle/" . $vehicle->id . "/";
-            //     $file->move($path, $newFilename);
-            //     $image = new Image();
-            //     $image["filename"] = $newFilename;
-            //     $image["path"] = $path . $newFilename;
-            //     $image->save();
-            //     VehicleImage::create([
-            //         'image_id' => $image->id,
-            //         'vehicle_id' => $vehicle->id
-            //     ]);
-            // }
+
+
+                // $image_name = $image->getClientOriginalName();
+                // $image->move(public_path('images'), $image_name);
+                // $image_path = 'images/' . $image_name;
+                // $image_data = Image::create([
+                //     'image_path' => $image_path,
+                // ]);
+                // $vehicle->images()->attach($image_data->id);
+            
+           
+
+
+                $imageOrignalName = $image->getClientOriginalName();
+                $imageNameArray = explode('.', $imageOrignalName);
+                $imageExtension = end($imageNameArray);
+                $newImageName = now()->timestamp . "." . $imageExtension;
+                $path = "Car/" . $vehicle->id . "/";
+                $image->move($path, $newImageName);
+                $image = new Image();
+                $image["filename"] = $newImageName;
+                $image["path"] = $path . $newImageName;
+                $image->save();
+                VehicleImage::create([
+                    "vehicle_id" => $vehicle->id,
+                    "image_id" => $image->id
+                ]);
+
+            }
+            
+
+
+
+
 
             DB::commit();
-           
-            return redirect('/car/create')
-                ->with("msg", "Car added successfully!")
+            // return self::success("Tour added successfully!", ["data" => $image]);
+            return redirect('/admin/CreateClassicTour')
+                ->with("msg", "Tour added successfully!")
                 ->with("success", true);
         } catch (Exception $e) {
             DB::rollBack();
@@ -94,10 +121,10 @@ class CarController extends Controller
     
     public function show($id)
     {
-        //show tour details
-        $car = Vehicle::find($id);
-        $image = VehicleImage::where('vehicle_id', $id)->get();
-        return view('Backend.Admin.Services.Car.show', compact('car','image'));
+       
+
+        $car = Vehicle::with('images')->find($id);
+        return view('Backend.Admin.Services.Car.show', compact('car'));
 
     
     }
@@ -105,38 +132,61 @@ class CarController extends Controller
     
     public function edit($id)
     {
-        //
+        $car= Vehicle::find($id);
+        return view('Backend.Admin.Services.Car.update', compact('car'));
     }
 
   
     public function update(Request $request, $id)
     {
         //update a car
-        $this->validate($request, [
+        $validate = Validator::make($request->all(), [
             'name' => 'required',
-            'description' => 'required',
-            'image' => 'required',
+            'car_type' => 'required',
+            'car_model' => 'required',
+            'images' => '',
             'daily_price' => 'required',
             'weekly_price' => 'required',
             'monthly_price' => 'required',
+            'seats' => 'required',
             'free_cancelation' => 'required',
-            'price' => 'required',
-            'status' => 'required',
+           
+            
         ]);
+        if ($validate->fails()) {
+            // return self::failure($validate->errors()->first());
+            return redirect('/car/create')
+                ->with("msg", $validate->errors()->first())
+                ->with("fail", true);
+        }
 
-        $car = Vehicle::find($id);
-        $car->name = $request->name;
-        $car->description = $request->description;
-        $car->image = $request->image;
-        $car->daily_price = $request->daily_price;
-        $car->weekly_price = $request->weekly_price;
-        $car->monthly_price = $request->monthly_price;
-        $car->free_cancelation = $request->free_cancelation;
-        $car->price = $request->price;
-        $car->status = $request->status;
-        $car->save();
+        try {
+            DB::beginTransaction();
+            $car = Vehicle::find($id);
+            $car->update([
+                'name' => $request->name,
+                'car_type' => $request->car_type,
+                'car_model' => $request->car_model,
+                'seats' => $request->seats,
+                'daily_price' => $request->daily_price,
+                'weekly_price' => $request->weekly_price,
+                'monthly_price' => $request->monthly_price,
+                'free_cancelation' => $request->free_cancelation,
+                 
+            ]);
+            
+            DB::commit();
+            // return self::success("Tour added successfully!", ["data" => $image]);
+            return redirect('/admin/CreateClassicTour')
+                ->with("msg", "Tour added successfully!")
+                ->with("success", true);
+        } catch (Exception $e) {
+            DB::rollBack();
+            // return $e;
+            return self::failure('Error in adding tour data!', ["data" => $e->getMessage()]);
+        }
 
-        return redirect()->route('car.index')->with('success', 'Car updated successfully');
+
 
 
     }
@@ -157,14 +207,15 @@ class CarController extends Controller
     //get the cars in frontend
     public function getCars()
     {
-        $cars = Vehicle::all();
+        
+        $cars = Vehicle::with('images')->get();
         return view('Frontend.Cars.Cars', compact('cars'));
     }
 
     //get the car details in frontend
     public function getCarDetails($id)
     {
-        $car = Vehicle::find($id);
+        $car = Vehicle::find($id)->with('images')->first();
         return view('Frontend.Cars.Car', compact('car'));
     }
 }

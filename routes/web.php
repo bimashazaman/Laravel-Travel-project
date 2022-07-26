@@ -111,7 +111,7 @@ Route::post('/checkpost', [TourController::class, 'checkStore']);
 
 Route::get('/cars', [CarController::class, 'index'])->named('cars');
 Route::get('/car/create', [CarController::class, 'create']);
-Route::get('/car/{id}', [CarController::class, 'show']);
+Route::get('/carShow/{id}', [CarController::class, 'show']);
 Route::post('/car/store', [CarController::class, 'store']);
 Route::get('/car/edit/{id}', [CarController::class, 'edit']);
 Route::put('/car/update/{id}', [CarController::class, 'update']);
@@ -474,9 +474,6 @@ Route::get('/admin/d', function () {
 
 //===============Services Update routes=============
 
-Route::get('/admin/UpdateCar', function () {
-    return view('Backend.Admin.Services.Car.update');
-});
 
 
 Route::get('/admin/UpdateCarWithDriver', function () {

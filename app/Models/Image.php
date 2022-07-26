@@ -17,10 +17,13 @@ class Image extends Model
     public function tourImages(){
         return $this->hasMany(TourImage::class);
     }
+
+    public function vehicleImages(){
+        return $this->hasMany(VehicleImage::class);
+    }
   
  
-
-    public function vehicle(){
-        return $this->belongsToMany(Vehicle::class,'vehicle_images');
-    }
+    // public function vehicleImages(){
+    //     return $this->hasMany(VehicleImage::class);
+    // }
 }

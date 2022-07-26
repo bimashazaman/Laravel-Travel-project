@@ -263,41 +263,7 @@ class TourController extends Controller
 
     function addTourFacility(Request $request, $id)
     {
-        // $validate = Validator::make($request->all(), [
-        //     // "tour_id" => "required|integer",
-        //     "name" => "required"
-        // ]);
-        // if ($validate->fails()) {
-        //     return redirect("/admin/tours/detail/" . $id)
-        //         ->with("msg", $validate->errors()->first())
-        //         ->with("fail", true);
-
-        //     // return self::failure($validate->errors()->first());
-        // }
-        // try {
-        //     $tt = TourFacility::create([
-        //         "name" => $request->name,
-        //         "tour_id" => $id
-        //     ]);
-        //     // dd($tt);
-        //     $tour = Tour::with('images')
-        //         ->with('highlights')
-        //         ->with('program')
-        //         ->with('facility')
-        //         ->where("id", $id)
-        //         ->whereNull('deleted_at')
-        //         ->first();
-        //     return redirect("/admin/tours/detail/" . $id)
-        //         ->with("msg", "Added successfully!")
-        //         ->with("success", true)
-        //         ->with('tour', $tour);
-        //     // return self::success("Tour highlights added!", $tourHighlights);
-        // } catch (Exception $e) {
-        //     return redirect("/admin/tours/detail/" . $id)
-        //         ->with("msg", $e->getMessage())
-        //         ->with("fail", true);
-        //     // return self::failure("Error in adding tour highlight", $e->getMessage());
-        // }
+        
 
         $validate = Validator::make($request->all(), [
             // "tour_id" => "required|integer",

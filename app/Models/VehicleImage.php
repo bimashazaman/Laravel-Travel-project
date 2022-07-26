@@ -11,5 +11,19 @@ class VehicleImage extends Model
     protected $guarded = [];
 
 
+    //relations
+    public function vehicle()
+    {
+        return $this->belongsTo(Vehicle::class);
+    }
+
+    public function image()
+    {
+        return $this->belongsTo(Image::class);
+    }
+
+ 
+ 
+
     
 }
