@@ -25,4 +25,8 @@ class Image extends Model
     public function hotelImages(){
         return $this->hasMany(HotelImage::class);
     }
+
+    public function accessioriesImages(){
+        return $this->hasMany(AccessioriesImage::class);
+    }
 }

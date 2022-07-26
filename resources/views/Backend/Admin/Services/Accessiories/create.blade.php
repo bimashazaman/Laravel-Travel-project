@@ -84,17 +84,20 @@
                         <div class="col-md-10">
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="free_cancellation">
                         </div>
-
-                
-                    {{-- <div class="form-group row">
-                        <label class="col-form-label col-md-2">File Input </label>
-                        <div class="col-md-10">
-                            <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" class="form-control" type="file" name="images" multiple>
-                        </div>
-                    </div> --}}
-                    <div style="float: right">
-                        <button class="btn btn-info" style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; color:white; width:120px" type="submit">Create</button>
                     </div>
+
+                <br>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">File Input </label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" class="form-control" type="file" name="images[]" multiple="">
+                            </div>
+                        </div>
+                        
+                        
+                        <div style="float: right">
+                            <button class="btn btn-info"  style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; color:white; width:120px" type="submit">Create</button>
+                        </div>
                 </form>
             </div>
         </div>

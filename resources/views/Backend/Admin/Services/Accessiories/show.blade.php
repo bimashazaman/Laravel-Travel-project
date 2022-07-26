@@ -9,46 +9,34 @@
             {{$a->name}}
         </h2>
         <div class="row">
-            <div class="col-md-12 w-75 align-content-center justify-content-center m-auto">
-                <div id="carouselExampleIndicators" class="carousel slide" data-bs-ride="carousel" style="padding: 20px; ">
-                    <div class="carousel-indicators">
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0"
-                            class="active" aria-current="true" aria-label="Slide 1"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1"
-                            aria-label="Slide 2"></button>
-                        <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2"
-                            aria-label="Slide 3"></button>
+            <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="padding: 100px">
+                <div class="carousel-inner" style="width: 69%;margin: auto;">
+                    <div class="carousel-item active" data-bs-interval="1000">
+                        <img src="{{ asset($a->images->first()->path) }}" class="d-block w-100 " alt="...">
                     </div>
-                    <div class="carousel-inner"
-                        style="box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;">
-                        <div class="carousel-item active">
-                            <img src="https://images.unsplash.com/photo-1453728013993-6d66e9c9123a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MXx8bGVuc3xlbnwwfHwwfHw%3D&w=1000&q=80"
-                                class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500"
-                                class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRhnf3eaSdDatqYhzTVvfWaUeheiao5bcXWIw&usqp=CAU"
-                                class="d-block w-100" alt="...">
-                        </div>
-                    </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators"
-                        data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
+
+                    @foreach ($a->images as $item)
+                        @if ($item->id != $a->images->first()->id)
+                            <div class="carousel-item" data-bs-interval="1000">
+                                <img src="{{ asset($item->path) }}" class="d-block w-100" alt="...">
+                            </div>
+                        @endif
+                    @endforeach
+                    {{-- <div class="carousel-item">
+                        <img src="{{ asset($car->images->first()->path) }}" class="d-block w-100" alt="...">
+                    </div> --}}
                 </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleInterval"
+                    data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
             </div>
-
-         
-
         </div>
     </div>
    

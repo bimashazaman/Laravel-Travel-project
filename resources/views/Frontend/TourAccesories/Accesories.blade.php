@@ -33,7 +33,7 @@
 
                         <div class="single-package-item">
 
-                            <img src="https://cdn.thewirecutter.com/wp-content/uploads/2020/04/carcampingtents-lowres-72-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024"
+                            <img src="{{$item->images->first()->path}}"
                                 alt="package-place">
                             <div class="HotelName">
                                 <h4>

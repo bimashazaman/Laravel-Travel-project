@@ -50,20 +50,17 @@ class HotelController extends Controller
         ]);
 
         foreach ($request->file('images') as  $image) {
-            $imageOrignalName = $image->getClientOriginalName();
-            $imageNameArray = explode('.', $imageOrignalName);
-            $imageExtension = end($imageNameArray);
-            $newImageName = now()->timestamp . "." . $imageExtension;
-            $path = "Hotel/" . $hotel->id . "/";
-            $image->move($path, $newImageName);
+
+            $imageName = $image->getClientOriginalName();
+            $image->move("Hotel/" . $hotel->id . "/", $imageName);
             $image = new Image();
-            $image["filename"] = $newImageName;
-            $image["path"] = $path . $newImageName;
+            $image["filename"] = $imageName;
+            $image["path"] = "Hotel/" . $hotel->id . "/" . $imageName;
             $image->save();
-            HotelImage::create([
-                'hotel_id' => $hotel->id,
-                'image_id' => $image->id,
-            ]);
+            $hotel->images()->attach($image->id);
+        
+
+           
         }
         return redirect()->back()->with("msg", "Created successfully!")
             ->with("success", true);
