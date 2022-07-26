@@ -1,5 +1,14 @@
 @extends('Backend.Admin.AdminHome')
 @section('admin-content')
+@if(session('success'))
+<div class="alert alert-success">
+    {{session('msg')}}
+</div>
+@elseif(session('fail'))
+<div class="alert alert-danger">
+    {{session('msg')}}
+</div>
+@endif
     <div class="row">
         <div class="col-md-12 d-flex">
 
@@ -56,7 +65,7 @@
                                         {{$item->total_pax}}
                                     </td>
                                     <td class="text-end">
-                                        <div class="font-weight-600 text-danger">
+                                        <div class="font-weight-600 text-danger float-end" style="display: flex">
                                             <span>
                                                <a href="{{ url('/admin/accessiories/'.$item->id) }}">
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="btn btn-success">Detail</button>
@@ -67,9 +76,16 @@
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; color:white" class="btn btn-info">Update</button>
                                                </a>
                                             </span>
-                                            <span>
-                                                <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="btn btn-danger">Delete</button>
-                                            </span>
+                                            <form method="POST" action="{{ url('/admin/accessiories/delete/'.$item->id) }}">
+                                                {{ csrf_field() }}
+                                                {{ method_field('DELETE') }}
+                                        
+                                               <span>
+                                                <div class="form-group">
+                                                    <input type="submit" class="btn btn-danger delete-user" value="Delete">
+                                                </div>
+                                               </span>
+                                            </form>
                                         </div>
                                     </td>
                                 </tr>
