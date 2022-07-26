@@ -15,7 +15,8 @@
 
                         {{-- {{ var_dump($tour->image) }} --}}
 
-                        <img src="https://www.trolleytours.com/wp-content/uploads/2016/07/trolley-tours-of-key-west.jpg" alt="package-place">
+                        <img src="{{$tour->images->first()->path}}" alt="">
+
                          <div class="packageName">
                              {{$tour->name}}
                          </div>

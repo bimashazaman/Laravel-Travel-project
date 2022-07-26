@@ -34,32 +34,32 @@
                                 <div class="imgCcontainer">
                                     <div class="carousel imgC">
                                         @foreach ($tour->images as $item)
-                                        <input type="radio" name="slides" checked="checked" id="slide-{{ $item->id }}">
+                                            <input type="radio" name="slides" checked="checked"
+                                                id="slide-{{ $item->id }}">
                                         @endforeach
                                         <ul class="carousel__slides">
                                             @foreach ($tour->images as $item)
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="{{ asset($item->path) }}" alt="">
-                                                    </div>
+                                                <li class="carousel__slide" data-interval="1000">
+                                                    <figure>
+                                                        <div>
+                                                            <img src="{{ asset($item->path) }}" alt="">
+                                                        </div>
 
-                                                </figure>
-                                            </li>
+                                                    </figure>
+                                                </li>
                                             @endforeach
-                                           
+
                                         </ul>
                                         <ul class="carousel__thumbnails">
 
                                             @foreach ($tour->images as $item)
-                                                
-                                            
-                                            <li>
-                                                <label for="slide-{{ $item->id }}"><img src="{{ asset($item->path) }}"
-                                                        alt="">
-                                                    </label>
-                                            </li>
-                                         
+                                                @if ($item->id != $tour->images->first()->id)
+                                                    <li data-interval="1000">
+                                                        <label for="slide-{{ $item->id }}"><img
+                                                                src="{{ asset($item->path) }}" alt="">
+                                                        </label>
+                                                    </li>
+                                                @endif
                                             @endforeach
                                         </ul>
                                     </div>
