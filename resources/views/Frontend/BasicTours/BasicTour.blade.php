@@ -33,87 +33,34 @@
                             <section class="" style="">
                                 <div class="imgCcontainer">
                                     <div class="carousel imgC">
-                                        <input type="radio" name="slides" checked="checked" id="slide-1">
-                                        <input type="radio" name="slides" id="slide-2">
-                                        <input type="radio" name="slides" id="slide-3">
-                                        <input type="radio" name="slides" id="slide-4">
-                                        <input type="radio" name="slides" id="slide-5">
-                                        <input type="radio" name="slides" id="slide-6">
+                                        @foreach ($tour->images as $item)
+                                        <input type="radio" name="slides" checked="checked" id="slide-{{ $item->id }}">
+                                        @endforeach
                                         <ul class="carousel__slides">
+                                            @foreach ($tour->images as $item)
                                             <li class="carousel__slide">
                                                 <figure>
                                                     <div>
-                                                        <img src="https://picsum.photos/id/1041/800/450" alt="">
+                                                        <img src="{{ asset($item->path) }}" alt="">
                                                     </div>
 
                                                 </figure>
                                             </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1043/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1044/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1045/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1049/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1052/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
+                                            @endforeach
+                                           
                                         </ul>
                                         <ul class="carousel__thumbnails">
+
+                                            @foreach ($tour->images as $item)
+                                                
+                                            
                                             <li>
-                                                <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150"
-                                                        alt=""></label>
+                                                <label for="slide-{{ $item->id }}"><img src="{{ asset($item->path) }}"
+                                                        alt="">
+                                                    </label>
                                             </li>
-                                            <li>
-                                                <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150"
-                                                        alt=""></label>
-                                            </li>
+                                         
+                                            @endforeach
                                         </ul>
                                     </div>
                                 </div>
@@ -123,13 +70,13 @@
                                 <h2>Highlights</h2>
                                 <br>
                                 <ul style="list-style: none;">
+                                    @foreach ($tour->highlights as $h)
+                                        <li style="font-weight: 500; font-size:17px">
+                                            {{ $h->name }}
+                                        </li>
+                                    @endforeach
 
-                                    <li style="font-weight: 500; font-size:17px">Lorem ipsum dolor sit.</li>
-                                    <li style="font-weight: 500; font-size:17px">Lorem, ipsum dolor.</li>
-                                    <li style="font-weight: 500; font-size:17px">Lorem ipsum dolor sit amet.</li>
-                                    <li style="font-weight: 500; font-size:17px">Lorem ipsum dolor sit amet consectetur.
-                                    </li>
-                                    <li style="font-weight: 500; font-size:17px">Lorem, ipsum.</li>
+
                                 </ul>
                             </div>
 
@@ -166,25 +113,33 @@
 
 
                     <div class="detailespackage">
-                        <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>
-                        <div>lkgd</div>
-                    </div>
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-person"></i>Number of seats</div>
-                        <div> seats</div>
-                    </div>
-
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-calendar-check"></i>Year</div>
+                        <div style="float: left"><i class="fa-solid fa-clock"></i>Duration</div>
                         <div>
-                            hjnfg
+                            <span>{{ $tour->duration }}</span>
+                        </div>
+                    </div>
+                    <div class="detailespackage">
+                        <div><i class="fa-solid fa-repeat"></i>
+                            Date
+                        </div>
+                        <div>
+                            <span>{{ $tour->start_date }} - {{ $tour->end_date }} </span>
                         </div>
                     </div>
 
                     <div class="detailespackage">
-                        <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>
+                        <div><i class="fa-solid fa-calendar-check"></i>Type</div>
                         <div>
-                            fkvdfv
+                            {{ $tour->type }}
+                        </div>
+                    </div>
+
+                    <div class="detailespackage">
+                        <div><i class="fa-solid fa-dollar-sign"></i>
+                            Price
+                        </div>
+                        <div>
+                            <span>{{ $tour->price }}</span>
                         </div>
                     </div>
 
@@ -232,181 +187,80 @@
                 Tour Program
             </h3>
             <br>
+
             <div class="" style="display: flex">
 
                 <img src="{{ asset('images/timeline.png') }}" alt="" style="margin-left: 19px;">
+
                 <div>
-                    <h3>
-                        Day 1
-                    </h3>
-                    <p style="color: black">
-                        india - canada - nepal
-                    </p>
-                    <div class="single-row">
-                        <input name="collapsable" type="radio" id="col-1" class="opener" />
-                        <label for="col-1">
-                           <div class="content">
-                                <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint reprehenderit, numquam cumque ut itaque.
-                                </p>
+                    @foreach ($tour->program as $p)
+                        <h3>
+                            {{ $p->day }}
+                        </h3>
+                        <p style="color: black">
+                            {{ $p->fromTo }}
+                        </p>
+                        <div class="single-row">
+                            <input name="collapsable" type="radio" id="col-{{ $p->id }}" class="opener" />
+                            <label for="col-{{ $p->id }}">
+                                <div class="content">
+                                    <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
+                                        {{ $p->description }}
+                                    </p>
 
-                                <br>
-                                <div style="display: flex"  style="font-size: 1.5rem;font-weight:500 ">
-                                    <span style="font-weight:600"><i class="fa-solid fa-road" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-bed" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
+                                    <br>
+                                    <div style="display: flex" style="font-size: 1.5rem;font-weight:500 ">
+                                        <span style="font-weight:600"><i class="fa-solid fa-road"
+                                                style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
+                                            {{ $p->distance }}</span>
+                                        <span style="font-weight:600"><i class="fa-regular fa-clock"
+                                                style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
+                                            {{ $p->duration }}</span>
+                                        <span style="font-weight:600"><i class="fa-solid fa-burger"
+                                                style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
+                                            {{ $p->food }}</span>
+                                        <span style="font-weight:600"><i class="fa-regular fa-bed"
+                                                style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
+                                            {{ $p->location }}</span>
+                                    </div>
                                 </div>
-                            </div>
-                          
-                            <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}" class="arrow"
-                                alt=""></span>
-                       
-                           
-                        </label>
-                    </div>
 
-                    <br>
-                    <br>
-                    <br>
-
-                    <h3>
-                        Day 2
-                    </h3>
+                                <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}"
+                                        class="arrow" alt=""></span>
 
 
-                    <p style="color: black">
-                        india - canada - nepal
-                    </p>
-
-                    <div class="single-row">
-                        <input name="collapsable" type="radio" id="col-2" class="opener" />
-                        <label for="col-2">
-                           <div class="content">
-                                <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint reprehenderit, numquam cumque ut itaque.
-                                </p>
-
-                                <br>
-                                <div style="display: flex"  style="font-size: 1.5rem;font-weight:500 ">
-                                    <span style="font-weight:600"><i class="fa-solid fa-road" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-bed" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                </div>
-                            </div>
-                            <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}" class="arrow"
-                                    alt=""></span>
-                           
-                        </label>
-                    </div>
-
-
-
-                    <h3>
-                        Day 3
-                    </h3>
-                    <p style="color: black">
-                        india - canada - nepal
-                    </p>
-
-                    <div class="single-row">
-                        <input name="collapsable" type="radio" id="col-3" class="opener" />
-                        <label for="col-3">
-                           <div class="content">
-                                <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint reprehenderit, numquam cumque ut itaque.
-                                </p>
-
-                                <br>
-                                <div style="display: flex"  style="font-size: 1.5rem;font-weight:500 ">
-                                    <span style="font-weight:600"><i class="fa-solid fa-road" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-bed" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                </div>
-                            </div>
-                            <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}" class="arrow"
-                                    alt=""></span>
-                           
-                        </label>
-                    </div>
-
-
+                            </label>
+                        </div>
+                    @endforeach
                     <br>
 
-
-                    <h3>
-                        Day 4
-                    </h3>
-                    <p style="color: black">
-                        india - canada - nepal
-                    </p>
-                    <div class="single-row">
-                        <input name="collapsable" type="radio" id="col-4" class="opener" />
-                        <label for="col-4">
-                           <div class="content">
-                                <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Eius sint reprehenderit, numquam cumque ut itaque.
-                                </p>
-
-                                <br>
-                                <div style="display: flex"  style="font-size: 1.5rem;font-weight:500 ">
-                                    <span style="font-weight:600"><i class="fa-solid fa-road" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-clock" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                    <span style="font-weight:600"><i class="fa-regular fa-bed" style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i> 300KM</span>
-                                </div>
-                            </div>
-                            <span class="intro" style="width: 70%; margin-top: -39px"><img src="{{ asset('images/drop.png') }}" class="arrow"
-                                    alt=""></span>
-                           
-                        </label>
-                    </div>
                 </div>
 
 
+
+
             </div>
-            {{-- <div style="margin-left: 30px; padding-left: 50px">
-                <span style="color: #e5a686; font-size: 25px; font-weight:500; margin-right:24px">$</span>
-                <span style="font-size: 20px; font-weight:400; margin-right:24px">Price</span>
-                <span style="font-size: 20px; font-weight:600;">250$</span>
-            </div> --}}
-            {{-- <div style="margin: 30px; padding-left: 50px">
-                <button class="package-view">
-                    Tour Request
-                </button>
-            </div> --}}
+
         </div>
         <div class="col-md-6">
             {{-- <img src="{{ asset('images/i.png') }}" alt="" style="width: 80%"> --}}
             <br>
-            <h3>
+            <h3 style="padding-left: 90px">
                 What is included
             </h3>
             <br>
-            <ul style="list-style: none">
+            <ul style="list-style: none; padding-left: 90px">
 
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
-                    ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
-                    ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
-                    ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
-                    ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
-                    ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span> Lorem
-                    ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
-                            style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
-                            style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
-                            style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
-                <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
-                            style="width: 20px; margin-right: 10px;"></span> Lorem ipsum dolor sit.</li>
+                @foreach ($tour->facility as $i)
+                    <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span>
+                        {{ $i->name }}</li>
+
+                    <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
+                                style="width: 20px; margin-right: 10px;"></span>{{ $i->unname }}</li>
+                @endforeach
+
+
+
             </ul>
             <br>
             <br>
@@ -446,10 +300,18 @@
                             </thead>
                             <tbody>
                                 <tr>
-                                    <td style="padding: 15px;">25000 AMD</td>
-                                    <td style="padding: 15px;"> 35000 AMD</td>
-                                    <td style="padding: 15px;">45000 AMD</td>
-                                    <td style="padding: 15px;">45000 AMD</td>
+                                    <td style="padding: 15px;">
+                                        {{ $tour->one_day_price }}
+                                    </td>
+                                    <td style="padding: 15px;">
+                                        {{ $tour->one_week_price }}
+                                    </td>
+                                    <td style="padding: 15px;">
+                                        {{ $tour->one_month_price }}
+                                    </td>
+                                    <td style="padding: 15px;">
+                                        {{ $tour->one_year_price }}
+                                    </td>
                                 </tr>
                             </tbody>
 
@@ -490,29 +352,35 @@
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr>
-                                    <td style="padding: 15px;">25000</td>
-                                    <td style="padding: 15px;"> 35000</td>
-                                    <td style="padding: 15px;">45000</td>
-                                    <td style="padding: 15px;">45000</td>
+                                @foreach ($tour->departureTable as $d)
+                                    <tr>
+                                        <td style="padding: 15px;">{{ $d->start_date }}</td>
+                                        <td style="padding: 15px;"> {{ $d->end_date }}</td>
+                                        <td style="padding: 15px;">{{ $d->pax }}</td>
+                                        <td style="padding: 15px;">{{ $d->price }}</td>
 
-                                </tr>
-                                <tr>
-                                    <td style="padding: 15px;">25000</td>
-                                    <td style="padding: 15px;"> 35000</td>
-                                    <td style="padding: 15px;">45000</td>
-                                    <td style="padding: 15px;">45000</td>
-
-                                </tr>
+                                    </tr>
+                                @endforeach
 
 
                             </tbody>
                         </table>
                     </div>
+
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+                    <br>
+
+
                     <div class="col-md-3">
 
-                        <span><button class="package-view" style="margin-top: 138px;">Book Now</button></span>
-                        <span><button class="package-view" style="margin-top: 10px;">Book Now</button></span>
+                        @foreach ($tour->departureTable as $d)
+                            <span><button class="package-view" style="margin-top: 10px;">Book Now
+                                    {{ $d->id }}</button></span>
+                        @endforeach
                     </div>
                 </div>
 
