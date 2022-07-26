@@ -2,7 +2,7 @@
 @section('admin-content')
     {{-- {{$tour}} --}}
 
-  
+
     <div class="container-fluid">
         <h2 class="text-center font-weight-bold">
             Hotel Description
@@ -20,7 +20,7 @@
                             </div>
                         @endif
                     @endforeach
-               
+
                 </div>
                 <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleInterval"
                     data-bs-slide="prev">
@@ -35,33 +35,31 @@
             </div>
         </div>
     </div>
-   
 
+<center>
+    <h5>
+        {{ $hotel->description }}
+    </h5>
     
+</center>
     <div class="col-md-12">
 
         <div>
             <div
                 style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-                <h3 class="">
-                   {{ $hotel->name }}
-                </h3>
-                <hr>
-                <p>
-                    {{ $hotel->description }}
-                </p>
+            
 
                 <div class="d-flex justify-content-between">
                     <div class="col-md-3">
                         <div class="mb-3">
-                           Name
+                            Name
                         </div>
                         <div class="mb-3">
                             Address
-                         </div>
-                         
+                        </div>
+
                         <div class="mb-3">
-                           Stars
+                            Stars
                         </div>
                         <div class="mb-3">
                             Price
@@ -70,7 +68,7 @@
                             Free Cancelation
                         </div>
 
-                       
+
 
                     </div>
                     <div class="col-md-2">
@@ -89,8 +87,8 @@
                         <div class="mb-3">
                             {{ $hotel->free_cancelation }}
                         </div>
-                      
-                       
+
+
                     </div>
                 </div>
 
@@ -102,107 +100,208 @@
 
     <div class="row">
         <div class="col-md-6">
-            <div style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-            <h3 class="">
-                Highlights
-            </h3>
-            <hr>
+            <div
+                style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+                <h3 class="">
+                    Highlights
+                </h3>
+                <hr>
 
-            <form action="{{ url('/admin/hotel/highlight/'.$hotel->id) }}" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
-                <div class="">
-                    <input type="text" class="form-control" placeholder="Add Highlights" name="name">
+                <form action="{{ url('/admin/hotel/highlight/' . $hotel->id) }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="">
+                        <input type="text" class="form-control" placeholder="Add Highlights" name="name">
 
-                    <hr>
-                    <button class="btn btn-info text-white">
-                        Submit
-                    </button>
-                </div>
-
-            </form>
-            <br>
-            <div class="list-group list-group-light">
-
-                @foreach ($hotel->highlights as $highlight)
-                    <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
-                        style="display: flex">
-
-                        {{ $highlight->name }}
-
-
-                        <form action="{{ url('/hotelHighlight/delete/'.$highlight->id) }}" method="POST"
-                            enctype="multipart/form-data">
-                            {{ csrf_field() }}
-                            {{ method_field('DELETE') }}
-
-                            <button type="submit" class="btn btn-danger btn-sm ">
-                                Detete
-                            </button>
-                        </form>
+                        <hr>
+                        <button class="btn btn-info text-white">
+                            Submit
+                        </button>
                     </div>
-                @endforeach
+
+                </form>
+                <br>
+                <div class="list-group list-group-light">
+
+                    @foreach ($hotel->highlights as $highlight)
+                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                            style="display: flex">
+
+                            {{ $highlight->name }}
+
+
+                            <form action="{{ url('/hotelHighlight/delete/' . $highlight->id) }}" method="POST"
+                                enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+
+                                <button type="submit" class="btn btn-danger btn-sm ">
+                                    Detete
+                                </button>
+                            </form>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
-    </div>
 
         <div class="col-md-6">
-            <div style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-            <h3 class="">
-                Rooms
-            </h3>
-            <hr>
-            <form action="{{ url('/admin/hotel/room/'.$hotel->id) }}" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
-                
-                <div class="">
-                    <input type="text" class="form-control" placeholder="Add Room" name="name">
-                    <input type="text" class="form-control mt-2" placeholder="Add Price" name="price">
-                    <input type="text" class="form-control mt-2" placeholder="Add Price" name="price2">
-                    <hr>
-                    <button class="btn btn-info text-white" type="submit">
-                        Submit
-                    </button>
-                </div>
+            <div
+                style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+                <h3 class="">
+                    Rooms
+                </h3>
+                <hr>
+                <form action="{{ url('/admin/hotel/room/' . $hotel->id) }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
 
-            </form>
-            <br>
-            <div class="list-group list-group-light">
-
-                @foreach ($hotel->rooms as $room)
-                    <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
-                        style="display: flex">
-
-                        <div>
-                           <b>Room Type:</b> {{ $room->name }}
-                        </div>
-
-                        <div>
-                            <b>Price:</b> {{ $room->price }} - {{ $room->price2 }}
-                            
-                        </div>
-
-                        <form action="{{ url('/hotelRoom/delete/'.$room->id) }}" method="POST"
-                            enctype="multipart/form-data">
-                            {{ csrf_field() }}
-                            {{ method_field('DELETE') }}
-
-                            <button type="submit" class="btn btn-danger btn-sm ">
-                                Detete
-                            </button>
-                        </form>
+                    <div class="">
+                        <input type="text" class="form-control" placeholder="Add Room" name="name">
+                        <input type="text" class="form-control mt-2" placeholder="Add Price" name="price">
+                        <input type="text" class="form-control mt-2" placeholder="Add Price" name="price2">
+                        <hr>
+                        <button class="btn btn-info text-white" type="submit">
+                            Submit
+                        </button>
                     </div>
-                @endforeach
-            </div>
+
+                </form>
+                <br>
+                <div class="list-group list-group-light">
+
+                    @foreach ($hotel->rooms as $room)
+                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                            style="display: flex">
+
+                            <div>
+                                <b>Room Type:</b> {{ $room->name }}
+                            </div>
+
+                            <div>
+                                <b>Price:</b> {{ $room->price }} - {{ $room->price2 }}
+
+                            </div>
+
+                            <form action="{{ url('/hotelRoom/delete/' . $room->id) }}" method="POST"
+                                enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+
+                                <button type="submit" class="btn btn-danger btn-sm ">
+                                    Detete
+                                </button>
+                            </form>
+                        </div>
+                    @endforeach
+                </div>
             </div>
         </div>
-        
-    
+
+
     </div>
 
- 
+    <div class="row">
+        <div class="col-md-6">
+            <div
+                style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+                <h3 class="">
+                    Hotel Included
+                </h3>
+                <hr>
+                <form action="{{ url('/admin/hotel/facility/' . $hotel->id) }}" method="POST"
+                    enctype="multipart/form-data">
+                    {{ csrf_field() }}
+
+                    <div class="">
+                        <input type="text" class="form-control" placeholder="What is included?" name="name">
+
+                        <hr>
+                        <button class="btn btn-info text-white" type="submit">
+                            Submit
+                        </button>
+                    </div>
+
+                </form>
+                <br>
+                <div class="list-group list-group-light">
+
+                    @foreach ($hotel->hotelFacilities as $room)
+                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                            style="display: flex">
+
+                            <div>
+                                {{ $room->name }}
+                            </div>
 
 
 
+                            <form action="{{ url('/hotelFacility/delete/' . $room->id) }}" method="POST"
+                                enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
 
-  
+                                <button type="submit" class="btn btn-danger btn-sm ">
+                                    Detete
+                                </button>
+                            </form>
+
+                            <hr>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-6">
+            <div
+                style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+                <h3 class="">
+                    Useful to Know
+                </h3>
+                <hr>
+                <form action="{{ url('/admin/addHotelInfo/' . $hotel->id) }}" method="POST"
+                    enctype="multipart/form-data">
+                    {{ csrf_field() }}
+
+                    <div class="">
+                        <input type="text" class="form-control" placeholder="What is useful to know?" name="name">
+
+                        <hr>
+                        <button class="btn btn-info text-white" type="submit">
+                            Submit
+                        </button>
+                    </div>
+
+                </form>
+                <br>
+                <div class="list-group list-group-light">
+
+                    @foreach ($hotel->hotelInfo as $room)
+                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                            style="display: flex">
+
+                            <div>
+                                {{ $room->name }}
+                            </div>
+
+
+
+                            <form action="{{ url('/hotelInfo/delete/' . $room->id) }}" method="POST"
+                                enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+
+                                <button type="submit" class="btn btn-danger btn-sm ">
+                                    Detete
+                                </button>
+                            </form>
+
+                            <hr>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+        </div>
+
+
+    </div>
 @endsection

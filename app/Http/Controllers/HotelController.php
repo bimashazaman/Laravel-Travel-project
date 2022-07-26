@@ -3,8 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\Hotel;
+use App\Models\HotelFacility;
 use App\Models\HotelHighlights;
 use App\Models\HotelImage;
+use App\Models\HotelInfo;
 use App\Models\HotelRoom;
 use App\Models\Image;
 use Illuminate\Http\Request;
@@ -75,6 +77,8 @@ class HotelController extends Controller
         $hotel = Hotel::find($id)
             ->with('images')
             ->with('highlights')
+            ->with('hotelInfo')
+            ->with('hotelFacilities')
             ->with('rooms')
             ->where('id', $id)
             ->first();
@@ -85,9 +89,15 @@ class HotelController extends Controller
         return view('Backend.Admin.Services.Hotels.show', compact('hotel'));
     }
 
+    public function edit($id)
+    {
+        $hotel = Hotel::find($id);
+        return view('Backend.Admin.Services.Hotels.update', compact('hotel'));
+    }
 
 
-    function addHotelHighlights(Request $request, $id)
+
+    public function addHotelHighlights(Request $request, $id)
     {
 
 
@@ -127,6 +137,57 @@ class HotelController extends Controller
         }
     }
 
+
+
+
+    public function addFacility(Request $request, $id)
+    {
+    
+        $validate = Validator::make($request->all(), [
+            // "tour_id" => "required|integer",
+            "name" => "required"
+        ]);
+        if ($validate->fails()) {
+            return redirect()
+                ->back()
+                ->with("msg", $validate->errors()->first())
+                ->with("fail", true);
+
+            // return self::failure($validate->errors()->first());
+        }
+        try {
+            $hotel = HotelFacility::create([
+                "name" => $request->name,
+                "hotel_id" => $id
+            ]);
+            // dd($tt);
+            $hotel = Hotel::with('images')
+                ->with('highlights')
+                ->where("id", $id)
+                ->with('hotelFacilities')
+                ->whereNull('deleted_at')
+                ->first();
+            // dd($hotel);
+            return redirect()
+                ->back()
+                ->with("msg", "Created successfully!")
+                ->with("success", true);
+        } catch (\Exception $e) {
+            return redirect()
+                ->back()
+                ->with("msg", $e->getMessage())
+                ->with("fail", true);
+        }
+
+    }
+
+    public function FacilityDelete($id)
+    {
+        $facility = HotelFacility::find($id);
+        $facility->delete();
+        return redirect()->back()->with("msg", "Deleted successfully!")
+            ->with("success", true);
+    }
 
     function addHotelRoom(Request $request, $id)
     {
@@ -180,6 +241,52 @@ class HotelController extends Controller
             ->with("success", true);
     }
 
+
+    public function addHotelInfo(Request $request, $id)
+    {
+        $validator = Validator::make($request->all(), [
+            // "tour_id" => "required|integer",
+            "name" => "required",
+           
+        ]);
+        if ($validator->fails()) {
+            return redirect()
+                ->back()
+                ->with("msg", $validator->errors()->first())
+                ->with("fail", true);
+            // return self::failure($validator->errors()->first());
+        }
+        $hotel = new HotelInfo();
+        $hotel->fill($request->all());
+        $hotel["hotel_id"] = $id;
+
+        $hotel->save();
+        $tour = Hotel::with('images')
+            ->with('highlights')
+            ->with('hotelFacilities')
+            ->where("id", $id)
+            ->whereNull('deleted_at')
+            ->first();
+        return redirect()
+            ->back()
+            ->with("msg", "Added successfully!")
+            ->with("success", true)
+            ->with('tour', $tour);
+    }
+
+    public function deleteHotelInfo($id)
+    {
+        $hotel = HotelInfo::find($id);
+        $hotel->delete();
+        return redirect()
+            ->back()
+            ->with("msg", "Deleted successfully!")
+            ->with("success", true);
+    }
+
+
+
+
     public function update(Request $request, $id)
     {
         $request->validate([
@@ -225,11 +332,13 @@ class HotelController extends Controller
     public function getHotelDetails($id)
     {
         $hotels = Hotel::with('images')
-            ->with('highlights')
-            ->with('rooms')
-            ->where("id", $id)
-            ->whereNull('deleted_at')
-            ->first();
+        ->with('highlights')
+        ->with('hotelInfo')
+        ->with('hotelFacilities')
+        ->with('rooms')
+        ->where('id', $id)
+        ->first()
+        ;
         return view('Frontend.Hotels.Hotel', compact('hotels'));
     }
 }

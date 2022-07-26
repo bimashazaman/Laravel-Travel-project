@@ -40,4 +40,9 @@ class Hotel extends Model
         return $this->hasMany(HotelFacility::class);
     }
 
+    public function hotelInfo()
+    {
+        return $this->hasMany(HotelInfo::class);
+    }
+
 }

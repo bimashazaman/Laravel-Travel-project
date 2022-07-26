@@ -64,7 +64,7 @@
                                                     </a>
                                                 </span>
                                                 <span>
-                                                    <a href="{{ url('/admin/updateHotel') }}">
+                                                    <a href="{{ url('/admin/Hotel/edit/'.$hotel->id) }}">
                                                         <button type="button"
                                                             style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; color:white"
                                                             class="btn btn-info">Update</button>

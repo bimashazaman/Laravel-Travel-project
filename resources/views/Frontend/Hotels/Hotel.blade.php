@@ -65,8 +65,8 @@
                                     <li>
                                         {{ $item->name }}
                                     </li>
-                            @endforeach
-                              
+                                @endforeach
+
                             </ul>
                         </div>
                     </div><!-- /.tour-descriptions-content-inner -->
@@ -158,19 +158,17 @@
 
                     </tr>
                     @foreach ($hotels->rooms as $item)
-                        
-                    
-                    <tr>
-                        <td>
-                            {{ $item->name }}
-                        </td>
-                        <td>
-                            {{ $item->price }}
-                        </td>
-                        <td>
-                            {{ $item->price2 }}
-                        </td>
-                    </tr>
+                        <tr>
+                            <td>
+                                {{ $item->name }}
+                            </td>
+                            <td>
+                                {{ $item->price }}
+                            </td>
+                            <td>
+                                {{ $item->price2 }}
+                            </td>
+                        </tr>
                     @endforeach
 
                 </tbody>
@@ -193,11 +191,14 @@
                             UseFul To know
                         </h3>
                         <ul>
-                            <li>Lorem ipsum dolor sit.</li>
-                            <li>Lorem ipsum dolor sit amet consectetur.</li>
-                            <li>Lorem ipsum dolor sit amet.</li>
-                            <li>Lorem, ipsum dolor.</li>
-                            <li>Lorem ipsum dolor sit.</li>
+                            @foreach ( $hotels->hotelInfo as $item)
+                                <li>
+                                    {{ $item->name }}
+                                </li>
+
+                                @endforeach
+                            
+                            
                         </ul>
                     </div>
                     <img src="{{ asset('images/usefull.png') }}" alt="">
@@ -211,30 +212,13 @@
                     <br>
                     <ul style="list-style: none; padding-left:30px">
 
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
-                        <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
-                                    class="plusImg"></span> Lorem ipsum dolor sit.</li>
+                        @foreach ($hotels->hotelFacilities as $f)
+                            <li class="mewmew" style="color: white"><span><img src="{{ asset('images/p.png') }}"
+                                        class="plusImg"></span>
+                                {{ $f->name }}
+                            </li>
+                        @endforeach
+
                     </ul>
                 </div>
             </div>

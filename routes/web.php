@@ -145,6 +145,7 @@ Route::delete('/admin/accessiories/delete/{id}', [AccessioriesController::class,
 Route::get('/admin/Hotel', [HotelController::class, 'index']);
 Route::get('/admin/Hotel/create', [HotelController::class, 'create']);
 Route::get('/admin/Hotel/{id}', [HotelController::class, 'show']);
+Route::get('/admin/Hotel/edit/{id}', [HotelController::class, 'edit']);
 Route::post('/admin/Hotel/store', [HotelController::class, 'store']);
 Route::put('/admin/Hotel/update/{id}', [HotelController::class, 'update']);
 Route::delete('/admin/Hotel/delete/{id}', [HotelController::class, 'destroy']);
@@ -152,6 +153,10 @@ Route::post("/admin/hotel/highlight/{id}", [HotelController::class, "addHotelHig
 Route::delete('/hotelHighlight/delete/{id}', [HotelController::class, 'deleteHotelHighlight']);
 Route::post("/admin/hotel/room/{id}", [HotelController::class, "addHotelRoom"]);
 Route::delete('/hotelRoom/delete/{id}', [HotelController::class, 'deleteHotelRoom']);
+Route::post("/admin/hotel/facility/{id}", [HotelController::class, "addFacility"]);
+Route::delete('/hotelFacility/delete/{id}', [HotelController::class, 'FacilityDelete']);
+Route::post("/admin/addHotelInfo/{id}", [HotelController::class, "addHotelInfo"]);
+Route::delete('/hotelInfo/delete/{id}', [HotelController::class, 'deleteHotelInfo']);
 
 //===========Admin Mice=========
 
@@ -419,9 +424,9 @@ Route::get('/BookHotel', function () {
 
 
 
-Route::get('/UpdateClassicTour', function () {
-    return view('Backend.Admin.Tours.classicTours.UpdateClassicTour');
-});
+// Route::get('/UpdateClassicTour', function () {
+//     return view('Backend.Admin.Tours.classicTours.UpdateClassicTour');
+// });
 
 
 Route::get('/driver', function () {
@@ -487,9 +492,9 @@ Route::get('/admin/UpdateCarWithDriver', function () {
 
 
 
-Route::get('/admin/updateHotel', function () {
-    return view('Backend.Admin.Services.Hotels.update');
-});
+// Route::get('/admin/updateHotel', function () {
+//     return view('Backend.Admin.Services.Hotels.update');
+// });
 
 
 

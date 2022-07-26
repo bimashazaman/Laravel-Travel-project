@@ -1,137 +1,87 @@
 @extends('Backend.Admin.AdminHome')
 @section('admin-content')
 
+<!-- added successfully or not -->
+@if(session('success'))
+<div class="alert alert-success">
+    {{session('msg')}}
+</div>
+@elseif(session('fail'))
+<div class="alert alert-danger">
+    {{session('msg')}}
+</div>
+@endif
 
-            <div class="page-header">
-                <div class="row">
-                    <div class="col-sm-12">
-                        <h3 class="page-title">Update Informations</h3>
-                       
-                    </div>
-                </div>
+<div class="page-header">
+    <div class="row">
+        <div class="col-sm-12">
+            <h2 class="page-title" style="text-align: center">Update Hotel</h2>
+        </div>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-sm-12">
+        <div class="card" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+            <div class="card-header">
+                <h4 class="card-title">Add Information</h4>
             </div>
-
-            <div class="row">
-                <div class="col-sm-12">
-                    <div class="card">
-                        <div class="card-header">
-                            <h4 class="card-title">Hotelst</h4>
-                        </div>
-                        <div class="card-body">
-                            <form action="#">
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Text Input</label>
-                                    <div class="col-md-10">
-                                        <input type="text" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Password</label>
-                                    <div class="col-md-10">
-                                        <input type="password" class="form-control">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Disabled Input</label>
-                                    <div class="col-md-10">
-                                        <input type="text" class="form-control" disabled="disabled">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Readonly Input</label>
-                                    <div class="col-md-10">
-                                        <input type="text" class="form-control" value="readonly" readonly="readonly">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Placeholder</label>
-                                    <div class="col-md-10">
-                                        <input type="text" class="form-control" placeholder="Placeholder">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">File Input</label>
-                                    <div class="col-md-10">
-                                        <input class="form-control" type="file">
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Default Select</label>
-                                    <div class="col-md-10">
-                                        <select class="form-control form-select">
-                                            <option>-- Select --</option>
-                                            <option>Option 1</option>
-                                            <option>Option 2</option>
-                                            <option>Option 3</option>
-                                            <option>Option 4</option>
-                                            <option>Option 5</option>
-                                        </select>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Radio</label>
-                                    <div class="col-md-10">
-                                        <div class="radio">
-                                            <label>
-                                                <input type="radio" name="radio"> Option 1
-                                            </label>
-                                        </div>
-                                        <div class="radio">
-                                            <label>
-                                                <input type="radio" name="radio"> Option 2
-                                            </label>
-                                        </div>
-                                        <div class="radio">
-                                            <label>
-                                                <input type="radio" name="radio"> Option 3
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Checkbox</label>
-                                    <div class="col-md-10">
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="checkbox"> Option 1
-                                            </label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="checkbox"> Option 2
-                                            </label>
-                                        </div>
-                                        <div class="checkbox">
-                                            <label>
-                                                <input type="checkbox" name="checkbox"> Option 3
-                                            </label>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div class="form-group row">
-                                    <label class="col-form-label col-md-2">Textarea</label>
-                                    <div class="col-md-10">
-                                        <textarea rows="5" cols="5" class="form-control" placeholder="Enter text here"></textarea>
-                                    </div>
-                                </div>
-                                <div class="form-group mb-0 row">
-                                    <label class="col-form-label col-md-2">Input Addons</label>
-                                    <div class="col-md-10">
-                                        <div class="input-group">
-                                            <span class="input-group-text">$</span>
-                                            <input class="form-control" type="text">
-                                            <div class="input-group-append">
-                                                <button class="btn btn-primary" type="button">Button</button>
-                                            </div>
-                                        </div>
-                                    </div>
-                                </div>
-                            </form>
+            <div class="card-body">
+                <form id="tourForm" action="{{ url('/admin/Hotel/update/'.$hotel->id) }}" method="POST" enctype="multipart/form-data">
+                    {{csrf_field()}}
+                    @method('PUT')
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Hotel Name</label>
+                        <div class="col-md-10">
+                            <input value="{{ $hotel->name }}" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="name">
                         </div>
                     </div>
-
-                </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Description</label>
+                        <div class="col-md-10">
+                            <input value="{{ $hotel->description }}" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; width:100%; border:none" class="form-control" name="description" >
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Address</label>
+                        <div class="col-md-10">
+                            <input value="{{ $hotel->address }}" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="address">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Stars</label>
+                        <div class="col-md-10">
+                            <input value="{{ $hotel->stars }}" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="stars">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Price</label>
+                        <div class="col-md-10">
+                            <input value="{{ $hotel->price }}" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="price">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Free Cancel</label>
+                        <div class="col-md-10">
+                            <input value="{{ $hotel->free_cancelation }}" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="free_cancelation">
+                        </div>
+                    </div>
+                
+                    {{-- <div class="form-group row">
+                        <label class="col-form-label col-md-2">File Input </label>
+                        <div class="col-md-10">
+                            <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" class="form-control" type="file" name="images[]" multiple="">
+                        </div>
+                    </div> --}}
+                    <div style="float: right">
+                        <button class="btn btn-info" style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; color:white; width:120px" type="submit">Create</button>
+                    </div>
+                </form>
             </div>
         </div>
+
+    </div>
+</div>
+</div>
 
 @endsection
