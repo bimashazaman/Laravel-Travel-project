@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Models\Mice;
 use Illuminate\Http\Request;
 
@@ -20,6 +21,12 @@ class MiceController extends Controller
         return view('Backend.Admin.Services.MICE.create');
     }
 
+    public function edit($id)
+    {
+        $mice = Mice::find($id);
+        return view('Backend.Admin.Services.MICE.update', compact('mice'));
+    }
+
     public function store(Request $request)
     {
         $this->validate($request, [
@@ -29,16 +36,31 @@ class MiceController extends Controller
             'personal' => 'required',
             'Products' => 'required',
             'Extra' => 'required',
+            'images' => 'required',
 
         ]);
-        $mice = new Mice;
-        $mice->name = $request->name;
-        $mice->available = $request->available;
-        $mice->total_pax = $request->total_pax;
-        $mice->personal = $request->personal;
-        $mice->Products = $request->Products;
-        $mice->Extra = $request->Extra;
-        $mice->save();
+        $mice = Mice::create([
+            'name' => $request->name,
+            'available' => $request->available,
+            'total_pax' => $request->total_pax,
+            'personal' => $request->personal,
+            'Products' => $request->Products,
+            'Extra' => $request->Extra,
+        ]);
+      
+        foreach ($request->file('images') as  $image) {
+
+            $imageName = $image->getClientOriginalName();
+            $image->move("Mice/" . $mice->id . "/", $imageName);
+            $image = new Image();
+            $image["filename"] = $imageName;
+            $image["path"] = "Mice/" . $mice->id . "/" . $imageName;
+            $image->save();
+            $mice->images()->attach($image->id);
+        
+
+           
+        }
 
         return redirect()->back()->with("msg", "Created successfully!")
         ->with("success", true);
@@ -49,7 +71,7 @@ class MiceController extends Controller
     {
         //show the details of hotel
  
-        $mice = Mice::find($id);
+        $mice = Mice::find($id)->with('images')->where('id', $id)->first();
         return view('Backend.Admin.Services.MICE.show', compact('mice'));
  
     }
@@ -90,13 +112,16 @@ class MiceController extends Controller
    //Show the data in the frontend
     public function showMice()
     {
-        $mices = Mice::all();
+        $mices = Mice::with('images')
+        ->get();
         return view('Frontend.Mice.Mices', compact('mices'));
     }
 
     public function showMiceDetails($id)
     {
-        $mice = Mice::find($id);
+        $mice = Mice::with('images')
+        ->where('id', $id)
+        ->first();
         return view('Frontend.Mice.Micee', compact('mice'));
     }
 }

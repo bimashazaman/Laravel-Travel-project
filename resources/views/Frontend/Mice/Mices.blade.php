@@ -31,7 +31,7 @@
 
                         <div class="single-package-item">
 
-                            <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
+                            <img src="{{$m->images->first()->path}}"
                                 alt="package-place">
                             <div class="packageName">
 

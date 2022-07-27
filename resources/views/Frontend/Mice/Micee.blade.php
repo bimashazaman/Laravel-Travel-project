@@ -20,97 +20,41 @@
                         </div><!-- /.tour-descriptions-content-inner-left -->
                         <div class="tour-descriptions-content-inner-right">
 
-
-                            <section class="imgC">
+                            <section class="" style="">
                                 <div class="imgCcontainer">
-                                    <div class="carousel">
-                                        <input type="radio" name="slides" checked="checked" id="slide-1">
-                                        <input type="radio" name="slides" id="slide-2">
-                                        <input type="radio" name="slides" id="slide-3">
-                                        <input type="radio" name="slides" id="slide-4">
-                                        <input type="radio" name="slides" id="slide-5">
-                                        <input type="radio" name="slides" id="slide-6">
+                                    <div class="carousel imgC">
+                                        @foreach ($mice->images as $item)
+                                            <input type="radio" name="slides" checked="checked"
+                                                id="slide-{{ $item->id }}">
+                                        @endforeach
                                         <ul class="carousel__slides">
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1041/800/450" alt="">
-                                                    </div>
+                                            @foreach ($mice->images as $item)
+                                                <li class="carousel__slide" data-interval="1000">
+                                                    <figure>
+                                                        <div>
+                                                            <img src="{{ asset($item->path) }}" alt="">
+                                                        </div>
 
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1043/800/450" alt="">
-                                                    </div>
+                                                    </figure>
+                                                </li>
+                                            @endforeach
 
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1044/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1045/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1049/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1052/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
                                         </ul>
                                         <ul class="carousel__thumbnails">
-                                            <li>
-                                                <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150"
-                                                        alt=""></label>
-                                            </li>
+
+                                            @foreach ($mice->images as $item)
+                                                @if ($item->id != $mice->images->first()->id)
+                                                    <li data-interval="1000">
+                                                        <label for="slide-{{ $item->id }}"><img
+                                                                src="{{ asset($item->path) }}" alt="">
+                                                        </label>
+                                                    </li>
+                                                @endif
+                                            @endforeach
                                         </ul>
                                     </div>
-
+                                </div>
                             </section>
-
-
 
 
 

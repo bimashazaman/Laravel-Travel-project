@@ -29,4 +29,9 @@ class Image extends Model
     public function accessioriesImages(){
         return $this->hasMany(AccessioriesImage::class);
     }
+
+    public function miceImages(){
+        return $this->hasMany(MiceImage::class);
+    }
+    
 }

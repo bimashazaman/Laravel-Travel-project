@@ -163,6 +163,7 @@ Route::delete('/hotelInfo/delete/{id}', [HotelController::class, 'deleteHotelInf
 Route::get('/admin/Mice', [MiceController::class, 'index']);
 Route::get('/admin/Mice/create', [MiceController::class, 'create']);
 Route::get('/admin/Mice/{id}', [MiceController::class, 'show']);
+Route::get('/admin/Mice/edit/{id}', [MiceController::class, 'edit']);
 Route::post('/admin/Mice/store', [MiceController::class, 'store']);
 Route::put('/admin/Mice/update/{id}', [MiceController::class, 'update']);
 Route::delete('/admin/Mice/delete/{id}', [MiceController::class, 'destroy']);
@@ -302,6 +303,7 @@ Route::get('/car/detail/{id}', [CarController::class, 'getCarDetails']);
 
 Route::get('/mices', [MiceController::class, 'showMice']);
 Route::get('/mices/{id}', [MiceController::class, 'showMiceDetails']);
+
 
 
 Route::get("/dashboard/hello", [TourController::class, "index"]);
