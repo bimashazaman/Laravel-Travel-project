@@ -21,8 +21,8 @@ use App\Http\Controllers\ThingsToDoController;
 use App\Http\Controllers\ThingsToSeeController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourEventController;
+use App\Http\Controllers\TravelBlogController;
 use App\Http\Controllers\UsefulInfoController;
-use App\Models\NearbyArmenia;
 use Illuminate\Support\Facades\Route;
 
 //============login===============
@@ -275,6 +275,18 @@ Route::post('/review/store', [ReviewController::class, 'store']);
 
 
 
+//===============admin travel blogs===============
+Route::get('/admin/TravelBlog', [TravelBlogController::class, 'index']);
+Route::get('/admin/travelBlogs/create', [TravelBlogController::class, 'create']);
+Route::get('/admin/travelBlogs/{id}', [TravelBlogController::class, 'show']);
+Route::post('/admin/travelBlogs/store', [TravelBlogController::class, 'store']);
+Route::put('/admin/travelBlogs/update/{id}', [TravelBlogController::class, 'update']);
+Route::delete('/admin/travelBlogs/delete/{id}', [TravelBlogController::class, 'destroy']);
+
+
+
+
+
 
 //==========Frontend Hotel=========
 
@@ -385,11 +397,6 @@ Route::get('/mice', function () {
 
 
 
-
-
-
-
-
 Route::get('/ClassicTour', function () {
     return view('Frontend.BasicTours.BasicTours');
 });
@@ -427,10 +434,6 @@ Route::get('/BookHotel', function () {
 
 
 
-// Route::get('/UpdateClassicTour', function () {
-//     return view('Backend.Admin.Tours.classicTours.UpdateClassicTour');
-// });
-
 
 Route::get('/driver', function () {
     return view('Frontend.Cars.DriverCar');
@@ -458,10 +461,6 @@ Route::get('/pageSee', function () {
 
 Route::get('/admin/brochure', function () {
     return view('Backend.Admin.Armenia.Brochure.view');
-});
-
-Route::get('/admin/TravelBlog', function () {
-    return view('Backend.Admin.Armenia.TravelBlog.view');
 });
 
 
@@ -492,12 +491,6 @@ Route::get('/admin/UpdateCarWithDriver', function () {
     return view('Backend.Admin.Services.CarWithDriver.update');
 });
 
-
-
-
-// Route::get('/admin/updateHotel', function () {
-//     return view('Backend.Admin.Services.Hotels.update');
-// });
 
 
 

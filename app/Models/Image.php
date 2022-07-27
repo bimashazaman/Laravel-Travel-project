@@ -33,5 +33,9 @@ class Image extends Model
     public function miceImages(){
         return $this->hasMany(MiceImage::class);
     }
+
+    public function travelBlogImages(){
+        return $this->hasMany(TravelBlogImage::class);
+    }
     
 }
