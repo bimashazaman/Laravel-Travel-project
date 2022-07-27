@@ -9,4 +9,6 @@ class ThingsToSeeImage extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    
 }
