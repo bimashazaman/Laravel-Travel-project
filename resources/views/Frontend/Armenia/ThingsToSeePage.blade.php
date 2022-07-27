@@ -17,99 +17,45 @@
                         <div class="tour-descriptions-content-inner-left">
                             <div class="tour-descriptions-content-inner-left-content">
                                 <h1>
-                                    Name
+                                   {{ $tour_event->name }}
                                 </h1>
                             </div><!-- /.tour-descriptions-content-inner-left-content -->
                         </div><!-- /.tour-descriptions-content-inner-left -->
                         <div class="tour-descriptions-content-inner-right">
-                            <section class="imgC" style="padding:0;">
+                            <section class="" style="">
                                 <div class="imgCcontainer">
-                                    <div class="carousel">
-                                        <input type="radio" name="slides" checked="checked" id="slide-1">
-                                        <input type="radio" name="slides" id="slide-2">
-                                        <input type="radio" name="slides" id="slide-3">
-                                        <input type="radio" name="slides" id="slide-4">
-                                        <input type="radio" name="slides" id="slide-5">
-                                        <input type="radio" name="slides" id="slide-6">
+                                    <div class="carousel imgC">
+                                        @foreach ($tour_event->images as $item)
+                                            <input type="radio" name="slides" checked="checked"
+                                                id="slide-{{ $item->id }}">
+                                        @endforeach
                                         <ul class="carousel__slides">
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                                            alt="">
-                                                    </div>
+                                            @foreach ($tour_event->images as $item)
+                                                <li class="carousel__slide" data-interval="1000">
+                                                    <figure>
+                                                        <div>
+                                                            <img src="{{ asset($item->path) }}" alt="">
+                                                        </div>
 
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1043/800/450" alt="">
-                                                    </div>
+                                                    </figure>
+                                                </li>
+                                            @endforeach
 
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1044/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1045/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1049/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
-                                            <li class="carousel__slide">
-                                                <figure>
-                                                    <div>
-                                                        <img src="https://picsum.photos/id/1052/800/450" alt="">
-                                                    </div>
-
-                                                </figure>
-                                            </li>
                                         </ul>
                                         <ul class="carousel__thumbnails">
-                                            <li>
-                                                <label for="slide-1"><img src="https://picsum.photos/id/1041/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-2"><img src="https://picsum.photos/id/1043/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-3"><img src="https://picsum.photos/id/1044/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-4"><img src="https://picsum.photos/id/1045/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-5"><img src="https://picsum.photos/id/1049/150/150"
-                                                        alt=""></label>
-                                            </li>
-                                            <li>
-                                                <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150"
-                                                        alt=""></label>
-                                            </li>
+
+                                            @foreach ($tour_event->images as $item)
+                                                @if ($item->id != $tour_event->images->first()->id)
+                                                    <li data-interval="1000">
+                                                        <label for="slide-{{ $item->id }}"><img
+                                                                src="{{ asset($item->path) }}" alt="">
+                                                        </label>
+                                                    </li>
+                                                @endif
+                                            @endforeach
                                         </ul>
                                     </div>
-
+                                </div>
                             </section>
                         </div><!-- /.tour-_descriptions-content-inner-right -->
 
@@ -143,34 +89,42 @@
                                     Period
                                 </div>
                                 <div>
-                                    7th c
+                                   {{ $tour_event->period }}
                                 </div>
                             </div>
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-location-dot"></i>
                                 Settlement
                                 </div>
-                                <div>3 seats</div>
+                                <div>
+                                    {{ $tour_event->settlement }}
+                                </div>
                             </div>
 
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-clock"></i>
                                 From yerevan
                                 </div>
-                                <div>2004 Air conditionar</div>
+                                <div>
+                                    {{ $tour_event->distance }}
+                                </div>
                             </div>
 
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-file"></i>
                                     Working Hours
                                 </div>
-                                <div>3 days ago</div>
+                                <div>
+                                    {{ $tour_event->duration }}
+                                </div>
                             </div>
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-dollar-sign"></i>
                                     Enterence
                                 </div>
-                                <div>3 days ago</div>
+                                <div>
+                                    {{ $tour_event->price }}
+                                </div>
                             </div>
                         </div>
 

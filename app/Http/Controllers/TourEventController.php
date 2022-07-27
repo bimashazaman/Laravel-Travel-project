@@ -93,15 +93,29 @@ class TourEventController extends Controller
     {
         //show the details of the selected tour event
         
-        $tour_event = TourEvent::find($id);
+        $tour_event = TourEvent::find($id)
+        ->with('images')
+        ->where('id', $id)
+        ->first();
         return view('Backend.Admin.Armenia.Events.show', compact('tour_event'));
         
+    }
+
+    public function edit($id)
+    {
+        //edit the selected tour event
+        $tour_event = TourEvent::find($id)
+        ->with('images')
+        ->where('id', $id)
+        ->first();
+        return view('Backend.Admin.Armenia.Events.update', compact('tour_event'));
     }
 
 
   
     public function update(Request $request, $id)
     {
+        //update the selected tour event
         $tour_event = TourEvent::find($id);
         $tour_event->name = $request->name;
         $tour_event->location = $request->location;
@@ -113,6 +127,7 @@ class TourEventController extends Controller
         $tour_event->duration = $request->duration;
         $tour_event->price = $request->price;
         $tour_event->save();
+        
         return redirect()->back()->with("msg", "Updated successfully!")
         ->with("success", true);
     }
@@ -136,7 +151,11 @@ class TourEventController extends Controller
     //show the data in the frontend
     public function showFrontendDetails($id)
     {
-        $tour_event = TourEvent::find($id);
-        return view('Frontend.Conferences.Conference', compact('tour_event'));
+        $tour_event = TourEvent::find($id)
+        ->with('images')
+        ->where('id', $id)
+        ->first();
+        
+        return view('Frontend.Armenia.ThingsToSeePage', compact('tour_event'));
     }
 }

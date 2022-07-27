@@ -53,7 +53,7 @@
 
                         <div class="single-package-item">
 
-                            <img src="https://media.istockphoto.com/photos/man-speaking-at-a-business-conference-picture-id499517325?b=1&k=20&m=499517325&s=170667a&w=0&h=jMCaZov25c5VR1CP-4axUdJPEKSpBWbzzWAubQS3-oo="
+                            <img src="{{$t->images->first()->path}}"
                                 alt="package-place">
                             <div class="packageName">
 
@@ -82,7 +82,7 @@
                             </div>
 
                             <div class="package-btn">
-                                <a href="{{ url('/pageSee') }}">
+                                <a href="{{ url('/c/'.$t->id) }}">
                                     <button class="package-view">
                                         Details
                                     </button>

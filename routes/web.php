@@ -173,9 +173,18 @@ Route::delete('/admin/Mice/delete/{id}', [MiceController::class, 'destroy']);
 Route::get('/admin/events', [TourEventController::class, 'index']);
 Route::get('/admin/events/create', [TourEventController::class, 'create']);
 Route::get('/admin/events/{id}', [TourEventController::class, 'show']);
+Route::get('/admin/events/edit/{id}', [TourEventController::class, 'edit']);
 Route::post('/admin/events/store', [TourEventController::class, 'store']);
 Route::put('/admin/events/update/{id}', [TourEventController::class, 'update']);
 Route::delete('/admin/events/delete/{id}', [TourEventController::class, 'destroy']);
+
+
+
+//===========Frontend Tour Events=========
+
+Route::get('/pageSee', function () {
+    return view('Frontend.Armenia.ThingsToSeePage');
+});
 
 //===========Admin Things to see=========
 
@@ -264,7 +273,7 @@ Route::get('/getfoodsById/{id}', [FoodArmeniaController::class, 'getfoodsById'])
 
 //===========Frontend Tour Events=========
 Route::get('/cs', [TourEventController::class, 'showFrontend']);
-Route::get('/c', [TourEventController::class, 'showFrontendDetails']);
+Route::get('/c/{id}', [TourEventController::class, 'showFrontendDetails']);
 
 //===============reviews===============
 
@@ -443,9 +452,6 @@ Route::get('/driver', function () {
 
 
 
-Route::get('/pageSee', function () {
-    return view('Frontend.Armenia.ThingsToSeePage');
-});
 
 
 
