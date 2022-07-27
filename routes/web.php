@@ -279,12 +279,16 @@ Route::post('/review/store', [ReviewController::class, 'store']);
 Route::get('/admin/TravelBlog', [TravelBlogController::class, 'index']);
 Route::get('/admin/travelBlogs/create', [TravelBlogController::class, 'create']);
 Route::get('/admin/travelBlogs/{id}', [TravelBlogController::class, 'show']);
+Route::get('/admin/travelBlogs/edit/{id}', [TravelBlogController::class, 'edit']);
 Route::post('/admin/travelBlogs/store', [TravelBlogController::class, 'store']);
 Route::put('/admin/travelBlogs/update/{id}', [TravelBlogController::class, 'update']);
 Route::delete('/admin/travelBlogs/delete/{id}', [TravelBlogController::class, 'destroy']);
 
 
+//==========Frontend Article=========
 
+Route::get('/Articles',[TravelBlogController::class, 'getTravelBlog']);
+Route::get('/Article/{id}',[TravelBlogController::class, 'getTravelBlogById']);
 
 
 
@@ -353,13 +357,7 @@ Route::get('/Rv', function () {
     return view('Frontend.BasicTours.RequestABasicTour');
 });
 
-Route::get('/Articles', function () {
-    return view('Frontend.Blogs.Articles');
-});
 
-Route::get('/Article', function () {
-    return view('Frontend.Blogs.Article');
-});
 
 
 Route::get('/b', function () {
@@ -505,9 +503,6 @@ Route::get('/admin/createBrochur', function () {
 
 
 
-Route::get('/admin/createTravelBlog', function () {
-    return view('Backend.Admin.Armenia.TravelBlog.create');
-});
 
 
 
@@ -529,9 +524,6 @@ Route::get('/admin/updateInformation', function () {
 
 Route::get('/admin/updateThingsToDo', function () {
     return view('Backend.Admin.Armenia.ThingsToDo.update');
-});
-Route::get('/admin/updateTravelBlog', function () {
-    return view('Backend.Admin.Armenia.TravelBlog.update');
 });
 
 

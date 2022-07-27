@@ -57,31 +57,32 @@
                 <div class="row">
 
 
+@foreach ($travelBlogs as $t)
+    
 
                     <div class="col-md-4 col-sm-6">
 
                         <div class="single-package-item">
 
-                            <img src="https://neilpatel.com/wp-content/uploads/2017/08/blog.jpg" alt="package-place">
+                            <img src="{{$t->images->first()->path}}" alt="package-place">
                             <div class="packageName">
-                                Something
+                               {{ $t->title }}
                             </div>
                             <div class="">
                                 <h4 style="text-align:center;">
                                     <a href="#"
                                         style="text-align:center; font-size:1.6rem; text-decoration:underline">
-                                        package one
+                                        {{ $t->type }}
                                     </a>
                                 </h4>
                                 <p class="" style="text-align: center; font-size:1.5rem; color:black">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
+                                    {{ $t->description }}
                                 </p>
                             </div>
 
                             <div style="width: 70%;margin-left: 17%">
                                 <span>
-                                    May 5, 2022
+                                    {{ $t->created_at->diffForHumans() }}
                                 </span>
                                 <span style="float:right">
                                     <a href="">
@@ -91,7 +92,7 @@
                             </div>
 
                             <div class="package-btn">
-                                <a href="{{ url('/article') }}">
+                                <a href="{{ url('/Article/'.$t->id) }}">
                                  <button class="package-view">
                                     Read More
                                 </button></a>
@@ -105,345 +106,7 @@
                         <!--/.single-package-item-->
 
                     </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://neilpatel.com/wp-content/uploads/2017/08/blog.jpg" alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="">
-                                <h4 style="text-align:center;">
-                                    <a href="#"
-                                        style="text-align:center; font-size:1.6rem; text-decoration:underline">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="" style="text-align: center; font-size:1.5rem; color:black">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-
-                            <div style="width: 70%; margin-left: 17%">
-                                <span>
-                                    May 5, 2022
-                                </span>
-                                <span style="float:right">
-                                    <a href="">
-                                        2expedition
-                                    </a>
-                                </span>
-                            </div>
-
-                            <div class="package-btn">
-                                <a href="{{ url('/article') }}">
-                                 <button class="package-view">
-                                    Read More
-                                </button></a>
-                               
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://neilpatel.com/wp-content/uploads/2017/08/blog.jpg" alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="">
-                                <h4 style="text-align:center;">
-                                    <a href="#"
-                                        style="text-align:center; font-size:1.6rem; text-decoration:underline">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="" style="text-align: center; font-size:1.5rem; color:black">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-
-                            <div style="width: 70%; margin-left: 17%">
-                                <span>
-                                    May 5, 2022
-                                </span>
-                                <span style="float:right">
-                                    <a href="">
-                                        2expedition
-                                    </a>
-                                </span>
-                            </div>
-
-                            <div class="package-btn">
-                                <a href="{{ url('/article') }}">
-                                 <button class="package-view">
-                                    Read More
-                                </button></a>
-                               
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://neilpatel.com/wp-content/uploads/2017/08/blog.jpg" alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="">
-                                <h4 style="text-align:center;">
-                                    <a href="#"
-                                        style="text-align:center; font-size:1.6rem; text-decoration:underline">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="" style="text-align: center; font-size:1.5rem; color:black">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-
-                            <div style="width: 70%; margin-left: 17%">
-                                <span>
-                                    May 5, 2022
-                                </span>
-                                <span style="float:right">
-                                    <a href="">
-                                        2expedition
-                                    </a>
-                                </span>
-                            </div>
-
-                            <div class="package-btn">
-                                <a href="{{ url('/article') }}">
-                                 <button class="package-view">
-                                    Read More
-                                </button></a>
-                               
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://neilpatel.com/wp-content/uploads/2017/08/blog.jpg" alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="">
-                                <h4 style="text-align:center;">
-                                    <a href="#"
-                                        style="text-align:center; font-size:1.6rem; text-decoration:underline">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="" style="text-align: center; font-size:1.5rem; color:black">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-
-                            <div style="width: 70%; margin-left: 17%">
-                                <span>
-                                    May 5, 2022
-                                </span>
-                                <span style="float:right">
-                                    <a href="">
-                                        2expedition
-                                    </a>
-                                </span>
-                            </div>
-
-                            <div class="package-btn">
-                                <a href="{{ url('/article') }}">
-                                 <button class="package-view">
-                                    Read More
-                                </button></a>
-                               
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://neilpatel.com/wp-content/uploads/2017/08/blog.jpg" alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="">
-                                <h4 style="text-align:center;">
-                                    <a href="#"
-                                        style="text-align:center; font-size:1.6rem; text-decoration:underline">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="" style="text-align: center; font-size:1.5rem; color:black">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-
-                            <div style="width: 70%; margin-left: 17%">
-                                <span>
-                                    May 5, 2022
-                                </span>
-                                <span style="float:right">
-                                    <a href="">
-                                        2expedition
-                                    </a>
-                                </span>
-                            </div>
-
-                            <div class="package-btn">
-                                <a href="{{ url('/article') }}">
-                                 <button class="package-view">
-                                    Read More
-                                </button></a>
-                               
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://neilpatel.com/wp-content/uploads/2017/08/blog.jpg" alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="">
-                                <h4 style="text-align:center;">
-                                    <a href="#"
-                                        style="text-align:center; font-size:1.6rem; text-decoration:underline">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="" style="text-align: center; font-size:1.5rem; color:black">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-
-                            <div style="width: 70%; margin-left: 17%">
-                                <span>
-                                    May 5, 2022
-                                </span>
-                                <span style="float:right">
-                                    <a href="">
-                                        2expedition
-                                    </a>
-                                </span>
-                            </div>
-
-                            <div class="package-btn">
-                                <a href="{{ url('/article') }}">
-                                 <button class="package-view">
-                                    Read More
-                                </button></a>
-                               
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://neilpatel.com/wp-content/uploads/2017/08/blog.jpg" alt="package-place">
-                            <div class="packageName">
-                                Something
-                            </div>
-                            <div class="">
-                                <h4 style="text-align:center;">
-                                    <a href="#"
-                                        style="text-align:center; font-size:1.6rem; text-decoration:underline">
-                                        package one
-                                    </a>
-                                </h4>
-                                <p class="" style="text-align: center; font-size:1.5rem; color:black">
-                                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Consequatur,
-                                    perspiciatis!
-                                </p>
-                            </div>
-
-                            <div style="width: 70%; margin-left: 17%">
-                                <span>
-                                    May 5, 2022
-                                </span>
-                                <span style="float:right">
-                                    <a href="">
-                                        2expedition
-                                    </a>
-                                </span>
-                            </div>
-
-                            <div class="package-btn">
-                                <a href="{{ url('/article') }}">
-                                 <button class="package-view">
-                                    Read More
-                                </button></a>
-                               
-
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-
-
+                    @endforeach         
 
                 </div>
                 <!--/.row-->
