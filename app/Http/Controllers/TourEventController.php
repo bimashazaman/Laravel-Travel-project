@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use Illuminate\Http\Request;
 use App\Models\TourEvent;
 
@@ -27,17 +28,59 @@ class TourEventController extends Controller
     public function store(Request $request)
     {
        
-        $tour_event = new TourEvent;
-        $tour_event->name = $request->name;
-        $tour_event->location = $request->location;
-        $tour_event->time = $request->time;
-        $tour_event->type = $request->type;
-        $tour_event->period = $request->period;
-        $tour_event->settlement = $request->settlement;
-        $tour_event->distance = $request->distance;
-        $tour_event->duration = $request->duration;
-        $tour_event->price = $request->price;
-        $tour_event->save();
+        // $tour_event = new TourEvent;
+        // $tour_event->name = $request->name;
+        // $tour_event->location = $request->location;
+        // $tour_event->time = $request->time;
+        // $tour_event->type = $request->type;
+        // $tour_event->period = $request->period;
+        // $tour_event->settlement = $request->settlement;
+        // $tour_event->distance = $request->distance;
+        // $tour_event->duration = $request->duration;
+        // $tour_event->price = $request->price;
+        // $tour_event->save();
+
+
+        
+        $request->validate([
+            'name' => 'required',
+            'location' => 'required',
+            'time' => 'required',
+            'type' => 'required',
+            'period' => 'required',
+            'settlement' => 'required',
+            'distance' => 'required',
+            'duration' => 'required',
+            'price' => 'required',
+            'images' => 'required',
+
+        ]);
+
+        $tour_event = TourEvent::create([
+            'name' => $request->name,
+            'location' => $request->location,
+            'time' => $request->time,
+            'type' => $request->type,
+            'period' => $request->period,
+            'settlement' => $request->settlement,
+            'distance' => $request->distance,
+            'duration' => $request->duration,
+            'price' => $request->price,
+        
+        ]);
+        
+
+        foreach ($request->file('images') as  $image) {
+
+            $imageName = $image->getClientOriginalName();
+            $image->move("Event/" . $tour_event->id . "/", $imageName);
+            $image = new Image();
+            $image["filename"] = $imageName;
+            $image["path"] = "Event/" . $tour_event->id . "/" . $imageName;
+            $image->save();
+            $tour_event->images()->attach($image->id);
+        
+        }
 
       
 
