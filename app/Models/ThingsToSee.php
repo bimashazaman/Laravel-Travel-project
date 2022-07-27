@@ -14,4 +14,15 @@ class ThingsToSee extends Model
     public function category(){
         return $this->belongsTo(ThingsToSeeCategory::class);
     }
+    public function images()
+    {
+        return $this->belongsToMany(Image::class, 'things_to_see_images');
+    }
+
+    public function thingsToSeeImages()
+    {
+        return $this->hasMany(ThingsToSeeImage::class);
+    }
+
+  
 }

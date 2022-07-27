@@ -42,6 +42,10 @@ class Image extends Model
         return $this->hasMany(TourEventImage::class);
     }
 
+    public function thingsToSeeImages(){
+        return $this->hasMany(ThingsToSeeImage::class);
+    }
+
 
     
 }

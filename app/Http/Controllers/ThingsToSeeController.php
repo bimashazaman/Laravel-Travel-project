@@ -2,13 +2,13 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Models\ThingsToSee;
 use App\Models\ThingsToSeeCategory;
 use Exception;
 use Illuminate\Http\Request;
-use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\DB;
-use Illuminate\Support\Facades\Validator;
+
 
 class ThingsToSeeController extends Controller
 {
@@ -34,11 +34,19 @@ class ThingsToSeeController extends Controller
         return view('Backend.Admin.Armenia.ThingsToSee.create', compact('categories'));
     }
 
+    public function edit($id)
+    {
+        $categories = ThingsToSeeCategory::all();
+        $things = ThingsToSee::find($id);
+        return view('Backend.Admin.Armenia.ThingsToSee.update', compact('things', 'categories'));
+    }
+
   
     public function store(Request $request)
     {
-        $validate = Validator::make($request->all(), [
-            "name" => "required|string",
+
+        $request->validate([
+               "name" => "required|string",
             "description" => "required|string",
             "time" => "required|string",
             "address" => "required|string",
@@ -47,55 +55,51 @@ class ThingsToSeeController extends Controller
             "distance" => "required|string",
             "price" => "required|string",
             "category_id" => "required|string",
-            
+            "images" => "required",
         ]);
-        if ($validate->fails()) {
-           
-            return redirect()
-                ->back()
-                ->with("msg", $validate->errors()->first())
-                ->with("fail", true);
-        }
-        try {
-           
-            DB::beginTransaction();
+
+        $things = ThingsToSee::create([
+            "name" => $request->name,
+            "description" => $request->description,
+            "time" => $request->time,
+            "address" => $request->address,
+            "duration" => $request->duration,
+            "period" => $request->period,
+            "distance" => $request->distance,
+            "price" => $request->price,
+            "category_id" => $request->category_id,
+        ]);
+
+        // $validate = Validator::make($request->all(), [
+        //     "name" => "required|string",
+        //     "description" => "required|string",
+        //     "time" => "required|string",
+        //     "address" => "required|string",
+        //     "duration" => "required|string",
+        //     "period" => "required|string",
+        //     "distance" => "required|string",
+        //     "price" => "required|string",
+        //     "category_id" => "required|string",
             
-            $things = new ThingsToSee();
-            $things->fill($request->all());
-            $things->save();
-
-            //saving tour images
-            // foreach ($request->file('images') as $key => $file) {
-
-            //     $fileOrignalName = $file->getClientOriginalName();
-            //     // return $fileOrignalName;
-            //     $fileNameArray = explode('.', $fileOrignalName);
-            //     $fileExtension = end($fileNameArray);
-            //     $newFilename = $key . now()->timestamp . "." . $fileExtension;
-            //     $path = "tour/" . $tour->id . "/";
-            //     $file->move($path, $newFilename);
-            //     $image = new Image();
-            //     $image["filename"] = $newFilename;
-            //     $image["path"] = $path . $newFilename;
-            //     $image->save();
-            //     TourImage::create([
-            //         "tour_id" => $tour->id,
-            //         "image_id" => $image->id
-            //     ]);
-            // }
-
-            DB::commit();
-            
-            return redirect()
-                ->back()
-                ->with("msg", "Added successfully!")
-                ->with("success", true);
-        } catch (Exception $e) {
-            DB::rollBack();
-            // return $e;
-            return self::failure('Error in adding tour data!', ["data" => $e->getMessage()]);
-        }
+        // ]);
+       
         
+
+          
+        foreach ($request->file('images') as  $image) {
+
+            $imageName = $image->getClientOriginalName();
+            $image->move("ThingsToSee/" . $things->id . "/", $imageName);
+            $image = new Image();
+            $image["filename"] = $imageName;
+            $image["path"] = "ThingsToSee/" . $things->id . "/" . $imageName;
+            $image->save();
+            $things->images()->attach($image->id);
+        
+        }
+
+        return redirect()->back()->with("msg", "Created successfully!")
+        ->with("success", true);
     }
 
  
@@ -108,7 +112,8 @@ class ThingsToSeeController extends Controller
   
     public function update(Request $request, $id)
     {
-        $validate = Validator::make($request->all(), [
+      
+        $request->validate([
             "name" => "required|string",
             "description" => "required|string",
             "time" => "required|string",
@@ -118,83 +123,51 @@ class ThingsToSeeController extends Controller
             "distance" => "required|string",
             "price" => "required|string",
             "category_id" => "required|string",
-            
+            // "images" => "required",
         ]);
-        if ($validate->fails()) {
-           
-            return redirect()
-                ->back()
-                ->with("msg", $validate->errors()->first())
-                ->with("fail", true);
-        }
-        try {
-           
-            DB::beginTransaction();
-            
-            $things = ThingsToSee::find($id);
-            $things->fill($request->all());
-            $things->save();
+        
+        $things = ThingsToSee::find($id);
+        $things->name = $request->name;
+        $things->description = $request->description;
+        $things->time = $request->time;
+        $things->address = $request->address;
+        $things->duration = $request->duration;
+        $things->period = $request->period;
+        $things->distance = $request->distance;
+        $things->price = $request->price;
+        $things->category_id = $request->category_id;
+        $things->save();
+        
+        // foreach ($request->file('images') as  $image) {
 
-            //saving tour images
-            // foreach ($request->file('images') as $key => $file) {
-
-            //     $fileOrignalName = $file->getClientOriginalName();
-            //     // return $fileOrignalName;
-            //     $fileNameArray = explode('.', $fileOrignalName);
-            //     $fileExtension = end($fileNameArray);
-            //     $newFilename = $key . now()->timestamp . "." . $fileExtension;
-            //     $path = "tour/" . $tour->id . "/";
-            //     $file->move($path, $newFilename);
-            //     $image = new Image();
-            //     $image["filename"] = $newFilename;
-            //     $image["path"] = $path . $newFilename;
-            //     $image->save();
-            //     TourImage::create([
-            //         "tour_id" => $tour->id,
-            //         "image_id" => $image->id
-            //     ]);
-            // }
-
-            DB::commit();
-            
-            return redirect()
-                ->back()
-                ->with("msg", "Updated successfully!")
-                ->with("success", true);
-        } catch (Exception $e) {
-            DB::rollBack();
-            // return $e;
-            return self::failure('Error in adding tour data!', ["data" => $e->getMessage()]);
-        }
+        //     $imageName = $image->getClientOriginalName();
+        //     $image->move("ThingsToSee/" . $things->id . "/", $imageName);
+        //     $image = new Image();
+        //     $image["filename"] = $imageName;
+        //     $image["path"] = "ThingsToSee/" . $things->id . "/" . $imageName;
+        //     $image->save();
+        //     $things->images()->attach($image->id);
+        
+        // }
+        
+        return redirect()->back()->with("msg", "Updated successfully!")
+        ->with("success", true);
 
     }
 
   
     public function destroy($id)
     {
-        try {
-           
-            DB::beginTransaction();
-            
-            $things = ThingsToSee::find($id);
-            $things->delete();
-            DB::commit();
-            
-            return redirect()
-                ->back()
-                ->with("msg", "Deleted successfully!")
-                ->with("success", true);
-        } catch (Exception $e) {
-            DB::rollBack();
-            // return $e;
-            return self::failure('Error in adding tour data!', ["data" => $e->getMessage()]);
-        }
+        $things = ThingsToSee::find($id);
+        $things->delete();
+        return redirect()->back()->with("msg", "Deleted successfully!")
+        ->with("success", true);
 
     }
 
     public function getThingsToSeeByCategory($id)
     {
-        $things = ThingsToSee::where('category_id', $id)->get();
+        $things = ThingsToSee::with('images')->where('category_id', $id)->get();
         $category = ThingsToSeeCategory::where('id', $id)->first();
         return view('Frontend.Armenia.ThingsToSee', compact('things', 'category'));
     }
@@ -206,7 +179,7 @@ class ThingsToSeeController extends Controller
 
     public function getThingsToSeeById($id)
     {
-        $things = ThingsToSee::find($id);
+        $things = ThingsToSee::with('images')->where('id', $id)->first();
         return view('Frontend.Armenia.ThingsToSeeDetails', compact('things'));
     }
 

@@ -191,6 +191,7 @@ Route::get('/pageSee', function () {
 Route::get('/admin/thingsToSee', [ThingsToSeeController::class, 'index']);
 Route::get('/admin//admin/thingstoSeeCreate', [ThingsToSeeController::class, 'create']);
 Route::get('/admin/thingsToSee/{id}', [ThingsToSeeController::class, 'show']);
+Route::get('/admin/thingsToSee/edit/{id}', [ThingsToSeeController::class, 'edit']);
 Route::post('/admin/thingsToSee/store', [ThingsToSeeController::class, 'store']);
 Route::put('/admin/thingsToSee/update/{id}', [ThingsToSeeController::class, 'update']);
 Route::delete('/admin/thingsToSee/delete/{id}', [ThingsToSeeController::class, 'destroy']);
