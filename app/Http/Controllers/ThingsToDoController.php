@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Models\ThingsToDo;
 use App\Models\ThingsToDoCategory;
 use Illuminate\Http\Request;
@@ -15,10 +16,6 @@ class ThingsToDoController extends Controller
     public function index()
     {
         
-        
-    // $things = ThingsToSee::where('category_id', $name)->get();
-    //     $category = ThingsToSeeCategory::where('name', $name)->first();
-    //     return view('Backend.Admin.Armenia.ThingsToSee.view', compact('things', 'category'));
 
         $categories = ThingsToDoCategory::all();
         $things = ThingsToDo::all();
@@ -36,64 +33,46 @@ class ThingsToDoController extends Controller
   
     public function store(Request $request)
     {
-        $validate = Validator::make($request->all(), [
+        $request->validate([
             "name" => "required|string",
-            "description" => "required|string",
-            "time" => "required|string",
-            "address" => "required|string",
-            "duration" => "required|string",
-            "period" => "required|string",
-            "distance" => "required|string",
-            "price" => "required|string",
-            "category_id" => "required|string",
-            
-        ]);
-        if ($validate->fails()) {
-           
-            return redirect()
-                ->back()
-                ->with("msg", $validate->errors()->first())
-                ->with("fail", true);
-        }
-        try {
-           
-            DB::beginTransaction();
-            
-            $things = new ThingsToDo();
-            $things->fill($request->all());
-            $things->save();
+         "description" => "required|string",
+         "time" => "required|string",
+         "address" => "required|string",
+         "duration" => "required|string",
+         "period" => "required|string",
+         "distance" => "required|string",
+         "price" => "required|string",
+         "category_id" => "required|string",
+         "images" => "required",
+     ]);
 
-            //saving tour images
-            // foreach ($request->file('images') as $key => $file) {
+     $things = ThingsToDo::create([
+         "name" => $request->name,
+         "description" => $request->description,
+         "time" => $request->time,
+         "address" => $request->address,
+         "duration" => $request->duration,
+         "period" => $request->period,
+         "distance" => $request->distance,
+         "price" => $request->price,
+         "category_id" => $request->category_id,
+     ]);
 
-            //     $fileOrignalName = $file->getClientOriginalName();
-            //     // return $fileOrignalName;
-            //     $fileNameArray = explode('.', $fileOrignalName);
-            //     $fileExtension = end($fileNameArray);
-            //     $newFilename = $key . now()->timestamp . "." . $fileExtension;
-            //     $path = "tour/" . $tour->id . "/";
-            //     $file->move($path, $newFilename);
-            //     $image = new Image();
-            //     $image["filename"] = $newFilename;
-            //     $image["path"] = $path . $newFilename;
-            //     $image->save();
-            //     TourImage::create([
-            //         "tour_id" => $tour->id,
-            //         "image_id" => $image->id
-            //     ]);
-            // }
+       
+     foreach ($request->file('images') as  $image) {
 
-            DB::commit();
-            
-            return redirect()
-                ->back()
-                ->with("msg", "Added successfully!")
-                ->with("success", true);
-        } catch (Exception $e) {
-            DB::rollBack();
-            // return $e;
-            return self::failure('Error in adding tour data!', ["data" => $e->getMessage()]);
-        }
+         $imageName = $image->getClientOriginalName();
+         $image->move("ThingsToDo/" . $things->id . "/", $imageName);
+         $image = new Image();
+         $image["filename"] = $imageName;
+         $image["path"] = "ThingsToDo/" . $things->id . "/" . $imageName;
+         $image->save();
+         $things->images()->attach($image->id);
+     
+     }
+
+     return redirect()->back()->with("msg", "Created successfully!")
+     ->with("success", true);
         
     }
 
@@ -168,6 +147,13 @@ class ThingsToDoController extends Controller
 
     }
 
+    public function edit($id)
+    {
+        $categories = ThingsToDoCategory::all();
+        $things = ThingsToDo::find($id);
+        return view('Backend.Admin.Armenia.ThingsToDo.update', compact('categories','things'));
+    }
+
   
     public function destroy($id)
     {
@@ -193,19 +179,16 @@ class ThingsToDoController extends Controller
 
     public function getThingsToDoByCategory($id)
     {
-        $things = ThingsToDo::where('category_id', $id)->get();
+        $things = ThingsToDo::with('images')->where('category_id', $id)->get();
         $category = ThingsToDoCategory::where('id', $id)->first();
         return view('Frontend.Armenia.ThingsToDo', compact('things', 'category'));
     }
 
-    // {
-    //     $things = ThingsToSee::where('category_id', $id)->get();
-    //     return view('Frontend.Armenia.ThingsToSee', compact('things'));
-    // }
+ 
 
     public function getThingsToDoById($id)
     {
-        $things = ThingsToDo::find($id);
+        $things = ThingsToDo::with('images')->where('id', $id)->first();
         return view('Frontend.Armenia.ThingsToDoDetails', compact('things'));
     }
 

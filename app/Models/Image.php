@@ -46,6 +46,9 @@ class Image extends Model
         return $this->hasMany(ThingsToSeeImage::class);
     }
 
+    public function thingsToDoImages(){
+        return $this->hasMany(ThingsToDoImages::class);
+    }
 
     
 }

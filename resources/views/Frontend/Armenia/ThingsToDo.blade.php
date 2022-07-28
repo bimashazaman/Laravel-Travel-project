@@ -41,7 +41,7 @@
 
                         <div class="single-package-item">
 
-                            <img src="https://i.pinimg.com/550x/42/64/14/426414c97264657bebb33d11a0205c04.jpg"
+                            <img src="{{asset($thing->images->first()->path)}}"
                                 alt="package-place">
                             <div class="HotelName">
                                 <h4>

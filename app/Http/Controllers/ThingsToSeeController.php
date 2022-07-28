@@ -70,20 +70,7 @@ class ThingsToSeeController extends Controller
             "category_id" => $request->category_id,
         ]);
 
-        // $validate = Validator::make($request->all(), [
-        //     "name" => "required|string",
-        //     "description" => "required|string",
-        //     "time" => "required|string",
-        //     "address" => "required|string",
-        //     "duration" => "required|string",
-        //     "period" => "required|string",
-        //     "distance" => "required|string",
-        //     "price" => "required|string",
-        //     "category_id" => "required|string",
-            
-        // ]);
-       
-        
+ 
 
           
         foreach ($request->file('images') as  $image) {

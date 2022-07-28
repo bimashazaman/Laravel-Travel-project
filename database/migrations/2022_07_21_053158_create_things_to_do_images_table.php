@@ -15,6 +15,8 @@ class CreateThingsToDoImagesTable extends Migration
     {
         Schema::create('things_to_do_images', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('things_to_do_id');
+            $table->unsignedBigInteger('image_id');   
             $table->timestamps();
         });
     }

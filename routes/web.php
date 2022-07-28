@@ -200,9 +200,11 @@ Route::delete('/admin/thingsToSee/delete/{id}', [ThingsToSeeController::class, '
 Route::get('/admin/thingsToDo', [ThingsToDoController::class, 'index']);
 Route::get('/admin/admin/thingstoDoCreate', [ThingsToDoController::class, 'create']);
 Route::get('/admin/thingsToDo/{id}', [ThingsToDoController::class, 'show']);
+Route::get('/admin/thingsToDo/edit/{id}', [ThingsToDoController::class, 'edit']);
 Route::post('/admin/thingsToDo/store', [ThingsToDoController::class, 'store']);
 Route::put('/admin/thingsToDo/update/{id}', [ThingsToDoController::class, 'update']);
 Route::delete('/admin/thingsToDo/delete/{id}', [ThingsToDoController::class, 'destroy']);
+
 
 
 //========Admin Nearby=========

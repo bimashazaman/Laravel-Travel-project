@@ -9,4 +9,17 @@ class ThingsToDoImages extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    //relation with image
+    public function image()
+    {
+        return $this->belongsTo(Image::class);
+    }
+
+    //relation with things to do
+    public function thingsToDo()
+    {
+        return $this->belongsTo(ThingsToDo::class);
+    }
+
 }
