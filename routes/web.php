@@ -229,7 +229,6 @@ Route::get('/admin/aboutUs', [AboutUsController::class, 'index2']);
 
 //==========Admin useful info ======
 
-
 Route::get('/admin/usefulToKnow', [UsefulInfoController::class, 'index']);
 Route::get('/admin/usefulToKnow/create', [UsefulInfoController::class, 'create']);
 Route::get('/admin/usefulToKnow/{id}', [UsefulInfoController::class, 'show']);
@@ -241,6 +240,7 @@ Route::get('/usefulToKnow', [UsefulInfoController::class, 'getUsefulInfo']);
 
 
 //=============Frontend Nearby ===========
+
 Route::get('/getAllThingsToSee', [ThingsToSeeController::class, 'getAllThingsToSee']);
 Route::get('/getThingsToSeeByCategoryId/{id}', [ThingsToSeeController::class, 'getThingsToSeeByCategory']);
 Route::get('/getThingsToSeeById/{id}', [ThingsToSeeController::class, 'getThingsToSeeById']);
@@ -260,10 +260,12 @@ Route::get('/getThingsToDoById/{id}', [ThingsToDoController::class, 'getThingsTo
 
 
 //==========Armenia admin food=========
+
 Route::get('/admin/foods', [FoodArmeniaController::class, 'index']);
 Route::get('/admin/foods/create', [FoodArmeniaController::class, 'create']);
 Route::get('/admin/foods/{id}', [FoodArmeniaController::class, 'show']);
 Route::post('/admin/foods/store', [FoodArmeniaController::class, 'store']);
+Route::get('/admin/foods/edit/{id}', [FoodArmeniaController::class, 'edit']);
 Route::put('/admin/foods/update/{id}', [FoodArmeniaController::class, 'update']);
 Route::delete('/admin/foods/delete/{id}', [FoodArmeniaController::class, 'destroy']);
 
@@ -529,10 +531,6 @@ Route::get('/admin/updateFoodAndDrnk', function () {
 
 Route::get('/admin/updateInformation', function () {
     return view('Backend.Admin.Armenia.Informations.update');
-});
-
-Route::get('/admin/updateThingsToDo', function () {
-    return view('Backend.Admin.Armenia.ThingsToDo.update');
 });
 
 

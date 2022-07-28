@@ -15,6 +15,8 @@ class CreateFoodArmeniaImagesTable extends Migration
     {
         Schema::create('food_armenia_images', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('food_armenia_id');
+            $table->unsignedBigInteger('image_id');  
             $table->timestamps();
         });
     }

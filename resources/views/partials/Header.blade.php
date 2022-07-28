@@ -60,7 +60,7 @@
                                      <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                                          <a class="dropdown-item" href="{{ url('/getThingsToSeeByCategoryId/1') }}">Things to see</a>
                                          <a class="dropdown-item" href="{{ url('/getAllThingsToDo') }}">Things to do</a>
-                                         <a class="dropdown-item" href="{{ url('/food') }}">Food and drink</a>
+                                         <a class="dropdown-item" href="{{ url('/getfoodsByCategory/1') }}">Food and drink</a>
                                          <a class="dropdown-item" href="{{ url('/todoSorrounding') }}">Todo in Surrounding</a>
                                          <a class="dropdown-item" href="{{ url('/usefulToKnow') }}">Useful to know</a>
                                          <a class="dropdown-item" href="{{ url('/cs') }}">Events</a>

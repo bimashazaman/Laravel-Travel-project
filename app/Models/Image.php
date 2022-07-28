@@ -50,5 +50,9 @@ class Image extends Model
         return $this->hasMany(ThingsToDoImages::class);
     }
 
+    public function foodArmeniaImages(){
+        return $this->hasMany(FoodArmeniaImages::class);
+    }
+
     
 }
