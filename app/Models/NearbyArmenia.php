@@ -16,4 +16,17 @@ class NearbyArmenia extends Model
     {
         return $this->belongsTo(NearbyArmeniaCategory::class, 'category_id');
     }
+
+
+    public function images()
+    {
+        return $this->belongsToMany(Image::class, 'nearby_armenia_images');
+    }
+
+    // relation with NearbyArmeniaImages
+    public function nearbyArmeniaImages()
+    {
+        return $this->hasMany(NearbyArmeniaImages::class);
+    }
+
 }

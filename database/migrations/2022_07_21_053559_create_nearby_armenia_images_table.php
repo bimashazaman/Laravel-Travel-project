@@ -15,6 +15,8 @@ class CreateNearbyArmeniaImagesTable extends Migration
     {
         Schema::create('nearby_armenia_images', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('nearby_armenia_id');
+            $table->unsignedBigInteger('image_id');
             $table->timestamps();
         });
     }

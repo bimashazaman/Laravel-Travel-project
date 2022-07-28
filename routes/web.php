@@ -211,6 +211,7 @@ Route::delete('/admin/thingsToDo/delete/{id}', [ThingsToDoController::class, 'de
 Route::get('/admin/nearby', [NearbyArmeniaController::class, 'index']);
 Route::get('/admin/nearby/Create', [NearbyArmeniaController::class, 'create']);
 Route::get('/admin/nearby/{id}', [NearbyArmeniaController::class, 'show']);
+Route::get('/admin/nearby/edit/{id}', [NearbyArmeniaController::class, 'edit']);
 Route::post('/admin/nearby/store', [NearbyArmeniaController::class, 'store']);
 Route::put('/admin/nearby/update/{id}', [NearbyArmeniaController::class, 'update']);
 Route::delete('/admin/nearby/delete/{id}', [NearbyArmeniaController::class, 'destroy']);

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Image;
 use App\Models\NearbyArmenia;
 use App\Models\NearbyArmeniaCategory;
 use Illuminate\Http\Request;
@@ -31,71 +32,57 @@ class NearbyArmeniaController extends Controller
   
     public function store(Request $request)
     {
-        $validate = Validator::make($request->all(), [
+        $request->validate([
             "name" => "required|string",
-            "description" => "required|string",
-            "time" => "required|string",
-            "address" => "required|string",
-            "duration" => "required|string",
-            "period" => "required|string",
-            "distance" => "required|string",
-            "price" => "required|string",
-            "category_id" => "required|string",
-            
-        ]);
-        if ($validate->fails()) {
-           
-            return redirect()
-                ->back()
-                ->with("msg", $validate->errors()->first())
-                ->with("fail", true);
-        }
-        try {
-           
-            DB::beginTransaction();
-            
-            $things = new NearbyArmenia();
-            $things->fill($request->all());
-            $things->save();
+         "description" => "required|string",
+         "time" => "required|string",
+         "address" => "required|string",
+         "duration" => "required|string",
+         "period" => "required|string",
+         "distance" => "required|string",
+         "price" => "required|string",
+         "category_id" => "required|string",
+         "images" => "required",
+     ]);
 
-            //saving tour images
-            // foreach ($request->file('images') as $key => $file) {
+     $things = NearbyArmenia::create([
+         "name" => $request->name,
+         "description" => $request->description,
+         "time" => $request->time,
+         "address" => $request->address,
+         "duration" => $request->duration,
+         "period" => $request->period,
+         "distance" => $request->distance,
+         "price" => $request->price,
+         "category_id" => $request->category_id,
+     ]);
 
-            //     $fileOrignalName = $file->getClientOriginalName();
-            //     // return $fileOrignalName;
-            //     $fileNameArray = explode('.', $fileOrignalName);
-            //     $fileExtension = end($fileNameArray);
-            //     $newFilename = $key . now()->timestamp . "." . $fileExtension;
-            //     $path = "tour/" . $tour->id . "/";
-            //     $file->move($path, $newFilename);
-            //     $image = new Image();
-            //     $image["filename"] = $newFilename;
-            //     $image["path"] = $path . $newFilename;
-            //     $image->save();
-            //     TourImage::create([
-            //         "tour_id" => $tour->id,
-            //         "image_id" => $image->id
-            //     ]);
-            // }
 
-            DB::commit();
-            
-            return redirect()
-                ->back()
-                ->with("msg", "Added successfully!")
-                ->with("success", true);
-        } catch (Exception $e) {
-            DB::rollBack();
-            // return $e;
-            return self::failure('Error in adding tour data!', ["data" => $e->getMessage()]);
-        }
+
+       
+     foreach ($request->file('images') as  $image) {
+
+         $imageName = $image->getClientOriginalName();
+         $image->move("Nearby/" . $things->id . "/", $imageName);
+         $image = new Image();
+         $image["filename"] = $imageName;
+         $image["path"] = "Nearby/" . $things->id . "/" . $imageName;
+         $image->save();
+         $things->images()->attach($image->id);
+     
+     }
+
+     return redirect()->back()->with("msg", "Created successfully!")
+     ->with("success", true);
         
     }
 
  
-    public function show($id)
+    public function edit($id)
     {
-        //
+        $categories = NearbyArmeniaCategory::all();
+        $things = NearbyArmenia::find($id);
+        return view('Backend.Admin.Armenia.TODO.update', compact('categories','things'));
     }
 
 
@@ -188,7 +175,7 @@ class NearbyArmeniaController extends Controller
 
     public function getNearbyByCategory($id)
     {
-        $things = NearbyArmenia::where('category_id', $id)->get();
+        $things = NearbyArmenia::with('images')->where('category_id', $id)->get();
         $category = NearbyArmeniaCategory::where('id', $id)->first();
         return view('Frontend.Armenia.nearby', compact('things', 'category'));
     }
@@ -200,7 +187,7 @@ class NearbyArmeniaController extends Controller
 
     public function getNearbyById($id)
     {
-        $things = NearbyArmenia::find($id);
+        $things = NearbyArmenia::with('images')->where('id', $id)->first();
         return view('Frontend.Armenia.NearbyDetails', compact('things'));
     }
 

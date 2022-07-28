@@ -54,5 +54,9 @@ class Image extends Model
         return $this->hasMany(FoodArmeniaImages::class);
     }
 
+    public function nearbyArmeniaImages(){
+        return $this->hasMany(NearbyArmeniaImages::class);
+    }
+
     
 }
