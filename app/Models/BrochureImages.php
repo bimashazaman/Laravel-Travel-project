@@ -9,4 +9,14 @@ class BrochureImages extends Model
 {
     use HasFactory;
     protected $guarded = [];
+
+    public function brochure()
+    {
+        return $this->belongsTo(Brochure::class);
+    }
+
+    public function image()
+    {
+        return $this->belongsTo(Image::class);
+    }
 }

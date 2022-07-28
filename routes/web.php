@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AccessioriesController;
 use App\Http\Controllers\ActiveTour;
+use App\Http\Controllers\BrochureController;
 use App\Http\Controllers\CarAirportController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\ClassicTour;
@@ -204,6 +205,20 @@ Route::get('/admin/thingsToDo/edit/{id}', [ThingsToDoController::class, 'edit'])
 Route::post('/admin/thingsToDo/store', [ThingsToDoController::class, 'store']);
 Route::put('/admin/thingsToDo/update/{id}', [ThingsToDoController::class, 'update']);
 Route::delete('/admin/thingsToDo/delete/{id}', [ThingsToDoController::class, 'destroy']);
+
+
+
+//========admin brochure=========
+
+Route::get('/admin/brochure', [BrochureController::class, 'index']);
+Route::get('/admin/brochure/create', [BrochureController::class, 'create']);
+Route::get('/admin/brochure/{id}', [BrochureController::class, 'show']);
+Route::get('/admin/brochure/edit/{id}', [BrochureController::class, 'edit']);
+Route::post('/admin/brochure/store', [BrochureController::class, 'store']);
+Route::put('/admin/brochure/update/{id}', [BrochureController::class, 'update']);
+Route::delete('/admin/brochure/delete/{id}', [BrochureController::class, 'destroy']);
+
+
 
 
 
@@ -468,10 +483,6 @@ Route::get('/driver', function () {
 
 
 
-
-Route::get('/admin/brochure', function () {
-    return view('Backend.Admin.Armenia.Brochure.view');
-});
 
 
 

@@ -58,5 +58,10 @@ class Image extends Model
         return $this->hasMany(NearbyArmeniaImages::class);
     }
 
+    public function brochureImages(){
+        return $this->hasMany(BrochureImages::class);
+    }
+    
+
     
 }

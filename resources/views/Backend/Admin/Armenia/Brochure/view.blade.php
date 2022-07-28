@@ -6,9 +6,10 @@
             <div class="card card-table flex-fill">
                 <div class="card-header">
                     <h4 class="card-title float-start">Brochures</h4>
+                  
 
                     <button class="btn btn-info" style="color: white; margin-left:15px">
-                        <a href="{{ url('/admin/createBrochur') }}" style="color: white">
+                        <a href="{{ url('/admin/brochure/create/') }}" style="color: white">
                             <i class="fa fa-plus" style="color: white"></i>
                             Add Brochure
                         </a>
@@ -26,25 +27,23 @@
                         <table class="table table-hover table-center">
                             <thead>
                                 <tr>
-                                    <th>Name</th>
-                                    <th class="text-center">Start Date</th>
-                                    <th class="text-center">End Date</th>
-                                    <th class="text-center">Price</th>
+                                    <th>Title</th>
+                                    <th class="text-center">Created At</th>
+                                   
                                     <th class="text-end">Status</th>
                                 </tr>
                             </thead>
                             <tbody>
-                                
+                                @foreach ($brochure as $b)
+                               
                                 <tr>
-
-                                    <td class="text-nowrap">Dummy Name</td>
-                                    <td class="text-center">22-02-2002</td>
-                                    <td class="text-center">
-                                        02-02-2002
+                                    <td class="text-nowrap">
+                                        {{ $b->title }}
                                     </td>
                                     <td class="text-center">
-                                        7000 AMD
+                                        {{ $b->created_at->diffForHumans() }}
                                     </td>
+                                   
                                     <td class="text-end">
                                         <div class="font-weight-600 text-danger">
                                             <span>
@@ -64,6 +63,8 @@
                                     </td>
                                 </tr>
                                
+                                @endforeach
+                             
                                 
                             </tbody>
                         </table>
