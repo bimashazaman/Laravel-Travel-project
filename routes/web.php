@@ -24,6 +24,8 @@ use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourEventController;
 use App\Http\Controllers\TravelBlogController;
 use App\Http\Controllers\UsefulInfoController;
+use App\Http\Controllers\WaysToBookController;
+use App\Models\WaysToBook;
 use Illuminate\Support\Facades\Route;
 
 //============login===============
@@ -208,6 +210,24 @@ Route::delete('/admin/thingsToDo/delete/{id}', [ThingsToDoController::class, 'de
 
 
 
+//=====ways to book=========
+Route::get('/admin/waysToBook', [WaysToBookController::class, 'index']);
+Route::get('/admin/admin/waystoBookCreate', [WaysToBookController::class, 'create']);
+Route::get('/admin/waysToBook/{id}', [WaysToBookController::class, 'show']);
+Route::get('/admin/waysToBook/edit/{id}', [WaysToBookController::class, 'edit']);
+Route::post('/admin/waysToBook/store', [WaysToBookController::class, 'store']);
+Route::put('/admin/waysToBook/update/{id}', [WaysToBookController::class, 'update']);
+Route::delete('/admin/waysToBook/delete/{id}', [WaysToBookController::class, 'destroy']);
+
+
+
+
+//=====Admin Vacancy=========
+
+
+
+
+
 //========admin brochure=========
 
 Route::get('/admin/brochure', [BrochureController::class, 'index']);
@@ -360,9 +380,7 @@ Route::get('/privacy', function () {
     return view('Frontend.About.PrivacyPolicy');
 });
 
-Route::get('/ways', function () {
-    return view('Frontend.About.waysToBook');
-});
+Route::get('/ways', [WaysToBookController::class,"GetAll"]);
 
 
 Route::get('/vacancy', function () {

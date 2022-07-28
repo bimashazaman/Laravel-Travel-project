@@ -12,15 +12,17 @@
     <h3 style="margin-bottom: 50px">
         Three ways to book a tour
     </h3>
+    @foreach ($ways as $w)
+        
+    
     <center style="margin: auto">
-        <p style="color: #2294E3"> <span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor sit amet consectetur adipisicing elit.</p>
-    <p style="color: rgb(100, 99, 99)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, suscipit.</p>
-    <p style="color: #2294E3"><span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor sit amet consectetur.</p>
-    <p style="color: rgb(100, 99, 99)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, suscipit.</p>
-    <p style="color: #2294E3"><span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor sit amet, consectetur adipisicing elit.</p>
-    <p style="color: rgb(100, 99, 99)">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Porro, suscipit.</p>
+        <p style="color: #2294E3"> <span><i class="fa-solid fa-check-double"></i></span> {{ $w->title }}</p>
+    <p style="color: rgb(100, 99, 99)">{{ $w->description }}</p>
+    
 
     </center>
+
+    @endforeach
 </div>
 
 <br>
