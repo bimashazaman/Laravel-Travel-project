@@ -94,6 +94,9 @@
                             </tbody>
                         </table>
                     </div>
+                    <center>
+                        {{ $things->links() }}
+                    </center>
                 </div>
             </div>
 

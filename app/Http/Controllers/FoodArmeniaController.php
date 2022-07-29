@@ -23,7 +23,7 @@ class FoodArmeniaController extends Controller
     //     return view('Backend.Admin.Armenia.ThingsToSee.view', compact('things', 'category'));
 
         $categories = FoodArmeniaCategory::all();
-        $foods = FoodArmenia::all();
+        $foods = FoodArmenia::simplePaginate(9);
         return view('Backend.Admin.Armenia.FoodAndDrink.view', compact('categories','foods'));
 
     }
@@ -186,7 +186,7 @@ class FoodArmeniaController extends Controller
 
     public function getfoodsByCategory($id)
     {
-        $foods = FoodArmenia::with('images')->where('category_id', $id)->get();
+        $foods = FoodArmenia::with('images')->where('category_id', $id)->simplePaginate(9);
         $category = FoodArmeniaCategory::where('id', $id)->first();
         return view('Frontend.Armenia.foods', compact('foods', 'category'));
     }

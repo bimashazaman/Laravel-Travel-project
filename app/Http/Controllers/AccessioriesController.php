@@ -11,7 +11,7 @@ class AccessioriesController extends Controller
   
     public function index()
     {
-        $a = Accessiories::all();
+        $a = Accessiories::simplePaginate(9);
         return view('Backend.Admin.Services.Accessiories.view', compact('a'));
     }
 
@@ -120,7 +120,7 @@ class AccessioriesController extends Controller
     public function getAccessiories()
     {
         $a = Accessiories::with('images')
-            ->get();
+            ->simplePaginate(9);
         return view('Frontend.TourAccesories.Accesories', compact('a'));
     }
 

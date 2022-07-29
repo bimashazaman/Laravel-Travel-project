@@ -92,6 +92,9 @@
 
 
                 </div>
+                <center>
+                    {{ $foods->links() }}
+                </center>
                 <!--/.row-->
             </div>
             <!--/.packages-content-->

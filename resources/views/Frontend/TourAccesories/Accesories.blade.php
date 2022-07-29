@@ -84,6 +84,9 @@
                  
 
                 </div>
+                <center>
+                    {{ $a->links() }}
+                </center>
                 <!--/.row-->
             </div>
             <!--/.packages-content-->

@@ -103,6 +103,9 @@
                             </tbody>
                         </table>
                     </div>
+                    <center>
+                        {{ $mices->links() }}
+                    </center>
                 </div>
             </div>
 

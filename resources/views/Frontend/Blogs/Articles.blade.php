@@ -110,6 +110,9 @@
 
                 </div>
                 <!--/.row-->
+                <center>
+                    {{ $travelBlogs ->links() }}
+                </center>
             </div>
             <!--/.packages-content-->
         </div>

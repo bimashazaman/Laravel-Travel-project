@@ -97,6 +97,9 @@
 
                 </div>
                 <!--/.row-->
+                <center>
+                    {{ $things->links() }}
+                </center>
             </div>
             <!--/.packages-content-->
         </div>

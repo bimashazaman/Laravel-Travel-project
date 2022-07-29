@@ -118,8 +118,13 @@
                                
                                 
                             </tbody>
+
                         </table>
+
                     </div>
+                    <center>
+                        {{ $cars->links() }}
+                    </center>
                 </div>
             </div>
 

@@ -82,6 +82,9 @@
                     
 
                 </div>
+                <center>
+                    {{ $mices->links() }}
+                </center>
                 <!--/.row-->
             </div>
         </div>

@@ -11,7 +11,7 @@ class MiceController extends Controller
   
     public function index()
     {
-        $mices = Mice::all();
+        $mices = Mice::simplePaginate(9);
         return view('Backend.Admin.Services.MICE.view', compact('mices'));
     }
 
@@ -113,7 +113,7 @@ class MiceController extends Controller
     public function showMice()
     {
         $mices = Mice::with('images')
-        ->get();
+        ->simplePaginate(9);
         return view('Frontend.Mice.Mices', compact('mices'));
     }
 

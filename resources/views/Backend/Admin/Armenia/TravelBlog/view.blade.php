@@ -102,6 +102,9 @@
                             </tbody>
                         </table>
                     </div>
+                    <center>
+                        {{ $travelBlogs ->links() }}
+                    </center>
                 </div>
             </div>
 

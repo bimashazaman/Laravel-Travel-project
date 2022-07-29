@@ -136,6 +136,9 @@
 
 
                 </div>
+                <center>
+                    {{ $cars->links() }}
+                </center>
                 <!--/.row-->
             </div>
         </div>

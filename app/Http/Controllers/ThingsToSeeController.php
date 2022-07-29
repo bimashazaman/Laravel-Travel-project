@@ -22,7 +22,7 @@ class ThingsToSeeController extends Controller
     //     return view('Backend.Admin.Armenia.ThingsToSee.view', compact('things', 'category'));
 
         $categories = ThingsToSeeCategory::all();
-        $things = ThingsToSee::all();
+        $things = ThingsToSee::simplePaginate(9);
         return view('Backend.Admin.Armenia.ThingsToSee.view', compact('categories','things'));
 
     }
@@ -154,7 +154,7 @@ class ThingsToSeeController extends Controller
 
     public function getThingsToSeeByCategory($id)
     {
-        $things = ThingsToSee::with('images')->where('category_id', $id)->get();
+        $things = ThingsToSee::with('images')->where('category_id', $id)->simplePaginate(9);
         $category = ThingsToSeeCategory::where('id', $id)->first();
         return view('Frontend.Armenia.ThingsToSee', compact('things', 'category'));
     }

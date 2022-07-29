@@ -12,7 +12,7 @@ class TravelBlogController extends Controller
     public function index()
     {
 
-        $travelBlogs = TravelBlog::all();
+        $travelBlogs = TravelBlog::simplePaginate(9);
         return view('Backend.Admin.Armenia.TravelBlog.view', compact('travelBlogs'));
     }
 
@@ -90,7 +90,7 @@ class TravelBlogController extends Controller
     //get it on frontend
     public function getTravelBlog()
     {
-        $travelBlogs = TravelBlog::with('images')->get();
+        $travelBlogs = TravelBlog::with('images')->simplePaginate(9);
         return view('Frontend.Blogs.Articles', compact('travelBlogs'));
     }
 

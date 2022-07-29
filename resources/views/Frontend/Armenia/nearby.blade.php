@@ -91,6 +91,9 @@
 
 
             </div>
+            <center>
+                {{ $things->links() }}
+            </center>
             <!--/.row-->
         </div>
     </div>

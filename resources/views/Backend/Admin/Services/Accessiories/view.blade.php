@@ -92,6 +92,9 @@
                                 @endforeach
                             </tbody>
                         </table>
+                        <center>
+                            {{ $a->links() }}
+                        </center>
                     </div>
                 </div>
             </div>

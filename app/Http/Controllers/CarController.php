@@ -16,7 +16,7 @@ class CarController extends Controller
     public function index()
     {
         
-        $cars = Vehicle::with('images')->get();
+        $cars = Vehicle::with('images')->simplePaginate(9);
         // $image = VehicleImage::all();
         return view('Backend.Admin.Services.Car.view', compact('cars'));
     }
@@ -208,7 +208,7 @@ class CarController extends Controller
     public function getCars()
     {
         
-        $cars = Vehicle::with('images')->get();
+        $cars = Vehicle::with('images')->simplePaginate(9);
         return view('Frontend.Cars.Cars', compact('cars'));
     }
 

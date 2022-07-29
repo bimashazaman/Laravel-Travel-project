@@ -97,6 +97,9 @@
                             </tbody>
                         </table>
                     </div>
+                    <center>
+                        {{ $foods ->links() }}
+                    </center>
                 </div>
             </div>
 

@@ -17,7 +17,7 @@ class NearbyArmeniaController extends Controller
     {
         
         $categories = NearbyArmeniaCategory::all();
-        $things = NearbyArmenia::all();
+        $things = NearbyArmenia::simplePaginate(9);
         return view('Backend.Admin.Armenia.TODO.view', compact('categories','things'));
 
     }
@@ -116,25 +116,7 @@ class NearbyArmeniaController extends Controller
             $things->fill($request->all());
             $things->save();
 
-            //saving tour images
-            // foreach ($request->file('images') as $key => $file) {
-
-            //     $fileOrignalName = $file->getClientOriginalName();
-            //     // return $fileOrignalName;
-            //     $fileNameArray = explode('.', $fileOrignalName);
-            //     $fileExtension = end($fileNameArray);
-            //     $newFilename = $key . now()->timestamp . "." . $fileExtension;
-            //     $path = "tour/" . $tour->id . "/";
-            //     $file->move($path, $newFilename);
-            //     $image = new Image();
-            //     $image["filename"] = $newFilename;
-            //     $image["path"] = $path . $newFilename;
-            //     $image->save();
-            //     TourImage::create([
-            //         "tour_id" => $tour->id,
-            //         "image_id" => $image->id
-            //     ]);
-            // }
+          
 
             DB::commit();
             
@@ -175,7 +157,7 @@ class NearbyArmeniaController extends Controller
 
     public function getNearbyByCategory($id)
     {
-        $things = NearbyArmenia::with('images')->where('category_id', $id)->get();
+        $things = NearbyArmenia::with('images')->where('category_id', $id)->simplePaginate(9);;
         $category = NearbyArmeniaCategory::where('id', $id)->first();
         return view('Frontend.Armenia.nearby', compact('things', 'category'));
     }
