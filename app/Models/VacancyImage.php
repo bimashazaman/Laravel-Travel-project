@@ -10,4 +10,16 @@ class VacancyImage extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+
+    //----------- relations ---------
+    public function vacancy()
+    {
+        return $this->belongsTo(Vacancy::class);
+    }
+
+    public function image()
+    {
+        return $this->belongsTo(Image::class);
+    }
 }

@@ -20,26 +20,32 @@
         <div class="row" style="padding: 40px">
             <div class="col-md-9">
                 <div class="row" style="margin-bottom: 40px">
+                    @foreach ($vacancies as $v)
+                        
+                   
                     <div>
                         <div style="display: flex">
-                            <img src="https://static.toiimg.com/photo/67382132.cms"
+
+
+                            <img src="{{$v->images->first()->path}}"
                                 style="width:35%; height:17%; margin-right: 20px" alt="">
 
                             <div style="margin-left: 20px">
 
                                 <h5 style="font-weight: 600">
-                                    Title
+                                    {{ $v->title }}
                                 </h5>
 
                                 <p style="color: black; margin-top:10px">
-                                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorem, aliquid! Lorem ipsum
-                                    dolor sit amet.
+                                    {{ $v->description }}
                                 </p>
 
 
                                 <div class="" style="font-weight: 500; font-size:16px; margin-top:10px">
 
-                                    <i class="fa-regular fa-clock" style="color: #e5a686"></i> <span>A date</span>
+                                    <i class="fa-regular fa-clock" style="color: #e5a686"></i> <span>
+                                        {{ $v->created_at->diffForHumans() }}
+                                    </span>
                                     <br>
                                     <br>
                                     <br>
@@ -62,8 +68,10 @@
 
                     </div>
 
+                    @endforeach
+
                 </div>
-                <form action="">
+                {{-- <form action="">
                     <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text"
                         class="form-control" placeholder="Add a Review">
                 </form>
@@ -89,7 +97,7 @@
                             <button type="submit" class="submit-rating">Submit</button>
                         </form>
                     </div>
-                </div>
+                </div> --}}
 
 
 
@@ -99,7 +107,7 @@
         </div>
     </div>
 
-    <script>
+    {{-- <script>
         const btn = document.querySelector(".submit-rating");
         const thanksmsg = document.querySelector(".thanks-msg");
         const starRating = document.querySelector(".star-input");
@@ -109,5 +117,5 @@
             thanksmsg.style.display = "table";
             return false;
         };
-    </script>
+    </script> --}}
 @endsection

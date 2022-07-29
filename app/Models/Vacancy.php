@@ -10,4 +10,15 @@ class Vacancy extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function images()
+    {
+        return $this->belongsToMany(Image::class, 'vacancy_images');
+    }
+
+    public function vacancyImages()
+    {
+        return $this->hasMany(VacancyImage::class);
+    }
+
 }

@@ -24,8 +24,8 @@ use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourEventController;
 use App\Http\Controllers\TravelBlogController;
 use App\Http\Controllers\UsefulInfoController;
+use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\WaysToBookController;
-use App\Models\WaysToBook;
 use Illuminate\Support\Facades\Route;
 
 //============login===============
@@ -224,6 +224,14 @@ Route::delete('/admin/waysToBook/delete/{id}', [WaysToBookController::class, 'de
 
 //=====Admin Vacancy=========
 
+Route::get('/admin/vacancy', [VacancyController::class, 'index']);
+Route::get('/admin/admin/vacancyCreate', [VacancyController::class, 'create']);
+Route::get('/admin/vacancy/{id}', [VacancyController::class, 'show']);
+Route::get('/admin/vacancy/edit/{id}', [VacancyController::class, 'edit']);
+Route::post('/admin/vacancy/store', [VacancyController::class, 'store']);
+Route::put('/admin/vacancy/update/{id}', [VacancyController::class, 'update']);
+Route::delete('/admin/vacancy/delete/{id}', [VacancyController::class, 'destroy']);
+
 
 
 
@@ -383,9 +391,7 @@ Route::get('/privacy', function () {
 Route::get('/ways', [WaysToBookController::class,"GetAll"]);
 
 
-Route::get('/vacancy', function () {
-    return view('Frontend.Vacancy.vacancy');
-});
+Route::get('/vacancyAll', [VacancyController::class, "GetAll"]);
 
 
 

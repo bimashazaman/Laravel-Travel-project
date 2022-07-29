@@ -61,6 +61,10 @@ class Image extends Model
     public function brochureImages(){
         return $this->hasMany(BrochureImages::class);
     }
+
+    public function vacancyImages(){
+        return $this->hasMany(VacancyImage::class);
+    }
     
 
     

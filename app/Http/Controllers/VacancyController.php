@@ -59,7 +59,8 @@ class VacancyController extends Controller
     
     public function GetAll()
     {
-        $vacancies = \App\Models\Vacancy::all();
-       return view('Frontend.About.vacancy', compact('vacancies'));
+        $vacancies = Vacancy::all();
+        return view('Frontend.Vacancy.vacancy', compact('vacancies'));
+     
     }
 }
