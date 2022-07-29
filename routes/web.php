@@ -34,6 +34,11 @@ Route::get('/login', function () {
     return view('Backend.Admin.login.login');
 });
 
+
+
+
+
+
 //============ Add facility page==============
 
 Route::get('/AddFacility', function () {
@@ -70,42 +75,6 @@ Route::delete("/admin/facility/delete/{id}", [TourController::class, "deleteTour
 Route::delete("/admin/tourprogram/delete/{id}", [TourController::class, "deleteTourProgram"])->name('tourProgramDelete');
 Route::get('/getTourByCategory/{id}', [TourController::class, 'getToursByCategory']);
 
-
-
-//----------- Frontend -------------
-
-Route::get('/', [FrontendController::class, 'index'])->name('home');
-Route::get('/tour/detail/{id}', [FrontendController::class, 'tourDescription'])->name('tourDescription');
-Route::get('/tour/{name}', [FrontendController::class, 'getTours'])->name('getTours');
-
-
-
-//=========== classic tours==========
-
-Route::get('/Bv', [ClassicTour::class, 'getClasicTours']);
-Route::get('/getClassicTour/{id}', [ClassicTour::class, 'getClassicTour']);
-
-//=====gurantee Tour===========
-
-Route::get('/guaranteeTour', [GuranteeTour::class, 'getTours']);
-
-//=========Gastro Tours=========
-
-
-Route::get('/GastroTours', [GastroTour::class, 'getTours']);
-
-//=========Active Tours=========
-
-Route::get('/activeTours', [ActiveTour::class, 'getTours']);
-
-
-//=========OneDay Tours=========
-
-Route::get('/oneDay', [OneDayController::class, 'index']);
-
-//=======theme tours==========
-
-Route::get('/themed', [ThemedTour::class, 'getTours']);
 
 Route::get('/check', [TourController::class, 'index']);
 Route::post('/checkpost', [TourController::class, 'checkStore']);
@@ -162,7 +131,6 @@ Route::post("/admin/addHotelInfo/{id}", [HotelController::class, "addHotelInfo"]
 Route::delete('/hotelInfo/delete/{id}', [HotelController::class, 'deleteHotelInfo']);
 
 //===========Admin Mice=========
-
 Route::get('/admin/Mice', [MiceController::class, 'index']);
 Route::get('/admin/Mice/create', [MiceController::class, 'create']);
 Route::get('/admin/Mice/{id}', [MiceController::class, 'show']);
@@ -172,7 +140,6 @@ Route::put('/admin/Mice/update/{id}', [MiceController::class, 'update']);
 Route::delete('/admin/Mice/delete/{id}', [MiceController::class, 'destroy']);
 
 //===========Admin Tour Events=========
-
 Route::get('/admin/events', [TourEventController::class, 'index']);
 Route::get('/admin/events/create', [TourEventController::class, 'create']);
 Route::get('/admin/events/{id}', [TourEventController::class, 'show']);
@@ -183,14 +150,7 @@ Route::delete('/admin/events/delete/{id}', [TourEventController::class, 'destroy
 
 
 
-//===========Frontend Tour Events=========
-
-Route::get('/pageSee', function () {
-    return view('Frontend.Armenia.ThingsToSeePage');
-});
-
 //===========Admin Things to see=========
-
 Route::get('/admin/thingsToSee', [ThingsToSeeController::class, 'index']);
 Route::get('/admin//admin/thingstoSeeCreate', [ThingsToSeeController::class, 'create']);
 Route::get('/admin/thingsToSee/{id}', [ThingsToSeeController::class, 'show']);
@@ -223,7 +183,6 @@ Route::delete('/admin/waysToBook/delete/{id}', [WaysToBookController::class, 'de
 
 
 //=====Admin Vacancy=========
-
 Route::get('/admin/vacancy', [VacancyController::class, 'index']);
 Route::get('/admin/admin/vacancyCreate', [VacancyController::class, 'create']);
 Route::get('/admin/vacancy/{id}', [VacancyController::class, 'show']);
@@ -237,7 +196,6 @@ Route::delete('/admin/vacancy/delete/{id}', [VacancyController::class, 'destroy'
 
 
 //========admin brochure=========
-
 Route::get('/admin/brochure', [BrochureController::class, 'index']);
 Route::get('/admin/brochure/create', [BrochureController::class, 'create']);
 Route::get('/admin/brochure/{id}', [BrochureController::class, 'show']);
@@ -260,7 +218,7 @@ Route::put('/admin/nearby/update/{id}', [NearbyArmeniaController::class, 'update
 Route::delete('/admin/nearby/delete/{id}', [NearbyArmeniaController::class, 'destroy']);
 
 //=========About us=========
-Route::get('/aboutUs', [AboutUsController::class, 'index']);
+
 Route::get('/aboutUs/create', [AboutUsController::class, 'create']);
 Route::get('/aboutUs/{id}', [AboutUsController::class, 'show']);
 Route::post('/aboutUs/store', [AboutUsController::class, 'store']);
@@ -283,23 +241,6 @@ Route::get('/usefulToKnow', [UsefulInfoController::class, 'getUsefulInfo']);
 
 
 
-//=============Frontend Nearby ===========
-
-Route::get('/getAllThingsToSee', [ThingsToSeeController::class, 'getAllThingsToSee']);
-Route::get('/getThingsToSeeByCategoryId/{id}', [ThingsToSeeController::class, 'getThingsToSeeByCategory']);
-Route::get('/getThingsToSeeById/{id}', [ThingsToSeeController::class, 'getThingsToSeeById']);
-
-
-//==========Things to see Frontend=========
-Route::get('/todoSorrounding', [NearbyArmeniaController::class, 'getAllNearby']);
-Route::get('/nearbyByCategoryId/{id}', [NearbyArmeniaController::class, 'getNearbyByCategory']);
-Route::get('/nearbyById/{id}', [NearbyArmeniaController::class, 'getNearbyById']);
-
-
-//==========Things to do Frontend=========
-Route::get('/getAllThingsToDo', [ThingsToDoController::class, 'getAllThingsToDo']);
-Route::get('/getThingsToDoByCategoryId/{id}', [ThingsToDoController::class, 'getThingsToDoByCategory']);
-Route::get('/getThingsToDoById/{id}', [ThingsToDoController::class, 'getThingsToDoById']);
 
 
 
@@ -314,15 +255,7 @@ Route::put('/admin/foods/update/{id}', [FoodArmeniaController::class, 'update'])
 Route::delete('/admin/foods/delete/{id}', [FoodArmeniaController::class, 'destroy']);
 
 
-//==========Armenia Frontend food=========
-Route::get('/food', [FoodArmeniaController::class, 'getAllFoods']);
-Route::get('/getfoodsByCategory/{id}', [FoodArmeniaController::class, 'getfoodsByCategory']);
-Route::get('/getfoodsById/{id}', [FoodArmeniaController::class, 'getfoodsById']);
 
-
-//===========Frontend Tour Events=========
-Route::get('/cs', [TourEventController::class, 'showFrontend']);
-Route::get('/c/{id}', [TourEventController::class, 'showFrontendDetails']);
 
 //===============reviews===============
 
@@ -343,158 +276,11 @@ Route::put('/admin/travelBlogs/update/{id}', [TravelBlogController::class, 'upda
 Route::delete('/admin/travelBlogs/delete/{id}', [TravelBlogController::class, 'destroy']);
 
 
-//==========Frontend Article=========
 
-Route::get('/Articles',[TravelBlogController::class, 'getTravelBlog']);
-Route::get('/Article/{id}',[TravelBlogController::class, 'getTravelBlogById']);
-
-
-
-//==========Frontend Hotel=========
-
-Route::get('/hs', [HotelController::class, 'getHotels']);
-Route::get('/h/{id}', [HotelController::class, 'getHotelDetails']);
-
-
-
-//==========Frontend Accessiories=========
-
-Route::get('/acs', [AccessioriesController::class, 'getAccessiories']);
-Route::get('/ac/{id}', [AccessioriesController::class, 'getAccessioriesDetails']);
-
-
-
-//========Frontend CarAirport=========
-Route::get('/MT', [CarAirportController::class, 'getAllCarAirport']);
-
-
-//============= car frontend==============
-
-Route::get('caa', [CarController::class, 'getCars']);
-Route::get('/car/detail/{id}', [CarController::class, 'getCarDetails']);
-
-//=========Mice frontend=========
-
-Route::get('/mices', [MiceController::class, 'showMice']);
-Route::get('/mices/{id}', [MiceController::class, 'showMiceDetails']);
 
 
 
 Route::get("/dashboard/hello", [TourController::class, "index"]);
-
-
-
-Route::get('/privacy', function () {
-    return view('Frontend.About.PrivacyPolicy');
-});
-
-Route::get('/ways', [WaysToBookController::class,"GetAll"]);
-
-
-Route::get('/vacancyAll', [VacancyController::class, "GetAll"]);
-
-
-
-
-
-
-
-
-Route::get('/TourFrontPage', function () {
-    return view('Frontend.Tours.Tour');
-});
-
-
-
-
-Route::get('/Rv', function () {
-    return view('Frontend.BasicTours.RequestABasicTour');
-});
-
-
-
-
-Route::get('/b', function () {
-    return view('Frontend.Brochures.Brochures');
-});
-
-Route::get('/withDriver', function () {
-    return view('Frontend.Cars.WithDriver');
-});
-
-
-
-
-
-Route::get('/RF', function () {
-    return view('Frontend.Cars.RentACarForm');
-});
-
-
-
-
-
-
-
-Route::get('/TentForm', function () {
-    return view('Frontend.TourAccesories.TentForm');
-});
-
-
-Route::get('/mice', function () {
-    return view('Frontend.Mice.Micee');
-});
-
-
-
-
-
-Route::get('/ClassicTour', function () {
-    return view('Frontend.BasicTours.BasicTours');
-});
-
-
-Route::get('/RenACar', function () {
-    return view('Frontend.Cars.RentACarForm');
-});
-
-
-
-
-
-Route::get('/article', function () {
-    return view('Frontend.Blogs.Article');
-});
-
-
-
-Route::get('/contact', function () {
-    return view('Frontend.Contact.Contact');
-});
-
-Route::get('/BookHotel', function () {
-    return view('Frontend.Hotels.BookHotelForm');
-});
-
-
-
-
-
-
-
-
-
-
-
-
-Route::get('/driver', function () {
-    return view('Frontend.Cars.DriverCar');
-});
-
-
-
-
-
 
 
 
@@ -542,33 +328,137 @@ Route::get('/admin/UpdateCarWithDriver', function () {
 
 
 
-//============Armenia Create routes=============
+// //============Armenia Create routes=============
 
-Route::get('/admin/createBrochur', function () {
-    return view('Backend.Admin.Armenia.Brochure.create');
+// Route::get('/admin/createBrochur', function () {
+//     return view('Backend.Admin.Armenia.Brochure.create');
+// });
+
+
+
+
+
+
+// //=============Armenia Update routes=============
+
+
+// Route::get('/admin/Brochure', function () {
+//     return view('Backend.Admin.Armenia.Brochure.update');
+// });
+
+
+// Route::get('/admin/updateFoodAndDrnk', function () {
+//     return view('Backend.Admin.Armenia.FoodAndDrink.update');
+// });
+
+// Route::get('/admin/updateInformation', function () {
+//     return view('Backend.Admin.Armenia.Informations.update');
+// });
+
+
+
+
+
+
+//=================All frontend routes=================
+
+Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::get('/tour/detail/{id}', [FrontendController::class, 'tourDescription'])->name('tourDescription');
+Route::get('/tour/{name}', [FrontendController::class, 'getTours'])->name('getTours');
+
+
+//==========Armenia Frontend food=========
+Route::get('/food', [FoodArmeniaController::class, 'getAllFoods']);
+Route::get('/getfoodsByCategory/{id}', [FoodArmeniaController::class, 'getfoodsByCategory']);
+Route::get('/getfoodsById/{id}', [FoodArmeniaController::class, 'getfoodsById']);
+
+
+//===========Frontend Tour Events=========
+Route::get('/cs', [TourEventController::class, 'showFrontend']);
+Route::get('/c/{id}', [TourEventController::class, 'showFrontendDetails']);
+
+//=========== classic tours==========
+Route::get('/Bv', [ClassicTour::class, 'getClasicTours']);
+Route::get('/getClassicTour/{id}', [ClassicTour::class, 'getClassicTour']);
+
+//=====gurantee Tour===========
+Route::get('/guaranteeTour', [GuranteeTour::class, 'getTours']);
+
+//=========Gastro Tours=========
+Route::get('/GastroTours', [GastroTour::class, 'getTours']);
+
+//=========Active Tours=========
+Route::get('/activeTours', [ActiveTour::class, 'getTours']);
+
+
+//=========OneDay Tours=========
+Route::get('/oneDay', [OneDayController::class, 'index']);
+
+//=======theme tours==========
+Route::get('/themed', [ThemedTour::class, 'getTours']);
+
+//============= car frontend==============
+Route::get('caa', [CarController::class, 'getCars']);
+Route::get('/car/detail/{id}', [CarController::class, 'getCarDetails']);
+
+//=========Mice frontend=========
+Route::get('/mices', [MiceController::class, 'showMice']);
+Route::get('/mices/{id}', [MiceController::class, 'showMiceDetails']);
+
+//=======ways to book frontend=========
+Route::get('/ways', [WaysToBookController::class,"GetAll"]);
+
+//=========Vacancy frontend=========
+Route::get('/vacancyAll', [VacancyController::class, "GetAll"]);
+
+
+//===========Frontend Tour Events=========
+Route::get('/pageSee', function () {
+    return view('Frontend.Armenia.ThingsToSeePage');
 });
 
+//======about us===========
+Route::get('/aboutUs', [AboutUsController::class, 'index']);
+
+//=============Frontend Nearby ===========
+Route::get('/getAllThingsToSee', [ThingsToSeeController::class, 'getAllThingsToSee']);
+Route::get('/getThingsToSeeByCategoryId/{id}', [ThingsToSeeController::class, 'getThingsToSeeByCategory']);
+Route::get('/getThingsToSeeById/{id}', [ThingsToSeeController::class, 'getThingsToSeeById']);
+
+
+//==========Things to see Frontend=========
+Route::get('/todoSorrounding', [NearbyArmeniaController::class, 'getAllNearby']);
+Route::get('/nearbyByCategoryId/{id}', [NearbyArmeniaController::class, 'getNearbyByCategory']);
+Route::get('/nearbyById/{id}', [NearbyArmeniaController::class, 'getNearbyById']);
+
+
+//==========Things to do Frontend=========
+Route::get('/getAllThingsToDo', [ThingsToDoController::class, 'getAllThingsToDo']);
+Route::get('/getThingsToDoByCategoryId/{id}', [ThingsToDoController::class, 'getThingsToDoByCategory']);
+Route::get('/getThingsToDoById/{id}', [ThingsToDoController::class, 'getThingsToDoById']);
+
+
+//==========Frontend Article=========
+Route::get('/Articles',[TravelBlogController::class, 'getTravelBlog']);
+Route::get('/Article/{id}',[TravelBlogController::class, 'getTravelBlogById']);
 
 
 
+//==========Frontend Hotel=========
+
+Route::get('/hs', [HotelController::class, 'getHotels']);
+Route::get('/h/{id}', [HotelController::class, 'getHotelDetails']);
 
 
-//=============Armenia Update routes=============
+
+//==========Frontend Accessiories=========
+Route::get('/acs', [AccessioriesController::class, 'getAccessiories']);
+Route::get('/ac/{id}', [AccessioriesController::class, 'getAccessioriesDetails']);
 
 
-Route::get('/admin/Brochure', function () {
-    return view('Backend.Admin.Armenia.Brochure.update');
-});
 
-
-Route::get('/admin/updateFoodAndDrnk', function () {
-    return view('Backend.Admin.Armenia.FoodAndDrink.update');
-});
-
-Route::get('/admin/updateInformation', function () {
-    return view('Backend.Admin.Armenia.Informations.update');
-});
-
+//========Frontend CarAirport=========
+Route::get('/MT', [CarAirportController::class, 'getAllCarAirport']);
 
 
 //======frontend send step route ==========
@@ -581,3 +471,80 @@ Route::get('/secondStep', function () {
 Route::get('/ThirdStep', function () {
     return view('partials.SendAMsg');
 });
+
+
+
+Route::get('/privacy', function () {
+    return view('Frontend.About.PrivacyPolicy');
+});
+
+Route::get('/TourFrontPage', function () {
+    return view('Frontend.Tours.Tour');
+});
+
+Route::get('/Rv', function () {
+    return view('Frontend.BasicTours.RequestABasicTour');
+});
+
+Route::get('/b', function () {
+    return view('Frontend.Brochures.Brochures');
+});
+
+Route::get('/withDriver', function () {
+    return view('Frontend.Cars.WithDriver');
+});
+
+Route::get('/RF', function () {
+    return view('Frontend.Cars.RentACarForm');
+});
+
+
+
+Route::get('/TentForm', function () {
+    return view('Frontend.TourAccesories.TentForm');
+});
+
+
+Route::get('/mice', function () {
+    return view('Frontend.Mice.Micee');
+});
+
+
+
+Route::get('/ClassicTour', function () {
+    return view('Frontend.BasicTours.BasicTours');
+});
+
+
+Route::get('/RenACar', function () {
+    return view('Frontend.Cars.RentACarForm');
+});
+
+
+
+Route::get('/article', function () {
+    return view('Frontend.Blogs.Article');
+});
+
+
+
+Route::get('/contact', function () {
+    return view('Frontend.Contact.Contact');
+});
+
+Route::get('/BookHotel', function () {
+    return view('Frontend.Hotels.BookHotelForm');
+});
+
+
+Route::get('/driver', function () {
+    return view('Frontend.Cars.DriverCar');
+});
+
+
+
+
+
+
+
+
