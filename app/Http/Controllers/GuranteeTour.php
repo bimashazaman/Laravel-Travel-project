@@ -10,7 +10,7 @@ class GuranteeTour extends Controller
 {
     public function getTours()
     {
-        $tour = Tour::with('images')->where('category_id', 2)->get();
+        $tour = Tour::with('images')->where('category_id', 2)->simplePaginate(9);
         $category = TourCategory::where('id', 2)->first();
         
         return view('Frontend.GuaranteeTour.Guarantee', compact('tour', 'category'));

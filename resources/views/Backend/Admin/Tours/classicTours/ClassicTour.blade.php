@@ -90,7 +90,10 @@
                                 @endforeach
 
                             </tbody>
+                           
+                            
                         </table>
+                        {{ $tour->links() }}
                     </div>
                 </div>
             </div>

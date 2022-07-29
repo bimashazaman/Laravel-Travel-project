@@ -119,6 +119,9 @@
 
 
                 </div>
+                <center>
+                    {{ $tour->links() }}
+                </center>
                 <!--/.row-->
             </div>
             <!--/.packages-content-->

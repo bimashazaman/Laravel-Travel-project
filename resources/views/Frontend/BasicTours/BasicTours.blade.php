@@ -1,14 +1,14 @@
 @extends('layouts.master')
 @section('content')
-<div class="fullBanner">
-    @include('partials.DefaultBanner')
-</div>
+    <div class="fullBanner">
+        @include('partials.DefaultBanner')
+    </div>
 
 
     <h2 style="text-align: center; padding-bottom:60px">
         Tours To Armenia
     </h2>
-  
+
     @include('partials.sixCards')
 
 
@@ -47,16 +47,15 @@
                         </h3> --}}
                             <div class="single-package-item">
 
-                                {{-- {{ $item->images->json() }}
-                                 --}}
-                                
+                                {{-- {{ $item->images->json() }} --}}
+
                                 {{-- //show the image from images/tours
                                 <img src="{{ $item->images }}" alt=""> --}}
                                 {{-- {{ $item->images }} --}}
 
 
-                                <img src="{{$item->images->first()->path}}" alt="">
-                               
+                                <img src="{{ $item->images->first()->path }}" alt="">
+
 
 
                                 <div class="packageName">
@@ -98,8 +97,8 @@
                                     <span class=""><i class="fa-solid fa-star"></i></span>
                                 </div>
                                 <div class="package-btn">
-                                    <a href="{{ url('/getClassicTour/'.$item->id) }}">
-                                        
+                                    <a href="{{ url('/getClassicTour/' . $item->id) }}">
+
                                         <button class="package-view">
                                             Details
                                         </button>
@@ -119,6 +118,9 @@
 
 
                 </div>
+                <center>
+                    {{ $tour->links() }}
+                </center>
                 <!--/.row-->
             </div>
             <!--/.packages-content-->

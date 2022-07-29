@@ -10,7 +10,9 @@ class ClassicTour extends Controller
 {
     public function getClasicTours()
     {
-        $tour = Tour::with('images')->where('category_id', 1)->get();
+        // get all data with paginate
+
+        $tour = Tour::with('images')->where('category_id', 1)->simplePaginate(9);
         $category = TourCategory::where('id', 1)->first();
 
 

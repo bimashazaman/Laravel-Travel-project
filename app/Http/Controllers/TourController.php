@@ -539,7 +539,16 @@ class TourController extends Controller
     {
 
 
-        $tour = Tour::where('category_id', $id)->get();
+        //get all tours where id is equal to the category id with pagination
+        $tour = Tour::with('images')
+            ->with('highlights')
+            ->with('facility')
+            ->with('program')
+            ->where("category_id", $id)
+            ->whereNull('deleted_at')
+            ->simplePaginate(10);
+
+        // $tour = Tour::where('category_id', $id)->get();
         $cat = TourCategory::where('id', $id)->first();
         return view('Backend.Admin.Tours.classicTours.ClassicTour', compact('tour', 'cat'));
 

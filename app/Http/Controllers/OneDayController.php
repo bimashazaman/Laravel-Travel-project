@@ -12,7 +12,7 @@ class OneDayController extends Controller
 
    public function index()
    {
-    $tour = Tour::with('images')->where('category_id', 5)->get();
+    $tour = Tour::with('images')->where('category_id', 5)->simplePaginate(9);
     $category = TourCategory::where('id', 5)->first();
     
     return view('Frontend.OneDayTour.OneDayTour', compact('tour', 'category'));

@@ -2,6 +2,16 @@
 @section('admin-content')
     {{-- {{$tour}} --}}
 
+    @if(session('success'))
+<div class="alert alert-success">
+    {{session('msg')}}
+</div>
+@elseif(session('fail'))
+<div class="alert alert-danger">
+    {{session('msg')}}
+</div>
+@endif
+
 
     <div class="container-fluid">
         <h2 class="text-center font-weight-bold">

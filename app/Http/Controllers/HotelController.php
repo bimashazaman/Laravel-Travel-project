@@ -18,7 +18,8 @@ class HotelController extends Controller
 
     public function index()
     {
-        $hotels = Hotel::all();
+        //get all data with paginate
+        $hotels = Hotel::simplePaginate(5);
         return view('Backend.Admin.Services.Hotels.view', compact('hotels'));
     }
 

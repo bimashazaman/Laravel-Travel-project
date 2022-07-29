@@ -90,13 +90,18 @@
                                                    </span>
                                                 </form>
                                             </div>
+                                            
                                         </td>
                                     </tr>
                                 @endforeach
-
+                              
                             </tbody>
+                           
                         </table>
+                       
                     </div>
+                    {{ $hotels->links() }}
+                  
                 </div>
             </div>
 
