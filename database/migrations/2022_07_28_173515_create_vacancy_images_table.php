@@ -15,6 +15,8 @@ class CreateVacancyImagesTable extends Migration
     {
         Schema::create('vacancy_images', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('vacancy_id');
+            $table->unsignedBigInteger('image_id');
             $table->timestamps();
         });
     }
