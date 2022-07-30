@@ -290,6 +290,7 @@ Route::get("/dashboard/hello", [TourController::class, "index"]);
 Route::get('/admin/CarWithDriver', [CarWithDriverController::class,"index"]);
 Route::get('/admin/CarWithDriver/create', [CarWithDriverController::class,"create"]);
 Route::get('/admin/CarWithDriver/createInfo', [CarWithDriverController::class,"createInfo"]);
+Route::post('/admin/CarWithDriverInfo/store', [CarWithDriverController::class,"storeInfo"]);
 Route::get('/admin/CarWithDriver/{id}', [CarWithDriverController::class,"show"]);
 Route::post('/admin/CarWithDriver/store', [CarWithDriverController::class,"store"]);
 Route::get('/admin/CarWithDriver/edit/{id}', [CarWithDriverController::class,"edit"]);

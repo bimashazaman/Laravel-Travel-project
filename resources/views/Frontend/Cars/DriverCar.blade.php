@@ -5,9 +5,9 @@
         @include('partials.DefaultBanner')
     </div>
 
-    <section class="tour-descriptions">
+    <section class="tour-descriptions" style="margin-top: -50px;">
         <h1 style="text-align: center">
-            Tesla
+            {{ $carInfo->name }}
         </h1>
         <div class="row">
             <div class="col-md-7">
@@ -131,21 +131,29 @@
 
                     <div class="detailespackage">
                         <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>
-                        <div>Sedan</div>
+                        <div>
+                            {{ $carInfo->type }}
+                        </div>
                     </div>
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-person"></i>Number of seats</div>
-                        <div>3 seats</div>
+                        <div>
+                            {{ $carInfo->seats }}
+                        </div>
                     </div>
 
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-calendar-check"></i>Year</div>
-                        <div>2004 Air conditionar</div>
+                        <div>
+                            {{ $carInfo->model }}
+                        </div>
                     </div>
 
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>
-                        <div>3 days ago</div>
+                        <div>
+                            {{ $carInfo->cancelation_fee }}
+                        </div>
                     </div>
 
 
@@ -161,11 +169,7 @@
             Overview
         </h2>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cum hic totam ducimus repudiandae in cupiditate
-            deleniti velit accusantium ut consequuntur tempora veritatis explicabo dignissimos quaerat, eius illum alias id
-            nihil placeat inventore voluptate animi natus nam. Veritatis quaerat doloremque asperiores, in ad provident,
-            quae ut sunt delectus quibusdam voluptate, perspiciatis recusandae officiis! Fugiat voluptate neque optio
-            reprehenderit magni eveniet eum suscipit quam, ducimus, odio ex sed vero dolorum! Ratione.
+            {{ $carInfo->overview }}
         </p>
     </section>
 

@@ -24,7 +24,7 @@
                 </a>
             </button>
             <button class="btn btn-dark" style="color: white; margin-left:15px; float:right">
-                <a href="{{ url('//admin/CarWithDriver/createInfo') }}" style="color: white">
+                <a href="{{ url('/admin/CarWithDriver/createInfo') }}" style="color: white">
                     <i class="fa fa-plus" style="color: white"></i>
                     Add Info
                 </a>

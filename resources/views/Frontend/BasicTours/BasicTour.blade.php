@@ -254,10 +254,19 @@
                 @foreach ($tour->facility as $i)
                     <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span>
                         {{ $i->name }}</li>
-
-                    <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
-                                style="width: 20px; margin-right: 10px;"></span>{{ $i->unname }}</li>
                 @endforeach
+                {{-- //dont show any null value --}}
+                {{-- @if ($tour->facility->count() == 0)
+                            <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span>
+                                No facility</li> --}}
+
+
+                @if ($tour->facility->count() > 0)
+                    @foreach ($tour->facility as $i)
+                        <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
+                                    style="width: 20px; margin-right: 10px;"></span>{{ $i->unname }}</li>
+                    @endforeach
+                @endif
 
 
 
@@ -325,7 +334,7 @@
                 <br>
                 <br>
                 <div class="row">
-                    <div class="col-md-9">
+                    <div class="col-md-10">
                         <table class="table table-bordered tble" style="width: 100%; margin-top: 20px;">
                             <h3 style="text-align: center">
                                 The Tours with guaranteed departures
@@ -375,11 +384,11 @@
                     <br>
 
 
-                    <div class="col-md-3">
+                    <div class="col-md-2" style="display: block">
 
                         @foreach ($tour->departureTable as $d)
-                            <span><button class="package-view" style="margin-top: 10px;">Book Now
-                                    {{ $d->id }}</button></span>
+                            <button class="package-view" style="margin-top: 10px;">Book Now
+                                    {{ $d->id }}</button>
                         @endforeach
                     </div>
                 </div>
