@@ -36,6 +36,12 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label class="col-form-label col-md-2">Overview</label>
+                        <div class="col-md-10">
+                            <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="overview">
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-form-label col-md-2">Description</label>
                         <div class="col-md-10">
                             <textarea style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; width:100%; border:none" name="description" cols="30" rows="10"></textarea>
@@ -63,6 +69,40 @@
                         <label class="col-form-label col-md-2">Free Cancel</label>
                         <div class="col-md-10">
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="free_cancelation">
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Country</label>
+                        <div class="col-md-10">
+                            <select class="form-control form-select" name="destination_id">
+                               
+                                @foreach($destination as $d)
+                                <option value="{{$d->id}}">{{$d->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Region</label>
+                        <div class="col-md-10">
+                            <select class="form-control form-select" name="region_id">
+                                @foreach($region as $r)
+                                <option value="{{$r->id}}">{{$r->name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Hotel Type</label>
+                        <div class="col-md-10">
+                            <select class="form-control form-select" name="hotel_type_id">
+                               
+                                @foreach($hotelType as $h)
+                                <option value="{{$h->id}}">{{$h->name}}</option>
+                                @endforeach
+                            </select>
                         </div>
                     </div>
                 

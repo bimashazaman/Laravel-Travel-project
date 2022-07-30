@@ -21,7 +21,8 @@ class DatabaseSeeder extends Seeder
             NearbyArmenia::class,
             ThingsToDo::class,
             ThingsToSee::class,
-
+            HotelType::class,
+            RegionSeeder::class,
 
         ]);
     }

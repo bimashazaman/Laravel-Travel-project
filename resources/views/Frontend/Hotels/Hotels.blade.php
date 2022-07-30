@@ -10,39 +10,18 @@
 
             <select class="form-control" id="exampleFormControlSelect1">
                 <option class="chooseO">Choose Country</option>
-                <option>Armenia</option>
-                <option>Georgia</option>
-                <option>Iran</option>
+                @foreach ($destination as $d)
+                    <option value="{{ $d->id }}">{{ $d->name }}</option>
+                @endforeach
             </select>
         </div>
         <div class="form-group htt">
 
             <select class="form-control" id="exampleFormControlSelect1">
                 <option class="chooseO">Choose region</option>
-                <option>
-                    Yerevan
-                </option>
-                <option>
-                    Gyumri
-                </option>
-                <option>
-                    Diijan
-                </option>
-                <option>Tsakhkadzor</option>
-                <option>Jermuk</option>
-                <option>Lori</option>
-                <option>Sevan</option>
-                <option>Goris</option>
-                <option>Sisian</option>
-                <option>Areni</option>
-                <option>Kapan</option>
-                <option>Ashtarak</option>
-                <option>Garni</option>
-                <option>Aghveran</option>
-                <option>Arzni</option>
-                <option>Ijevan</option>
-                <option>Meghri</option>
-                <option>Stepanakert</option>
+                @foreach ($region as $r)
+                    <option value="{{ $r->id }}">{{ $r->name }}</option>
+                @endforeach
             </select>
         </div>
 
@@ -50,18 +29,9 @@
 
             <select class="form-control" id="exampleFormControlSelect1">
                 <option class="chooseO">Choose Type</option>
-                <option>
-                    Hotel
-                </option>
-                <option>
-                    Hostel
-                </option>
-                <option>
-                    Camp
-                </option>
-                <option>
-                    Bungalo
-                </option>
+                @foreach ($hotelType as $h)
+                    <option value="{{ $h->id }}">{{ $h->name }}</option>
+                @endforeach
             </select>
         </div>
 
@@ -99,8 +69,7 @@
 
                             <div class="single-package-item">
 
-                                <img src="{{$hotel->images->first()->path}}"
-                                    alt="package-place">
+                                <img src="{{ $hotel->images->first()->path }}" alt="package-place">
                                 <div class="HotelName">
                                     <h4>
                                         {{ $hotel->name }}

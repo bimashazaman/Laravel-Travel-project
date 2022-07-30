@@ -51,6 +51,7 @@
     <h5>
         {{ $hotel->description }}
     </h5>
+    {{ $hotel->overview }}
     
 </center>
     <div class="col-md-12">
@@ -78,7 +79,17 @@
                         <div class="mb-3">
                             Free Cancelation
                         </div>
+                        <div class="mb-3">
+                           Hotel Type
 
+                        </div>
+                        <div class="mb-3">
+                            Destination
+                        </div>
+
+                        <div>
+                            Region
+                        </div>
 
 
                     </div>
@@ -97,6 +108,15 @@
                         </div>
                         <div class="mb-3">
                             {{ $hotel->free_cancelation }}
+                        </div>
+                        <div class="mb-3">
+                          {{ $hotel->hotelType->name }}
+                        </div>
+                        <div class="mb-3">
+                            {{ $hotel->destination->name }}
+                        </div>
+                        <div class="mb-3">
+                            {{ $hotel->region->name}}
                         </div>
 
 

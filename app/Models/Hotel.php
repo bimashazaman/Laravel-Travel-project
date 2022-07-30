@@ -45,4 +45,19 @@ class Hotel extends Model
         return $this->hasMany(HotelInfo::class);
     }
 
+    public function hotelType()
+    {
+        return $this->belongsTo(HotelType::class);
+    }
+
+    public function region()
+    {
+        return $this->belongsTo(Region::class);
+    }
+
+    public function destination()
+    {
+        return $this->belongsTo(Destination::class);
+    }
+
 }

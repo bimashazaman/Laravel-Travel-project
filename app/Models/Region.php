@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Destination extends Model
+class Region extends Model
 {
     use HasFactory;
     protected $fillable = [
@@ -16,5 +16,4 @@ class Destination extends Model
     {
         return $this->hasMany(Hotel::class);
     }
-    
 }

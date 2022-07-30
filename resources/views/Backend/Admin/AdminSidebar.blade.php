@@ -59,8 +59,8 @@
                         <li><a href="{{ url('/admin/waysToBook') }}">Ways to book</a></li>
                         {{-- <li><a href="tables-basic.html">Privacy policy </a></li> --}}
                         <li><a href="{{ url('/admin/vacancy') }}">Vacancy</a></li>
-                        <li><a href="tables-basic.html">Reviews</a></li>
-                        <li><a href="tables-basic.html">Contact us</a></li>
+                        {{-- <li><a href="tables-basic.html">Reviews</a></li>
+                        <li><a href="tables-basic.html">Contact us</a></li> --}}
                     </ul>
                 </li>
             </ul>

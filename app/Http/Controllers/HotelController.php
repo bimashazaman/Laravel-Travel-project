@@ -2,13 +2,16 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Destination;
 use App\Models\Hotel;
 use App\Models\HotelFacility;
 use App\Models\HotelHighlights;
 use App\Models\HotelImage;
 use App\Models\HotelInfo;
 use App\Models\HotelRoom;
+use App\Models\HotelType;
 use App\Models\Image;
+use App\Models\Region;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Validator;
@@ -26,7 +29,11 @@ class HotelController extends Controller
 
     public function create()
     {
-        return view('Backend.Admin.Services.Hotels.create');
+        $hotelType = HotelType::all();
+        $region = Region::all();
+        $destination = Destination::all();
+        
+        return view('Backend.Admin.Services.Hotels.create', compact('hotelType', 'region', 'destination'));
     }
 
 
@@ -38,16 +45,25 @@ class HotelController extends Controller
             'address' => 'required',
             'stars' => 'required',
             'price' => 'required',
+            'overview' => '',
             'free_cancelation' => 'required',
             'images' => 'required',
+            'destination_id' => 'required',
+            'region_id' => 'required',
+            'hotel_type_id' => 'required',
         ]);
         $hotel = Hotel::create([
             'name' => $request->name,
+            'overview' => $request->overview,
             'description' => $request->description,
             'address' => $request->address,
             'stars' => $request->stars,
             'price' => $request->price,
             'free_cancelation' => $request->free_cancelation,
+            'destination_id' => $request->destination_id,
+            'region_id' => $request->region_id,
+            'hotel_type_id' => $request->hotel_type_id,
+
         ]);
 
         foreach ($request->file('images') as  $image) {
@@ -78,6 +94,9 @@ class HotelController extends Controller
             ->with('hotelInfo')
             ->with('hotelFacilities')
             ->with('rooms')
+            ->with('destination')
+            ->with('region')
+            ->with('hotelType')
             ->where('id', $id)
             ->first();
 
@@ -90,7 +109,10 @@ class HotelController extends Controller
     public function edit($id)
     {
         $hotel = Hotel::find($id);
-        return view('Backend.Admin.Services.Hotels.update', compact('hotel'));
+        $hotelType = HotelType::all();
+        $region = Region::all();
+        $destination = Destination::all();
+        return view('Backend.Admin.Services.Hotels.update', compact('hotel', 'hotelType', 'region', 'destination'));
     }
 
 
@@ -323,7 +345,11 @@ class HotelController extends Controller
             ->with('rooms')
             ->whereNull('deleted_at')
             ->get();
-        return view('Frontend.Hotels.Hotels', compact('hotels'));
+            $hotelType = HotelType::all();
+            $region = Region::all();
+            $destination = Destination::all();
+        
+        return view('Frontend.Hotels.Hotels', compact('hotels', 'hotelType', 'region', 'destination'));
     }
 
     // get the hotel details in the frontend
