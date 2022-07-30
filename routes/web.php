@@ -6,6 +6,7 @@ use App\Http\Controllers\ActiveTour;
 use App\Http\Controllers\BrochureController;
 use App\Http\Controllers\CarAirportController;
 use App\Http\Controllers\CarController;
+use App\Http\Controllers\CarWithDriverController;
 use App\Http\Controllers\ClassicTour;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FoodArmeniaController;
@@ -27,6 +28,7 @@ use App\Http\Controllers\UsefulInfoController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\WaysToBookController;
 use Illuminate\Support\Facades\Route;
+
 
 //============login===============
 
@@ -284,21 +286,16 @@ Route::get("/dashboard/hello", [TourController::class, "index"]);
 
 
 
+//================ Car with driver ================
+Route::get('/admin/CarWithDriver', [CarWithDriverController::class,"index"]);
+Route::get('/admin/CarWithDriver/create', [CarWithDriverController::class,"create"]);
+Route::get('/admin/CarWithDriver/createInfo', [CarWithDriverController::class,"createInfo"]);
+Route::get('/admin/CarWithDriver/{id}', [CarWithDriverController::class,"show"]);
+Route::post('/admin/CarWithDriver/store', [CarWithDriverController::class,"store"]);
+Route::get('/admin/CarWithDriver/edit/{id}', [CarWithDriverController::class,"edit"]);
+Route::put('/admin/CarWithDriver/update/{id}', [CarWithDriverController::class,"update"]);
+Route::delete('/admin/CarWithDriver/delete/{id}', [CarWithDriverController::class,"destroy"]);
 
-
-
-
-//================ view routes ====================
-
-
-
-
-
-
-
-Route::get('/admin/CarWithDriver', function () {
-    return view('Backend.Admin.Services.CarWithDriver.view');
-});
 
 
 
@@ -537,9 +534,10 @@ Route::get('/BookHotel', function () {
 });
 
 
-Route::get('/driver', function () {
-    return view('Frontend.Cars.DriverCar');
-});
+
+
+
+Route::get('/driver', [CarWithDriverController::class, 'getAll']);
 
 
 

@@ -3904,3 +3904,25 @@ form .submit-rating:hover {
     border: 0.1px solid rgb(212, 211, 211)
 }
 
+
+
+.newtata {
+    padding: 20px;
+    background-color: #faefd7;
+    font-size: 17px;
+    font-weight: 700;
+    /* gap: 68px; */
+    margin-left: 10px;
+    width: 142px;
+    border: 0.5px solid #c4bfbf;
+}
+.newtat {
+    padding: 20px;
+    
+    font-size: 17px;
+    font-weight: 700;
+    /* gap: 68px; */
+    margin-left: 10px;
+    width: 142px;
+    border: 0.5px solid #d3d3d3;
+}

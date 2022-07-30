@@ -1,10 +1,9 @@
-
-    <!--packages start-->
-    @extends('layouts.master')
+<!--packages start-->
+@extends('layouts.master')
 @section('content')
-<div class="fullBanner">
-    @include('partials.DefaultBanner')
-</div>
+    <div class="fullBanner">
+        @include('partials.DefaultBanner')
+    </div>
 
     <section class="tour-descriptions">
         <h1 style="text-align: center">
@@ -35,7 +34,8 @@
                                             <li class="carousel__slide">
                                                 <figure>
                                                     <div>
-                                                        <img src="https://media.drivingelectric.com/image/private/s--jAviEQV8--/v1643195840/drivingelectric/2022-01/BMW-330e-Touring-UK-4_pkva88.jpg" alt="">
+                                                        <img src="https://media.drivingelectric.com/image/private/s--jAviEQV8--/v1643195840/drivingelectric/2022-01/BMW-330e-Touring-UK-4_pkva88.jpg"
+                                                            alt="">
                                                     </div>
 
                                                 </figure>
@@ -130,18 +130,22 @@
 
 
                     <div class="detailespackage">
-                        <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>  <div>Sedan</div>
+                        <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>
+                        <div>Sedan</div>
                     </div>
                     <div class="detailespackage">
-                        <div><i class="fa-solid fa-person"></i>Number of seats</div> <div>3 seats</div>
-                    </div>
-
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-calendar-check"></i>Year</div>  <div>2004 Air conditionar</div>
+                        <div><i class="fa-solid fa-person"></i>Number of seats</div>
+                        <div>3 seats</div>
                     </div>
 
                     <div class="detailespackage">
-                        <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>  <div>3 days ago</div>
+                        <div><i class="fa-solid fa-calendar-check"></i>Year</div>
+                        <div>2004 Air conditionar</div>
+                    </div>
+
+                    <div class="detailespackage">
+                        <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>
+                        <div>3 days ago</div>
                     </div>
 
 
@@ -165,77 +169,78 @@
         </p>
     </section>
 
+    <br>
+    <br>
+    <br>
 
-    <section class="tableOfPrice">
-        <div class="container">
-            <div class="parentDriver">
-                <div class="Driver1"> </div>
-                <div class="divDriver2"> 3 seats </div>
-                <div class="divDriver3"> 7 Seats </div>
-                <div class="divDriver4"> 16 Seats</div>
-                <div class="divDriver5"> 29 Seats</div>
-                <div class="divDriver6"> 49 Seats</div>
-                <div class="divDriver7"> </div>
-                <div class="divDriver8"> </div>
-                <div class="divDriver9"> </div>
-                <div class="divDriver10"> </div>
-                <div class="divDriver11"> </div>
-                <div class="divDriver12"> </div>
-                <div class="divDriver13"> </div>
-                <div class="divDriver14"> </div>
-                <div class="divDriver15"> </div>
-                <div class="divDriver16"> </div>
-                <div class="divDriver17"> </div>
-                <div class="divDriver18"> </div>
-                <div class="divDriver19"> </div>
-                <div class="divDriver20"> </div>
-                <div class="divDriver21"> </div>
-                <div class="divDriver22"> </div>
-                <div class="divDriver23"> </div>
-                <div class="divDriver24"> </div>
-                <div class="divDriver25"> </div>
-                <div class="divDriver26"> </div>
-                <div class="divDriver27"> </div>
-                <div class="divDriver28"> </div>
-                <div class="divDriver29"> </div>
-                <div class="divDriver30"> </div>
-                <div class="divDriver31"> </div>
-                <div class="divDriver32"> </div>
-                <div class="divDriver33"> </div>
-                <div class="divDriver34"> </div>
-                <div class="divDriver35"> </div>
-                <div class="divDriver36"> </div>
-                <div class="divDriver37"> </div>
-                <div class="divDriver38"> </div>
-                <div class="divDriver39"> </div>
-                <div class="divDriver40"> </div>
-                <div class="divDriver41"> </div>
-                <div class="divDriver42"> </div>
-                </div>
+    <div class="container">
+        <div class="row justify-content-center" style="margin: auto; width: 86%; align-items:center">
+
+            <div class="col-lg-2 col-md-6 newtat" style="border: none">
+
+            </div>
+
+            <div class="col-lg-2 col-md-6 newtata">
+                3 Seats
+            </div>
+
+            <div class="col-lg-2 col-md-6 newtata">
+                7 Seats
+            </div>
+
+            <div class="col-lg-2 col-md-6 newtata">
+                16 Seats
+            </div>
+
+            <div class="col-lg-2 col-md-6 newtata">
+                29 Seats
+            </div>
+
+            <div class="col-lg-2 col-md-6 newtata">
+                49 Seats
+            </div>
+
         </div>
-        <a href="{{ url('/RenACar') }}">
-            <button class="package-view" style="text-align: center; align-items:center; margin:20px">
-                Book Now
-            </button>
-        </a>
-    </section>
+        @foreach ($cars as $car)
+        
+        <div class="row justify-content-center" style="margin: auto; width: 86%; margin-top: 7px">
 
-<br>
+            <div class="col-lg-2 col-md-6 newtata">
+{{ $car->car_name }}
+            </div>
+
+            <div class="col-lg-2 col-md-6 newtat">
+                {{ $car->three_seats }}
+            </div>
+
+            <div class="col-lg-2 col-md-6 newtat">
+                {{ $car->seven_seats }}
+            </div>
+
+            <div class="col-lg-2 col-md-6 newtat">
+                {{ $car->sixteen_seats }}
+            </div>
+
+            <div class="col-lg-2 col-md-6 newtat">
+                {{ $car->twintynine_seats }}
+            </div>
+
+            <div class="col-lg-2 col-md-6 newtat">
+                {{ $car->fortynine_seats }}
+            </div>
+
+        </div>
+        @endforeach
+        <center>
+            <a href="{{ url('/RenACar') }}">
+                <button class="package-view" style="text-align: center; align-items:center; margin:20px">
+                    Book Now
+                </button>
+            </a>
+        </center>
+    </div>
 
 
+
+    <br>
 @endsection
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
