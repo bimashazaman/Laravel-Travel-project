@@ -17,7 +17,7 @@ class CreateReviewsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id')->nullable();
             $table->string('title')->nullable();
-            $table->string('review');
+            $table->longText('review');
             $table->string('image')->nullable();
             $table->string('name')->nullable();
             $table->integer('count_star')->default(0)->nullable();

@@ -27,7 +27,7 @@ class CreateToursTable extends Migration
             $table->string("one_week_price")->nullable();
             $table->string("one_month_price")->nullable();
             $table->string("one_year_price")->nullable();
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

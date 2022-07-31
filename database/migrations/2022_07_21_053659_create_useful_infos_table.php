@@ -15,8 +15,8 @@ class CreateUsefulInfosTable extends Migration
     {
         Schema::create('useful_infos', function (Blueprint $table) {
             $table->id();
-            $table->string('facts');
-            $table->string('tips');
+            $table->longText('facts');
+            $table->longText('tips');
             $table->timestamps();
         });
     }

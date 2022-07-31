@@ -15,8 +15,8 @@ class CreateCarAirportsTable extends Migration
     {
         Schema::create('car_airports', function (Blueprint $table) {
             $table->id();
-            $table->string('details');
-            $table->string('more_details');
+            $table->longText('details');
+            $table->longText('more_details');
             $table->timestamps();
         });
     }

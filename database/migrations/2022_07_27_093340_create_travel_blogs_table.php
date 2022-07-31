@@ -16,9 +16,9 @@ class CreateTravelBlogsTable extends Migration
         Schema::create('travel_blogs', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->string('description');
+            $table->longText('description');
             $table->string('type');
-            $table->string('more_description');
+            $table->longText('more_description');
             $table->timestamps();
         });
     }

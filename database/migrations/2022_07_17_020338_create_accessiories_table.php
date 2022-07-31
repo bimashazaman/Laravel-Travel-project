@@ -16,7 +16,7 @@ class CreateAccessioriesTable extends Migration
         Schema::create('accessiories', function (Blueprint $table) {
             $table->id();
             $table->string('name')->nullable();
-            $table->string('description')->nullable();
+            $table->longText('description')->nullable();
             $table->string('availability')->nullable();
             $table->string('type')->nullable();
             $table->string('total_pax')->nullable();

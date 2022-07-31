@@ -19,7 +19,7 @@ class CreateCarWithDriverInfosTable extends Migration
             $table->string('model');
             $table->string('type');
             $table->string('seats');
-            $table->string('overview');
+            $table->longText('overview');
             $table->string('cancelation_fee');
             $table->timestamps();
         });
