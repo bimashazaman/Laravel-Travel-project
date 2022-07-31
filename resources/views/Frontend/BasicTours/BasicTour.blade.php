@@ -492,23 +492,25 @@
             Reviews
         </h2>
         <div class="row" style="padding:60px">
+            @foreach ($reviews as $r)
+                
+            
             <div class="col-md-3 col-xs-12">
                 <img style="border-radius: 50%; width:26%"
-                    src="https://img.freepik.com/free-vector/cute-swag-polar-bear-with-hat-gold-chain-necklace-cartoon-illustration-flat-cartoon-style_138676-2719.jpg?w=2000"
+                    src="https://static.vecteezy.com/system/resources/thumbnails/004/511/281/small/default-avatar-photo-placeholder-profile-picture-vector.jpg"
                     alt="">
                 <h5>
-                    Name
+                    {{ $r->name }}
                 </h5>
                 <h5>
-                    Date
+                    {{ $r->created_at->diffForHumans() }}
                 </h5>
                 <h5>
-                    Write your story
+                   {{ $r->title }}
                 </h5>
                 <br>
                 <h5>
-                    kjfkdhvkjbvkjdfhv dvkhdskvhjdkshv vkjdshvkjsdvjhsd nvksdjhkvjhsdk dvjhdskhvsd dsvjhsdkjvbds djvhdskjvbdb
-                    dvjhdskv
+                    {{ $r->review }}
                 </h5>
                 <a href="" style="text-decoration: underline; color:rgb(86, 158, 241);">
                     see more
@@ -523,99 +525,9 @@
 
 
             </div>
-            <div class="col-md-3 col-xs-12">
-                <img style="border-radius: 50%; width:26%"
-                    src="https://img.freepik.com/free-vector/cute-swag-polar-bear-with-hat-gold-chain-necklace-cartoon-illustration-flat-cartoon-style_138676-2719.jpg?w=2000"
-                    alt="">
-                <h5>
-                    Name
-                </h5>
-                <h5>
-                    Date
-                </h5>
-                <h5>
-                    Write your story
-                </h5>
-                <br>
-                <h5>
-                    kjfkdhvkjbvkjdfhv dvkhdskvhjdkshv vkjdshvkjsdvjhsd nvksdjhkvjhsdk dvjhdskhvsd dsvjhsdkjvbds djvhdskjvbdb
-                    dvjhdskv
-                </h5>
-                <a href="" style="text-decoration: underline; color:rgb(86, 158, 241)">
-                    see more
-                </a>
-                <div class="rating">
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                </div>
 
-
-            </div>
-            <div class="col-md-3 col-xs-12">
-                <img style="border-radius: 50%; width:26%"
-                    src="https://img.freepik.com/free-vector/cute-swag-polar-bear-with-hat-gold-chain-necklace-cartoon-illustration-flat-cartoon-style_138676-2719.jpg?w=2000"
-                    alt="">
-                <h5>
-                    Name
-                </h5>
-                <h5>
-                    Date
-                </h5>
-                <h5>
-                    Write your story
-                </h5>
-                <br>
-                <h5>
-                    kjfkdhvkjbvkjdfhv dvkhdskvhjdkshv vkjdshvkjsdvjhsd nvksdjhkvjhsdk dvjhdskhvsd dsvjhsdkjvbds djvhdskjvbdb
-                    dvjhdskv
-                </h5>
-                <a href="" style="text-decoration: underline; color:rgb(86, 158, 241)">
-                    see more
-                </a>
-                <div class="rating">
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                </div>
-
-
-            </div>
-            <div class="col-md-3 col-xs-12">
-                <img style="border-radius: 50%; width:26%"
-                    src="https://img.freepik.com/free-vector/cute-swag-polar-bear-with-hat-gold-chain-necklace-cartoon-illustration-flat-cartoon-style_138676-2719.jpg?w=2000"
-                    alt="">
-                <h5>
-                    Name
-                </h5>
-                <h5>
-                    Date
-                </h5>
-                <h5>
-                    Write your story
-                </h5>
-                <br>
-                <h5>
-                    kjfkdhvkjbvkjdfhv dvkhdskvhjdkshv vkjdshvkjsdvjhsd nvksdjhkvjhsdk dvjhdskhvsd dsvjhsdkjvbds djvhdskjvbdb
-                    dvjhdskv
-                </h5>
-                <a href="" style="text-decoration: underline; color:rgb(86, 158, 241)">
-                    see more
-                </a>
-                <div class="rating">
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                </div>
-
-
-            </div>
+            @endforeach
+            
         </div>
         <div class="WR">
             <a class="WR" href="{{ url('/AddReview') }}" style="text-decoration:underline;">Write Review</a> <i

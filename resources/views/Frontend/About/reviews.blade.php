@@ -29,8 +29,13 @@
                 @foreach ($reviews as $r)
                 <div class="row" style="margin-bottom: 40px">
                     <div>
+                        
+                        {{-- {{dd( $r->image) }} --}}
+                      
+
+                        
                         <div style="display: flex">
-                            <img src="{{ asset('https://bimasha.com/assets/images/about-banner.png') }}"
+                            <img src="https://static.vecteezy.com/system/resources/thumbnails/004/511/281/small/default-avatar-photo-placeholder-profile-picture-vector.jpg"
                                 style="border-radius: 50%; width:15%; margin-right: 20px" alt="">
                             <div>
                                 <span>

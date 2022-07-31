@@ -37,11 +37,14 @@
                     <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; margin-bottom:10px" type="text" class="form-control" placeholder="Add a Title" name="title">
                     <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; margin-bottom:10px" type="text" class="form-control" placeholder="Email" name="email">
                     <select class="form-control form-select" name="category_id">
-                        <option>-- Select --</option>
                         @foreach($categories as $category)
-                        <option value="{{$category->id}}">{{$category->name}}</option>
+                        <option value="{{$category->id}}" name="category_id">{{$category->name}}</option>
                         @endforeach
                     </select>
+                    <br>
+                    
+                            <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;"  type="file" name="images[]" multiple="">
+                       
                 
                 <br>
                 <div class="star-rating">

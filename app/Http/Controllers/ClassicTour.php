@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Review;
 use App\Models\Tour;
 use App\Models\TourCategory;
 use Illuminate\Http\Request;
@@ -32,11 +33,7 @@ class ClassicTour extends Controller
             ->where('id', $id)->first();
         $category = TourCategory::where('id', 1)->first();
         
-        //get related tour with images
-
-
-//get related tour with images
-        // $relatedTour = Tour::where('category_id', 1)->get();
+        
 
 
 
@@ -45,6 +42,12 @@ class ClassicTour extends Controller
         ->with('images')
         ->take(3)
         ->get();
+
+        //get reviews
+
+        
+
+        $reviews = Review::with('images')->where('category_id', 1)->take(4)->get();
          
 
         // $tour = Tour::find($id)
@@ -59,6 +62,6 @@ class ClassicTour extends Controller
 
 
 
-        return view('Frontend.BasicTours.BasicTour', compact('tour','category','relatedTour'));
+        return view('Frontend.BasicTours.BasicTour', compact('tour','category','relatedTour','reviews'));
     }
 }

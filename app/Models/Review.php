@@ -23,4 +23,15 @@ class Review extends Model
     {
         return $this->belongsTo(TourCategory::class);
     }
+
+    public function images()
+    {
+        return $this->belongsToMany(Image::class, 'review_images');
+    }
+
+    public function reviewImages()
+    {
+        return $this->hasMany(ReviewImage::class);
+    }
+    
 }

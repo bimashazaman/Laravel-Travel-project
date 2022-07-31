@@ -79,7 +79,7 @@
                                          <a class="dropdown-item ru" href="{{ url('/ways') }}">How To Book A Tour</a>
                                          {{-- <a class="dropdown-item ru" href="{{ url('/privacy') }}">Privacy Policy</a> --}}
                                          <a class="dropdown-item ru" href="{{ url('/vacancyAll') }}">Vacancy</a>
-                                         <a class="dropdown-item ru" href="{{ url('/review') }}">Reviews</a>
+                                         <a class="dropdown-item ru" href="{{ url('/reviews') }}">Reviews</a>
                                          <a class="dropdown-item ru" href="{{ url('/contact') }}">Contact us</a>
                                      </div>
 

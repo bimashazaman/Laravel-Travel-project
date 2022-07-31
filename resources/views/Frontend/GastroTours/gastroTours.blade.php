@@ -38,9 +38,10 @@
                 <br>
                 <br>
                 <br>
+               
                 <div class="row">
-
                     @foreach ($tour as $item)
+                   
                         <div class="col-md-4 col-sm-6">
                             {{-- <h3 style="text-align: center">
                             {{$item->name}}
@@ -113,12 +114,15 @@
                             <!--/.single-package-item-->
 
                         </div>
-                    @endforeach
-
+                        <br>
+                        <br>
+                    
+                        @endforeach
 
 
 
                 </div>
+               
                 <center>
                     {{ $tour->links() }}
                 </center>

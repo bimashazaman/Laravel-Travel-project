@@ -239,7 +239,7 @@ Route::get('/admin/usefulToKnow/{id}', [UsefulInfoController::class, 'show']);
 Route::post('/admin/usefulToKnow/store', [UsefulInfoController::class, 'store']);
 Route::put('/admin/usefulToKnow/update/{id}', [UsefulInfoController::class, 'update']);
 Route::delete('/admin/usefulToKnow/delete/{id}', [UsefulInfoController::class, 'destroy']);
-Route::get('/usefulToKnow', [UsefulInfoController::class, 'getUsefulInfo']);
+
 
 
 
@@ -247,7 +247,6 @@ Route::get('/usefulToKnow', [UsefulInfoController::class, 'getUsefulInfo']);
 
 
 //==========Armenia admin food=========
-
 Route::get('/admin/foods', [FoodArmeniaController::class, 'index']);
 Route::get('/admin/foods/create', [FoodArmeniaController::class, 'create']);
 Route::get('/admin/foods/{id}', [FoodArmeniaController::class, 'show']);
@@ -261,7 +260,7 @@ Route::delete('/admin/foods/delete/{id}', [FoodArmeniaController::class, 'destro
 
 //===============reviews===============
 
-Route::get('/review', [ReviewController::class, 'index']);
+Route::get('/reviews', [ReviewController::class, 'index']);
 Route::get('/AddReview', [ReviewController::class, 'create']);
 Route::post('/review/store', [ReviewController::class, 'store']);
 
@@ -278,13 +277,7 @@ Route::put('/admin/travelBlogs/update/{id}', [TravelBlogController::class, 'upda
 Route::delete('/admin/travelBlogs/delete/{id}', [TravelBlogController::class, 'destroy']);
 
 
-
-
-
-
 Route::get("/dashboard/hello", [TourController::class, "index"]);
-
-
 
 //================ Car with driver ================
 Route::get('/admin/CarWithDriver', [CarWithDriverController::class,"index"]);
@@ -296,12 +289,6 @@ Route::post('/admin/CarWithDriver/store', [CarWithDriverController::class,"store
 Route::get('/admin/CarWithDriver/edit/{id}', [CarWithDriverController::class,"edit"]);
 Route::put('/admin/CarWithDriver/update/{id}', [CarWithDriverController::class,"update"]);
 Route::delete('/admin/CarWithDriver/delete/{id}', [CarWithDriverController::class,"destroy"]);
-
-
-
-
-
-
 
 
 //============destination routes=============
@@ -316,9 +303,9 @@ Route::get('/admin/d', function () {
 
 
 
-Route::get('/admin/UpdateCarWithDriver', function () {
-    return view('Backend.Admin.Services.CarWithDriver.update');
-});
+// Route::get('/admin/UpdateCarWithDriver', function () {
+//     return view('Backend.Admin.Services.CarWithDriver.update');
+// });
 
 
 
@@ -472,9 +459,9 @@ Route::get('/ThirdStep', function () {
 
 
 
-Route::get('/privacy', function () {
-    return view('Frontend.About.PrivacyPolicy');
-});
+// Route::get('/privacy', function () {
+//     return view('Frontend.About.PrivacyPolicy');
+// });
 
 Route::get('/TourFrontPage', function () {
     return view('Frontend.Tours.Tour');
@@ -496,6 +483,8 @@ Route::get('/RF', function () {
     return view('Frontend.Cars.RentACarForm');
 });
 
+Route::get('/usefulToKnow', [UsefulInfoController::class, 'getUsefulInfo']);
+
 
 
 Route::get('/TentForm', function () {
@@ -503,15 +492,15 @@ Route::get('/TentForm', function () {
 });
 
 
-Route::get('/mice', function () {
-    return view('Frontend.Mice.Micee');
-});
+// Route::get('/mice', function () {
+//     return view('Frontend.Mice.Micee');
+// });
 
 
 
-Route::get('/ClassicTour', function () {
-    return view('Frontend.BasicTours.BasicTours');
-});
+// Route::get('/ClassicTour', function () {
+//     return view('Frontend.BasicTours.BasicTours');
+// });
 
 
 Route::get('/RenACar', function () {

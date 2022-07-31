@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Review;
 use App\Models\Tour;
 use App\Models\TourCategory;
 use Illuminate\Http\Request;
@@ -24,6 +25,8 @@ class ThemedTour extends Controller
         ->with('images')
         ->take(3)
         ->get();
-        return view('Frontend.BasicTours.BasicTour', compact('tour','relatedTour'));
+
+        $reviews = Review::with('images')->where('category_id', 6)->take(4)->get();
+        return view('Frontend.BasicTours.BasicTour', compact('tour','relatedTour','reviews'));
     }
 }
