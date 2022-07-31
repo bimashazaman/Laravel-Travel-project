@@ -13,6 +13,7 @@ class ClassicTour extends Controller
         // get all data with paginate
 
         $tour = Tour::with('images')->where('category_id', 1)->simplePaginate(9);
+
         $category = TourCategory::where('id', 1)->first();
 
 
@@ -30,6 +31,21 @@ class ClassicTour extends Controller
             ->with('departureTable')
             ->where('id', $id)->first();
         $category = TourCategory::where('id', 1)->first();
+        
+        //get related tour with images
+
+
+//get related tour with images
+        // $relatedTour = Tour::where('category_id', 1)->get();
+
+
+
+        $relatedTour = Tour::where('category_id', 1)
+        ->where('id', '!=', $tour->id)
+        ->with('images')
+        ->take(3)
+        ->get();
+         
 
         // $tour = Tour::find($id)
         //     ->with('images')
@@ -43,6 +59,6 @@ class ClassicTour extends Controller
 
 
 
-        return view('Frontend.BasicTours.BasicTour', compact('tour','category'));
+        return view('Frontend.BasicTours.BasicTour', compact('tour','category','relatedTour'));
     }
 }

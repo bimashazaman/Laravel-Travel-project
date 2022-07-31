@@ -407,41 +407,54 @@
 
             <!--/.gallery-header-->
             <div class="packages-content">
+                <center>
+                    <h2>
+                        Related Tours
+                    </h2>
+                    <br>
+                    <br>
+                </center>
                 <div class="row">
 
+                    @foreach ($relatedTour as $r)
+                        
+                   
                     <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center;  font-weight: 600;">{{ $tour->category->name }}</h3>
+                        {{-- <h3 style="text-align: center;  font-weight: 600;">{{ $tour->category->name }}</h3> --}}
 
                         <div class="single-package-item">
 
                             {{-- {{ var_dump($tour->image) }} --}}
 
-                            <img src="https://www.trolleytours.com/wp-content/uploads/2016/07/trolley-tours-of-key-west.jpg"
-                                alt="package-place">
+                            {{-- <img src="{{ asset($tour->images->first()->path) }}" --}}
+
+                            {{-- Get the image by id --}}
+                            <img src="{{ asset($r->images->first()->path) }}" alt="" style="width:100%">
+                                {{-- alt="package-place"> --}}
                             <div class="packageName">
-                                blah
+                               {{ $r->name }}
                             </div>
                             <div>
                                 <h4 class="package-txt">
                                     <a href="#">
-                                        meh
+                                       {{ $r->type }}
                                     </a>
                                 </h4>
                                 <p class="kki">
-                                    blah
+                                   {{ $r->description }}
                                 </p>
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> 4days
+                                    <span><i class="fa-regular fa-clock"></i></span> {{ $r->duration }}
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span>12 - 12 Dec
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> {{ $r->start_date }} - {{ $r->end_date }}
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$100k
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> {{ $r->price }}
                                 </div>
                             </div>
                             <div class="rating">
@@ -452,7 +465,7 @@
                                 <span class=""><i class="fa-solid fa-star"></i></span>
                             </div>
                             <div class="package-btn">
-                                <a href="{{ url('/Bv') }}"> <button class="package-view">
+                                <a href="{{ url('/getClassicTour/' . $r->id) }}"> <button class="package-view">
                                         Details
                                     </button>
                                 </a>
@@ -460,110 +473,8 @@
                             </div>
                         </div>
                     </div>
-
-                    <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center;  font-weight: 600;">{{ $tour->category->name }}</h3>
-
-                        <div class="single-package-item">
-
-                            {{-- {{ var_dump($tour->image) }} --}}
-
-                            <img src="https://www.trolleytours.com/wp-content/uploads/2016/07/trolley-tours-of-key-west.jpg"
-                                alt="package-place">
-                            <div class="packageName">
-                                blah
-                            </div>
-                            <div>
-                                <h4 class="package-txt">
-                                    <a href="#">
-                                        meh
-                                    </a>
-                                </h4>
-                                <p class="kki">
-                                    blah
-                                </p>
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> 4days
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span>12 - 12 Dec
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$100k
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/Bv') }}"> <button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-4 col-sm-6">
-                        <h3 style="text-align: center;  font-weight: 600;">{{ $tour->category->name }}</h3>
-
-                        <div class="single-package-item">
-
-                            {{-- {{ var_dump($tour->image) }} --}}
-
-                            <img src="https://www.trolleytours.com/wp-content/uploads/2016/07/trolley-tours-of-key-west.jpg"
-                                alt="package-place">
-                            <div class="packageName">
-                                blah
-                            </div>
-                            <div>
-                                <h4 class="package-txt">
-                                    <a href="#">
-                                        meh
-                                    </a>
-                                </h4>
-                                <p class="kki">
-                                    blah
-                                </p>
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> 4days
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span>12 - 12 Dec
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>$100k
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/Bv') }}"> <button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-
-                            </div>
-                        </div>
-                    </div>
+                    @endforeach
+                   
 
                     <!--/.col-->
 

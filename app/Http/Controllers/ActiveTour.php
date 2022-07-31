@@ -21,6 +21,11 @@ class ActiveTour extends Controller
     public function getClassicTour($id)
     {
         $tour = Tour::find($id);
-        return view('Frontend.BasicTours.BasicTour', compact('tour'));
+        $relatedTour = Tour::where('category_id', 4)
+        ->where('id', '!=', $tour->id)
+        ->with('images')
+        ->take(3)
+        ->get();
+        return view('Frontend.BasicTours.BasicTour', compact('tour','relatedTour'));
     }
 }

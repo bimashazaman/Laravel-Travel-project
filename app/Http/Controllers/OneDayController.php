@@ -21,6 +21,13 @@ class OneDayController extends Controller
    public function getClassicTour($id)
    {
        $tour = Tour::find($id);
-       return view('Frontend.BasicTours.BasicTour', compact('tour'));
+       //get related tour'
+        //  $relatedTour = Tour::where('category_id', 5)->get();
+        $relatedTour = Tour::where('category_id', 5)
+        ->where('id', '!=', $tour->id)
+        ->with('images')
+        ->take(3)
+        ->get();
+       return view('Frontend.BasicTours.BasicTour', compact('tour','relatedTour'));
    }
 }
