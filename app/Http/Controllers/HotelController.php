@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Destination;
+use App\Models\FoodArmenia;
 use App\Models\Hotel;
 use App\Models\HotelFacility;
 use App\Models\HotelHighlights;
@@ -13,6 +14,7 @@ use App\Models\HotelRoom;
 use App\Models\HotelType;
 use App\Models\Image;
 use App\Models\Region;
+use App\Models\ThingsToDo;
 use Illuminate\Http\Request;
 
 use Illuminate\Support\Facades\Validator;
@@ -399,9 +401,24 @@ class HotelController extends Controller
             ->with('rooms')
             ->with('hotelType')
             ->with('hotelKeys')
-            
             ->where('id', $id)
             ->first();
-        return view('Frontend.Hotels.Hotel', compact('hotels'));
+
+            $foods = FoodArmenia::with('images')
+            // ->random()
+            // ->take(3)
+            ->where('category_id', 1)
+            ->simplePaginate(3);
+
+            $things = ThingsToDo::with('images')
+            // ->random()
+            // ->take(3)
+            // ->where('category_id', 1)
+            ->simplePaginate(3);
+
+
+
+
+        return view('Frontend.Hotels.Hotel', compact('hotels', 'foods','things'));
     }
 }

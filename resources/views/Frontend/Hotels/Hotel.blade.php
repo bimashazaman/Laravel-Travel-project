@@ -14,9 +14,12 @@
                     <div class="tour-descriptions-content-inner">
                         <div class="tour-descriptions-content-inner-left">
                             <div class="tour-descriptions-content-inner-left-content">
-                                <h1>
-                                    Name
-                                </h1>
+                                <center>
+                                    <h1>
+                                        {{ $hotels->name }}
+                                    </h1>
+                                </center>
+
                             </div><!-- /.tour-descriptions-content-inner-left-content -->
                         </div><!-- /.tour-descriptions-content-inner-left -->
                         <div class="tour-descriptions-content-inner-right">
@@ -88,20 +91,20 @@
                         Key Points
                     </h3>
                     @foreach ($hotels->hotelKeys as $ht)
-                    {{-- {{ dd($hotels->hotelKeys) }} --}}
-                    <div class="">
+                        {{-- {{ dd($hotels->hotelKeys) }} --}}
+                        <div class="">
 
-                        <ul style="list-style: none">
-                            <li class="mewmew" style="color: Black"><span><img src="{{ asset('images/p.png') }}"
-                                class="plusImg">
-                                {{ $ht->key }}
-                    </li>
-                        </ul>
-                        {{-- <div><i class="fa-solid fa-car"></i>  </div> --}}
-                    </div>
+                            <ul style="list-style: none">
+                                <li class="mewmew" style="color: Black"><span><img src="{{ asset('images/p.png') }}"
+                                            class="plusImg">
+                                        {{ $ht->key }}
+                                </li>
+                            </ul>
+                            {{-- <div><i class="fa-solid fa-car"></i>  </div> --}}
+                        </div>
                     @endforeach
-                  
-                   
+
+
 
 
                 </div><!-- /.tour-descriptions-content-inner-left-content-title -->
@@ -117,7 +120,7 @@
             Overview
         </h2>
         <p>
-           {{ $hotels->overview }}
+            {{ $hotels->overview }}
         </p>
     </section>
 
@@ -187,14 +190,13 @@
                             UseFul To know
                         </h3>
                         <ul>
-                            @foreach ( $hotels->hotelInfo as $item)
+                            @foreach ($hotels->hotelInfo as $item)
                                 <li>
                                     {{ $item->name }}
                                 </li>
+                            @endforeach
 
-                                @endforeach
-                            
-                            
+
                         </ul>
                     </div>
                     <img src="{{ asset('images/usefull.png') }}" alt="">
@@ -236,184 +238,35 @@
             </div>
             <!--/.gallery-header-->
             <div class="packages-content">
+                @if (count($foods) > 0)
                 <div class="row">
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item" style="background-color:white">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-                        <div class="package-btn">
-                            <a href="{{ url('h') }}"><button class="package-view">
-                                    Details
-                                </button>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item" style="background-color:white">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-                        <div class="package-btn">
-                            <a href="{{ url('h') }}"><button class="package-view">
-                                    Details
-                                </button>
-                            </a>
-                        </div>
-
-                    </div>
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item" style="background-color:white">
-
-                            <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Hotel Name
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-                        <div class="package-btn">
-                            <a href="{{ url('h') }}"><button class="package-view">
-                                    Details
-                                </button>
-                            </a>
-                        </div>
-                        <br>
-                    </div>
-                    <br>
-                    <br>
-                    <br>
-
-                    <center style="margin: 20px">
-                        <h2>
-                            What to do nearby
-                        </h2>
-                    </center>
-
-                    <div class="row">
+                    @foreach ($foods as $thing)
                         <div class="col-md-4 col-sm-6">
 
-                            <div class="single-package-item" style="background-color:white">
+                            <div class="single-package-item">
 
-                                <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                    alt="package-place">
+                                <img src="{{ asset($thing->images->first()->path) }}" alt="package-place">
                                 <div class="HotelName">
                                     <h4>
-                                        Hotel Name
+                                        {{ $thing->name }}
                                     </h4>
                                 </div>
                                 <div class="hotelDesccription">
-
+                                    <p>
+                                        {{ $thing->description }}
+                                    </p>
                                 </div>
                                 <div class="pacdet">
                                     <div class="packageOffer">
-                                        <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
+                                        <span><i class="fa-regular fa-calendar"></i></span> {{ $thing->time }}
                                     </div>
 
                                     <div class="packageOffer">
-                                        <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
+                                        <span><i class="fa-solid fa-location-dot"></i></span> {{ $thing->address }}
                                     </div>
 
                                     <div class="packageOffer">
-                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
+                                        <span><i class="fa-regular fa-clock"></i></span> {{ $thing->distance }}
                                     </div>
                                 </div>
                                 <div class="rating">
@@ -423,118 +276,107 @@
                                     <span class=""><i class="fa-solid fa-star"></i></span>
                                     <span class=""><i class="fa-solid fa-star"></i></span>
                                 </div>
-
-
-
-                            </div>
-                            <!--/.single-package-item-->
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-                        </div>
-                        <div class="col-md-4 col-sm-6">
-
-                            <div class="single-package-item" style="background-color:white">
-
-                                <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                    alt="package-place">
-                                <div class="HotelName">
-                                    <h4>
-                                        Hotel Name
-                                    </h4>
-                                </div>
-                                <div class="hotelDesccription">
-
-                                </div>
-                                <div class="pacdet">
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                    </div>
-                                </div>
-                                <div class="rating">
-                                    <span class=""><i class="fa-solid fa-star"></i></span>
-                                    <span class=""><i class="fa-solid fa-star"></i></span>
-                                    <span class=""><i class="fa-solid fa-star"></i></span>
-                                    <span class=""><i class="fa-solid fa-star"></i></span>
-                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                <div class="package-btn">
+                                    <a href="{{ url('/getfoodsById/' . $thing->id) }}"><button class="package-view">
+                                            More
+                                        </button>
+                                    </a>
                                 </div>
 
 
 
                             </div>
                             <!--/.single-package-item-->
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
 
                         </div>
-                        <div class="col-md-4 col-sm-6">
+                        <!--/.col-->
+                    @endforeach
 
-                            <div class="single-package-item" style="background-color:white">
-
-                                <img src="https://images.unsplash.com/photo-1625244724120-1fd1d34d00f6?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=870&q=80"
-                                    alt="package-place">
-                                <div class="HotelName">
-                                    <h4>
-                                        Hotel Name
-                                    </h4>
-                                </div>
-                                <div class="hotelDesccription">
-
-                                </div>
-                                <div class="pacdet">
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-location-dot"></i></span> 2 Days
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span style="margin-left: -6px;"><i class="fa-solid fa-star"></i></span> Date
-                                    </div>
-
-                                    <div class="packageOffer">
-                                        <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                    </div>
-                                </div>
-                                <div class="rating">
-                                    <span class=""><i class="fa-solid fa-star"></i></span>
-                                    <span class=""><i class="fa-solid fa-star"></i></span>
-                                    <span class=""><i class="fa-solid fa-star"></i></span>
-                                    <span class=""><i class="fa-solid fa-star"></i></span>
-                                    <span class=""><i class="fa-solid fa-star"></i></span>
-                                </div>
-
-
-
-                            </div>
-                            <!--/.single-package-item-->
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-                        </div>
-                    </div>
                 </div>
-                <!--/.row-->
+                <center>
+                    {{ $foods->links() }}
+                </center>
+
+                @endif
+
+                <br>
+                <br>
+                <br>
+
+                @if (count($things) > 0)
+                    
+               
+
+                <center style="margin: 20px">
+                    <h2>
+                        What to do nearby
+                    </h2>
+                </center>
+
+                <div class="row">
+                    @foreach($things as $thing)
+                    <div class="col-md-4 col-sm-6">
+
+                        <div class="single-package-item">
+
+                            <img src="{{asset($thing->images->first()->path)}}"
+                                alt="package-place">
+                            <div class="HotelName">
+                                <h4>
+                                    {{ $thing->name }}
+                                </h4>
+                            </div>
+                            <div class="hotelDesccription">
+                                <p>
+                                   {{ $thing->description }}
+                                </p>
+                            </div>
+                            <div class="pacdet">
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-calendar"></i></span> {{ $thing->time }}
+                                </div>
+
+                                <div class="packageOffer">
+                                    <span><i class="fa-solid fa-location-dot"></i></span> {{ $thing->address }}
+                                </div>
+
+                                <div class="packageOffer">
+                                    <span><i class="fa-regular fa-clock"></i></span> {{ $thing->distance }}
+                                </div>
+                            </div>
+                            <div class="rating">
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                                <span class=""><i class="fa-solid fa-star"></i></span>
+                            </div>
+                            <div class="package-btn">
+                                <a href="{{ url('/getThingsToDoById/'.$thing->id) }}"><button class="package-view">
+                                        More
+                                    </button>
+                                </a>
+                            </div>
+
+
+
+                        </div>
+                        <!--/.single-package-item-->
+
+                    </div>
+                    <!--/.col-->
+
+                    @endforeach
+
+                </div>
             </div>
-            <!--/.packages-content-->
+            <center>
+                {{ $things->links() }}
+            </center>
+            <!--/.row-->
+        </div>
+        @endif
+        <!--/.packages-content-->
         </div>
         <!--/.container-->
     </section>

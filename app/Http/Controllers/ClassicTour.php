@@ -52,16 +52,7 @@ class ClassicTour extends Controller
         $reviews = Review::with('images')->where('category_id', 1)->take(4)->get();
          
 
-        // $tour = Tour::find($id)
-        //     ->with('images')
-        //     ->with('highlights')
-        //     ->with('program')
-        //     ->with('facility')
-        //     ->with('departureTable')
-        //     ->where("category_id", 1)
-        //     ->whereNull('deleted_at')
-        //     ->get();
-
+      
 
 
         return view('Frontend.BasicTours.BasicTour', compact('tour','category','relatedTour','reviews'));
