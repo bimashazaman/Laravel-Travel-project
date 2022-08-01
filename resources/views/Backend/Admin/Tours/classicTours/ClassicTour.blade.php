@@ -93,7 +93,8 @@
                            
                             
                         </table>
-                        {{ $tour->links() }}
+                        {{-- {{ $tour->links() }} --}}
+                        
                     </div>
                 </div>
             </div>
