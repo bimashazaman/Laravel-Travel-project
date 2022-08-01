@@ -41,6 +41,7 @@ class ClassicTour extends Controller
         ->with('category')
         // ->where('id', '!=', $tour->id)
         ->with('images')
+        ->inRandomOrder()
         ->take(3)
         ->get();
 

@@ -375,7 +375,7 @@
 
     </div>
 
-    <div class="row">
+    {{-- <div class="row">
         <div class="col-md-6">
             <div
                 style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
@@ -428,57 +428,8 @@
             </div>
         </div>
 
-        <div class="col-md-6">
-            {{-- <div
-                style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-                <h3 class="">
-                    Useful to Know
-                </h3>
-                <hr>
-                <form action="{{ url('/admin/addHotelInfo/' . $hotel->id) }}" method="POST"
-                    enctype="multipart/form-data">
-                    {{ csrf_field() }}
-
-                    <div class="">
-                        <input type="text" class="form-control" placeholder="What is useful to know?" name="name">
-
-                        <hr>
-                        <button class="btn btn-info text-white" type="submit">
-                            Submit
-                        </button>
-                    </div>
-
-                </form>
-                <br>
-                <div class="list-group list-group-light">
-
-                    @foreach ($hotel->hotelInfo as $room)
-                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
-                            style="display: flex">
-
-                            <div>
-                                {{ $room->name }}
-                            </div>
+       
 
 
-
-                            <form action="{{ url('/hotelInfo/delete/' . $room->id) }}" method="POST"
-                                enctype="multipart/form-data">
-                                {{ csrf_field() }}
-                                {{ method_field('DELETE') }}
-
-                                <button type="submit" class="btn btn-danger btn-sm ">
-                                    Detete
-                                </button>
-                            </form>
-
-                            <hr>
-                        </div>
-                    @endforeach
-                </div>
-            </div> --}}
-        </div>
-
-
-    </div>
+    </div> --}}
 @endsection

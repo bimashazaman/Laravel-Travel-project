@@ -25,6 +25,7 @@ class GastroTour extends Controller
         // ->where('id', '!=', $tour->id)
         ->with('images')
         ->with('types')
+        ->inRandomOrder()
         ->take(3)
         ->get();
         $reviews = Review::with('images')->where('category_id', 3)->take(4)->get();

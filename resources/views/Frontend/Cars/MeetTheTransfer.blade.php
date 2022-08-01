@@ -65,11 +65,12 @@
         <br>
         <br>
         <br>
-        <p class="ReqCarDet" style="font-weight: 500;
-        font-size: 14px;">
+        
+        
+           <div style="padding: 100px">
             {{ $carAirport->more_details }}
-        </p>
-
+           </div>
+       
         @endforeach
 
         <button class="package-view">Send Request</button>

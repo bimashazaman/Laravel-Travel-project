@@ -408,12 +408,14 @@ class HotelController extends Controller
             // ->random()
             // ->take(3)
             ->where('category_id', 1)
+            ->inRandomOrder()
             ->simplePaginate(3);
 
             $things = ThingsToDo::with('images')
             // ->random()
             // ->take(3)
             // ->where('category_id', 1)
+            ->inRandomOrder()
             ->simplePaginate(3);
 
 

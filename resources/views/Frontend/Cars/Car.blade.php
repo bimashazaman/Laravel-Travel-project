@@ -6,7 +6,7 @@
     @include('partials.DefaultBanner')
 </div>
 
-    <section class="tour-descriptions" style="padding: 30px">
+    <section class="tour-descriptions" style="padding: 30p;margin-top: -34px">
         <h1 style="text-align: center">
            {{ $car->name }}
         </h1>

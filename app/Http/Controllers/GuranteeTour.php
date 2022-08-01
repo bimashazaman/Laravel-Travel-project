@@ -24,6 +24,7 @@ class GuranteeTour extends Controller
         // ->where('id', '!=', $tour->id)
         ->with('images')
         ->with('types')
+        ->inRandomOrder()
         ->take(3)
         ->get();
 
