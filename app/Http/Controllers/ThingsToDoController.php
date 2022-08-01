@@ -18,7 +18,7 @@ class ThingsToDoController extends Controller
         
 
         $categories = ThingsToDoCategory::all();
-        $things = ThingsToDo::all();
+        $things = ThingsToDo::simplePaginate(6);
         return view('Backend.Admin.Armenia.ThingsToDo.view', compact('categories','things'));
 
     }
@@ -179,7 +179,7 @@ class ThingsToDoController extends Controller
 
     public function getThingsToDoByCategory($id)
     {
-        $things = ThingsToDo::with('images')->where('category_id', $id)->get();
+        $things = ThingsToDo::with('images')->where('category_id', $id)->simplePaginate(6);
         $category = ThingsToDoCategory::where('id', $id)->first();
         return view('Frontend.Armenia.ThingsToDo', compact('things', 'category'));
     }
@@ -189,13 +189,14 @@ class ThingsToDoController extends Controller
     public function getThingsToDoById($id)
     {
         $things = ThingsToDo::with('images')->where('id', $id)->first();
-        return view('Frontend.Armenia.ThingsToDoDetails', compact('things'));
+        $related = ThingsToDo::where('category_id', $things->category_id)->inRandomOrder()->simplePaginate(3);
+        return view('Frontend.Armenia.ThingsToDoDetails', compact('things','related'));
     }
 
     //get all things to see
     public function getAllThingsToDo()
     {
-        $things = ThingsToDo::all();
+        $things = ThingsToDo::with('images')->simplePaginate(6);
         return view('Frontend.Armenia.ThingsToDo', compact('things'));
     }
 

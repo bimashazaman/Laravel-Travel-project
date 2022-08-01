@@ -155,7 +155,7 @@ class ThingsToSeeController extends Controller
     {
         $things = ThingsToSee::with('images')->where('id', $id)->first();
         // $related = ThingsToSee::where('category_id', $things->category_id)->get();
-        $related = ThingsToSee::where('category_id', $things->category_id)->inRandomOrder()->take(3)->simplePaginate(3);
+        $related = ThingsToSee::where('category_id', $things->category_id)->inRandomOrder()->simplePaginate(3);
         return view('Frontend.Armenia.ThingsToSeeDetails', compact('things','related'));
     }
 
