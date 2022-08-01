@@ -87,21 +87,21 @@
                     <h3 style="margin-top: 25px; font-weight: 600;">
                         Key Points
                     </h3>
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-car"></i> Parking </div>
+                    @foreach ($hotels->hotelKeys as $ht)
+                    {{-- {{ dd($hotels->hotelKeys) }} --}}
+                    <div class="">
+
+                        <ul style="list-style: none">
+                            <li class="mewmew" style="color: Black"><span><img src="{{ asset('images/p.png') }}"
+                                class="plusImg">
+                                {{ $ht->key }}
+                    </li>
+                        </ul>
+                        {{-- <div><i class="fa-solid fa-car"></i>  </div> --}}
                     </div>
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-wifi"></i> Internet WIFI </div>
-                    </div>
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-credit-card"></i> Pay by card </div>
-                    </div>
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-ban"></i> Free cancellation </div>
-                    </div>
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-person-running"></i> In the city center </div>
-                    </div>
+                    @endforeach
+                  
+                   
 
 
                 </div><!-- /.tour-descriptions-content-inner-left-content-title -->

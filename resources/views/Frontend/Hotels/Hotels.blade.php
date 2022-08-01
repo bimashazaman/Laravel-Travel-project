@@ -108,6 +108,9 @@
 
                 </div>
                 <!--/.row-->
+               <center>
+                {{ $hotels->links() }}
+               </center>
             </div>
             <!--/.packages-content-->
         </div>

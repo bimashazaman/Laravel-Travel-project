@@ -134,6 +134,7 @@ Route::post("/admin/hotel/facility/{id}", [HotelController::class, "addFacility"
 Route::delete('/hotelFacility/delete/{id}', [HotelController::class, 'FacilityDelete']);
 Route::post("/admin/addHotelInfo/{id}", [HotelController::class, "addHotelInfo"]);
 Route::delete('/hotelInfo/delete/{id}', [HotelController::class, 'deleteHotelInfo']);
+Route::post("/admin/addHotelKey/{id}", [HotelController::class, "addHotelKey"]);
 
 //===========Admin Mice=========
 Route::get('/admin/Mice', [MiceController::class, 'index']);

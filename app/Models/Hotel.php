@@ -60,4 +60,10 @@ class Hotel extends Model
         return $this->belongsTo(Destination::class);
     }
 
+
+    public function hotelKeys()
+    {
+        return $this->hasMany(HotelKey::class, 'hotel_id');
+    }
+
 }

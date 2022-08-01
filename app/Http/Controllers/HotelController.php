@@ -8,6 +8,7 @@ use App\Models\HotelFacility;
 use App\Models\HotelHighlights;
 use App\Models\HotelImage;
 use App\Models\HotelInfo;
+use App\Models\HotelKey;
 use App\Models\HotelRoom;
 use App\Models\HotelType;
 use App\Models\Image;
@@ -22,7 +23,7 @@ class HotelController extends Controller
     public function index()
     {
         //get all data with paginate
-        $hotels = Hotel::simplePaginate(5);
+        $hotels = Hotel::orderby('created_at', 'desc')->simplePaginate(5);
         return view('Backend.Admin.Services.Hotels.view', compact('hotels'));
     }
 
@@ -32,7 +33,7 @@ class HotelController extends Controller
         $hotelType = HotelType::all();
         $region = Region::all();
         $destination = Destination::all();
-        
+
         return view('Backend.Admin.Services.Hotels.create', compact('hotelType', 'region', 'destination'));
     }
 
@@ -75,13 +76,49 @@ class HotelController extends Controller
             $image["path"] = "Hotel/" . $hotel->id . "/" . $imageName;
             $image->save();
             $hotel->images()->attach($image->id);
-        
-
-           
         }
         return redirect()->back()->with("msg", "Created successfully!")
             ->with("success", true);
     }
+
+    function addHotelKey(Request $request, $id)
+    {
+        $validator = Validator::make($request->all(), [
+            // "tour_id" => "required|integer",
+            'key' => 'required',
+
+        ]);
+        if ($validator->fails()) {
+            return redirect()
+                ->back()
+                ->with("msg", $validator->errors()->first())
+                ->with("fail", true);
+        }
+        $hotel_key = new HotelKey();
+        $hotel_key->fill($request->all());
+        $hotel_key["hotel_id"] = $id;
+        $hotel_key->save();
+        $hotel = Hotel::with('images')
+            ->with('images')
+            ->with('highlights')
+            ->with('hotelInfo')
+            ->with('hotelFacilities')
+            ->with('rooms')
+            ->with('destination')
+            ->with('region')
+            ->with('hotelType')
+            ->with('hotelKeys')
+            ->where("id", $id)
+            ->whereNull('deleted_at')
+            ->first();
+        return redirect()
+            ->back()
+            ->with("msg", "Added successfully!")
+            ->with("success", true);
+
+        // return self::success("Tour program added", ["data" => $hotel_key]);
+    }
+
 
 
     public function show($id)
@@ -100,7 +137,7 @@ class HotelController extends Controller
             ->where('id', $id)
             ->first();
 
-        
+
 
 
         return view('Backend.Admin.Services.Hotels.show', compact('hotel'));
@@ -162,7 +199,7 @@ class HotelController extends Controller
 
     public function addFacility(Request $request, $id)
     {
-    
+
         $validate = Validator::make($request->all(), [
             // "tour_id" => "required|integer",
             "name" => "required"
@@ -198,7 +235,6 @@ class HotelController extends Controller
                 ->with("msg", $e->getMessage())
                 ->with("fail", true);
         }
-
     }
 
     public function FacilityDelete($id)
@@ -267,7 +303,7 @@ class HotelController extends Controller
         $validator = Validator::make($request->all(), [
             // "tour_id" => "required|integer",
             "name" => "required",
-           
+
         ]);
         if ($validator->fails()) {
             return redirect()
@@ -343,12 +379,13 @@ class HotelController extends Controller
         $hotels = Hotel::with('images')
             ->with('highlights')
             ->with('rooms')
+            ->orderby('created_at', 'desc')
             ->whereNull('deleted_at')
-            ->get();
-            $hotelType = HotelType::all();
-            $region = Region::all();
-            $destination = Destination::all();
-        
+            ->simplePaginate(5);
+        $hotelType = HotelType::all();
+        $region = Region::all();
+        $destination = Destination::all();
+
         return view('Frontend.Hotels.Hotels', compact('hotels', 'hotelType', 'region', 'destination'));
     }
 
@@ -356,13 +393,15 @@ class HotelController extends Controller
     public function getHotelDetails($id)
     {
         $hotels = Hotel::with('images')
-        ->with('highlights')
-        ->with('hotelInfo')
-        ->with('hotelFacilities')
-        ->with('rooms')
-        ->where('id', $id)
-        ->first()
-        ;
+            ->with('highlights')
+            ->with('hotelInfo')
+            ->with('hotelFacilities')
+            ->with('rooms')
+            ->with('hotelType')
+            ->with('hotelKeys')
+            
+            ->where('id', $id)
+            ->first();
         return view('Frontend.Hotels.Hotel', compact('hotels'));
     }
 }

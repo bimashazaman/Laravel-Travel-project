@@ -591,6 +591,7 @@ class TourController extends Controller
             ->with('highlights')
             ->with('facility')
             ->with('program')
+            ->orderby('created_at', 'desc')
             ->where("category_id", $id)
             ->whereNull('deleted_at')
             ->simplePaginate(6);

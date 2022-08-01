@@ -173,6 +173,102 @@
                     @endforeach
                 </div>
             </div>
+            <div
+                style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+                <h3 class="">
+                    Add key points
+                </h3>
+                <hr>
+
+                <form action="{{ url('/admin/addHotelKey/' . $hotel->id) }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="">
+                        <input type="text" class="form-control" placeholder="Add Key Points" name="key">
+
+                        <hr>
+                        <button class="btn btn-info text-white">
+                            Submit
+                        </button>
+                    </div>
+
+                </form>
+                <div class="list-group list-group-light">
+
+                    @foreach ($hotel->hotelKeys as $room)
+                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                            style="display: flex">
+
+                            <hr>
+                            <div>
+                                {{ $room->key }}
+                            </div>
+
+
+
+                            {{-- <form action="{{ url('/hotelFacility/delete/' . $room->id) }}" method="POST"
+                                enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+
+                                <button type="submit" class="btn btn-danger btn-sm ">
+                                    Detete
+                                </button>
+                            </form> --}}
+
+                            <hr>
+                        </div>
+                    @endforeach
+                </div>
+            </div>
+            <div
+            style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+            <h3 class="">
+                Hotel Included
+            </h3>
+            <hr>
+            <form action="{{ url('/admin/hotel/facility/' . $hotel->id) }}" method="POST"
+                enctype="multipart/form-data">
+                {{ csrf_field() }}
+
+                <div class="">
+                    <input type="text" class="form-control" placeholder="What is included?" name="name">
+
+                    <hr>
+                    <button class="btn btn-info text-white" type="submit">
+                        Submit
+                    </button>
+                </div>
+
+            </form>
+            <br>
+            <div class="list-group list-group-light">
+
+                @foreach ($hotel->hotelFacilities as $room)
+                    <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                        style="display: flex">
+
+                        <div>
+                            {{ $room->name }}
+                        </div>
+
+
+
+                        <form action="{{ url('/hotelFacility/delete/' . $room->id) }}" method="POST"
+                            enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+
+                            <button type="submit" class="btn btn-danger btn-sm ">
+                                Detete
+                            </button>
+                        </form>
+
+                        <hr>
+                    </div>
+                @endforeach
+            </div>
+            
+        </div>
         </div>
 
         <div class="col-md-6">
@@ -225,6 +321,55 @@
                     @endforeach
                 </div>
             </div>
+
+            <div
+            style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+            <h3 class="">
+                Useful to Know
+            </h3>
+            <hr>
+            <form action="{{ url('/admin/addHotelInfo/' . $hotel->id) }}" method="POST"
+                enctype="multipart/form-data">
+                {{ csrf_field() }}
+
+                <div class="">
+                    <input type="text" class="form-control" placeholder="What is useful to know?" name="name">
+
+                    <hr>
+                    <button class="btn btn-info text-white" type="submit">
+                        Submit
+                    </button>
+                </div>
+
+            </form>
+            <br>
+            <div class="list-group list-group-light">
+
+                @foreach ($hotel->hotelInfo as $room)
+                    <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                        style="display: flex">
+
+                        <div>
+                            {{ $room->name }}
+                        </div>
+
+
+
+                        <form action="{{ url('/hotelInfo/delete/' . $room->id) }}" method="POST"
+                            enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+
+                            <button type="submit" class="btn btn-danger btn-sm ">
+                                Detete
+                            </button>
+                        </form>
+
+                        <hr>
+                    </div>
+                @endforeach
+            </div>
+        </div>
         </div>
 
 
@@ -279,11 +424,12 @@
                         </div>
                     @endforeach
                 </div>
+                
             </div>
         </div>
 
         <div class="col-md-6">
-            <div
+            {{-- <div
                 style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
                 <h3 class="">
                     Useful to Know
@@ -330,7 +476,7 @@
                         </div>
                     @endforeach
                 </div>
-            </div>
+            </div> --}}
         </div>
 
 
