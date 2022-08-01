@@ -32,7 +32,7 @@
 
                             <section class="" style="">
                                 <div class="imgCcontainer">
-                                    <div class="carousel imgC">
+                                    <div class="carousel imgC"  data-ride="carousel">
                                         @foreach ($tour->images as $item)
                                             <input type="radio" name="slides" checked="checked"
                                                 id="slide-{{ $item->id }}">
@@ -53,13 +53,13 @@
                                         <ul class="carousel__thumbnails">
 
                                             @foreach ($tour->images as $item)
-                                                @if ($item->id != $tour->images->first()->id)
+                                                {{-- @if ($item->id != $tour->images->first()->id) --}}
                                                     <li data-interval="1000">
                                                         <label for="slide-{{ $item->id }}"><img
                                                                 src="{{ asset($item->path) }}" alt="">
                                                         </label>
                                                     </li>
-                                                @endif
+                                                {{-- @endif --}}
                                             @endforeach
                                         </ul>
                                     </div>
@@ -94,11 +94,11 @@
 
                     <!--Google map-->
                     <div id="map-container-google-1" class="z-depth-1-half map-container"
-                        style=" width: 85%; height: 577px;">
+                        style=" width: 85%; height: 455px;">
                         {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
                             frameborder="0" style="border:0" allowfullscreen></iframe> --}}
 
-                        <img src="{{ asset('images/Tour.png') }}" alt="" style="height: 577px;">
+                        <img src="https://www.google.com/maps/d/thumbnail?mid=1Xj7FvDEIi701cgUemkAj9Vk8Voo&hl=en_US" alt="" style="    height: 455px">
 
 
 
@@ -130,7 +130,13 @@
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-calendar-check"></i>Type</div>
                         <div>
-                            {{ $tour->type }}
+                            @foreach ($tour->types as $t )
+                            {{ $t->type_name . ' ' 
+
+                         }}
+
+                        
+                        @endforeach
                         </div>
                     </div>
 
@@ -158,19 +164,7 @@
                     Itenanary
                 </h3>
                 <p style="color:white; font-size: 1.4rem;  font-weight: 300; padding-bottom:3%">
-                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Nostrum consectetur
-                    temporibus
-                    deserunt distinctio, debitis impedit enim officiis aperiam tenetur? Aliquid
-                    voluptatibus
-                    dolorem dignissimos iure in incidunt. Vero laboriosam dolore, quidem cumque
-                    voluptates
-                    provident voluptatibus ipsam corporis sequi voluptatem, repellendus autem
-                    accusantium ex
-                    velit minus sapiente, praesentium iure ullam qui a nostrum labore natus. Non
-                    deleniti
-                    dignissimos ipsum odit. Voluptatibus ducimus, alias quis reiciendis consequatur
-                    cumque
-                    sint aut enim quam nulla. Velit numquam aliquam corrupti libero sunt laboriosam
+                    {{ $tour->Itenanary }}
 
                 </p>
 
@@ -540,5 +534,9 @@
         arr.addEventListener('click', function(event) {
             event.target.classList.toggle('down');
         });
+
+        $('.carousel').carousel({
+  interval: 2000
+})
     </script>
 @endsection

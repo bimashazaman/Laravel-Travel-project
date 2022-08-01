@@ -17,8 +17,9 @@ class CreateToursTable extends Migration
             $table->id();
             $table->unsignedBigInteger('category_id');
             $table->unsignedBigInteger('destination_id');
+            $table->unsignedBigInteger('type_id')->nullable();
             $table->string("name")->nullable();
-            $table->string("type")->nullable();
+            $table->longText("Itenanary")->nullable();
             $table->string("duration")->nullable();
             $table->string('start_date')->nullable();
             $table->string('end_date')->nullable();

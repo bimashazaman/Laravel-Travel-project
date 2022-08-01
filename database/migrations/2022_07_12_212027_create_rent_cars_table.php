@@ -19,8 +19,8 @@ class CreateRentCarsTable extends Migration
             $table->unsignedBigInteger('vehicle_id');
             $table->unsignedBigInteger('service_id');
             $table->string('price');
-            $table->dateTime('start_date');
-            $table->dateTime('end_date');
+            $table->string('start_date');
+            $table->string('end_date');
             $table->string('note')->nullable();
             $table->softDeletes();
             $table->timestamps();

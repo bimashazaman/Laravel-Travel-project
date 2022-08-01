@@ -11,7 +11,7 @@ class ActiveTour extends Controller
 {
     public function getTours()
     {
-        $tour = Tour::with('images')->where('category_id', 4)->simplePaginate(9);
+        $tour = Tour::with('images')->with('types')->where('category_id', 4)->orderBy('id', 'DESC')->simplePaginate(9);
         // $tour = Tour::with('images')->where('category_id', 4)->get();
         
         $category = TourCategory::where('id', 4)->first();
@@ -23,8 +23,9 @@ class ActiveTour extends Controller
     {
         $tour = Tour::find($id);
         $relatedTour = Tour::where('category_id', 4)
-        ->where('id', '!=', $tour->id)
+        // ->where('id', '!=', $tour->id)
         ->with('images')
+        ->with('types')
         ->take(3)
         ->get();
 

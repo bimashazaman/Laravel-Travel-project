@@ -33,5 +33,10 @@ class Review extends Model
     {
         return $this->hasMany(ReviewImage::class);
     }
+
+    // public function types()
+    // {
+    //     return $this->belongsToMany(Type::class);
+    // }
     
 }

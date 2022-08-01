@@ -35,16 +35,27 @@
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="name">
                         </div>
                     </div>
-                    <div class="form-group row">
+                    {{-- <div class="form-group row">
                         <label class="col-form-label col-md-2">Tour Type</label>
                         <div class="col-md-10">
-                            <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="type">
+
+                            <select class="form-control form-select" name="type_id">
+                                @foreach($type as $category)
+                                <option value="{{$category->id}}">{{$category->type_name}}</option>
+                                @endforeach
+                            </select>
                         </div>
-                    </div>
+                    </div> --}}
                     <div class="form-group row">
                         <label class="col-form-label col-md-2">Description</label>
                         <div class="col-md-10">
                             <textarea style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; width:100%; border:none" name="description" cols="30" rows="10"></textarea>
+                        </div>
+                    </div>
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Itenanary</label>
+                        <div class="col-md-10">
+                            <textarea style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; width:100%; border:none" name="Itenanary" cols="30" rows="10"></textarea>
                         </div>
                     </div>
                     <div class="form-group row">

@@ -89,8 +89,39 @@
                              {{-- <li class="language">ENG</li>
                                       <li class="USD">USD</li> --}}
                              <ul class="nav navbar-nav navbar-right" style="margin-top: 14px;">
-                                 <li class="nav-item" style="text-decoration: underline; margin-top:10px">USD</li>
-                                    <li class="nav-item" style="text-decoration: underline; margin-top:10px">ENG</li>
+                                 {{-- <li class="nav-item" style="text-decoration: underline; margin-top:10px">USD</li> --}}
+                                    {{-- <li class="nav-item" style="text-decoration: underline; margin-top:10px">ENG</li> --}}
+
+                                {{-- dropdown of language @if (session('locale')) --}}
+                                {{-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false" style="text-decoration: underline">
+                                        En
+                                        {{-- {{ session('locale') }} --}}
+                                    {{-- </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="">Hy(Armenia)</a>
+                                        <a class="dropdown-item" href="">En(English)</a>
+                                        <a class="dropdown-item" href="">Ru(Russia)</a>
+                                    </div>
+                                </li> --}} 
+                                {{-- @else --}}
+                                {{-- <li class="nav-item dropdown">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        English
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item" href="{{ url('/setlocale/ru') }}">Русский</a>
+                                        <a class="dropdown-item" href="{{ url('/setlocale/en') }}">English</a>
+                                    </div>
+                                </li> --}}
+                                {{-- @endif --}}
+
+
+
                                  <li style="display: flex">
                                      <input type="text" placeholder="Search" class="searchHeader" style="margin-top: 1px;">
                                      <i class="fa-solid fa-magnifying-glass" style="color: rgb(192, 181, 181); margin-top:10px; margin-left: 10px"></i>

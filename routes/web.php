@@ -30,8 +30,11 @@ use App\Http\Controllers\WaysToBookController;
 use Illuminate\Support\Facades\Route;
 
 
+
 //============login===============
 
+ 
+    
 Route::get('/login', function () {
     return view('Backend.Admin.login.login');
 });
@@ -76,7 +79,7 @@ Route::delete("/admin/highlight/delete/{id}", [TourController::class, "deleteHig
 Route::delete("/admin/facility/delete/{id}", [TourController::class, "deleteTourFacility"])->name('facilityDelete');
 Route::delete("/admin/tourprogram/delete/{id}", [TourController::class, "deleteTourProgram"])->name('tourProgramDelete');
 Route::get('/getTourByCategory/{id}', [TourController::class, 'getToursByCategory']);
-
+Route::post("/admin/type/{id}", [TourController::class, "type"])->name('type');
 
 Route::get('/check', [TourController::class, 'index']);
 Route::post('/checkpost', [TourController::class, 'checkStore']);
@@ -528,9 +531,6 @@ Route::get('/BookHotel', function () {
 
 
 Route::get('/driver', [CarWithDriverController::class, 'getAll']);
-
-
-
 
 
 

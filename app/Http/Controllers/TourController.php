@@ -9,8 +9,9 @@ use App\Models\Tour;
 use App\Models\TourCategory;
 use App\Models\TourFacility;
 use App\Models\TourHighlight;
-use App\Models\TourImage;
+
 use App\Models\TourProgram;
+use App\Models\Type;
 use Exception;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
@@ -42,11 +43,13 @@ class TourController extends Controller
 
     public function create()
     {
+        $type = Type::all();
         $destinations = Destination::all();
         $categories = TourCategory::all();
         return view('Backend.Admin.Tours.classicTours.CreateClassicTour', [
             "categories" => $categories,
-            "destinations" => $destinations
+            "destinations" => $destinations,
+            "type" => $type,
         ]);
     }
 
@@ -61,7 +64,8 @@ class TourController extends Controller
 
         $validate = Validator::make($request->all(), [
             "name" => "required|string",
-            "type" => "required|string",
+            "type_id" => "",
+            "Itenanary"=>"",
             "category_id" => "required|integer",
             "destination_id" => "required|integer",
             "duration" => "required",
@@ -84,7 +88,8 @@ class TourController extends Controller
 
             $tour = Tour::create([
                 "name" => $request->name,
-                "type" => $request->type,
+                "type_id" => $request->type_id,
+                "Itenanary"=>$request->Itenanary,
                 "category_id" => $request->category_id,
                 "destination_id" => $request->destination_id,
                 "duration" => $request->duration,
@@ -97,12 +102,6 @@ class TourController extends Controller
                 "end_date" => $request->end_date,
                 "description" => $request->description,
             ]);
-
-
-
-
-
-
 
             foreach ($request->file('images') as  $image) {
 
@@ -142,12 +141,57 @@ class TourController extends Controller
             return redirect('/admin/CreateClassicTour')
                 ->with("msg", "Tour added successfully!")
                 ->with("success", true);
-        } catch (Exception $e) {
-            DB::rollBack();
-            // return $e;
-            return self::failure('Error in adding tour data!', ["data" => $e->getMessage()]);
+        }  catch (Exception $e) {
+            return redirect()
+                ->back()
+                ->with("msg", $e->getMessage())
+                ->with("fail", true);
+            // return self::failure("Error in adding tour highlight", $e->getMessage());
         }
     }
+
+
+    function type(Request $request, $id)
+    {
+
+        $validate = Validator::make($request->all(), [
+            "type_name" => "",
+        ]);
+        if ($validate->fails()) {
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", $validate->errors()->first())
+                ->with("fail", true);
+
+            // return self::failure($validate->errors()->first());
+        }
+        try {
+            $tt = Type::create([
+                "type_name" => $request->type_name,
+                "tour_id" => $id
+            ]);
+            // dd($tt);
+            $tour = Tour::with('images')
+                ->with('highlights')
+                ->with('program')
+                ->with('facility')
+                ->where("id", $id)
+                ->whereNull('deleted_at')
+                ->first();
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", "Tour Highlight added successfully!")
+                ->with("success", true)
+                ->with('tour', $tour);
+            // return self::success("Tour highlights added!", $tourHighlights);
+        } catch (Exception $e) {
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", $e->getMessage())
+                ->with("fail", true);
+            // return self::failure("Error in adding tour highlight", $e->getMessage());
+        }
+    }
+
+
+    
 
 
     function addTourHighlights(Request $request, $id)
@@ -424,14 +468,17 @@ class TourController extends Controller
             ->with('highlights')
             ->with('facility')
             ->with('program')
+            ->with('types')
             ->whereNull('deleted_at')
             ->where('id', $id)->first();
         //    dd($tour);
         $destination = Destination::all();
+        $type = Type::all();
         if ($tour) {
             return view("Backend.Admin.Tours.classicTours.TourDescription", [
                 "tour" => $tour,
-                "destination" => $destination
+                "destination" => $destination,
+                "type" => $type
             ]);
             // return self::success("Tour retrieved!", ["data" => $tour]);
         }

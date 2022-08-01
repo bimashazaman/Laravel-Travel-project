@@ -33,6 +33,9 @@ class TourTypeSeeder extends Seeder
             [
                 "name"=> "Themed Tours"
             ],
+            [
+                "name"=> "Best suggestions"
+            ]
 
         ]);
     }

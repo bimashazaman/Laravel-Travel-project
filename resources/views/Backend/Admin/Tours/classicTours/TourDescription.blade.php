@@ -61,6 +61,9 @@
             <p>
                 {{ $tour->description }}
             </p>
+            <p>
+                {{ $tour->Itenanary }}
+            </p>
         </div>
     </div>
 
@@ -118,7 +121,15 @@
                     </div>
                     <div class="col-md-2">
                         <div class="mb-3">
-                            {{ $tour->type }}
+
+                           @foreach ($tour->types as $t )
+                               {{ $t->type_name . ',' 
+
+                            }}
+
+                           
+                           @endforeach
+                          
                         </div>
                         <div class="mb-3">
                             {{ $tour->price }}
@@ -293,6 +304,71 @@
 
                 </div>
             </div>
+
+            <div
+            style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+            <h3 class="">
+                Add multiple type
+            </h3>
+            <hr>
+
+            <form action="{{ url('/admin/type/' . $tour->id) }}" method="POST" enctype="multipart/form-data">
+                {{ csrf_field() }}
+                <div class="">
+                    <div class="form-group row">
+                        {{-- <label class="col-form-label col-md-2">Tour Type</label> --}}
+                        <div class="col-md-10">
+                            <select class="form-control form-select" name="type_name">
+                             
+                                @foreach($type as $category)
+                                <option
+
+                                value="{{$category->type_name}}">{{$category->type_name}}</option>
+                                @endforeach
+                            </select>
+                        </div>
+                    </div>
+                    <hr>
+                    <button class="btn btn-info text-white">
+                        Submit
+                    </button>
+                </div>
+
+            </form>
+
+            
+
+            <br>
+            <div class="list-group list-group-light">
+                @foreach ($tour->facility as $tourFacility)
+                    <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                        style="display: flex">
+
+                        {{ $tourFacility->name }}
+                        <hr>
+
+
+                        {{-- {{ $tourFacility->unname }} --}}
+
+
+                        <form action="{{ url('/admin/facility/delete/' . $tourFacility->id) }}" method="POST"
+                            enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                            {{ method_field('DELETE') }}
+
+                            <button type="submit" class="btn btn-danger btn-sm ">
+                                Detete
+                            </button>
+                        </form>
+
+
+
+
+                    </div>
+                @endforeach
+
+            </div>
+        </div>
          
         </div>
         <div class="col-md-4">

@@ -13,7 +13,7 @@ class ClassicTour extends Controller
     {
         // get all data with paginate
 
-        $tour = Tour::with('images')->where('category_id', 1)->simplePaginate(9);
+        $tour = Tour::with('images')->with('types')->where('category_id', 1)->orderBy('id', 'DESC')->simplePaginate(9);
 
         $category = TourCategory::where('id', 1)->first();
 
@@ -29,19 +29,21 @@ class ClassicTour extends Controller
             ->with('highlights')
             ->with('facility')
             ->with('program')
+            ->with('types')
             ->with('departureTable')
             ->where('id', $id)->first();
         $category = TourCategory::where('id', 1)->first();
         
         
-
-
+        //admin will select from the option tour to show in related tours sections
 
         $relatedTour = Tour::where('category_id', 1)
-        ->where('id', '!=', $tour->id)
+        ->with('category')
+        // ->where('id', '!=', $tour->id)
         ->with('images')
         ->take(3)
         ->get();
+
 
         //get reviews
 

@@ -23,6 +23,7 @@ class DatabaseSeeder extends Seeder
             ThingsToSee::class,
             HotelType::class,
             RegionSeeder::class,
+            TypeSeeder::class,
 
         ]);
     }

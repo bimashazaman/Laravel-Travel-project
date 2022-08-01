@@ -50,4 +50,14 @@ class Tour extends Model
     public function category(){
         return $this->belongsTo(TourCategory::class);
     }
+
+   //tour has many type
+   public function types(){
+       return $this->hasMany(Type::class, 'tour_id');
+   }
+    
+
+    
+   
+    
 }

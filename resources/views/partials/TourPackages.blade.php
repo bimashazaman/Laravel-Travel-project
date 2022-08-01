@@ -7,6 +7,7 @@
          <!--/.gallery-header-->
          <div class="packages-content">
              <div class="row">
+                <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}' class="autoplay">
                  @foreach($tours as $tour)
                  <div class="col-md-4 col-sm-6">
                      <h3 style="text-align: center;  font-weight: 600;">{{$tour->category->name}}</h3>
@@ -60,6 +61,7 @@
                      </div>
                  </div>
                  @endforeach
+                </div>
 
 
 
