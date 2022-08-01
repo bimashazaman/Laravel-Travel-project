@@ -59,7 +59,8 @@ class AccessioriesController extends Controller
             $a->images()->attach($image->id);
 
         }
-        return redirect()->back()->with('msg', 'Accessiories Added Successfully');
+        return redirect()->back()->with("msg", "Created successfully!")
+            ->with("success", true);
     }
 
    
@@ -128,7 +129,10 @@ class AccessioriesController extends Controller
     public function getAccessioriesDetails($id)
     {
         $a = Accessiories::find($id);
-        return view('Frontend.TourAccesories.Accesiorieses', compact('a'));
+
+        $related = Accessiories::inRandomOrder()
+            ->simplePaginate(3);
+        return view('Frontend.TourAccesories.Accesiorieses', compact('a','related'));
     }
 
     

@@ -69,14 +69,7 @@ class CarController extends Controller
 
 
 
-                // $image_name = $image->getClientOriginalName();
-                // $image->move(public_path('images'), $image_name);
-                // $image_path = 'images/' . $image_name;
-                // $image_data = Image::create([
-                //     'image_path' => $image_path,
-                // ]);
-                // $vehicle->images()->attach($image_data->id);
-            
+         
            
 
 
@@ -208,7 +201,7 @@ class CarController extends Controller
     public function getCars()
     {
         
-        $cars = Vehicle::with('images')->simplePaginate(9);
+        $cars = Vehicle::with('images')->inRandomOrder()->simplePaginate(9);
         return view('Frontend.Cars.Cars', compact('cars'));
     }
 

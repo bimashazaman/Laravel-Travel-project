@@ -182,158 +182,62 @@
             <div class="packages-content">
                 <div class="row">
 
+                    @foreach ($related as $item)
+                        
+                  
                     <div class="col-md-4 col-sm-6">
+                    <div class="single-package-item">
 
-                        <div class="single-package-item">
-
-                            <img src="https://cdn.thewirecutter.com/wp-content/uploads/2020/04/carcampingtents-lowres-72-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Comfortable Large Tent
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> 2 Days
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person-hiking"></i></span> Date
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-
-
+                        <img src="{{asset($item->images->first()->path)}}"
+                            alt="package-place">
+                        <div class="HotelName">
+                            <h4>
+                               {{$item->name}}
+                            </h4>
                         </div>
-                        <!--/.single-package-item-->
+                        <div class="hotelDesccription">
+                            <p>
+                                {{$item->description}}
+                            </p>
+                        </div>
+                        <div class="pacdet" style="margin-left: -7%;">
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-calendar-check"></i></span> {{$item->availability}}
+                            </div>
+
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-person-hiking"></i></span> {{ $item->type}} 
+                            </div>
+
+                            <div class="packageOffer">
+                                <span><i class="fa-solid fa-dollar-sign"></i></span>From {{$item->one_day_price}} AMD
+                            </div>
+                        </div>
+                        <div class="rating">
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                        </div>
+                        <div class="package-btn">
+                            <a href="{{ url('/ac/'.$item->id) }}"><button class="package-view">
+                                    Details
+                                </button>
+                            </a>
+                        </div>
+
+
 
                     </div>
-                    <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://cdn.thewirecutter.com/wp-content/uploads/2020/04/carcampingtents-lowres-72-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Comfortable Large Tent
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> 2 Days
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person-hiking"></i></span> Date
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
                     </div>
                     <!--/.col-->
-                    <div class="col-md-4 col-sm-6">
-
-                        <div class="single-package-item">
-
-                            <img src="https://cdn.thewirecutter.com/wp-content/uploads/2020/04/carcampingtents-lowres-72-2x1-1.jpg?auto=webp&quality=75&crop=2:1&width=1024"
-                                alt="package-place">
-                            <div class="HotelName">
-                                <h4>
-                                    Comfortable Large Tent
-                                </h4>
-                            </div>
-                            <div class="hotelDesccription">
-                                <p>
-                                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Architecto, maiores.
-                                </p>
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> 2 Days
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person-hiking"></i></span> Date
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> 20$
-                                </div>
-                            </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('h') }}"><button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
-                            </div>
-
-
-
-                        </div>
-                        <!--/.single-package-item-->
-
-                    </div>
-                    <!--/.col-->
-
+                 
+                    @endforeach
                 </div>
+                <center>
+                    {{ $related->links() }}
+                </center>
                 <!--/.row-->
             </div>
             <!--/.packages-content-->
