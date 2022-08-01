@@ -593,7 +593,7 @@ class TourController extends Controller
             ->with('program')
             ->where("category_id", $id)
             ->whereNull('deleted_at')
-            ->simplePaginate(10);
+            ->simplePaginate(6);
 
         // $tour = Tour::where('category_id', $id)->get();
         $cat = TourCategory::where('id', $id)->first();

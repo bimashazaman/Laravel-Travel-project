@@ -91,9 +91,15 @@
 
                             </tbody>
                            
+                           
                             
                         </table>
-                        {{-- {{ $tour->links() }} --}}
+                      
+                      {{-- {{ count($tour) }} --}}
+                      <div class="" style="float: right">
+                        {{ $tour->links() }}
+                      </div>
+                     
                         
                     </div>
                 </div>
