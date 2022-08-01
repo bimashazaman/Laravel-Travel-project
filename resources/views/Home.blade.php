@@ -6,5 +6,7 @@
 @include('partials.overview')
 @include('partials.TourPackages')
 @include('partials.RequestTour')
+
+
 @endsection
 {{-- {{$tours}} --}}

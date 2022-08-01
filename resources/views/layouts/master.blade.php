@@ -17,8 +17,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
-
-
+    <!-- TITLE OF SITE -->
     <title>Travel</title>
 
 
@@ -48,18 +47,15 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
 
-    <!-- Add the slick-theme.css if you want default styling -->
-    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
-    <!-- Add the slick-theme.css if you want default styling -->
     <link rel="stylesheet" type="text/css"
-        href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick-theme.css" />
+        href="https://cdn.jsdelivr.net/gh/kenwheeler/slick@1.8.1/slick/slick-theme.css" />
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <style>
-        .dropdown:hover .dropdown-menu {
+        .dropdown:hover .dropdown-menu{
             display: block;
         }
-
-        .dropdown-menu {
+        .dropdown-menu{
             margin-top: 0;
         }
     </style>
@@ -95,13 +91,6 @@
                     dropdownMenu.parent().toggleClass("open");
                 }
             });
-        });
-
-        $('.autoplay').slick({
-            slidesToShow: 3,
-            slidesToScroll: 1,
-            autoplay: true,
-            autoplaySpeed: 2000,
         });
     </script>
 
@@ -140,7 +129,8 @@
     <script src="{{ asset('js/jquery.counterup.min.js') }}"></script>
     <script src="{{ asset('js/waypoints.min.js') }}"></script>
 
-
+    <!--owl.carousel.js-->
+    <script src="{{ asset('js/owl.carousel.min.js') }}"></script>
 
     <!-- jquery.sticky.js -->
     <script src="{{ asset('js/jquery.sticky.js') }}"></script>
