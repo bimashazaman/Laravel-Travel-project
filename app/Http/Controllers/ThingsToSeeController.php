@@ -125,17 +125,7 @@ class ThingsToSeeController extends Controller
         $things->category_id = $request->category_id;
         $things->save();
         
-        // foreach ($request->file('images') as  $image) {
-
-        //     $imageName = $image->getClientOriginalName();
-        //     $image->move("ThingsToSee/" . $things->id . "/", $imageName);
-        //     $image = new Image();
-        //     $image["filename"] = $imageName;
-        //     $image["path"] = "ThingsToSee/" . $things->id . "/" . $imageName;
-        //     $image->save();
-        //     $things->images()->attach($image->id);
         
-        // }
         
         return redirect()->back()->with("msg", "Updated successfully!")
         ->with("success", true);
@@ -159,21 +149,21 @@ class ThingsToSeeController extends Controller
         return view('Frontend.Armenia.ThingsToSee', compact('things', 'category'));
     }
 
-    // {
-    //     $things = ThingsToSee::where('category_id', $id)->get();
-    //     return view('Frontend.Armenia.ThingsToSee', compact('things'));
-    // }
+    
 
     public function getThingsToSeeById($id)
     {
         $things = ThingsToSee::with('images')->where('id', $id)->first();
-        return view('Frontend.Armenia.ThingsToSeeDetails', compact('things'));
+        // $related = ThingsToSee::where('category_id', $things->category_id)->get();
+        $related = ThingsToSee::where('category_id', $things->category_id)->inRandomOrder()->take(3)->simplePaginate(3);
+        return view('Frontend.Armenia.ThingsToSeeDetails', compact('things','related'));
     }
 
     //get all things to see
     public function getAllThingsToSee()
     {
-        $things = ThingsToSee::all();
+        $things = ThingsToSee::with('images')->simplePaginate(9);
+        
         return view('Frontend.Armenia.ThingsToSee', compact('things'));
     }
 

@@ -24,18 +24,19 @@
                         {{ $category->name }}
                     </span>
                 </h2>
+                {{-- @if (count($things) == 0)
+                <div class="col-md-12">
+                    <center>
+                        Not Available Yet
+                    </center>
+                </div>
+                
+            @endif --}}
+
                 <div class="row">
 
                     {{-- if there is no things to see in this category --}}
-                    @if (count($things) == 0)
-                        <div class="col-md-12">
-                            <center>
-                                Not Available Yet
-                            </center>
-                        </div>
-                        
-                    @endif
-
+                   
                     @foreach($things as $thing)
                     <div class="col-md-4 col-sm-6">
 

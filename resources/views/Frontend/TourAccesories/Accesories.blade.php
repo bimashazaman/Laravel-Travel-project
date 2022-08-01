@@ -78,17 +78,22 @@
                         <!--/.single-package-item-->
 
                     </div>
+                    <br>
+                    <br>
           
                     @endforeach
+
+                    
 
                  
 
                 </div>
-                <center>
-                    {{ $a->links() }}
-                </center>
+                
                 <!--/.row-->
             </div>
+            <center>
+                {{ $a->links() }}
+            </center>
             <!--/.packages-content-->
         </div>
         <!--/.container-->
