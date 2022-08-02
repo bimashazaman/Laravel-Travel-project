@@ -178,7 +178,7 @@ class TourController extends Controller
                 ->whereNull('deleted_at')
                 ->first();
             return redirect("/admin/tours/detail/" . $id)
-                ->with("msg", "Tour Highlight added successfully!")
+                ->with("msg", "Tour Type added successfully!")
                 ->with("success", true)
                 ->with('tour', $tour);
             // return self::success("Tour highlights added!", $tourHighlights);
@@ -497,10 +497,7 @@ class TourController extends Controller
             ->with('program')
             ->where('id', $id)
             ->first();
-        // $tour["start_date"] = Carbon::createFromFormat('mm/dd/yyyy',$tour["start_date"]);
-        // dd($tour["start_date"]);
-        //  $tour['check'] = Carbon::createFromFormat('mm/dd/yyyy',$tour["start_date"])->format('m-d-y');
-        //  dd($tour['check']);
+        
         return view('Backend.Admin.Tours.classicTours.UpdateClassicTour', [
             "categories" => $categories,
             "destinations" => $destinations,
@@ -516,27 +513,7 @@ class TourController extends Controller
         
         $tour->fill($request->all());
         $tour->save();
-        // foreach ($request->file('images') as  $image) {
-
-
-
-        //     //use intervention.io
-
-        //     $imageOrignalName = $image->getClientOriginalName();
-        //     $imageNameArray = explode('.', $imageOrignalName);
-        //     $imageExtension = end($imageNameArray);
-        //     $newImageName = now()->timestamp . "." . $imageExtension;
-        //     $path = "tour/" . $tour->id . "/";
-        //     $image->move($path, $newImageName);
-        //     $image = new Image();
-        //     $image["filename"] = $newImageName;
-        //     $image["path"] = $path . $newImageName;
-        //     $image->save();
-        //     TourImage::create([
-        //         "tour_id" => $tour->id,
-        //         "image_id" => $image->id
-        //     ]);
-        // }
+       
         return redirect()
             ->back()
             ->with("msg", "Tour Updated!")

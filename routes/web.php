@@ -388,7 +388,7 @@ Route::get('/oneDay', [OneDayController::class, 'index']);
 Route::get('/themed', [ThemedTour::class, 'getTours']);
 
 //============= car frontend==============
-Route::get('caa', [CarController::class, 'getCars']);
+Route::get('/caa', [CarController::class, 'getCars']);
 Route::get('/car/detail/{id}', [CarController::class, 'getCarDetails']);
 
 //=========Mice frontend=========

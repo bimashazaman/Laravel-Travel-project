@@ -25,6 +25,7 @@ class FrontendController extends Controller
 
         $tours = Tour::with('images')
             ->with('highlights')
+            ->with('types')
             ->with('facility')
             ->where("category_id", $cat->id)
             ->whereNull('deleted_at')
@@ -48,6 +49,7 @@ class FrontendController extends Controller
         $tours = Tour::with('images')
             ->with('category')
             ->whereNull('deleted_at')
+            ->with('types')
             // ->latest()
             ->take(3)
             ->get();

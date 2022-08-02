@@ -8,6 +8,9 @@
                 <li class="active">
                     <a href="{{ url('/main') }}"><i class="fe fe-home"></i> <span>Dashboard</span></a>
                 </li>
+                <li class="">
+                    <a href="{{ url('/main') }}"><i class="fe fe-home"></i> <span>CMS</span></a>
+                </li>
                 <li class="submenu">
                     <a href="#"><i class="fe fe-users"></i> <span> Tours</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">

@@ -23,9 +23,13 @@
                          </div>
                          <div>
                              <h4 class="package-txt">
-                                 <a href="#">
-                                     {{ $tour->type }}
-                                 </a>
+                                <a href="#" style="margin-left: 15%;font-weight: 400; font-size: 1.5rem;">
+                                    @foreach ($tour->types as $t)
+                                    <div style="margin-left: 15%;font-weight: 400; font-size: 1.5rem;">
+                                        {{ $t->type_name }}
+                                    </div>
+                                @endforeach
+                                </a>
                              </h4>
                              <p class="kki">
                                  {{$tour->description}}
