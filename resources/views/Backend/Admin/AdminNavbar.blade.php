@@ -17,8 +17,22 @@
             <input type="text" class="form-control" placeholder="Search here">
             <button class="btn" type="submit"><i class="fa fa-search"></i></button>
         </form>
+
+        
     </div>
 
+
+    <div class="flex-end" >
+        <form action="{{ url('/logout') }}" method="POST">
+            {{ csrf_field() }}
+       <button style="float: right; color:red; padding:20px; font-size: 22px; border:none>
+        Logout
+       </button>
+       <button type="submit" value="submit">
+        <i class="fe fe-log-out"></i>
+       </button>
+      </div>
+    </form>
     <a class="mobile_btn" id="mobile_btn">
         <i class="fa fa-bars"></i>
     </a>

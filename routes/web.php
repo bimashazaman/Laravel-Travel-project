@@ -3,6 +3,7 @@
 use App\Http\Controllers\AboutUsController;
 use App\Http\Controllers\AccessioriesController;
 use App\Http\Controllers\ActiveTour;
+use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BrochureController;
 use App\Http\Controllers\CarAirportController;
 use App\Http\Controllers\CarController;
@@ -39,6 +40,9 @@ use Illuminate\Support\Facades\Route;
     
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/loginTo', [LoginController::class, 'loginTo'])->name('loginTo');
+
+//logout
+Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
 
 
 
