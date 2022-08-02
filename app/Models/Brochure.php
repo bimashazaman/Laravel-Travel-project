@@ -22,4 +22,9 @@ class Brochure extends Model
         return $this->hasMany(BrochureImages::class);
     }
 
+    public function brochureFile()
+    {
+        return $this->hasOne(BrochureFile::class, 'brochure_files');
+    }
+
 }

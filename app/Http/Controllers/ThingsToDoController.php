@@ -113,25 +113,7 @@ class ThingsToDoController extends Controller
             $things->fill($request->all());
             $things->save();
 
-            //saving tour images
-            // foreach ($request->file('images') as $key => $file) {
-
-            //     $fileOrignalName = $file->getClientOriginalName();
-            //     // return $fileOrignalName;
-            //     $fileNameArray = explode('.', $fileOrignalName);
-            //     $fileExtension = end($fileNameArray);
-            //     $newFilename = $key . now()->timestamp . "." . $fileExtension;
-            //     $path = "tour/" . $tour->id . "/";
-            //     $file->move($path, $newFilename);
-            //     $image = new Image();
-            //     $image["filename"] = $newFilename;
-            //     $image["path"] = $path . $newFilename;
-            //     $image->save();
-            //     TourImage::create([
-            //         "tour_id" => $tour->id,
-            //         "image_id" => $image->id
-            //     ]);
-            // }
+            
 
             DB::commit();
             

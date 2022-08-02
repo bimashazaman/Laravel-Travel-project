@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Brochure;
+use App\Models\BrochureFile;
 use App\Models\Image;
 use Illuminate\Http\Request;
 
@@ -22,34 +23,57 @@ class BrochureController extends Controller
     public function store(Request $request)
     {
         $request->validate([
-            'title' => 'required',
-            'file_name' => 'required',
+            'name' => 'required',
+            // 'file_name' => 'required',
             'images' => 'required',
         ]);
 
-       //download the file and save it to public/images
-        $file = $request->file('file_name');
-        $fileName = $file->getClientOriginalName();
-        $file->move('public/images', $fileName);
-        $fileName = 'public/images/' . $fileName;
+       //save the brochure file_name into images
 
-        //save the file name to the database
-        $brochure = new Brochure();
-        $brochure->title = $request->title;
-        $brochure->file_name = $fileName;
-        $brochure->save();
+    //    $request->file_name->getClientOriginalName()
+    //      $request->file_name->storeAs('public/brochure', $request->file_name->getClientOriginalName());
 
-        //save the images to the database
-        $images = $request->file('images');
-        foreach ($images as $image) {
-            $fileName = $image->getClientOriginalName();
-            $image->move('public/images', $fileName);
-            $fileName = 'public/images/' . $fileName;
+    //     $brochure = Brochure::create([
+    //         'name' => $request->name,
+    //         'file_name' => $request->file_name->getClientOriginalName(),
+    //     ]);
+
+
+
+
+        $brochure = Brochure::create([
+            'name' => $request->name,
+        ]);
+
+       
+
+
+
+        // foreach ($request->file('file_name') as  $file) {
+
+        //     $FileName = $file->getClientOriginalName();
+        //     $file->move("BrochureFile/" . $brochure->id . "/", $FileName);
+        //     $file = new BrochureFile();
+        //     $file["filename"] = $FileName;
+        //     $file["path"] = "BrochureFile/" . $brochure->id . "/" . $FileName;
+        //     $file->save();
+        //     $brochure->images()->attach($file->id);
+        
+        // }
+   
+
+        foreach ($request->file('images') as  $image) {
+
+            $imageName = $image->getClientOriginalName();
+            $image->move("Brochure/" . $brochure->id . "/", $imageName);
             $image = new Image();
-            $image->file_name = $fileName;
-            $image->brochure_id = $brochure->id;
+            $image["filename"] = $imageName;
+            $image["path"] = "Brochure/" . $brochure->id . "/" . $imageName;
             $image->save();
+            $brochure->images()->attach($image->id);
+        
         }
+
        
         return redirect()->back()->with("msg", "Created successfully!")->with("success", true);
     }
@@ -72,17 +96,7 @@ class BrochureController extends Controller
         $brochure->title = $request->title;
         $brochure->file_name = $request->file_name;
         $brochure->save();
-        // foreach ($request->file('images') as  $image) {
-
-        //     $imageName = $image->getClientOriginalName();
-        //     $image->move("Brochure/" . $brochure->id . "/", $imageName);
-        //     $image = new Image();
-        //     $image["filename"] = $imageName;
-        //     $image["path"] = "Brochure/" . $brochure->id . "/" . $imageName;
-        //     $image->save();
-        //     $brochure->images()->attach($image->id);
-        
-        // }
+ 
         return redirect()->back()->with("msg", "Updated successfully!")->with("success", true);
     }
 

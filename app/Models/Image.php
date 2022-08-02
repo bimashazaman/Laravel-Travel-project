@@ -69,6 +69,12 @@ class Image extends Model
     public function reviewImages(){
         return $this->hasMany(ReviewImage::class);
     }
+
+    public function brochurefiles(){
+        return $this->hasOne(BrochureFile::class);
+    }
+
+
     
 
     
