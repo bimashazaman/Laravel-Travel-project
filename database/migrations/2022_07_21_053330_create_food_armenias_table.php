@@ -17,7 +17,7 @@ class CreateFoodArmeniasTable extends Migration
             $table->id();
             $table->string('name');
             $table->unsignedBigInteger('category_id');
-            $table->string('description')->nullable();
+            $table->text('description')->nullable();
             $table->string('time');    
             $table->string('address');
             $table->string('duration');

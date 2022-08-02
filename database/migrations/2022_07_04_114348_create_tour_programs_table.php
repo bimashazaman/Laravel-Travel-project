@@ -18,7 +18,7 @@ class CreateTourProgramsTable extends Migration
             $table->unsignedBigInteger('tour_id');
             $table->string("day")->nullable();
             $table->string("fromTo")->nullable();
-            $table->longText("description")->nullable();
+            $table->text("description")->nullable();
             $table->string("distance")->nullable();
             $table->string("duration")->nullable();
             $table->string("food")->nullable();

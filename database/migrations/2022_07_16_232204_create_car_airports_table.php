@@ -6,26 +6,18 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateCarAirportsTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+  
     public function up()
     {
         Schema::create('car_airports', function (Blueprint $table) {
             $table->id();
-            $table->longText('details');
-            $table->longText('more_details');
+            $table->text('details');
+            $table->text('more_details');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+
     public function down()
     {
         Schema::dropIfExists('car_airports');

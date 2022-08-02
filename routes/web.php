@@ -496,15 +496,6 @@ Route::get('/TentForm', function () {
 });
 
 
-// Route::get('/mice', function () {
-//     return view('Frontend.Mice.Micee');
-// });
-
-
-
-// Route::get('/ClassicTour', function () {
-//     return view('Frontend.BasicTours.BasicTours');
-// });
 
 
 Route::get('/RenACar', function () {

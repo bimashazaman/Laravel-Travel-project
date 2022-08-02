@@ -19,7 +19,7 @@ class CreateToursTable extends Migration
             $table->unsignedBigInteger('destination_id');
             $table->unsignedBigInteger('type_id')->nullable();
             $table->string("name")->nullable();
-            $table->longText("Itenanary")->nullable();
+            $table->text("Itenanary")->nullable();
             $table->string("duration")->nullable();
             $table->string('start_date')->nullable();
             $table->string('end_date')->nullable();
@@ -28,7 +28,7 @@ class CreateToursTable extends Migration
             $table->string("one_week_price")->nullable();
             $table->string("one_month_price")->nullable();
             $table->string("one_year_price")->nullable();
-            $table->longText('description')->nullable();
+            $table->text('description')->nullable();
             $table->softDeletes();
             $table->timestamps();
         });

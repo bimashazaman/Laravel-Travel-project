@@ -16,7 +16,7 @@ class CreateWaysToBooksTable extends Migration
         Schema::create('ways_to_books', function (Blueprint $table) {
             $table->id();
             $table->string('title');
-            $table->longText('description');
+            $table->text('description');
             $table->timestamps();
         });
     }

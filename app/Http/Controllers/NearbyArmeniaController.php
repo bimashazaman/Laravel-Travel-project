@@ -41,7 +41,7 @@ class NearbyArmeniaController extends Controller
          "period" => "required|string",
          "distance" => "required|string",
          "price" => "required|string",
-         "category_id" => "required|string",
+         "category_id" => "required",
          "images" => "required",
      ]);
 
@@ -159,18 +159,18 @@ class NearbyArmeniaController extends Controller
     {
         $things = NearbyArmenia::with('images')->where('category_id', $id)->simplePaginate(9);;
         $category = NearbyArmeniaCategory::where('id', $id)->first();
+
         return view('Frontend.Armenia.nearby', compact('things', 'category'));
     }
 
-    // {
-    //     $things = Nearby::where('category_id', $id)->get();
-    //     return view('Frontend.Armenia.Nearby', compact('things'));
-    // }
+   
 
     public function getNearbyById($id)
     {
         $things = NearbyArmenia::with('images')->where('id', $id)->first();
-        return view('Frontend.Armenia.NearbyDetails', compact('things'));
+        //related
+        $related = NearbyArmenia::with('images')->where('category_id', $things->category_id)->inRandomOrder()->simplePaginate(3);
+        return view('Frontend.Armenia.NearbyDetails', compact('things','related'));
     }
 
     //get all things to see

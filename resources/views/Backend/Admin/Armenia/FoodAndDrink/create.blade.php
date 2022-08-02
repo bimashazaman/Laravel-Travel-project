@@ -80,7 +80,7 @@
 
                     <!-- category dropdown -->
                     <div class="form-group row">
-                        <label class="col-form-label col-md-2">Default Select</label>
+                        <label class="col-form-label col-md-2">Category</label>
                         <div class="col-md-10">
                             <select class="form-control form-select" name="category_id">
                                

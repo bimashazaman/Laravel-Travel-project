@@ -109,7 +109,7 @@ class ThingsToSeeController extends Controller
             "period" => "required|string",
             "distance" => "required|string",
             "price" => "required|string",
-            "category_id" => "required|string",
+            "category_id" => "required",
             // "images" => "required",
         ]);
         

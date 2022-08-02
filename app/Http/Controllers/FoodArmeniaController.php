@@ -16,16 +16,9 @@ class FoodArmeniaController extends Controller
 {
     public function index()
     {
-        
-        
-    // $things = ThingsToSee::where('category_id', $name)->get();
-    //     $category = ThingsToSeeCategory::where('name', $name)->first();
-    //     return view('Backend.Admin.Armenia.ThingsToSee.view', compact('things', 'category'));
-
         $categories = FoodArmeniaCategory::all();
         $foods = FoodArmenia::simplePaginate(9);
         return view('Backend.Admin.Armenia.FoodAndDrink.view', compact('categories','foods'));
-
     }
 
    
@@ -84,10 +77,6 @@ class FoodArmeniaController extends Controller
     }
 
  
-    public function show($id)
-    {
-        //
-    }
 
 
     public function edit($id)
@@ -109,7 +98,7 @@ class FoodArmeniaController extends Controller
             "period" => "required|string",
             "distance" => "required|string",
             "price" => "required|string",
-            "category_id" => "required|string",
+            "category_id" => "required",
             
         ]);
         if ($validate->fails()) {
@@ -187,26 +176,23 @@ class FoodArmeniaController extends Controller
     public function getfoodsByCategory($id)
     {
         $foods = FoodArmenia::with('images')->where('category_id', $id)->simplePaginate(9);
+
         $category = FoodArmeniaCategory::where('id', $id)->first();
+
+        //related
+      
         return view('Frontend.Armenia.foods', compact('foods', 'category'));
     }
 
-    // {
-    //     $things = ThingsToSee::where('category_id', $id)->get();
-    //     return view('Frontend.Armenia.ThingsToSee', compact('things'));
-    // }
+    
 
     public function getfoodsById($id)
     {
         $foods = FoodArmenia::with('images')->where('id', $id)->first();
-        return view('Frontend.Armenia.food', compact('foods'));
+        $related = FoodArmenia::with('images')->where('category_id', $id)->inRandomOrder()->simplePaginate(3);
+        return view('Frontend.Armenia.food', compact('foods','related'));
     }
 
-    //get all foods to see
-    // public function getAllFoods()
-    // {
-    //     $foods = FoodArmenia::all();
-    //     return view('Frontend.Armenia.foods', compact('foods'));
-    // }
+
 
 }
