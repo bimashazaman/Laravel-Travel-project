@@ -109,6 +109,14 @@ class BrochureController extends Controller
     }
 
 
+    public function getAll()
+    {
+        $brochure = Brochure::simplePaginate(6);
+        return view('Frontend.Brochures.Brochures', compact('brochure'));
+
+    }
+
+
 
 
 

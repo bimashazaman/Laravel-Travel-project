@@ -475,9 +475,7 @@ Route::get('/Rv', function () {
     return view('Frontend.BasicTours.RequestABasicTour');
 });
 
-Route::get('/b', function () {
-    return view('Frontend.Brochures.Brochures');
-});
+Route::get('/b', [BrochureController::class, 'getAll']);
 
 Route::get('/withDriver', function () {
     return view('Frontend.Cars.WithDriver');
