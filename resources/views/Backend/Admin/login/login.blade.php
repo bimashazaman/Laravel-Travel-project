@@ -282,9 +282,10 @@ input[type=text]:placeholder {
           </div>
       
           <!-- Login Form -->
-          <form>
-            <input type="text" id="login" class="fadeIn second" name="login" placeholder="login">
-            <input type="text" id="password" class="fadeIn third" name="login" placeholder="password">
+          <form action="{{url('/login')}}" method="post">
+            @csrf
+            <input type="text" id="login" class="fadeIn second" name="email" placeholder="login">
+            <input type="text" id="password" class="fadeIn third" name="password" placeholder="password">
             <input type="submit" class="fadeIn fourth" value="Log In">
           </form>
       

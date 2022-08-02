@@ -14,6 +14,7 @@ use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GastroTour;
 use App\Http\Controllers\GuranteeTour;
 use App\Http\Controllers\HotelController;
+use App\Http\Controllers\LoginController;
 use App\Http\Controllers\MiceController;
 use App\Http\Controllers\NearbyArmeniaController;
 use App\Http\Controllers\OneDayController;
@@ -27,6 +28,7 @@ use App\Http\Controllers\TravelBlogController;
 use App\Http\Controllers\UsefulInfoController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\WaysToBookController;
+use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
 
@@ -35,13 +37,12 @@ use Illuminate\Support\Facades\Route;
 
  
     
-Route::get('/login', function () {
-    return view('Backend.Admin.login.login');
-});
+Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
+Route::post('/loginTo', [LoginController::class, 'loginTo'])->name('loginTo');
 
 
 
-
+Route::group(['middleware' => ['admin']], function () {
 
 
 //============ Add facility page==============
@@ -301,7 +302,7 @@ Route::get('/admin/d', function () {
     return view('Backend.Admin.Destination.view');
 });
 
-
+});
 
 //===============Services Update routes=============
 
@@ -351,7 +352,7 @@ Route::get('/admin/d', function () {
 
 //=================All frontend routes=================
 
-Route::get('/', [FrontendController::class, 'index'])->name('home');
+Route::get('/', [FrontendController::class, 'index']);
 Route::get('/tour/detail/{id}', [FrontendController::class, 'tourDescription'])->name('tourDescription');
 Route::get('/tour/{name}', [FrontendController::class, 'getTours'])->name('getTours');
 
@@ -526,3 +527,7 @@ Route::get('/driver', [CarWithDriverController::class, 'getAll']);
 
 
 
+
+Auth::routes();
+
+Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
