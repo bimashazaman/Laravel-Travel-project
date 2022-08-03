@@ -17,7 +17,7 @@ class MiceCMSSeeder extends Seeder
         MiceCMS::insert([
             [
                 'title'=>'Mice',
-                'subtitle'=>'
+                'description'=>'
                 You don’t choose the day you enter the world and you don’t chose the day you leave. It’s what you do in between that makes all the difference.',
                 
             ],

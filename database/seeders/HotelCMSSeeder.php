@@ -17,7 +17,7 @@ class HotelCMSSeeder extends Seeder
         HotelCMS::insert([
             [
                 'title'=>'Hotel',
-                'subtitle'=>'It’s never too late to have a life you love. Don’t ever feel like you’ve missed the boat, don’t have what it takes or can’t achieve your dreams. Instead of removing your dreams, remove the doubts and fears keeping you from them. It’s never, ever too late.',
+                'description'=>'It’s never too late to have a life you love. Don’t ever feel like you’ve missed the boat, don’t have what it takes or can’t achieve your dreams. Instead of removing your dreams, remove the doubts and fears keeping you from them. It’s never, ever too late.',
                 
             ],
         ]);
