@@ -71,14 +71,14 @@
                     <ul style="display: none;">
 
                         <li><a href="{{ url('/homeCms') }}">HOME</a></li>
-                        <li><a href="">Tour</a></li>
-                        <li><a href="">Car</a></li>
-                        <li><a href="">Hotel</a></li>
-                        <li><a href="">Accessories</a></li>
-                        <li><a href="">MICE</a></li>
-                        <li><a href="">Blog</a></li>
-                        <li><a href="">Vacancy</a></li>
-                        <li><a href="">Review</a></li>
+                        <li><a href="{{ url('/tourCms') }}">Tour</a></li>
+                        <li><a href="{{ url('/carCms') }}">Car</a></li>
+                        <li><a href="{{ url('/hotelCms') }}">Hotel</a></li>
+                        <li><a href="{{ url('/accessioriesCms') }}">Accessories</a></li>
+                        <li><a href="{{ url('/miceCms') }}">MICE</a></li>
+                        <li><a href="{{ url('/blogCms') }}">Blog</a></li>
+                        <li><a href="{{ url('/vacancyCms') }}">Vacancy</a></li>
+                        <li><a href="{{ url('/reviewCms') }}">Review</a></li>
                         {{-- <li><a href="">Contact</a></li> --}}
                     </ul>
                 </li>
