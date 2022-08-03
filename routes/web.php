@@ -64,7 +64,7 @@ Route::group(['middleware' => ['admin']], function () {
 
 
 //========Home ==========
-Route::get('/homeCms', [HomeCmsController::class, 'index']);
+// Route::get('/homeCms/{id}', [HomeCmsController::class, 'index']);
 Route::get('/homeCms/{id}/edit', [HomeCmsController::class, 'edit']);
 Route::put('/homeCms/{id}', [HomeCmsController::class, 'update']);
 Route::delete('/homeCms/{id}', [HomeCmsController::class, 'destroy']);
@@ -98,7 +98,7 @@ Route::delete('/accessioriesCms/{id}', [AccessioriesCmsController::class, 'destr
 
 
 //======Mice ======
-Route::get('/miceCms', [MiceCmsController::class, 'index']);
+Route::get('/miceCms/{id}', [MiceCmsController::class, 'index']);
 Route::get('/miceCms/{id}/edit', [MiceCmsController::class, 'edit']);
 Route::put('/miceCms/{id}', [MiceCmsController::class, 'update']);
 Route::delete('/miceCms/{id}', [MiceCmsController::class, 'destroy']);

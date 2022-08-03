@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Destination;
+use App\Models\HomeCMS;
 use App\Models\Meal;
 use App\Models\Tour;
 use App\Models\TourCategory;
@@ -40,11 +41,7 @@ class FrontendController extends Controller
 
     public function index()
     {
-        //
-        //get tours latest
-        //get destinations
-        //meals
-        //get trip typs
+        $home = HomeCMS::all();
 
         $tours = Tour::with('images')
             ->with('category')
@@ -62,7 +59,8 @@ class FrontendController extends Controller
             "tours" => $tours,
             "destinations" => $destinations,
             "types" => $types,
-            "meals" => $meals
+            "meals" => $meals,
+            "home" => $home,
         ]);
     }
     /**

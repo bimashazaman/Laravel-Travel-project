@@ -70,7 +70,7 @@
                     <a href="#"><i class="fe fe-home"></i> <span> CMS</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
 
-                        <li><a href="{{ url('/homeCms') }}">HOME</a></li>
+                        <li><a href="{{ url('/homeCms/1/edit') }}">HOME</a></li>
                         <li><a href="{{ url('/tourCms') }}">Tour</a></li>
                         <li><a href="{{ url('/carCms') }}">Car</a></li>
                         <li><a href="{{ url('/hotelCms') }}">Hotel</a></li>
