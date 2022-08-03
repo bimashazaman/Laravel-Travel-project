@@ -26,7 +26,7 @@
                 <li class="submenu">
                     <a href="#"><i class="fe fe-layout"></i> <span> Services <span class="menu-arrow"></span></span></a>
                     <ul style="display: none;">
-                        <li><a href="{{ url('/admin/d') }}">Destination</a></li>
+                        {{-- <li><a href="{{ url('/admin/d') }}">Destination</a></li> --}}
                         <li><a href="{{ url('/cars') }}">Car</a></li>
                         <li><a href="{{ url('/admin/CarWithDriver') }}">Car with driver</a></li>
                         <li><a href="{{ url('/admin/CarAtAirport') }}">Car for airport</a></li>
@@ -70,7 +70,7 @@
                     <a href="#"><i class="fe fe-home"></i> <span> CMS</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">
 
-                        <li><a href="">HOME</a></li>
+                        <li><a href="{{ url('/homeCms') }}">HOME</a></li>
                         <li><a href="">Tour</a></li>
                         <li><a href="">Car</a></li>
                         <li><a href="">Hotel</a></li>
