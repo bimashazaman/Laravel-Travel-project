@@ -15,8 +15,8 @@ class CreateTourCMSTable extends Migration
     {
         Schema::create('tour_c_m_s', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('description');
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }

@@ -15,8 +15,8 @@ class CreateReviewCMSTable extends Migration
     {
         Schema::create('review_c_m_s', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('subtitle');
+            $table->string('title')->nullable();
+            $table->text('subtitle')->nullable();
             $table->timestamps();
         });
     }

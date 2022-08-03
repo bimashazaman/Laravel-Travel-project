@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\BlogCMS;
 use Illuminate\Database\Seeder;
 
 class BlogCMSSeeder extends Seeder
@@ -13,6 +14,14 @@ class BlogCMSSeeder extends Seeder
      */
     public function run()
     {
-        //
+        
+        BlogCMS::insert([
+            [
+                'title'=>'Blog',
+                'subtitle'=>'
+                You don’t choose the day you enter the world and you don’t chose the day you leave. It’s what you do in between that makes all the difference.',
+                
+            ],
+        ]);
     }
 }

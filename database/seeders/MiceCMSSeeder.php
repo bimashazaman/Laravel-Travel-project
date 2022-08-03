@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\MiceCMS;
 use Illuminate\Database\Seeder;
 
 class MiceCMSSeeder extends Seeder
@@ -13,6 +14,13 @@ class MiceCMSSeeder extends Seeder
      */
     public function run()
     {
-        //
+        MiceCMS::insert([
+            [
+                'title'=>'Mice',
+                'subtitle'=>'
+                You don’t choose the day you enter the world and you don’t chose the day you leave. It’s what you do in between that makes all the difference.',
+                
+            ],
+        ]);
     }
 }

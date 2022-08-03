@@ -15,8 +15,8 @@ class CreateBlogCMSTable extends Migration
     {
         Schema::create('blog_c_m_s', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('subtitle');
+            $table->string('title')->nullable();
+            $table->text('subtitle')->nullable();
             $table->timestamps();
         });
     }

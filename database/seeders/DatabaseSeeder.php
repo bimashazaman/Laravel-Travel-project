@@ -2,6 +2,7 @@
 
 namespace Database\Seeders;
 
+use App\Models\MiceCMS;
 use Illuminate\Database\Seeder;
 use Database\Seeders\Food;
 
@@ -25,6 +26,16 @@ class DatabaseSeeder extends Seeder
             RegionSeeder::class,
             TypeSeeder::class,
             CreateUsersSeeder::class,
+            HomeCMSSeeder::class,
+            TourCMS::class,
+            HotelCMSSeeder::class,
+            TourAccessoriesCMSSeeder::class,
+            MiceCMSSeeder::class,
+            BlogCMSSeeder::class,
+            VacancyCMSSeeder::class,
+            ReviewCMSSeeder::class,
+
+
 
         ]);
     }

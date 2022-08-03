@@ -15,8 +15,8 @@ class CreateRentCarCmsTable extends Migration
     {
         Schema::create('rent_car_cms', function (Blueprint $table) {
             $table->id();
-            $table->string('title');
-            $table->text('description');
+            $table->string('title')->nullable();
+            $table->text('description')->nullable();
             $table->timestamps();
         });
     }
