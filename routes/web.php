@@ -1,9 +1,11 @@
 <?php
 
 use App\Http\Controllers\AboutUsController;
+use App\Http\Controllers\AccessioriesCmsController;
 use App\Http\Controllers\AccessioriesController;
 use App\Http\Controllers\ActiveTour;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\BlogCmsController;
 use App\Http\Controllers\BrochureController;
 use App\Http\Controllers\CarAirportController;
 use App\Http\Controllers\CarController;
@@ -14,19 +16,25 @@ use App\Http\Controllers\FoodArmeniaController;
 use App\Http\Controllers\FrontendController;
 use App\Http\Controllers\GastroTour;
 use App\Http\Controllers\GuranteeTour;
+use App\Http\Controllers\HomeCmsController;
+use App\Http\Controllers\HotelCmsController;
 use App\Http\Controllers\HotelController;
 use App\Http\Controllers\LoginController;
+use App\Http\Controllers\MiceCmsController;
 use App\Http\Controllers\MiceController;
 use App\Http\Controllers\NearbyArmeniaController;
 use App\Http\Controllers\OneDayController;
+use App\Http\Controllers\ReviewCmsController;
 use App\Http\Controllers\ReviewController;
 use App\Http\Controllers\ThemedTour;
 use App\Http\Controllers\ThingsToDoController;
 use App\Http\Controllers\ThingsToSeeController;
+use App\Http\Controllers\TourCmsController;
 use App\Http\Controllers\TourController;
 use App\Http\Controllers\TourEventController;
 use App\Http\Controllers\TravelBlogController;
 use App\Http\Controllers\UsefulInfoController;
+use App\Http\Controllers\VacancyCmsController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\WaysToBookController;
 use Illuminate\Support\Facades\Auth;
@@ -47,6 +55,89 @@ Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
 
 
 Route::group(['middleware' => ['admin']], function () {
+
+
+
+
+
+//=========Admin CMS=================
+
+
+//========Home ==========
+Route::get('/homeCms', [HomeCmsController::class, 'index']);
+Route::get('/homeCms/{id}/edit', [HomeCmsController::class, 'edit']);
+Route::put('/homeCms/{id}', [HomeCmsController::class, 'update']);
+Route::delete('/homeCms/{id}', [HomeCmsController::class, 'destroy']);
+
+//======Tour========
+Route::get('/tourCms', [TourCmsController::class, 'index']);
+Route::get('/tourCms/{id}/edit', [TourCmsController::class, 'edit']);
+Route::put('/tourCms/{id}', [TourCmsController::class, 'update']);
+Route::delete('/tourCms/{id}', [TourCmsController::class, 'destroy']);
+
+
+//=======Car=======
+Route::get('/carCms', [CarCmsController::class, 'index']);
+Route::get('/carCms/{id}/edit', [CarCmsController::class, 'edit']);
+Route::put('/carCms/{id}', [CarCmsController::class, 'update']);
+Route::delete('/carCms/{id}', [CarCmsController::class, 'destroy']);
+
+
+//=======Hotel=======
+Route::get('/hotelCms', [HotelCmsController::class, 'index']);
+Route::get('/hotelCms/{id}/edit', [HotelCmsController::class, 'edit']);
+Route::put('/hotelCms/{id}', [HotelCmsController::class, 'update']);
+Route::delete('/hotelCms/{id}', [HotelCmsController::class, 'destroy']);
+
+
+//=======Accessiories=======
+Route::get('/accessioriesCms', [AccessioriesCmsController::class, 'index']);
+Route::get('/accessioriesCms/{id}/edit', [AccessioriesCmsController::class, 'edit']);
+Route::put('/accessioriesCms/{id}', [AccessioriesCmsController::class, 'update']);
+Route::delete('/accessioriesCms/{id}', [AccessioriesCmsController::class, 'destroy']);
+
+
+//======Mice ======
+Route::get('/miceCms', [MiceCmsController::class, 'index']);
+Route::get('/miceCms/{id}/edit', [MiceCmsController::class, 'edit']);
+Route::put('/miceCms/{id}', [MiceCmsController::class, 'update']);
+Route::delete('/miceCms/{id}', [MiceCmsController::class, 'destroy']);
+
+
+//=======Blog=======
+Route::get('/blogCms', [BlogCmsController::class, 'index']);
+Route::get('/blogCms/{id}/edit', [BlogCmsController::class, 'edit']);
+Route::put('/blogCms/{id}', [BlogCmsController::class, 'update']);
+Route::delete('/blogCms/{id}', [BlogCmsController::class, 'destroy']);
+
+
+//=====Vacancy======
+Route::get('/vacancyCms', [VacancyCmsController::class, 'index']);
+Route::get('/vacancyCms/{id}/edit', [VacancyCmsController::class, 'edit']);
+Route::put('/vacancyCms/{id}', [VacancyCmsController::class, 'update']);
+Route::delete('/vacancyCms/{id}', [VacancyCmsController::class, 'destroy']);
+
+
+//========Review========
+Route::get('/reviewCms', [ReviewCmsController::class, 'index']);
+Route::get('/reviewCms/{id}/edit', [ReviewCmsController::class, 'edit']);
+Route::put('/reviewCms/{id}', [ReviewCmsController::class, 'update']);
+Route::delete('/reviewCms/{id}', [ReviewCmsController::class, 'destroy']);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 //============ Add facility page==============
