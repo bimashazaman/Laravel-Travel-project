@@ -8,9 +8,23 @@
                 <li class="active">
                     <a href="{{ url('/main') }}"><i class="fe fe-home"></i> <span>Dashboard</span></a>
                 </li>
-                <li class="">
-                    <a href="{{ url('/main') }}"><i class="fe fe-home"></i> <span>CMS</span></a>
+                <li class="submenu">
+                    <a href="#"><i class="fe fe-home"></i> <span> CMS</span> <span class="menu-arrow"></span></a>
+                    <ul style="display: none;">
+
+                        <li><a href="">HOME</a></li>
+                        <li><a href="">Tour</a></li>
+                        <li><a href="">Car</a></li>
+                        <li><a href="">Hotel</a></li>
+                        <li><a href="">Accessories</a></li>
+                        <li><a href="">MICE</a></li>
+                        <li><a href="">Blog</a></li>
+                        <li><a href="">Vacancy</a></li>
+                        <li><a href="">Review</a></li>
+                        <li><a href="">Contact</a></li>
+                    </ul>
                 </li>
+
                 <li class="submenu">
                     <a href="#"><i class="fe fe-users"></i> <span> Tours</span> <span class="menu-arrow"></span></a>
                     <ul style="display: none;">

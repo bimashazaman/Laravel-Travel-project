@@ -25,12 +25,12 @@
     <div class="flex-end" >
         <form action="{{ url('/logout') }}" method="POST">
             {{ csrf_field() }}
-       <button style="float: right; color:red; padding:20px; font-size: 22px; border:none>
+       <button  type="submit" style="float: right; color:red; margin:20px; font-size: 20px; border:none; background-color:white">
         Logout
        </button>
-       <button type="submit" value="submit">
-        <i class="fe fe-log-out"></i>
-       </button>
+       {{-- <button type="submit" value="submit">
+       
+       </button> --}}
       </div>
     </form>
     <a class="mobile_btn" id="mobile_btn">
