@@ -71,14 +71,15 @@
                     <ul style="display: none;">
 
                         <li><a href="{{ url('/homeCms/1/edit') }}">HOME</a></li>
-                        <li><a href="{{ url('/tourCms') }}">Tour</a></li>
-                        <li><a href="{{ url('/carCms') }}">Car</a></li>
-                        <li><a href="{{ url('/hotelCms') }}">Hotel</a></li>
-                        <li><a href="{{ url('/accessioriesCms') }}">Accessories</a></li>
-                        <li><a href="{{ url('/miceCms') }}">MICE</a></li>
-                        <li><a href="{{ url('/blogCms') }}">Blog</a></li>
-                        <li><a href="{{ url('/vacancyCms') }}">Vacancy</a></li>
-                        <li><a href="{{ url('/reviewCms') }}">Review</a></li>
+                        <li><a href="">Home Tour</a></li>
+                        <li><a href="{{ url('/tourCms/1/edit') }}">Tour</a></li>
+                        <li><a href="{{ url('/carCms/1/edit') }}">Car</a></li>
+                        <li><a href="{{ url('/hotelCms/1/edit') }}">Hotel</a></li>
+                        <li><a href="{{ url('/accessioriesCms/1/edit') }}">Accessories</a></li>
+                        <li><a href="{{ url('/miceCms/1/edit') }}">MICE</a></li>
+                        <li><a href="{{ url('/blogCms/1/edit') }}">Blog</a></li>
+                        <li><a href="{{ url('/vacancyCms/1/edit') }}">Vacancy</a></li>
+                        <li><a href="{{ url('/reviewCms/1/edit') }}">Review</a></li>
                         {{-- <li><a href="">Contact</a></li> --}}
                     </ul>
                 </li>

@@ -70,56 +70,56 @@ Route::put('/homeCms/{id}', [HomeCmsController::class, 'update']);
 Route::delete('/homeCms/{id}', [HomeCmsController::class, 'destroy']);
 
 //======Tour========
-Route::get('/tourCms', [TourCmsController::class, 'index']);
+// Route::get('/tourCms', [TourCmsController::class, 'index']);
 Route::get('/tourCms/{id}/edit', [TourCmsController::class, 'edit']);
 Route::put('/tourCms/{id}', [TourCmsController::class, 'update']);
 Route::delete('/tourCms/{id}', [TourCmsController::class, 'destroy']);
 
 
 //=======Car=======
-Route::get('/carCms', [CarCmsController::class, 'index']);
+// Route::get('/carCms', [CarCmsController::class, 'index']);
 Route::get('/carCms/{id}/edit', [CarCmsController::class, 'edit']);
 Route::put('/carCms/{id}', [CarCmsController::class, 'update']);
 Route::delete('/carCms/{id}', [CarCmsController::class, 'destroy']);
 
 
 //=======Hotel=======
-Route::get('/hotelCms', [HotelCmsController::class, 'index']);
+// Route::get('/hotelCms', [HotelCmsController::class, 'index']);
 Route::get('/hotelCms/{id}/edit', [HotelCmsController::class, 'edit']);
 Route::put('/hotelCms/{id}', [HotelCmsController::class, 'update']);
 Route::delete('/hotelCms/{id}', [HotelCmsController::class, 'destroy']);
 
 
 //=======Accessiories=======
-Route::get('/accessioriesCms', [AccessioriesCmsController::class, 'index']);
+// Route::get('/accessioriesCms', [AccessioriesCmsController::class, 'index']);
 Route::get('/accessioriesCms/{id}/edit', [AccessioriesCmsController::class, 'edit']);
 Route::put('/accessioriesCms/{id}', [AccessioriesCmsController::class, 'update']);
 Route::delete('/accessioriesCms/{id}', [AccessioriesCmsController::class, 'destroy']);
 
 
 //======Mice ======
-Route::get('/miceCms/{id}', [MiceCmsController::class, 'index']);
+// Route::get('/miceCms/{id}', [MiceCmsController::class, 'index']);
 Route::get('/miceCms/{id}/edit', [MiceCmsController::class, 'edit']);
 Route::put('/miceCms/{id}', [MiceCmsController::class, 'update']);
 Route::delete('/miceCms/{id}', [MiceCmsController::class, 'destroy']);
 
 
 //=======Blog=======
-Route::get('/blogCms', [BlogCmsController::class, 'index']);
+// Route::get('/blogCms', [BlogCmsController::class, 'index']);
 Route::get('/blogCms/{id}/edit', [BlogCmsController::class, 'edit']);
 Route::put('/blogCms/{id}', [BlogCmsController::class, 'update']);
 Route::delete('/blogCms/{id}', [BlogCmsController::class, 'destroy']);
 
 
 //=====Vacancy======
-Route::get('/vacancyCms', [VacancyCmsController::class, 'index']);
+// Route::get('/vacancyCms', [VacancyCmsController::class, 'index']);
 Route::get('/vacancyCms/{id}/edit', [VacancyCmsController::class, 'edit']);
 Route::put('/vacancyCms/{id}', [VacancyCmsController::class, 'update']);
 Route::delete('/vacancyCms/{id}', [VacancyCmsController::class, 'destroy']);
 
 
 //========Review========
-Route::get('/reviewCms', [ReviewCmsController::class, 'index']);
+// Route::get('/reviewCms', [ReviewCmsController::class, 'index']);
 Route::get('/reviewCms/{id}/edit', [ReviewCmsController::class, 'edit']);
 Route::put('/reviewCms/{id}', [ReviewCmsController::class, 'update']);
 Route::delete('/reviewCms/{id}', [ReviewCmsController::class, 'destroy']);
