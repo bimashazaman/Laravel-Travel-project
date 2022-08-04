@@ -78,8 +78,8 @@
                         <li><a href="{{ url('/accessioriesCms/1/edit') }}">Accessories</a></li>
                         <li><a href="{{ url('/miceCms/1/edit') }}">MICE</a></li>
                         <li><a href="{{ url('/blogCms/1/edit') }}">Blog</a></li>
-                        <li><a href="{{ url('/vacancyCms/1/edit') }}">Vacancy</a></li>
-                        <li><a href="{{ url('/reviewCms/1/edit') }}">Review</a></li>
+                        {{-- <li><a href="{{ url('/vacancyCms/1/edit') }}">Vacancy</a></li>
+                        <li><a href="{{ url('/reviewCms/1/edit') }}">Review</a></li> --}}
                         {{-- <li><a href="">Contact</a></li> --}}
                     </ul>
                 </li>

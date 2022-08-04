@@ -3564,7 +3564,7 @@ all and (min-device-pixel-ratio: 1.5) {
 
 .factBox {
     border: 0.5px solid #666060;
-    padding: 200px;
+    /* padding: 200px; */
     margin: 60px;
 }
 

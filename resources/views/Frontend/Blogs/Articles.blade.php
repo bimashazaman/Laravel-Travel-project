@@ -8,7 +8,9 @@
 
     <div class="row">
         <div class="col-md-6">
-            <div class="factBox"></div>
+            <div class="factBox">
+                <img src="https://velvetescape.com/wp-content/uploads/2015/07/artak-petrosyan-vwvshYHYAZs-unsplash-1500x920.jpg" alt="">
+            </div>
         </div>
         @foreach ($cms as $c)
             

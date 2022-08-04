@@ -24,26 +24,24 @@ class BrochureController extends Controller
     {
         $request->validate([
             'name' => 'required',
-            // 'file_name' => 'required',
+            'file_name' => 'required',
             'images' => 'required',
         ]);
 
-       //save the brochure file_name into images
+    //    save the brochure file_name into images
 
-    //    $request->file_name->getClientOriginalName()
-    //      $request->file_name->storeAs('public/brochure', $request->file_name->getClientOriginalName());
-
-    //     $brochure = Brochure::create([
-    //         'name' => $request->name,
-    //         'file_name' => $request->file_name->getClientOriginalName(),
-    //     ]);
-
-
-
+       $request->file_name->getClientOriginalName();
+         $request->file_name->move('BrochureFile', $request->file_name->getClientOriginalName());
 
         $brochure = Brochure::create([
             'name' => $request->name,
+            'file_name' => $request->file_name->getClientOriginalName(),
         ]);
+
+
+
+
+      
 
        
 
