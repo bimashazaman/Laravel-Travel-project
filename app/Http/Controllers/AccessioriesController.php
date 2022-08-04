@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Accessiories;
 use App\Models\Image;
+use App\Models\TourAccessoriesCMS;
 use Illuminate\Http\Request;
 
 class AccessioriesController extends Controller
@@ -122,7 +123,9 @@ class AccessioriesController extends Controller
     {
         $a = Accessiories::with('images')
             ->simplePaginate(9);
-        return view('Frontend.TourAccesories.Accesories', compact('a'));
+
+            $cms = TourAccessoriesCMS::all();
+        return view('Frontend.TourAccesories.Accesories', compact('a','cms'));
     }
 
     //get the details of the selected accessiories

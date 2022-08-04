@@ -5,19 +5,20 @@
 </div>
 
 
+@foreach ($cms as $c)
+    
+
     <h2 style="text-align: center; ">
-        <span class="title-head">Rent Tour Accessories</span>
+        <span class="title-head">
+            {{ $c->title }}
+        </span>
     </h2>
 
     <p class="hotelDes">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sequi reprehenderit, nam laborum architecto
-        accusantium temporibus deleniti quam, nisi sint tenetur nihil ipsam maiores minus eius assumenda officia debitis?
-        Autem hic quae aliquam consequatur maxime dolorum quisquam illum dignissimos iste eaque sit architecto laudantium
-        magnam sint error, dolorem aperiam quos voluptates sequi dolore. Eveniet aspernatur at excepturi ad deleniti
-        asperiores quasi beatae totam officiis accusamus. Eos reiciendis molestias vero repellat atque! Cupiditate,
-        doloremque nostrum aperiam in dolore provident praesentium voluptatum hic voluptas cum quis animi harum deserunt
-        unde distinctio aut.
+        {{ $c->description }}
     </p>
+
+    @endforeach
 
     <section id="pack" class="packages">
         <div class="container">
