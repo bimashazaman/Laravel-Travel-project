@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\Image;
 use App\Models\Mice;
+use App\Models\MiceCMS;
 use Illuminate\Http\Request;
 
 class MiceController extends Controller
@@ -114,7 +115,8 @@ class MiceController extends Controller
     {
         $mices = Mice::with('images')
         ->simplePaginate(9);
-        return view('Frontend.Mice.Mices', compact('mices'));
+        $cms = MiceCMS::all();
+        return view('Frontend.Mice.Mices', compact('mices','cms'));
     }
 
     public function showMiceDetails($id)
