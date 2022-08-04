@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Review;
 use App\Models\Tour;
 use App\Models\TourCategory;
+use App\Models\TourCMS;
 use Illuminate\Http\Request;
 
 class ThemedTour extends Controller
@@ -13,8 +14,10 @@ class ThemedTour extends Controller
     {
         $tour = Tour::with('images')->with('types')->where('category_id', 6)->orderBy('id', 'DESC')->simplePaginate(9);
         $category = TourCategory::where('id', 6)->first();
+
+        $cms = TourCMS::all();
         
-        return view('Frontend.ThemedTours.ThemedTours', compact('tour', 'category'));
+        return view('Frontend.ThemedTours.ThemedTours', compact('tour', 'category','cms'));
     }
 
     public function getClassicTour($id)

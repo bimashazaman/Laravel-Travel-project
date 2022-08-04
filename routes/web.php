@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogCmsController;
 use App\Http\Controllers\BrochureController;
 use App\Http\Controllers\CarAirportController;
+use App\Http\Controllers\CarCmsController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\CarWithDriverController;
 use App\Http\Controllers\ClassicTour;

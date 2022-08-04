@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Review;
 use App\Models\Tour;
 use App\Models\TourCategory;
+use App\Models\TourCMS;
 use Illuminate\Http\Request;
 
 class ClassicTour extends Controller
@@ -17,8 +18,10 @@ class ClassicTour extends Controller
 
         $category = TourCategory::where('id', 1)->first();
 
+        $cms = TourCMS::all();
 
-        return view('Frontend.BasicTours.BasicTours', compact('tour', 'category'));
+
+        return view('Frontend.BasicTours.BasicTours', compact('tour', 'category','cms'));
     }
 
     //get one day tour

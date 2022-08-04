@@ -34,7 +34,7 @@ class DatabaseSeeder extends Seeder
             BlogCMSSeeder::class,
             VacancyCMSSeeder::class,
             ReviewCMSSeeder::class,
-
+            CarCmsSeeder::class,
 
 
         ]);

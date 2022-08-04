@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Models\Image;
+use App\Models\RentCarCms;
 use App\Models\Vehicle;
 use App\Models\VehicleImage;
 use Exception;
@@ -17,6 +18,8 @@ class CarController extends Controller
     {
         
         $cars = Vehicle::with('images')->simplePaginate(9);
+
+        
         // $image = VehicleImage::all();
         return view('Backend.Admin.Services.Car.view', compact('cars'));
     }
@@ -200,9 +203,9 @@ class CarController extends Controller
     //get the cars in frontend
     public function getCars()
     {
-        
+        $cms = RentCarCms::all();
         $cars = Vehicle::with('images')->inRandomOrder()->simplePaginate(9);
-        return view('Frontend.Cars.Cars', compact('cars'));
+        return view('Frontend.Cars.Cars', compact('cars','cms'));
     }
 
     //get the car details in frontend

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Review;
 use App\Models\Tour;
 use App\Models\TourCategory;
+use App\Models\TourCMS;
 use Illuminate\Http\Request;
 
 class ActiveTour extends Controller
@@ -15,8 +16,10 @@ class ActiveTour extends Controller
         // $tour = Tour::with('images')->where('category_id', 4)->get();
         
         $category = TourCategory::where('id', 4)->first();
+
+        $cms = TourCMS::all();
         
-        return view('Frontend.ActiveTours.ActiveTours', compact('tour', 'category'));
+        return view('Frontend.ActiveTours.ActiveTours', compact('tour', 'category', 'cms'));
     }
 
     public function getClassicTour($id)

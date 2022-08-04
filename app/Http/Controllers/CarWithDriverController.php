@@ -115,7 +115,7 @@ class CarWithDriverController extends Controller
     public function getAll()
     {
         $cars = CarWithDriver::all();
-        $carInfo = CarWithDriverInfo::all()->first();
+        $carInfo = CarWithDriverInfo::all();
         return view("Frontend.Cars.DriverCar", compact('cars','carInfo'));
     }
    

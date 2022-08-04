@@ -6,9 +6,12 @@
     </div>
 
  
+    @foreach ($carInfo as $car)
+        
+  
     <section class="tour-descriptions" style="margin-top: -50px;">
         <h1 style="text-align: center">
-            {{ $carInfo->name }}
+            {{ $car->name }}
         </h1>
         <div class="row">
             <div class="col-md-7">
@@ -133,27 +136,27 @@
                     <div class="detailespackage">
                         <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>
                         <div>
-                            {{ $carInfo->type }}
+                            {{ $car->type }}
                         </div>
                     </div>
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-person"></i>Number of seats</div>
                         <div>
-                            {{ $carInfo->seats }}
+                            {{ $car->seats }}
                         </div>
                     </div>
 
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-calendar-check"></i>Year</div>
                         <div>
-                            {{ $carInfo->model }}
+                            {{ $car->model }}
                         </div>
                     </div>
 
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>
                         <div>
-                            {{ $carInfo->cancelation_fee }}
+                            {{ $car->cancelation_fee }}
                         </div>
                     </div>
 
@@ -167,14 +170,18 @@
 
  
 
+ 
+
     <section class="carDes" style="padding: 70px">
         <h2>
             Overview
         </h2>
         <p>
-            {{ $carInfo->overview }}
+            {{ $car->overview }}
         </p>
     </section>
+
+    @endforeach
 
     <br>
     <br>

@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Review;
 use App\Models\Tour;
 use App\Models\TourCategory;
+use App\Models\TourCMS;
 use Illuminate\Http\Request;
 
 class GastroTour extends Controller
@@ -13,8 +14,12 @@ class GastroTour extends Controller
     {
         $tour = Tour::with('images')->with('types')->where('category_id', 3)->orderBy('id', 'DESC')->simplePaginate(9);
         $category = TourCategory::where('id', 3)->first();
+
+        $cms = TourCMS::all();
         
-        return view('Frontend.GastroTours.gastroTours', compact('tour', 'category'));
+        // return view('Frontend.ActiveTours.ActiveTours', compact('tour', 'category', 'cms'));
+        
+        return view('Frontend.GastroTours.gastroTours', compact('tour', 'category','cms'));
     }
 
     public function getClassicTour($id)

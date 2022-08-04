@@ -7,37 +7,7 @@ use Illuminate\Http\Request;
 
 class HomeCmsController extends Controller
 {
-   //crud
-    public function index()
-    {
-        $home = HomeCMS::all();
-        return view('Backend.Admin.CMS.Home.view', compact('home'));
-    }
-
-    public function create()
-    {
-        return view('Backend.Admin.CMS.Home.view');
-    }
-
-    public function store(Request $request)
-    {
-        
-        // $this->validate($request, [
-        //     'title' => 'required',
-        //     'subtitle' => 'required',
-        // ]);
-        // $home = new HomeCMS();
-        // $home->title = $request->title;
-        // $home->subtitle = $request->subtitle;
-        // $home->save();
-        // return redirect()->back()->with("msg", "Created successfully!")
-        // ->with("success", true);
-    }
-
-    public function show($id)
-    {
-        
-    }
+   
 
     public function edit($id)
     {
@@ -65,10 +35,7 @@ class HomeCmsController extends Controller
 
     }
 
-    public function destroy($id)
-    {
-        
-    }
+   
 
 
 }
