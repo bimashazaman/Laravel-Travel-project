@@ -28,9 +28,10 @@ class FrontendController extends Controller
             ->with('highlights')
             ->with('types')
             ->with('facility')
+            ->where('home_tour_id', 1)
             ->where("category_id", $cat->id)
             ->whereNull('deleted_at')
-            ->get();
+        ->get();
         // return response()->json(["tour"=>$tours]);
         return view("Frontend.Tours.Tour", [
             "tour" => $tours,
@@ -48,6 +49,7 @@ class FrontendController extends Controller
             ->whereNull('deleted_at')
             ->with('types')
             // ->latest()
+            ->where('home_tour_id', 1)
             ->take(3)
             ->get();
         $destinations = Destination::whereNull('deleted_at')

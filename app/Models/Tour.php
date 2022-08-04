@@ -55,6 +55,12 @@ class Tour extends Model
    public function types(){
        return $this->hasMany(Type::class, 'tour_id');
    }
+
+   public function homeTour(){
+       return $this->belongsTo(HomeTour::class, 'home_tours');
+   }
+
+   
     
 
     

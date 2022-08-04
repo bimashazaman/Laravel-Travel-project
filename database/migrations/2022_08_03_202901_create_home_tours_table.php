@@ -15,6 +15,8 @@ class CreateHomeToursTable extends Migration
     {
         Schema::create('home_tours', function (Blueprint $table) {
             $table->id();
+            // $table->unsignedBigInteger('home_tour_id');
+            $table->string('name')->nullable();
             $table->timestamps();
         });
     }

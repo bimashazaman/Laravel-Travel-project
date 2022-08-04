@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use App\Models\DepartureTable;
 use App\Models\Destination;
+use App\Models\HomeTour;
 use App\Models\Image;
 use App\Models\Tour;
 use App\Models\TourCategory;
@@ -43,6 +44,7 @@ class TourController extends Controller
 
     public function create()
     {
+        $homeTour = HomeTour::all();
         $type = Type::all();
         $destinations = Destination::all();
         $categories = TourCategory::all();
@@ -50,6 +52,7 @@ class TourController extends Controller
             "categories" => $categories,
             "destinations" => $destinations,
             "type" => $type,
+            "homeTour" => $homeTour,
         ]);
     }
 
@@ -68,6 +71,7 @@ class TourController extends Controller
             "Itenanary"=>"",
             "category_id" => "required|integer",
             "destination_id" => "required|integer",
+            "home_tour_id" => "required",
             "duration" => "required",
             "price" => "required",
             "one_day_price" => "required",
@@ -77,8 +81,11 @@ class TourController extends Controller
             "start_date" => "",
             "end_date" => "",
             "description" => "sometimes",
-            "images" => "required",
+            // "is_Home" => "",
+            "images" => "",
         ]);
+
+        //if $reques->isHome 
 
         if ($validate->fails()) {
             return redirect()->back()->withErrors($validate)->withInput();
@@ -91,6 +98,7 @@ class TourController extends Controller
                 "type_id" => $request->type_id,
                 "Itenanary"=>$request->Itenanary,
                 "category_id" => $request->category_id,
+                "home_tour_id" => $request->home_tour_id,
                 "destination_id" => $request->destination_id,
                 "duration" => $request->duration,
                 "price" => $request->price,
@@ -101,6 +109,7 @@ class TourController extends Controller
                 "start_date" => $request->start_date,
                 "end_date" => $request->end_date,
                 "description" => $request->description,
+                // "is_Home" => $request->is_Home,
             ]);
 
             foreach ($request->file('images') as  $image) {

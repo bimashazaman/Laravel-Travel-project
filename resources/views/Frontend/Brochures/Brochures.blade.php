@@ -36,7 +36,7 @@
                             <div class="package-btn">
                                 <button class="package-view">
 
-                                   <a href="{{ asset('BrochureFile/'.$b->file_name) }}" download="{{ $b->file_name }}" target="_blank"> Download </a>
+                                   <a href="{{ asset('BrochureFile/'.$b->file_name) }}" style="color: black" download="{{ $b->file_name }}" target="_blank"> Download </a>
                                         {{-- Download
                                     </a> --}}
                                    
