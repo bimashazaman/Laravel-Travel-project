@@ -75,6 +75,17 @@
                             </div>
                         </div>
                         <div class="form-group row">
+                            <label class="col-form-label col-md-2">For Home?</label>
+                            <div class="col-md-10">
+                                <select class="form-control form-select" name="home_tour_id">
+                                    
+                                    @foreach($homeTour as $d)
+                                    <option value="{{ $d->id }}">{{$d->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <div class="form-group row">
                             <label class="col-form-label col-md-2">2-3 Pax</label>
                             <div class="col-md-10">
                                 <input value="{{ $tour->one_day_price }}"

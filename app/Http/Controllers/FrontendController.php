@@ -48,7 +48,7 @@ class FrontendController extends Controller
             ->with('category')
             ->whereNull('deleted_at')
             ->with('types')
-            // ->latest()
+            ->latest()
             ->where('home_tour_id', 1)
             ->take(3)
             ->get();

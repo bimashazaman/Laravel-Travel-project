@@ -100,9 +100,10 @@ class CarController extends Controller
 
             DB::commit();
             // return self::success("Tour added successfully!", ["data" => $image]);
-            return redirect('/admin/CreateClassicTour')
-                ->with("msg", "Tour added successfully!")
-                ->with("success", true);
+            return redirect()
+            >back()
+            ->with("msg", "Car added successfully!")
+            ->with("success", true);
         } catch (Exception $e) {
             DB::rollBack();
             // return $e;
@@ -173,8 +174,9 @@ class CarController extends Controller
             
             DB::commit();
             // return self::success("Tour added successfully!", ["data" => $image]);
-            return redirect('/admin/CreateClassicTour')
-                ->with("msg", "Tour added successfully!")
+            return redirect()
+            ->back()
+                ->with("msg", "Car added successfully!")
                 ->with("success", true);
         } catch (Exception $e) {
             DB::rollBack();

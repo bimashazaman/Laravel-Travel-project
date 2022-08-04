@@ -483,11 +483,14 @@ class TourController extends Controller
         //    dd($tour);
         $destination = Destination::all();
         $type = Type::all();
+
+      
         if ($tour) {
             return view("Backend.Admin.Tours.classicTours.TourDescription", [
                 "tour" => $tour,
                 "destination" => $destination,
-                "type" => $type
+                "type" => $type,
+             
             ]);
             // return self::success("Tour retrieved!", ["data" => $tour]);
         }
@@ -500,6 +503,7 @@ class TourController extends Controller
         //
         $destinations = Destination::all();
         $categories = TourCategory::all();
+        $homeTour = HomeTour::all();
         $tour = Tour::with('images')
             ->with('highlights')
             ->with('facility')
@@ -510,7 +514,8 @@ class TourController extends Controller
         return view('Backend.Admin.Tours.classicTours.UpdateClassicTour', [
             "categories" => $categories,
             "destinations" => $destinations,
-            "tour" => $tour
+            "tour" => $tour,
+            "homeTour" => $homeTour,
         ]);
     }
 
@@ -647,4 +652,9 @@ class TourController extends Controller
                 ->with('fail', true);
         }
     }
+
+
+   
+
+
 }

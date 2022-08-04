@@ -321,7 +321,11 @@
                         </table>
                     </div>
                     <div class="col-md-3">
-                        <span><button class="package-view" style="margin-top: 80px;">Book Now</button></span>
+                        <span><button class="package-view" style="margin-top: 80px;">
+                        <a href="{{ url('/BookATour/'.$tour->id) }}" style="color: black">
+                            Book Now
+                        </a>
+                        </button></span>
                     </div>
                 </div>
 

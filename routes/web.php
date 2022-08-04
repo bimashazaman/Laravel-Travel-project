@@ -6,6 +6,7 @@ use App\Http\Controllers\AccessioriesController;
 use App\Http\Controllers\ActiveTour;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogCmsController;
+use App\Http\Controllers\BookATour;
 use App\Http\Controllers\BrochureController;
 use App\Http\Controllers\CarAirportController;
 use App\Http\Controllers\CarCmsController;
@@ -620,6 +621,9 @@ Route::get('/BookHotel', function () {
 Route::get('/driver', [CarWithDriverController::class, 'getAll']);
 
 
+//=======Book a tour==========
+
+Route::get('/BookATour/{id}', [BookATour::class, 'BookATour']);
 
 
 
