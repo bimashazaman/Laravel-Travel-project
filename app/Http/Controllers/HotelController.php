@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Destination;
 use App\Models\FoodArmenia;
 use App\Models\Hotel;
+use App\Models\HotelCMS;
 use App\Models\HotelFacility;
 use App\Models\HotelHighlights;
 use App\Models\HotelImage;
@@ -388,7 +389,9 @@ class HotelController extends Controller
         $region = Region::all();
         $destination = Destination::all();
 
-        return view('Frontend.Hotels.Hotels', compact('hotels', 'hotelType', 'region', 'destination'));
+        $cms = HotelCMS::all();
+
+        return view('Frontend.Hotels.Hotels', compact('hotels', 'hotelType', 'region', 'destination','cms'));
     }
 
     // get the hotel details in the frontend

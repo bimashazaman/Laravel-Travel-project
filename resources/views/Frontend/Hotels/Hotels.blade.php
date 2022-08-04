@@ -43,15 +43,12 @@
     </form>
 
     <br>
+    @foreach ($cms as $c)
+        
+   
 
     <p class="hotelDes">
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatum sequi reprehenderit, nam laborum architecto
-        accusantium temporibus deleniti quam, nisi sint tenetur nihil ipsam maiores minus eius assumenda officia debitis?
-        Autem hic quae aliquam consequatur maxime dolorum quisquam illum dignissimos iste eaque sit architecto laudantium
-        magnam sint error, dolorem aperiam quos voluptates sequi dolore. Eveniet aspernatur at excepturi ad deleniti
-        asperiores quasi beatae totam officiis accusamus. Eos reiciendis molestias vero repellat atque! Cupiditate,
-        doloremque nostrum aperiam in dolore provident praesentium voluptatum hic voluptas cum quis animi harum deserunt
-        unde distinctio aut.
+        {{ $c->description }}
     </p>
 
     <section id="pack" class="packages">
@@ -60,8 +57,11 @@
             <!--/.gallery-header-->
             <div class="packages-content">
                 <h2 style="text-align: center; padding-bottom:25px">
-                    <span class="title-head">Most populer hotels</span>
+                    <span class="title-head">
+                        {{ $c->title }}
+                    </span>
                 </h2>
+                @endforeach
                 <div class="row">
 
                     @foreach ($hotels as $hotel)
