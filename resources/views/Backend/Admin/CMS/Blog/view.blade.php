@@ -53,7 +53,7 @@
                                         {{csrf_field()}}
                                         @method('PUT')
                                         <div class="form-group row">
-                                            <label class="col-form-label col-md-2">Hotel Title</label>
+                                            <label class="col-form-label col-md-2">Blog Title</label>
                                             <div class="col-md-10">
                                                 <input value="{{ $blog->title }}" type="text" class="form-control" name="title">
                                             </div>

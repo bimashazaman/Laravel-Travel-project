@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\BlogCMS;
 use App\Models\Image;
 use App\Models\TravelBlog;
 use Illuminate\Http\Request;
@@ -90,8 +91,9 @@ class TravelBlogController extends Controller
     //get it on frontend
     public function getTravelBlog()
     {
+        $cms = BlogCMS::all();
         $travelBlogs = TravelBlog::with('images')->simplePaginate(9);
-        return view('Frontend.Blogs.Articles', compact('travelBlogs'));
+        return view('Frontend.Blogs.Articles', compact('travelBlogs', 'cms'));
     }
 
     //get it on frontend

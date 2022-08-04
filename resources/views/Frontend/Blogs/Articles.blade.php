@@ -10,13 +10,25 @@
         <div class="col-md-6">
             <div class="factBox"></div>
         </div>
+        @foreach ($cms as $c)
+            
+       
         <div class="col-md-6 aboutUs">
             <br>
             <br>
 
 
-            <p style="color: #2294E3;align:left"> <span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor sit
+            <p style="color: #2294E3;align:left"> <span><i class="fa-solid fa-check-double"></i></span> 
+            {{ $c->subtitle }}
+            </p>
+            {{-- <p style="color: #2294E3;align:left"><span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor sit
                 amet
+                consectetur.</p>
+            <p style="color: #2294E3;align:left"><span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor sit
+                amet,
+                consectetur adipisicing elit.</p>
+            <p style="color: #2294E3;align:left"> <span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor
+                sit amet
                 consectetur adipisicing elit.</p>
             <p style="color: #2294E3;align:left"><span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor sit
                 amet
@@ -29,18 +41,10 @@
                 consectetur adipisicing elit.</p>
             <p style="color: #2294E3;align:left"><span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor sit
                 amet
-                consectetur.</p>
-            <p style="color: #2294E3;align:left"><span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor sit
-                amet,
-                consectetur adipisicing elit.</p>
-            <p style="color: #2294E3;align:left"> <span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor
-                sit amet
-                consectetur adipisicing elit.</p>
-            <p style="color: #2294E3;align:left"><span><i class="fa-solid fa-check-double"></i></span> Lorem ipsum dolor sit
-                amet
-                consectetur.</p>
+                consectetur.</p> --}}
 
         </div>
+       
 
 
     </div>
@@ -52,10 +56,10 @@
             <!--/.gallery-header-->
             <div class="packages-content">
                 <h2 style="text-align: center; padding-bottom:60px">
-                    All Articles
+                    {{ $c->title }}
                 </h2>
                 <div class="row">
-
+                    @endforeach
 
 @foreach ($travelBlogs as $t)
     
