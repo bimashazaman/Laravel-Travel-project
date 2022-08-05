@@ -36,6 +36,7 @@
                 <div class="row">
 
                     {{-- if there is no things to see in this category --}}
+                    {{-- {{ dd($things) }} --}}
                    
                     @foreach($things as $thing)
                     <div class="col-md-4 col-sm-6">

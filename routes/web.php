@@ -7,6 +7,9 @@ use App\Http\Controllers\ActiveTour;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogCmsController;
 use App\Http\Controllers\BookATour;
+use App\Http\Controllers\BookATourController;
+use App\Http\Controllers\BookATourDepartureController;
+use App\Http\Controllers\BookingACarController;
 use App\Http\Controllers\BrochureController;
 use App\Http\Controllers\CarAirportController;
 use App\Http\Controllers\CarCmsController;
@@ -594,10 +597,6 @@ Route::get('/TentForm', function () {
 
 
 
-Route::get('/RenACar', function () {
-    return view('Frontend.Cars.RentACarForm');
-});
-
 
 
 Route::get('/article', function () {
@@ -621,9 +620,11 @@ Route::get('/BookHotel', function () {
 Route::get('/driver', [CarWithDriverController::class, 'getAll']);
 
 
-//=======Book a tour==========
+//=======Book==========
 
-Route::get('/BookATour/{id}', [BookATour::class, 'BookATour']);
+Route::get('/BookATour/{id}', [BookATourController::class, 'BookATour']);
+Route::get('/BookATourDeparture/{id}/departure/{departureId}', [BookATourDepartureController::class, 'BookATour']);
+Route::get('/BookACar/{id}', [BookingACarController::class, 'BookACar']);
 
 
 

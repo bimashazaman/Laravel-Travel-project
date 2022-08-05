@@ -1,4 +1,4 @@
-{{-- @extends('layouts.master')
+@extends('layouts.master')
 @section('content')
 <div class="fullBanner">
     @include('partials.DefaultBanner')
@@ -8,7 +8,7 @@
     <div class="RentForm">
 
         <h2>
-            Rent a car
+            Rent {{ $car->name }}
         </h2>
         <br>
         <form>
@@ -55,4 +55,4 @@
     <br>
     <br>
     <br>
-@endsection --}}
+@endsection

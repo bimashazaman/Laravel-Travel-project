@@ -148,7 +148,7 @@
             </table>
 
         </div>
-        <a href="{{ url('/RenACar') }}">
+        <a href="{{ url('/BookACar/'.$car->id) }}">
             <button class="package-view" style="text-align: center; align-items:center; margin:20px">
                 Book Now
             </button>

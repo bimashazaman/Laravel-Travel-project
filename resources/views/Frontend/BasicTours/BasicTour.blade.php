@@ -385,8 +385,12 @@
                     <div class="col-md-2" style="display: block">
 
                         @foreach ($tour->departureTable as $d)
-                            <button class="package-view" style="margin-top: 10px;">Book Now
-                                    {{ $d->id }}</button>
+                            <button class="package-view" style="margin-top: 10px;">
+                                <a href="{{ url('/BookATourDeparture/'.$tour->id.'/departure/'.$d->id) }}" style="color: black">
+                                    Book Now
+                                    {{ $d->id }}
+                                </a>
+                                </button>
                         @endforeach
                     </div>
                 </div>

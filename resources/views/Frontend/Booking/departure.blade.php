@@ -9,7 +9,16 @@
 
         <h2>
            Book {{ $tour->name }}
+           
+            
         </h2>
+        <br>
+        <h4>
+            {{ $departure->start_date }} - {{ $departure->end_date }}
+        </h4>
+        <p>
+            ({{ $departure->price }})
+        </p>
         <br>
         <form>
 
@@ -17,10 +26,7 @@
 
                 <input type="text" class="form-control" id="" placeholder="Name*" name="name">
             </div>
-            {{-- <div class="form-group">
-
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Last Name*" >
-            </div> --}}
+           
             <div class="form-group">
 
                 <input type="text" class="form-control" id="inputAddress" placeholder="Email Address*" name="email">
@@ -31,19 +37,15 @@
             <div class="form-group">
                 <input type="text" class="form-control" id="inputAddress2" placeholder="Address*" style="address">
             </div>
-            <div class="form-row">
-                <div class="form-group col-md-6">
 
-                    <input type="text" class="form-control" id="inputEmail4" placeholder="Start Date*" name="start_date">
-                </div>
-                <div class="form-group col-md-6">
+            <div class="form-group">
 
-                    <input type="text" class="form-control" id="inputPassword4" placeholder="End Date*" name="end_date">
-                </div>
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Number of person" name="person">
             </div>
+            
 
             <div class="form-group ">
-                {{-- <label class="col-form-label col-md-2">Country</label> --}}
+               
                 <div class="">
                     <select class="form-control form-select" name="destination_id" style="border: none;background-color: #f7f6f4;">
                        

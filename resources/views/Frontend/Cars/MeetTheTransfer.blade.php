@@ -55,12 +55,12 @@
 
     <div class="container carMeet" style="align-items:center; text-align: center;">
         <div class="parent1">
-            <div class="divv1">
+            {{-- <div class="divv1">
                 <img src="https://www.hyundaicanada.com/-/media/hyundai/feature/homepage-carousel/2023_palisade/img_001_mobile.jpg" alt="">
             </div>
             <div class="divv2">
                 <img src="https://images.unsplash.com/photo-1494976388531-d1058494cdd8?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80" alt="">
-            </div>
+            </div> --}}
             </div>
         <br>
         <br>
