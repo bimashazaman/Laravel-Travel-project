@@ -82,8 +82,7 @@
 
                     <!--Google map-->
                     <div id="map-container-google-1" class="z-depth-1-half map-container" style="height: 500px">
-                        {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" style="border:0" allowfullscreen></iframe> --}}
+                       
                         <img src="{{ asset('images/map.png') }}" alt="">
                     </div>
 
@@ -125,7 +124,7 @@
     </section>
 
 
-
+    {{-- {{ dd($room->id) }} --}}
 
     <section class="tableOfPrice" style="background-color: #F5F5F5; padding:60px">
         <div class="container">
@@ -174,7 +173,8 @@
             </table>
 
         </div>
-        <a href="{{ url('/BookHotel') }}">
+      
+        <a href="{{ url('/BookARoom/'.$hotels->id) }}">
             <button class="package-view" style="text-align: center; align-items:center; margin:20px">
                 Book Now
             </button>

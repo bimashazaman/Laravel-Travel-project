@@ -414,6 +414,8 @@ class HotelController extends Controller
             ->inRandomOrder()
             ->simplePaginate(3);
 
+            $room = HotelRoom::find($id);
+
             $things = ThingsToDo::with('images')
             // ->random()
             // ->take(3)
@@ -424,6 +426,6 @@ class HotelController extends Controller
 
 
 
-        return view('Frontend.Hotels.Hotel', compact('hotels', 'foods','things'));
+        return view('Frontend.Hotels.Hotel', compact('hotels', 'foods','things','room'));
     }
 }
