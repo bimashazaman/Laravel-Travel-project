@@ -10,7 +10,9 @@ use App\Http\Controllers\BookATour;
 use App\Http\Controllers\BookATourController;
 use App\Http\Controllers\BookATourDepartureController;
 use App\Http\Controllers\BookingACarController;
+use App\Http\Controllers\BookingAccessioriesController;
 use App\Http\Controllers\BookingARoomController;
+use App\Http\Controllers\BookingMiceController;
 use App\Http\Controllers\BrochureController;
 use App\Http\Controllers\CarAirportController;
 use App\Http\Controllers\CarCmsController;
@@ -43,6 +45,7 @@ use App\Http\Controllers\UsefulInfoController;
 use App\Http\Controllers\VacancyCmsController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\WaysToBookController;
+use App\Models\BookingMice;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -627,6 +630,8 @@ Route::get('/BookATour/{id}', [BookATourController::class, 'BookATour']);
 Route::get('/BookATourDeparture/{id}/departure/{departureId}', [BookATourDepartureController::class, 'BookATour']);
 Route::get('/BookACar/{id}', [BookingACarController::class, 'BookACar']);
 Route::get('/BookARoom/{id}', [BookingARoomController::class, 'BookARoom']);
+Route::get('/BookATent/{id}', [BookingAccessioriesController::class, 'BookAcc']);
+Route::get('/BookMice/{id}', [BookingMiceController::class, 'BookMice']);
 
 
 

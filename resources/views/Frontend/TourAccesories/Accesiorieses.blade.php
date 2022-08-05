@@ -162,7 +162,9 @@
 
         </div>
         <button class="package-view" style="text-align: center; align-items:center; margin:20px">
-            Book Now
+            <a href="{{ url('/BookATent/'.$a->id) }}" style="color: black">
+                Book Now</a>
+           
         </button>
     </section>
 

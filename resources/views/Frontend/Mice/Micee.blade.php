@@ -129,7 +129,9 @@
 
     <section class="tableOfPrice">
         <button class="package-view" style="text-align: center; align-items:center; margin:20px">
-            Book Now
+            <a href="{{ url('/BookMice/'.$mice->id) }}">
+                Book Now</a>
+           
         </button>
     </section>
 
