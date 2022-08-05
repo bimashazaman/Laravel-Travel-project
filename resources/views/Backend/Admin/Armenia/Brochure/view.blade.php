@@ -30,7 +30,7 @@
                                     <th>Title</th>
                                     <th class="text-center">Created At</th>
                                    
-                                    <th class="text-end">Status</th>
+                                    {{-- <th class="text-end">Status</th> --}}
                                 </tr>
                             </thead>
                             <tbody>
@@ -38,13 +38,13 @@
                                
                                 <tr>
                                     <td class="text-nowrap">
-                                        {{ $b->title }}
+                                        {{ $b->name }}
                                     </td>
                                     <td class="text-center">
                                         {{ $b->created_at->diffForHumans() }}
                                     </td>
                                    
-                                    <td class="text-end">
+                                    {{-- <td class="text-end">
                                         <div class="font-weight-600 text-danger">
                                             <span>
                                                <a href="">
@@ -60,7 +60,7 @@
                                                 <button type="button" style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px;" class="btn btn-danger">Delete</button>
                                             </span>
                                         </div>
-                                    </td>
+                                    </td> --}}
                                 </tr>
                                
                                 @endforeach
