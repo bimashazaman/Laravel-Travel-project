@@ -12,6 +12,7 @@ use App\Models\TourFacility;
 use App\Models\TourHighlight;
 
 use App\Models\TourProgram;
+use App\Models\TourUseful;
 use App\Models\Type;
 use Exception;
 use Illuminate\Http\Request;
@@ -31,6 +32,7 @@ class TourController extends Controller
             $tours = Tour::with('images')
                 ->with('highlights')
                 ->with('facility')
+                ->with('useful')
                 ->where("category_id", $cat->id)
                 ->whereNull('deleted_at')
                 ->get();
@@ -123,22 +125,7 @@ class TourController extends Controller
                 $tour->images()->attach($image->id);
             
 
-                // //use intervention.io
-
-                // $imageOrignalName = $image->getClientOriginalName();
-                // $imageNameArray = explode('.', $imageOrignalName);
-                // $imageExtension = end($imageNameArray);
-                // $newImageName = now()->timestamp . "." . $imageExtension;
-                // $path = "tour/" . $tour->id . "/";
-                // $image->move($path, $newImageName);
-                // $image = new Image();
-                // $image["filename"] = $newImageName;
-                // $image["path"] = $path . $newImageName;
-                // $image->save();
-                // TourImage::create([
-                //     "tour_id" => $tour->id,
-                //     "image_id" => $image->id
-                // ]);
+               
             }
 
 
@@ -182,6 +169,7 @@ class TourController extends Controller
             $tour = Tour::with('images')
                 ->with('highlights')
                 ->with('program')
+                ->with('useful')
                 ->with('facility')
                 ->where("id", $id)
                 ->whereNull('deleted_at')
@@ -227,6 +215,7 @@ class TourController extends Controller
             $tour = Tour::with('images')
                 ->with('highlights')
                 ->with('program')
+                ->with('useful')
                 ->with('facility')
                 ->where("id", $id)
                 ->whereNull('deleted_at')
@@ -243,6 +232,50 @@ class TourController extends Controller
             // return self::failure("Error in adding tour highlight", $e->getMessage());
         }
     }
+
+
+    function adduseful(Request $request, $id)
+    {
+
+
+        $validate = Validator::make($request->all(), [
+            // "tour_id" => "required|integer",
+            "name" => "required"
+        ]);
+        if ($validate->fails()) {
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", $validate->errors()->first())
+                ->with("fail", true);
+
+            
+        }
+        try {
+            $tt = TourUseful::create([
+                "name" => $request->name,
+                "tour_id" => $id
+            ]);
+            // dd($tt);
+            $tour = Tour::with('images')
+                ->with('highlights')
+                ->with('program')
+                ->with('facility')
+                ->with('useful')
+                ->where("id", $id)
+                ->whereNull('deleted_at')
+                ->first();
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", "Added successfully!")
+                ->with("success", true)
+                ->with('tour', $tour);
+            // return self::success("Tour highlights added!", $tourHighlights);
+        } catch (Exception $e) {
+            return redirect("/admin/tours/detail/" . $id)
+                ->with("msg", $e->getMessage())
+                ->with("fail", true);
+            // return self::failure("Error in adding tour highlight", $e->getMessage());
+        }
+    }
+
 
 
     function addDeparture(Request $request, $id)
@@ -277,6 +310,7 @@ class TourController extends Controller
                 ->with('highlights')
                 ->with('program')
                 ->with('facility')
+                ->with('useful')
                 ->with('departureTable')
                 ->where("id", $id)
                 ->whereNull('deleted_at')
@@ -303,6 +337,7 @@ class TourController extends Controller
             $tour = Tour::with('images')
                 ->with('highlights')
                 ->with('facility')
+                ->with('useful')
                 ->with('program')
                 ->where("id", $highlight->tour_id)
                 ->whereNull('deleted_at')
@@ -348,6 +383,7 @@ class TourController extends Controller
                 ->with('highlights')
                 ->with('program')
                 ->with('facility')
+                ->with('useful')
                 ->where("id", $id)
                 ->whereNull('deleted_at')
                 ->first();
@@ -374,6 +410,7 @@ class TourController extends Controller
                 ->with('highlights')
                 ->with('facility')
                 ->with('program')
+                ->with('useful')
                 ->where("id", $tourFacility->tour_id)
                 ->whereNull('deleted_at')
                 ->first();
@@ -428,6 +465,7 @@ class TourController extends Controller
         $tour = Tour::with('images')
             ->with('highlights')
             ->with('facility')
+            ->with('useful')
             ->with('program')
             ->where("id", $id)
             ->whereNull('deleted_at')
@@ -452,6 +490,7 @@ class TourController extends Controller
             $tour = Tour::with('images')
                 ->with('highlights')
                 ->with('facility')
+                ->with('useful')
                 ->with('program')
                 ->where("id", $tourProgram->tour_id)
                 ->whereNull('deleted_at')
@@ -477,6 +516,7 @@ class TourController extends Controller
             ->with('highlights')
             ->with('facility')
             ->with('program')
+            ->with('useful')
             ->with('types')
             ->whereNull('deleted_at')
             ->where('id', $id)->first();
@@ -507,6 +547,7 @@ class TourController extends Controller
         $tour = Tour::with('images')
             ->with('highlights')
             ->with('facility')
+            ->with('useful')
             ->with('program')
             ->where('id', $id)
             ->first();
@@ -551,6 +592,7 @@ class TourController extends Controller
             $tours = Tour::with('images')
                 ->with('highlights')
                 ->with('facility')
+                ->with('useful')
                 ->where("category_id", $tour->category_id)
                 ->whereNull('deleted_at')
                 ->get();
@@ -582,6 +624,7 @@ class TourController extends Controller
             ->with('highlights')
             ->with('facility')
             ->with('program')
+            ->with('useful')
             ->orderby('created_at', 'desc')
             ->where("category_id", $id)
             ->whereNull('deleted_at')
@@ -598,6 +641,24 @@ class TourController extends Controller
         //     "tour" => $tour,
         //     "category" => $cat
         // ]);
+    }
+
+
+    public function deleteTourDeparture($id)
+    {
+        $tourDeparture = DepartureTable::where('id', $id)
+            ->first();
+        if ($tourDeparture) {
+            $tourDeparture->delete();
+            return redirect()->back()
+                ->with("msg", "Tour Departure Deleted!")
+                ->with("success", true);
+            // return self::success("Tour departure deleted");
+        }
+        return redirect()->back()
+            ->with("msg", "Not Found!")
+            ->with("fail", true);
+      
     }
 
 

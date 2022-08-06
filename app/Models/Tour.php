@@ -60,6 +60,11 @@ class Tour extends Model
        return $this->belongsTo(HomeTour::class, 'home_tours');
    }
 
+   public function useful()
+   {
+       return $this->hasMany(TourUseful::class, 'tour_id');
+   }
+
    
     
 

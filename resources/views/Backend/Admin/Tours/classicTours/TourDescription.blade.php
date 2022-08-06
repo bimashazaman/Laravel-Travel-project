@@ -2,15 +2,15 @@
 @section('admin-content')
     {{-- {{$tour}} --}}
 
-    @if(session('success'))
-<div class="alert alert-success">
-    {{session('msg')}}
-</div>
-@elseif(session('fail'))
-<div class="alert alert-danger">
-    {{session('msg')}}
-</div>
-@endif
+    @if (session('success'))
+        <div class="alert alert-success">
+            {{ session('msg') }}
+        </div>
+    @elseif(session('fail'))
+        <div class="alert alert-danger">
+            {{ session('msg') }}
+        </div>
+    @endif
 
 
     <div class="container-fluid">
@@ -67,20 +67,7 @@
         </div>
     </div>
 
-    {{-- <form action="">
-    <div class="upload__box">
-        <div class="upload__btn-box">
-          <label class="upload__btn">
-            <p>Upload images</p>
-            <input type="file" multiple="" data-max_length="20" class="upload__inputfile" name="images">
-          </label>
-        </div>
-        <div class="upload__img-wrap"></div>
-      </div>
-      <button type="submit" class="btn btn-primary">Submit</button>
 
-      
-    </form> --}}
 
     <div class="col-md-12">
 
@@ -122,14 +109,10 @@
                     <div class="col-md-2">
                         <div class="mb-3">
 
-                           @foreach ($tour->types as $t )
-                               {{ $t->type_name . ',' 
+                            @foreach ($tour->types as $t)
+                                {{ $t->type_name . ',' }}
+                            @endforeach
 
-                            }}
-
-                           
-                           @endforeach
-                          
                         </div>
                         <div class="mb-3">
                             {{ $tour->price }}
@@ -306,27 +289,81 @@
             </div>
 
             <div
+                style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+                <h3 class="">
+                    Add multiple type
+                </h3>
+                <hr>
+
+                <form action="{{ url('/admin/type/' . $tour->id) }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="">
+                        <div class="form-group row">
+                            {{-- <label class="col-form-label col-md-2">Tour Type</label> --}}
+                            <div class="col-md-10">
+                                <select class="form-control form-select" name="type_name">
+
+                                    @foreach ($type as $category)
+                                        <option value="{{ $category->type_name }}">{{ $category->type_name }}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                        <hr>
+                        <button class="btn btn-info text-white">
+                            Submit
+                        </button>
+                    </div>
+
+                </form>
+
+
+
+                <br>
+                <div class="list-group list-group-light">
+                    @foreach ($tour->facility as $tourFacility)
+                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                            style="display: flex">
+
+                            {{ $tourFacility->name }}
+                            <hr>
+
+
+                            {{-- {{ $tourFacility->unname }} --}}
+
+
+                            <form action="{{ url('/admin/facility/delete/' . $tourFacility->id) }}" method="POST"
+                                enctype="multipart/form-data">
+                                {{ csrf_field() }}
+                                {{ method_field('DELETE') }}
+
+                                <button type="submit" class="btn btn-danger btn-sm ">
+                                    Detete
+                                </button>
+                            </form>
+
+
+
+
+                        </div>
+                    @endforeach
+
+                </div>
+            </div>
+
+            <div
             style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
             <h3 class="">
-                Add multiple type
+                Add Useful info
             </h3>
             <hr>
 
-            <form action="{{ url('/admin/type/' . $tour->id) }}" method="POST" enctype="multipart/form-data">
+            <form action="{{ url('/admin/adduseful/' . $tour->id) }}" method="POST" enctype="multipart/form-data">
                 {{ csrf_field() }}
                 <div class="">
                     <div class="form-group row">
                         {{-- <label class="col-form-label col-md-2">Tour Type</label> --}}
-                        <div class="col-md-10">
-                            <select class="form-control form-select" name="type_name">
-                             
-                                @foreach($type as $category)
-                                <option
-
-                                value="{{$category->type_name}}">{{$category->type_name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
+                        <input type="text" class="form-control" placeholder="Add Info" name="name">
                     </div>
                     <hr>
                     <button class="btn btn-info text-white">
@@ -336,11 +373,11 @@
 
             </form>
 
-            
+
 
             <br>
             <div class="list-group list-group-light">
-                @foreach ($tour->facility as $tourFacility)
+                @foreach ($tour->useful as $tourFacility)
                     <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
                         style="display: flex">
 
@@ -348,28 +385,12 @@
                         <hr>
 
 
-                        {{-- {{ $tourFacility->unname }} --}}
-
-
-                        <form action="{{ url('/admin/facility/delete/' . $tourFacility->id) }}" method="POST"
-                            enctype="multipart/form-data">
-                            {{ csrf_field() }}
-                            {{ method_field('DELETE') }}
-
-                            <button type="submit" class="btn btn-danger btn-sm ">
-                                Detete
-                            </button>
-                        </form>
-
-
-
-
                     </div>
                 @endforeach
 
             </div>
         </div>
-         
+
         </div>
         <div class="col-md-4">
             <div
@@ -466,7 +487,7 @@
 
                                 </div>
                                 <div style="float: right">
-                                    <form action="" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ url('/admin/departure/delete/'.$tour->id) }}" method="POST" enctype="multipart/form-data">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
 
@@ -486,6 +507,4 @@
         </div>
 
     </div>
-
- 
 @endsection

@@ -6,7 +6,6 @@ use App\Http\Controllers\AccessioriesController;
 use App\Http\Controllers\ActiveTour;
 use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogCmsController;
-use App\Http\Controllers\BookATour;
 use App\Http\Controllers\BookATourController;
 use App\Http\Controllers\BookATourDepartureController;
 use App\Http\Controllers\BookingACarController;
@@ -45,7 +44,6 @@ use App\Http\Controllers\UsefulInfoController;
 use App\Http\Controllers\VacancyCmsController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\WaysToBookController;
-use App\Models\BookingMice;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -177,15 +175,17 @@ Route::delete("/admin/tour/delete/{id}", [TourController::class, "destroy"])->na
 Route::get('/admin/UpdateTourPage/{id}', [TourController::class, 'edit']);
 Route::put('/admin/tour/update/{id}', [TourController::class, 'update']);
 Route::post("/admin/highlight/{id}", [TourController::class, "addTourHighlights"])->name('addHighlight');
+Route::post("/admin/adduseful/{id}", [TourController::class, "adduseful"])->name('adduseful');
 Route::post("/admin/departure/{id}", [TourController::class, "addDeparture"])->name('addDeparture');
+
 Route::post("/admin/facility/{id}", [TourController::class, "addTourFacility"])->name('addFacility');
 Route::post("/admin/tourprogram/{id}", [TourController::class, "addTourProgram"])->name('addTourProgram');
 Route::delete("/admin/highlight/delete/{id}", [TourController::class, "deleteHighlights"])->name('highlightDelete');
 Route::delete("/admin/facility/delete/{id}", [TourController::class, "deleteTourFacility"])->name('facilityDelete');
 Route::delete("/admin/tourprogram/delete/{id}", [TourController::class, "deleteTourProgram"])->name('tourProgramDelete');
+Route::delete("/admin/departure/delete/{id}", [TourController::class, "deleteTourDeparture"])->name('deleteTourDeparture');
 Route::get('/getTourByCategory/{id}', [TourController::class, 'getToursByCategory']);
 Route::post("/admin/type/{id}", [TourController::class, "type"])->name('type');
-
 Route::get('/check', [TourController::class, 'index']);
 Route::post('/checkpost', [TourController::class, 'checkStore']);
 

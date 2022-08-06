@@ -396,7 +396,32 @@
                 </div>
 
             </div>
-            <img src="{{ asset('images/tt.png') }}" alt="" style="width:100%">
+            {{-- <img src="{{ asset('images/tt.png') }}" alt="" style="width:100%"> --}}
+            <div class="row" style="padding: 47px">
+                <div class="col-md-6">
+                    <h3 style="color: white">
+                        Useful To Know
+                    </h3>
+                    <br>
+                    <ul style="list-style: none">
+                        @foreach ($tour->useful as $u)
+                            
+                       
+                        <li style="color: white; letter-spacing:2%; font-size:16px;">
+                            <span>
+                                <img src="{{ asset('images/tp.png') }}" alt="">
+                            </span>
+                            <span>
+                                {{ $u->name }}
+                            </span>
+                        </li>
+                        @endforeach
+                    </ul>
+                </div>
+                <div class="col-md-6">
+                    <img src="{{ asset('images/2.png') }}" alt="">
+                </div>
+            </div>
         </div>
 
     </section>

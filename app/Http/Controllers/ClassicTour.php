@@ -33,6 +33,7 @@ class ClassicTour extends Controller
             ->with('facility')
             ->with('program')
             ->with('types')
+            ->with('useful')
             ->with('departureTable')
             ->where('id', $id)->first();
         $category = TourCategory::where('id', 1)->first();
