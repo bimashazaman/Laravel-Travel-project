@@ -65,6 +65,11 @@ class Tour extends Model
        return $this->hasMany(TourUseful::class, 'tour_id');
    }
 
+    public function booking()
+    {
+         return $this->hasMany(BookATour::class, 'tour_id');
+    }
+
    
     
 

@@ -12,8 +12,6 @@ class CreateBookAToursTable extends Migration
         Schema::create('book_a_tours', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('tour_id')->nullable();
-            $table->unsignedBigInteger('type_id')->nullable();
-            $table->unsignedBigInteger('destination_id')->nullable();
             $table->string('name');
             $table->string('email');
             $table->string('phone');

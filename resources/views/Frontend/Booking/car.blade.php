@@ -13,6 +13,8 @@
         <br>
         <form>
 
+            {{ csrf_field() }}
+
             <div class="form-group">
 
                 <input type="text" class="form-control" id="" placeholder="First Name*">

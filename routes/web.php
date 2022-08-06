@@ -626,11 +626,31 @@ Route::get('/driver', [CarWithDriverController::class, 'getAll']);
 
 //=======Book==========
 
+
+//==========Book Tour=========
 Route::get('/BookATour/{id}', [BookATourController::class, 'BookATour']);
+Route::post('/BookATour/store/{id}', [BookATourController::class, 'store']);
+
+
+
+//==========Book Departure=========
 Route::get('/BookATourDeparture/{id}/departure/{departureId}', [BookATourDepartureController::class, 'BookATour']);
+
+
+
+//==========Book Car=========
 Route::get('/BookACar/{id}', [BookingACarController::class, 'BookACar']);
+
+
+//==========Book Room=========
 Route::get('/BookARoom/{id}', [BookingARoomController::class, 'BookARoom']);
+
+
+//==========Book Acc=========
 Route::get('/BookATent/{id}', [BookingAccessioriesController::class, 'BookAcc']);
+
+
+//==========Book Mice=========
 Route::get('/BookMice/{id}', [BookingMiceController::class, 'BookMice']);
 
 
