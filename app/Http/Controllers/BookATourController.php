@@ -30,7 +30,7 @@ class BookATourController extends Controller
             'start_date' => 'required',
             'end_date' => 'required',
             'subject' => 'required',
-            'message' => 'required',
+            // 'message' => 'required',
 
         ]);
 
@@ -43,7 +43,7 @@ class BookATourController extends Controller
             'start_date' => $request->start_date,
             'end_date' => $request->end_date,
             'subject' => $request->subject,
-            'message' => $request->message,
+            // 'message' => $request->message,
             'tour_id' => $id,
         ]);
 
@@ -61,7 +61,7 @@ class BookATourController extends Controller
             'start_date' => $request->start_date,
             'end_date' => $request->end_date,
             'subject' => $request->subject,
-            'message' => $request->message,
+            // 'message' => $request->message,
             'tour_id' => $tour->name,
         ];
 
@@ -73,12 +73,13 @@ class BookATourController extends Controller
             'start_date' => $request->start_date,
             'end_date' => $request->end_date,
             'subject' => $request->subject,
-            'message' => $request->message,
+            // 'message' => $request->message,
             'tour_id' => $tour->name,
         
         ), function( $data) use ($request){
+            $tour = Tour::find($request->id);
              $data->from($request->email);
-             $data->to('developerbimasha@gmail.com')->subject($request->get('subject'));
+             $data->to('developerbimasha@gmail.com')->subject('Booking Tour for ' . $tour->name);
         });
        
 

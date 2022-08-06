@@ -18,8 +18,7 @@ class CreateBookAToursTable extends Migration
             $table->string('address');
             $table->string('start_date');
             $table->string('end_date');
-            $table->string('subject');
-            $table->string('message');
+            $table->text('subject');
             $table->timestamps();
         });
     }

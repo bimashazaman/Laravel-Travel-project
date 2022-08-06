@@ -56,13 +56,13 @@
 
             <div class="form-group">
 
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Subject" name="subject">
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Write a message" name="subject">
             </div>
            
-            <div class="form-group">
+            {{-- <div class="form-group">
 
                 <input type="text" class="form-control" id="inputAddress2" placeholder="Messege" name="message">
-            </div>
+            </div> --}}
 
             <button type="submit" class="package-view">Submit</button>
         </form>
