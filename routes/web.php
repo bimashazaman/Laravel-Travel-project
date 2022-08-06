@@ -635,7 +635,7 @@ Route::post('/BookATour/store/{id}', [BookATourController::class, 'store']);
 
 //==========Book Departure=========
 Route::get('/BookATourDeparture/{id}/departure/{departureId}', [BookATourDepartureController::class, 'BookATour']);
-
+Route::post('/BookATour/store/{id}/departure/{departureId}', [BookATourDepartureController::class, 'store']);
 
 
 //==========Book Car=========

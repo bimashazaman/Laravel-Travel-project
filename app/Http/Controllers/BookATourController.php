@@ -93,7 +93,7 @@ class BookATourController extends Controller
 
         return redirect()
         ->back()
-        ->with("msg", "Added successfully!")
+        ->with("msg", "Thanks for booking! We will contact you soon.")
         ->with("success", true);
     }
 }

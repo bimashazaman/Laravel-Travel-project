@@ -10,4 +10,11 @@ class BookATourDeparture extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+
+    public function tour()
+    {
+        return $this->belongsTo(Tour::class);
+    }
+    
 }
