@@ -3,9 +3,10 @@
 namespace App\Http\Controllers;
 
 use App\Models\BookingACar;
+use App\Models\Car;
 use App\Models\Vehicle;
 use Illuminate\Http\Request;
-
+use Illuminate\Support\Facades\Mail as FacadesMail;
 use Mail;
 
 class BookingACarController extends Controller
@@ -18,34 +19,67 @@ class BookingACarController extends Controller
         return view('Frontend.Booking.car', compact('car'));
     }
 
-    // public function storeContactForm(Request $request)
-    // {
-    //     $request->validate([
-    //         'name' => 'required',
-    //         'email' => 'required|email',
-    //         'phone' => 'required|digits:10|numeric',
-    //         'subject' => 'required',
-    //         'message' => 'required',
-    //     ]);
+    public function store(Request $request, $id)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
+            'subject' => 'required',
+            // 'message' => 'required',
 
-    //     $input = $request->all();
+        ]);
 
-    //     BookingACar::create($input);
+        //use create method to create a new record in database
+        $bookACar = BookingACar::create([
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
+            'subject' => $request->subject,
+            // 'message' => $request->message,
+            'vehicle_id' => $id,
+        ]);
 
-    //     //  Send mail to admin
-    //     \Mail::send('developerbimasha@gmail.com', array(
-    //         'name' => $request->get('name'),
-    //         'email' => $request->get('email'),
-    //         'phone' => $request->get('phone'),
-    //         'subject' => $request->get('subject'),
-    //         'message' => $request->get('message'),
         
-    //     ), function($message) use ($request){
-    //         $message->from($request->email);
-    //         $message->to('developerbimasha@gmail.com', 'Admin')->subject($request->get('subject'));
-    //     });
 
-    //     return redirect()->back()->with(['success' => 'Contact Form Submit Successfully']);
-    // }
+        $car = Vehicle::find($id);
+        
 
+
+        $data = [
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
+            'subject' => $request->subject,
+            'vehicle_id' => $car->name,
+        ];
+
+            FacadesMail::send('Frontend.Booking.CarEmail', array(
+            'name' => $request->name,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
+            'subject' => $request->subject,
+            'vehicle_id' => $car->name,
+        
+        ), function( $data) use ($request){
+            $car = Vehicle::find($request->id);
+             $data->from($request->email);
+             $data->to('developerbimasha@gmail.com')->subject('Booking Car for ' . $car->name);
+        });
+       
+        return redirect()
+        ->back()
+        ->with("msg", "Thanks for booking! We will contact you soon.")
+        ->with("success", true);
+    }
+
+   
 }

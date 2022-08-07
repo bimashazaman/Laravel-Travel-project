@@ -43,6 +43,15 @@
 
                     <div class="form-group row">
                         <label class="col-form-label col-md-2">
+                            Car overview
+                        </label>
+                        <div class="col-md-10">
+                            <input value="{{ $car->overview }}" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="overview">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">
                             Car Type
                         </label>
                         <div class="col-md-10">

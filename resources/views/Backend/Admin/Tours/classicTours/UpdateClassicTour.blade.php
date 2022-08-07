@@ -37,13 +37,13 @@
                                     type="text" class="form-control" name="name">
                             </div>
                         </div>
-                        <div class="form-group row">
+                        {{-- <div class="form-group row">
                             <label class="col-form-label col-md-2">Tour Type</label>
                             <div class="col-md-10">
                                 <input value="{{ $tour->type }}" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;"
                                     type="text" class="form-control" name="type">
                             </div>
-                        </div>
+                        </div> --}}
                         <div class="form-group row">
                             <label class="col-form-label col-md-2">Description</label>
                             <div class="col-md-10">

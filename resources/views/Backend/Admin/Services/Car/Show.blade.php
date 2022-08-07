@@ -8,6 +8,11 @@
 
             Car Description
         </h2>
+        <center>
+            <p>
+                {{ $car->overview }}
+            </p>
+        </center>
         <div class="row">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="padding: 100px">
                 <div class="carousel-inner" style="width: 69%;margin: auto;">

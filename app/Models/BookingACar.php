@@ -10,4 +10,9 @@ class BookingACar extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    public function vehicle()
+    {
+        return $this->belongsTo(Vehicle::class);
+    }
 }

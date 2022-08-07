@@ -640,6 +640,8 @@ Route::post('/BookATour/store/{id}/departure/{departureId}', [BookATourDeparture
 
 //==========Book Car=========
 Route::get('/BookACar/{id}', [BookingACarController::class, 'BookACar']);
+Route::post('/BookACar/store/{id}', [BookingACarController::class, 'store']);
+
 
 
 //==========Book Room=========

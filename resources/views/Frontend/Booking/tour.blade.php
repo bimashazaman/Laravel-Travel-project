@@ -51,6 +51,10 @@
                     <input type="text" class="form-control" id="inputPassword4" placeholder="End Date*" name="end_date">
                 </div>
             </div>
+            <div class="form-group">
+
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Number of person" name="persons">
+            </div>
 
         
 

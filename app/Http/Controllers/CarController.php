@@ -35,6 +35,7 @@ class CarController extends Controller
     {
         $validate = Validator::make($request->all(), [
             'name' => 'required',
+            'overview' => 'required',
             'car_type' => 'required',
             'car_model' => 'required',
             'images' => 'required',
@@ -58,6 +59,7 @@ class CarController extends Controller
             
             $vehicle = Vehicle::create([
                 'name' => $request->name,
+                'overview' => $request->overview,
                 'car_type' => $request->car_type,
                 'car_model' => $request->car_model,
                 'seats' => $request->seats,
@@ -101,7 +103,7 @@ class CarController extends Controller
             DB::commit();
             // return self::success("Tour added successfully!", ["data" => $image]);
             return redirect()
-            >back()
+            ->back()
             ->with("msg", "Car added successfully!")
             ->with("success", true);
         } catch (Exception $e) {
@@ -140,6 +142,7 @@ class CarController extends Controller
         $validate = Validator::make($request->all(), [
             'name' => 'required',
             'car_type' => 'required',
+            'overview' => 'required',
             'car_model' => 'required',
             'images' => '',
             'daily_price' => 'required',

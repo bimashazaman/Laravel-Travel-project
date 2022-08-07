@@ -30,13 +30,16 @@ class Vehicle extends Model
     }
 
 
+    public function booking()
+    {
+        return $this->hasMany(BookingACar::class);
+    }
 
 
 
-    // public function vehicleImages()
-    // {
-    //     return $this->hasMany(VehicleImage::class);
-    // }
+
+
+  
 
   
 
