@@ -37,6 +37,7 @@
     </div>
 
 
+@if (count($carAirports) > 0)
 
 <div class="rentCar">
     <p class="headlineRent">
@@ -73,9 +74,17 @@
        
         @endforeach
 
-        <button class="package-view">Send Request</button>
+        <button class="package-view">
+            <a href="{{ url('/BookACar/') }}" style="color: black">
+            Send Request
+        </a>
+    </button>
+
     </div>
 </div>
+
+    
+@endif
 
 <br>
 <br>

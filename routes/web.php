@@ -8,6 +8,7 @@ use App\Http\Controllers\AdminController;
 use App\Http\Controllers\BlogCmsController;
 use App\Http\Controllers\BookATourController;
 use App\Http\Controllers\BookATourDepartureController;
+use App\Http\Controllers\BookingACarAtAirportController;
 use App\Http\Controllers\BookingACarController;
 use App\Http\Controllers\BookingACarWithDriverController;
 use App\Http\Controllers\BookingAccessioriesController;
@@ -643,9 +644,14 @@ Route::post('/BookATour/store/{id}/departure/{departureId}', [BookATourDeparture
 Route::get('/BookACar/{id}', [BookingACarController::class, 'BookACar']);
 Route::post('/BookACar/store/{id}', [BookingACarController::class, 'store']);
 
+
+// =========Book Car With Driver=========
 Route::get('/BookACar/', [BookingACarWithDriverController::class, 'BookACar']);
 Route::post('/BookACar/store', [BookingACarWithDriverController::class, 'store']);
 
+//==========Book a car at airport=========
+Route::get('/BookACar/', [BookingACarAtAirportController::class, 'BookACar']);
+Route::post('/BookACar/store', [BookingACarAtAirportController::class, 'store']);
 
 
 //==========Book Room=========

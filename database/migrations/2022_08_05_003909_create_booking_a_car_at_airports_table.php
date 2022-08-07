@@ -15,6 +15,13 @@ class CreateBookingACarAtAirportsTable extends Migration
     {
         Schema::create('booking_a_car_at_airports', function (Blueprint $table) {
             $table->id();
+            // $table->unsignedBigInteger('vehicle_id')->nullable();
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('start_date');
+            $table->string('end_date');
+            $table->string('subject');
             $table->timestamps();
         });
     }
