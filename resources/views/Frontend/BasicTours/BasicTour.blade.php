@@ -32,7 +32,7 @@
 
                             <section class="" style="">
                                 <div class="imgCcontainer">
-                                    <div class="carousel imgC"  data-ride="carousel">
+                                    <div class="carousel imgC" data-ride="carousel">
                                         @foreach ($tour->images as $item)
                                             <input type="radio" name="slides" checked="checked"
                                                 id="slide-{{ $item->id }}">
@@ -54,11 +54,11 @@
 
                                             @foreach ($tour->images as $item)
                                                 {{-- @if ($item->id != $tour->images->first()->id) --}}
-                                                    <li data-interval="1000">
-                                                        <label for="slide-{{ $item->id }}"><img
-                                                                src="{{ asset($item->path) }}" alt="">
-                                                        </label>
-                                                    </li>
+                                                <li data-interval="1000">
+                                                    <label for="slide-{{ $item->id }}"><img
+                                                            src="{{ asset($item->path) }}" alt="">
+                                                    </label>
+                                                </li>
                                                 {{-- @endif --}}
                                             @endforeach
                                         </ul>
@@ -66,19 +66,21 @@
                                 </div>
                             </section>
 
-                            <div class="uldescription">
-                                <h2>Highlights</h2>
-                                <br>
-                                <ul style="list-style: none;">
-                                    @foreach ($tour->highlights as $h)
-                                        <li style="font-weight: 500; font-size:17px">
-                                            {{ $h->name }}
-                                        </li>
-                                    @endforeach
+                            @if (count($tour->highlights) > 0)
+                                <div class="uldescription">
+                                    <h2>Highlights</h2>
+                                    <br>
+                                    <ul style="list-style: none;">
+                                        @foreach ($tour->highlights as $h)
+                                            <li style="font-weight: 500; font-size:17px">
+                                                {{ $h->name }}
+                                            </li>
+                                        @endforeach
 
 
-                                </ul>
-                            </div>
+                                    </ul>
+                                </div>
+                            @endif
 
 
 
@@ -98,7 +100,8 @@
                         {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
                             frameborder="0" style="border:0" allowfullscreen></iframe> --}}
 
-                        <img src="https://www.google.com/maps/d/thumbnail?mid=1Xj7FvDEIi701cgUemkAj9Vk8Voo&hl=en_US" alt="" style="    height: 455px">
+                        <img src="https://www.google.com/maps/d/thumbnail?mid=1Xj7FvDEIi701cgUemkAj9Vk8Voo&hl=en_US"
+                            alt="" style="    height: 455px">
 
 
 
@@ -130,13 +133,9 @@
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-calendar-check"></i>Type</div>
                         <div>
-                            @foreach ($tour->types as $t )
-                            {{ $t->type_name . ' ' 
-
-                         }}
-
-                        
-                        @endforeach
+                            @foreach ($tour->types as $t)
+                                {{ $t->type_name . ' ' }}
+                            @endforeach
                         </div>
                     </div>
 
@@ -176,98 +175,100 @@
 
 
     <div class="container-fluid" style="background-color: #EEF0ED; padding-left: 40px; padding-right:40px">
-        <div class="col-md-6">
-            <h3 style="margin-left: 40px; margin-top: 10px">
-                Tour Program
-            </h3>
-            <br>
+        @if (count($tour->program) > 0)
+            <div class="col-md-6">
+                <h3 style="margin-left: 40px; margin-top: 10px">
+                    Tour Program
+                </h3>
+                <br>
 
-            <div class="" style="display: flex">
+                <div class="" style="display: flex">
 
-                <img src="{{ asset('images/timeline.png') }}" alt="" style="margin-left: 19px;">
+                    <img src="{{ asset('images/timeline.png') }}" alt="" style="margin-left: 19px;">
 
-                <div>
-                    @foreach ($tour->program as $p)
-                        <h3>
-                            {{ $p->day }}
-                        </h3>
-                        <p style="color: black">
-                            {{ $p->fromTo }}
-                        </p>
-                        <div class="single-row">
-                            <input name="collapsable" type="radio" id="col-{{ $p->id }}" class="opener" />
-                            <label for="col-{{ $p->id }}">
-                                <div class="content">
-                                    <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
-                                        {{ $p->description }}
-                                    </p>
+                    <div>
+                        @foreach ($tour->program as $p)
+                            <h3>
+                                {{ $p->day }}
+                            </h3>
+                            <p style="color: black">
+                                {{ $p->fromTo }}
+                            </p>
+                            <div class="single-row">
+                                <input name="collapsable" type="radio" id="col-{{ $p->id }}" class="opener" />
+                                <label for="col-{{ $p->id }}">
+                                    <div class="content">
+                                        <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
+                                            {{ $p->description }}
+                                        </p>
 
-                                    <br>
-                                    <div style="display: flex" style="font-size: 1.5rem;font-weight:500 ">
-                                        <span style="font-weight:600"><i class="fa-solid fa-road"
-                                                style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
-                                            {{ $p->distance }}</span>
-                                        <span style="font-weight:600"><i class="fa-regular fa-clock"
-                                                style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
-                                            {{ $p->duration }}</span>
-                                        <span style="font-weight:600"><i class="fa-solid fa-burger"
-                                                style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
-                                            {{ $p->food }}</span>
-                                        <span style="font-weight:600"><i class="fa-regular fa-bed"
-                                                style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
-                                            {{ $p->location }}</span>
+                                        <br>
+                                        <div style="display: flex" style="font-size: 1.5rem;font-weight:500 ">
+                                            <span style="font-weight:600"><i class="fa-solid fa-road"
+                                                    style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
+                                                {{ $p->distance }}</span>
+                                            <span style="font-weight:600"><i class="fa-regular fa-clock"
+                                                    style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
+                                                {{ $p->duration }}</span>
+                                            <span style="font-weight:600"><i class="fa-solid fa-burger"
+                                                    style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
+                                                {{ $p->food }}</span>
+                                            <span style="font-weight:600"><i class="fa-regular fa-bed"
+                                                    style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
+                                                {{ $p->location }}</span>
+                                        </div>
                                     </div>
-                                </div>
 
-                                <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}"
-                                        class="arrow" alt=""></span>
+                                    <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}"
+                                            class="arrow" alt=""></span>
 
 
-                            </label>
-                        </div>
-                    @endforeach
-                    <br>
+                                </label>
+                            </div>
+                        @endforeach
+                        <br>
+
+                    </div>
+
+
+
 
                 </div>
 
-
-
-
             </div>
+        @endif
+        @if (count($tour->facility) > 0)
+            <div class="col-md-6">
+                {{-- <img src="{{ asset('images/i.png') }}" alt="" style="width: 80%"> --}}
+                <br>
+                <h3 style="padding-left: 90px">
+                    What is included
+                </h3>
+                <br>
+                <ul style="list-style: none; padding-left: 90px">
 
-        </div>
-        <div class="col-md-6">
-            {{-- <img src="{{ asset('images/i.png') }}" alt="" style="width: 80%"> --}}
-            <br>
-            <h3 style="padding-left: 90px">
-                What is included
-            </h3>
-            <br>
-            <ul style="list-style: none; padding-left: 90px">
-
-                @foreach ($tour->facility as $i)
-                    <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span>
-                        {{ $i->name }}</li>
-                @endforeach
-                {{-- //dont show any null value --}}
-                {{-- @if ($tour->facility->count() == 0)
-                            <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span>
-                                No facility</li> --}}
-
-
-                @if ($tour->facility->count() > 0)
                     @foreach ($tour->facility as $i)
-                        <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
-                                    style="width: 20px; margin-right: 10px;"></span>{{ $i->unname }}</li>
+                        <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span>
+                            {{ $i->name }}</li>
                     @endforeach
-                @endif
 
 
 
-            </ul>
-            <br>
-            <br>
-        </div>
+                    @if ($tour->facility->count() > 0)
+                        @foreach ($tour->facility as $i)
+                            <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
+                                        style="width: 20px; margin-right: 10px;"></span>{{ $i->unname }}</li>
+                        @endforeach
+                    @endif
+
+
+
+                </ul>
+                <br>
+                <br>
+            </div>
+        @endif
+
     </div>
 
 
@@ -322,106 +323,112 @@
                     </div>
                     <div class="col-md-3">
                         <span><button class="package-view" style="margin-top: 80px;">
-                        <a href="{{ url('/BookATour/'.$tour->id) }}" style="color: black">
-                            Book Now
-                        </a>
-                        </button></span>
-                    </div>
-                </div>
-
-                <br>
-                <br>
-                <div class="row">
-                    <div class="col-md-10">
-                        <table class="table table-bordered tble" style="width: 100%; margin-top: 20px;">
-                            <h3 style="text-align: center">
-                                The Tours with guaranteed departures
-                            </h3>
-                            <br>
-                            <thead>
-                                <tr>
-                                    <th
-                                        style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                        Start Date
-                                    </th>
-                                    <th
-                                        style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                        End Date
-                                    </th>
-                                    <th
-                                        style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                        Max in the group
-                                    </th>
-                                    <th
-                                        style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                        Price
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                @foreach ($tour->departureTable as $d)
-                                    <tr>
-                                        <td style="padding: 15px;">{{ $d->start_date }}</td>
-                                        <td style="padding: 15px;"> {{ $d->end_date }}</td>
-                                        <td style="padding: 15px;">{{ $d->pax }}</td>
-                                        <td style="padding: 15px;">{{ $d->price }}</td>
-
-                                    </tr>
-                                @endforeach
-
-
-                            </tbody>
-                        </table>
-                    </div>
-
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-                    <br>
-
-
-                    <div class="col-md-2" style="display: block">
-
-                        @foreach ($tour->departureTable as $d)
-                            <button class="package-view" style="margin-top: 10px;">
-                                <a href="{{ url('/BookATourDeparture/'.$tour->id.'/departure/'.$d->id) }}" style="color: black">
+                                <a href="{{ url('/BookATour/' . $tour->id) }}" style="color: black">
                                     Book Now
-                                    {{ $d->id }}
                                 </a>
-                                </button>
-                        @endforeach
+                            </button></span>
                     </div>
                 </div>
+
+                <br>
+                <br>
+                @if (count($tour->departureTable) > 0)
+                    <div class="row">
+                        <div class="col-md-10">
+                            <table class="table table-bordered tble" style="width: 100%; margin-top: 20px;">
+                                <h3 style="text-align: center">
+                                    The Tours with guaranteed departures
+                                </h3>
+                                <br>
+                                <thead>
+                                    <tr>
+                                        <th
+                                            style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
+                                            Start Date
+                                        </th>
+                                        <th
+                                            style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
+                                            End Date
+                                        </th>
+                                        <th
+                                            style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
+                                            Max in the group
+                                        </th>
+                                        <th
+                                            style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
+                                            Price
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    @foreach ($tour->departureTable as $d)
+                                        <tr>
+                                            <td style="padding: 15px;">{{ $d->start_date }}</td>
+                                            <td style="padding: 15px;"> {{ $d->end_date }}</td>
+                                            <td style="padding: 15px;">{{ $d->pax }}</td>
+                                            <td style="padding: 15px;">{{ $d->price }}</td>
+
+                                        </tr>
+                                    @endforeach
+
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+                        <br>
+
+
+                        <div class="col-md-2" style="display: block">
+
+                            @foreach ($tour->departureTable as $d)
+                                <button class="package-view" style="margin-top: 10px;">
+                                    <a href="{{ url('/BookATourDeparture/' . $tour->id . '/departure/' . $d->id) }}"
+                                        style="color: black">
+                                        Book Now
+                                        {{ $d->id }}
+                                    </a>
+                                </button>
+                            @endforeach
+                        </div>
+                    </div>
+                @endif
+
 
             </div>
             {{-- <img src="{{ asset('images/tt.png') }}" alt="" style="width:100%"> --}}
-            <div class="row" style="padding: 47px">
-                <div class="col-md-6">
-                    <h3 style="color: white">
-                        Useful To Know
-                    </h3>
-                    <br>
-                    <ul style="list-style: none">
-                        @foreach ($tour->useful as $u)
-                            
-                       
-                        <li style="color: white; letter-spacing:2%; font-size:16px;">
-                            <span>
-                                <img src="{{ asset('images/tp.png') }}" alt="">
-                            </span>
-                            <span>
-                                {{ $u->name }}
-                            </span>
-                        </li>
-                        @endforeach
-                    </ul>
+
+            @if (count($tour->useful) > 0)
+                <div class="row" style="padding: 47px">
+                    <div class="col-md-6">
+                        <h3 style="color: white">
+                            Useful To Know
+                        </h3>
+                        <br>
+                        <ul style="list-style: none">
+                            @foreach ($tour->useful as $u)
+                                <li style="color: white; letter-spacing:2%; font-size:16px;">
+                                    <span>
+                                        <img src="{{ asset('images/tp.png') }}" alt="">
+                                    </span>
+                                    <span>
+                                        {{ $u->name }}
+                                    </span>
+                                </li>
+                            @endforeach
+                        </ul>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="{{ asset('images/2.png') }}" alt="">
+                    </div>
                 </div>
-                <div class="col-md-6">
-                    <img src="{{ asset('images/2.png') }}" alt="">
-                </div>
-            </div>
+            @endif
+
         </div>
 
     </section>
@@ -433,86 +440,87 @@
         <div class="container">
 
             <!--/.gallery-header-->
-            <div class="packages-content">
-                <center>
-                    <h2>
-                        Related Tours
-                    </h2>
-                    <br>
-                    <br>
-                </center>
-                <div class="row">
+            @if (count($relatedTour) > 0)
+                <div class="packages-content">
+                    <center>
+                        <h2>
+                            Related Tours
+                        </h2>
+                        <br>
+                        <br>
+                    </center>
+                    <div class="row">
 
-                    @foreach ($relatedTour as $r)
-                        
-                   
-                    <div class="col-md-4 col-sm-6">
-                        {{-- <h3 style="text-align: center;  font-weight: 600;">{{ $tour->category->name }}</h3> --}}
+                        @foreach ($relatedTour as $r)
+                            <div class="col-md-4 col-sm-6">
+                                {{-- <h3 style="text-align: center;  font-weight: 600;">{{ $tour->category->name }}</h3> --}}
 
-                        <div class="single-package-item">
+                                <div class="single-package-item">
 
-                            {{-- {{ var_dump($tour->image) }} --}}
 
-                            {{-- <img src="{{ asset($tour->images->first()->path) }}" --}}
+                                    <img src="{{ asset($r->images->first()->path) }}" alt="" style="width:100%">
+                                    {{-- alt="package-place"> --}}
+                                    <div class="packageName">
+                                        {{ $r->name }}
+                                    </div>
+                                    <div>
+                                        <h4 class="package-txt">
+                                            <a href="#">
+                                                {{ $r->type }}
+                                            </a>
+                                        </h4>
+                                        <p class="kki">
+                                            {{ $r->description }}
+                                        </p>
+                                    </div>
+                                    <div class="pacdet">
+                                        <div class="packageOffer">
+                                            <span><i class="fa-regular fa-clock"></i></span> {{ $r->duration }}
+                                        </div>
 
-                            {{-- Get the image by id --}}
-                            <img src="{{ asset($r->images->first()->path) }}" alt="" style="width:100%">
-                                {{-- alt="package-place"> --}}
-                            <div class="packageName">
-                               {{ $r->name }}
-                            </div>
-                            <div>
-                                <h4 class="package-txt">
-                                    <a href="#">
-                                       {{ $r->type }}
-                                    </a>
-                                </h4>
-                                <p class="kki">
-                                   {{ $r->description }}
-                                </p>
-                            </div>
-                            <div class="pacdet">
-                                <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> {{ $r->duration }}
+                                        <div class="packageOffer">
+                                            <span><i class="fa-solid fa-calendar-check"></i></span> {{ $r->start_date }} -
+                                            {{ $r->end_date }}
+                                        </div>
+
+                                        <div class="packageOffer">
+                                            <span><i class="fa-solid fa-dollar-sign"></i></span> {{ $r->price }}
+                                        </div>
+                                    </div>
+                                    <div class="rating">
+                                        <span class=""><i class="fa-solid fa-star"></i></span>
+                                        <span class=""><i class="fa-solid fa-star"></i></span>
+                                        <span class=""><i class="fa-solid fa-star"></i></span>
+                                        <span class=""><i class="fa-solid fa-star"></i></span>
+                                        <span class=""><i class="fa-solid fa-star"></i></span>
+                                    </div>
+                                    <div class="package-btn">
+                                        <a href="{{ url('/getClassicTour/' . $r->id) }}"> <button class="package-view">
+                                                Details
+                                            </button>
+                                        </a>
+
+                                    </div>
                                 </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> {{ $r->start_date }} - {{ $r->end_date }}
-                                </div>
-
-                                <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> {{ $r->price }}
-                                </div>
                             </div>
-                            <div class="rating">
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                                <span class=""><i class="fa-solid fa-star"></i></span>
-                            </div>
-                            <div class="package-btn">
-                                <a href="{{ url('/getClassicTour/' . $r->id) }}"> <button class="package-view">
-                                        Details
-                                    </button>
-                                </a>
+                        @endforeach
 
-                            </div>
-                        </div>
+
+                        <!--/.col-->
+
                     </div>
-                    @endforeach
-                   
-
-                    <!--/.col-->
-
+                    <!--/.row-->
                 </div>
-                <!--/.row-->
-            </div>
+            @endif
+
             <!--/.packages-content-->
         </div>
         <!--/.container-->
     </section>
 
+    @if (count($reviews) > 0)
+        
+   
 
     <div class="container-fluid">
         <h2 style="padding-left:44px">
@@ -520,47 +528,46 @@
         </h2>
         <div class="row" style="padding:60px">
             @foreach ($reviews as $r)
-                
-            
-            <div class="col-md-3 col-xs-12">
-                <img style="border-radius: 50%; width:26%"
-                    src="https://static.vecteezy.com/system/resources/thumbnails/004/511/281/small/default-avatar-photo-placeholder-profile-picture-vector.jpg"
-                    alt="">
-                <h5>
-                    {{ $r->name }}
-                </h5>
-                <h5>
-                    {{ $r->created_at->diffForHumans() }}
-                </h5>
-                <h5>
-                   {{ $r->title }}
-                </h5>
-                <br>
-                <h5>
-                    {{ $r->review }}
-                </h5>
-                <a href="" style="text-decoration: underline; color:rgb(86, 158, 241);">
-                    see more
-                </a>
-                <div class="rating">
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
-                    <span class=""><i class="fa-solid fa-star"></i></span>
+                <div class="col-md-3 col-xs-12">
+                    <img style="border-radius: 50%; width:26%"
+                        src="https://static.vecteezy.com/system/resources/thumbnails/004/511/281/small/default-avatar-photo-placeholder-profile-picture-vector.jpg"
+                        alt="">
+                    <h5>
+                        {{ $r->name }}
+                    </h5>
+                    <h5>
+                        {{ $r->created_at->diffForHumans() }}
+                    </h5>
+                    <h5>
+                        {{ $r->title }}
+                    </h5>
+                    <br>
+                    <h5>
+                        {{ $r->review }}
+                    </h5>
+                    <a href="" style="text-decoration: underline; color:rgb(86, 158, 241);">
+                        see more
+                    </a>
+                    <div class="rating">
+                        <span class=""><i class="fa-solid fa-star"></i></span>
+                        <span class=""><i class="fa-solid fa-star"></i></span>
+                        <span class=""><i class="fa-solid fa-star"></i></span>
+                        <span class=""><i class="fa-solid fa-star"></i></span>
+                        <span class=""><i class="fa-solid fa-star"></i></span>
+                    </div>
+
+
                 </div>
-
-
-            </div>
-
             @endforeach
-            
+
         </div>
         <div class="WR">
             <a class="WR" href="{{ url('/AddReview') }}" style="text-decoration:underline;">Write Review</a> <i
                 class="fa-solid fa-pen-clip" style="text-decoration: none"></i>
         </div>
     </div>
+
+    @endif
 
     <script>
         var arr = document.querySelector('.arrow');
@@ -569,7 +576,7 @@
         });
 
         $('.carousel').carousel({
-  interval: 2000
-})
+            interval: 2000
+        })
     </script>
 @endsection
