@@ -4,36 +4,45 @@
     @include('partials.DefaultBanner')
 </div>
 
+@if(session('success'))
+<div class="alert alert-success">
+    {{session('msg')}}
+</div>
+@elseif(session('fail'))
+<div class="alert alert-danger">
+    {{session('msg')}}
+</div>
+@endif
+
+
 
     <div class="RentForm">
 
         <h2>
-            Rent 
+            Rent a room
 
         </h2>
         <br>
         {{-- {{ dd($room) }} --}}
-        <form>
+        <form action="/BookARoom/store/{{ $hotel->id }}" method="POST" enctype="multipart/form-data">
+            {{csrf_field()}}
 
             <div class="form-group">
 
-                <input type="text" class="form-control" id="" placeholder="First Name*">
+                <input type="text" class="form-control" id="" placeholder="name" name="name">
+            </div>
+          
+            <div class="form-group">
+
+                <input type="text" class="form-control" id="inputAddress" placeholder="Email Address*" name="email">
             </div>
             <div class="form-group">
 
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Last Name*">
-            </div>
-            <div class="form-group">
-
-                <input type="text" class="form-control" id="inputAddress" placeholder="Email Address*">
-            </div>
-            <div class="form-group">
-
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Telephone*">
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Telephone*" name="phone">
             </div>
             <div class="form-group ">
                 <div class="">
-                    <select class="form-control form-select" name="" style="border: none;background-color: #f7f6f4;">
+                    <select class="form-control form-select" style="border: none;background-color: #f7f6f4;" name="room_id">
                         @foreach($room as $destination)
                         <option value="{{ $destination->id }}">{{$destination->name}}</option>
                         @endforeach
@@ -41,15 +50,27 @@
                 </div>
             </div>
 
-       
+            <div class="form-row">
+                <div class="form-group col-md-6">
+
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="Start Date*" name="start_date">
+                </div>
+                <div class="form-group col-md-6">
+
+                    <input type="text" class="form-control" id="inputPassword4" placeholder="End Date*" name="end_date">
+                </div>
+            </div>
+        
             <div class="form-group">
 
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Car Type*">
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Total persons*" name="persons">
             </div>
+
             <div class="form-group">
 
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Messege">
+                <input type="text" class="form-control" id="inputAddress2" placeholder="Write a message" name="subject">
             </div>
+            
 
             <button type="submit" class="package-view">Submit</button>
         </form>

@@ -650,12 +650,13 @@ Route::get('/BookACar/', [BookingACarWithDriverController::class, 'BookACar']);
 Route::post('/BookACar/store', [BookingACarWithDriverController::class, 'store']);
 
 //==========Book a car at airport=========
-Route::get('/BookACar/', [BookingACarAtAirportController::class, 'BookACar']);
-Route::post('/BookACar/store', [BookingACarAtAirportController::class, 'store']);
+Route::get('/BookACar/airport/at', [BookingACarAtAirportController::class, 'BookACar']);
+Route::post('/BookACar/airport/store', [BookingACarAtAirportController::class, 'store']);
 
 
 //==========Book Room=========
 Route::get('/BookARoom/{id}', [BookingARoomController::class, 'BookARoom']);
+Route::post('/BookARoom/store/{id}', [BookingARoomController::class, 'store']);
 
 
 //==========Book Acc=========

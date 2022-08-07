@@ -50,6 +50,17 @@
                 <input type="text" class="form-control" id="inputAddress2" placeholder="Address*" name="address">
             </div>
 
+            <div class="form-row">
+                <div class="form-group col-md-6">
+
+                    <input type="text" class="form-control" id="inputEmail4" placeholder="Start Date*" name="start_date">
+                </div>
+                <div class="form-group col-md-6">
+
+                    <input type="text" class="form-control" id="inputPassword4" placeholder="End Date*" name="end_date">
+                </div>
+            </div>
+
             <div class="form-group">
 
                 <input type="text" class="form-control" id="inputAddress2" placeholder="Number of person" name="persons">

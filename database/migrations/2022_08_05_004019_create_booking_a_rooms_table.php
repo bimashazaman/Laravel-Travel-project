@@ -15,6 +15,15 @@ class CreateBookingARoomsTable extends Migration
     {
         Schema::create('booking_a_rooms', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('room_id')->nullable();
+            $table->unsignedBigInteger('hotel_id')->nullable();
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('start_date');
+            $table->string('end_date');
+            $table->string('persons');
+            $table->string('subject');
             $table->timestamps();
         });
     }

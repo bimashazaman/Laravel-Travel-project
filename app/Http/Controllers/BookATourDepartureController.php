@@ -31,6 +31,8 @@ class BookATourDepartureController extends Controller
             'phone' => 'required',
             'address' => 'required',
             'persons' => 'required',
+            'start_date' => 'required',
+            'end_date' => 'required',
             'subject' => 'required',
             // 'message' => 'required',
 
@@ -42,8 +44,11 @@ class BookATourDepartureController extends Controller
             'email' => $request->email,
             'phone' => $request->phone,
             'address' => $request->address,
-           'persons' => $request->persons,
+            'persons' => $request->persons,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
             'subject' => $request->subject,
+            // 'message' => $request->message,
             'tour_id' => $id,
             'departure_id' => $departureId,
         ]);
@@ -60,6 +65,8 @@ class BookATourDepartureController extends Controller
             'phone' => $request->phone,
             'address' => $request->address,
             'persons' => $request->persons,
+            'start_date' => $request->start_date,
+            'end_date' => $request->end_date,
             'subject' => $request->subject,
             // 'message' => $request->message,
             'tour_id' => $tour->name,
@@ -67,19 +74,21 @@ class BookATourDepartureController extends Controller
         ];
 
             Mail::send('Frontend.Booking.departureEmail', array(
-            'name' => $request->name,
-            'email' => $request->email,
-            'phone' => $request->phone,
-            'address' => $request->address,
-            'persons' => $request->persons,
-            'subject' => $request->subject,
-            // 'message' => $request->message,
-            'tour_id' => $tour->name,
+                'name' => $request->name,
+                'email' => $request->email,
+                'phone' => $request->phone,
+                'address' => $request->address,
+                'persons' => $request->persons,
+                'start_date' => $request->start_date,
+                'end_date' => $request->end_date,
+                'subject' => $request->subject,
+                // 'message' => $request->message,
+                'tour_id' => $tour->name,
         
         ), function( $data) use ($request){
             $tour = Tour::find($request->id);
              $data->from($request->email);
-             $data->to('developerbimasha@gmail.com')->subject('Booking Tour for Guaranteed Departures ' . $tour->name);
+             $data->to('Sales.2expedition@gmail.com')->subject('Booking Tour for Guaranteed Departures ' . $tour->name);
         });
        
 

@@ -70,7 +70,7 @@ class BookingACarWithDriverController extends Controller
         ), function( $data) use ($request){
             // $car = Vehicle::find($request->id);
              $data->from($request->email);
-             $data->to('developerbimasha@gmail.com')->subject('Booking Car for with driver');
+             $data->to('Sales.2expedition@gmail.com')->subject('Booking Car for with driver');
         });
        
         return redirect()

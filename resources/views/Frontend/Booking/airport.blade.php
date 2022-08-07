@@ -26,7 +26,7 @@
             {{ $car->car_model }}
         </p> --}}
         <br>
-        <form action="/BookACar/store" method="POST" enctype="multipart/form-data">
+        <form action="/BookACar/airport/store" method="POST" enctype="multipart/form-data">
             {{csrf_field()}}
 
             

@@ -21,6 +21,8 @@ class CreateBookATourDeparturesTable extends Migration
             $table->string('email');
             $table->string('phone');
             $table->string('address');
+            $table->string('start_date');
+            $table->string('end_date');
             $table->string('persons');
             $table->string('subject');
             // $table->string('message');
