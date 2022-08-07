@@ -9,6 +9,7 @@ use App\Http\Controllers\BlogCmsController;
 use App\Http\Controllers\BookATourController;
 use App\Http\Controllers\BookATourDepartureController;
 use App\Http\Controllers\BookingACarController;
+use App\Http\Controllers\BookingACarWithDriverController;
 use App\Http\Controllers\BookingAccessioriesController;
 use App\Http\Controllers\BookingARoomController;
 use App\Http\Controllers\BookingMiceController;
@@ -641,6 +642,9 @@ Route::post('/BookATour/store/{id}/departure/{departureId}', [BookATourDeparture
 //==========Book Car=========
 Route::get('/BookACar/{id}', [BookingACarController::class, 'BookACar']);
 Route::post('/BookACar/store/{id}', [BookingACarController::class, 'store']);
+
+Route::get('/BookACar/', [BookingACarWithDriverController::class, 'BookACar']);
+Route::post('/BookACar/store', [BookingACarWithDriverController::class, 'store']);
 
 
 

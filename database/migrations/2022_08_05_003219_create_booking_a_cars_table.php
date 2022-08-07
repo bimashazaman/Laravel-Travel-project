@@ -21,9 +21,7 @@ class CreateBookingACarsTable extends Migration
             $table->string('phone');
             $table->string('start_date');
             $table->string('end_date');
-            // $table->string('type');
             $table->string('subject');
-            // $table->string('message');
             $table->timestamps();
         });
     }

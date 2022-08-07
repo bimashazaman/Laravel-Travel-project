@@ -6,24 +6,23 @@ use Illuminate\Support\Facades\Schema;
 
 class CreateBookingACarWithDriversTable extends Migration
 {
-    /**
-     * Run the migrations.
-     *
-     * @return void
-     */
+   
     public function up()
     {
         Schema::create('booking_a_car_with_drivers', function (Blueprint $table) {
             $table->id();
+            // $table->unsignedBigInteger('vehicle_id')->nullable();
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('start_date');
+            $table->string('end_date');
+            $table->string('subject');
             $table->timestamps();
         });
     }
 
-    /**
-     * Reverse the migrations.
-     *
-     * @return void
-     */
+  
     public function down()
     {
         Schema::dropIfExists('booking_a_car_with_drivers');

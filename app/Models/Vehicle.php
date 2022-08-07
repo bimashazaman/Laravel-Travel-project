@@ -35,6 +35,11 @@ class Vehicle extends Model
         return $this->hasMany(BookingACar::class);
     }
 
+    // public function bookingDriver()
+    // {
+    //     return $this->hasMany(BookingACarWithDriver::class);
+    // }
+
 
 
 

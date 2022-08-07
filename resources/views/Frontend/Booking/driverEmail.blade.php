@@ -6,7 +6,7 @@
 
 
 <p>
-    {{ $name }} has booked a Car for {{ $vehicle_id }}. Please review the details below. 
+    {{ $name }} has booked a Car with driver. Please review the details below. 
 </p>
 
 
