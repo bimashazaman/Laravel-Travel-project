@@ -20,6 +20,7 @@ use App\Http\Controllers\CarCmsController;
 use App\Http\Controllers\CarController;
 use App\Http\Controllers\CarWithDriverController;
 use App\Http\Controllers\ClassicTour;
+use App\Http\Controllers\ContactFormController;
 use App\Http\Controllers\DashboardController;
 use App\Http\Controllers\FoodArmeniaController;
 use App\Http\Controllers\FrontendController;
@@ -46,6 +47,7 @@ use App\Http\Controllers\UsefulInfoController;
 use App\Http\Controllers\VacancyCmsController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\WaysToBookController;
+use App\Models\ContactForm;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 
@@ -611,9 +613,7 @@ Route::get('/article', function () {
 
 
 
-Route::get('/contact', function () {
-    return view('Frontend.Contact.Contact');
-});
+
 
 Route::get('/BookHotel', function () {
     return view('Frontend.Hotels.BookHotelForm');
@@ -668,6 +668,11 @@ Route::post('/BookATent/store/{id}', [BookingAccessioriesController::class, 'sto
 Route::get('/BookMice/{id}', [BookingMiceController::class, 'BookMice']);
 Route::post('/BookMice/store/{id}', [BookingMiceController::class, 'store']);
 
+
+//======Contact Us=======
+
+Route::post('/contact/store', [ContactFormController::class, 'store']);
+Route::get('/contact', [ContactFormController::class, 'index']);
 
 
 
