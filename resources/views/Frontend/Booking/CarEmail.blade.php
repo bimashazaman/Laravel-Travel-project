@@ -18,7 +18,7 @@ Email:  {{ $email }}<br>
 Phone:  {{ $phone }}<br>
 Start Date:  {{ $start_date }}<br>
 End Date:  {{ $end_date }}<br>
-Subject:  {{ $subject }}<br>
+{{-- Subject:  {{ $subject }}<br> --}}
 {{-- Message:  {{ $message }}<br> --}}
 Message:  {!! $subject !!}<br><br>
 

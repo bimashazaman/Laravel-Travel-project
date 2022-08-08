@@ -15,6 +15,15 @@ class CreateBookingAccessioriesTable extends Migration
     {
         Schema::create('booking_accessiories', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('accessiories_id')->nullable();
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('address');
+            $table->string('persons');
+            $table->string('start_date');
+            $table->string('end_date');
+            $table->text('subject');
             $table->timestamps();
         });
     }

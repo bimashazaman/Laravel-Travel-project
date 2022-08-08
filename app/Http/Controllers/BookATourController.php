@@ -8,8 +8,8 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
 
 
-use function PHPSTORM_META\map;
-use function PHPSTORM_META\type;
+// use function PHPSTORM_META\map;
+// use function PHPSTORM_META\type;
 
 class BookATourController extends Controller
 {

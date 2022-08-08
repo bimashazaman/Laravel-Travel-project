@@ -22,5 +22,11 @@ class Accessiories extends Model
         return $this->hasMany(AccessioriesImage::class);
     }
 
+    //booking 
+    public function bookingAccessiories()
+    {
+        return $this->hasMany(BookingAccessiories::class);
+    }
+
 
 }
