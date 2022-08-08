@@ -15,6 +15,15 @@ class CreateBookingMicesTable extends Migration
     {
         Schema::create('booking_mices', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('mice_id')->nullable();
+            $table->string('name');
+            $table->string('email');
+            $table->string('phone');
+            $table->string('address');
+            $table->string('persons');
+            $table->string('start_date');
+            $table->string('end_date');
+            $table->text('subject');
             $table->timestamps();
         });
     }

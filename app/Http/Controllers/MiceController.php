@@ -33,6 +33,7 @@ class MiceController extends Controller
         $this->validate($request, [
             'name' => 'required',
             'available' => 'required',
+            'description' => 'required',
             'total_pax' => 'required',
             'personal' => 'required',
             'Products' => 'required',
@@ -43,6 +44,7 @@ class MiceController extends Controller
         $mice = Mice::create([
             'name' => $request->name,
             'available' => $request->available,
+            'description' => $request->description,
             'total_pax' => $request->total_pax,
             'personal' => $request->personal,
             'Products' => $request->Products,

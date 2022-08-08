@@ -38,11 +38,19 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label class="col-form-label col-md-2">Description</label>
+                        <div class="col-md-10">
+                            <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; width:100%;" class="form-control" name="description">
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-form-label col-md-2">Available</label>
                         <div class="col-md-10">
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; width:100%;" class="form-control" name="available">
                         </div>
                     </div>
+
+                    
                     <div class="form-group row">
                         <label class="col-form-label col-md-2">Total Pax</label>
                         <div class="col-md-10">

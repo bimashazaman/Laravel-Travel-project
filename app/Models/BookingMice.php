@@ -10,4 +10,11 @@ class BookingMice extends Model
     use HasFactory;
 
     protected $guarded = [];
+
+    //----------- relations ---------
+    public function mice()
+    {
+        return $this->belongsTo(Mice::class);
+    }
+    
 }

@@ -666,6 +666,7 @@ Route::post('/BookATent/store/{id}', [BookingAccessioriesController::class, 'sto
 
 //==========Book Mice=========
 Route::get('/BookMice/{id}', [BookingMiceController::class, 'BookMice']);
+Route::post('/BookMice/store/{id}', [BookingMiceController::class, 'store']);
 
 
 

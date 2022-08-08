@@ -22,4 +22,8 @@ class Mice extends Model
     public function miceImages(){
         return $this->hasMany(MiceImage::class);
     }
+
+    public function booking(){
+        return $this->hasMany(BookingMice::class, 'mice_id');
+    }
 }

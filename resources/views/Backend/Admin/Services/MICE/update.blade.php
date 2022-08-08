@@ -45,6 +45,12 @@
                         </div>
                     </div>
                     <div class="form-group row">
+                        <label class="col-form-label col-md-2">Description</label>
+                        <div class="col-md-10">
+                            <input value="{{ $mice->description }}" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; width:100%;" class="form-control" name="description">
+                        </div>
+                    </div>
+                    <div class="form-group row">
                         <label class="col-form-label col-md-2">Total Pax</label>
                         <div class="col-md-10">
                             <input  value="{{ $mice->total_pax }}"  style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="total_pax">

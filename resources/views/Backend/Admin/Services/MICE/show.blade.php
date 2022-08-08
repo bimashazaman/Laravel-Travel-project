@@ -7,6 +7,9 @@
         <h2 class="text-center font-weight-bold">
            Mice {{$mice->name}}
         </h2>
+        <p>
+            {{ $mice->description }}
+        </p>
         <div class="row">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="padding: 100px">
                 <div class="carousel-inner" style="width: 69%;margin: auto;">

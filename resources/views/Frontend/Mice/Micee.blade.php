@@ -5,7 +5,7 @@
     @include('partials.DefaultBanner')
 </div>
 
-    <section class="tour-descriptions" style="padding: 50px">
+    <section class="tour-descriptions" style="padding: 50px; margin-top:-50px">
         <h1 style="text-align: center">
            {{ $mice->name }}
         </h1>
@@ -118,18 +118,14 @@
             Overview
         </h2>
         <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cum hic totam ducimus repudiandae in cupiditate
-            deleniti velit accusantium ut consequuntur tempora veritatis explicabo dignissimos quaerat, eius illum alias id
-            nihil placeat inventore voluptate animi natus nam. Veritatis quaerat doloremque asperiores, in ad provident,
-            quae ut sunt delectus quibusdam voluptate, perspiciatis recusandae officiis! Fugiat voluptate neque optio
-            reprehenderit magni eveniet eum suscipit quam, ducimus, odio ex sed vero dolorum! Ratione.
+           {{ $mice->description }}
         </p>
     </section>
 
 
     <section class="tableOfPrice">
         <button class="package-view" style="text-align: center; align-items:center; margin:20px">
-            <a href="{{ url('/BookMice/'.$mice->id) }}">
+            <a href="{{ url('/BookMice/'.$mice->id) }}" style="color: black">
                 Book Now</a>
            
         </button>
