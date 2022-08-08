@@ -23,7 +23,7 @@ class CreateTourEventsTable extends Migration
             $table->string('settlement');
             $table->string('distance');
             $table->string('duration');
-            $table->string('price');
+            $table->decimal('price');
             $table->timestamps();
         });
     }

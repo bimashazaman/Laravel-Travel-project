@@ -77,11 +77,11 @@ class CarWithDriverController extends Controller
       //validate the data
         $request->validate([
             'car_name' => 'required',
-            'three_seats' => 'required',
-            'seven_seats' => 'required',
-            'sixteen_seats' => 'required',
-            'twintynine_seats' => 'required',
-            'fortynine_seats' => 'required',
+            'three_seats' => 'required|numeric',
+            'seven_seats' => 'required|numeric',
+            'sixteen_seats' => 'required|numeric',
+            'twintynine_seats' => 'required|numeric',
+            'fortynine_seats' => 'required|numeric',
         ]);
 
         //create a new car with driver by create method

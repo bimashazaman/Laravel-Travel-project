@@ -286,7 +286,7 @@ class TourController extends Controller
             // "tour_id" => "required|integer",
             "start_date" => "required",
             "end_date" => "required",
-            "price" => "required",
+            "price" => "required|numeric",
             "pax" => "required",
         ]);
         if ($validate->fails()) {

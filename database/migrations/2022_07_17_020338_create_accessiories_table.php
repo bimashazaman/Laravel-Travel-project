@@ -21,9 +21,9 @@ class CreateAccessioriesTable extends Migration
             $table->string('type')->nullable();
             $table->string('total_pax')->nullable();
             $table->string('free_cancellation')->nullable();
-            $table->string('one_day_price')->nullable();
-            $table->string('one_week_price')->nullable();
-            $table->string('one_month_price')->nullable();
+            $table->decimal('one_day_price')->nullable();
+            $table->decimal('one_week_price')->nullable();
+            $table->decimal('one_month_price')->nullable();
             $table->timestamps();
         });
     }

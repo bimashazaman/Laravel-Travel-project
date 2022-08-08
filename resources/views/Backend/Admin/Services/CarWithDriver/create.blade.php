@@ -36,21 +36,21 @@
                         </div>
                     </div>
                     <div class="form-group row">
-                        <label class="col-form-label col-md-2">3 seats</label>
+                        <label class="col-form-label col-md-2">3 seats price</label>
                         <div class="col-md-10">
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="three_seats">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label class="col-form-label col-md-2">7 seats</label>
+                        <label class="col-form-label col-md-2">7 seats price</label>
                         <div class="col-md-10">
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="seven_seats">
                         </div>
                     </div>
 
                     <div class="form-group row">
-                        <label class="col-form-label col-md-2">16 seats</label>
+                        <label class="col-form-label col-md-2">16 seats price</label>
                         <div class="col-md-10">
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="sixteen_seats">
                         </div>
@@ -58,7 +58,7 @@
 
                     
                     <div class="form-group row">
-                        <label class="col-form-label col-md-2">29 seats</label>
+                        <label class="col-form-label col-md-2">29 seats price</label>
                         <div class="col-md-10">
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="twintynine_seats">
                         </div>
@@ -67,7 +67,7 @@
 
                     
                     <div class="form-group row">
-                        <label class="col-form-label col-md-2">49 seats</label>
+                        <label class="col-form-label col-md-2">49 seats price</label>
                         <div class="col-md-10">
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="fortynine_seats">
                         </div>

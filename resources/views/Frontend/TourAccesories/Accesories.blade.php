@@ -56,7 +56,7 @@
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span>From {{$item->one_day_price}} AMD
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> {{$item->one_day_price}} 
                                 </div>
                             </div>
                             <div class="rating">

@@ -19,7 +19,7 @@ class CreateDepartureTablesTable extends Migration
             $table->string('start_date');
             $table->string('end_date');
             $table->string('pax');
-            $table->string('price');
+            $table->decimal('price');
             $table->timestamps();
         });
     }

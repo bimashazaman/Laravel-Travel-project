@@ -39,9 +39,9 @@ class CarController extends Controller
             'car_type' => 'required',
             'car_model' => 'required',
             'images' => 'required',
-            'daily_price' => 'required',
-            'weekly_price' => 'required',
-            'monthly_price' => 'required',
+            'daily_price' => 'required|numeric',
+            'weekly_price' => 'required|numeric',
+            'monthly_price' => 'required|numeric',
             'seats' => 'required',
             'free_cancelation' => 'required',
            

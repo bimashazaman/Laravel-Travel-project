@@ -51,7 +51,7 @@ class TourEventController extends Controller
             'settlement' => 'required',
             'distance' => 'required',
             'duration' => 'required',
-            'price' => 'required',
+            'price' => 'required|numeric',
             'images' => 'required',
 
         ]);
