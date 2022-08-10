@@ -460,7 +460,7 @@ Route::get('/admin/d', function () {
 
 //=================All frontend routes=================
 
-Route::get('/', [FrontendController::class, 'index']);
+Route::get('/{currency_locale}', [FrontendController::class, 'index']);
 Route::get('/tour/detail/{id}', [FrontendController::class, 'tourDescription'])->name('tourDescription');
 Route::get('/tour/{name}', [FrontendController::class, 'getTours'])->name('getTours');
 
@@ -623,6 +623,8 @@ Route::get('/BookHotel', function () {
 
 
 
+
+
 Route::get('/driver', [CarWithDriverController::class, 'getAll']);
 
 
@@ -675,8 +677,11 @@ Route::post('/contact/store', [ContactFormController::class, 'store']);
 Route::get('/contact', [ContactFormController::class, 'index']);
 
 
-
-
 Auth::routes();
 
-Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
+// Route::get('/AMD', [FrontendController::class, 'index'])->name('amd');
+// Route::get('/EUR', [FrontendController::class, 'index'])->name('eur');
+// Route::get('/RUB', [FrontendController::class, 'index'])->name('rub');
+
+

@@ -108,6 +108,20 @@ return [
 
     'faker_locale' => 'en_US',
 
+
+    'currency_locale' => [
+        'USD',
+        'EUR',
+        'RUB',
+        'AMD'
+        
+
+        // 'en_US' => 'USD',
+        // 'ru_RU' => 'RUB',
+        // 'am_AM' => 'AMD',
+        // 'de_DE' => 'EUR',
+    ],
+
     /*
     |--------------------------------------------------------------------------
     | Encryption Key

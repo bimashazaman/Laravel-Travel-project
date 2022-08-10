@@ -35,17 +35,7 @@
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="name">
                         </div>
                     </div>
-                    {{-- <div class="form-group row">
-                        <label class="col-form-label col-md-2">Tour Type</label>
-                        <div class="col-md-10">
-
-                            <select class="form-control form-select" name="type_id">
-                                @foreach($type as $category)
-                                <option value="{{$category->id}}">{{$category->type_name}}</option>
-                                @endforeach
-                            </select>
-                        </div>
-                    </div> --}}
+                   
                     <div class="form-group row">
                         <label class="col-form-label col-md-2">Description</label>
                         <div class="col-md-10">
@@ -70,6 +60,29 @@
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="price">
                         </div>
                     </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Price AMD</label>
+                        <div class="col-md-10">
+                            <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="AMD">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Price RUR</label>
+                        <div class="col-md-10">
+                            <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="RUR">
+                        </div>
+                    </div>
+
+                    <div class="form-group row">
+                        <label class="col-form-label col-md-2">Price EURO</label>
+                        <div class="col-md-10">
+                            <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="EURO">
+                        </div>
+
+                    </div>
+
                     <div class="form-group row">
                         <label class="col-form-label col-md-2">Start Date</label>
                         <div class="col-md-10">

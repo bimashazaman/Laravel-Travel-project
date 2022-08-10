@@ -2,10 +2,11 @@
      <div class="header-area">
          <div class="container">
              <div class="row">
-                <div class="col-md-2">
+                 <div class="col-md-2">
                      <div class="logo">
                          <a href="{{ url('/') }}">
-                            <img src="{{ asset('images/Tour-Logo.png') }}" style="width:165px; height:76px" alt="">
+                             <img src="{{ asset('images/Tour-Logo.png') }}" style="width:165px; height:76px"
+                                 alt="">
                          </a>
                      </div><!-- /.logo-->
                  </div><!-- /.col-->
@@ -29,7 +30,8 @@
                                      </a>
                                      <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                                          <a class="dropdown-item" href="{{ url('/Bv') }}">Classic Tours</a>
-                                         <a class="dropdown-item" href="{{ url('/guaranteeTour') }}">Tours with guarantee
+                                         <a class="dropdown-item" href="{{ url('/guaranteeTour') }}">Tours with
+                                             guarantee
                                              departures</a>
                                          <a class="dropdown-item" href="{{ url('/GastroTours') }}">Gastro tours</a>
                                          <a class="dropdown-item" href="{{ url('activeTours') }}">Active Tours</a>
@@ -58,10 +60,14 @@
                                          Armenia
                                      </a>
                                      <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                         <a class="dropdown-item" href="{{ url('/getThingsToSeeByCategoryId/1') }}">Things to see</a>
-                                         <a class="dropdown-item" href="{{ url('/getAllThingsToDo') }}">Things to do</a>
-                                         <a class="dropdown-item" href="{{ url('/getfoodsByCategory/1') }}">Food and drink</a>
-                                         <a class="dropdown-item" href="{{ url('/nearbyByCategoryId/1') }}">Todo in Surrounding</a>
+                                         <a class="dropdown-item"
+                                             href="{{ url('/getThingsToSeeByCategoryId/1') }}">Things to see</a>
+                                         <a class="dropdown-item" href="{{ url('/getAllThingsToDo') }}">Things to
+                                             do</a>
+                                         <a class="dropdown-item" href="{{ url('/getfoodsByCategory/1') }}">Food and
+                                             drink</a>
+                                         <a class="dropdown-item" href="{{ url('/nearbyByCategoryId/1') }}">Todo in
+                                             Surrounding</a>
                                          <a class="dropdown-item" href="{{ url('/usefulToKnow') }}">Useful to know</a>
                                          <a class="dropdown-item" href="{{ url('/cs') }}">Events</a>
                                          <a class="dropdown-item" href="{{ url('/b') }}">Brochure</a>
@@ -90,41 +96,74 @@
                                       <li class="USD">USD</li> --}}
                              <ul class="nav navbar-nav navbar-right" style="margin-top: 14px;">
                                  {{-- <li class="nav-item" style="text-decoration: underline; margin-top:10px">USD</li> --}}
-                                    {{-- <li class="nav-item" style="text-decoration: underline; margin-top:10px">ENG</li> --}}
+                                 {{-- <li class="nav-item" style="text-decoration: underline; margin-top:10px">ENG</li> --}}
 
-                                {{-- dropdown of language @if (session('locale')) --}}
-                                {{-- <li class="nav-item dropdown">
+                                 {{-- dropdown of language @if (session('locale')) --}}
+                                 {{-- <li class="nav-item dropdown">
                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                         role="button" data-toggle="dropdown" aria-haspopup="true"
                                         aria-expanded="false" style="text-decoration: underline">
                                         En
                                         {{-- {{ session('locale') }} --}}
-                                    {{-- </a>
+                                 {{-- </a>
                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item" href="">Hy(Armenia)</a>
                                         <a class="dropdown-item" href="">En(English)</a>
                                         <a class="dropdown-item" href="">Ru(Russia)</a>
                                     </div>
-                                </li> --}} 
-                                {{-- @else --}}
-                                {{-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        English
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="{{ url('/setlocale/ru') }}">Русский</a>
-                                        <a class="dropdown-item" href="{{ url('/setlocale/en') }}">English</a>
-                                    </div>
                                 </li> --}}
-                                {{-- @endif --}}
+                                 {{-- @else --}}
+
+
+
+
+
+
+                                 <li class="nav-item dropdown">
+                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                         role="button" data-toggle="dropdown" aria-haspopup="true"
+                                         aria-expanded="false">
+                                         USD
+                                     </a>
+                                     @foreach (['AMD', 'EUR', 'RUB','USD'] as $lang)
+                                         @php($params = array_merge(request()->route()->parameters, ['currency_locale' => $lang]))
+                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown"
+                                             style="width: auto">
+                                             <a class="dropdown-item" href="{{ route(Route::CurrentRouteName(),'/AMD') }}">AMD</a>
+                                             <a class="dropdown-item" href="{{ route(Route::CurrentRouteName(),'/EUR') }}">EUR</a>
+                                             <a class="dropdown-item" href="{{ route(Route::CurrentRouteName(), $params) }}">RUB</a>
+                                                <a class="dropdown-item" href="{{ route(Route::CurrentRouteName(), $params) }}">USD</a>
+                                         </div>
+                                 </li>
+                                 @endforeach
+
+
+
+
+
+
+
+
+                                 <li class="nav-item dropdown">
+                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                         role="button" data-toggle="dropdown" aria-haspopup="true"
+                                         aria-expanded="false">
+                                         English
+                                     </a>
+                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: auto">
+                                         <a class="dropdown-item" href="">Русский</a>
+                                         <a class="dropdown-item" href="">English</a>
+                                     </div>
+                                 </li>
+                                 {{-- @endif --}}
 
 
 
                                  <li style="display: flex">
-                                     <input type="text" placeholder="Search" class="searchHeader" style="margin-top: 1px;">
-                                     <i class="fa-solid fa-magnifying-glass" style="color: rgb(192, 181, 181); margin-top:10px; margin-left: 10px"></i>
+                                     <input type="text" placeholder="Search" class="searchHeader"
+                                         style="margin-top: 1px;">
+                                     <i class="fa-solid fa-magnifying-glass"
+                                         style="color: rgb(192, 181, 181); margin-top:10px; margin-left: 10px"></i>
                                  </li>
                              </ul>
                          </div><!-- /.navbar-collapse -->
@@ -134,6 +173,6 @@
              <div class="home-border"></div><!-- /.home-border-->
          </div><!-- /.container-->
      </div><!-- /.header-area -->
-    
+
 
  </header><!-- /.top-area-->

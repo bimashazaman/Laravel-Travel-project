@@ -25,6 +25,9 @@ class CreateToursTable extends Migration
             $table->string('start_date')->nullable();
             $table->string('end_date')->nullable();
             $table->decimal("price")->nullable();
+            $table->decimal("AMD")->nullable();
+            $table->decimal("RUR")->nullable();
+            $table->decimal("EURO")->nullable();
             $table->string("one_day_price")->nullable();
             $table->string("one_week_price")->nullable();
             $table->string("one_month_price")->nullable();
