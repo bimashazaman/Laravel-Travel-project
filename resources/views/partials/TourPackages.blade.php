@@ -4,6 +4,7 @@
  <section id="pack" class="packages">
      <div class="container">
 
+
          <!--/.gallery-header-->
          <div class="packages-content">
              <div class="row">
@@ -46,24 +47,13 @@
                                                  class="fa-solid fa-calendar-check"></i></span>{{ $tour->start_date . ' - ' . $tour->end_date }}
                                      </div>
 
-                                     @if (route(Route::CurrentRouteName(), '/AMD'))
+                                    
+                                         
                                          <div class="packageOffer">
-                                             <span><i class="fa-solid fa-dollar-sign"></i></span>{{ $tour->AMD }} AMD
+                                             <span><i class="fa-solid fa-dollar-sign"></i></span>{{ __($tour->AMD) }}
+                                             AMD
                                          </div>
-                                     @elseif (route(Route::CurrentRouteName(), '/EUR'))
-                                         <div class="packageOffer">
-                                             <span><i class="fa-solid fa-dollar-sign"></i></span>{{ $tour->EURO }} EUR
-                                         </div>
-                                     @elseif (route(Route::CurrentRouteName(), '/RUB'))
-                                         <div class="packageOffer">
-                                             <span><i class="fa-solid fa-dollar-sign"></i></span>{{ $tour->RUR }} RUB
-                                         </div>
-                                     @else
-                                         <div class="packageOffer">
-                                             <span><i class="fa-solid fa-dollar-sign"></i></span>{{ $tour->price }}
-                                             USD
-                                         </div>
-                                     @endif
+                                     
                                  </div>
                                  <div class="rating">
                                      <span class=""><i class="fa-solid fa-star"></i></span>

@@ -10,7 +10,7 @@
 								
 							
 							<h2>
-								{{ $h->title }}
+								{{ __($h->title) }}
 							</h2>
 							<p>
 								{{ $h->subtitle }}

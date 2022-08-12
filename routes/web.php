@@ -47,11 +47,9 @@ use App\Http\Controllers\UsefulInfoController;
 use App\Http\Controllers\VacancyCmsController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\WaysToBookController;
-use App\Models\ContactForm;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-
-
+use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 //============login===============
 
@@ -460,7 +458,16 @@ Route::get('/admin/d', function () {
 
 //=================All frontend routes=================
 
-Route::get('/{currency_locale}', [FrontendController::class, 'index']);
+
+//
+Route::get('/AMD', [FrontendController::class, 'index'])->name('AMD');
+Route::get('/EUR', [FrontendController::class, 'index']);
+
+Route::group([
+    'prefix' => LaravelLocalization::setLocale(),
+    'middleware' => ['localize', 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
+], function () {
+Route::get('/', [FrontendController::class, 'index'])->name('blaaaaa');
 Route::get('/tour/detail/{id}', [FrontendController::class, 'tourDescription'])->name('tourDescription');
 Route::get('/tour/{name}', [FrontendController::class, 'getTours'])->name('getTours');
 
@@ -685,3 +692,4 @@ Auth::routes();
 // Route::get('/RUB', [FrontendController::class, 'index'])->name('rub');
 
 
+});

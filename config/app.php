@@ -82,6 +82,13 @@ return [
 
     'locale' => 'en',
 
+   //currencies
+   'currency' => 'USD',
+   
+
+
+
+
     /*
     |--------------------------------------------------------------------------
     | Application Fallback Locale
@@ -93,60 +100,26 @@ return [
     |
     */
 
+
+
+
+
     'fallback_locale' => 'en',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Faker Locale
-    |--------------------------------------------------------------------------
-    |
-    | This locale will be used by the Faker PHP library when generating fake
-    | data for your database seeds. For example, this will be used to get
-    | localized telephone numbers, street address information and more.
-    |
-    */
-
+   
     'faker_locale' => 'en_US',
 
 
-    'currency_locale' => [
-        'USD',
-        'EUR',
-        'RUB',
-        'AMD'
-        
-
-        // 'en_US' => 'USD',
-        // 'ru_RU' => 'RUB',
-        // 'am_AM' => 'AMD',
-        // 'de_DE' => 'EUR',
-    ],
-
-    /*
-    |--------------------------------------------------------------------------
-    | Encryption Key
-    |--------------------------------------------------------------------------
-    |
-    | This key is used by the Illuminate encrypter service and should be set
-    | to a random, 32 character string, otherwise these encrypted strings
-    | will not be safe. Please do this before deploying an application!
-    |
-    */
+    
+   
 
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
 
-    /*
-    |--------------------------------------------------------------------------
-    | Autoloaded Service Providers
-    |--------------------------------------------------------------------------
-    |
-    | The service providers listed here will be automatically loaded on the
-    | request to your application. Feel free to add your own services to
-    | this array to grant expanded functionality to your applications.
-    |
-    */
+    
+
+   
 
     'providers' => [
 
@@ -175,6 +148,7 @@ return [
         Illuminate\Translation\TranslationServiceProvider::class,
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
+        Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
 
         /*
          * Package Service Providers...
@@ -191,16 +165,7 @@ return [
 
     ],
 
-    /*
-    |--------------------------------------------------------------------------
-    | Class Aliases
-    |--------------------------------------------------------------------------
-    |
-    | This array of class aliases will be registered when this application
-    | is started. However, feel free to register as many as you wish as
-    | the aliases are "lazy" loaded so they don't hinder performance.
-    |
-    */
+   
 
     'aliases' => [
 
@@ -243,6 +208,7 @@ return [
         'URL' => Illuminate\Support\Facades\URL::class,
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
+        'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
 
     ],
 

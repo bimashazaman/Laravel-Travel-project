@@ -125,19 +125,42 @@
                                          aria-expanded="false">
                                          USD
                                      </a>
-                                     @foreach (['AMD', 'EUR', 'RUB','USD'] as $lang)
-                                         @php($params = array_merge(request()->route()->parameters, ['currency_locale' => $lang]))
-                                         <div class="dropdown-menu" aria-labelledby="navbarDropdown"
-                                             style="width: auto">
-                                             <a class="dropdown-item" href="{{ route(Route::CurrentRouteName(),'/AMD') }}">AMD</a>
-                                             <a class="dropdown-item" href="{{ route(Route::CurrentRouteName(),'/EUR') }}">EUR</a>
-                                             <a class="dropdown-item" href="{{ route(Route::CurrentRouteName(), $params) }}">RUB</a>
-                                                <a class="dropdown-item" href="{{ route(Route::CurrentRouteName(), $params) }}">USD</a>
-                                         </div>
+
+                                     {{-- @php($params = array_merge(request()->route()->parameters, ['currency_locale' => $lang])) --}}
+                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: auto">
+
+                                         <a class="dropdown-item" href="{{url('/AMD') }}">
+                                             AMD
+                                         </a>
+                                         <a class="dropdown-item" href="
+                                         {{url('/EUR' )}}
+                                         ">
+                                             EUR
+                                         </a>
+                                         <a class="dropdown-item"
+                                             href="
+                                             {{url('/USD') }}">
+                                             USD
+                                         </a>
+                                         <a class="dropdown-item"
+                                             href="
+                                             {{url('/RUB' )}}">
+                                             RUB
+                                         </a>
+
+                                     </div>
                                  </li>
-                                 @endforeach
 
 
+                                 {{-- @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                 <li class="nav-item dropdown">
+                                     <a class="nav-link dropdown-toggle" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                        {{ $properties['native'] }}
+                                    </a></a>
+                                     </div>
+                                 </li>
+
+                                    @endforeach --}}
 
 
 
@@ -150,10 +173,16 @@
                                          aria-expanded="false">
                                          English
                                      </a>
+                                     
                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: auto">
-                                         <a class="dropdown-item" href="">Русский</a>
-                                         <a class="dropdown-item" href="">English</a>
+                                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
+                                         <a class="dropdown-item"hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
+                                            {{ $properties['native'] }}
+                                        </a>
+                                        @endforeach
                                      </div>
+                                   
+
                                  </li>
                                  {{-- @endif --}}
 
