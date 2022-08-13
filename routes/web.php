@@ -418,7 +418,7 @@ Route::get('/admin/d', function () {
 // {
 
 
-Route::get('/{locale?}', [FrontendController::class, 'index'])->name('blaaaaa');
+Route::get('/home/{locale?}', [FrontendController::class, 'index'])->name('blaaaaa');
 Route::get('/tour/detail/{id}', [FrontendController::class, 'tourDescription'])->name('tourDescription');
 Route::get('/tour/{name}', [FrontendController::class, 'getTours'])->name('getTours');
 
@@ -434,7 +434,7 @@ Route::get('/cs', [TourEventController::class, 'showFrontend']);
 Route::get('/c/{id}', [TourEventController::class, 'showFrontendDetails']);
 
 //=========== classic tours==========
-Route::get('/Bv', [ClassicTour::class, 'getClasicTours']);
+Route::get('/Bv/{locale?}', [ClassicTour::class, 'getClasicTours'])->name('getClasicTours');
 Route::get('/getClassicTour/{id}', [ClassicTour::class, 'getClassicTour']);
 
 //=====gurantee Tour===========

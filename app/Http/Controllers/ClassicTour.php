@@ -10,9 +10,12 @@ use Illuminate\Http\Request;
 
 class ClassicTour extends Controller
 {
-    public function getClasicTours()
+    public function getClasicTours($locale = null)
     {
-        // get all data with paginate
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
+       
 
         $tour = Tour::with('images')->with('types')->where('category_id', 1)->orderBy('id', 'DESC')->simplePaginate(9);
 

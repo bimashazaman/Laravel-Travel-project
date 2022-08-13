@@ -3,7 +3,7 @@
     <div class="divsix1" style="background-color: #FAEFD7; box-shadow:none; border:0.1px solid rgb(212, 211, 211)">
         <i class="fa-solid fa-bus"></i>
         <h4 style="margin: 10px">
-           Classic Tours
+          {{ __('Classic Tours')}}
         </h4>
     </div>
 </a>
@@ -11,7 +11,7 @@
     <div class="divsix2">
         <i class="fa-solid fa-calendar"></i>
         <h4 style="margin: 10px">
-          One Day Tour
+          {{ __('One Day Tour') }}
         </h4>
     </div>
 </a>
@@ -19,7 +19,7 @@
     <div class="divsix3">
         <i class="fa-brands fa-hotjar"></i>
         <h4 style="margin: 10px">
-           Themed Tours
+           {{ __('Themed Tours') }}
         </h4>
     </div>
 </a>
@@ -27,7 +27,7 @@
     <div class="divsix4">
         <i class="fa-solid fa-motorcycle"></i>
         <h4 style="margin: 10px">
-           Active Tours
+          {{ __('Active Tours')}}
         </h4>
     </div>
 </a>
@@ -35,7 +35,7 @@
     <div class="divsix5">
         <i class="fa-solid fa-car"></i>
         <h4 style="margin: 10px">
-          Gastro Tours
+          {{ __('Gastro Tours') }}
         </h4>
     </div>
 </a>
@@ -43,7 +43,7 @@
     <div class="divsix6">
         <i class="fa-regular fa-clock"></i>
         <h4 style="margin: 10px">
-           guarantee departures
+          {{ __('Guarantee Departures')}}
            </h4>
     </div>
 </a>

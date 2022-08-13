@@ -4,7 +4,7 @@
              <div class="row">
                  <div class="col-md-2">
                      <div class="logo">
-                         <a href="{{ url('/') }}">
+                         <a href="{{ url('/home') }}">
                              <img src="{{ asset('images/Tour-Logo.png') }}" style="width:165px; height:76px"
                                  alt="">
                          </a>
@@ -29,7 +29,7 @@
                                          {{ __('Tours') }}
                                      </a>
                                      <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                         <a class="dropdown-item" href="{{ url('/Bv') }}">{{ __('Classic Tours') }}</a>
+                                         <a class="dropdown-item" href="{{ route('getClasicTours') }}">{{ __('Classic Tours') }}</a>
                                          <a class="dropdown-item" href="{{ url('/guaranteeTour') }}">{{ __('Tours With Guarantee Departures') }}</a>
                                          <a class="dropdown-item" href="{{ url('/GastroTours') }}">{{ __('Gastro tours') }}</a>
                                          <a class="dropdown-item" href="{{ url('activeTours') }}">{{ __('Active Tours') }}</a>
