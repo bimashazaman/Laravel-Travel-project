@@ -11,7 +11,7 @@
                  <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}' class="autoplay">
                      @foreach ($tours as $tour)
                          <div class="col-md-4 col-sm-6">
-                             <h3 style="text-align: center;  font-weight: 600;">{{ $tour->category->name }}</h3>
+                             <h3 style="text-align: center;  font-weight: 600;">{{ __($tour->category->name) }}</h3>
 
                              <div class="single-package-item">
 
@@ -20,7 +20,7 @@
                                  <img src="{{ $tour->images->first()->path }}" alt="">
 
                                  <div class="packageName">
-                                     {{ $tour->name }}
+                                     {{ __($tour->name) }}
                                  </div>
                                  <div>
                                      <h4 class="package-txt">
@@ -28,30 +28,30 @@
                                              style="margin-left: 15%;font-weight: 400; font-size: 1.5rem;">
                                              @foreach ($tour->types as $t)
                                                  <div style="margin-left: 15%;font-weight: 400; font-size: 1.5rem;">
-                                                     {{ $t->type_name }}
+                                                     {{ __($t->type_name) }}
                                                  </div>
                                              @endforeach
                                          </a>
                                      </h4>
                                      <p class="kki">
-                                         {{ $tour->description }}
+                                         {{ __($tour->description) }}
                                      </p>
                                  </div>
                                  <div class="pacdet">
                                      <div class="packageOffer">
-                                         <span><i class="fa-regular fa-clock"></i></span>{{ $tour->duration }}
+                                         <span><i class="fa-regular fa-clock"></i></span>{{ __($tour->duration )}}
                                      </div>
 
                                      <div class="packageOffer">
                                          <span><i
-                                                 class="fa-solid fa-calendar-check"></i></span>{{ $tour->start_date . ' - ' . $tour->end_date }}
+                                                 class="fa-solid fa-calendar-check"></i></span>{{ __($tour->start_date) . ' - ' . __($tour->end_date) }}
                                      </div>
 
                                     
                                          
                                          <div class="packageOffer">
                                              <span><i class="fa-solid fa-dollar-sign"></i></span>{{ __($tour->AMD) }}
-                                             AMD
+                                             {{ __('AMD') }}
                                          </div>
                                      
                                  </div>
@@ -64,7 +64,7 @@
                                  </div>
                                  <div class="package-btn">
                                      <a href="{{ url('/Bv') }}"> <button class="package-view">
-                                             Details
+                                            {{__('Details')}}
                                          </button>
                                      </a>
 

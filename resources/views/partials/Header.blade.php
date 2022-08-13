@@ -26,17 +26,15 @@
                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                          role="button" data-toggle="dropdown" aria-haspopup="true"
                                          aria-expanded="false">
-                                         Tours
+                                         {{ __('Tours') }}
                                      </a>
                                      <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                         <a class="dropdown-item" href="{{ url('/Bv') }}">Classic Tours</a>
-                                         <a class="dropdown-item" href="{{ url('/guaranteeTour') }}">Tours with
-                                             guarantee
-                                             departures</a>
-                                         <a class="dropdown-item" href="{{ url('/GastroTours') }}">Gastro tours</a>
-                                         <a class="dropdown-item" href="{{ url('activeTours') }}">Active Tours</a>
-                                         <a class="dropdown-item" href="{{ url('/oneDay') }}">Oneday Tours</a>
-                                         <a class="dropdown-item" href="{{ url('/themed') }}">Themed Tours</a>
+                                         <a class="dropdown-item" href="{{ url('/Bv') }}">{{ __('Classic Tours') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/guaranteeTour') }}">{{ __('Tours With Guarantee Departures') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/GastroTours') }}">{{ __('Gastro tours') }}</a>
+                                         <a class="dropdown-item" href="{{ url('activeTours') }}">{{ __('Active Tours') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/oneDay') }}">{{ __('Oneday Tours') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/themed') }}">{{ __('Themed Tours') }}</a>
                                      </div>
                                  </li>
                                  <li class="nav-item dropdown">

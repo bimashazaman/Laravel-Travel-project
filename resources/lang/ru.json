@@ -776,8 +776,8 @@
     "Zimbabwe": "Зимбабве",
     "Zip / Postal Code": "Индекс",
     "Åland Islands": "Аландские острова",
-    "What do you adore about your local culture? The people, places, and things that make up your destination? Put together a series of posts where you pour your heart out. Share about what makes you smile, make note of the nuances of the local region that most people overlook. And of course, be sure to talk about how your tour and experience are an integral part of the local culture. Focus on using sensory language to transport people there through story." :
-    "sdcbskdjbckjsdbckwebckjebjkebvjhe",
+    "What do you adore about your local culture? The people, places, and things that make up your destination? Put together a series of posts where you pour your heart out. Share about what makes you smile, make note of the nuances of the local region that most people overlook. And of course, be sure to talk about how your tour and experience are an integral part of the local culture. Focus on using sensory language to transport people there through story.":
+    "Что вам нравится о локальной культуре? Люди, места, и что вы видите в локальном культурном сообществе? Создайте последовательность постов, где вы порываетесь в красоту. Поделитесь о том, что вам нравится, запишите о том, что вы замечаете в локальной регионе, который большинство людей пропускает. И наконец, поделитесь о том, как ваш отдых и впечатления являются интересной частью локального культурного сообщества. Сфокусируйтесь на использовании сенсорного языка для п",
     "accepted": "Должно быть принято.",
     "accepted_if": "Должно быть принято, когда :other соответствует :value.",
     "active_url": "Недействительный URL.",
@@ -1220,7 +1220,28 @@
     "Our mission":"Наша миссия",
     "Our story in":"Наша история в",
     "Online payment":"Оплата онлайн",
-    "FAQ": "Часто задаваемые вопросы"
+    "FAQ": "Часто задаваемые вопросы",
+    "Destination":"Места",
+    "Duration":"Длительность",
+    "Find Tour":"Найти туры",
+    "Classic Tours":"Классические туры",
+    "AMD":"Армения",
+    "Jan":"Январь",
+    "Feb":"Февраль",
+    "Mar":"Март",
+    "Apr":"Апрель",
+    "Jun":"Июнь",
+    "Jul":"Июль",
+    "Aug":"Август",
+    "Sep":"Сентябрь",
+    "Oct":"Октябрь",
+    "Nov":"Ноябрь",
+    "Dec":"Декабрь",
+    "Oneday Tours":"Однодневные туры",
+    "Themed Tours":"Тематические туры",
+    "Active Tours":"Активные туры",
+    "Tours With Guarantee Departures" : "Туры с гарантированными вылетами"
+
 
 
 
@@ -1242,18 +1263,4 @@
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    
   }
