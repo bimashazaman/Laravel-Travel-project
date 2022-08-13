@@ -6,7 +6,7 @@
     "Welcome to our website": "Добро пожаловать на наш сайт",
     "Tours": "Туры",
     "Services": "Сервицы",
-    "About us": "О нас",
+    "About Us": "О нас",
     "Contact us": "Свяжитесь с нами",
     "30 Days": "30 дней",
     "60 Days": "60 дней",
@@ -1078,10 +1078,17 @@
     "Pay by mobile phone":"Оплатить по мобильному телефону",
     "Pay by credit card":"Оплатить кредитной картой",
     "Pay by bank card":"Оплатить банковской картой",
-   "In the city center":"In the city center",
-   "Useful to know":"Useful to know",
-    "Useful to know about":"Useful to know about",
-    "Useful to know about the":"Useful to know about the",
+   "In the city center":"В центре города",
+    "In the suburbs":"В пригороде",
+    "In the suburbs of the city center":"В пригороде центра города",
+    "In the suburbs of the city center and the city center":"В пригороде центра города и центре города",
+    "In the suburbs of the city center and the suburbs":"В пригороде центра города и пригороде",
+    "In the city center and the suburbs":"В центре города и пригороде",
+    "In the city center and the suburbs of the city center":"В центре города и пригороде центра города",
+    "In the city center and the suburbs of the city center and the city center":"В центре города и пригороде центра города и центра города",
+    "In the city center and the suburbs of the city center and the suburbs":"В центре города и пригороде центра города и пригороде",
+   "Useful to know":"Полезно знать",
+    "Useful to know about":"Полезно знать о",
     "What is included":"What is included",
     "What is not included":"What is not included",
     "Book a hotel":"Забронировать гостиницу",
@@ -1240,8 +1247,19 @@
     "Oneday Tours":"Однодневные туры",
     "Themed Tours":"Тематические туры",
     "Active Tours":"Активные туры",
-    "Tours With Guarantee Departures" : "Туры с гарантированными вылетами"
-
+    "Tours With Guarantee Departures" : "Туры с гарантированными вылетами",
+    "Tour Accessories":"Аксессуары к туру",
+    "Things To Do": "Что посмотреть и делать",
+    "Todo in Surrounding":"Что посмотреть вокруг",
+    "Travel Blog":"Блог путешественника",
+    "How To Book A Tour":"Как забронировать тур",
+    "Choose one of our tours or create your own trip!": "Выберите один из наших туров или создайте свой собственный путешествие!",
+    "Select the destination": "Выберите место",
+    "Start Date": "Дата начала",
+    "End Date": "Дата окончания",
+    "Meals (10$ Per one pax)": "Питание (10$ за одного человека)"
+   
+   
 
 
 

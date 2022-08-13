@@ -41,13 +41,13 @@
                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                          role="button" data-toggle="dropdown" aria-haspopup="true"
                                          aria-expanded="false">
-                                         Services
+                                        {{ __('Services')}}
                                      </a>
                                      <div class="dropdown-menu " aria-labelledby="navbarDropdown">
-                                         <a class="dropdown-item" href="{{ url('/caa') }}">Rent a transport</a>
-                                         <a class="dropdown-item" href="{{ url('/hs') }}">Hotels</a>
-                                         <a class="dropdown-item" href="{{ url('/acs') }}">Tour Accessories</a>
-                                         <a class="dropdown-item" href="{{ url('/mices') }}">MICE</a>
+                                         <a class="dropdown-item" href="{{ url('/caa') }}">{{ __('Rent a transport') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/hs') }}">{{ __('Hotels') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/acs') }}">{{ __('Tour Accessories') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/mices') }}">{{ __('MICE') }}</a>
                                      </div>
                                  </li>
 
@@ -55,36 +55,33 @@
                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                          role="button" data-toggle="dropdown" aria-haspopup="true"
                                          aria-expanded="false">
-                                         Armenia
+                                         {{ __('Armenia') }}
                                      </a>
                                      <div class="dropdown-menu " aria-labelledby="navbarDropdown">
                                          <a class="dropdown-item"
-                                             href="{{ url('/getThingsToSeeByCategoryId/1') }}">Things to see</a>
-                                         <a class="dropdown-item" href="{{ url('/getAllThingsToDo') }}">Things to
-                                             do</a>
-                                         <a class="dropdown-item" href="{{ url('/getfoodsByCategory/1') }}">Food and
-                                             drink</a>
-                                         <a class="dropdown-item" href="{{ url('/nearbyByCategoryId/1') }}">Todo in
-                                             Surrounding</a>
-                                         <a class="dropdown-item" href="{{ url('/usefulToKnow') }}">Useful to know</a>
-                                         <a class="dropdown-item" href="{{ url('/cs') }}">Events</a>
-                                         <a class="dropdown-item" href="{{ url('/b') }}">Brochure</a>
-                                         <a class="dropdown-item" href="{{ url('/Articles') }}">Travel Blog</a>
+                                             href="{{ url('/getThingsToSeeByCategoryId/1') }}">{{ __('Things to see') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/getAllThingsToDo') }}">{{ __('Things To Do')}}</a>
+                                         <a class="dropdown-item" href="{{ url('/getfoodsByCategory/1') }}">{{ __('Food and drink') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/nearbyByCategoryId/1') }}">{{ __('Todo in Surrounding') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/usefulToKnow') }}">{{ __('Useful to know') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/cs') }}">{{ __('Events') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/b') }}">{{ __('Brochure') }}</a>
+                                         <a class="dropdown-item" href="{{ url('/Articles') }}">{{ __('Travel Blog') }}</a>
                                      </div>
                                  </li>
                                  <li class="nav-item dropdown ">
                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                          role="button" data-toggle="dropdown" aria-haspopup="true"
                                          aria-expanded="false">
-                                         About Us
+                                        {{ __('About Us')}}
                                      </a>
                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                         <a class="dropdown-item ru" href="{{ url('/aboutUs') }}">Who are we</a>
-                                         <a class="dropdown-item ru" href="{{ url('/ways') }}">How To Book A Tour</a>
+                                         <a class="dropdown-item ru" href="{{ url('/aboutUs') }}">{{ __('Who are we') }}</a>
+                                         <a class="dropdown-item ru" href="{{ url('/ways') }}">{{ __('How To Book A Tour') }}</a>
                                          {{-- <a class="dropdown-item ru" href="{{ url('/privacy') }}">Privacy Policy</a> --}}
-                                         <a class="dropdown-item ru" href="{{ url('/vacancyAll') }}">Vacancy</a>
-                                         <a class="dropdown-item ru" href="{{ url('/reviews') }}">Reviews</a>
-                                         <a class="dropdown-item ru" href="{{ url('/contact') }}">Contact us</a>
+                                         <a class="dropdown-item ru" href="{{ url('/vacancyAll') }}">{{ __('Vacancy') }}</a>
+                                         <a class="dropdown-item ru" href="{{ url('/reviews') }}">{{ __('Reviews') }}</a>
+                                         <a class="dropdown-item ru" href="{{ url('/contact') }}">{{ __('Contact us') }}</a>
                                      </div>
 
                                  </li>
