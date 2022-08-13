@@ -175,11 +175,15 @@
                                      </a>
                                      
                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: auto">
-                                        @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                         <a class="dropdown-item"hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                            {{ $properties['native'] }}
+                                        @foreach($available_locales as $locale_name => $available_locale)
+
+                                        
+                                         <a class="dropdown-item" href="{{ url(url()->current().'/'.$available_locale) }}">
+                                            {{ $locale_name }}
                                         </a>
+
                                         @endforeach
+                                      
                                      </div>
                                    
 

@@ -410,64 +410,15 @@ Route::get('/admin/d', function () {
 
 });
 
-//===============Services Update routes=============
-
-
-
-// Route::get('/admin/UpdateCarWithDriver', function () {
-//     return view('Backend.Admin.Services.CarWithDriver.update');
-// });
 
 
 
 
+// Route::group(['prefix' => LaravelLocalization::setLocale()], function()
+// {
 
 
-
-// //============Armenia Create routes=============
-
-// Route::get('/admin/createBrochur', function () {
-//     return view('Backend.Admin.Armenia.Brochure.create');
-// });
-
-
-
-
-
-
-// //=============Armenia Update routes=============
-
-
-// Route::get('/admin/Brochure', function () {
-//     return view('Backend.Admin.Armenia.Brochure.update');
-// });
-
-
-// Route::get('/admin/updateFoodAndDrnk', function () {
-//     return view('Backend.Admin.Armenia.FoodAndDrink.update');
-// });
-
-// Route::get('/admin/updateInformation', function () {
-//     return view('Backend.Admin.Armenia.Informations.update');
-// });
-
-
-
-
-
-
-//=================All frontend routes=================
-
-
-//
-Route::get('/AMD', [FrontendController::class, 'index'])->name('AMD');
-Route::get('/EUR', [FrontendController::class, 'index']);
-
-Route::group([
-    'prefix' => LaravelLocalization::setLocale(),
-    'middleware' => ['localize', 'localeSessionRedirect', 'localizationRedirect', 'localeViewPath'],
-], function () {
-Route::get('/', [FrontendController::class, 'index'])->name('blaaaaa');
+Route::get('/{locale?}', [FrontendController::class, 'index'])->name('blaaaaa');
 Route::get('/tour/detail/{id}', [FrontendController::class, 'tourDescription'])->name('tourDescription');
 Route::get('/tour/{name}', [FrontendController::class, 'getTours'])->name('getTours');
 
@@ -578,11 +529,6 @@ Route::get('/ThirdStep', function () {
 });
 
 
-
-// Route::get('/privacy', function () {
-//     return view('Frontend.About.PrivacyPolicy');
-// });
-
 Route::get('/TourFrontPage', function () {
     return view('Frontend.Tours.Tour');
 });
@@ -684,12 +630,9 @@ Route::post('/contact/store', [ContactFormController::class, 'store']);
 Route::get('/contact', [ContactFormController::class, 'index']);
 
 
+
+
+
+
+
 Auth::routes();
-
-// Route::get('/home', [App\Http\Controllers\HomeController::class, 'index'])->name('home');
-// Route::get('/AMD', [FrontendController::class, 'index'])->name('amd');
-// Route::get('/EUR', [FrontendController::class, 'index'])->name('eur');
-// Route::get('/RUB', [FrontendController::class, 'index'])->name('rub');
-
-
-});

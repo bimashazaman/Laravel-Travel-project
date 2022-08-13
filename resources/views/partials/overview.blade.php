@@ -11,9 +11,12 @@
 							
 							<h2>
 								{{ __($h->title) }}
+								{{-- <p>
+									{{  __('Welcome to our website')}}
+								</p> --}}
 							</h2>
 							<p>
-								{{ $h->subtitle }}
+								{{ __($h->subtitle) }}
 							</p>
 							@endforeach
 						</div>

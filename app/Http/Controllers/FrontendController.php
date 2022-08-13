@@ -40,8 +40,13 @@ class FrontendController extends Controller
     }
    }
 
-    public function index()
+    public function index($locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
+       
+
         $home = HomeCMS::all();
 
         $tours = Tour::with('images')
