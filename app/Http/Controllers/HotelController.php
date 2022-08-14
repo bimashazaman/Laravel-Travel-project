@@ -379,7 +379,6 @@ class HotelController extends Controller
     // get the hotels in the frontend
     public function getHotels($locale = null)
     {
-
         if (isset($locale) && in_array($locale, config('app.available_locales'))) {
             app()->setLocale($locale);
         }

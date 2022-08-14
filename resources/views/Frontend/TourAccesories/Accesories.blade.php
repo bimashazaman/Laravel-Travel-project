@@ -6,57 +6,48 @@
 
 
 @foreach ($cms as $c)
-    
-
     <h2 style="text-align: center; ">
         <span class="title-head">
-            {{ $c->title }}
+            {{ __($c->title) }}
         </span>
     </h2>
 
     <p class="hotelDes">
-        {{ $c->description }}
+        {{ __($c->description) }}
     </p>
 
     @endforeach
 
     <section id="pack" class="packages">
         <div class="container">
-
-            <!--/.gallery-header-->
             <div class="packages-content">
-
                 <div class="row">
-
-
                     @foreach ($a as $item )
                     <div class="col-md-4 col-sm-6">
-
                         <div class="single-package-item">
-
-                            <img src="{{$item->images->first()->path}}"
-                                alt="package-place">
+                            <img src="{{ url($item->images->first()->path)}}"
+                                alt="{{ __($item->name)}}">
                             <div class="HotelName">
                                 <h4>
-                                   {{$item->name}}
+                                   {{ __($item->name)}}
                                 </h4>
                             </div>
                             <div class="hotelDesccription">
                                 <p>
-                                    {{$item->description}}
+                                    {{ __($item->description)}}
                                 </p>
                             </div>
                             <div class="pacdet" style="margin-left: -7%;">
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-calendar-check"></i></span> {{$item->availability}}
+                                    <span><i class="fa-solid fa-calendar-check"></i></span> {{ __($item->availability)}}
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person-hiking"></i></span> {{ $item->type}} 
+                                    <span><i class="fa-solid fa-person-hiking"></i></span> {{ __($item->type)}} 
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-dollar-sign"></i></span> {{$item->one_day_price}} 
+                                    <span><i class="fa-solid fa-dollar-sign"></i></span> {{ __($item->one_day_price)}} 
                                 </div>
                             </div>
                             <div class="rating">
@@ -68,35 +59,20 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/ac/'.$item->id) }}"><button class="package-view">
-                                        Details
+                                        {{ __('Details') }}
                                     </button>
                                 </a>
                             </div>
-
-
-
                         </div>
-                        <!--/.single-package-item-->
-
                     </div>
                     <br>
                     <br>
-          
                     @endforeach
-
-                    
-
-                 
-
                 </div>
-                
-                <!--/.row-->
             </div>
             <center>
                 {{ $a->links() }}
             </center>
-            <!--/.packages-content-->
         </div>
-        <!--/.container-->
     </section>
 @endsection

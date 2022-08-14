@@ -119,8 +119,11 @@ class AccessioriesController extends Controller
 
 
     //get the datas on frontend for the accessiories pass compact
-    public function getAccessiories()
+    public function getAccessiories($locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $a = Accessiories::with('images')
             ->simplePaginate(9);
 
@@ -129,12 +132,15 @@ class AccessioriesController extends Controller
     }
 
     //get the details of the selected accessiories
-    public function getAccessioriesDetails($id)
+    public function getAccessioriesDetails($id, $locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $a = Accessiories::find($id);
 
         $related = Accessiories::inRandomOrder()
-            ->simplePaginate(3);
+            ->simplePaginate(6);
         return view('Frontend.TourAccesories.Accesiorieses', compact('a','related'));
     }
 

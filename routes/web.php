@@ -493,8 +493,8 @@ Route::get('/h/{id}/{locale?}', [HotelController::class, 'getHotelDetails']);
 
 
 //==========Frontend Accessiories=========
-Route::get('/acs', [AccessioriesController::class, 'getAccessiories']);
-Route::get('/ac/{id}', [AccessioriesController::class, 'getAccessioriesDetails']);
+Route::get('/acs/{locale?}', [AccessioriesController::class, 'getAccessiories']);
+Route::get('/ac/{id}/{locale?}', [AccessioriesController::class, 'getAccessioriesDetails']);
 
 
 
