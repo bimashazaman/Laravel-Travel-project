@@ -75,6 +75,7 @@ class CarWithDriverController extends Controller
     
         
       //validate the data
+      try {
         $request->validate([
             'car_name' => 'required',
             'three_seats' => 'required|numeric',
@@ -84,11 +85,26 @@ class CarWithDriverController extends Controller
             'fortynine_seats' => 'required|numeric',
         ]);
 
-        //create a new car with driver by create method
-        $car = CarWithDriver::create($request->all());
+        //create a new car with driver
+        $car = CarWithDriver::create(request([
+            'car_name',
+            'three_seats',
+            'seven_seats',
+            'sixteen_seats',
+            'twintynine_seats',
+            'fortynine_seats',
+        ]));
 
         return redirect()->back()->with("msg", "Created successfully!")
         ->with("success", true);
+
+
+        } catch (\Exception $e) {
+            return redirect()->back()->with("msg", $e->getMessage())
+            ->with("fail", true);
+        }
+
+
     }
 
   
@@ -112,8 +128,11 @@ class CarWithDriverController extends Controller
     }
 
    // get everything in the frontend
-    public function getAll()
+    public function getAll($locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $cars = CarWithDriver::all();
         $carInfo = CarWithDriverInfo::all();
         return view("Frontend.Cars.DriverCar", compact('cars','carInfo'));

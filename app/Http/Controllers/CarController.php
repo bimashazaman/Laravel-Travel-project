@@ -206,16 +206,22 @@ class CarController extends Controller
 
 
     //get the cars in frontend
-    public function getCars()
+    public function getCars($locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $cms = RentCarCms::all();
         $cars = Vehicle::with('images')->inRandomOrder()->simplePaginate(9);
         return view('Frontend.Cars.Cars', compact('cars','cms'));
     }
 
     //get the car details in frontend
-    public function getCarDetails($id)
+    public function getCarDetails($id, $locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $car = Vehicle::find($id)->with('images')->first();
         return view('Frontend.Cars.Car', compact('car'));
     }

@@ -439,8 +439,8 @@ Route::get('/oneDay/{locale?}', [OneDayController::class, 'index']);
 Route::get('/themed/{locale?}', [ThemedTour::class, 'getTours']);
 
 //============= car frontend==============
-Route::get('/caa', [CarController::class, 'getCars']);
-Route::get('/car/detail/{id}', [CarController::class, 'getCarDetails']);
+Route::get('/caa/{locale?}', [CarController::class, 'getCars']);
+Route::get('/car/detail/{id}/{locale?}', [CarController::class, 'getCarDetails']);
 
 //=========Mice frontend=========
 Route::get('/mices', [MiceController::class, 'showMice']);
@@ -567,7 +567,7 @@ Route::get('/BookHotel', function () {
 
 
 
-Route::get('/driver', [CarWithDriverController::class, 'getAll']);
+Route::get('/driver/{locale?}', [CarWithDriverController::class, 'getAll']);
 
 
 //=======Book==========

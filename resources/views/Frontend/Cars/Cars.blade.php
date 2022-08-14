@@ -7,7 +7,7 @@
     <section id="pack" class="packages">
         <div class="container">
             <h2 style="text-align: center; padding-bottom:60px">
-                Rent a transport
+                {{ __('Rent a transport') }}
             </h2>
 
             <div class="container">
@@ -18,7 +18,7 @@
                             style="background-color: #FAEFD7; box-shadow:none; border:0.1px solid rgb(212, 211, 211)">
                             <i class="fa-solid fa-car-side"></i>
                             <h4 style="margin: 10px;">
-                                Rent a car
+                                {{ __('Rent a car') }}
                             </h4>
                         </div>
                     </a>
@@ -26,7 +26,7 @@
                         <div class="div2">
                             <i class="fa-solid fa-car-side"></i>
                             <h4 style="margin: 10px">
-                                Transfers With drivers
+                                {{ __('Transfers With drivers') }}
                             </h4>
                         </div>
                     </a>
@@ -34,7 +34,7 @@
                         <div class="div3">
                             <i class="fa-solid fa-car-side"></i>
                             <h4 style="margin: 10px">
-                                Meet the transfer at airport
+                                {{ __('Meet the transfer at airport') }}
                             </h4>
                         </div>
                     </a>
@@ -50,10 +50,10 @@
               
                 <div class="RentCar">
                     <h2 style="color:black; font-weidth:500">
-                       {{ $c->title }}
+                       {{ __($c->title) }}
                     </h2>
                     <p>
-                        {{ $c->description }}
+                        {{ __($c->description) }}
                     </p>
                 </div>
 
@@ -66,7 +66,7 @@
 
                             <center>
                                 <h3 class="" style="margin-top: 20px">
-                                    Cars will be available soon
+                                    {{ __('Cars will be available soon') }}
                                 </h3>
                             </center>
 
@@ -79,7 +79,7 @@
 
                             <div class="single-package-item">
 
-                                <img src="{{$car->images->first()->path}}" alt="">
+                                <img src="{{url($car->images->first()->path)}}" alt="">
                                    
 
                                 <div class="packageName">
@@ -87,22 +87,22 @@
                                 </div>
                                 <div class="Car-txt">
                                     <h4>
-                                        {{ $car->name }}
+                                        {{ __($car->name) }}
                                     </h4>
 
                                 </div>
                                 <div class="pacdet">
                                     <div class="packageOffer" style="margin-left: 20px">
-                                        <span><i class="fa-regular fa-clock"></i></span> {{ $car->car_model }}
+                                        <span><i class="fa-regular fa-clock"></i></span> {{ __($car->car_model) }}
                                     </div>
 
                                     <div class="packageOffer" style="margin-left: 20px">
-                                        <span><i class="fa-solid fa-calendar-check"></i></span> {{ $car->seats }} Seats
+                                        <span><i class="fa-solid fa-calendar-check"></i></span> {{ __($car->seats) }} Seats
                                     </div>
 
                                     <div class="packageOffer" style="margin-left: 20px">
-                                        <span><i class="fa-solid fa-dollar-sign"></i></span> From {{ $car->daily_price }}
-                                        AMD
+                                        <span><i class="fa-solid fa-dollar-sign"></i></span> {{ __('From') }} {{ __($car->daily_price) }}
+                                        {{ __('AMD') }}
                                     </div>
                                 </div>
                                 <div class="rating">
@@ -115,7 +115,7 @@
                                 <div class="package-btn">
                                     <a href="{{ url('/car/detail/' . $car->id) }}">
                                         <button class="package-view">
-                                            Details
+                                            {{ __('Details') }}
                                         </button>
 
                                     </a>

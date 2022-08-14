@@ -9,7 +9,7 @@
     @foreach ($carInfo as $car)
         <section class="tour-descriptions" style="margin-top: -50px;">
             <h1 style="text-align: center">
-                {{ $car->name }}
+                {{ __($car->name) }}
             </h1>
             <div class="row">
                 <div class="col-md-7">
@@ -127,34 +127,34 @@
                 <div class="col-md-5">
                     <div class="tour-descriptions-content-inner-left-content-title bb">
                         <h2>
-                            Key Points
+                            {{ __('Key Points') }}
                         </h2>
 
 
                         <div class="detailespackage">
-                            <div style="float: left"><i class="fa-solid fa-car"></i>Type</div>
+                            <div style="float: left"><i class="fa-solid fa-car"></i>{{ __('Type') }}</div>
                             <div>
-                                {{ $car->type }}
+                                {{ __($car->type) }}
                             </div>
                         </div>
                         <div class="detailespackage">
-                            <div><i class="fa-solid fa-person"></i>Number of seats</div>
+                            <div><i class="fa-solid fa-person"></i>{{ __('Number of seats') }}</div>
                             <div>
-                                {{ $car->seats }}
-                            </div>
-                        </div>
-
-                        <div class="detailespackage">
-                            <div><i class="fa-solid fa-calendar-check"></i>Year</div>
-                            <div>
-                                {{ $car->model }}
+                                {{ __($car->seats) }}
                             </div>
                         </div>
 
                         <div class="detailespackage">
-                            <div><i class="fa-solid fa-calendar"></i>Free Cancellation</div>
+                            <div><i class="fa-solid fa-calendar-check"></i>{{ __('Year') }}</div>
                             <div>
-                                {{ $car->cancelation_fee }}
+                                {{ __($car->model) }}
+                            </div>
+                        </div>
+
+                        <div class="detailespackage">
+                            <div><i class="fa-solid fa-calendar"></i>{{ __('Free Cancellation') }}</div>
+                            <div>
+                                {{ __($car->cancelation_fee) }}
                             </div>
                         </div>
 
@@ -172,10 +172,10 @@
 
         <section class="carDes" style="padding: 70px">
             <h2>
-                Overview
+                {{ __('Overview') }}
             </h2>
             <p>
-                {{ $car->overview }}
+                {{ __($car->overview) }}
             </p>
         </section>
     @endforeach
@@ -195,23 +195,23 @@
                 </div>
 
                 <div class="col-lg-2 col-md-6 newtata">
-                    3 Seats
+                    {{ __('3 Seats') }}
                 </div>
 
                 <div class="col-lg-2 col-md-6 newtata">
-                    7 Seats
+                    {{ __('7 Seats') }}
                 </div>
 
                 <div class="col-lg-2 col-md-6 newtata">
-                    16 Seats
+                    {{ __('16 Seats') }}
                 </div>
 
                 <div class="col-lg-2 col-md-6 newtata">
-                    29 Seats
+                    {{ __('29 Seats') }}
                 </div>
 
                 <div class="col-lg-2 col-md-6 newtata">
-                    49 Seats
+                    {{ __('49 Seats') }}
                 </div>
 
             </div>
@@ -219,27 +219,27 @@
                 <div class="row justify-content-center" style="margin: auto; width: 86%; margin-top: 7px">
 
                     <div class="col-lg-2 col-md-6 newtata">
-                        {{ $car->car_name }}
+                        {{ __($car->car_name) }}
                     </div>
 
                     <div class="col-lg-2 col-md-6 newtat">
-                        {{ $car->three_seats }}
+                        {{ __($car->three_seats) }}
                     </div>
 
                     <div class="col-lg-2 col-md-6 newtat">
-                        {{ $car->seven_seats }}
+                        {{ __($car->seven_seats) }}
                     </div>
 
                     <div class="col-lg-2 col-md-6 newtat">
-                        {{ $car->sixteen_seats }}
+                        {{ __($car->sixteen_seats) }}
                     </div>
 
                     <div class="col-lg-2 col-md-6 newtat">
-                        {{ $car->twintynine_seats }}
+                        {{ __($car->twintynine_seats) }}
                     </div>
 
                     <div class="col-lg-2 col-md-6 newtat">
-                        {{ $car->fortynine_seats }}
+                        {{ __($car->fortynine_seats) }}
                     </div>
 
                 </div>
@@ -247,7 +247,7 @@
             <center>
                 <a href="{{ url('/BookACar') }}">
                     <button class="package-view" style="text-align: center; align-items:center; margin:20px">
-                        Book Now
+                        {{ __('Book Now') }}
                     </button>
                 </a>
             </center>
