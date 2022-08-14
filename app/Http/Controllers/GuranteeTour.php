@@ -10,8 +10,12 @@ use Illuminate\Http\Request;
 
 class GuranteeTour extends Controller
 {
-    public function getTours()
+    public function getTours($locale = null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $tour = Tour::with('images')->with('types')->where('category_id', 2)->orderBy('id', 'DESC')->simplePaginate(9);
         $category = TourCategory::where('id', 2)->first();
         $cms = TourCMS::all();

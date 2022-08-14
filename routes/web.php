@@ -423,13 +423,13 @@ Route::get('/Bv/{locale?}', [ClassicTour::class, 'getClasicTours'])->name('getCl
 Route::get('/getClassicTour/{id}/{locale?}', [ClassicTour::class, 'getClassicTour']);
 
 //=====gurantee Tour===========
-Route::get('/guaranteeTour', [GuranteeTour::class, 'getTours']);
+Route::get('/guaranteeTour/{locale?}', [GuranteeTour::class, 'getTours']);
 
 //=========Gastro Tours=========
-Route::get('/GastroTours', [GastroTour::class, 'getTours']);
+Route::get('/GastroTours/{locale?}', [GastroTour::class, 'getTours']);
 
 //=========Active Tours=========
-Route::get('/activeTours', [ActiveTour::class, 'getTours']);
+Route::get('/activeTours/{locale?}', [ActiveTour::class, 'getTours']);
 
 
 //=========OneDay Tours=========

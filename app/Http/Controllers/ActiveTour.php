@@ -10,8 +10,13 @@ use Illuminate\Http\Request;
 
 class ActiveTour extends Controller
 {
-    public function getTours()
+    public function getTours($locale = null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
+        
         $tour = Tour::with('images')->with('types')->where('category_id', 4)->orderBy('id', 'DESC')->simplePaginate(9);
         // $tour = Tour::with('images')->where('category_id', 4)->get();
         
