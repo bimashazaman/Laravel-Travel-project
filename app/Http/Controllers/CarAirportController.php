@@ -71,8 +71,11 @@ class CarAirportController extends Controller
 
 
     //get all car airport frontend
-    public function getAllCarAirport()
+    public function getAllCarAirport($locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $carAirports = CarAirport::all();
         return view('Frontend.Cars.MeetTheTransfer', compact('carAirports'));
     }

@@ -499,7 +499,7 @@ Route::get('/ac/{id}', [AccessioriesController::class, 'getAccessioriesDetails']
 
 
 //========Frontend CarAirport=========
-Route::get('/MT', [CarAirportController::class, 'getAllCarAirport']);
+Route::get('/MT/{locale?}', [CarAirportController::class, 'getAllCarAirport']);
 
 
 //======frontend send step route ==========

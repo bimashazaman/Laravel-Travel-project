@@ -13,7 +13,7 @@
             <div class="div1">
                 <i class="fa-solid fa-car-side"></i>
                 <h4 style="margin: 10px;">
-                    Rent a car
+                    {{ __('Rent a car') }}
                 </h4>
             </div>
         </a>
@@ -21,7 +21,7 @@
             <div class="div2">
                 <i class="fa-solid fa-car-side"></i>
                 <h4 style="margin: 10px">
-                    Transfers With drivers
+                    {{ __('Transfers With drivers') }}
                 </h4>
             </div>
         </a>
@@ -29,7 +29,7 @@
             <div class="div3" style="background-color: #FAEFD7; box-shadow:none; border:0.1px solid rgb(212, 211, 211)">
                 <i class="fa-solid fa-car-side"></i>
                 <h4 style="margin: 10px">
-                    Meet the transfer at airport
+                    {{ __('Meet the transfer at airport') }}
                 </h4>
             </div>
         </a>
@@ -40,12 +40,12 @@
     @if (count($carAirports) > 0)
         <div class="rentCar">
             <p class="headlineRent">
-                Meet and transfer at the airport
+                {{ __('Meet and transfer at the airport') }}
             </p>
 
             @foreach ($carAirports as $carAirport)
                 <p class="ha">
-                    {{ $carAirport->details }}
+                    {{ __($carAirport->details) }}
                 </p>
 
                 <br>
@@ -66,13 +66,13 @@
 
 
                     <div style="padding: 100px">
-                        {{ $carAirport->more_details }}
+                        {{ __($carAirport->more_details) }}
                     </div>
             @endforeach
 
             <button class="package-view">
                 <a href="{{ url('/BookACar/airport/at') }}" style="color: black">
-                    Send Request
+                    {{ __('Send Request') }}
                 </a>
             </button>
 
