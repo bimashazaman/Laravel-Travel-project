@@ -134,21 +134,6 @@ Route::put('/reviewCms/{id}', [ReviewCmsController::class, 'update']);
 Route::delete('/reviewCms/{id}', [ReviewCmsController::class, 'destroy']);
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 //============ Add facility page==============
 
 Route::get('/AddFacility', function () {
@@ -435,7 +420,7 @@ Route::get('/c/{id}', [TourEventController::class, 'showFrontendDetails']);
 
 //=========== classic tours==========
 Route::get('/Bv/{locale?}', [ClassicTour::class, 'getClasicTours'])->name('getClasicTours');
-Route::get('/getClassicTour/{id}', [ClassicTour::class, 'getClassicTour']);
+Route::get('/getClassicTour/{id}/{locale?}', [ClassicTour::class, 'getClassicTour']);
 
 //=====gurantee Tour===========
 Route::get('/guaranteeTour', [GuranteeTour::class, 'getTours']);
@@ -553,6 +538,10 @@ Route::get('/usefulToKnow', [UsefulInfoController::class, 'getUsefulInfo']);
 
 Route::get('/TentForm', function () {
     return view('Frontend.TourAccesories.TentForm');
+});
+
+Route::get('/', function () {
+    return redirect('/home');
 });
 
 

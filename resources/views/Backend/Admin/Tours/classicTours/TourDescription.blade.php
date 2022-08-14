@@ -321,11 +321,11 @@
 
                 <br>
                 <div class="list-group list-group-light">
-                    @foreach ($tour->facility as $tourFacility)
+                    @foreach ($tour->types as $tourFacility)
                         <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
                             style="display: flex">
 
-                            {{ $tourFacility->name }}
+                            {{ $tourFacility->type_name }}
                             <hr>
 
 

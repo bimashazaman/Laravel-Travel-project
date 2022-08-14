@@ -7,7 +7,7 @@
 
     <center>
         <h2>
-            {{ $tour->name }}
+            {{ __($tour->name) }}
         </h2>
     </center>
 
@@ -20,16 +20,9 @@
                         <div class="tour-descriptions-content-inner-left">
                             <div class="tour-descriptions-content-inner-left-content">
 
-                            </div><!-- /.tour-descriptions-content-inner-left-content -->
-                        </div><!-- /.tour-descriptions-content-inner-left -->
+                            </div>
+                        </div>
                         <div class="tour-descriptions-content-inner-right">
-
-
-
-
-
-
-
                             <section class="" style="">
                                 <div class="imgCcontainer">
                                     <div class="carousel imgC" data-ride="carousel">
@@ -68,12 +61,12 @@
 
                             @if (count($tour->highlights) > 0)
                                 <div class="uldescription">
-                                    <h2>Highlights</h2>
+                                    <h2>{{ __('Highlights') }}</h2>
                                     <br>
                                     <ul style="list-style: none;">
                                         @foreach ($tour->highlights as $h)
                                             <li style="font-weight: 500; font-size:17px">
-                                                {{ $h->name }}
+                                                {{ __($h->name) }}
                                             </li>
                                         @endforeach
 
@@ -81,89 +74,69 @@
                                     </ul>
                                 </div>
                             @endif
-
-
-
-
-                        </div><!-- /.tour-descriptions-content-inner-right -->
-                    </div><!-- /.tour-descriptions-content-inner -->
-                </div><!-- /.tour-descriptions-content -->
-            </div><!-- /.col -->
+                        </div>
+                    </div>
+                </div>
+            </div>
 
             <div class="col-md-5">
-
                 <div class="tour-descriptions-content-inner-left-content-title bb">
-
-                    <!--Google map-->
                     <div id="map-container-google-1" class="z-depth-1-half map-container"
                         style=" width: 85%; height: 455px;">
-                        {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed"
-                            frameborder="0" style="border:0" allowfullscreen></iframe> --}}
-
                         <img src="https://www.google.com/maps/d/thumbnail?mid=1Xj7FvDEIi701cgUemkAj9Vk8Voo&hl=en_US"
-                            alt="" style="    height: 455px">
-
-
-
-
-
-                    </div><!-- /.tour-descriptions-content-inner-left-content-title -->
-                </div><!-- /.row -->
+                            alt="" style="height: 455px">
+                    </div>
+                </div>
                 <div class="tour-descriptions-content-inner-left-content-title bb">
                     <h2>
-                        Key Points
+                        {{ __('Key Points') }}
                     </h2>
-
-
                     <div class="detailespackage">
-                        <div style="float: left"><i class="fa-solid fa-clock"></i>Duration</div>
+                        <div style="float: left"><i class="fa-solid fa-clock"></i>{{ __('Duration') }}</div>
                         <div>
-                            <span>{{ $tour->duration }}</span>
+                            <span>{{ __($tour->duration) }}</span>
                         </div>
                     </div>
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-repeat"></i>
-                            Date
+                            {{ __('Date') }}
                         </div>
                         <div>
-                            <span>{{ $tour->start_date }} - {{ $tour->end_date }} </span>
+                            <span>{{ __($tour->start_date) }} - {{ __($tour->end_date) }} </span>
                         </div>
                     </div>
 
                     <div class="detailespackage">
-                        <div><i class="fa-solid fa-calendar-check"></i>Type</div>
+                        <div><i class="fa-solid fa-calendar-check"></i>{{ __('Type') }}</div>
                         <div>
+                            
                             @foreach ($tour->types as $t)
-                                {{ $t->type_name . ' ' }}
+                                {{ __($t->type_name) . ' ' }}
                             @endforeach
                         </div>
                     </div>
 
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-dollar-sign"></i>
-                            Price
+                            {{ __('Price') }}
                         </div>
                         <div>
-                            <span>{{ $tour->price }}</span>
+                            <span>{{ __($tour->price) }}</span>
                         </div>
                     </div>
+                </div>
+            </div>
+    </section>
 
-
-                </div><!-- /.tour-descriptions-content-inner-left-content-title -->
-
-
-            </div><!-- /.container -->
-    </section><!-- /.tour-descriptions -->
-    <!-- Tour description end -->
 
     <div class="container-fluid">
         <div class="col-md-12 col-xs-12">
             <div class="blah">
                 <h3 style="color:white; padding-top:3%">
-                    Itenanary
+                    {{ __('Itenanary') }}
                 </h3>
                 <p style="color:white; font-size: 1.4rem;  font-weight: 300; padding-bottom:3%">
-                    {{ $tour->Itenanary }}
+                    {{ __($tour->Itenanary) }}
 
                 </p>
 
@@ -178,7 +151,7 @@
         @if (count($tour->program) > 0)
             <div class="col-md-6">
                 <h3 style="margin-left: 40px; margin-top: 10px">
-                    Tour Program
+                    {{ __('Tour Program') }}
                 </h3>
                 <br>
 
@@ -189,52 +162,44 @@
                     <div>
                         @foreach ($tour->program as $p)
                             <h3>
-                                {{ $p->day }}
+                                {{ __($p->day) }}
                             </h3>
                             <p style="color: black">
-                                {{ $p->fromTo }}
+                                {{ __($p->fromTo) }}
                             </p>
                             <div class="single-row">
                                 <input name="collapsable" type="radio" id="col-{{ $p->id }}" class="opener" />
                                 <label for="col-{{ $p->id }}">
                                     <div class="content">
                                         <p style="width: 70%; font-weight:500; color:black; font-size:1.2rem">
-                                            {{ $p->description }}
+                                            {{ __($p->description) }}
                                         </p>
 
                                         <br>
                                         <div style="display: flex" style="font-size: 1.5rem;font-weight:500 ">
                                             <span style="font-weight:600"><i class="fa-solid fa-road"
                                                     style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
-                                                {{ $p->distance }}</span>
+                                                {{ __($p->distance) }}</span>
                                             <span style="font-weight:600"><i class="fa-regular fa-clock"
                                                     style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
-                                                {{ $p->duration }}</span>
+                                                {{ __($p->duration) }}</span>
                                             <span style="font-weight:600"><i class="fa-solid fa-burger"
                                                     style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
-                                                {{ $p->food }}</span>
+                                                {{ __($p->food) }}</span>
                                             <span style="font-weight:600"><i class="fa-regular fa-bed"
                                                     style="font-size: 1.5rem; color:#e5a686; margin-left:15px;"></i>
-                                                {{ $p->location }}</span>
+                                                {{ __($p->location) }}</span>
                                         </div>
                                     </div>
 
                                     <span class="intro" style="width: 70%;"><img src="{{ asset('images/drop.png') }}"
                                             class="arrow" alt=""></span>
-
-
                                 </label>
                             </div>
                         @endforeach
                         <br>
-
                     </div>
-
-
-
-
                 </div>
-
             </div>
         @endif
         @if (count($tour->facility) > 0)
@@ -242,27 +207,21 @@
                 {{-- <img src="{{ asset('images/i.png') }}" alt="" style="width: 80%"> --}}
                 <br>
                 <h3 style="padding-left: 90px">
-                    What is included
+                    {{ __('What Is Included') }}
                 </h3>
                 <br>
                 <ul style="list-style: none; padding-left: 90px">
 
                     @foreach ($tour->facility as $i)
                         <li class="mewmew"><span><img src="{{ asset('images/ullist.png') }}" class="plusImg"></span>
-                            {{ $i->name }}</li>
+                            {{ __($i->name) }}</li>
                     @endforeach
-
-
 
                     @if ($tour->facility->count() > 0)
                         @foreach ($tour->facility as $i)
-                            <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}"
-                                        style="width: 20px; margin-right: 10px;"></span>{{ $i->unname }}</li>
+                            <li class="mewmew"><span><img src="{{ asset('images/minus.png') }}" style="width: 20px; margin-right: 10px;"></span>{{ __($i->unname) }}</li>
                         @endforeach
                     @endif
-
-
-
                 </ul>
                 <br>
                 <br>
@@ -276,29 +235,28 @@
         <div class="container-fluid">
             <div class="FormTour">
                 <h3 style="text-align: center">
-                    The price per 1 pax
+                   {{ __('The price per 1 pax')}}
                 </h3>
                 <div class="row">
                     <div class="col-md-9 col-xs-9">
                         <table class="table table-bordered tble" style="width: 100%; margin-top: 20px;">
-
                             <thead>
                                 <tr>
                                     <th
                                         style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                        2-3 Pax
+                                        {{ __('2-3 Pax') }}
                                     </th>
                                     <th
                                         style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                        4-6 Pax
+                                        {{ __('4-6 Pax') }}
                                     </th>
                                     <th
                                         style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                        17-30 Pax
+                                        {{ __('17-30 Pax') }}
                                     </th>
                                     <th
                                         style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                        30 More
+                                        {{ __('30 More') }}
                                     </th>
                                 </tr>
                             </thead>
@@ -324,7 +282,7 @@
                     <div class="col-md-3">
                         <span><button class="package-view" style="margin-top: 80px;">
                                 <a href="{{ url('/BookATour/' . $tour->id) }}" style="color: black">
-                                    Book Now
+                                   {{ __('Book Now') }}
                                 </a>
                             </button></span>
                     </div>
@@ -337,36 +295,36 @@
                         <div class="col-md-10">
                             <table class="table table-bordered tble" style="width: 100%; margin-top: 20px;">
                                 <h3 style="text-align: center">
-                                    The Tours with guaranteed departures
+                                    {{ __('The Tours with guaranteed departures') }}
                                 </h3>
                                 <br>
                                 <thead>
                                     <tr>
                                         <th
                                             style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                            Start Date
+                                            {{ __('Start Date') }}
                                         </th>
                                         <th
                                             style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                            End Date
+                                            {{ __('End Date') }}
                                         </th>
                                         <th
                                             style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                            Max in the group
+                                           {{ __('Max in the group')}}
                                         </th>
                                         <th
                                             style="text-align: center; margin-bottom:10px; background-color: #FFF1EA; padding: 15px; font-size:16px; font-weight:500">
-                                            Price
+                                            {{ __('Price') }}
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     @foreach ($tour->departureTable as $d)
                                         <tr>
-                                            <td style="padding: 15px;">{{ $d->start_date }}</td>
-                                            <td style="padding: 15px;"> {{ $d->end_date }}</td>
-                                            <td style="padding: 15px;">{{ $d->pax }}</td>
-                                            <td style="padding: 15px;">{{ $d->price }}</td>
+                                            <td style="padding: 15px;">{{ __($d->start_date) }}</td>
+                                            <td style="padding: 15px;"> {{ __($d->end_date) }}</td>
+                                            <td style="padding: 15px;">{{ __($d->pax) }}</td>
+                                            <td style="padding: 15px;">{{ __($d->price) }}</td>
 
                                         </tr>
                                     @endforeach
@@ -390,7 +348,7 @@
                                 <button class="package-view" style="margin-top: 10px;">
                                     <a href="{{ url('/BookATourDeparture/' . $tour->id . '/departure/' . $d->id) }}"
                                         style="color: black">
-                                        Book Now
+                                       {{ __('Book Now')}}
                                         {{ $d->id }}
                                     </a>
                                 </button>
@@ -407,7 +365,7 @@
                 <div class="row" style="padding: 47px">
                     <div class="col-md-6">
                         <h3 style="color: white">
-                            Useful To Know
+                            {{ __('Useful To Know') }}
                         </h3>
                         <br>
                         <ul style="list-style: none">
@@ -417,7 +375,7 @@
                                         <img src="{{ asset('images/tp.png') }}" alt="">
                                     </span>
                                     <span>
-                                        {{ $u->name }}
+                                        {{ __($u->name) }}
                                     </span>
                                 </li>
                             @endforeach
@@ -444,7 +402,7 @@
                 <div class="packages-content">
                     <center>
                         <h2>
-                            Related Tours
+                            {{ __('Related Tours') }}
                         </h2>
                         <br>
                         <br>
@@ -456,35 +414,33 @@
                                 {{-- <h3 style="text-align: center;  font-weight: 600;">{{ $tour->category->name }}</h3> --}}
 
                                 <div class="single-package-item">
-
-
                                     <img src="{{ asset($r->images->first()->path) }}" alt="" style="width:100%">
                                     {{-- alt="package-place"> --}}
                                     <div class="packageName">
-                                        {{ $r->name }}
+                                        {{ __($r->name) }}
                                     </div>
                                     <div>
                                         <h4 class="package-txt">
                                             <a href="#">
-                                                {{ $r->type }}
+                                                {{ __($r->type) }}
                                             </a>
                                         </h4>
                                         <p class="kki">
-                                            {{ $r->description }}
+                                            {{ __($r->description) }}
                                         </p>
                                     </div>
                                     <div class="pacdet">
                                         <div class="packageOffer">
-                                            <span><i class="fa-regular fa-clock"></i></span> {{ $r->duration }}
+                                            <span><i class="fa-regular fa-clock"></i></span> {{ __($r->duration) }}
                                         </div>
 
                                         <div class="packageOffer">
-                                            <span><i class="fa-solid fa-calendar-check"></i></span> {{ $r->start_date }} -
-                                            {{ $r->end_date }}
+                                            <span><i class="fa-solid fa-calendar-check"></i></span> {{ __($r->start_date) }} -
+                                            {{ __($r->end_date) }}
                                         </div>
 
                                         <div class="packageOffer">
-                                            <span><i class="fa-solid fa-dollar-sign"></i></span> {{ $r->price }}
+                                            <span><i class="fa-solid fa-dollar-sign"></i></span> {{ __($r->price) }}
                                         </div>
                                     </div>
                                     <div class="rating">
@@ -496,7 +452,7 @@
                                     </div>
                                     <div class="package-btn">
                                         <a href="{{ url('/getClassicTour/' . $r->id) }}"> <button class="package-view">
-                                                Details
+                                                {{ __('Details') }}
                                             </button>
                                         </a>
 
@@ -504,10 +460,6 @@
                                 </div>
                             </div>
                         @endforeach
-
-
-                        <!--/.col-->
-
                     </div>
                     <!--/.row-->
                 </div>
@@ -519,54 +471,50 @@
     </section>
 
     @if (count($reviews) > 0)
-        
-   
+        <div class="container-fluid">
+            <h2 style="padding-left:44px">
+                {{ __('Reviews') }}
+            </h2>
+            <div class="row" style="padding:60px">
+                @foreach ($reviews as $r)
+                    <div class="col-md-3 col-xs-12">
+                        <img style="border-radius: 50%; width:26%"
+                            src="https://static.vecteezy.com/system/resources/thumbnails/004/511/281/small/default-avatar-photo-placeholder-profile-picture-vector.jpg"
+                            alt="">
+                        <h5>
+                            {{ $r->name }}
+                        </h5>
+                        <h5>
+                            {{ __($r->created_at->diffForHumans()) }}
+                        </h5>
+                        <h5>
+                            {{ __($r->title) }}
+                        </h5>
+                        <br>
+                        <h5>
+                            {{ __($r->review) }}
+                        </h5>
+                        <a href="" style="text-decoration: underline; color:rgb(86, 158, 241);">
+                            {{ __('see more') }}
+                        </a>
+                        <div class="rating">
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                            <span class=""><i class="fa-solid fa-star"></i></span>
+                        </div>
 
-    <div class="container-fluid">
-        <h2 style="padding-left:44px">
-            Reviews
-        </h2>
-        <div class="row" style="padding:60px">
-            @foreach ($reviews as $r)
-                <div class="col-md-3 col-xs-12">
-                    <img style="border-radius: 50%; width:26%"
-                        src="https://static.vecteezy.com/system/resources/thumbnails/004/511/281/small/default-avatar-photo-placeholder-profile-picture-vector.jpg"
-                        alt="">
-                    <h5>
-                        {{ $r->name }}
-                    </h5>
-                    <h5>
-                        {{ $r->created_at->diffForHumans() }}
-                    </h5>
-                    <h5>
-                        {{ $r->title }}
-                    </h5>
-                    <br>
-                    <h5>
-                        {{ $r->review }}
-                    </h5>
-                    <a href="" style="text-decoration: underline; color:rgb(86, 158, 241);">
-                        see more
-                    </a>
-                    <div class="rating">
-                        <span class=""><i class="fa-solid fa-star"></i></span>
-                        <span class=""><i class="fa-solid fa-star"></i></span>
-                        <span class=""><i class="fa-solid fa-star"></i></span>
-                        <span class=""><i class="fa-solid fa-star"></i></span>
-                        <span class=""><i class="fa-solid fa-star"></i></span>
+
                     </div>
+                @endforeach
 
-
-                </div>
-            @endforeach
-
+            </div>
+            <div class="WR">
+                <a class="WR" href="{{ url('/AddReview') }}" style="text-decoration:underline;">Write Review</a> <i
+                    class="fa-solid fa-pen-clip" style="text-decoration: none"></i>
+            </div>
         </div>
-        <div class="WR">
-            <a class="WR" href="{{ url('/AddReview') }}" style="text-decoration:underline;">Write Review</a> <i
-                class="fa-solid fa-pen-clip" style="text-decoration: none"></i>
-        </div>
-    </div>
-
     @endif
 
     <script>

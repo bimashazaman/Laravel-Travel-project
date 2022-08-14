@@ -29,8 +29,11 @@ class ClassicTour extends Controller
 
     //get one day tour
 
-    public function getClassicTour($id)
+    public function getClassicTour($id, $locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $tour = Tour::with('images')
             ->with('highlights')
             ->with('facility')
