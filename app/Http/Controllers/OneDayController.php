@@ -12,8 +12,12 @@ class OneDayController extends Controller
 {
     // return view('Frontend.OneDayTour.OneDayTour');
 
-   public function index()
+   public function index($locale = null)
    {
+    if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+        app()->setLocale($locale);
+    }
+
     $tour = Tour::with('images')->with('types')->where('category_id', 5)->orderBy('id', 'DESC')->simplePaginate(9);
     $category = TourCategory::where('id', 5)->first();
 

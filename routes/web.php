@@ -433,10 +433,10 @@ Route::get('/activeTours', [ActiveTour::class, 'getTours']);
 
 
 //=========OneDay Tours=========
-Route::get('/oneDay', [OneDayController::class, 'index']);
+Route::get('/oneDay/{locale?}', [OneDayController::class, 'index']);
 
 //=======theme tours==========
-Route::get('/themed', [ThemedTour::class, 'getTours']);
+Route::get('/themed/{locale?}', [ThemedTour::class, 'getTours']);
 
 //============= car frontend==============
 Route::get('/caa', [CarController::class, 'getCars']);

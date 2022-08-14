@@ -40,7 +40,7 @@
                         <div class="col-md-4 col-sm-6">
                            
                             <div class="single-package-item">
-                                <img src="{{ $item->images->first()->path }}" alt="{{ __($item->name) }}">
+                                <img src="{{ url($item->images->first()->path) }}" alt="{{ __($item->name) }}">
                                 <div class="packageName">
 
                                     {{ __($item->name) }}

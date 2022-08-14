@@ -349,7 +349,7 @@
                                     <a href="{{ url('/BookATourDeparture/' . $tour->id . '/departure/' . $d->id) }}"
                                         style="color: black">
                                        {{ __('Book Now')}}
-                                        {{ $d->id }}
+                                        {{-- {{ $d->id }} --}}
                                     </a>
                                 </button>
                             @endforeach

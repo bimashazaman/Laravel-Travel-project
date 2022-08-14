@@ -14,7 +14,7 @@
                              <h3 style="text-align: center;  font-weight: 600;">{{ __($tour->category->name) }}</h3>
 
                              <div class="single-package-item">
-                                 <img src="{{ $tour->images->first()->path }}" alt="{{ __($tour->name) }}">
+                                 <img src="{{ url($tour->images->first()->path) }}" alt="{{ __($tour->name) }}">
 
                                  <div class="packageName">
                                      {{ __($tour->name) }}

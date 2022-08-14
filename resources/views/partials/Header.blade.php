@@ -90,30 +90,7 @@
                              {{-- <li class="language">ENG</li>
                                       <li class="USD">USD</li> --}}
                              <ul class="nav navbar-nav navbar-right" style="margin-top: 14px;">
-                                 {{-- <li class="nav-item" style="text-decoration: underline; margin-top:10px">USD</li> --}}
-                                 {{-- <li class="nav-item" style="text-decoration: underline; margin-top:10px">ENG</li> --}}
-
-                                 {{-- dropdown of language @if (session('locale')) --}}
-                                 {{-- <li class="nav-item dropdown">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false" style="text-decoration: underline">
-                                        En
-                                        {{-- {{ session('locale') }} --}}
-                                 {{-- </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item" href="">Hy(Armenia)</a>
-                                        <a class="dropdown-item" href="">En(English)</a>
-                                        <a class="dropdown-item" href="">Ru(Russia)</a>
-                                    </div>
-                                </li> --}}
-                                 {{-- @else --}}
-
-
-
-
-
-
+                                 
                                  <li class="nav-item dropdown">
                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                          role="button" data-toggle="dropdown" aria-haspopup="true"
@@ -147,26 +124,12 @@
                                  </li>
 
 
-                                 {{-- @foreach(LaravelLocalization::getSupportedLocales() as $localeCode => $properties)
-                                 <li class="nav-item dropdown">
-                                     <a class="nav-link dropdown-toggle" hreflang="{{ $localeCode }}" href="{{ LaravelLocalization::getLocalizedURL($localeCode, null, [], true) }}">
-                                        {{ $properties['native'] }}
-                                    </a></a>
-                                     </div>
-                                 </li>
-
-                                    @endforeach --}}
-
-
-
-
-
-
+                               
                                  <li class="nav-item dropdown">
                                      <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
                                          role="button" data-toggle="dropdown" aria-haspopup="true"
                                          aria-expanded="false">
-                                         English
+                                         {{ __('English') }}
                                      </a>
                                      
                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: auto">
@@ -174,7 +137,7 @@
 
                                         
                                          <a class="dropdown-item" href="{{ url(url()->current().'/'.$available_locale) }}">
-                                            {{ $locale_name }}
+                                            {{ __($locale_name) }}
                                         </a>
 
                                         @endforeach
