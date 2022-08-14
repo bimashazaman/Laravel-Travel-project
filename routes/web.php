@@ -463,8 +463,8 @@ Route::get('/aboutUs', [AboutUsController::class, 'index']);
 
 //=============Frontend Nearby ===========
 Route::get('/getAllThingsToSee', [ThingsToSeeController::class, 'getAllThingsToSee']);
-Route::get('/getThingsToSeeByCategoryId/{id}', [ThingsToSeeController::class, 'getThingsToSeeByCategory']);
-Route::get('/getThingsToSeeById/{id}', [ThingsToSeeController::class, 'getThingsToSeeById']);
+Route::get('/getThingsToSeeByCategoryId/{id}/{locale?}', [ThingsToSeeController::class, 'getThingsToSeeByCategory']);
+Route::get('/getThingsToSeeById/{id}/{locale?}', [ThingsToSeeController::class, 'getThingsToSeeById']);
 
 
 //==========Things to see Frontend=========

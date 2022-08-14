@@ -7,20 +7,15 @@ use App\Models\ThingsToSee;
 use App\Models\ThingsToSeeCategory;
 use Exception;
 use Illuminate\Http\Request;
-use Illuminate\Support\Facades\DB;
-
 
 class ThingsToSeeController extends Controller
 {
     
-    public function index()
+    public function index($locale = null)
     {
-        
-        
-    // $things = ThingsToSee::where('category_id', $name)->get();
-    //     $category = ThingsToSeeCategory::where('name', $name)->first();
-    //     return view('Backend.Admin.Armenia.ThingsToSee.view', compact('things', 'category'));
-
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $categories = ThingsToSeeCategory::all();
         $things = ThingsToSee::simplePaginate(9);
         return view('Backend.Admin.Armenia.ThingsToSee.view', compact('categories','things'));
@@ -139,20 +134,21 @@ class ThingsToSeeController extends Controller
         $things->delete();
         return redirect()->back()->with("msg", "Deleted successfully!")
         ->with("success", true);
-
     }
-
-    public function getThingsToSeeByCategory($id)
+    public function getThingsToSeeByCategory($id, $locale = null )
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $things = ThingsToSee::with('images')->where('category_id', $id)->simplePaginate(9);
         $category = ThingsToSeeCategory::where('id', $id)->first();
         return view('Frontend.Armenia.ThingsToSee', compact('things', 'category'));
     }
-
-    
-
-    public function getThingsToSeeById($id)
+    public function getThingsToSeeById($id, $locale=null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $things = ThingsToSee::with('images')->where('id', $id)->first();
         // $related = ThingsToSee::where('category_id', $things->category_id)->get();
         $related = ThingsToSee::where('category_id', $things->category_id)->inRandomOrder()->simplePaginate(3);
