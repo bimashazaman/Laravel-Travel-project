@@ -487,8 +487,8 @@ Route::get('/Article/{id}',[TravelBlogController::class, 'getTravelBlogById']);
 
 //==========Frontend Hotel=========
 
-Route::get('/hs', [HotelController::class, 'getHotels']);
-Route::get('/h/{id}', [HotelController::class, 'getHotelDetails']);
+Route::get('/hs/{locale?}', [HotelController::class, 'getHotels']);
+Route::get('/h/{id}/{locale?}', [HotelController::class, 'getHotelDetails']);
 
 
 

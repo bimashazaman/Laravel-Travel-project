@@ -16,7 +16,7 @@
                             <div class="tour-descriptions-content-inner-left-content">
                                 <center>
                                     <h1>
-                                        {{ $hotels->name }}
+                                        {{ __($hotels->name) }}
                                     </h1>
                                 </center>
 

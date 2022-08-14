@@ -377,8 +377,13 @@ class HotelController extends Controller
 
 
     // get the hotels in the frontend
-    public function getHotels()
+    public function getHotels($locale = null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
+
         $hotels = Hotel::with('images')
             ->with('highlights')
             ->with('rooms')
@@ -395,8 +400,12 @@ class HotelController extends Controller
     }
 
     // get the hotel details in the frontend
-    public function getHotelDetails($id)
+    public function getHotelDetails($id, $locale=null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $hotels = Hotel::with('images')
             ->with('highlights')
             ->with('hotelInfo')
