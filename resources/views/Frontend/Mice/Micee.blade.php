@@ -7,7 +7,7 @@
 
     <section class="tour-descriptions" style="padding: 50px; margin-top:-50px">
         <h1 style="text-align: center">
-           {{ $mice->name }}
+           {{ __($mice->name) }}
         </h1>
         <div class="row">
             <div class="col-md-7">
@@ -15,11 +15,9 @@
                     <div class="tour-descriptions-content-inner">
                         <div class="tour-descriptions-content-inner-left">
                             <div class="tour-descriptions-content-inner-left-content">
-
-                            </div><!-- /.tour-descriptions-content-inner-left-content -->
-                        </div><!-- /.tour-descriptions-content-inner-left -->
+                            </div>
+                        </div>
                         <div class="tour-descriptions-content-inner-right">
-
                             <section class="" style="">
                                 <div class="imgCcontainer">
                                     <div class="carousel imgC">
@@ -32,9 +30,8 @@
                                                 <li class="carousel__slide" data-interval="1000">
                                                     <figure>
                                                         <div>
-                                                            <img src="{{ asset($item->path) }}" alt="">
+                                                            <img src="{{ asset($item->path) }}" alt="{{ __($mice->name) }}">
                                                         </div>
-
                                                     </figure>
                                                 </li>
                                             @endforeach
@@ -46,7 +43,7 @@
                                                 @if ($item->id != $mice->images->first()->id)
                                                     <li data-interval="1000">
                                                         <label for="slide-{{ $item->id }}"><img
-                                                                src="{{ asset($item->path) }}" alt="">
+                                                                src="{{ asset($item->path) }}" alt="{{ __($mice->name) }}">
                                                         </label>
                                                     </li>
                                                 @endif
@@ -55,11 +52,6 @@
                                     </div>
                                 </div>
                             </section>
-
-
-
-
-
                         </div><!-- /.tour-descriptions-content-inner-right -->
                     </div><!-- /.tour-descriptions-content-inner -->
                 </div><!-- /.tour-descriptions-content -->
@@ -68,46 +60,43 @@
             <div class="col-md-5">
                 <div class="tour-descriptions-content-inner-left-content-title bb">
                     <h2>
-                        Key Points
+                        {{ __('Key Points') }}
                     </h2>
 
 
                     <div class="detailespackage">
-                        <div style="float: left"><i class="fa-solid fa-calendar-check"></i>Best Travel Time</div>
+                        <div style="float: left"><i class="fa-solid fa-calendar-check"></i>{{ __('Best Travel Time') }}</div>
                         <div>
-                            {{ $mice->available }}
+                            {{ __($mice->available) }}
                         </div>
                     </div>
                     <div class="detailespackage">
-                        <div><i class="fa-solid fa-person"></i>Max in the group</div>
+                        <div><i class="fa-solid fa-person"></i>{{ __('Max in the group') }}</div>
                         <div>
-                            {{ $mice->total_pax }}
-                        </div>
-                    </div>
-
-                    <div class="detailespackage">
-                        <div><i class="fa-solid fa-folder"></i>Products</div>
-                        <div>
-                           {{ $mice->Products }}
+                            {{ __($mice->total_pax) }}
                         </div>
                     </div>
 
                     <div class="detailespackage">
-                        <div><i class="fa-solid fa-user-plus"></i>Extra</div>
+                        <div><i class="fa-solid fa-folder"></i>{{ __('Products') }}</div>
+                        <div>
+                           {{ __($mice->Products) }}
+                        </div>
+                    </div>
+
+                    <div class="detailespackage">
+                        <div><i class="fa-solid fa-user-plus"></i>{{ __('Extra') }}</div>
                         <div>
                             {{ $mice->Extra }}
                         </div>
                     </div>
                     <div class="detailespackage">
-                        <div><i class="fa-solid fa-syringe"></i>Personal</div>
+                        <div><i class="fa-solid fa-syringe"></i>{{ __('Personal') }}</div>
                         <div>
                             {{ $mice->personal }}
                         </div>
                     </div>
-
-
                 </div><!-- /.tour-descriptions-content-inner-left-content-title -->
-
             </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.tour-descriptions -->
@@ -115,10 +104,10 @@
 
     <section class="carDes">
         <h2>
-            Overview
+           {{ __('Overview')}}
         </h2>
         <p>
-           {{ $mice->description }}
+           {{ __($mice->description) }}
         </p>
     </section>
 
@@ -126,8 +115,8 @@
     <section class="tableOfPrice">
         <button class="package-view" style="text-align: center; align-items:center; margin:20px">
             <a href="{{ url('/BookMice/'.$mice->id) }}" style="color: black">
-                Book Now</a>
-           
+                {{ __('Book Now') }}
+            </a>
         </button>
     </section>
 

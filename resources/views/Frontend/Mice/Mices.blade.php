@@ -5,20 +5,15 @@
 </div>
 
     <section id="pack" class="packages">
-
         <div class="container">
-
             <div class="packages-content">
-
-                @foreach ($cms as $c)
-                    
-               
+                @foreach ($cms as $c)     
                 <div class="RentCar">
                     <h2>
-                       {{ $c->title }}
+                       {{ __($c->title) }}
                     </h2>
                     <p class="ha">
-                        {{ $c->description }}
+                        {{ __($c->description) }}
                     </p>
                 </div>
 
@@ -29,25 +24,22 @@
                     <div class="col-md-4 col-sm-6">
 
                         <div class="single-package-item">
-
-                            <img src="{{$m->images->first()->path}}"
-                                alt="package-place">
+                            <img src="{{url($m->images->first()->path)}}"
+                                alt="{{ __($m->name) }}">
                             <div class="packageName">
-
                             </div>
                             <div class="Car-txt">
                                 <h4>
-                                    {{ $m->name }}
+                                    {{ __($m->name) }}
                                 </h4>
-
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> {{ $m->available }}
+                                    <span><i class="fa-regular fa-clock"></i></span> {{ __($m->available) }}
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-person"></i></span> {{ $m->total_pax }}
+                                    <span><i class="fa-solid fa-person"></i></span> {{ __($m->total_pax) }}
                                 </div>
 
                                 <div class="packageOffer">
@@ -63,23 +55,14 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/mices/'.$m->id) }}"><button class="package-view">
-                                    Details
+                                    {{ __('Details') }}
                                 </button>
                                 </a>
-
                             </div>
-
-
-
                         </div>
-                        <!--/.single-package-item-->
-
                     </div>
                     <!--/.col-->
                     @endforeach
-
-                    
-
                 </div>
                 <center>
                     {{ $mices->links() }}

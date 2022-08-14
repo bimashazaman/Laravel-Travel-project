@@ -19,16 +19,9 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- TITLE OF SITE -->
     <title>Travel</title>
-
-
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}" />
-
-
     <!--datepicker.css-->
     <link rel="stylesheet" href="{{ asset('css/datepicker.css') }}">
-
-
-
     <!-- range css-->
     <link rel="stylesheet" href="{{ asset('css/jquery-ui.min.css') }}" />
 
@@ -52,10 +45,11 @@
     <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css" />
 
     <style>
-        .dropdown:hover .dropdown-menu{
+        .dropdown:hover .dropdown-menu {
             display: block;
         }
-        .dropdown-menu{
+
+        .dropdown-menu {
             margin-top: 0;
         }
     </style>
@@ -64,25 +58,9 @@
 </head>
 
 <body>
-
-
     @include('partials.header')
     @yield('content')
     @include('partials.footer')
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     <script>
         $(document).ready(function() {
             $(".dropdown").hover(function() {
@@ -96,11 +74,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
-
-
-
-
-
     <script src="{{ asset('js/jquery.js') }}"></script>
     <!-- Include all compiled plugins (below), or include individual files as needed -->
 

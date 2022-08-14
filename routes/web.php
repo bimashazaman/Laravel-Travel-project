@@ -443,8 +443,8 @@ Route::get('/caa/{locale?}', [CarController::class, 'getCars']);
 Route::get('/car/detail/{id}/{locale?}', [CarController::class, 'getCarDetails']);
 
 //=========Mice frontend=========
-Route::get('/mices', [MiceController::class, 'showMice']);
-Route::get('/mices/{id}', [MiceController::class, 'showMiceDetails']);
+Route::get('/mices/{locale?}', [MiceController::class, 'showMice']);
+Route::get('/mices/{id}/{locale?}', [MiceController::class, 'showMiceDetails']);
 
 //=======ways to book frontend=========
 Route::get('/ways', [WaysToBookController::class,"GetAll"]);
@@ -543,9 +543,6 @@ Route::get('/TentForm', function () {
 Route::get('/', function () {
     return redirect('/home');
 });
-
-
-
 
 
 

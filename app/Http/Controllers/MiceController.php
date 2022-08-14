@@ -113,16 +113,22 @@ class MiceController extends Controller
     }
 
    //Show the data in the frontend
-    public function showMice()
+    public function showMice($locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $mices = Mice::with('images')
         ->simplePaginate(9);
         $cms = MiceCMS::all();
         return view('Frontend.Mice.Mices', compact('mices','cms'));
     }
 
-    public function showMiceDetails($id)
+    public function showMiceDetails($id, $locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $mice = Mice::with('images')
         ->where('id', $id)
         ->first();
