@@ -4,8 +4,6 @@
     @include('partials.DefaultBanner')
 </div>
 
-
-
     <form action="" class="hotelForm">
         <div class="form-group htt">
 
@@ -44,7 +42,7 @@
             <!--/.gallery-header-->
             <div class="packages-content">
                 <h2 style="text-align: center; padding-bottom:60px">
-                    Events in Armenia
+                    {{ __('Events in Armenia') }}
                 </h2>
                 <div class="row">
 
@@ -53,55 +51,45 @@
 
                         <div class="single-package-item">
 
-                            <img src="{{$t->images->first()->path}}"
+                            <img src="{{ url($t->images->first()->path)}}"
                                 alt="package-place">
                             <div class="packageName">
 
                             </div>
                             <div class="package-txt">
                                 <h4 style="text-align: center; font-weight: 700;">
-                                    {{ $t->name }}
+                                    {{ __($t->name) }}
                                 </h4>
 
                             </div>
                             <div class="pacdet" style="margin-left: -9%;">
                                 <div class="packageOffer">
                                     <span><i class="fa-solid fa-location-dot"></i></span> 
-                                    {{ $t->location }}
+                                    {{ __($t->location) }}
                                 </div>
 
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-calendar"></i></span> 
-                                    {{ $t->time }}
+                                    {{ __($t->time) }}
                                 </div>
 
                                 <div class="packageOffer">
                                     <span><i class="fa-regular fa-newspaper"></i></span> 
-                                    {{ $t->type }}
+                                    {{ __($t->type) }}
                                 </div>
                             </div>
 
                             <div class="package-btn">
                                 <a href="{{ url('/c/'.$t->id) }}">
                                     <button class="package-view">
-                                        Details
+                                        {{ __('Details') }}
                                     </button>
-
                                 </a>
-
                             </div>
-
-
-
                         </div>
-                        <!--/.single-package-item-->
-
                     </div>
                     <!--/.col-->
                     @endforeach
-              
-
-
                 </div>
                 <!--/.row-->
             </div>

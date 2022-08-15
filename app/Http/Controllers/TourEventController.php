@@ -142,15 +142,22 @@ class TourEventController extends Controller
     }
 
     //show the data in the frontend
-    public function showFrontend()
+    public function showFrontend($locale = null)
     {
+        
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $tour_events = TourEvent::all();
         return view('Frontend.Conferences.Conferences', compact('tour_events'));
     }
 
     //show the data in the frontend
-    public function showFrontendDetails($id)
+    public function showFrontendDetails($id, $locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $tour_event = TourEvent::find($id)
         ->with('images')
         ->where('id', $id)

@@ -17,7 +17,7 @@
                         <div class="tour-descriptions-content-inner-left">
                             <div class="tour-descriptions-content-inner-left-content">
                                 <h1>
-                                   {{ $tour_event->name }}
+                                   {{ __($tour_event->name) }}
                                 </h1>
                             </div><!-- /.tour-descriptions-content-inner-left-content -->
                         </div><!-- /.tour-descriptions-content-inner-left -->
@@ -36,14 +36,12 @@
                                                         <div>
                                                             <img src="{{ asset($item->path) }}" alt="">
                                                         </div>
-
                                                     </figure>
                                                 </li>
                                             @endforeach
 
                                         </ul>
                                         <ul class="carousel__thumbnails">
-
                                             @foreach ($tour_event->images as $item)
                                                 @if ($item->id != $tour_event->images->first()->id)
                                                     <li data-interval="1000">
@@ -58,15 +56,10 @@
                                 </div>
                             </section>
                         </div><!-- /.tour-_descriptions-content-inner-right -->
-
                     </div><!-- /.tour-descriptions-content-inner -->
                 </div><!-- /.tour-descriptions-content -->
             </div><!-- /.col -->
             <div class="col-md-5 tour-descriptions-content-inner-left-content-title">
-                
-               
-                
-
                 <div class="row" style="">
                     <div class="col-md-12">
                         {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height ="100%"
@@ -79,65 +72,57 @@
                     <div class="col-md-12">
                         <br>
                         <h2>
-                            Key Points
+                            {{ __('Key Points') }}
                         </h2>
-
-
                         <div>
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div style="float: left"><i class="fa-solid fa-calendar"></i>
-                                    Period
+                                    {{ __('Period') }}
                                 </div>
                                 <div>
-                                   {{ $tour_event->period }}
+                                   {{ __($tour_event->period) }}
                                 </div>
                             </div>
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-location-dot"></i>
-                                Settlement
+                                {{ __('Settlement') }}
                                 </div>
                                 <div>
-                                    {{ $tour_event->settlement }}
+                                    {{ __($tour_event->settlement) }}
                                 </div>
                             </div>
 
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-clock"></i>
-                                From yerevan
+                                {{ __('From yerevan') }}
                                 </div>
                                 <div>
-                                    {{ $tour_event->distance }}
+                                    {{ __($tour_event->distance) }}
                                 </div>
                             </div>
 
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-file"></i>
-                                    Working Hours
+                                    {{ __('Working Hours') }}
                                 </div>
                                 <div>
-                                    {{ $tour_event->duration }}
+                                    {{ __($tour_event->duration) }}
                                 </div>
                             </div>
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-dollar-sign"></i>
-                                    Enterence
+                                    {{ __('Enterence') }}
                                 </div>
                                 <div>
-                                    {{ $tour_event->price }}
+                                    {{ __($tour_event->price) }}
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
-
-
                 <br>
                 <br>
             </div><!-- /.tour-descriptions-content-inner-left-content-title -->
-
         </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.tour-descriptions -->
@@ -147,44 +132,34 @@
 
         <section class="carDes">
             <h2>
-                Overview
+                {{ __('Overview') }}
             </h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cum hic totam ducimus repudiandae in
-                cupiditate
-                deleniti velit accusantium ut consequuntur tempora veritatis explicabo dignissimos quaerat, eius illum alias
-                id
-                nihil placeat inventore voluptate animi natus nam. Veritatis quaerat doloremque asperiores, in ad provident,
-                quae ut sunt delectus quibusdam voluptate, perspiciatis recusandae officiis! Fugiat voluptate neque optio
-                reprehenderit magni eveniet eum suscipit quam, ducimus, odio ex sed vero dolorum! Ratione.
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt magnam reiciendis suscipit aliquam? Adipisci, modi error? Possimus ducimus suscipit corrupti!
             </p>
         </section>
     </div>
     <br>
 
-
+{{-- 
     <section id="pack" class="packages">
         <div class="container">
 
             <center>
                 <h3>
-                    Related Tours
+                    {{ __('Related Tours') }}
                 </h3>
             </center>
 
             <!--/.gallery-header-->
             <div class="packages-content">
                 <div class="row">
-
                     <div class="col-md-4 col-sm-6">
-
-
                         <div class="single-package-item">
-
                             <img src="https://images.pexels.com/photos/1371360/pexels-photo-1371360.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1"
                                 alt="package-place">
                             <div class="packageName">
-                                Something
+                                {{ __('Something') }}
                             </div>
                             <div>
                                 <h4 class="package-txt">
@@ -356,5 +331,5 @@
             <!--/.packages-content-->
         </div>
         <!--/.container-->
-    </section>
+    </section> --}}
 @endsection

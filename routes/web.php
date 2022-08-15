@@ -413,10 +413,9 @@ Route::get('/food', [FoodArmeniaController::class, 'getAllFoods']);
 Route::get('/getfoodsByCategory/{id}/{locale?}', [FoodArmeniaController::class, 'getfoodsByCategory']);
 Route::get('/getfoodsById/{id}/{locale?}', [FoodArmeniaController::class, 'getfoodsById']);
 
-
 //===========Frontend Tour Events=========
-Route::get('/cs', [TourEventController::class, 'showFrontend']);
-Route::get('/c/{id}', [TourEventController::class, 'showFrontendDetails']);
+Route::get('/cs/{locale?}', [TourEventController::class, 'showFrontend']);
+Route::get('/c/{id}/{locale?}', [TourEventController::class, 'showFrontendDetails']);
 
 //=========== classic tours==========
 Route::get('/Bv/{locale?}', [ClassicTour::class, 'getClasicTours'])->name('getClasicTours');
