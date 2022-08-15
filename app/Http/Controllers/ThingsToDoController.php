@@ -159,8 +159,11 @@ class ThingsToDoController extends Controller
 
     }
 
-    public function getThingsToDoByCategory($id)
+    public function getThingsToDoByCategory($id, $locale=null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $things = ThingsToDo::with('images')->where('category_id', $id)->simplePaginate(6);
         $category = ThingsToDoCategory::where('id', $id)->first();
         return view('Frontend.Armenia.ThingsToDo', compact('things', 'category'));
@@ -168,16 +171,22 @@ class ThingsToDoController extends Controller
 
  
 
-    public function getThingsToDoById($id)
+    public function getThingsToDoById($id, $locale=null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $things = ThingsToDo::with('images')->where('id', $id)->first();
         $related = ThingsToDo::where('category_id', $things->category_id)->inRandomOrder()->simplePaginate(3);
         return view('Frontend.Armenia.ThingsToDoDetails', compact('things','related'));
     }
 
     //get all things to see
-    public function getAllThingsToDo()
+    public function getAllThingsToDo($locale=null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $things = ThingsToDo::with('images')->simplePaginate(6);
         return view('Frontend.Armenia.ThingsToDo', compact('things'));
     }

@@ -6,7 +6,7 @@
 
 
 
-    <h2 class="title-head" style="text-align: center">Things To Do in Armenia</h2>
+    <h2 class="title-head" style="text-align: center">{{ __('Things To Do in Armenia') }}</h2>
 
     <br>
     <br>
@@ -30,40 +30,37 @@
                     @if (count($things) == 0)
                         <div class="col-md-12">
                             <center>
-                                Not Available Yet
+                                {{ __('Not Available Yet') }}
                             </center>
                         </div>
-                        
                     @endif
 
                     @foreach($things as $thing)
                     <div class="col-md-4 col-sm-6">
-
                         <div class="single-package-item">
-
-                            <img src="{{asset($thing->images->first()->path)}}"
-                                alt="package-place">
+                            <img src="{{ url(asset($thing->images->first()->path))}}"
+                                alt="{{ $thing->name }}">
                             <div class="HotelName">
                                 <h4>
-                                    {{ $thing->name }}
+                                    {{ __($thing->name) }}
                                 </h4>
                             </div>
                             <div class="hotelDesccription">
                                 <p>
-                                   {{ $thing->description }}
+                                   {{ __($thing->description) }}
                                 </p>
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-calendar"></i></span> {{ $thing->time }}
+                                    <span><i class="fa-regular fa-calendar"></i></span> {{ __($thing->time) }}
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> {{ $thing->address }}
+                                    <span><i class="fa-solid fa-location-dot"></i></span> {{ __($thing->address) }}
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> {{ $thing->distance }}
+                                    <span><i class="fa-regular fa-clock"></i></span> {{ __($thing->distance) }}
                                 </div>
                             </div>
                             <div class="rating">
@@ -75,25 +72,15 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/getThingsToDoById/'.$thing->id) }}"><button class="package-view">
-                                        More
+                                        {{ __('More') }}
                                     </button>
                                 </a>
                             </div>
-
-
-
                         </div>
                         <!--/.single-package-item-->
-
                     </div>
                     <!--/.col-->
-
                     @endforeach
-
-                    
-
-
-
                 </div>
                 <!--/.row-->
                 <center>

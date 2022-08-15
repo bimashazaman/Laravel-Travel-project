@@ -474,9 +474,9 @@ Route::get('/nearbyById/{id}', [NearbyArmeniaController::class, 'getNearbyById']
 
 
 //==========Things to do Frontend=========
-Route::get('/getAllThingsToDo', [ThingsToDoController::class, 'getAllThingsToDo']);
-Route::get('/getThingsToDoByCategoryId/{id}', [ThingsToDoController::class, 'getThingsToDoByCategory']);
-Route::get('/getThingsToDoById/{id}', [ThingsToDoController::class, 'getThingsToDoById']);
+Route::get('/getAllThingsToDo/{locale?}', [ThingsToDoController::class, 'getAllThingsToDo']);
+Route::get('/getThingsToDoByCategoryId/{id}/{locale?}', [ThingsToDoController::class, 'getThingsToDoByCategory']);
+Route::get('/getThingsToDoById/{id}/{locale?}', [ThingsToDoController::class, 'getThingsToDoById']);
 
 
 //==========Frontend Article=========
