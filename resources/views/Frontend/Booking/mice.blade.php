@@ -65,6 +65,13 @@
            
            
             <button type="submit" class="package-view">Submit</button>
+
+            <br>
+            <br>
+            <center>
+              {!! NoCaptcha::renderJs() !!}
+                  {!! NoCaptcha::display() !!}
+            </center>
         </form>
     </div>
 

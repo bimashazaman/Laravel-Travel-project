@@ -8,6 +8,7 @@
         "php": "^7.3|^8.0",
         "almasaeed2010/adminlte": "~3.2",
         "amrshawky/laravel-currency": "^5.0",
+        "anhskohbo/no-captcha": "^3.4",
         "fruitcake/laravel-cors": "^2.0",
         "guzzlehttp/guzzle": "^7.0.1",
         "laravel/framework": "^8.75",

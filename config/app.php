@@ -15,53 +15,34 @@ return [
 
     'name' => env('APP_NAME', 'Laravel'),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Application Environment
-    |--------------------------------------------------------------------------
-    |
-    | This value determines the "environment" your application is currently
-    | running in. This may determine how you prefer to configure various
-    | services the application utilizes. Set this in your ".env" file.
-    |
-    */
+
 
     'env' => env('APP_ENV', 'production'),
 
-    /*
-    |--------------------------------------------------------------------------
-    | Application Debug Mode
-    |--------------------------------------------------------------------------
-    |
-    | When your application is in debug mode, detailed error messages with
-    | stack traces will be shown on every error that occurs within your
-    | application. If disabled, a simple generic error page is shown.
-    |
-    */
 
     'debug' => (bool) env('APP_DEBUG', false),
 
-   
+
 
     'url' => env('APP_URL', 'http://localhost'),
 
     'asset_url' => env('ASSET_URL', null),
 
-   
+
 
     'timezone' => 'UTC',
 
-   
+
     'locale' => 'en',
 
-   //currencies
-   'currency' => 'USD',
-   
-   'available_locales' => [
-    'English' => 'en',
-   'Russian' => 'ru',
-   'Armenian' => 'hy',
-  ],
+    //currencies
+    'currency' => 'USD',
+
+    'available_locales' => [
+        'English' => 'en',
+        'Russian' => 'ru',
+        'Armenian' => 'hy',
+    ],
 
 
 
@@ -70,20 +51,20 @@ return [
 
     'fallback_locale' => 'en',
 
-   
+
     'faker_locale' => 'en_US',
 
 
-    
-   
+
+
 
     'key' => env('APP_KEY'),
 
     'cipher' => 'AES-256-CBC',
 
-    
 
-   
+
+
 
     'providers' => [
 
@@ -113,8 +94,9 @@ return [
         Illuminate\Validation\ValidationServiceProvider::class,
         Illuminate\View\ViewServiceProvider::class,
         Mcamara\LaravelLocalization\LaravelLocalizationServiceProvider::class,
+        Anhskohbo\NoCaptcha\NoCaptchaServiceProvider::class,
 
-       
+
         App\Providers\AppServiceProvider::class,
         App\Providers\AuthServiceProvider::class,
         // App\Providers\BroadcastServiceProvider::class,
@@ -123,7 +105,7 @@ return [
 
     ],
 
-   
+
 
     'aliases' => [
 
@@ -167,6 +149,7 @@ return [
         'Validator' => Illuminate\Support\Facades\Validator::class,
         'View' => Illuminate\Support\Facades\View::class,
         'LaravelLocalization' => Mcamara\LaravelLocalization\Facades\LaravelLocalization::class,
+        'NoCaptcha' => Anhskohbo\NoCaptcha\Facades\NoCaptcha::class,
 
     ],
 
