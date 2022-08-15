@@ -6,7 +6,7 @@
                 <div class="div1">
                     <i class="fa-solid fa-utensils"></i>
                     <h4 style="margin: 10px">
-                        Restaurants
+                       {{ __('Restaurants')}}
                     </h4>
                 </div>
             </a>
@@ -14,7 +14,7 @@
                 <div class="div2">
                     <i class="fa-solid fa-wine-bottle"></i>
                     <h4 style="margin: 10px">
-                        Wineries
+                        {{ __('Wineries') }}
                     </h4>
                 </div>
             </a>
@@ -22,7 +22,7 @@
                 <div class="div3">
                     <i class="fa-solid fa-house"></i>
                     <h4 style="margin: 10px">
-                        Village yards
+                        {{ __('Village yards') }}
                     </h4>
                 </div>
             </a>
@@ -31,7 +31,7 @@
                 <div class="div3">
                     <i class="fa-solid fa-martini-glass"></i>
                     <h4 style="margin: 10px">
-                        Cafe and clubs
+                        {{ __('Cafe and clubs') }}
                     </h4>
                 </div>
             </a>

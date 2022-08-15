@@ -4,12 +4,7 @@
         @include('partials.DefaultBanner')
     </div>
 
-
-
-
-    <!-- Tour description start -->
     <section class="tour-descriptions" style="padding-left: 40px;padding-right: 40px;margin-top: -59px;">
-
         <div class="row">
             <div class="col-md-7">
                 <div class="tour-descriptions-content">
@@ -17,7 +12,7 @@
                         <div class="tour-descriptions-content-inner-left">
                             <div class="tour-descriptions-content-inner-left-content">
                                 <h1>
-                                    {{ $foods->name }}
+                                    {{ __($foods->name) }}
                                 </h1>
                             </div><!-- /.tour-descriptions-content-inner-left-content -->
                         </div><!-- /.tour-descriptions-content-inner-left -->
@@ -57,21 +52,16 @@
                                     </div>
                                 </div>
                             </section>
-                        </div><!-- /.tour-_descriptions-content-inner-right -->
-
-                    </div><!-- /.tour-descriptions-content-inner -->
-                </div><!-- /.tour-descriptions-content -->
-            </div><!-- /.col -->
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div class="col-md-5 tour-descriptions-content-inner-left-content-title">
-                
-               
-                
-
                 <div class="row" style="">
                     <div class="col-md-12">
                         {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height ="100%"
                     frameborder="0" allowfullscreen></iframe> --}}
-                        <img src="{{ asset('images/map.png') }}" alt="" style="height:310px; width: 530px; margin-top: 52px;">
+                        <img src="{{ asset('images/map.png') }}" alt="{{ __($foods->name) }}" style="height:310px; width: 530px; margin-top: 52px;">
                     </div>
                 </div>
                 <br>
@@ -79,65 +69,57 @@
                     <div class="col-md-12">
                         <br>
                         <h2>
-                            Key Points
+                            {{ __('Key Points') }}
                         </h2>
-
-
                         <div>
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div style="float: left"><i class="fa-solid fa-calendar"></i>
-                                    Period
+                                    {{ __('Period') }}
                                 </div>
                                 <div>
-                                    {{ $foods->period }}
+                                    {{ __($foods->period) }}
                                 </div>
                             </div>
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-location-dot"></i>
-                                Settlement
+                                {{ __('Settlement') }}
                                 </div>
                                 <div>
-                                    {{ $foods->address }}
+                                    {{ __($foods->address) }}
                                 </div>
                             </div>
 
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-clock"></i>
-                                From yerevan
+                                {{ __('From yerevan') }}
                                 </div>
                                 <div>
-                                    {{ $foods->distance }}
+                                    {{ __($foods->distance) }}
                                 </div>
                             </div>
 
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-file"></i>
-                                    Working Hours
+                                    {{ __('Working Hours') }}
                                 </div>
                                 <div>
-                                    {{ $foods->duration }}
+                                    {{ __('$foods->duration') }}
                                 </div>
                             </div>
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-dollar-sign"></i>
-                                    Enterence
+                                    {{ __('Enterence') }}
                                 </div>
                                 <div>
-                                    {{ $foods->price }}
+                                    {{ __($foods->price) }}
                                 </div>
                             </div>
                         </div>
-
                     </div>
-
-
                 </div>
-
-
                 <br>
                 <br>
-            </div><!-- /.tour-descriptions-content-inner-left-content-title -->
-
+            </div>
         </div><!-- /.row -->
         </div><!-- /.container -->
     </section><!-- /.tour-descriptions -->
@@ -147,16 +129,11 @@
 
         <section class="carDes">
             <h2>
-                Overview
+                {{ __('Overview') }}
             </h2>
             <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid cum hic totam ducimus repudiandae in
-                cupiditate
-                deleniti velit accusantium ut consequuntur tempora veritatis explicabo dignissimos quaerat, eius illum alias
-                id
-                nihil placeat inventore voluptate animi natus nam. Veritatis quaerat doloremque asperiores, in ad provident,
-                quae ut sunt delectus quibusdam voluptate, perspiciatis recusandae officiis! Fugiat voluptate neque optio
-                reprehenderit magni eveniet eum suscipit quam, ducimus, odio ex sed vero dolorum! Ratione.
+                
+                {{ __($foods->description) }}
             </p>
         </section>
     </div>
@@ -168,7 +145,7 @@
 
             <center>
                 <h3>
-                    Related Packages
+                    {{ __('Related Packages') }}
                 </h3>
             </center>
 
@@ -180,29 +157,29 @@
 
                         <div class="single-package-item">
 
-                            <img src="{{asset($thing->images->first()->path)}}"
-                                alt="package-place">
+                            <img src="{{ url(asset($thing->images->first()->path))}}"
+                                alt="{{ $thing->name }}">
                             <div class="HotelName">
                                 <h4>
-                                    {{ $thing->name }}
+                                    {{ __($thing->name) }}
                                 </h4>
                             </div>
                             <div class="hotelDesccription">
                                 <p>
-                                   {{ $thing->description }}
+                                   {{ __($thing->description) }}
                                 </p>
                             </div>
                             <div class="pacdet">
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-calendar"></i></span> {{ $thing->time }}
+                                    <span><i class="fa-regular fa-calendar"></i></span> {{ __($thing->time) }}
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-solid fa-location-dot"></i></span> {{ $thing->address }}
+                                    <span><i class="fa-solid fa-location-dot"></i></span> {{ __($thing->address) }}
                                 </div>
 
                                 <div class="packageOffer">
-                                    <span><i class="fa-regular fa-clock"></i></span> {{ $thing->distance }}
+                                    <span><i class="fa-regular fa-clock"></i></span> {{ __($thing->distance) }}
                                 </div>
                             </div>
                             <div class="rating">
@@ -214,13 +191,10 @@
                             </div>
                             <div class="package-btn">
                                 <a href="{{ url('/getfoodsById/'.$thing->id) }}"><button class="package-view">
-                                        More
+                                        {{ __('More') }}
                                     </button>
                                 </a>
                             </div>
-
-
-
                         </div>
                         <!--/.single-package-item-->
 

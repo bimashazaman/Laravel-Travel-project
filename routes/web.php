@@ -410,8 +410,8 @@ Route::get('/tour/{name}', [FrontendController::class, 'getTours'])->name('getTo
 
 //==========Armenia Frontend food=========
 Route::get('/food', [FoodArmeniaController::class, 'getAllFoods']);
-Route::get('/getfoodsByCategory/{id}', [FoodArmeniaController::class, 'getfoodsByCategory']);
-Route::get('/getfoodsById/{id}', [FoodArmeniaController::class, 'getfoodsById']);
+Route::get('/getfoodsByCategory/{id}/{locale?}', [FoodArmeniaController::class, 'getfoodsByCategory']);
+Route::get('/getfoodsById/{id}/{locale?}', [FoodArmeniaController::class, 'getfoodsById']);
 
 
 //===========Frontend Tour Events=========

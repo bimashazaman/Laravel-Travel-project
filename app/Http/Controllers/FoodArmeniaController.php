@@ -155,26 +155,26 @@ class FoodArmeniaController extends Controller
 
     }
 
-    public function getfoodsByCategory($id)
+    public function getfoodsByCategory($id, $locale= null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $foods = FoodArmenia::with('images')->where('category_id', $id)->simplePaginate(9);
-
         $category = FoodArmeniaCategory::where('id', $id)->first();
-
-        //related
-      
         return view('Frontend.Armenia.foods', compact('foods', 'category'));
     }
 
     
 
-    public function getfoodsById($id)
+    public function getfoodsById($id, $locale= null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $foods = FoodArmenia::with('images')->where('id', $id)->first();
         $related = FoodArmenia::with('images')->where('category_id', $id)->inRandomOrder()->simplePaginate(3);
         return view('Frontend.Armenia.food', compact('foods','related'));
     }
-
-
 
 }
