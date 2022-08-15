@@ -468,9 +468,9 @@ Route::get('/getThingsToSeeById/{id}/{locale?}', [ThingsToSeeController::class, 
 
 
 //==========Things to see Frontend=========
-Route::get('/todoSorrounding', [NearbyArmeniaController::class, 'getAllNearby']);
-Route::get('/nearbyByCategoryId/{id}', [NearbyArmeniaController::class, 'getNearbyByCategory']);
-Route::get('/nearbyById/{id}', [NearbyArmeniaController::class, 'getNearbyById']);
+Route::get('/todoSorrounding/{locale?}', [NearbyArmeniaController::class, 'getAllNearby']);
+Route::get('/nearbyByCategoryId/{id}/{locale?}', [NearbyArmeniaController::class, 'getNearbyByCategory']);
+Route::get('/nearbyById/{id}/{locale?}', [NearbyArmeniaController::class, 'getNearbyById']);
 
 
 //==========Things to do Frontend=========
@@ -532,7 +532,7 @@ Route::get('/RF', function () {
     return view('Frontend.Cars.RentACarForm');
 });
 
-Route::get('/usefulToKnow', [UsefulInfoController::class, 'getUsefulInfo']);
+Route::get('/usefulToKnow/{locale?}', [UsefulInfoController::class, 'getUsefulInfo']);
 
 
 

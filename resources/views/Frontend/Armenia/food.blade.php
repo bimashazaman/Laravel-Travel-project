@@ -202,9 +202,6 @@
                     <!--/.col-->
 
                     @endforeach
-
-                 
-
                 </div>
                 <center>
                     {{ 

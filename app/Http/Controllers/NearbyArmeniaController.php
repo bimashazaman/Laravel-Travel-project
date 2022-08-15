@@ -155,8 +155,12 @@ class NearbyArmeniaController extends Controller
 
     }
 
-    public function getNearbyByCategory($id)
+    public function getNearbyByCategory($id ,$locale = null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $things = NearbyArmenia::with('images')->where('category_id', $id)->simplePaginate(9);;
         $category = NearbyArmeniaCategory::where('id', $id)->first();
 
@@ -165,8 +169,12 @@ class NearbyArmeniaController extends Controller
 
    
 
-    public function getNearbyById($id)
+    public function getNearbyById($id ,$locale = null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $things = NearbyArmenia::with('images')->where('id', $id)->first();
         //related
         $related = NearbyArmenia::with('images')->where('category_id', $things->category_id)->inRandomOrder()->simplePaginate(3);
@@ -174,8 +182,12 @@ class NearbyArmeniaController extends Controller
     }
 
     //get all things to see
-    public function getAllNearby()
+    public function getAllNearby($locale = null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $things = NearbyArmenia::all();
         return view('Frontend.Armenia.nearby', compact('things'));
     }

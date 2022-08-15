@@ -11,7 +11,7 @@
                 >
                 <img src="{{ asset('images/ge.png') }}" alt="">
                 <h4 style="margin: 10px">
-                    Georgia
+                    {{ __('Georgia') }}
                 </h4>
             </div>
         </a>
@@ -22,7 +22,7 @@
             <div class="TwoCardNearby">
                 <img src="{{ asset('images/iran.png') }}" alt="">
                 <h4 style="margin: 10px">
-                    Iran
+                    {{ __('Iran') }}
                 </h4>
             </div>
         </a>

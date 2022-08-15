@@ -63,8 +63,12 @@ class UsefulInfoController extends Controller
 
 
     //get in the frontend
-    public function getUsefulInfo()
+    public function getUsefulInfo($locale = null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $usefulInfos = UsefulInfo::all();
         return view('Frontend.Armenia.UsefulToKnow',
             compact('usefulInfos'));
