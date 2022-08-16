@@ -4,18 +4,16 @@
             <img src="http://127.0.0.1:8000/images/footerImage.png" style="width: 95%" alt="">
         </div>
         <footer style="width: 95%;display: flow-root;margin-left: 6%;">
-
             <div class="row justify-content-center">
-
                 <div class="col-sm-3 col-md-2 item">
                     <h3>Tours</h3>
                     <ul>
                         <li><a href="{{ url('/Bv') }}">Classic Tours</a></li>
-                        <li><a href="#">Tours With Guarantee</a></li>
-                        <li><a href="#">Departures</a></li>
-                        <li><a href="#">Regional Tours</a></li>
-                        <li><a href="#">One Day Tours</a></li>
-                        <li><a href="#">Themed Tours</a></li>
+                        <li><a href="{{ url('/guaranteeTour')}}">Guarantee Departures</a></li>
+                        <li><a href="{{ url('/GastroTours')}}">Gastro Tours</a></li>
+                        <li><a href="{{ url('/activeTours') }}">Active Tours</a></li>
+                        <li><a href="{{ url('/oneDay') }}">One Day Tours</a></li>
+                        <li><a href="{{ url('/themed') }}">Themed Tours</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3 col-md-2 item">
@@ -51,10 +49,7 @@
                     </ul>
                 </div>
                 <br>
-
-
                 <div class="col-sm-3 col-md-2 item" style="/* display: flex; */margin-left: -1%;">
-
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200"
                         height="167" viewBox="0 0 233 167" style="margin-top: -9%;">
                         <defs>
@@ -201,8 +196,6 @@
                             </g>
                         </g>
                     </svg>
-
-
                 </div>
                 <div class="col-sm-3 col-md-2 item">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="129"
@@ -258,33 +251,29 @@
                         </g>
                     </svg>
                 </div>
-
-
-
-            </div>
-            <div>
-                <p style="float: right; color:white; padding: 40px; font-size:17px">
-                    Designed by <span>
-                        <a href="https://www.upwork.com/freelancers/lilitpoghosyan15" style="color: white; text-decoration:underline ">Lilit</a>
-                    </span>
-                    <span>
-                        &
-                    </span>
-                    <span style="margin-left: 5px">
-                        Created by <span>
-                            <a href="https://www.linkedin.com/in/bimasha-zaman/" style="color: white; text-decoration:underline ">
-                                Bimasha
-                            </a>
-                            
-                        </span>
-                    </span>
-                    
-                </p>
-                <div style="float: right; color:white; padding: 40px; font-size:17px">
-                    
-                </div>
             </div>
         </footer>
+    </div>
+    <div>
+        <p style="float: right; color:white; padding-left: 40px; padding-right:40px; font-size:17px">
+            Designed by <span>
+                <a href="https://www.upwork.com/freelancers/lilitpoghosyan15" style="color: white; text-decoration:underline ">Lilit</a>
+            </span>
+            <span>
+                &
+            </span>
+            <span style="margin-left: 5px; font-size:19px" >
+                Created by <span>
+                    <a href="https://www.linkedin.com/in/bimasha-zaman/" style="color: white; text-decoration:underline ">
+                        Bimasha
+                    </a>
+                </span>
+            </span>
+            
+        </p>
+        <div style="float: right; color:white; padding-left: 40px; padding-right:40px; font-size:17px">
+            
+        </div>
     </div>
 
 </div>
