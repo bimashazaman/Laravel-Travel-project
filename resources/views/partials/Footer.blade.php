@@ -10,7 +10,7 @@
                 <div class="col-sm-3 col-md-2 item">
                     <h3>Tours</h3>
                     <ul>
-                        <li><a href="#">Classic Tours</a></li>
+                        <li><a href="{{ url('/Bv') }}">Classic Tours</a></li>
                         <li><a href="#">Tours With Guarantee</a></li>
                         <li><a href="#">Departures</a></li>
                         <li><a href="#">Regional Tours</a></li>
@@ -51,14 +51,12 @@
                     </ul>
                 </div>
                 <br>
-               
+
 
                 <div class="col-sm-3 col-md-2 item" style="/* display: flex; */margin-left: -1%;">
 
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200"
-                        height="167" viewBox="0 0 233 167" style="
-    margin-top: -9%;
-">
+                        height="167" viewBox="0 0 233 167" style="margin-top: -9%;">
                         <defs>
                             <filter id="Rectangle_478" x="84" y="29" width="66" height="66"
                                 filterUnits="userSpaceOnUse">
@@ -208,9 +206,7 @@
                 </div>
                 <div class="col-sm-3 col-md-2 item">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="129"
-                        height="95" viewBox="0 0 149 95" style="
-    margin-top: -6%;
-">
+                        height="95" viewBox="0 0 149 95" style=" margin-top: -6%;">
                         <defs>
                             <filter id="Rectangle_477" x="83" y="29" width="66" height="66"
                                 filterUnits="userSpaceOnUse">
@@ -265,6 +261,28 @@
 
 
 
+            </div>
+            <div>
+                <p style="float: right; color:white; padding: 40px; font-size:17px">
+                    Designed by <span>
+                        <a href="https://www.upwork.com/freelancers/lilitpoghosyan15" style="color: white; text-decoration:underline ">Lilit</a>
+                    </span>
+                    <span>
+                        &
+                    </span>
+                    <span style="margin-left: 5px">
+                        Created by <span>
+                            <a href="https://www.linkedin.com/in/bimasha-zaman/" style="color: white; text-decoration:underline ">
+                                Bimasha
+                            </a>
+                            
+                        </span>
+                    </span>
+                    
+                </p>
+                <div style="float: right; color:white; padding: 40px; font-size:17px">
+                    
+                </div>
             </div>
         </footer>
     </div>
