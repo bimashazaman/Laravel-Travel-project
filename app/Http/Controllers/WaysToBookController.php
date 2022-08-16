@@ -46,8 +46,12 @@ class WaysToBookController extends Controller
     }
 
 
-    public function GetAll()
+    public function GetAll($locale= null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $ways = WaysToBook::all();
        return view('Frontend.About.waysToBook', compact('ways'));
     }

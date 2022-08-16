@@ -65,7 +65,6 @@ class UsefulInfoController extends Controller
     //get in the frontend
     public function getUsefulInfo($locale = null)
     {
-
         if (isset($locale) && in_array($locale, config('app.available_locales'))) {
             app()->setLocale($locale);
         }

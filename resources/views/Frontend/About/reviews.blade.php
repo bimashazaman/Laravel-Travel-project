@@ -5,21 +5,16 @@
     </div>
 
 
-
-
-
-
-
     <div class="container" style="padding: 30px">
         <h2 style="text-align: center">
-            Reviews
+            {{__('Reviews')}}
         </h2>
         <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus reiciendis sit labore minus laborum eos, ipsum
+            {{-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus reiciendis sit labore minus laborum eos, ipsum
             illo voluptates veritatis nam soluta odit, doloremque beatae fugit placeat? Placeat nesciunt deserunt cupiditate
             recusandae unde vitae necessitatibus sed, quia illum nobis. Illum modi labore quis dignissimos earum architecto
             repellendus aspernatur, provident in nobis neque laudantium hic corporis error consequuntur quam vel officia
-            recusandae laborum esse vero quaerat odio! Dolorum laboriosam cum beatae non?
+            recusandae laborum esse vero quaerat odio! Dolorum laboriosam cum beatae non? --}}
         </p>
         <br>
 
@@ -39,7 +34,7 @@
                                 style="border-radius: 50%; width:15%; margin-right: 20px" alt="">
                             <div>
                                 <span>
-                                    {{$r->name}}
+                                    {{ __($r->name)}}
                                 </span>
                                 <div>
                                    {{ $r->created_at->diffForHumans() }}
@@ -48,22 +43,22 @@
                             <div style="margin-left: 20px">
 
                                 <h5 style="font-weight: 600">
-                                    {{ $r->title }}
+                                    {{ __($r->title) }}
                                 </h5>
 
                                 <p style="color: black; margin-top:10px">
-                                    {{ $r->review }}
+                                    {{ __($r->review) }}
                                 </p>
                             </div>
 
 
                         </div>
 
-                        <div style="float: right">
+                        {{-- <div style="float: right">
                             <button class="package-view">
                                 Show more
                             </button>
-                        </div>
+                        </div> --}}
                     </div>
 
                 </div>
@@ -72,7 +67,7 @@
               
 
                 <div class="WR">
-                    <a class="WR" href="{{ url('/AddReview') }}" style="text-decoration:underline;">Write Review</a> <i
+                    <a class="WR" href="{{ url('/AddReview') }}" style="text-decoration:underline;">{{ __('Write Review') }}</a> <i
                         class="fa-solid fa-pen-clip" style="text-decoration: none"></i>
                 </div>
 

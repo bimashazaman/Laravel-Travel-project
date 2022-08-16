@@ -107,8 +107,11 @@ class BrochureController extends Controller
     }
 
 
-    public function getAll()
+    public function getAll( $locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $brochure = Brochure::simplePaginate(6);
         return view('Frontend.Brochures.Brochures', compact('brochure'));
 

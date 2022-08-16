@@ -9,14 +9,20 @@ use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
-    public function index()
+    public function index($locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $reviews = Review::with('images', 'category')->get();
         return view('Frontend.About.reviews', compact('reviews'));
     }
 
-    public function create()
+    public function create($locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $categories = TourCategory::all();
         return view('Frontend.Reviews.AddReview', compact('categories'));
     }

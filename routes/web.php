@@ -318,7 +318,7 @@ Route::delete('/admin/nearby/delete/{id}', [NearbyArmeniaController::class, 'des
 //=========About us=========
 
 Route::get('/aboutUs/create', [AboutUsController::class, 'create']);
-Route::get('/aboutUs/{id}', [AboutUsController::class, 'show']);
+// Route::get('/aboutUs/{id}', [AboutUsController::class, 'show']);
 Route::post('/aboutUs/store', [AboutUsController::class, 'store']);
 Route::put('/aboutUs/update/{id}', [AboutUsController::class, 'update']);
 Route::delete('/aboutUs/delete/{id}', [AboutUsController::class, 'destroy']);
@@ -356,8 +356,8 @@ Route::delete('/admin/foods/delete/{id}', [FoodArmeniaController::class, 'destro
 
 //===============reviews===============
 
-Route::get('/reviews', [ReviewController::class, 'index']);
-Route::get('/AddReview', [ReviewController::class, 'create']);
+Route::get('/reviews/{locale?}', [ReviewController::class, 'index']);
+Route::get('/AddReview/{locale?}', [ReviewController::class, 'create']);
 Route::post('/review/store', [ReviewController::class, 'store']);
 
 
@@ -446,10 +446,10 @@ Route::get('/mices/{locale?}', [MiceController::class, 'showMice']);
 Route::get('/mices/{id}/{locale?}', [MiceController::class, 'showMiceDetails']);
 
 //=======ways to book frontend=========
-Route::get('/ways', [WaysToBookController::class,"GetAll"]);
+Route::get('/ways/{locale?}', [WaysToBookController::class,"GetAll"]);
 
 //=========Vacancy frontend=========
-Route::get('/vacancyAll', [VacancyController::class, "GetAll"]);
+Route::get('/vacancyAll/{locale?}', [VacancyController::class, "GetAll"]);
 
 
 //===========Frontend Tour Events=========
@@ -458,7 +458,7 @@ Route::get('/pageSee', function () {
 });
 
 //======about us===========
-Route::get('/aboutUs', [AboutUsController::class, 'index']);
+Route::get('/aboutUs/{locale?}', [AboutUsController::class, 'index']);
 
 //=============Frontend Nearby ===========
 Route::get('/getAllThingsToSee', [ThingsToSeeController::class, 'getAllThingsToSee']);
@@ -479,9 +479,8 @@ Route::get('/getThingsToDoById/{id}/{locale?}', [ThingsToDoController::class, 'g
 
 
 //==========Frontend Article=========
-Route::get('/Articles',[TravelBlogController::class, 'getTravelBlog']);
-Route::get('/Article/{id}',[TravelBlogController::class, 'getTravelBlogById']);
-
+Route::get('/Articles/{locale?}',[TravelBlogController::class, 'getTravelBlog']);
+Route::get('/Article/{id}/{locale?}',[TravelBlogController::class, 'getTravelBlogById']);
 
 
 //==========Frontend Hotel=========
@@ -521,7 +520,7 @@ Route::get('/Rv', function () {
     return view('Frontend.BasicTours.RequestABasicTour');
 });
 
-Route::get('/b', [BrochureController::class, 'getAll']);
+Route::get('/b/{loacle?}', [BrochureController::class, 'getAll']);
 
 Route::get('/withDriver', function () {
     return view('Frontend.Cars.WithDriver');

@@ -6,14 +6,14 @@
 
     <div class="container" style="padding: 30px">
         <h2 style="text-align: center">
-            Classic Budget Tour
+            {{ __('Classic Budget Tour') }}
         </h2>
         <p>
-            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus reiciendis sit labore minus laborum eos, ipsum
+            {{-- Lorem ipsum dolor sit, amet consectetur adipisicing elit. Natus reiciendis sit labore minus laborum eos, ipsum
             illo voluptates veritatis nam soluta odit, doloremque beatae fugit placeat? Placeat nesciunt deserunt cupiditate
             recusandae unde vitae necessitatibus sed, quia illum nobis. Illum modi labore quis dignissimos earum architecto
             repellendus aspernatur, provident in nobis neque laudantium hic corporis error consequuntur quam vel officia
-            recusandae laborum esse vero quaerat odio! Dolorum laboriosam cum beatae non?
+            recusandae laborum esse vero quaerat odio! Dolorum laboriosam cum beatae non? --}}
         </p>
         <br>
 
@@ -21,53 +21,50 @@
             <div class="col-md-9">
                 <div class="row" style="margin-bottom: 40px">
                     @foreach ($vacancies as $v)
-                        
-                   
-                    <div>
-                        <div style="display: flex">
+                        <div>
+                            <div style="display: flex">
 
 
-                            <img src="{{$v->images->first()->path}}"
-                                style="width:35%; height:17%; margin-right: 20px" alt="">
+                                <img src="{{ url($v->images->first()->path) }}"
+                                    style="width:35%; height:17%; margin-right: 20px" alt="">
 
-                            <div style="margin-left: 20px">
+                                <div style="margin-left: 20px">
 
-                                <h5 style="font-weight: 600">
-                                    {{ $v->title }}
-                                </h5>
+                                    <h5 style="font-weight: 600">
+                                        {{ __($v->title) }}
+                                    </h5>
 
-                                <p style="color: black; margin-top:10px">
-                                    {{ $v->description }}
-                                </p>
+                                    <p style="color: black; margin-top:10px">
+                                        {{ __($v->description) }}
+                                    </p>
 
 
-                                <div class="" style="font-weight: 500; font-size:16px; margin-top:10px">
+                                    <div class="" style="font-weight: 500; font-size:16px; margin-top:10px">
 
-                                    <i class="fa-regular fa-clock" style="color: #e5a686"></i> <span>
-                                        {{ $v->created_at->diffForHumans() }}
-                                    </span>
-                                    <br>
-                                    <br>
-                                    <br>
+                                        <i class="fa-regular fa-clock" style="color: #e5a686"></i> <span>
+                                            {{ $v->created_at->diffForHumans() }}
+                                        </span>
+                                        <br>
+                                        <br>
+                                        <br>
 
-                                    <div style="">
-                                        <button class="package-view">
-                                            Show more
-                                        </button>
+                                        <div style="">
+                                            <button class="package-view">
+                                                {{ __('Show more') }}
+                                            </button>
+                                        </div>
                                     </div>
+                                    <br>
+                                    <br>
+                                    <br>
+
                                 </div>
-                                <br>
-                                <br>
-                                <br>
+
 
                             </div>
 
 
                         </div>
-
-
-                    </div>
-
                     @endforeach
 
                 </div>

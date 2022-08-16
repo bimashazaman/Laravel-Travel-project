@@ -5,18 +5,12 @@
 <div class="fullBanner">
     @include('partials.DefaultBanner')
 </div>
-
-
-
-
     <div class="RentForm">
-
-       
         <h2>
-            {{ $travelBlog->title }}
+            {{ __($travelBlog->title) }}
         </h2>
         <p>
-            {{ $travelBlog->type }}
+            {{ __($travelBlog->type) }}
         </p>
         <a href="">
             2expedition
@@ -27,23 +21,20 @@
         <br>
         <br>
         <p>
-           {{ $travelBlog->description }}
+           {{ __($travelBlog->description) }}
         </p>
         <br>
         <div class="row">
             @foreach ($travelBlog->images as $item)
             <div class="col-md-6">
-                <img src="{{ asset($item->path) }}" alt="">
+                <img src="{{ url(asset($item->path)) }}">
             </div>
-            @endforeach
-            
+            @endforeach  
         </div>
         <br>
         <p>
-           {{ $travelBlog->more_description }}
+           {{ __($travelBlog->more_description) }}
         </p>
-   
-       
     </div>
    
     <br>

@@ -15,27 +15,19 @@
 </div>
 @endif
 
-
-
-
-
-
-
     <div class="container" style="padding: 30px">
         <h2 style="text-align: center; margin-bottom: -70px">
-            Add Review
+            {{ __('Add Review') }}
         </h2>
    
-
         <div class="row" style="padding: 40px; margin:auto">
             <div class="col-md-9 card" style="padding:30px; margin: 120px; box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px" >
-                
                 <form action="/review/store"method="POST" enctype="multipart/form-data">
                     {{csrf_field()}}
-                    <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; margin-bottom:10px" type="text" class="form-control" placeholder="Your Name" name="name">
-                    <textarea type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; margin-bottom:10px" type="text" class="form-control" placeholder="Add a Review" name="review"></textarea>
-                    <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; margin-bottom:10px" type="text" class="form-control" placeholder="Add a Title" name="title">
-                    <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; margin-bottom:10px" type="text" class="form-control" placeholder="Email" name="email">
+                    <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; margin-bottom:10px" type="text" class="form-control" placeholder="{{ __('Your Name') }}" name="name">
+                    <textarea type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; margin-bottom:10px" type="text" class="form-control" placeholder="{{ __('Add a Review') }}" name="review"></textarea>
+                    <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; margin-bottom:10px" type="text" class="form-control" placeholder="{{ __('Add a Title') }}" name="title">
+                    <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; margin-bottom:10px" type="text" class="form-control" placeholder="{{ __('Email') }}" name="email">
                     <select class="form-control form-select" name="category_id">
                         @foreach($categories as $category)
                         <option value="{{$category->id}}" name="category_id">{{$category->name}}</option>
@@ -66,6 +58,12 @@
                        
                             <span class="rating-reaction"></span>
                             <button type="submit" class="package-view" value="submit">Submit</button>
+                            <br>
+            <br>
+            <center>
+              {!! NoCaptcha::renderJs() !!}
+                  {!! NoCaptcha::display() !!}
+            </center>
                         
                     </div>
                 </div>

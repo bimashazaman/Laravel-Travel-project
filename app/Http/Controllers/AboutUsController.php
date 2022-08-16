@@ -7,8 +7,12 @@ use Illuminate\Http\Request;
 
 class AboutUsController extends Controller
 {
-    public function index()
+    public function index($locale =  null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $aboutUs = AboutUs::all();
         return view('Frontend.About.aboutUs', compact('aboutUs'));
     }
@@ -65,11 +69,7 @@ class AboutUsController extends Controller
             ->with("success", true);
     }
 
-    public function show($id)
-    {
-        $aboutUs = AboutUs::find($id);
-        return view('Frontend.About.ShowAboutUs', compact('aboutUs'));
-    }
+  
 
     public function index2()
     {

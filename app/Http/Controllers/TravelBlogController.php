@@ -89,8 +89,11 @@ class TravelBlogController extends Controller
     }
 
     //get it on frontend
-    public function getTravelBlog()
+    public function getTravelBlog($locale = null)
     {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $cms = BlogCMS::all();
         $travelBlogs = TravelBlog::with('images')->simplePaginate(9);
         return view('Frontend.Blogs.Articles', compact('travelBlogs', 'cms'));
@@ -98,8 +101,12 @@ class TravelBlogController extends Controller
 
     //get it on frontend
 
-    public function getTravelBlogById($id)
+    public function getTravelBlogById($id, $locale = null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         $travelBlog = TravelBlog::find($id)
         ->with('images')
         ->where('id', $id)

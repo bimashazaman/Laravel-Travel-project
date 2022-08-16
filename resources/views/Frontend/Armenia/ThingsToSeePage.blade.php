@@ -17,7 +17,7 @@
                         <div class="tour-descriptions-content-inner-left">
                             <div class="tour-descriptions-content-inner-left-content">
                                 <h1>
-                                   {{ __($tour_event->name) }}
+                                    {{ __($tour_event->name) }}
                                 </h1>
                             </div><!-- /.tour-descriptions-content-inner-left-content -->
                         </div><!-- /.tour-descriptions-content-inner-left -->
@@ -64,7 +64,8 @@
                     <div class="col-md-12">
                         {{-- <iframe src="https://maps.google.com/maps?q=manhatan&t=&z=13&ie=UTF8&iwloc=&output=embed" width="100%" height ="100%"
                     frameborder="0" allowfullscreen></iframe> --}}
-                        <img src="{{ asset('images/map.png') }}" alt="" style="height:310px; width: 530px; margin-top: 52px;">
+                        <img src="{{ asset('images/map.png') }}" alt=""
+                            style="height:310px; width: 530px; margin-top: 52px;">
                     </div>
                 </div>
                 <br>
@@ -80,12 +81,12 @@
                                     {{ __('Period') }}
                                 </div>
                                 <div>
-                                   {{ __($tour_event->period) }}
+                                    {{ __($tour_event->period) }}
                                 </div>
                             </div>
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-location-dot"></i>
-                                {{ __('Settlement') }}
+                                    {{ __('Settlement') }}
                                 </div>
                                 <div>
                                     {{ __($tour_event->settlement) }}
@@ -94,7 +95,7 @@
 
                             <div class="detailespackage" style="justify-content:space-between">
                                 <div><i class="fa-solid fa-clock"></i>
-                                {{ __('From yerevan') }}
+                                    {{ __('From yerevan') }}
                                 </div>
                                 <div>
                                     {{ __($tour_event->distance) }}
@@ -135,14 +136,14 @@
                 {{ __('Overview') }}
             </h2>
             <p>
-                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt magnam reiciendis suscipit aliquam? Adipisci, modi error? Possimus ducimus suscipit corrupti!
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. Deserunt magnam reiciendis suscipit aliquam?
+                Adipisci, modi error? Possimus ducimus suscipit corrupti!
             </p>
         </section>
     </div>
     <br>
 
-{{-- 
-    <section id="pack" class="packages">
+    {{-- <section id="pack" class="packages">
         <div class="container">
 
             <center>
