@@ -8,8 +8,12 @@ use Illuminate\Support\Facades\Mail;
 
 class ContactFormController extends Controller
 {
-    public function index()
+    public function index($locale = null)
     {
+
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
         return view('Frontend.Contact.Contact');
     }
 

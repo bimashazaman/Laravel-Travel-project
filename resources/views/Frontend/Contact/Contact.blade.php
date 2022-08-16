@@ -6,12 +6,12 @@
 
     <div class="RentForm">
         <h2>
-            Contact us
+            {{ __('Contact us') }}
         </h2>
         <p>
-            Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, nisi modi suscipit harum excepturi cum aut quia
+            {{-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, nisi modi suscipit harum excepturi cum aut quia
             enim ratione rerum similique, libero eligendi molestias ab iusto aperiam repellendus rem repellat nihil deserunt
-            at accusantium earum! Nihil iste magni suscipit soluta?
+            at accusantium earum! Nihil iste magni suscipit soluta? --}}
         </p>
         {{-- <div class="row">
             <div class="col-md-6">
@@ -27,20 +27,26 @@
 
             <div class="form-group">
 
-                <input type="text" class="form-control" id="" placeholder="Name*" name="name">
+                <input type="text" class="form-control" id="" placeholder="{{ __('Name') }}*" name="name">
             </div>
             <div class="form-group">
 
-                <input type="text" class="form-control" id="inputAddress2" placeholder="Email*" name="email">
+                <input type="text" class="form-control" id="inputAddress2" placeholder="{{ __('Email') }}*" name="email">
             </div>
             <div class="form-group">
-                <textarea placeholder="Write a message" name="subject" id="" cols="85" rows="7"
+                <textarea placeholder="{{ __('Write a message') }}" class="form-control" name="subject" id="" cols="85" rows="7"
                     style="background-color:#F7F6F4; border:none"></textarea>
             </div>
 
 
 
-            <button type="submit" class="package-view" style="text-align: center">Send</button>
+            <button type="submit" class="package-view" style="text-align: center">{{ __('Send') }}</button>
+            <br>
+            <br>
+            <center>
+                {!! NoCaptcha::renderJs() !!}
+                    {!! NoCaptcha::display() !!}
+              </center>
         </form>
         <img src="{{ asset('images/ci.png') }}" style="width: 100%; text-align:center; align-items:center" alt="">
 
