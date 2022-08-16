@@ -61,16 +61,12 @@
     @include('partials.header')
     @yield('content')
     @include('partials.footer')
+
     <script>
-        $(document).ready(function() {
-            $(".dropdown").hover(function() {
-                var dropdownMenu = $(this).children(".dropdown-menu");
-                if (dropdownMenu.is(":visible")) {
-                    dropdownMenu.parent().toggleClass("open");
-                }
-            });
-        });
-    </script>
+        $( function() {
+          $( "#datepicker" ).datepicker();
+        } );
+        </script>
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>

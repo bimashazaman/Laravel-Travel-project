@@ -69,15 +69,13 @@
                                     <input class="reqTourInput" type="text" placeholder="{{ __('Name') }}" style="width:100%" name="name">
                                 </div>
                                 <div class="col-md-12 col-xs-12">
-                                    <input class="reqTourInput" type="Text" placeholder="{{ __('Start Date') }}" name="start_date"
-                                        style="width:100%">
+                                    <input class="reqTourInput" type="text" id="datepicker" placeholder="{{ __('Start Date') }}" name="start_date"
+                                        style="width:100%" onfocus="(this.type='date')">
                                 </div>
                                 <div class="col-md-12 col-xs-12">
-                                    <input class="reqTourInput" type="text" list="cars" placeholder="{{ __('Destination') }}"
-                                        style="width:100%" />
-                                    <Select id="Starting Destination" style="width:100%" class="reqTourInput">
-                                        
-                                        <option>Saab</option>
+                                    
+                                    <Select id="Starting Destination" style="width:100%" class="reqTourInput" pla>
+                                        <option>Destination</option>
                                         <option>Mercedes</option>
                                         <option>Audi</option>
                                     </Select>
@@ -85,40 +83,41 @@
                                 <div class="col-md-12 col-xs-12">
 
                                     <div class="col-md-6 col-xs-12">
-                                        <span><label for=""
-                                                style="float: left;background-color: white; padding-right: 30%;"
-                                                class="reqTourInput"><i
-                                                    style="font-weight: 400">{{ __('Adult') }}</i></label></span>
-                                        <span>
+                                        <span><label for="" style="float: left; background-color: white; width: 100%;"
+                                                class="reqTourInput">
+                                            <input type="number" style="border:none; outline:none; width: 100%" placeholder="{{ __('Number Of Adults') }}">
+                                            </label></span>
+                                        {{-- <span>
                                             <div class="number" style="float:left;">
                                                 <button class="minus"
                                                     style="width:25px; color: black; border:none; font-size:3rem">-</button>
-                                                <input type="text" value="1"
+                                                <input type="number" value="1"
                                                     style="width: 40px; text-align: center;" class="reqTourInput" />
                                                 <button class="plus"
                                                     style="width:25px; color: black; border:none; font-size:3rem">+</button>
                                             </div>
-                                        </span>
+                                        </span> --}}
                                     </div>
                                     <div class="col-md-6 col-xs-12" style="">
-                                        <label for=""
-                                            style="float: left;background-color: white; padding-right: 30%;"
-                                            class="reqTourInput"><i style="font-weight: 400">{{ __('Child') }}</i></label>
-                                        <div class="number" style="float:left;">
+                                        <span><label for="" style="float: left; background-color: white; width: 100%;"
+                                            class="reqTourInput">
+                                        <input type="number" style="border:none; outline:none; width: 100%" placeholder="{{ __('Number Of Childs') }}">
+                                        </label></span>
+                                        {{-- <div class="number" style="float:left;">
                                             <button class="minus"
                                                 style="width:25px; color: black; border:none; font-size:3rem">-</button>
                                             <input type="text" value="1"
                                                 style="width: 40px; text-align: center;" class="reqTourInput" />
                                             <button class="plus"
                                                 style="width:25px; color: black; border:none; font-size:3rem">+</button>
-                                        </div>
+                                        </div> --}}
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-xs-12" style="margin: 16px">
-                                    <div class="col">
+                                    {{-- <div class="col">
                                         <input type="text" class="reqTourInput"
                                             style="width: 140px; float:left; margin-top: 2.5%;" placeholder="{{ __('Type') }}">
-                                    </div>
+                                    </div> --}}
                                     <div class="col">
                                         <div class="ReqBox" style="width: 100px; float:left;"><i
                                                 class="fa-solid fa-car"></i>
@@ -168,4 +167,8 @@
                 </div>
             </div>
         </div>
-</section>
+</section><script>
+    $( function() {
+      $( "#datepicker" ).datepicker();
+    } );
+    </script>

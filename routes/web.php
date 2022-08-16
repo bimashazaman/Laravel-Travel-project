@@ -549,16 +549,9 @@ Route::get('/article', function () {
 });
 
 
-
-
-
 Route::get('/BookHotel', function () {
     return view('Frontend.Hotels.BookHotelForm');
 });
-
-
-
-
 
 
 

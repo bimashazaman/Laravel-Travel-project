@@ -31,11 +31,12 @@
             </div>
             <div class="form-group">
 
-                <input type="text" class="form-control" id="inputAddress2" placeholder="{{ __('Email') }}*" name="email">
+                <input type="text" class="form-control" id="inputAddress2" placeholder="{{ __('Email') }}*"
+                    name="email">
             </div>
             <div class="form-group">
-                <textarea placeholder="{{ __('Write a message') }}" class="form-control" name="subject" id="" cols="85" rows="7"
-                    style="background-color:#F7F6F4; border:none"></textarea>
+                <textarea placeholder="{{ __('Write a message') }}" class="form-control" name="subject" id="" cols="85"
+                    rows="7" style="background-color:#F7F6F4; border:none"></textarea>
             </div>
 
 
@@ -45,8 +46,8 @@
             <br>
             <center>
                 {!! NoCaptcha::renderJs() !!}
-                    {!! NoCaptcha::display() !!}
-              </center>
+                {!! NoCaptcha::display() !!}
+            </center>
         </form>
         <img src="{{ asset('images/ci.png') }}" style="width: 100%; text-align:center; align-items:center" alt="">
 
