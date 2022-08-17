@@ -74,10 +74,13 @@
                                 </div>
                                 <div class="col-md-12 col-xs-12">
 
-                                    <Select id="Starting Destination" style="width:100%" class="reqTourInput" pla>
-                                        <option>Destination</option>
-                                        <option>Mercedes</option>
-                                        <option>Audi</option>
+                                    <Select id="Starting Destination" style="width:100%" class="reqTourInput">
+                                        <option value="">{{ __('Starting Destination') }}</option>
+                                        @foreach ($destination as $d )                                        
+                                        <option>
+                                            {{ $d->name }}
+                                        </option>
+                                        @endforeach
                                     </Select>
                                 </div>
                                 <div class="col-md-12 col-xs-12">

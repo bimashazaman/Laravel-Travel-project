@@ -1,10 +1,5 @@
- <!--packages start-->
-
-
  <section id="pack" class="packages">
      <div class="container">
-
-
          <!--/.gallery-header-->
          <div class="packages-content">
              <div class="row">
@@ -12,10 +7,8 @@
                      @foreach ($tours as $tour)
                          <div class="col-md-4 col-sm-6">
                              <h3 style="text-align: center;  font-weight: 600;">{{ __($tour->category->name) }}</h3>
-
                              <div class="single-package-item">
                                  <img src="{{ url($tour->images->first()->path) }}" alt="{{ __($tour->name) }}">
-
                                  <div class="packageName">
                                      {{ __($tour->name) }}
                                  </div>

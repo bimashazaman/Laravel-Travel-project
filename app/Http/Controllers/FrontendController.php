@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\CreatorDestination;
 use App\Models\Destination;
 use App\Models\HomeCMS;
 use App\Models\Meal;
@@ -48,6 +49,7 @@ class FrontendController extends Controller
        
 
         $home = HomeCMS::all();
+        $destination = CreatorDestination::all();
 
         $tours = Tour::with('images')
             ->with('category')
@@ -68,6 +70,7 @@ class FrontendController extends Controller
             "types" => $types,
             "meals" => $meals,
             "home" => $home,
+            "destination" => $destination,
         ]);
     }
   

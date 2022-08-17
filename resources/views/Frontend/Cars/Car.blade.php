@@ -1,5 +1,4 @@
-
-    @extends('layouts.master')
+@extends('layouts.master')
 @section('content')
    
 <div class="fullBanner">
@@ -16,12 +15,9 @@
                     <div class="tour-descriptions-content-inner">
                         <div class="tour-descriptions-content-inner-left">
                             <div class="tour-descriptions-content-inner-left-content">
-
                             </div><!-- /.tour-descriptions-content-inner-left-content -->
                         </div><!-- /.tour-descriptions-content-inner-left -->
                         <div class="tour-descriptions-content-inner-right">
-
-
                             <section class="" style="">
                                 <div class="imgCcontainer">
                                     <div class="carousel imgC">
@@ -43,7 +39,6 @@
 
                                         </ul>
                                         <ul class="carousel__thumbnails">
-
                                             @foreach ($car->images as $item)
                                                 @if ($item->id != $car->images->first()->id)
                                                     <li data-interval="1000">
@@ -57,12 +52,6 @@
                                     </div>
                                 </div>
                             </section>
-
-
-
-
-
-
                         </div><!-- /.tour-descriptions-content-inner-right -->
                     </div><!-- /.tour-descriptions-content-inner -->
                 </div><!-- /.tour-descriptions-content -->
@@ -91,8 +80,6 @@
                     <div class="detailespackage">
                         <div><i class="fa-solid fa-calendar"></i>{{ __('Free Cancellation') }}</div>  <div>{{ __($car->free_cancelation) }}</div>
                     </div>
-
-
                 </div><!-- /.tour-descriptions-content-inner-left-content-title -->
 
             </div><!-- /.row -->
