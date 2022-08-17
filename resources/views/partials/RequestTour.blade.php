@@ -74,13 +74,10 @@
                                 </div>
                                 <div class="col-md-12 col-xs-12">
 
-                                    <Select id="Starting Destination" style="width:100%" class="reqTourInput">
-                                        <option value="">{{ __('Starting Destination') }}</option>
-                                        @foreach ($destination as $d )                                        
-                                        <option>
-                                            {{ $d->name }}
-                                        </option>
-                                        @endforeach
+                                    <Select id="Starting Destination" style="width:100%" class="reqTourInput" pla>
+                                        <option>Destination</option>
+                                        <option>Mercedes</option>
+                                        <option>Audi</option>
                                     </Select>
                                 </div>
                                 <div class="col-md-12 col-xs-12">
@@ -95,11 +92,13 @@
 
                                     </div>
                                     <div class="col-md-6 col-xs-12" style="">
-                                        <div class="ReqBox" style="width: 130px; float:left;">
+                                        <span><label for=""
+                                                style="float: left; background-color: white; width: 100%;"
+                                                class="reqTourInput">
                                                 <input type="number" style="border:none; outline:none; width: 100%"
                                                     placeholder="{{ __('Number Of Childs') }}">
-                                        </div>
-                                      
+                                            </label>
+                                        </span>
                                     </div>
                                 </div>
                                 <div class="col-md-12 col-xs-12" style="margin: 16px">
@@ -117,9 +116,9 @@
                                         <div class="ReqBox" style="width: 130px; float:left;"><i
                                                 class="fa-solid fa-motorcycle"></i> 
                                                 {{-- {{ __('Motorcycle') }} --}}
-                                           <div>
-                                            <input type="checkbox">
-                                           </div>
+                                          <div>
+                                              <input type="checkbox">
+                                          </div>
                                         </div>
                                     </div>
                                     <div class="col">
@@ -127,7 +126,9 @@
                                                 class="fa-solid fa-person-biking"></i>
                                             <div>
                                                 {{-- {{ __('Bike') }} --}}
-                                                <input type="checkbox">
+                                              <div>
+                                                  <input type="checkbox">
+                                              </div>
                                             </div>
                                         </div>
                                     </div>
