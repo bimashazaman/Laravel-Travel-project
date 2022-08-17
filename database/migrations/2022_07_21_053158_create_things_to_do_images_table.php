@@ -17,6 +17,7 @@ class CreateThingsToDoImagesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('things_to_do_id');
             $table->unsignedBigInteger('image_id');   
+            $table->softDeletes();
             $table->timestamps();
         });
     }

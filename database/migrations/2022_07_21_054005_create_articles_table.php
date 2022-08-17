@@ -20,6 +20,7 @@ class CreateArticlesTable extends Migration
             $table->longText('details');
             $table->longText('big_description');
             $table->text('small_description');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -106,25 +106,30 @@
                                     <div class="col">
                                         <div class="ReqBox" style="width: 130px; float:left;"><i
                                                 class="fa-solid fa-car"></i>
-                                            <div>{{ __('Car') }}</div>
+                                            <div>{{ __('Car') }}
+                                                <input type="checkbox" checked></div>
+                                           
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="ReqBox" style="width: 130px; float:left;"><i
-                                                class="fa-solid fa-motorcycle"></i> {{ __('Motorcycle') }}</div>
+                                                class="fa-solid fa-motorcycle"></i> {{ __('Motorcycle') }}
+                                                <input type="checkbox"></div>
                                     </div>
                                     <div class="col">
                                         <div class="ReqBox" style="width: 130px; float:left;"><i
                                                 class="fa-solid fa-person-biking"></i>
                                             <div>
-                                                {{ __('Bike') }}</div>
+                                                {{ __('Bike') }}
+                                                <input type="checkbox"></div>
                                         </div>
                                     </div>
                                     <div class="col">
                                         <div class="ReqBox" style="width: 130px; float:left;"> <i
                                                 class="fa-solid fa-person-hiking"></i>
                                             <div>
-                                                {{ __('Hiking') }}</div>
+                                                {{ __('Hiking') }}
+                                                <input type="checkbox"></div>
                                         </div>
                                     </div>
 

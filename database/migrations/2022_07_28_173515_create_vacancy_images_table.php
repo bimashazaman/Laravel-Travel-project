@@ -17,6 +17,7 @@ class CreateVacancyImagesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('vacancy_id');
             $table->unsignedBigInteger('image_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

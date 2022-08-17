@@ -17,6 +17,7 @@ class CreateTourEventImagesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('tour_event_id');
             $table->unsignedBigInteger('image_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

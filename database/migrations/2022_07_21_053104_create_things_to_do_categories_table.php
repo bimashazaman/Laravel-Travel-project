@@ -16,6 +16,7 @@ class CreateThingsToDoCategoriesTable extends Migration
         Schema::create('things_to_do_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

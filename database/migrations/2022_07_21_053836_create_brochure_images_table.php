@@ -17,6 +17,7 @@ class CreateBrochureImagesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('brochure_id');
             $table->unsignedBigInteger('image_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -17,6 +17,7 @@ class CreateFoodArmeniaImagesTable extends Migration
             $table->id();
             $table->unsignedBigInteger('food_armenia_id');
             $table->unsignedBigInteger('image_id');  
+            $table->softDeletes();
             $table->timestamps();
         });
     }

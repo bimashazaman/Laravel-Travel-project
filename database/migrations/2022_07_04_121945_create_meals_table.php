@@ -16,8 +16,7 @@ class CreateMealsTable extends Migration
         Schema::create('meals', function (Blueprint $table) {
             $table->id();
             $table->string("name");
-            //price
-            //package
+            $table->softDeletes();
             $table->timestamps();
         });
     }

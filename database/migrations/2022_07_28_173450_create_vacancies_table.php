@@ -17,6 +17,7 @@ class CreateVacanciesTable extends Migration
             $table->id();
             $table->string('title');
             $table->longText('description');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

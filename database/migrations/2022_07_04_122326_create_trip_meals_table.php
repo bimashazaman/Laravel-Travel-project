@@ -17,6 +17,7 @@ class CreateTripMealsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('trip_id');
             $table->unsignedBigInteger('meal_id');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

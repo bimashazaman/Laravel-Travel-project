@@ -24,6 +24,7 @@ class CreateThingsToSeesTable extends Migration
             $table->string('period');
             $table->string('distance');
             $table->decimal('price');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

@@ -16,6 +16,7 @@ class CreateFoodArmeniaCategoriesTable extends Migration
         Schema::create('food_armenia_categories', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }

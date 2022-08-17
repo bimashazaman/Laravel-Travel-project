@@ -175,6 +175,7 @@
                     </div>
                     <img src="{{ asset('images/usefull.png') }}" alt="">
                 </div>
+                @if(count($hotels->hotelFacilities) > 0)
                 <div class="col-md-6">
                     <br>
                     <h3 style="color: white">
@@ -191,6 +192,7 @@
                         @endforeach
                     </ul>
                 </div>
+                @endif
             </div>
         </div>
     </section>
@@ -199,9 +201,11 @@
     <section id="pack" class="packages" style="background-color: #F5F5F5">
         <div class="container">
             <div class="gallary-header text-center">
+                @if (count($foods) > 0)
                 <h2>
                     {{ __('What to eat nearby') }}
                 </h2>
+                @endif
 
             </div>
             <!--/.gallery-header-->

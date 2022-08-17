@@ -15,6 +15,8 @@ class CreateCreatorDestinationsTable extends Migration
     {
         Schema::create('creator_destinations', function (Blueprint $table) {
             $table->id();
+            $table->string('name');
+            $table->softDeletes();
             $table->timestamps();
         });
     }
