@@ -53,8 +53,6 @@ use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
 
 //============login===============
 
- 
-    
 Route::get('/login', [LoginController::class, 'showLoginForm'])->name('login');
 Route::post('/loginTo', [LoginController::class, 'loginTo'])->name('loginTo');
 
@@ -64,12 +62,6 @@ Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
 
 
 Route::group(['middleware' => ['admin']], function () {
-
-
-
-
-
-//=========Admin CMS=================
 
 
 //========Home ==========
@@ -140,7 +132,7 @@ Route::get('/AddFacility', function () {
     return view('Backend.Admin.Tours.classicTours.AddFacility');
 });
 
-//================add highlight============
+//================add highlight===========
 
 Route::get('/AddHighlight', function () {
     return view('Backend.Admin.Tours.classicTours.AddHighlights');
