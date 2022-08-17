@@ -511,7 +511,6 @@ Route::get('/ThirdStep', function () {
     return view('partials.SendAMsg');
 });
 
-
 Route::get('/TourFrontPage', function () {
     return view('Frontend.Tours.Tour');
 });
@@ -532,8 +531,6 @@ Route::get('/RF', function () {
 
 Route::get('/usefulToKnow/{locale?}', [UsefulInfoController::class, 'getUsefulInfo']);
 
-
-
 Route::get('/TentForm', function () {
     return view('Frontend.TourAccesories.TentForm');
 });
@@ -541,7 +538,6 @@ Route::get('/TentForm', function () {
 Route::get('/', function () {
     return redirect('/home');
 });
-
 
 
 Route::get('/article', function () {
