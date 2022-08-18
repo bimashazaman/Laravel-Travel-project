@@ -86,6 +86,7 @@ class AdminDestinationController extends Controller
         $FromDilija->nameSeven = $request->nameSeven;
         $FromDilija->nameEight = $request->nameEight;
         $FromDilija->save();
+
         return redirect()
         ->back()
         ->with("msg", "Added successfully!")
@@ -96,7 +97,10 @@ class AdminDestinationController extends Controller
             ->with("msg", "Something went wrong!")
             ->with("success", false);
         }
+
     }
+
+       
 
     public function storeGyumris(Request $request)
     {

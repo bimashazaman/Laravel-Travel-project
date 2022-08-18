@@ -3,6 +3,12 @@
 namespace App\Http\Controllers;
 
 use App\Models\CreatorDestination;
+use App\Models\FromDilijan;
+use App\Models\FromGyumri;
+use App\Models\FromJermuk;
+use App\Models\FromStepanakert;
+use App\Models\FromTbilisi;
+use App\Models\FromYerevan;
 use App\Models\TourCreator;
 use Illuminate\Http\Request;
 
@@ -10,6 +16,7 @@ class TourCreatorController extends Controller
 {
     public function index()
     {
+        
         $destination = CreatorDestination::all();
         return view('partials.TourPackages', compact('destination'));
     }
@@ -53,8 +60,15 @@ class TourCreatorController extends Controller
     {
 
         $creator = $request->session()->get('creator');
+        
+        $yerevan =  FromYerevan::all();
+        $dilijan =  FromDilijan::all();
+        $gyumri =  FromGyumri::all();
+        $jermuk =  FromJermuk::all();
+        $stepanakert =  FromStepanakert::all();
+        $tbilisi =  FromTbilisi::all();
 
-        return view('partials.secondStepReq', compact('creator'));
+        return view('partials.secondStepReq', compact('creator', 'yerevan', 'dilijan', 'gyumri', 'jermuk','stepanakert','tbilisi'));
     }
 
     public function storeTwo()

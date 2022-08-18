@@ -155,31 +155,31 @@
                     </form>
                     <br>
                     <br>
-                    @foreach ($dilijan as $y)
+                    @foreach ($dilijan as $d)
                         <div class="row">
                             <div class="col">
-                                {{ $y->name }}
+                                {{ $d->name }}
                             </div>
                             <div class="col">
-                                {{ $y->nameTwo }}
+                                {{ $d->nameTwo }}
                             </div>
                             <div class="col">
-                                {{ $y->nameThree }}
+                                {{ $d->nameThree }}
                             </div>
                             <div class="col">
-                                {{ $y->nameFour }}
+                                {{ $d->nameFour }}
                             </div>
                             <div class="col">
-                                {{ $y->nameFive }}
+                                {{ $d->nameFive }}
                             </div>
                             <div class="col">
-                                {{ $y->nameSix }}
+                                {{ $d->nameSix }}
                             </div>
                             <div class="col">
-                                {{ $y->nameSeven }}
+                                {{ $d->nameSeven }}
                             </div>
                             <div class="col">
-                                {{ $y->nameEight }}
+                                {{ $d->nameEight }}
                             </div>
                         </div>
                         <br>

@@ -79,19 +79,215 @@
                     </div>
                 </div>
                 <br>
-                <div class="row" style="margin: 10px; font-weight:600">
-                    <div class="col-md-3">Dhaka</div>
-                    <div class="col-md-3">Dhaka</div>
-                    <div class="col-md-3">Dhaka</div>
-                    <div class="col-md-3">Dhaka</div>
-                </div>
                 <br>
-                <div class="row" style="margin: 10px; font-weight:600">
-                    <div class="col-md-3">Dhaka</div>
-                    <div class="col-md-3">Dhaka</div>
-                    <div class="col-md-3">Dhaka</div>
-                    <div class="col-md-3">Dhaka</div>
+                
+                {{-- {{ dd($creator) }} --}}
+                @if ($creator->creator_destinations_id == "Yerevan"  && $creator->car)
+                @foreach ($yerevan as $y)
+                
+                <div class="row"  style="font-weight:600; display:flex">
+                    <div class="col-md-2">
+                        {{ $y->name }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameTwo }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameThree }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFour }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFive }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSix }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSeven }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameEight }}
+                    </div>
                 </div>
+                
+                <br>               
+                @endforeach
+                @endif
+
+
+                @if ($creator->creator_destinations_id == "Dilijan"  && $creator->car)
+                @foreach ($dilijan as $y)
+                
+                <div class="row"  style="font-weight:600; display:flex">
+                    <div class="col-md-2">
+                        {{ $y->name }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameTwo }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameThree }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFour }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFive }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSix }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSeven }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameEight }}
+                    </div>
+                </div>
+                
+                <br>               
+                @endforeach
+                @endif
+
+                @if ($creator->creator_destinations_id == "Gyumri" && $creator->car)
+                @foreach ($gyumri as $y)
+                
+                <div class="row"  style="font-weight:600; display:flex">
+                    <div class="col-md-2">
+                        {{ $y->name }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameTwo }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameThree }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFour }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFive }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSix }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSeven }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameEight }}
+                    </div>
+                </div>
+                
+                <br>               
+                @endforeach
+                @endif
+
+                @if ($creator->creator_destinations_id == "Jermuk"  && $creator->car)
+                @foreach ($jermuk as $y)
+                
+                <div class="row"  style="font-weight:600; display:flex">
+                    <div class="col-md-2">
+                        {{ $y->name }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameTwo }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameThree }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFour }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFive }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSix }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSeven }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameEight }}
+                    </div>
+                </div>
+                
+                <br>               
+                @endforeach
+                @endif
+
+                @if ($creator->creator_destinations_id == "Stepanakert"  && $creator->car)
+                @foreach ($stepanakert as $y)
+                
+                <div class="row"  style="font-weight:600; display:flex">
+                    <div class="col-md-2">
+                        {{ $y->name }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameTwo }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameThree }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFour }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFive }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSix }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSeven }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameEight }}
+                    </div>
+                </div>
+                
+                <br>               
+                @endforeach
+                @endif
+
+                @if ($creator->creator_destinations_id == "Tbilisi"  && $creator->car)
+                @foreach ($tbilisi as $y)
+                
+                <div class="row"  style="font-weight:600; display:flex">
+                    <div class="col-md-2">
+                        {{ $y->name }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameTwo }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameThree }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFour }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFive }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSix }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSeven }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameEight }}
+                    </div>
+                </div>
+                
+                <br>               
+                @endforeach
+                @endif
+                
+                
                 <div class="row">
                     <center style="font-weight:600">
                         You can add one of your Tour here <span style="color:Blue"> Activities</span>

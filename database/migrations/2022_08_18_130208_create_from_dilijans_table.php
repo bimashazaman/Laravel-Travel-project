@@ -15,14 +15,14 @@ class CreateFromDilijansTable extends Migration
     {
         Schema::create('from_dilijans', function (Blueprint $table) {
             $table->id();
-            $table->string('name');
-            $table->string('nameTwo');
-            $table->string('nameThree');
-            $table->string('nameFour');
-            $table->string('nameFive');
-            $table->string('nameSix');
-            $table->string('nameSeven');
-            $table->string('nameEight');
+            $table->string('name')->nullable();
+            $table->string('nameTwo')->nullable();
+            $table->string('nameThree')->nullable();
+            $table->string('nameFour')->nullable();
+            $table->string('nameFive')->nullable();
+            $table->string('nameSix')->nullable();
+            $table->string('nameSeven')->nullable();
+            $table->string('nameEight')->nullable();
             $table->timestamps();
         });
     }
