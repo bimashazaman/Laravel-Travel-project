@@ -41,7 +41,7 @@ class FrontendController extends Controller
     }
    }
 
-    public function index($locale = null)
+    public function index($locale = null, Request $request)
     {
         if (isset($locale) && in_array($locale, config('app.available_locales'))) {
             app()->setLocale($locale);
@@ -50,6 +50,7 @@ class FrontendController extends Controller
 
         $home = HomeCMS::all();
         $destination = CreatorDestination::all();
+        $creator = $request->session()->get('creator');
 
         $tours = Tour::with('images')
             ->with('category')
@@ -71,6 +72,7 @@ class FrontendController extends Controller
             "meals" => $meals,
             "home" => $home,
             "destination" => $destination,
+            "creator" => $creator,
         ]);
     }
   

@@ -83,6 +83,9 @@
                         {{-- <li><a href="">Contact</a></li> --}}
                     </ul>
                 </li>
+                <li>
+                    <a href="{{ url('/admin/destination') }}"><i class="fe fe-users"></i> <span>Control Destination</span></a>
+                </li>
             </ul>
         </div>
     </div>

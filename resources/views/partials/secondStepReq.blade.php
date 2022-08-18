@@ -1,35 +1,23 @@
 @extends('layouts.master')
 @section('content')
-
-<br>
-<br><br> <br> <br> <br><br><br>
-<br> <br> <br><br><br>
-<br><br> <br> <br> 
-
-
-{{-- <div class="parentReqSecond">
-    <div class="div1ReqSecond"> 
-        <div class="mapouter"><div class="gmap_canvas"><iframe width="796" height="420" id="gmap_canvas" src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:420px;width:796px;}</style><a href="https://www.embedgooglemap.net">google maps html code</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:420px;width:796px;}</style></div></div>
-    </div>
-    <div class="div2ReqSecond">
-        
-    </div>
-    </div> --}}
+<div class="fullBanner">
+    @include('partials.DefaultBanner')
+</div>
 
     <div class="container">
         <div class="row">
             <div class="col-md-12">
                 <div class="requestTour__title">
                     <h2 style="text-align: center">
-                        Choose one of our tours or create your own trip!
+                        {{ __('Choose one of our tours or create your own trip!') }}
                     </h2>
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-xs-12">
                         <div class="col-sm-4 col-xs-12 padding-0 ">
                             <ul class="list-group ProgressBarItem" style="display: flex;">
-                                <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none;">
-                                    <i>Information about the group</i>
+                                <li class="list-group-item resMargin" style="background-color: white; border:none;">
+                                    Information about the group
                                 </li>
                             </ul>
                             <div class="progress Progress-border ProgressBarSize">
@@ -40,8 +28,8 @@
                         </div>
                         <div class="col-sm-4 col-xs-12 padding-0 ">
                             <ul class="list-group ProgressBarItem" style="display: flex;">
-                                <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none; ">
-                                    <i>Select the destination</i>
+                                <li class="list-group-item resMargin" style="background-color:whitw; border:none; ">
+                                    Select the destination
                                 </li>
                             </ul>
                             <div class="progress Progress-border ProgressBarSize">
@@ -52,8 +40,8 @@
                         </div>
                         <div class="col-sm-4 col-xs-12 padding-0 ">
                             <ul class="list-group ProgressBarItem" style="display: flex;">
-                                <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none;">
-                                    <i>Submit for a quote</i>
+                                <li class="list-group-item resMargin" style="background-color: white; border:none;">
+                                   Submit for a quote
                                 </li>
                             </ul>
                             <div class="progress Progress-border ProgressBarSize">
@@ -64,25 +52,41 @@
                         </div>
                     </div>
                 </div>
-
-
-                
             </div>
         </div>
         <br>
         <br>
         <div class="row">
-            <div class="col-md-9 col-xs-9">
-                <div class="mapouter"><div class="gmap_canvas"><iframe width="796" height="420" id="gmap_canvas" src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:420px;width:796px;}</style><a href="https://www.embedgooglemap.net">google maps html code</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:420px;width:796px;}</style></div></div>
-                <div class="row" style="margin: 30px; font-weight:600">
-                    <div class="col-md-3">Dhaka</div>
-                    <div class="col-md-3">Dhaka</div>
-                    <div class="col-md-3">Dhaka</div>
-                    <div class="col-md-3">Dhaka</div>
-                    
+            <div class="col-md-9">
+                <div class="mapouter" >
+                    <div class="gmap_canvas"><iframe width="796" height="420" id="gmap_canvas"
+                            src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0"
+                            scrolling="no" marginheight="0" marginwidth="0"></iframe><br>
+                        <style>
+                            .mapouter {
+                                position: relative;
+                            
+                            }
+                        </style>
+                        <style>
+                            .gmap_canvas {
+                                overflow: hidden;
+                                background: none !important;
+                                height: 80%;
+                                width: 100%;
+                            }
+                        </style>
+                    </div>
                 </div>
-                <div class="row" style="margin: 30px; font-weight:600">
-                    
+                <br>
+                <div class="row" style="margin: 10px; font-weight:600">
+                    <div class="col-md-3">Dhaka</div>
+                    <div class="col-md-3">Dhaka</div>
+                    <div class="col-md-3">Dhaka</div>
+                    <div class="col-md-3">Dhaka</div>
+                </div>
+                <br>
+                <div class="row" style="margin: 10px; font-weight:600">
                     <div class="col-md-3">Dhaka</div>
                     <div class="col-md-3">Dhaka</div>
                     <div class="col-md-3">Dhaka</div>
@@ -90,29 +94,26 @@
                 </div>
                 <div class="row">
                     <center style="font-weight:600">
-                        You can add one of your Tour here  <span style="color:Blue"> Activities</span>
+                        You can add one of your Tour here <span style="color:Blue"> Activities</span>
                     </center>
                 </div>
-                <div class="row" style="margin-top: 40px; margin-bottom:30px"> 
+                <div class="row" style="margin-top: 40px; margin-bottom:30px">
                     <center>
-                        
-                            <a href="{{ url('/ThirdStep') }}">
-                                <button class="package-view">
-                                    Send a quote
-                                </button>
-                            </a>
-                        
-                        
+                        <a href="{{ url('/ThirdStep') }}">
+                            <button class="package-view">
+                                Send a quote
+                            </button>
+                        </a>
                     </center>
                 </div>
             </div>
-            <div class="col-md-3 col-xs-3 formReqSec">
+            <div class="col-md-3 formReqSec">
                 <div class="row" style="margin-bottom: 10px">
                     <span style="margin-right: 10px; font-size:1.7rem">
                         <i class="fa-solid fa-user"></i>
                     </span>
                     <span style="color: black">
-                        Bimasha Zaman
+                        {{ $creator->name }}
                     </span>
                 </div>
                 <div class="row" style="margin-bottom: 10px">
@@ -120,28 +121,69 @@
                         <i class="fa-solid fa-calendar"></i>
                     </span>
                     <span style="color: black">
-                        12/12/2019
+                        {{ $creator->start_date }}
                     </span>
                 </div>
+               
                 <div class="row" style="margin-bottom: 10px">
                     <span style="margin-right: 10px; font-size:1.7rem">
                         <i class="fa-solid fa-car"></i>
                     </span>
                     <span style="color: black">
-                        By Car
+                        {{ $creator->car }} 
+                        {{ $creator->motorcycle }}
+                        {{ $creator->bike }}
+                        {{ $creator->hiking }}
                     </span>
                 </div>
+              
+               
+                {{-- <div class="row" style="margin-bottom: 10px">
+                    <span style="margin-right: 10px; font-size:1.7rem">
+                        <i class="fa-solid fa-motorcycle"></i>
+                    </span>
+                    <span style="color: black">
+                        {{ $creator->motorcycle }}
+                    </span>
+                </div>
+
+                <div class="row" style="margin-bottom: 10px">
+                    <span style="margin-right: 10px; font-size:1.7rem">
+                        <i class="fa-solid fa-person-biking"></i>
+                    </span>
+                    <span style="color: black">
+                        {{ $creator->bike }}
+                    </span>
+                </div>
+                <div class="row" style="margin-bottom: 10px">
+                    <span style="margin-right: 10px; font-size:1.7rem">
+                        <i class="fa-solid fa-person-hiking"></i>
+                    </span>
+                    <span style="color: black">
+                        {{ $creator->hiking }}
+                    </span>
+                </div> --}}
                 <div class="row" style="margin-bottom: 10px">
                     <span style="margin-right: 10px; font-size:1.7rem">
                         <i class="fa-solid fa-location-dot"></i>
                     </span>
                     <span style="color: black">
-                        Dhaka, Bangladesh
+                        {{ $creator->creator_destinations_id }}
                     </span>
                 </div>
+
+                <div class="row" style="margin-bottom: 10px">
+                    <span style="margin-right: 10px; font-size:1.7rem">
+                        <i class="fa-solid fa-location-dot"></i>
+                    </span>
+                    <span style="color: black">
+                        {{ $creator->meals }}
+                    </span>
+                </div>
+
+                <img src="{{ asset('images/track.PNG') }}" style="height: 32%">
 
             </div>
         </div>
     </div>
-
 @endsection

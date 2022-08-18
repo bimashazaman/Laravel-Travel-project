@@ -10,4 +10,9 @@ class CreatorDestination extends Model
     use HasFactory;
 
 protected $guarded = [];
+
+    public function tourCreators()
+    {
+        return $this->hasMany(TourCreator::class);
+    }
 }

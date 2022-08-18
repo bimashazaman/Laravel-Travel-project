@@ -10,7 +10,7 @@
 </div>
 @endif
     <div class="row">
-        <div class="col-md-12 d-flex">
+        <div class="col-md-12 d-flex overflow-scroll">
 
             <div class="card card-table flex-fill">
                 <div class="card-header">

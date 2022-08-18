@@ -47,10 +47,7 @@
                         </div>
                     </div>
                 </div>
-
             </div>
-
-
 
             <div class="row">
                 <div class="col-md-12 col-xs-12">
@@ -61,7 +58,8 @@
                         <img src="{{ asset('images/ReqTour1.png') }}" alt="">
                     </div>
                     <div class="col-md-7 col-xs-12">
-                        <form>
+                        <form action="{{ url('stepOneStore') }}" method="POST" enctype="multipart/form-data">
+                            {{ csrf_field() }}
                             <fieldset>
                                 <div class="col-md-12 col-xs-12">
                                     <input class="reqTourInput" type="text" placeholder="{{ __('Name') }}"
@@ -74,21 +72,22 @@
                                 </div>
                                 <div class="col-md-12 col-xs-12">
 
-                                    <Select id="Starting Destination" style="width:100%" class="reqTourInput" pla>
-                                        <option>Destination</option>
-                                        <option>Mercedes</option>
-                                        <option>Audi</option>
+                                    <Select id="Starting Destination" style="width:100%" class="reqTourInput"
+                                        name="creator_destinations_id">
+                                        @foreach ($destination as $d)
+                                            <option value="{{ $d->name }}">{{ $d->name }}</option>
+                                        @endforeach
                                     </Select>
                                 </div>
                                 <div class="col-md-12 col-xs-12">
 
                                     <div class="col-md-6 col-xs-12">
-                                        <span><label for=""
-                                                style="float: left; background-color: white; width: 100%;"
+                                        <span><label style="float: left; background-color: white; width: 100%;"
                                                 class="reqTourInput">
                                                 <input type="number" style="border:none; outline:none; width: 100%"
-                                                    placeholder="{{ __('Number Of Adults') }}">
-                                            </label></span>
+                                                    placeholder="{{ __('Number Of Adults') }}" name="adult">
+                                            </label>
+                                        </span>
 
                                     </div>
                                     <div class="col-md-6 col-xs-12" style="">
@@ -96,7 +95,7 @@
                                                 style="float: left; background-color: white; width: 100%;"
                                                 class="reqTourInput">
                                                 <input type="number" style="border:none; outline:none; width: 100%"
-                                                    placeholder="{{ __('Number Of Childs') }}">
+                                                    placeholder="{{ __('Number Of Childs') }}" name="child">
                                             </label>
                                         </span>
                                     </div>
@@ -104,40 +103,46 @@
                                 <div class="col-md-12 col-xs-12" style="margin: 16px">
 
                                     <div class="col">
-                                        <div class="ReqBox" style="width: 130px; float:left;"><i
-                                                class="fa-solid fa-car"></i>
+                                        <div class="ReqBox" id="box" style="width: 130px; float:left;"
+                                            onclick="onClickSelect()"><i class="fa-solid fa-car"></i>
                                             <div>
-                                                {{-- {{ __('Car') }} --}}
-                                                <input type="checkbox" checked>
+                                                {{ __('Car') }}
+                                               <span>
+                                                <input value="By Car" style="display: none" type="checkbox"
+                                                id="myCheck" name="car">
+                                               </span>
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <div class="ReqBox" style="width: 130px; float:left;"><i
-                                                class="fa-solid fa-motorcycle"></i> 
-                                                {{-- {{ __('Motorcycle') }} --}}
-                                          <div>
-                                              <input type="checkbox">
-                                          </div>
+                                        <div class="ReqBox" id="motor" style="width: 130px; float:left;"
+                                            onclick="onClickSelectmotorcycle()"><i class="fa-solid fa-motorcycle"></i>
+
+                                            {{ __('Motorcycle') }}
+                                            <span> <input value="By Motorcycle" style="display: none" type="checkbox"
+                                                    id="bla" name="motorcycle"></span>
+
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <div class="ReqBox" style="width: 130px; float:left;"><i
-                                                class="fa-solid fa-person-biking"></i>
+                                        <div class="ReqBox" id="nos" style="width: 130px; float:left;"
+                                            onclick="onClickSelectBike()"><i class="fa-solid fa-person-biking"></i>
                                             <div>
-                                                {{-- {{ __('Bike') }} --}}
-                                              <div>
-                                                  <input type="checkbox">
-                                              </div>
+                                                {{ __('Bike') }}
+
+                                                <input value="By Bike" style="display: none" type="checkbox"
+                                                    id="jj" name="bike">
+
                                             </div>
                                         </div>
                                     </div>
                                     <div class="col">
-                                        <div class="ReqBox" style="width: 130px; float:left;"> <i
-                                                class="fa-solid fa-person-hiking"></i>
+                                        <div class="ReqBox" id="yyy" style="width: 130px; float:left;"
+                                            onclick="onclickHiking()"> <i class="fa-solid fa-person-hiking"></i>
                                             <div>
-                                                {{-- {{ __('Hiking') }} --}}
-                                                <input type="checkbox">
+                                                {{ __('Hiking') }}
+                                                <input value="Hiking" style="display: none" type="checkbox"
+                                                    id="zzz" name="hiking">
                                             </div>
                                         </div>
                                     </div>
@@ -147,26 +152,23 @@
 
 
                                 <div class="col-md-12 col-xs-12">
-
-                                    <Select id="Starting Destination" style="width:100%" class="reqTourInput" pla>
-                                        <option>--Select Additional--</option>
-                                        <option>
+                                    <Select id="Starting Destination" style="width:100%" class="reqTourInput"
+                                        name="meals">
+                                        <option value="No Meal">--Select Additional--</option>
+                                        <option value="With Meals">
                                             Meals (15$ per pax)
                                         </option>
-
                                     </Select>
                                 </div>
                                 <div class="col-xs-12 col-md-12">
-                                    <button class="package-view" style="margin: 20px">
+                                    <button class="package-view" style="margin: 20px" type="submit">
                                         <a style="text-decoration: none; color:black; font-weight:600; padding:5px "
-                                            href="{{ url('/secondStep') }}">
+                                            {{-- href="{{ url('/secondStep') }}" --}}>
                                             {{ __('Create trip') }}
                                         </a>
-
                                     </button>
                                 </div>
                             </fieldset>
-
                         </form>
                     </div>
                 </div>
@@ -177,4 +179,63 @@
     $(function() {
         $("#datepicker").datepicker();
     });
+
+    function onClickSelect() {
+        var checkBox = document.getElementById("myCheck");
+
+        document.querySelector('#box').style.backgroundColor = '#FAEFD7';
+        if (checkBox.checked == true) {
+            checkBox.checked = false;
+            document.querySelector('#box').style.backgroundColor = 'white';
+
+
+        } else {
+            checkBox.checked = true;
+        }
+    }
+
+    function onClickSelectmotorcycle() {
+        var checkBox = document.getElementById("bla");
+        document.querySelector('#motor').style.backgroundColor = '#FAEFD7';
+
+        if (checkBox.checked == true) {
+            checkBox.checked = false;
+
+            document.querySelector('#motor').style.backgroundColor = 'white';
+
+        } else {
+            checkBox.checked = true;
+        }
+
+    }
+
+    function onClickSelectBike() {
+        var checkBox = document.getElementById("jj");
+        document.querySelector('#nos').style.backgroundColor = '#FAEFD7';
+
+        if (checkBox.checked == true) {
+            checkBox.checked = false;
+
+            document.querySelector('#nos').style.backgroundColor = 'white';
+
+        } else {
+            checkBox.checked = true;
+        }
+
+    }
+
+    function onclickHiking() {
+        var checkBox = document.getElementById("zzz");
+        document.querySelector('#yyy').style.backgroundColor = '#FAEFD7';
+
+        if (checkBox.checked == true) {
+            checkBox.checked = false;
+
+            document.querySelector('#yyy').style.backgroundColor = 'white';
+
+        } else {
+            checkBox.checked = true;
+        }
+
+    }
 </script>

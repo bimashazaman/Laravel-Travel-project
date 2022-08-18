@@ -5,6 +5,7 @@ use App\Http\Controllers\AccessioriesCmsController;
 use App\Http\Controllers\AccessioriesController;
 use App\Http\Controllers\ActiveTour;
 use App\Http\Controllers\AdminController;
+use App\Http\Controllers\AdminDestinationController;
 use App\Http\Controllers\BlogCmsController;
 use App\Http\Controllers\BookATourController;
 use App\Http\Controllers\BookATourDepartureController;
@@ -41,12 +42,15 @@ use App\Http\Controllers\ThingsToDoController;
 use App\Http\Controllers\ThingsToSeeController;
 use App\Http\Controllers\TourCmsController;
 use App\Http\Controllers\TourController;
+use App\Http\Controllers\TourCreatorController;
 use App\Http\Controllers\TourEventController;
 use App\Http\Controllers\TravelBlogController;
 use App\Http\Controllers\UsefulInfoController;
 use App\Http\Controllers\VacancyCmsController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\WaysToBookController;
+use App\Models\AdminDestination;
+use App\Models\TourCreator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
 use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
@@ -124,6 +128,17 @@ Route::delete('/vacancyCms/{id}', [VacancyCmsController::class, 'destroy']);
 Route::get('/reviewCms/{id}/edit', [ReviewCmsController::class, 'edit']);
 Route::put('/reviewCms/{id}', [ReviewCmsController::class, 'update']);
 Route::delete('/reviewCms/{id}', [ReviewCmsController::class, 'destroy']);
+
+
+
+//=========TourCreator Destination=========
+Route::get('/admin/destination', [AdminDestinationController::class, 'index']);
+Route::post('/storeYerevan', [AdminDestinationController::class, 'storeYerevan']);
+Route::post('/storeDilijans', [AdminDestinationController::class, 'storeDilijans']);
+Route::post('/storeGyumri', [AdminDestinationController::class, 'storeGyumris']);
+Route::post('/storeJermuks', [AdminDestinationController::class, 'storeJermuks']);
+Route::post('/storeStepanakerts', [AdminDestinationController::class, 'storeStepanakerts']);
+Route::post('/storeTbilisis', [AdminDestinationController::class, 'storeTbilisis']);
 
 
 //============ Add facility page==============
@@ -495,17 +510,6 @@ Route::get('/MT/{locale?}', [CarAirportController::class, 'getAllCarAirport']);
 //======frontend send step route ==========
 
 
-Route::get('/secondStep', function () {
-    return view('partials.secondStepReq');
-});
-
-Route::get('/ThirdStep', function () {
-    return view('partials.SendAMsg');
-});
-
-Route::get('/TourFrontPage', function () {
-    return view('Frontend.Tours.Tour');
-});
 
 Route::get('/Rv', function () {
     return view('Frontend.BasicTours.RequestABasicTour');
@@ -594,6 +598,19 @@ Route::post('/BookMice/store/{id}', [BookingMiceController::class, 'store']);
 Route::post('/contact/store', [ContactFormController::class, 'store']);
 Route::get('/contact/{locale?}', [ContactFormController::class, 'index']);
 
+// three step
+
+Route::post('stepOneStore', [TourCreatorController::class, 'storeOne']);
+
+Route::get('/secondStep', [TourCreatorController::class, 'createTwo'])->name('tour.createTwo');
+
+Route::get('/ThirdStep', function () {
+    return view('partials.SendAMsg');
+});
+
+Route::get('/TourFrontPage', function () {
+    return view('Frontend.Tours.Tour');
+});
 
 
 
