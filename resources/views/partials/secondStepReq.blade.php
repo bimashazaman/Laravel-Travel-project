@@ -85,7 +85,44 @@
                 @if ($creator->creator_destinations_id == "Yerevan"  && $creator->car)
                 @foreach ($yerevan as $y)
                 
-                <div class="row"  style="font-weight:600; display:flex">
+                <div class="row"  style="font-weight:600; display:flex; padding:15px" id="oneSel" onclick="onClickSelectRowCheckBox()">
+                    <div class="col-md-2">
+                        {{ $y->name }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameTwo }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameThree }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFour }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameFive }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSix }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameSeven }}
+                    </div>
+                    <div class="col-md-2">
+                        {{ $y->nameEight }}
+                    </div>
+                   <input type="checkbox">
+                </div>
+                
+                <br>               
+                @endforeach
+                @endif
+
+
+                @if ($creator->creator_destinations_id == "Dilijan"  && $creator->car)
+                @foreach ($dilijan as $y)
+                
+                <div class="row"  style="font-weight:600; display:flex; padding:15px">
+                    <div id="twoSel" onclick="onClickSelectTwo()">
                     <div class="col-md-2">
                         {{ $y->name }}
                     </div>
@@ -111,40 +148,6 @@
                         {{ $y->nameEight }}
                     </div>
                 </div>
-                
-                <br>               
-                @endforeach
-                @endif
-
-
-                @if ($creator->creator_destinations_id == "Dilijan"  && $creator->car)
-                @foreach ($dilijan as $y)
-                
-                <div class="row"  style="font-weight:600; display:flex">
-                    <div class="col-md-2">
-                        {{ $y->name }}
-                    </div>
-                    <div class="col-md-2">
-                        {{ $y->nameTwo }}
-                    </div>
-                    <div class="col-md-2">
-                        {{ $y->nameThree }}
-                    </div>
-                    <div class="col-md-2">
-                        {{ $y->nameFour }}
-                    </div>
-                    <div class="col-md-2">
-                        {{ $y->nameFive }}
-                    </div>
-                    <div class="col-md-2">
-                        {{ $y->nameSix }}
-                    </div>
-                    <div class="col-md-2">
-                        {{ $y->nameSeven }}
-                    </div>
-                    <div class="col-md-2">
-                        {{ $y->nameEight }}
-                    </div>
                 </div>
                 
                 <br>               
@@ -295,11 +298,14 @@
                 </div>
                 <div class="row" style="margin-top: 40px; margin-bottom:30px">
                     <center>
-                        <a href="{{ url('/ThirdStep') }}">
-                            <button class="package-view">
+                        <form action="/storeTwo" method="POST" enctype="multipart/form-data">
+                            {{ csrf_field() }}
+                            <button class="package-view" type="submit">
                                 Send a quote
                             </button>
-                        </a>
+                        </form>
+                        
+                        
                     </center>
                 </div>
             </div>
@@ -382,4 +388,7 @@
             </div>
         </div>
     </div>
+    <script>
+        
+    </script>
 @endsection

@@ -1,19 +1,8 @@
 @extends('layouts.master')
 @section('content')
-    <br>
-    <br><br> <br> <br> <br><br><br>
-    <br> <br> <br><br><br>
-    <br><br> <br> <br>
-
-
-    {{-- <div class="parentReqSecond">
-    <div class="div1ReqSecond"> 
-        <div class="mapouter"><div class="gmap_canvas"><iframe width="796" height="420" id="gmap_canvas" src="https://maps.google.com/maps?q=&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe><a href="https://fmovies-online.net">fmovies</a><br><style>.mapouter{position:relative;text-align:right;height:420px;width:796px;}</style><a href="https://www.embedgooglemap.net">google maps html code</a><style>.gmap_canvas {overflow:hidden;background:none!important;height:420px;width:796px;}</style></div></div>
-    </div>
-    <div class="div2ReqSecond">
-        
-    </div>
-    </div> --}}
+<div class="fullBanner">
+    @include('partials.DefaultBanner')
+</div>
 
     <div class="container">
         <div class="row">
@@ -22,12 +11,22 @@
                     <h2 style="text-align: center">
                         Choose one of our tours or create your own trip!
                     </h2>
+                    @if(session('success'))
+<div class="alert alert-success">
+    {{session('msg')}}
+</div>
+@elseif(session('fail'))
+<div class="alert alert-danger">
+    {{session('msg')}}
+</div>
+@endif
+{{-- {{ dd($creator) }} --}}
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-xs-12">
                         <div class="col-sm-4 col-xs-12 padding-0 ">
                             <ul class="list-group ProgressBarItem" style="display: flex;">
-                                <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none;">
+                                <li class="list-group-item resMargin" style="background-color:whitw; border:none;">
                                     <i>Information about the group</i>
                                 </li>
                             </ul>
@@ -39,7 +38,7 @@
                         </div>
                         <div class="col-sm-4 col-xs-12 padding-0 ">
                             <ul class="list-group ProgressBarItem" style="display: flex;">
-                                <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none; ">
+                                <li class="list-group-item resMargin" style="background-color:white; border:none; ">
                                     <i>Select the destination</i>
                                 </li>
                             </ul>
@@ -51,7 +50,7 @@
                         </div>
                         <div class="col-sm-4 col-xs-12 padding-0 ">
                             <ul class="list-group ProgressBarItem" style="display: flex;">
-                                <li class="list-group-item resMargin" style="background-color:#F7F6F4; border:none;">
+                                <li class="list-group-item resMargin" style="background-color:white; border:none;">
                                     <i>Submit for a quote</i>
                                 </li>
                             </ul>
@@ -65,46 +64,38 @@
                 </div>
                 <div class="row">
                     <div class="RentForm">
-
                         <h2>
                             Send us a message
                         </h2>
                         <br>
-                        <form>
-
+                        
+                        <form action="/storeThree" method="POST" enctype="multipart/form-data">
+                            {{ csrf_field() }}
                             <div class="form-group">
 
-                                <input type="text" class="form-control" id="" placeholder="First Name*">
+                                <input type="text" class="form-control" value="" placeholder="name" name="name">
                             </div>
                             <div class="form-group">
 
-                                <input type="text" class="form-control" id="inputAddress2" placeholder="Last Name*">
+                                <input type="text" class="form-control" id="inputAddress2" name="email" placeholder="Email Address*">
                             </div>
                             <div class="form-group">
 
-                                <input type="text" class="form-control" id="inputAddress" placeholder="Email Address*">
+                                <input type="text" class="form-control" id="inputAddress" name="phone" placeholder="Telephone*">
                             </div>
                             <div class="form-group">
 
-                                <input type="text" class="form-control" id="inputAddress2" placeholder="Telephone*">
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Your Country*" name="country">
                             </div>
-                            <div class="form-row">
-                                <div class="form-group col-md-6">
-
-                                    <input type="text" class="form-control" id="inputEmail4" placeholder="Start Date*">
-                                </div>
-                                <div class="form-group col-md-6">
-
-                                    <input type="text" class="form-control" id="inputPassword4" placeholder="End Date*">
-                                </div>
+                            
+                           
+                            <div class="form-group">
+                                <textarea class="form-control" id="exampleFormControlTextarea1" rows="4" placeholder="Your Message*" name="info"></textarea>
                             </div>
+
                             <div class="form-group">
 
-                                <input type="text" class="form-control" id="inputAddress2" placeholder="Car Type*">
-                            </div>
-                            <div class="form-group">
-
-                                <input type="text" class="form-control" id="inputAddress2" placeholder="Messege">
+                                <input type="text" class="form-control" id="inputAddress2" placeholder="Discount coupon(optional)" name="coupon">
                             </div>
 
                             <button type="submit" class="package-view">Submit</button>

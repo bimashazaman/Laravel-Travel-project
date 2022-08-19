@@ -63,17 +63,17 @@
                             <fieldset>
                                 <div class="col-md-12 col-xs-12">
                                     <input class="reqTourInput" type="text" placeholder="{{ __('Name') }}"
-                                        style="width:100%" name="name">
+                                        style="width:100%" name="name" required>
                                 </div>
                                 <div class="col-md-12 col-xs-12">
                                     <input class="reqTourInput" type="text" id="datepicker"
                                         placeholder="{{ __('Start Date') }}" name="start_date" style="width:100%"
-                                        onfocus="(this.type='date')">
+                                        onfocus="(this.type='date')" required>
                                 </div>
                                 <div class="col-md-12 col-xs-12">
 
                                     <Select id="Starting Destination" style="width:100%" class="reqTourInput"
-                                        name="creator_destinations_id">
+                                        name="creator_destinations_id" required>
                                         @foreach ($destination as $d)
                                             <option value="{{ $d->name }}">{{ $d->name }}</option>
                                         @endforeach
@@ -85,7 +85,7 @@
                                         <span><label style="float: left; background-color: white; width: 100%;"
                                                 class="reqTourInput">
                                                 <input type="number" style="border:none; outline:none; width: 100%"
-                                                    placeholder="{{ __('Number Of Adults') }}" name="adult">
+                                                    placeholder="{{ __('Number Of Adults') }}" name="adult" required>
                                             </label>
                                         </span>
 
@@ -95,7 +95,7 @@
                                                 style="float: left; background-color: white; width: 100%;"
                                                 class="reqTourInput">
                                                 <input type="number" style="border:none; outline:none; width: 100%"
-                                                    placeholder="{{ __('Number Of Childs') }}" name="child">
+                                                    placeholder="{{ __('Number Of Childs') }}" name="child" required>
                                             </label>
                                         </span>
                                     </div>

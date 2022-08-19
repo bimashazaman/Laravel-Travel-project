@@ -9,23 +9,16 @@ use App\Models\FromJermuk;
 use App\Models\FromStepanakert;
 use App\Models\FromTbilisi;
 use App\Models\FromYerevan;
+use App\Models\thirdStep;
 use App\Models\TourCreator;
 use Illuminate\Http\Request;
 
 class TourCreatorController extends Controller
 {
-    public function index()
-    {
-        
-        $destination = CreatorDestination::all();
-        return view('partials.TourPackages', compact('destination'));
-    }
+   
 
 
-    // public function createOne()
-    // {
-
-    // }
+    
 
 
     public function storeOne(Request $request)
@@ -43,16 +36,19 @@ class TourCreatorController extends Controller
             'creator_destinations_id' => 'required',
         ]);
 
-        if(empty($request->session()->get('destination'))) {
+
+
+        if (empty($request->session()->get('destination'))) {
             $creator = new TourCreator();
             $creator->fill($validatedData);
             $request->session()->put('creator', $creator);
-        }
-        else {
+        } else {
             $creator = $request->session()->get('creator');
             $creator->fill($validatedData);
             $request->session()->put('creator', $creator);
         }
+
+
         return redirect()->route('tour.createTwo');
     }
 
@@ -60,7 +56,7 @@ class TourCreatorController extends Controller
     {
 
         $creator = $request->session()->get('creator');
-        
+
         $yerevan =  FromYerevan::all();
         $dilijan =  FromDilijan::all();
         $gyumri =  FromGyumri::all();
@@ -68,21 +64,76 @@ class TourCreatorController extends Controller
         $stepanakert =  FromStepanakert::all();
         $tbilisi =  FromTbilisi::all();
 
-        return view('partials.secondStepReq', compact('creator', 'yerevan', 'dilijan', 'gyumri', 'jermuk','stepanakert','tbilisi'));
+        return view('partials.secondStepReq', compact('creator', 'yerevan', 'dilijan', 'gyumri', 'jermuk', 'stepanakert', 'tbilisi'));
     }
 
-    public function storeTwo()
+    public function storeTwo(Request $request)
     {
-
+        $creator = $request->session()->get('creator');
+        // $creator->save();
+        return redirect()->route('tour.createThree');
     }
 
-    public function createThree()
+    public function createThree(Request $request)
     {
-
+        
+        
+        $creator = $request->session()->get('creator');
+        return view('partials.SendAMsg', compact('creator'));
     }
 
-    public function storeThree()
+    public function storeThree(Request $request)
     {
+        $validatedData = $request->validate([
+            'name' => 'required',
+            'email' => 'required',
+            'phone' => 'required',
+            'country' => 'required',
+            'info' => '',
+            'coupon' => '',
+        ]);
+
+        //save in database
+        $creator = $request->session()->get('creator');
+        $creator->fill($validatedData);
+        $creator->save();
+        $request->session()->forget('creator');
+        
+        return redirect()
+                ->back()
+                ->with("msg", "Your tour has been sent to the admin. We will contact you soon.")
+                ->with("success", true);
+    
+
+
+        // try {
+        //     $creator = $request->session()->get('creator');
+        //     $creator = new TourCreator();
+        //     $creator->fill($validatedData);
+        //     $creator->save();
+        //     $request->session()->forget('creator');
+        //     return redirect()
+        //         ->back()
+        //         ->with("msg", "Your tour has been sent to the admin. We will contact you soon.")
+        //         ->with("success", true);
+        // } catch (\Exception $e) {
+        //     return redirect()
+        //         ->back()
+        //         ->with("msg", "Something went wrong. Please try again.")
+        //         ->with("success", false);
+        // }
+
+        // $creator = $request->session()->get('creator');
+        // $creator->fill($validatedData);
+
+        // $creator->save();
+
+        // $request->session()->forget('creator');
+
+
+
+
+
 
     }
 }

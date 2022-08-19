@@ -600,13 +600,17 @@ Route::get('/contact/{locale?}', [ContactFormController::class, 'index']);
 
 // three step
 
-Route::post('stepOneStore', [TourCreatorController::class, 'storeOne']);
+Route::post('/stepOneStore', [TourCreatorController::class, 'storeOne']);
 
 Route::get('/secondStep', [TourCreatorController::class, 'createTwo'])->name('tour.createTwo');
 
-Route::get('/ThirdStep', function () {
-    return view('partials.SendAMsg');
-});
+Route::post('/storeTwo', [TourCreatorController::class, 'storeTwo']);
+
+Route::get('/ThirdStep', [TourCreatorController::class, 'createThree'])->name('tour.createThree');
+
+Route::post('/storeThree', [TourCreatorController::class, 'storeThree']);
+
+
 
 Route::get('/TourFrontPage', function () {
     return view('Frontend.Tours.Tour');
