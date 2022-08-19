@@ -88,7 +88,7 @@ class BookATourDepartureController extends Controller
         ), function( $data) use ($request){
             $tour = Tour::find($request->id);
              $data->from($request->email);
-             $data->to('Sales.2expedition@gmail.com')->subject('Booking Tour for Guaranteed Departures ' . $tour->name);
+             $data->to('info@2expedition.com')->subject('Booking Tour for Guaranteed Departures ' . $tour->name);
         });
        
 

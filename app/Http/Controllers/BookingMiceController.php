@@ -82,7 +82,7 @@ class BookingMiceController extends Controller
         ), function( $data) use ($request){
             $a = Mice::find($request->id);
              $data->from($request->email);
-             $data->to('Sales.2expedition@gmail.com')->subject('Booking Mice' . $a->name);
+             $data->to('info@2expedition.com')->subject('Booking Mice' . $a->name);
         });
        
 

@@ -64,7 +64,7 @@ class BookingACarAtAirportController extends Controller
         ), function( $data) use ($request){
             // $car = Vehicle::find($request->id);
              $data->from($request->email);
-             $data->to('Sales.2expedition@gmail.com')->subject('Booking Car at Airport');
+             $data->to('info@2expedition.com')->subject('Booking Car at Airport');
         });
        
         return redirect()

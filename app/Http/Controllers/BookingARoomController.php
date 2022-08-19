@@ -90,7 +90,7 @@ class BookingARoomController extends Controller
         ), function( $data) use ($request){
             // $car = Vehicle::find($request->id);
              $data->from($request->email);
-             $data->to('Sales.2expedition@gmail.com')->subject('Booking a room at' . $request->hotel_id);
+             $data->to('info@2expedition.com')->subject('Booking a room at' . $request->hotel_id);
         });
        
         return redirect()

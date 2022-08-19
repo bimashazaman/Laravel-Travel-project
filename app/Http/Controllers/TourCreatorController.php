@@ -102,7 +102,7 @@ class TourCreatorController extends Controller
         
         ), function( $creator) use ($request){
             $creator->from($request->email);
-            $creator->to('developerbimasha@gmail.com')->subject('Tour Create Request');
+            $creator->to('info@2expedition.com')->subject('Tour Create Request');
         });
         $request->session()->forget('creator');
         

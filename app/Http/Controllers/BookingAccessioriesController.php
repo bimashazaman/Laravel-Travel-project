@@ -80,7 +80,7 @@ class BookingAccessioriesController extends Controller
         ), function( $data) use ($request){
             $a = Accessiories::find($request->id);
              $data->from($request->email);
-             $data->to('Sales.2expedition@gmail.com')->subject('Booking Tour Accessiories for ' . $a->name);
+             $data->to('info@2expedition.com')->subject('Booking Tour Accessiories for ' . $a->name);
         });
        
 
