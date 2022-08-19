@@ -3,15 +3,7 @@
 <div class="fullBanner">
     @include('partials.DefaultBanner')
 </div>
-
-    <div class="container">
-        <div class="row">
-            <div class="col-md-12">
-                <div class="requestTour__title">
-                    <h2 style="text-align: center">
-                        Choose one of our tours or create your own trip!
-                    </h2>
-                    @if(session('success'))
+@if(session('success'))
 <div class="alert alert-success">
     {{session('msg')}}
 </div>
@@ -20,7 +12,15 @@
     {{session('msg')}}
 </div>
 @endif
-{{-- {{ dd($creator) }} --}}
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="requestTour__title">
+                    <h2 style="text-align: center">
+                        Choose one of our tours or create your own trip!
+                    </h2>
+                
+                {{-- {{ dd($creator) }} --}}
                 </div>
                 <div class="row">
                     <div class="col-sm-12 col-xs-12">
