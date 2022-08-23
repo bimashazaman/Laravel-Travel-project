@@ -19,6 +19,7 @@ class CreateFromTbilisisTable extends Migration
             $table->string('nameSix')->nullable();
             $table->string('nameSeven')->nullable();
             $table->string('nameEight')->nullable();
+            $table->string('type')->default('car');
             $table->timestamps();
         });
     }

@@ -54,11 +54,18 @@
                             </div>
                         </div>
                         <div style="float: right">
+                            <select name="type" class="shadow" id="" style="padding: 10px; border:none">
+                                <option value="car">Car</option>
+                                <option value="motorcycle">Motorcycle</option>
+                                <option value="bike">Bike</option>
+                                <option value="hiking">Hiking</option>
+                            </select>
                             <button class="btn btn-info"
                                 style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; color:white; width:120px"
                                 type="submit">Create</button>
                         </div>
                     </form>
+                    <br>
                     <br>
                     <br>
 
@@ -92,10 +99,7 @@
                         <br>
                     @endforeach
 
-                    {{-- <li>
-                                {{ $y->name }}
-                            </li>
-                        @endforeach --}}
+                   
                 </div>
             </div>
         </div>
@@ -147,7 +151,15 @@
                             </div>
                         </div>
 
-                        <div style="float: right">
+                        <div style="float: right" style="display: flex">
+
+                            <select name="type" class="shadow" id="" style="padding: 10px; border:none">
+                                <option value="car">Car</option>
+                                <option value="motorcycle">Motorcycle</option>
+                                <option value="bike">Bike</option>
+                                <option value="hiking">Hiking</option>
+                            </select>
+
                             <button class="btn btn-info"
                                 style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; color:white; width:120px"
                                 type="submit">Create</button>
@@ -238,6 +250,12 @@
                         </div>
 
                         <div style="float: right">
+                            <select name="type" class="shadow" id="" style="padding: 10px; border:none">
+                                <option value="car">Car</option>
+                                <option value="motorcycle">Motorcycle</option>
+                                <option value="bike">Bike</option>
+                                <option value="hiking">Hiking</option>
+                            </select>
                             <button class="btn btn-info"
                                 style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; color:white; width:120px"
                                 type="submit">Create</button>
@@ -327,6 +345,12 @@
                             </div>
                         </div>
                         <div style="float: right">
+                            <select name="type" class="shadow" id="" style="padding: 10px; border:none">
+                                <option value="car">Car</option>
+                                <option value="motorcycle">Motorcycle</option>
+                                <option value="bike">Bike</option>
+                                <option value="hiking">Hiking</option>
+                            </select>
                             <button class="btn btn-info"
                                 style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; color:white; width:120px"
                                 type="submit">Create</button>
@@ -365,10 +389,7 @@
                         <br>
                     @endforeach
 
-                    {{-- <li>
-                                {{ $y->name }}
-                            </li>
-                        @endforeach --}}
+                   
 
                 </div>
             </div>
@@ -422,6 +443,12 @@
                             </div>
                         </div>
                         <div style="float: right">
+                            <select name="type" class="shadow" id="" style="padding: 10px; border:none">
+                                <option value="car">Car</option>
+                                <option value="motorcycle">Motorcycle</option>
+                                <option value="bike">Bike</option>
+                                <option value="hiking">Hiking</option>
+                            </select>
                             <button class="btn btn-info"
                                 style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; color:white; width:120px"
                                 type="submit">Create</button>
@@ -460,10 +487,7 @@
                         <br>
                     @endforeach
 
-                    {{-- <li>
-                                {{ $y->name }}
-                            </li>
-                        @endforeach --}}
+                   
 
                 </div>
             </div>
@@ -517,6 +541,12 @@
                             </div>
                         </div>
                         <div style="float: right">
+                            <select name="type" class="shadow" id="" style="padding: 10px; border:none">
+                                <option value="car">Car</option>
+                                <option value="motorcycle">Motorcycle</option>
+                                <option value="bike">Bike</option>
+                                <option value="hiking">Hiking</option>
+                            </select>
                             <button class="btn btn-info"
                                 style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; color:white; width:120px"
                                 type="submit">Create</button>
@@ -555,10 +585,7 @@
                         <br>
                     @endforeach
 
-                    {{-- <li>
-                                {{ $y->name }}
-                            </li>
-                        @endforeach --}}
+                   
 
                 </div>
             </div>

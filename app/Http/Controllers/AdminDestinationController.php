@@ -35,6 +35,7 @@ class AdminDestinationController extends Controller
             'nameSix' => '',
             'nameSeven' => '',
             'nameEight' => '',
+            'type' => '',
 
         ]);
 
@@ -48,6 +49,7 @@ class AdminDestinationController extends Controller
         $fromYerevan->nameSix = $request->nameSix;
         $fromYerevan->nameSeven = $request->nameSeven;
         $fromYerevan->nameEight = $request->nameEight;
+        $fromYerevan->type = $request->type;
         $fromYerevan->save();
 
         return redirect()
@@ -74,6 +76,7 @@ class AdminDestinationController extends Controller
             'nameSix' => '',
             'nameSeven' => '',
             'nameEight' => '',
+            'type' => '',
         ]);
         try {
         $FromDilija = new FromDilijan();
@@ -85,6 +88,7 @@ class AdminDestinationController extends Controller
         $FromDilija->nameSix = $request->nameSix;
         $FromDilija->nameSeven = $request->nameSeven;
         $FromDilija->nameEight = $request->nameEight;
+        $FromDilija->type = $request->type;
         $FromDilija->save();
 
         return redirect()
@@ -114,6 +118,7 @@ class AdminDestinationController extends Controller
             'nameSix' => '',
             'nameSeven' => '',
             'nameEight' => '',
+            'type' => '',
         ]);
         try {
         $FromGyumri = new FromGyumri();
@@ -125,6 +130,7 @@ class AdminDestinationController extends Controller
         $FromGyumri->nameSix = $request->nameSix;
         $FromGyumri->nameSeven = $request->nameSeven;
         $FromGyumri->nameEight = $request->nameEight;
+        $FromGyumri->type = $request->type;
         $FromGyumri->save();
         return redirect()
         ->back()
@@ -150,6 +156,7 @@ class AdminDestinationController extends Controller
             'nameSix' => '',
             'nameSeven' => '',
             'nameEight' => '',
+            'type' => '',
         ]);
         try {
         $FromJermuk = new FromJermuk();
@@ -161,6 +168,7 @@ class AdminDestinationController extends Controller
         $FromJermuk->nameSix = $request->nameSix;
         $FromJermuk->nameSeven = $request->nameSeven;
         $FromJermuk->nameEight = $request->nameEight;
+        $FromJermuk->type = $request->type;
         $FromJermuk->save();
         return redirect()
         ->back()
@@ -186,6 +194,7 @@ class AdminDestinationController extends Controller
             'nameSix' => '',
             'nameSeven' => '',
             'nameEight' => '',
+            'type' => '',
         ]);
         try {
         $FromStepanakert = new FromStepanakert();
@@ -197,6 +206,7 @@ class AdminDestinationController extends Controller
         $FromStepanakert->nameSix = $request->nameSix;
         $FromStepanakert->nameSeven = $request->nameSeven;
         $FromStepanakert->nameEight = $request->nameEight;
+        $FromStepanakert->type = $request->type;
         $FromStepanakert->save();
         return redirect()
         ->back()
@@ -222,6 +232,7 @@ class AdminDestinationController extends Controller
             'nameSix' => '',
             'nameSeven' => '',
             'nameEight' => '',
+            'type' => '',
         ]);
         try {
         $FromTbilisi = new FromTbilisi();
@@ -233,6 +244,7 @@ class AdminDestinationController extends Controller
         $FromTbilisi->nameSix = $request->nameSix;
         $FromTbilisi->nameSeven = $request->nameSeven;
         $FromTbilisi->nameEight = $request->nameEight;
+        $FromTbilisi->type = $request->type;
         $FromTbilisi->save();
         return redirect()
         ->back()

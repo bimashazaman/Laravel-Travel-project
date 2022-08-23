@@ -344,11 +344,6 @@ Route::put('/admin/usefulToKnow/update/{id}', [UsefulInfoController::class, 'upd
 Route::delete('/admin/usefulToKnow/delete/{id}', [UsefulInfoController::class, 'destroy']);
 
 
-
-
-
-
-
 //==========Armenia admin food=========
 Route::get('/admin/foods', [FoodArmeniaController::class, 'index']);
 Route::get('/admin/foods/create', [FoodArmeniaController::class, 'create']);
@@ -359,10 +354,7 @@ Route::put('/admin/foods/update/{id}', [FoodArmeniaController::class, 'update'])
 Route::delete('/admin/foods/delete/{id}', [FoodArmeniaController::class, 'destroy']);
 
 
-
-
 //===============reviews===============
-
 Route::get('/reviews/{locale?}', [ReviewController::class, 'index']);
 Route::get('/AddReview/{locale?}', [ReviewController::class, 'create']);
 Route::post('/review/store', [ReviewController::class, 'store']);

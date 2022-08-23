@@ -45,6 +45,7 @@ class FrontendController extends Controller
     {
         if (isset($locale) && in_array($locale, config('app.available_locales'))) {
             app()->setLocale($locale);
+            session()->put('locale', $locale);
         }
        
 

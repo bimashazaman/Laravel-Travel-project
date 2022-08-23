@@ -22,6 +22,7 @@ class CreateFromDilijansTable extends Migration
             $table->string('nameFive')->nullable();
             $table->string('nameSix')->nullable();
             $table->string('nameSeven')->nullable();
+            $table->string('type')->default('car');
             $table->string('nameEight')->nullable();
             $table->timestamps();
         });
