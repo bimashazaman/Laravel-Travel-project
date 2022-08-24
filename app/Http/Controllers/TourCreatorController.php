@@ -56,12 +56,56 @@ class TourCreatorController extends Controller
         $dilijan =  FromDilijan::where('type', 'car')->get();
 
         
+        $gyumriMotor = FromGyumri::where('type','motorcycle')->get();
+        $gyumriBike = FromGyumri::where('type','bike')->get();
+        $gyumriHiking = FromGyumri::where('type','hiking')->get();
         $gyumri =  FromGyumri::where('type', 'car')->get();
-        $jermuk =  FromJermuk::where('type', 'car')->get();
-        $stepanakert =  FromStepanakert::where('type', 'car')->get();
-        $tbilisi =  FromTbilisi::where('type', 'car')->get();
+       
 
-        return view('partials.secondStepReq', compact('creator', 'yerevanMotor','yerevanBike', 'yerevanHiking', 'yerevan', 'dilijan', 'gyumri', 'jermuk', 'stepanakert', 'tbilisi'));
+        $jermukMotor = FromJermuk::where('type','motorcycle')->get();
+        $jermukBike = FromJermuk::where('type','bike')->get();
+        $jermukHiking = FromJermuk::where('type','hiking')->get();
+        $jermuk =  FromJermuk::where('type', 'car')->get();
+       
+
+        $stepanakertMotor = FromStepanakert::where('type','motorcycle')->get();
+        $stepanakertBike = FromStepanakert::where('type','bike')->get();
+        $stepanakertHiking = FromStepanakert::where('type','hiking')->get();
+        $stepanakert =  FromStepanakert::where('type', 'car')->get();
+       
+
+        $tbilisiMotor = FromTbilisi::where('type','motorcycle')->get();
+        $tbilisiBike = FromTbilisi::where('type','bike')->get();
+        $tbilisiHiking = FromTbilisi::where('type','hiking')->get();
+        $tbilisi =  FromTbilisi::where('type', 'car')->get();
+        
+
+        return view('partials.secondStepReq', compact('creator', 
+        'yerevanMotor',
+        'yerevanBike', 
+        'yerevanHiking', 
+        'yerevan',
+        'dilijanMotor',
+        'dilijanBike', 
+        'dilijanHiking', 
+        'dilijan',
+        'gyumriMotor',
+        'gyumriBike', 
+        'gyumriHiking', 
+        'gyumri',
+        'jermukMotor',
+        'jermukBike', 
+        'jermukHiking',  
+        'jermuk', 
+        'stepanakertMotor',
+        'stepanakertBike', 
+        'stepanakertHiking',  
+        'stepanakert', 
+        'tbilisiMotor',
+        'tbilisiBike', 
+        'tbilisiHiking',  
+        'tbilisi'
+    ));
     }
 
     public function storeTwo(Request $request)
