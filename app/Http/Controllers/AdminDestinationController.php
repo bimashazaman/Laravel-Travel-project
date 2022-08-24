@@ -15,12 +15,13 @@ class AdminDestinationController extends Controller
     public function index()
     {
         $yerevan =  FromYerevan::all();
+       
         $dilijan =  FromDilijan::all();
         $gyumri =  FromGyumri::all();
         $jermuk =  FromJermuk::all();
         $stepanakert =  FromStepanakert::all();
         $tbilisi =  FromTbilisi::all();
-        return view('Backend.Admin.Destination.view',  compact('yerevan', 'dilijan', 'gyumri', 'jermuk','stepanakert','tbilisi'));
+        return view('Backend.Admin.Destination.view',  compact('yerevan',  'dilijan', 'gyumri', 'jermuk','stepanakert','tbilisi'));
     }
 
     public function storeYerevan(Request $request)

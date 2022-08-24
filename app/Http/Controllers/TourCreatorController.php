@@ -44,14 +44,24 @@ class TourCreatorController extends Controller
     public function createTwo(Request $request)
     {
         $creator = $request->session()->get('creator');
-        $yerevan =  FromYerevan::all();
-        $dilijan =  FromDilijan::all();
-        $gyumri =  FromGyumri::all();
-        $jermuk =  FromJermuk::all();
-        $stepanakert =  FromStepanakert::all();
-        $tbilisi =  FromTbilisi::all();
 
-        return view('partials.secondStepReq', compact('creator', 'yerevan', 'dilijan', 'gyumri', 'jermuk', 'stepanakert', 'tbilisi'));
+        $yerevanMotor = FromYerevan::where('type','motorcycle')->get();
+        $yerevanBike = FromYerevan::where('type','bike')->get();
+        $yerevanHiking = FromYerevan::where('type','hiking')->get();
+        $yerevan =  FromYerevan::where('type', 'car')->get();
+
+        $dilijanMotor = FromDilijan::where('type','motorcycle')->get();
+        $dilijanBike = FromDilijan::where('type','bike')->get();
+        $dilijanHiking = FromDilijan::where('type','hiking')->get();
+        $dilijan =  FromDilijan::where('type', 'car')->get();
+
+        
+        $gyumri =  FromGyumri::where('type', 'car')->get();
+        $jermuk =  FromJermuk::where('type', 'car')->get();
+        $stepanakert =  FromStepanakert::where('type', 'car')->get();
+        $tbilisi =  FromTbilisi::where('type', 'car')->get();
+
+        return view('partials.secondStepReq', compact('creator', 'yerevanMotor','yerevanBike', 'yerevanHiking', 'yerevan', 'dilijan', 'gyumri', 'jermuk', 'stepanakert', 'tbilisi'));
     }
 
     public function storeTwo(Request $request)

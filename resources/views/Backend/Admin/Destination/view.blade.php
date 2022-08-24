@@ -167,6 +167,7 @@
                     </form>
                     <br>
                     <br>
+                    <br>
                     @foreach ($dilijan as $d)
                         <div class="row">
                             <div class="col">
@@ -263,6 +264,7 @@
                     </form>
                     <br>
                     <br>
+                    <br>
                     @foreach ($gyumri as $y)
                         <div class="row">
                             <div class="col">
@@ -356,6 +358,7 @@
                                 type="submit">Create</button>
                         </div>
                     </form>
+                    <br>
                     <br>
                     <br>
 
@@ -456,6 +459,7 @@
                     </form>
                     <br>
                     <br>
+                    <br>
 
                     @foreach ($stepanakert as $y)
                         <div class="row">
@@ -552,6 +556,7 @@
                                 type="submit">Create</button>
                         </div>
                     </form>
+                    <br>
                     <br>
                     <br>
 
