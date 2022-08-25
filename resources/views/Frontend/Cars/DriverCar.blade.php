@@ -36,13 +36,13 @@
                                                 <li class="carousel__slide">
                                                     <figure>
                                                         <div>
-                                                            <img src="https://media.drivingelectric.com/image/private/s--jAviEQV8--/v1643195840/drivingelectric/2022-01/BMW-330e-Touring-UK-4_pkva88.jpg"
+                                                            <img src="https://media.istockphoto.com/photos/attractive-male-driver-using-the-gps-navigation-map-on-the-car-picture-id1303145841?b=1&k=20&m=1303145841&s=170667a&w=0&h=Aegfed2EYsC4gQRN_06W4b4N9a7ZZs4Ulik3AWSkNgo="
                                                                 alt="">
                                                         </div>
 
                                                     </figure>
                                                 </li>
-                                                <li class="carousel__slide">
+                                                {{-- <li class="carousel__slide">
                                                     <figure>
                                                         <div>
                                                             <img src="https://picsum.photos/id/1043/800/450" alt="">
@@ -53,7 +53,7 @@
                                                 <li class="carousel__slide">
                                                     <figure>
                                                         <div>
-                                                            <img src="https://picsum.photos/id/1044/800/450" alt="">
+                                                            <img src="https://thumbs.dreamstime.com/b/range-rover-car-rome-italy-september-british-made-full-sized-luxury-sport-utility-vehicle-suv-land-marque-under-jaguar-141812181.jpg" alt="">
                                                         </div>
 
                                                     </figure>
@@ -107,7 +107,7 @@
                                                 <li>
                                                     <label for="slide-6"><img src="https://picsum.photos/id/1052/150/150"
                                                             alt=""></label>
-                                                </li>
+                                                </li> --}}
                                             </ul>
                                         </div>
 

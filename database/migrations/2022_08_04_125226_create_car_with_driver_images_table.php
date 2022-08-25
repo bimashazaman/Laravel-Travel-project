@@ -15,6 +15,8 @@ class CreateCarWithDriverImagesTable extends Migration
     {
         Schema::create('car_with_driver_images', function (Blueprint $table) {
             $table->id();
+            $table->unsignedBigInteger('car_with_driver_id');
+            $table->unsignedBigInteger('image_id');
             $table->timestamps();
         });
     }

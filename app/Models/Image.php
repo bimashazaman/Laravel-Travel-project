@@ -26,6 +26,10 @@ class Image extends Model
         return $this->hasMany(HotelImage::class);
     }
 
+    public function driverImage(){
+        return $this->hasMany(CarWithDriverImage::class);
+    }
+
     public function accessioriesImages(){
         return $this->hasMany(AccessioriesImage::class);
     }

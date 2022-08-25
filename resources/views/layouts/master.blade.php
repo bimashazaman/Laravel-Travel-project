@@ -18,7 +18,7 @@
         integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <!-- TITLE OF SITE -->
-    <title>Travel</title>
+    <title>2expedition</title>
     <link rel="stylesheet" href="{{ asset('css/font-awesome.min.css') }}" />
     <!--datepicker.css-->
     <link rel="stylesheet" href="{{ asset('css/datepicker.css') }}">

@@ -79,6 +79,13 @@
                             <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="cancelation_fee">
                         </div>
                     </div>
+
+                    {{-- <div class="form-group row">
+                        <label class="col-form-label col-md-2">File Input </label>
+                        <div class="col-md-10">
+                            <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" class="form-control" type="file" name="images[]" multiple>
+                        </div>
+                    </div> --}}
                   
                   
                   
