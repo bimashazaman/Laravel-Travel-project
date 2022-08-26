@@ -7,6 +7,8 @@ use App\Models\ThingsToSee;
 use App\Models\ThingsToSeeCategory;
 use Exception;
 use Illuminate\Http\Request;
+use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\Validator;
 
 class ThingsToSeeController extends Controller
 {
@@ -39,19 +41,31 @@ class ThingsToSeeController extends Controller
   
     public function store(Request $request)
     {
+       
 
-        $request->validate([
-               "name" => "required|string",
-            "description" => "required|string",
-            "time" => "required|string",
-            "address" => "required|string",
-            "duration" => "required|string",
-            "period" => "required|string",
-            "distance" => "required|string",
+        $validate = Validator::make($request->all(),[
+               "name" => "required",
+            "description" => "required",
+            "time" => "required",
+            "address" => "required",
+            "duration" => "required",
+            "period" => "required",
+            "distance" => "required",
             "price" => "required|numeric",
-            "category_id" => "required|string",
+            "category_id" => "required",
             "images" => "required",
         ]);
+
+        if ($validate->fails()) {
+            // return self::failure($validate->errors()->first());
+            return redirect()
+            ->bacK()
+                ->with("msg", $validate->errors()->first())
+                ->with("fail", true);
+        }
+        try {
+
+            DB::beginTransaction();
 
         $things = ThingsToSee::create([
             "name" => $request->name,
@@ -80,8 +94,17 @@ class ThingsToSeeController extends Controller
         
         }
 
-        return redirect()->back()->with("msg", "Created successfully!")
-        ->with("success", true);
+        DB::commit();
+            // return self::success("Tour added successfully!", ["data" => $image]);
+            return redirect()->back()->with("msg", "Created successfully!")
+            ->with("success", true);
+        } catch (Exception $e) {
+            DB::rollBack();
+            // return $e;
+            return self::failure('Error in adding tour data!', ["data" => $e->getMessage()]);
+        }
+
+        
     }
 
  
