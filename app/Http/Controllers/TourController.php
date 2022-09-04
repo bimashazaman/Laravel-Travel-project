@@ -6,7 +6,6 @@ use App\Models\DepartureTable;
 use App\Models\Destination;
 use App\Models\HomeTour;
 use App\Models\Image;
-use App\Models\relatedTour;
 use App\Models\Tour;
 use App\Models\TourCategory;
 use App\Models\TourFacility;

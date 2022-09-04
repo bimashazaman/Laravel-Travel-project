@@ -35,7 +35,7 @@ class ActiveTour extends Controller
         ->with('category')
         // ->where('id', '!=', $tour->id)
         ->with('images')
-        ->inRandomOrder()
+        ->latest()
         ->take(3)
         ->get();
 
