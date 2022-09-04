@@ -17,9 +17,9 @@
         <h2 class="text-center font-weight-bold">
 
             Tour Description
-
-
         </h2>
+
+      
 
         <div class="row">
             <div id="carouselExampleInterval" class="carousel slide" data-bs-ride="carousel" style="padding: 100px">
@@ -230,6 +230,13 @@
                     @endforeach
                 </div>
             </div>
+
+
+
+
+
+
+
         </div>
         <div class="col-md-4">
             <div
@@ -352,44 +359,44 @@
             </div>
 
             <div
-            style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
-            <h3 class="">
-                Add Useful info
-            </h3>
-            <hr>
+                style=" padding: 30px; margin: 20px; box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px; align-items:center">
+                <h3 class="">
+                    Add Useful info
+                </h3>
+                <hr>
 
-            <form action="{{ url('/admin/adduseful/' . $tour->id) }}" method="POST" enctype="multipart/form-data">
-                {{ csrf_field() }}
-                <div class="">
-                    <div class="form-group row">
-                        {{-- <label class="col-form-label col-md-2">Tour Type</label> --}}
-                        <input type="text" class="form-control" placeholder="Add Info" name="name">
-                    </div>
-                    <hr>
-                    <button class="btn btn-info text-white">
-                        Submit
-                    </button>
-                </div>
-
-            </form>
-
-
-
-            <br>
-            <div class="list-group list-group-light">
-                @foreach ($tour->useful as $tourFacility)
-                    <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
-                        style="display: flex">
-
-                        {{ $tourFacility->name }}
+                <form action="{{ url('/admin/adduseful/' . $tour->id) }}" method="POST" enctype="multipart/form-data">
+                    {{ csrf_field() }}
+                    <div class="">
+                        <div class="form-group row">
+                            {{-- <label class="col-form-label col-md-2">Tour Type</label> --}}
+                            <input type="text" class="form-control" placeholder="Add Info" name="name">
+                        </div>
                         <hr>
-
-
+                        <button class="btn btn-info text-white">
+                            Submit
+                        </button>
                     </div>
-                @endforeach
 
+                </form>
+
+
+
+                <br>
+                <div class="list-group list-group-light">
+                    @foreach ($tour->useful as $tourFacility)
+                        <div class="list-group-item list-group-item-action px-3 border-0 justify-content-between"
+                            style="display: flex">
+
+                            {{ $tourFacility->name }}
+                            <hr>
+
+
+                        </div>
+                    @endforeach
+
+                </div>
             </div>
-        </div>
 
         </div>
         <div class="col-md-4">
@@ -487,7 +494,8 @@
 
                                 </div>
                                 <div style="float: right">
-                                    <form action="{{ url('/admin/departure/delete/'.$tour->id) }}" method="POST" enctype="multipart/form-data">
+                                    <form action="{{ url('/admin/departure/delete/' . $tour->id) }}" method="POST"
+                                        enctype="multipart/form-data">
                                         {{ csrf_field() }}
                                         {{ method_field('DELETE') }}
 
@@ -507,4 +515,175 @@
         </div>
 
     </div>
-@endsection
+
+
+    <div class="page-header">
+        <div class="row">
+            <div class="col-sm-12">
+                <h2 class="page-title" style="text-align: center">Create Related Tour</h2>
+            </div>
+        </div>
+    </div>
+    
+    <div class="row">
+        <div class="col-sm-12">
+            <div class="card" style="box-shadow: rgba(0, 0, 0, 0.3) 0px 19px 38px, rgba(0, 0, 0, 0.22) 0px 15px 12px;">
+                <div class="card-header">
+                    <h4 class="card-title">Add Information</h4>
+                </div>
+                <div class="card-body">
+                    <form id="tourForm" action="/admin/addRelated/{{ $tour->id }}" method="POST" enctype="multipart/form-data">
+                        {{csrf_field()}}
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">Tour name</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="name">
+                            </div>
+                        </div>
+                       
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">Description</label>
+                            <div class="col-md-10">
+                                <textarea style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; width:100%; border:none" name="description" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">Itenanary</label>
+                            <div class="col-md-10">
+                                <textarea style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; width:100%; border:none" name="Itenanary" cols="30" rows="10"></textarea>
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">Duration</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="duration">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">Price</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="price">
+                            </div>
+                        </div>
+    
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">Price AMD</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="AMD">
+                            </div>
+                        </div>
+    
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">Price RUR</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="RUR">
+                            </div>
+                        </div>
+    
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">Price EURO</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="EURO">
+                            </div>
+    
+                        </div>
+    
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">Start Date</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="start_date">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">2-3 Pax</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="one_day_price">
+                            </div>
+                        </div>
+    
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">4-6 Pax</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="one_week_price">
+                            </div>
+                        </div>
+    
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">17-30 Pax</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="one_month_price">
+                            </div>
+                        </div>
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">30 Pax More</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="one_year_price">
+                            </div>
+                        </div>
+    
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">End Date</label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="text" class="form-control" name="end_date">
+                            </div>
+                        </div>
+    
+                        <!-- category dropdown -->
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">Tour Category</label>
+                            <div class="col-md-10">
+                                <select class="form-control form-select" name="category_id">
+                                   
+                                    @foreach($categories as $category)
+                                    <option value="{{$category->id}}">{{$category->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+    
+                        <!-- destination dropdown -->
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">Country</label>
+                            <div class="col-md-10">
+                                <select class="form-control form-select" name="destination_id">
+                                    
+                                    @foreach($destinations as $destination)
+                                    <option value="{{ $destination->id }}">{{$destination->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+    
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">For Home?</label>
+                            <div class="col-md-10">
+                                <select class="form-control form-select" name="home_tour_id">
+                                    
+                                    @foreach($homeTour as $d)
+                                    <option value="{{ $d->id }}">{{$d->name}}</option>
+                                    @endforeach
+                                </select>
+                            </div>
+                        </div>
+                       
+    
+                    
+    
+                        <div class="form-group row">
+                            <label class="col-form-label col-md-2">File Input </label>
+                            <div class="col-md-10">
+                                <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" class="form-control" type="file" name="images[]" multiple="">
+                            </div>
+                        </div>
+                     
+                        <div style="float: right">
+                            <button class="btn btn-info" style="box-shadow: rgba(0, 0, 0, 0.09) 0px 2px 1px, rgba(0, 0, 0, 0.09) 0px 4px 2px, rgba(0, 0, 0, 0.09) 0px 8px 4px, rgba(0, 0, 0, 0.09) 0px 16px 8px, rgba(0, 0, 0, 0.09) 0px 32px 16px; color:white; width:120px" type="submit">Create</button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+    
+        </div>
+    </div>
+   
+    @endsection

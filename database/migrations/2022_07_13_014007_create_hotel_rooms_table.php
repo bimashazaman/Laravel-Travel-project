@@ -17,8 +17,8 @@ class CreateHotelRoomsTable extends Migration
             $table->id();
             $table->unsignedBigInteger('hotel_id');
             $table->string('name');
-            $table->decimal('price');
-            $table->decimal('price2');
+            $table->string('price');
+            $table->string('price2');
             $table->softDeletes();
             $table->timestamps();
         });

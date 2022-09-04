@@ -409,57 +409,60 @@
                     </center>
                     <div class="row">
 
+                      
                         @foreach ($relatedTour as $r)
-                            <div class="col-md-4 col-sm-6">
-                                {{-- <h3 style="text-align: center;  font-weight: 600;">{{ $tour->category->name }}</h3> --}}
+                        <div class="col-md-4 col-sm-6">
+                            {{-- <h3 style="text-align: center;  font-weight: 600;">{{ $tour->category->name }}</h3> --}}
 
-                                <div class="single-package-item">
-                                    <img src="{{ asset($r->images->first()->path) }}" alt="" style="width:100%">
-                                    {{-- alt="package-place"> --}}
-                                    <div class="packageName">
-                                        {{ __($r->name) }}
-                                    </div>
-                                    <div>
-                                        <h4 class="package-txt">
-                                            <a href="#">
-                                                {{ __($r->type) }}
-                                            </a>
-                                        </h4>
-                                        <p class="kki">
-                                            {{ __($r->description) }}
-                                        </p>
-                                    </div>
-                                    <div class="pacdet">
-                                        <div class="packageOffer">
-                                            <span><i class="fa-regular fa-clock"></i></span> {{ __($r->duration) }}
-                                        </div>
-
-                                        <div class="packageOffer">
-                                            <span><i class="fa-solid fa-calendar-check"></i></span> {{ __($r->start_date) }} -
-                                            {{ __($r->end_date) }}
-                                        </div>
-
-                                        <div class="packageOffer">
-                                            <span><i class="fa-solid fa-dollar-sign"></i></span> {{ __($r->price) }}
-                                        </div>
-                                    </div>
-                                    <div class="rating">
-                                        <span class=""><i class="fa-solid fa-star"></i></span>
-                                        <span class=""><i class="fa-solid fa-star"></i></span>
-                                        <span class=""><i class="fa-solid fa-star"></i></span>
-                                        <span class=""><i class="fa-solid fa-star"></i></span>
-                                        <span class=""><i class="fa-solid fa-star"></i></span>
-                                    </div>
-                                    <div class="package-btn">
-                                        <a href="{{ url('/getClassicTour/' . $r->id) }}"> <button class="package-view">
-                                                {{ __('Details') }}
-                                            </button>
+                            <div class="single-package-item">
+                                <img src="{{ asset($r->images->first()->path) }}" alt="" style="width:100%">
+                                {{-- alt="package-place"> --}}
+                                <div class="packageName">
+                                    {{ __($r->name) }}
+                                </div>
+                                <div>
+                                    <h4 class="package-txt">
+                                        <a href="#">
+                                            {{ __($r->type) }}
                                         </a>
+                                    </h4>
+                                    <p class="kki">
+                                        {{ __($r->description) }}
+                                    </p>
+                                </div>
+                                <div class="pacdet">
+                                    <div class="packageOffer">
+                                        <span><i class="fa-regular fa-clock"></i></span> {{ __($r->duration) }}
+                                    </div>
 
+                                    <div class="packageOffer">
+                                        <span><i class="fa-solid fa-calendar-check"></i></span> {{ __($r->start_date) }} -
+                                        {{ __($r->end_date) }}
+                                    </div>
+
+                                    <div class="packageOffer">
+                                        <span><i class="fa-solid fa-dollar-sign"></i></span> {{ __($r->price) }}
                                     </div>
                                 </div>
+                                <div class="rating">
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                    <span class=""><i class="fa-solid fa-star"></i></span>
+                                </div>
+                                <div class="package-btn">
+                                    <a href="{{ url('/getClassicTour/' . $r->id) }}"> <button class="package-view">
+                                            {{ __('Details') }}
+                                        </button>
+                                    </a>
+
+                                </div>
                             </div>
-                        @endforeach
+                        </div>
+                    @endforeach
+                       
+                       
                     </div>
                     <!--/.row-->
                 </div>

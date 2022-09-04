@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\relatedTour;
 use App\Models\Review;
 use App\Models\Tour;
 use App\Models\TourCategory;
@@ -31,16 +32,17 @@ class OneDayController extends Controller
        $tour = Tour::find($id);
        //get related tour'
         //  $relatedTour = Tour::where('category_id', 5)->get();
-        $relatedTour = Tour::where('category_id', 5)
+        $relatedTour = Tour::where('related_id', $id)
+        ->with('category')
         // ->where('id', '!=', $tour->id)
         ->with('images')
-        ->with('types')
-        ->with('useful')
         ->inRandomOrder()
         ->take(3)
         ->get();
 
-        $reviews = Review::with('images')->where('category_id', 5)->take(4)->get();
-       return view('Frontend.BasicTours.BasicTour', compact('tour','relatedTour','reviews'));
+        // $related = relatedTour::where('tour_id', $id)->get();
+
+        $reviews = Review::with('images')->where('category_id', 4)->take(4)->get();
+        return view('Frontend.BasicTours.BasicTour', compact('tour','relatedTour','reviews'));
    }
 }

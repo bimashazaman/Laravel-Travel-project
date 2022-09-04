@@ -32,9 +32,9 @@ class AccessioriesController extends Controller
             'type'=>'required',
             'total_pax'=>'required',
             'free_cancellation'=>'required',
-            'one_day_price'=>'required|numeric',
-            'one_week_price'=>'required|numeric',
-            'one_month_price'=>'required|numeric',
+            'one_day_price'=>'required',
+            'one_week_price'=>'required',
+            'one_month_price'=>'required',
             'images' => 'required',
         ]);
         $a = Accessiories::create([

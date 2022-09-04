@@ -23,7 +23,7 @@ class CreateThingsToSeesTable extends Migration
             $table->string('duration');
             $table->string('period');
             $table->string('distance');
-            $table->decimal('price');
+            $table->string('price');
             $table->softDeletes();
             $table->timestamps();
         });

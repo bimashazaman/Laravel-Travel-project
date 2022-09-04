@@ -34,6 +34,12 @@ class Tour extends Model
         return $this->hasMany(TourHighlight::class, 'tour_id');
     }
 
+
+    public function related()
+    {
+        return $this->hasMany(relatedTour::class);
+    }
+
     //facility
     public function facility()
     {

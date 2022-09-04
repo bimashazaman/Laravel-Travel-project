@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\relatedTour;
 use App\Models\Review;
 use App\Models\Tour;
 use App\Models\TourCategory;
@@ -30,18 +31,23 @@ class GastroTour extends Controller
     {
         $tour = Tour::find($id);
 
-        $relatedTour = Tour::where('category_id', 3)
-        // ->where('id', '!=', $tour->id)
-        ->with('images')
-        ->with('types')
-        ->with('useful')
-        ->inRandomOrder()
-        ->take(3)
-        ->get();
+        $relatedTour = Tour::where('related_id', $id)
+            ->with('category')
+            // ->where('id', '!=', $tour->id)
+            ->with('images')
+            ->inRandomOrder()
+            ->take(3)
+            ->get();
+
+        // $related = relatedTour::where('tour_id', $id)->get();
+
         $reviews = Review::with('images')->where('category_id', 3)->take(4)->get();
+        return view('Frontend.BasicTours.BasicTour', compact('tour','relatedTour','reviews'));
+
+        
         
 
         // $reviews = $tour->reviews()->orderBy('created_at', 'desc')->take(3)->get();
-        return view('Frontend.BasicTours.BasicTour', compact('tour','relatedTour','reviews'));
+      
     }
 }

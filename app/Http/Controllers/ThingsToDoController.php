@@ -41,7 +41,7 @@ class ThingsToDoController extends Controller
          "duration" => "required|string",
          "period" => "required|string",
          "distance" => "required|string",
-         "price" => "required|numeric",
+         "price" => "required",
          "category_id" => "required|string",
          "images" => "required",
      ]);
@@ -94,7 +94,7 @@ class ThingsToDoController extends Controller
             "duration" => "required|string",
             "period" => "required|string",
             "distance" => "required|string",
-            "price" => "required|numeric",
+            "price" => "required",
             "category_id" => "required|string",
             
         ]);

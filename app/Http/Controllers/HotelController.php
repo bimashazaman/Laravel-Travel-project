@@ -48,7 +48,7 @@ class HotelController extends Controller
             'description' => 'required',
             'address' => 'required',
             'stars' => 'required',
-            'price' => 'required|numeric',
+            'price' => 'required',
             'overview' => '',
             'free_cancelation' => 'required',
             'images' => 'required',
@@ -253,8 +253,8 @@ class HotelController extends Controller
         $validator = Validator::make($request->all(), [
             // "tour_id" => "required|integer",
             "name" => "required",
-            "price" => "required|numeric",
-            "price2" => "required|numeric",
+            "price" => "required",
+            "price2" => "required",
 
         ]);
         if ($validator->fails()) {

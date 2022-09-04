@@ -20,9 +20,9 @@ class CreateVehiclesTable extends Migration
             $table->string('car_type');
             $table->string('seats');
             $table->string('car_model');
-            $table->decimal('daily_price');
-            $table->decimal('weekly_price');
-            $table->decimal('monthly_price');
+            $table->string('daily_price');
+            $table->string('weekly_price');
+            $table->string('monthly_price');
             $table->string('free_cancelation');
             $table->softDeletes();
             $table->timestamps();
