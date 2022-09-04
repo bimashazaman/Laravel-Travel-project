@@ -72,6 +72,14 @@
                                                             class="btn btn-info">Update</button>
                                                     </a>
                                                 </span>
+                                                 <span>
+                                                    <!-- <a href="{{ url('/admin/UpdateClassicTour') }}"> -->
+                                                    <a href="/admin/createRelated/{{ $touritem->id }}">
+                                                        <button type="button"
+                                                            style="box-shadow: rgba(14, 30, 37, 0.12) 0px 2px 4px 0px, rgba(14, 30, 37, 0.32) 0px 2px 16px 0px; color:rgb(49, 44, 44)"
+                                                            class="btn btn-success">Related</button>
+                                                    </a>
+                                                </span>
                                                 <span>
                                                     <form method="POST" action="/admin/tour/delete/{{ $touritem->id }}">
                                                         {{ csrf_field() }}

@@ -41,9 +41,9 @@
                             <img src="{{ url(asset($thing->images->first()->path))}}"
                                 alt="{{ $thing->name }}">
                             <div class="HotelName">
-                                <h4>
+                                <div style="width: fit-content; font-weight: 700;">
                                     {{ __($thing->name) }}
-                                </h4>
+                                </div>
                             </div>
                             <div class="hotelDesccription">
                                 <p>

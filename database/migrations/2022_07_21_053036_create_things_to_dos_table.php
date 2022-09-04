@@ -16,6 +16,7 @@ class CreateThingsToDosTable extends Migration
         Schema::create('things_to_dos', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('related_id')->nullable();
             $table->longText('description')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->string('time');    

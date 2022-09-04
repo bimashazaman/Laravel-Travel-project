@@ -62,7 +62,26 @@ class TourController extends Controller
 
     public function createRelated($id)
     {
-        
+        $tour = Tour::with('images')
+        ->with('highlights')
+        ->with('facility')
+        ->with('program')
+        ->with('useful')
+        ->with('types')
+        ->whereNull('deleted_at')
+        ->where('id', $id)->first();
+
+        $tours = Tour::with('images')
+        ->with('highlights')
+        ->with('facility')
+        ->with('program')
+        ->with('useful')
+        ->with('types')
+        ->whereNull('deleted_at')
+        ->where('related_id', $id)->get();
+
+
+
         $homeTour = HomeTour::all();
         $type = Type::all();
         $destinations = Destination::all();
@@ -72,6 +91,8 @@ class TourController extends Controller
             "destinations" => $destinations,
             "type" => $type,
             "homeTour" => $homeTour,
+            "tour"=>$tour,
+            "tours"=>$tours
         ]);
     }
 

@@ -265,6 +265,8 @@ Route::get('/admin/thingsToSee/edit/{id}', [ThingsToSeeController::class, 'edit'
 Route::post('/admin/thingsToSee/store', [ThingsToSeeController::class, 'store']);
 Route::put('/admin/thingsToSee/update/{id}', [ThingsToSeeController::class, 'update']);
 Route::delete('/admin/thingsToSee/delete/{id}', [ThingsToSeeController::class, 'destroy']);
+Route::post("/admin/addRelatedsee/{id}", [ThingsToSeeController::class, "addRelated"]);
+Route::get("/admin/createRelatedsee/{id}", [ThingsToSeeController::class, "createRelated"]);
 
 //=====Admin things to do=========
 Route::get('/admin/thingsToDo', [ThingsToDoController::class, 'index']);
@@ -274,6 +276,8 @@ Route::get('/admin/thingsToDo/edit/{id}', [ThingsToDoController::class, 'edit'])
 Route::post('/admin/thingsToDo/store', [ThingsToDoController::class, 'store']);
 Route::put('/admin/thingsToDo/update/{id}', [ThingsToDoController::class, 'update']);
 Route::delete('/admin/thingsToDo/delete/{id}', [ThingsToDoController::class, 'destroy']);
+Route::post("/admin/addRelatedDo/{id}", [ThingsToDoController::class, "addRelated"]);
+Route::get("/admin/createRelatedDo/{id}", [ThingsToDoController::class, "createRelated"]);
 
 
 

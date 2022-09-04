@@ -16,6 +16,7 @@ class CreateThingsToSeesTable extends Migration
         Schema::create('things_to_sees', function (Blueprint $table) {
             $table->id();
             $table->string('name');
+            $table->integer('related_id')->nullable();
             $table->unsignedBigInteger('category_id');
             $table->longText('description')->nullable();
             $table->string('time');    

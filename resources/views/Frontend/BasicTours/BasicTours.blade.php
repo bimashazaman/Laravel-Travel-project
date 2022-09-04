@@ -47,7 +47,7 @@
 
                                 </div>
                                 <div class="package-txt" style="margin-left: -7%;">
-                                    <h4>
+                                    <div style="width: fit-content; font-weight: 700;">
                                         <a href="#" style="margin-left: 15%;font-weight: 400; font-size: 1.5rem;">
                                             @foreach ($item->types as $t)
                                                 <div style="margin-left: 15%;font-weight: 400; font-size: 1.5rem;">
@@ -55,7 +55,7 @@
                                                 </div>
                                             @endforeach
                                         </a>
-                                    </h4>
+                                    </div>
                                     <p class="kki">
                                         {{ __($item->description) }}
                                     </p>
