@@ -691,10 +691,6 @@ body {
         rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
 }
 
-.package-view:hover {
-    background-color: #6c9fe0;
-    color: #fff;
-}
 
 .package-btn {
     text-align: center;
@@ -3918,7 +3914,7 @@ form .submit-rating:hover {
 }
 .newtat {
     padding: 20px;
-    
+
     font-size: 17px;
     font-weight: 700;
     /* gap: 68px; */
