@@ -107,10 +107,10 @@
                                             onclick="onClickSelect()"><i class="fa-solid fa-car"></i>
                                             <div>
                                                 {{ __('Car') }}
-                                               <span>
-                                                <input value="By Car" style="display: none" type="checkbox"
-                                                id="myCheck" name="car">
-                                               </span>
+                                                <span>
+                                                    <input value="By Car" style="display: none" type="checkbox"
+                                                        id="myCheck" name="car">
+                                                </span>
                                             </div>
                                         </div>
                                     </div>
@@ -176,27 +176,41 @@
         </div>
 </section>
 <script>
-    $(function() {
-        $("#datepicker").datepicker();
-    });
-
     function onClickSelect() {
         var checkBox = document.getElementById("myCheck");
 
         document.querySelector('#box').style.backgroundColor = '#FAEFD7';
+
+        document.querySelector('#motor').style.backgroundColor = 'white';
+        document.querySelector('#nos').style.backgroundColor = 'white';
+        document.querySelector('#yyy').style.backgroundColor = 'white';
+        document.querySelector('#bla').checked = false;
+        document.querySelector('#jj').checked = false;
+        document.querySelector('#zzz').checked = false;
+
         if (checkBox.checked == true) {
             checkBox.checked = false;
             document.querySelector('#box').style.backgroundColor = 'white';
-
-
         } else {
             checkBox.checked = true;
+
         }
+
+
+
     }
 
     function onClickSelectmotorcycle() {
         var checkBox = document.getElementById("bla");
         document.querySelector('#motor').style.backgroundColor = '#FAEFD7';
+
+        document.querySelector('#box').style.backgroundColor = 'white';
+        document.querySelector('#nos').style.backgroundColor = 'white';
+        document.querySelector('#yyy').style.backgroundColor = 'white';
+        document.querySelector('#myCheck').checked = false;
+        document.querySelector('#jj').checked = false;
+        document.querySelector('#zzz').checked = false;
+
 
         if (checkBox.checked == true) {
             checkBox.checked = false;
@@ -213,6 +227,14 @@
         var checkBox = document.getElementById("jj");
         document.querySelector('#nos').style.backgroundColor = '#FAEFD7';
 
+        document.querySelector('#box').style.backgroundColor = 'white';
+        document.querySelector('#motor').style.backgroundColor = 'white';
+        document.querySelector('#yyy').style.backgroundColor = 'white';
+        document.querySelector('#myCheck').checked = false;
+        document.querySelector('#bla').checked = false;
+        document.querySelector('#zzz').checked = false;
+
+
         if (checkBox.checked == true) {
             checkBox.checked = false;
 
@@ -227,6 +249,14 @@
     function onclickHiking() {
         var checkBox = document.getElementById("zzz");
         document.querySelector('#yyy').style.backgroundColor = '#FAEFD7';
+
+        document.querySelector('#box').style.backgroundColor = 'white';
+        document.querySelector('#motor').style.backgroundColor = 'white';
+        document.querySelector('#nos').style.backgroundColor = 'white';
+        document.querySelector('#myCheck').checked = false;
+        document.querySelector('#bla').checked = false;
+        document.querySelector('#jj').checked = false;
+
 
         if (checkBox.checked == true) {
             checkBox.checked = false;
