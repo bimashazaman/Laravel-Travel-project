@@ -85,7 +85,8 @@
                                         <span><label style="float: left; background-color: white; width: 100%;"
                                                 class="reqTourInput">
                                                 <input type="number" style="border:none; outline:none; width: 100%"
-                                                    placeholder="{{ __('Number Of Adults') }}" name="adult" required>
+                                                    min="0" placeholder="{{ __('Number Of Adults') }}"
+                                                    name="adult" required>
                                             </label>
                                         </span>
 
@@ -95,6 +96,7 @@
                                                 style="float: left; background-color: white; width: 100%;"
                                                 class="reqTourInput">
                                                 <input type="number" style="border:none; outline:none; width: 100%"
+                                                min="0"
                                                     placeholder="{{ __('Number Of Childs') }}" name="child" required>
                                             </label>
                                         </span>

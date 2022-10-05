@@ -134,7 +134,10 @@
                                          @foreach ($available_locales as $locale_name => $available_locale)
                                              <a class="dropdown-item"
                                                  href="{{ url(url()->current() . '/' . $available_locale) }}">
-                                                 {{ __($locale_name) }}
+
+                                                 
+
+                                                 {{ $locale_name }}
                                              </a>
                                          @endforeach
                                      </div>
@@ -151,7 +154,7 @@
                  </div>
              </div>
              <div class="home-border">
-                
+
              </div>
          </div>
      </div>
