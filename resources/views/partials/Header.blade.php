@@ -134,9 +134,6 @@
                                          @foreach ($available_locales as $locale_name => $available_locale)
                                              <a class="dropdown-item"
                                                  href="{{ url(url()->current() . '/' . $available_locale) }}">
-
-                                                 
-
                                                  {{ $locale_name }}
                                              </a>
                                          @endforeach

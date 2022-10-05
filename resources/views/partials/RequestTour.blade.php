@@ -75,7 +75,7 @@
                                     <Select id="Starting Destination" style="width:100%" class="reqTourInput"
                                         name="creator_destinations_id" required>
                                         @foreach ($destination as $d)
-                                            <option value="{{ $d->name }}">{{ $d->name }}</option>
+                                            <option value="{{ $d->name }}">Yerevan - {{ $d->name }}</option>
                                         @endforeach
                                     </Select>
                                 </div>

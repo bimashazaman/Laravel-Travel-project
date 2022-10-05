@@ -5,12 +5,10 @@
 
 
     <div class="parentCard">
-
         <div class="div1Card"><div class="single-card"> <input type="text" placeholder="{{__('Type')}}"> </div> </div>
         <div class="div2Card"><div class="single-card"> <input type="text" placeholder="{{ __('Destination') }}"> </div> </div>
         <div class="div3Card"><div class="single-card"> <input type="number" min="1" placeholder="{{ __('Duration') }}"></div> </div>
         <div class="div4Card"><div class="single-card"> <input type="date" placeholder="fgvfd"> </div></div>
-
     </div>
         <button class="package-view">
             {{ __('Find Tour') }}

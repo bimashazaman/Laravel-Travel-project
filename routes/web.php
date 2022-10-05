@@ -402,12 +402,6 @@ Route::get('/admin/d', function () {
 
 
 
-
-
-// Route::group(['prefix' => LaravelLocalization::setLocale()], function()
-// {
-
-
 Route::get('/home/{locale?}', [FrontendController::class, 'index'])->name('blaaaaa');
 Route::get('/tour/detail/{id}', [FrontendController::class, 'tourDescription'])->name('tourDescription');
 Route::get('/tour/{name}', [FrontendController::class, 'getTours'])->name('getTours');
