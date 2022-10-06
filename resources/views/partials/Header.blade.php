@@ -131,12 +131,34 @@
                                          {{ __('English') }}
                                      </a>
                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: auto">
-                                         @foreach ($available_locales as $locale_name => $available_locale)
-                                             <a class="dropdown-item"
+                                         <a class="dropdown-item" href="{{ url(url()->current() . '/' . 'ru') }}">
+                                            Русский <img
+                                                 src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png"
+                                                 alt="" style="width: 20px; height:20px">
+                                         </a>
+
+
+                                         <a class="dropdown-item" href="{{ url(url()->current() . '/' . 'en') }}">
+                                             {{ __('English') }}
+
+                                                <img
+                                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"
+                                                    alt="" style="width: 20px; height:20px">
+
+                                         </a>
+
+                                         <a class="dropdown-item" href="{{ url(url()->current() . '/' . 'hy') }}">
+                                            Հայերեն <img
+                                             src="https://www.worldatlas.com/img/flag/am-flag.jpg"
+                                             alt="" style="width: 20px; height:20px">
+                                         </a>
+
+                                         {{-- @foreach ($available_locales as $locale_name => $available_locale) --}}
+                                         {{-- <a class="dropdown-item"
                                                  href="{{ url(url()->current() . '/' . $available_locale) }}">
                                                  {{ $locale_name }}
-                                             </a>
-                                         @endforeach
+                                             </a> --}}
+                                         {{-- @endforeach --}}
                                      </div>
                                  </li>
                                  <li style="display: flex">
