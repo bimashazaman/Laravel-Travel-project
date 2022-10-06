@@ -8,7 +8,6 @@ use App\Models\HomeCMS;
 use App\Models\Meal;
 use App\Models\Tour;
 use App\Models\TourCategory;
-use App\Models\TripType;
 use Illuminate\Http\Request;
 
 class FrontendController extends Controller
@@ -36,7 +35,7 @@ class FrontendController extends Controller
         // return response()->json(["tour"=>$tours]);
         return view("Frontend.Tours.Tour", [
             "tour" => $tours,
-            
+
         ]);
     }
    }
@@ -47,7 +46,7 @@ class FrontendController extends Controller
             app()->setLocale($locale);
             session()->put('locale', $locale);
         }
-       
+
 
         $home = HomeCMS::all();
         $destination = CreatorDestination::all();
@@ -63,8 +62,12 @@ class FrontendController extends Controller
             ->get();
         $destinations = Destination::whereNull('deleted_at')
             ->get();
-        $types = TripType::all();
+
+        $types = TourCategory::all();
+
         $meals = Meal::all();
+
+        // $types = TripType::all();
 
         return view('Home', [
             "tours" => $tours,
@@ -74,9 +77,17 @@ class FrontendController extends Controller
             "home" => $home,
             "destination" => $destination,
             "creator" => $creator,
+            "types" => $types,
         ]);
     }
-  
+
+
+    // public function getToursByType()
+    // {
+    //    $types =  TourCategory::all();
+    //      return view('partials.FindTour', compact('types'));
+    // }
+
     public function tourDescription($id)
     {
         //get tour
@@ -91,6 +102,6 @@ class FrontendController extends Controller
             "tour" => $tour
         ]);
     }
-   
+
 
 }
