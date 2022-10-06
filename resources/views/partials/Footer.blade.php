@@ -255,24 +255,24 @@
         </footer>
     </div>
     <div>
-        <p style="float: right; color:white; padding-left: 40px; padding-right:40px; font-size:17px">
+        <p style="float: right; color:rgb(231, 228, 228); padding-left: 40px; padding-right:40px; font-size:14px">
             Designed by <span>
-                <a href="https://www.upwork.com/freelancers/lilitpoghosyan15" style="color: white; text-decoration:underline ">Lilit</a>
+                <a href="https://www.upwork.com/freelancers/lilitpoghosyan15" style="color: rgb(231, 228, 228); text-decoration:underline ">Lilit</a>
             </span>
             <span>
                 &
             </span>
-            <span style="margin-left: 5px; font-size:19px" >
+            <span style="margin-left: 5px; font-size:14px" >
                 Created by <span>
-                    <a href="https://www.linkedin.com/in/bimasha-zaman/" style="color: white; text-decoration:underline ">
+                    <a href="https://www.linkedin.com/in/bimasha-zaman/" style="color: rgb(231, 228, 228); text-decoration:underline ">
                         Bimasha
                     </a>
                 </span>
             </span>
-            
+
         </p>
         <div style="float: right; color:white; padding-left: 40px; padding-right:40px; font-size:17px">
-            
+
         </div>
     </div>
 

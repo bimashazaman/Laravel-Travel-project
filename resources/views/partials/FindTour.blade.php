@@ -6,7 +6,7 @@
         <div class="div1Card">
             <div class="single-card">
                 <select name="type" id="type" style="border: none; background: transparent; margin-bottom:5%">
-                    <option value="">{{ __('Type') }}</option>
+                    <option value="">{{ __('Choose Type') }}</option>
                     @foreach ($types as $type)
                         <option value="{{ $type->id }}">{{ $type->name }}</option>
                     @endforeach
@@ -16,8 +16,8 @@
         <div class="div2Card">
             <div class="single-card">
                 <select name="type" id="type" style="border: none; background: transparent; margin-bottom:5%">
-                    <option value="">
-                        {{ __('Destination') }}
+                    <option value="" style="color: rgb(214, 200, 200)">
+                        {{" " . __('Destination') }}
                     </option>
                     @foreach ($destination as $type)
                         <option value="{{ $type->id }}">{{ $type->name }}</option>
@@ -28,10 +28,10 @@
 
         </div>
         <div class="div3Card">
-            <div class="single-card"> <input type="number" min="1" placeholder="{{ __('Duration') }}"></div>
+            <div class="single-card"> <input type="number" min="1" placeholder="{{"   " . __('Duration') }}"></div>
         </div>
         <div class="div4Card">
-            <div class="single-card"> <input type="text" placeholder="{{ __('Start Date') }}" onfocus="(this.type='date')"> </div>
+            <div class="single-card"> <input type="text" style=" ::placeholder:text-center" placeholder="{{ __('  Start Date') }}" onfocus="(this.type='date')"> </div>
         </div>
     </div>
     <button class="package-view">
