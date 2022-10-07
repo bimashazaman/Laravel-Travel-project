@@ -885,24 +885,12 @@
     "user": "Տվյալ Էլ․ հասցեով օգտատեր չի գտնվել։",
     "uuid": ":Attribute դաշտը պետք է լինի վավեր UUID։",
 
-
-
-
-
-
-
-
-
-
-
-
-
     "Find your tour here": "Որոնեք ձեր տուրը այստեղ",
     "Find your tour": "Որոնեք ձեր տուրը",
-    "Best suggestions":     "Լավագույն առաջարկներ",
-    "Best tours":   "Լավագույն տուրեր",
-    "Best prices":  "Լավագույն գներ",
-    "Best services":    "Լավագույն ծառայություններ",
+    "Best suggestions": "Լավագույն առաջարկներ",
+    "Best tours": "Լավագույն տուրեր",
+    "Best prices": "Լավագույն գներ",
+    "Best services": "Լավագույն ծառայություններ",
     "Best hotels": "Լավագույն հյուրանոցներ",
     "Best activities": "Լավագույն գործողություններ",
     "Best restaurants": "Լավագույն ռեստորաններ",
@@ -928,16 +916,16 @@
     "Select number of adults": "Ընտրեք մեծահասականների քանակը",
     "Select number of children": "Ընտրեք երեխաների քանակը",
     "Select number of infants": "Ընտրեք նորակների քանակը",
-  "Submit for a quote": "Ուղարկել առաջարկ",
+    "Submit for a quote": "Ուղարկել առաջարկ",
     "Submit": "Ուղարկել",
     "Submit your request": "Ուղարկեք ձեր հարցումը",
-  "Starting starting point": "Սկսել սկզբնական կետից",
+    "Starting starting point": "Սկսել սկզբնական կետից",
     "Starting point": "Սկզբնական կետ",
     "Starting point of the tour": "Տուրի սկզբնական կետ",
     "Starting point of the trip": "Ձեր սկզբնական կետը",
     "Starting point of the trip or tour": "Ձեր սկզբնական կետը կամ տուրի սկզբնական կետը",
-   "Child": "Երեխա",
-   "Adult": "Մեծահասական",
+    "Child": "Երեխա",
+    "Adult": "Մեծահասական",
     "Infant": "Նորակ",
     "Children": "Երեխաներ",
     "Adults": "Մեծահասականներ",
@@ -958,10 +946,10 @@
     "Bike": "Բիկի",
     "Create trip": "Ստեղծել ձեր տուրը",
     "Blog": "Բլոգ",
-   "Rent a transport": "Վարձավճարել տրանսպորտ",
+    "Rent a transport": "Վարձավճարել տրանսպորտ",
     "Rent a car": "Վարձավճարել ավտոմեքենա",
 
-   "Hotels":    "Հյուրանոցներ",
+    "Hotels": "Հյուրանոցներ",
     "Hotels in": "Հյուրանոցներ",
     "Hotels in Armenia": "Հյուրանոցներ Հայաստանում",
     "Hotels in Yerevan": "Հյուրանոցներ Երևանում",
@@ -972,25 +960,21 @@
     "Hotels in Vanadzor": "Հյուրանոցներ Վանաձորում",
     "Hotels in Alaverdi": "Հյուրանոցներ Ալավերդիու",
 
-   "Tour accessories":"Տուրի համար ապրանքներ",
-    "MICE":"MICE",
-    "Transfers with driver":"Տրանսֆերնե",
-    "Meet and transfer to the airport":"Միանալ և տրանսֆերնել առաքումին",
+    "Tour accessories": "Տուրի համար ապրանքներ",
+    "MICE": "MICE",
+    "Transfers with driver": "Տրանսֆերնե",
+    "Meet and transfer to the airport": "Միանալ և տրանսֆերնել առաքումին",
     "Key points": "Բազմաթիվ կետեր",
 
-    "Type":"Տեսակ",
+    "Type": "Տեսակ",
 
     "Number of seats": "Մատչելի անձների քանակը",
-    "Year":"Տարի",
-    "Free cancellation":"Անվճար չեղարկում",
+    "Year": "Տարի",
+    "Free cancellation": "Անվճար չեղարկում",
 
-    "Overview":"Ամփոփում",
+    "Overview": "Ամփոփում",
 
-
-   "Useful to know": "Օգտակար է իմանալ",
+    "Useful to know": "Օգտակար է իմանալ",
     "Useful to know about": "Օգտակար է իմանալ",
     "What is not included": "Ինչը չի ներառվում"
-
-
-
 }
