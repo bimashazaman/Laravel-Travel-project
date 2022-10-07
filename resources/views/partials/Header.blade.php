@@ -98,6 +98,23 @@
                                              href="{{ url('/contact') }}">{{ __('Contact us') }}</a>
                                      </div>
                                  </li>
+
+
+                                 <li class="nav-item dropdown ">
+                                    <a class="nav-link" href="{{ url('/call') }}"
+                                        >
+                                        {{ __('Call Now') }}
+                                    </a>
+                                    {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item ru"
+                                            href="{{ url('/aboutUs') }}">{{ __('Call') }}</a>
+                                        <a class="dropdown-item ru"
+                                            href="{{ url('/ways') }}">{{ __('Message') }}</a>
+                                        <a class="dropdown-item ru" href="{{ url('/privacy') }}">Privacy Policy</a>
+
+
+                                    </div> --}}
+                                </li>
                              </ul>
                              {{-- <li class="language">ENG</li>
                                       <li class="USD">USD</li> --}}

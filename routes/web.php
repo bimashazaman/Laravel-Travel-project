@@ -589,6 +589,7 @@ Route::post('/BookMice/store/{id}', [BookingMiceController::class, 'store']);
 
 Route::post('/contact/store', [ContactFormController::class, 'store']);
 Route::get('/contact/{locale?}', [ContactFormController::class, 'index']);
+Route::get('/call{locale?}', [ContactFormController::class, 'callNow']);
 
 // three step
 

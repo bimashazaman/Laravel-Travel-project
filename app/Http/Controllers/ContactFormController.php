@@ -17,6 +17,14 @@ class ContactFormController extends Controller
         return view('Frontend.Contact.Contact');
     }
 
+    public function callNow($locale = null)
+    {
+        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+            app()->setLocale($locale);
+        }
+        return view('Frontend.Contact.call');
+    }
+
 
     public function store(Request $request)
     {
@@ -24,14 +32,14 @@ class ContactFormController extends Controller
             'name' => 'required',
             'email' => 'required|email',
             'subject' => 'required',
-           
+
 
         ]);
         $bookAAcc =ContactForm::create([
             'name' => $request->name,
             'email' => $request->email,
             'subject' => $request->subject,
-           
+
         ]);
         $data = [
             'name' => $request->name,
@@ -43,12 +51,12 @@ class ContactFormController extends Controller
             'name' => $request->name,
             'email' => $request->email,
             'subject' => $request->subject,
-        
+
         ), function( $data) use ($request){
-           
+
              $data->from($request->email);
              $data->to('Sales.2expedition@gmail.com')->subject('Contact from '. $request->name);
-        });       
+        });
         return redirect()
         ->back()
         ->with("msg", "Thanks for Contacting! We will contact you soon.")
