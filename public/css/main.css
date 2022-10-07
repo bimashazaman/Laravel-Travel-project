@@ -26,6 +26,11 @@ body {
     overflow-x: hidden;
 }
 
+a {
+    
+    text-decoration: none;
+}
+
 /* .findTour {
     align-items: center;
     justify-content: center;

@@ -19,7 +19,7 @@ class TourTypeSeeder extends Seeder
                 "name"=> "Classic Tours"
             ],
             [
-                "name"=> "Tours With Gurantee Departures"
+                "name"=> "Gurantee Departures"
             ],
             [
                 "name"=> "Gastro Tours"
