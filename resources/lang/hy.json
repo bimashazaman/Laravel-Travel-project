@@ -883,7 +883,114 @@
     "uploaded": ":Attribute-ի վերբեռնումը ձախողվել է։",
     "url": ":Attribute դաշտի ձևաչափը սխալ է։",
     "user": "Տվյալ Էլ․ հասցեով օգտատեր չի գտնվել։",
-    "uuid": ":Attribute դաշտը պետք է լինի վավեր UUID։"
-    
+    "uuid": ":Attribute դաշտը պետք է լինի վավեր UUID։",
+
+
+
+
+
+
+
+
+
+
+
+
+
+    "Find your tour here": "Որոնեք ձեր տուրը այստեղ",
+    "Find your tour": "Որոնեք ձեր տուրը",
+    "Best suggestions":     "Լավագույն առաջարկներ",
+    "Best tours":   "Լավագույն տուրեր",
+    "Best prices":  "Լավագույն գներ",
+    "Best services":    "Լավագույն ծառայություններ",
+    "Best hotels": "Լավագույն հյուրանոցներ",
+    "Best activities": "Լավագույն գործողություններ",
+    "Best restaurants": "Լավագույն ռեստորաններ",
+    "Best experiences": "Լավագույն փորձեր",
+    "Best tours in the city": "Լավագույն տուրեր քաղաքում",
+    "Best tours in the country": "Լավագույն տուրեր երկրում",
+    "Best tours in the region": "Լավագույն տուրեր տարածքում",
+    "Best tours in the world": "Լավագույն տուրեր աշխարհում",
+    "One day tours": "Մեկ օրվա տուրեր",
+    "Fixed date tours": "Սահմանված ամսաթվերով տուրեր",
+    "Choose one of our tours or create your own trip": "Ընտրեք մեր տուրերից կամ ստեղծեք ձեր սեփական տուրը",
+    "Information about the group": "Տուրի մասին տվյալներ",
+    "Information about the tour": "Տուրի մասին տվյալներ",
+    "Information about the hotel": "Հյուրանոցի մասին տվյալներ",
+    "Information about the activity": "Գործողության մասին տվյալներ",
+
+    "Select destination": "Ընտրեք նպատակը",
+    "Select date": "Ընտրեք ամսաթիվը",
+    "Select time": "Ընտրեք ժամը",
+    "Select duration": "Ընտրեք տուրի տևողությունը",
+    "Select number of people": "Ընտրեք մարդկանց քանակը",
+    "Select number of rooms": "Ընտրեք սենյակների քանակը",
+    "Select number of adults": "Ընտրեք մեծահասականների քանակը",
+    "Select number of children": "Ընտրեք երեխաների քանակը",
+    "Select number of infants": "Ընտրեք նորակների քանակը",
+  "Submit for a quote": "Ուղարկել առաջարկ",
+    "Submit": "Ուղարկել",
+    "Submit your request": "Ուղարկեք ձեր հարցումը",
+  "Starting starting point": "Սկսել սկզբնական կետից",
+    "Starting point": "Սկզբնական կետ",
+    "Starting point of the tour": "Տուրի սկզբնական կետ",
+    "Starting point of the trip": "Ձեր սկզբնական կետը",
+    "Starting point of the trip or tour": "Ձեր սկզբնական կետը կամ տուրի սկզբնական կետը",
+   "Child": "Երեխա",
+   "Adult": "Մեծահասական",
+    "Infant": "Նորակ",
+    "Children": "Երեխաներ",
+    "Adults": "Մեծահասականներ",
+    "Infants": "Նորակներ",
+    "Number of people": "Մարդկանց քանակը",
+    "Number of rooms": "Սենյակների քանակը",
+    "Car": "Ավտոմեքենա",
+    "Bus": "Ավտոբուս",
+    "Train": "Տրանսպորտ",
+    "Flight": "Առաքում",
+
+    "Bicycle": "Բիկի",
+    "Motorcycle": "Մոտոկլիկլ",
+
+    "Car rental": "Ավտոմեքենայի վարձավճար",
+
+    "Hiking": "Հանգստանալ",
+    "Bike": "Բիկի",
+    "Create trip": "Ստեղծել ձեր տուրը",
+    "Blog": "Բլոգ",
+   "Rent a transport": "Վարձավճարել տրանսպորտ",
+    "Rent a car": "Վարձավճարել ավտոմեքենա",
+
+   "Hotels":    "Հյուրանոցներ",
+    "Hotels in": "Հյուրանոցներ",
+    "Hotels in Armenia": "Հյուրանոցներ Հայաստանում",
+    "Hotels in Yerevan": "Հյուրանոցներ Երևանում",
+    "Hotels in Gyumri": "Հյուրանոցներ Գյումրիում",
+    "Hotels in Dilijan": "Հյուրանոցներ Դիլիջանում",
+    "Hotels in Tsaghkadzor": "Հյուրանոցներ Ծաղկաձորում",
+    "Hotels in Sevan": "Հյուրանոցներ Սևանում",
+    "Hotels in Vanadzor": "Հյուրանոցներ Վանաձորում",
+    "Hotels in Alaverdi": "Հյուրանոցներ Ալավերդիու",
+
+   "Tour accessories":"Տուրի համար ապրանքներ",
+    "MICE":"MICE",
+    "Transfers with driver":"Տրանսֆերնե",
+    "Meet and transfer to the airport":"Միանալ և տրանսֆերնել առաքումին",
+    "Key points": "Բազմաթիվ կետեր",
+
+    "Type":"Տեսակ",
+
+    "Number of seats": "Մատչելի անձների քանակը",
+    "Year":"Տարի",
+    "Free cancellation":"Անվճար չեղարկում",
+
+    "Overview":"Ամփոփում",
+
+
+   "Useful to know": "Օգտակար է իմանալ",
+    "Useful to know about": "Օգտակար է իմանալ",
+    "What is not included": "Ինչը չի ներառվում"
+
+
 
 }
