@@ -99,13 +99,28 @@
                                      </div>
                                  </li>
 
-
                                  <li class="nav-item dropdown ">
+                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                        role="button" data-toggle="dropdown" aria-haspopup="true"
+                                        aria-expanded="false">
+                                        {{ __('Contact Faster') }}
+                                    </a>
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                        <a class="dropdown-item ru"
+                                            href="{{ url('/call') }}">{{ __('Call') }}</a>
+
+                                        <a class="dropdown-item ru"
+                                            href="{{ url('/contact') }}">{{ __('Message') }}</a>
+                                    </div>
+                                </li>
+
+
+                                 {{-- <li class="nav-item dropdown ">
                                     <a class="nav-link" href="{{ url('/call') }}"
                                         >
                                         {{ __('Call Now') }}
                                     </a>
-                                    {{-- <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
                                         <a class="dropdown-item ru"
                                             href="{{ url('/aboutUs') }}">{{ __('Call') }}</a>
                                         <a class="dropdown-item ru"
@@ -113,8 +128,8 @@
                                         <a class="dropdown-item ru" href="{{ url('/privacy') }}">Privacy Policy</a>
 
 
-                                    </div> --}}
-                                </li>
+                                    </div>
+                                </li> --}}
                              </ul>
                              {{-- <li class="language">ENG</li>
                                       <li class="USD">USD</li> --}}
