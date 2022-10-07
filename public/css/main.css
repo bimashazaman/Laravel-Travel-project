@@ -27,7 +27,7 @@ body {
 }
 
 a {
-    
+
     text-decoration: none;
 }
 
@@ -1062,6 +1062,14 @@ body {
     margin: auto;
     width:50%;
     text-align: center;
+}
+
+@media screen and (max-width: 600px) {
+    .RentForm {
+        width: 80%;
+    }
+
+
 }
 
 .RentForm input {

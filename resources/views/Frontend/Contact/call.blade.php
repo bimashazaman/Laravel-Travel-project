@@ -45,46 +45,16 @@
                 <input class="form-check-input" type="checkbox" value="" id="defaultCheck1">
                 <img style="width: 35px; height:35px; border-radius:100%" src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTHobjUMqTXVw3Zt0IZ7yTQpqK3nwxZAUlO6g&usqp=CAU">
               </div>
-
-
-
            </div>
-
-            {{-- <div class="form-group">
-                <select name="" id="" class="form-control">
-                    <option value="">
-                       <div>
-                         what is the preferred type for the call?
-                       </div>
-                    </option>
-                    <option value="whatsApp">
-                        <img style="width: 30px; height:30px; border-radius:100%" src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6b/WhatsApp.svg/2044px-WhatsApp.svg.png">
-                        whatsApp
-                    </option>
-                    <option value="Phone">
-                        Phone
-                    </option>
-                    <option value="telegram">
-                        telegram
-                    </option>
-
-                    <option value="Viber">
-                        Viber
-                    </option>
-
-
-
-                </select>
-            </div> --}}
 
             <div class="form-group">
                 <textarea placeholder="{{ __('Write a message') }}" class="form-control" name="subject" id="" cols="85"
-                    rows="7" style="background-color:#F7F6F4; border:none"></textarea>
+                    rows="3" style="background-color:#F7F6F4; border:none"></textarea>
             </div>
 
 
 
-            <button type="submit" class="package-view" style="text-align: center">{{ __('Send') }}</button>
+            <button type="submit" class="package-view" style="text-align: center">{{ __('Send a order') }}</button>
             <br>
             <br>
             <center>
