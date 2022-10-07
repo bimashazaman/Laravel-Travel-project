@@ -20,6 +20,13 @@ class FrontendController extends Controller
     // }
 
 
+    public function Search(Request $request)
+    {
+        $tours = Tour::where('name', 'like', '%' . $request->search . '%')->get();
+        return view('Frontend.Search.Search', compact('tours'));
+    }
+
+
    public function getTours($name) {
     $cat = TourCategory::where('name', $name)->first();
     if ($cat) {
@@ -102,6 +109,7 @@ class FrontendController extends Controller
             "tour" => $tour
         ]);
     }
+
 
 
 }

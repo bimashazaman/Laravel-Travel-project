@@ -194,10 +194,15 @@
                                      </div>
                                  </li>
                                  <li style="display: flex">
+                                    <form action="">
                                      <input type="text" placeholder="{{ __('Search') }}" class="searchHeader"
-                                         style="margin-top: 1px;">
+                                         style="margin-top: 1px;"
+                                           
+
+                                         >
                                      <i class="fa-solid fa-magnifying-glass"
                                          style="color: rgb(192, 181, 181); margin-top:10px; margin-left: 10px"></i>
+                                        </form>
                                  </li>
                              </ul>
                          </div>
