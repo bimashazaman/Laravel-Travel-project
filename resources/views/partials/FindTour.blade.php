@@ -33,8 +33,15 @@
 
             </div>
             <div class="div3Card">
-                <div class="single-card"> <input type="number" min="1"
-                        placeholder="{{ '   ' . __('Duration') }}"></div>
+                <div class="single-card"> <input type="text"
+
+              style="
+              position: relative;
+              margin: auto;
+                width: 55%;
+                margin-bottom:2%
+              "
+                        placeholder="{{ '  ' . "  ".  __('Duration') }}"></div>
             </div>
             <div class="div4Card">
                 {{-- <div class="single-card"> <input type="text" style=" ::placeholder:text-center" placeholder="{{ __('  Start Date') }}" onfocus="(this.type='date')"> </div> --}}
