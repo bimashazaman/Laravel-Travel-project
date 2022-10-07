@@ -18,6 +18,8 @@ class CreateCallsTable extends Migration
             $table->string('name');
             $table->string('country_code');
             $table->string('phone');
+            $table->string('email');
+            $table->string('via')->nullable();
             $table->string('message');
             $table->timestamps();
         });

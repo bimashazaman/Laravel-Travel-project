@@ -588,6 +588,8 @@ Route::post('/BookMice/store/{id}', [BookingMiceController::class, 'store']);
 //======Contact Us=======
 
 Route::post('/contact/store', [ContactFormController::class, 'store']);
+Route::post('/call/store', [ContactFormController::class, 'callStore']);
+
 Route::get('/contact/{locale?}', [ContactFormController::class, 'index']);
 Route::get('/call{locale?}', [ContactFormController::class, 'callNow']);
 

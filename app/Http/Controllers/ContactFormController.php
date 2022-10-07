@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Call;
 use App\Models\ContactForm;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Mail;
@@ -61,5 +62,55 @@ class ContactFormController extends Controller
         ->back()
         ->with("msg", "Thanks for Contacting! We will contact you soon.")
         ->with("success", true);
+    }
+
+
+    public function callStore(Request $request)
+    {
+        $this->validate($request, [
+            'name' => 'required',
+            'country_code' => 'required',
+            'via' => '',
+            'email' => 'required|email',
+            'phone' => 'required',
+            'message' => 'required',
+
+        ]);
+        $bookAAcc =Call::create([
+            'name' => $request->name,
+            'country_code' => $request->country_code,
+            'via' => $request->via,
+            'email' => $request->email,
+            'phone' => $request->phone,
+            'message' => $request->message,
+
+        ]);
+        $data1 = [
+            'name' => $request->name,
+            'country_code' => $request->country_code,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'via' => $request->via,
+            'message' => $request->message,
+        ];
+
+            Mail::send('Frontend.Booking.callEmail', array(
+            'name' => $request->name,
+            'country_code' => $request->country_code,
+            'phone' => $request->phone,
+            'email' => $request->email,
+            'via' => $request->via,
+            'message' => $request->message,
+
+        ), function( $data1) use ($request){
+
+             $data1->from($request->email);
+             $data1->to('developerbimasha@gmail.com')->subject('Call from '. $request->name);
+        });
+        return redirect()
+        ->back()
+        ->with("msg", "Thanks for Contacting! We will contact you soon.")
+        ->with("success", true);
+
     }
 }

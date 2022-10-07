@@ -8,4 +8,13 @@ use Illuminate\Database\Eloquent\Model;
 class Call extends Model
 {
     use HasFactory;
+
+    protected $fillable = [
+        'name',
+        'country_code',
+        'via',
+        'email',
+        'phone',
+        'message',
+    ];
 }
