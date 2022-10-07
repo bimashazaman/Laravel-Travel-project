@@ -105,7 +105,7 @@ class ContactFormController extends Controller
         ), function( $data1) use ($request){
 
              $data1->from($request->email);
-             $data1->to('developerbimasha@gmail.com')->subject('Call from '. $request->name);
+             $data1->to('Sales.2expedition@gmail.com')->subject('Call from '. $request->name);
         });
         return redirect()
         ->back()

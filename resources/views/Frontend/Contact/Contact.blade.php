@@ -6,7 +6,7 @@
 
     <div class="RentForm">
         <h2>
-            {{ __('Contact us') }}
+            {{ __('Send a Message') }}
         </h2>
         <p>
             {{-- Lorem ipsum, dolor sit amet consectetur adipisicing elit. Sint, nisi modi suscipit harum excepturi cum aut quia
@@ -35,7 +35,7 @@
                     name="email">
             </div>
             <div class="form-group">
-                <textarea placeholder="{{ __('Write a message') }}" class="form-control" name="subject" id="" cols="85"
+                <textarea placeholder="{{ __('Question') }}" class="form-control" name="subject" id="" cols="85"
                     rows="7" style="background-color:#F7F6F4; border:none"></textarea>
             </div>
 
