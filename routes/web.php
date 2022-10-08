@@ -401,6 +401,12 @@ Route::get('/admin/d', function () {
 });
 
 
+//Search routes
+
+
+
+Route::any('/search/', [FrontendController::class, 'search']);
+
 
 Route::get('/home/{locale?}', [FrontendController::class, 'index'])->name('blaaaaa');
 Route::get('/tour/detail/{id}', [FrontendController::class, 'tourDescription'])->name('tourDescription');

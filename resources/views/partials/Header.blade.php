@@ -100,19 +100,19 @@
                                  </li>
 
                                  <li class="nav-item dropdown ">
-                                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
-                                        role="button" data-toggle="dropdown" aria-haspopup="true"
-                                        aria-expanded="false">
-                                        {{ __('Contact Faster') }}
-                                    </a>
-                                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
-                                        <a class="dropdown-item ru"
-                                            href="{{ url('/call') }}">{{ __('Call') }}</a>
+                                     <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown"
+                                         role="button" data-toggle="dropdown" aria-haspopup="true"
+                                         aria-expanded="false">
+                                         {{ __('Contact Faster') }}
+                                     </a>
+                                     <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                                         <a class="dropdown-item ru"
+                                             href="{{ url('/call') }}">{{ __('Call') }}</a>
 
-                                        <a class="dropdown-item ru"
-                                            href="{{ url('/contact') }}">{{ __('Message') }}</a>
-                                    </div>
-                                </li>
+                                         <a class="dropdown-item ru"
+                                             href="{{ url('/contact') }}">{{ __('Message') }}</a>
+                                     </div>
+                                 </li>
 
 
                                  {{-- <li class="nav-item dropdown ">
@@ -164,7 +164,7 @@
                                      </a>
                                      <div class="dropdown-menu" aria-labelledby="navbarDropdown" style="width: auto">
                                          <a class="dropdown-item" href="{{ url(url()->current() . '/' . 'ru') }}">
-                                            Русский <img
+                                             Русский <img
                                                  src="https://upload.wikimedia.org/wikipedia/en/thumb/f/f3/Flag_of_Russia.svg/1200px-Flag_of_Russia.svg.png"
                                                  alt="" style="width: 20px; height:20px">
                                          </a>
@@ -173,16 +173,14 @@
                                          <a class="dropdown-item" href="{{ url(url()->current() . '/' . 'en') }}">
                                              {{ __('English') }}
 
-                                                <img
-                                                    src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"
-                                                    alt="" style="width: 20px; height:20px">
+                                             <img src="https://upload.wikimedia.org/wikipedia/en/thumb/a/a4/Flag_of_the_United_States.svg/1200px-Flag_of_the_United_States.svg.png"
+                                                 alt="" style="width: 20px; height:20px">
 
                                          </a>
 
                                          <a class="dropdown-item" href="{{ url(url()->current() . '/' . 'hy') }}">
-                                            Հայերեն <img
-                                             src="https://www.worldatlas.com/img/flag/am-flag.jpg"
-                                             alt="" style="width: 20px; height:20px">
+                                             Հայերեն <img src="https://www.worldatlas.com/img/flag/am-flag.jpg"
+                                                 alt="" style="width: 20px; height:20px">
                                          </a>
 
                                          {{-- @foreach ($available_locales as $locale_name => $available_locale) --}}
@@ -194,15 +192,12 @@
                                      </div>
                                  </li>
                                  <li style="display: flex">
-                                    <form action="">
-                                     <input type="text" placeholder="{{ __('Search') }}" class="searchHeader"
-                                         style="margin-top: 1px;"
-                                           
-
-                                         >
-                                     <i class="fa-solid fa-magnifying-glass"
-                                         style="color: rgb(192, 181, 181); margin-top:10px; margin-left: 10px"></i>
-                                        </form>
+                                     <form action="/search"  method="GET" role="search">
+                                         <input type="text" placeholder="{{ __('Search') }}"
+                                             class="searchHeader" style="margin-top: 1px;">
+                                         <i class="fa-solid fa-magnifying-glass"
+                                             style="color: rgb(192, 181, 181); margin-top:10px; margin-left: 10px"></i>
+                                     </form>
                                  </li>
                              </ul>
                          </div>
