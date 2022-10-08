@@ -30,7 +30,14 @@ class FrontendController extends Controller
         $tours = Tour::where('category_id', $data['name'])->get();
 
 
+            if($data['destination'] != null){
+                $tours = $tours->where('destination_id', $data['destination']);
+            }
 
+            //seach
+            if($data['search'] != null){
+                $tours = $tours->where('name', 'like', '%'.$data['search'].'%');
+            }
 
         // if(isset($data['name'])){
         //     $tours = $tours->where('type_id', $data['name']);

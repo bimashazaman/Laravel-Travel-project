@@ -5,7 +5,7 @@
     <form
         action="{{ url('/filter') }}"
         method="GET"
-      
+
 
     >
         <div class="parentCard">
@@ -27,7 +27,7 @@
             </div>
             <div class="div2Card">
                 <div class="single-card">
-                    <select name="" id="type"
+                    <select name="destination" id="type"
                         style="border: none; background: transparent; margin-bottom:5%">
                         <option value="" style="color: rgb(214, 200, 200)">
                             {{ ' ' . __('Destination') }}
@@ -54,7 +54,7 @@
             <div class="div4Card">
                 {{-- <div class="single-card"> <input type="text" style=" ::placeholder:text-center" placeholder="{{ __('  Start Date') }}" onfocus="(this.type='date')"> </div> --}}
                 <div class="single-card">
-                    <select name="" id="" style="border: none;  background: transparent;">
+                    <select name="search" id="" style="border: none;  background: transparent;">
                         <option value="">{{ __('Start Date') }}</option>
                         <option value="january">
                             {{ __('January') }}
