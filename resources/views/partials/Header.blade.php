@@ -192,7 +192,7 @@
                                      </div>
                                  </li>
                                  <li style="display: flex">
-                                     <form action="/search"  method="GET" role="search">
+                                     <form action="/search" method="GET" role="search">
                                          <input type="text" placeholder="{{ __('Search') }}"
                                              class="searchHeader" style="margin-top: 1px;">
                                          <i class="fa-solid fa-magnifying-glass"

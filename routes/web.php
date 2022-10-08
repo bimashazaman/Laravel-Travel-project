@@ -543,6 +543,9 @@ Route::get('/BookHotel', function () {
     return view('Frontend.Hotels.BookHotelForm');
 });
 
+//filter
+Route::get('/filter', [FrontendController::class, 'filter']);
+
 
 
 Route::get('/driver/{locale?}', [CarWithDriverController::class, 'getAll']);

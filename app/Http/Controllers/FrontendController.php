@@ -13,11 +13,17 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
 
-    // public function getClasicTours()
-    // {
-    //     $tours = Tour::where('tour_category_id', 1)->get();
-    //     return view('Frontend.BasicTours.BasicTours', compact('tours'));
-    // }
+   public function filter(Request $request)
+    {
+
+        $data = $request->all();
+
+        $tours = Tour::all();
+        $tour_category = TourCategory::where('id', $data['name'])->first();
+
+        return view('Frontend.Filter.index', compact( 'tours', 'tour_category'));
+
+    }
 
 
     public function Search(Request $request)

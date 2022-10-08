@@ -2,16 +2,24 @@
     <h2>
         {{ __('Find Your Tour Here') }}
     </h2>
-    <form action="">
+    <form
+        action="{{ url('/filter') }}"
+        method="GET"
+        role="search"
+
+    >
         <div class="parentCard">
             <div class="div1Card">
                 <div class="single-card">
                     <div style="">
-                        <select name="type" id="type"
+                        <select name="name" id="type"
                             style="border: none; width: 150px; background: transparent; margin-bottom:5%">
-                            <option value="">{{ __('Choose Type') }}</option>
+                            <option
+
+                            value="">{{ __('Choose Type') }}</option>
                             @foreach ($types as $type)
-                                <option value="{{ $type->id }}">{{ $type->name }}</option>
+                                <option
+                                 name="name" value="{{ $type->id }}">{{ $type->name }}</option>
                             @endforeach
                         </select>
                     </div>
