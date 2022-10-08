@@ -5,7 +5,7 @@
     <form
         action="{{ url('/filter') }}"
         method="GET"
-        role="search"
+      
 
     >
         <div class="parentCard">
@@ -27,7 +27,7 @@
             </div>
             <div class="div2Card">
                 <div class="single-card">
-                    <select name="type" id="type"
+                    <select name="" id="type"
                         style="border: none; background: transparent; margin-bottom:5%">
                         <option value="" style="color: rgb(214, 200, 200)">
                             {{ ' ' . __('Destination') }}

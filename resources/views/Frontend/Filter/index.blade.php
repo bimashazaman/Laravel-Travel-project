@@ -4,6 +4,9 @@
 <div class="fullBanner">
     @include('partials.DefaultBanner')
 
+
+    @include('partials.FindTour')
+
     <section id="pack" class="packages">
         <div class="container">
             <!--/.gallery-header-->

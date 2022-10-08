@@ -18,10 +18,40 @@ class FrontendController extends Controller
 
         $data = $request->all();
 
-        $tours = Tour::all();
-        $tour_category = TourCategory::where('id', $data['name'])->first();
+        // $tours = Tour::all();
 
-        return view('Frontend.Filter.index', compact( 'tours', 'tour_category'));
+        $destination = Destination::all();
+        $types = TourCategory::all();
+
+        // if($data['destination'] != null){
+        //     $tours = $tours->where('destination_id', $data['destination']);
+        // }
+
+        $tours = Tour::where('category_id', $data['name'])->get();
+
+
+
+
+        // if(isset($data['name'])){
+        //     $tours = $tours->where('type_id', $data['name']);
+        // }
+        // $filter = $types->filter(function ($item) use ($data) {
+        //     return $item->id == $data['name'];
+        // })->random();
+
+
+
+        // if (isset($data['id'])) {
+        //     $tours = $tours->where('id', $data['name']);
+        // }
+
+
+
+        // $tour_category = TourCategory::where('id', $data['name'])->first();
+
+        // $tours = $tours->where('tour_category_id', $tour_category->id);
+
+        return view('Frontend.Filter.index', compact( 'tours','destination','types'));
 
     }
 
