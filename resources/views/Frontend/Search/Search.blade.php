@@ -4,6 +4,29 @@
 <div class="fullBanner">
     @include('partials.DefaultBanner')
 
+    <center>
+        <div class="search">
+            <form action="{{ url('/search') }}" method="GET">
+                <div class="search-box">
+                    <input type="text" name="search" placeholder="Search" class="search-txt" style="width:50%; background-color:beige; border:none; padding:10px; border-radius:30px">
+                    <button type="submit" class="search-btn" style="background-color:#284525; color:white; padding:10px; border-radius:30px; border:none">
+                       Search
+                    </button>
+                </div>
+            </form>
+        </div>
+    </center>
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="banner-content">
+                   {{ count($tours) }} {{ __('results found') }}
+                </div>
+            </div>
+        </div>
+
+    </div>
 
     <section id="pack" class="packages">
         <div class="container">
@@ -13,7 +36,7 @@
                     <div data-slick='{"slidesToShow": 4, "slidesToScroll": 4}' class="autoplay">
                         @foreach ($tours as $tour)
                             <div class="col-md-4 col-sm-6">
-                                
+
                                 <div class="single-package-item">
                                     <img src="{{ url($tour->images->first()->path) }}" alt="{{ __($tour->name) }}">
                                     <div class="packageName">
