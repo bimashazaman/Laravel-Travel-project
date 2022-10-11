@@ -65,7 +65,7 @@
                 {!! NoCaptcha::display() !!}
             </center>
         </form>
-        <img src="{{ asset('images/ci.png') }}" style="width: 100%; text-align:center; align-items:center">
+        {{-- <img src="{{ asset('images/ci.png') }}" style="width: 100%; text-align:center; align-items:center"> --}}
 
     </div>
 

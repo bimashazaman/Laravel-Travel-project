@@ -1,7 +1,9 @@
 <div class="footer-clean">
     <div class="container-fluid">
         <div class="footerImage" style="text-align: center">
+            <a href="{{url('/Articles')}}">
             <img src="http://127.0.0.1:8000/images/footerImage.png" style="width: 95%" alt="">
+        </a>
         </div>
         <footer style="width: 95%;display: flow-root;margin-left: 6%;">
             <div class="row justify-content-center">

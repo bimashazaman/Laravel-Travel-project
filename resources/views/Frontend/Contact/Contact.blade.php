@@ -27,15 +27,15 @@
 
             <div class="form-group">
 
-                <input type="text" class="form-control" id="" placeholder="{{ __('Name') }}*" name="name">
+                <input type="text" required class="form-control" id="" placeholder="{{ __('Name') }}*" name="name">
             </div>
             <div class="form-group">
 
-                <input type="text" class="form-control" id="inputAddress2" placeholder="{{ __('Email') }}*"
+                <input type="email" required class="form-control" id="inputAddress2" placeholder="{{ __('Email') }}*"
                     name="email">
             </div>
             <div class="form-group">
-                <textarea placeholder="{{ __('Question') }}" class="form-control" name="subject" id="" cols="85"
+                <textarea placeholder="{{ __('Question') }}"  class="form-control" name="subject" id="" cols="85"
                     rows="7" style="background-color:#F7F6F4; border:none"></textarea>
             </div>
 
@@ -49,7 +49,7 @@
                 {!! NoCaptcha::display() !!}
             </center>
         </form>
-        <img src="{{ asset('images/ci.png') }}" style="width: 100%; text-align:center; align-items:center">
+        {{-- <img src="{{ asset('images/ci.png') }}" style="width: 100%; text-align:center; align-items:center"> --}}
 
     </div>
 

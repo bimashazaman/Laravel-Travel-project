@@ -49,11 +49,9 @@ use App\Http\Controllers\UsefulInfoController;
 use App\Http\Controllers\VacancyCmsController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\WaysToBookController;
-use App\Models\AdminDestination;
-use App\Models\TourCreator;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
-use Mcamara\LaravelLocalization\Facades\LaravelLocalization;
+
 
 //============login===============
 
@@ -64,303 +62,303 @@ Route::post('/loginTo', [LoginController::class, 'loginTo'])->name('loginTo');
 Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
 
 //===============reviews===============
-Route::get('/reviews', [ReviewController::class, 'index']);
+Route::get('/reviews/{locale?}', [ReviewController::class, 'index']);
 Route::get('/AddReview/', [ReviewController::class, 'create']);
 Route::post('/review/store', [ReviewController::class, 'store']);
 
 Route::group(['middleware' => ['admin']], function () {
 
 
-//========Home ==========
-// Route::get('/homeCms/{id}', [HomeCmsController::class, 'index']);
-Route::get('/homeCms/{id}/edit', [HomeCmsController::class, 'edit']);
-Route::put('/homeCms/{id}', [HomeCmsController::class, 'update']);
-Route::delete('/homeCms/{id}', [HomeCmsController::class, 'destroy']);
+    //========Home ==========
+    // Route::get('/homeCms/{id}', [HomeCmsController::class, 'index']);
+    Route::get('/homeCms/{id}/edit', [HomeCmsController::class, 'edit']);
+    Route::put('/homeCms/{id}', [HomeCmsController::class, 'update']);
+    Route::delete('/homeCms/{id}', [HomeCmsController::class, 'destroy']);
 
-//======Tour========
-// Route::get('/tourCms', [TourCmsController::class, 'index']);
-Route::get('/tourCms/{id}/edit', [TourCmsController::class, 'edit']);
-Route::put('/tourCms/{id}', [TourCmsController::class, 'update']);
-Route::delete('/tourCms/{id}', [TourCmsController::class, 'destroy']);
+    //======Tour========
+    // Route::get('/tourCms', [TourCmsController::class, 'index']);
+    Route::get('/tourCms/{id}/edit', [TourCmsController::class, 'edit']);
+    Route::put('/tourCms/{id}', [TourCmsController::class, 'update']);
+    Route::delete('/tourCms/{id}', [TourCmsController::class, 'destroy']);
 
 
-//=======Car=======
-// Route::get('/carCms', [CarCmsController::class, 'index']);
-Route::get('/carCms/{id}/edit', [CarCmsController::class, 'edit']);
-Route::put('/carCms/{id}', [CarCmsController::class, 'update']);
-Route::delete('/carCms/{id}', [CarCmsController::class, 'destroy']);
+    //=======Car=======
+    // Route::get('/carCms', [CarCmsController::class, 'index']);
+    Route::get('/carCms/{id}/edit', [CarCmsController::class, 'edit']);
+    Route::put('/carCms/{id}', [CarCmsController::class, 'update']);
+    Route::delete('/carCms/{id}', [CarCmsController::class, 'destroy']);
 
 
-//=======Hotel=======
-// Route::get('/hotelCms', [HotelCmsController::class, 'index']);
-Route::get('/hotelCms/{id}/edit', [HotelCmsController::class, 'edit']);
-Route::put('/hotelCms/{id}', [HotelCmsController::class, 'update']);
-Route::delete('/hotelCms/{id}', [HotelCmsController::class, 'destroy']);
+    //=======Hotel=======
+    // Route::get('/hotelCms', [HotelCmsController::class, 'index']);
+    Route::get('/hotelCms/{id}/edit', [HotelCmsController::class, 'edit']);
+    Route::put('/hotelCms/{id}', [HotelCmsController::class, 'update']);
+    Route::delete('/hotelCms/{id}', [HotelCmsController::class, 'destroy']);
 
 
-//=======Accessiories=======
-// Route::get('/accessioriesCms', [AccessioriesCmsController::class, 'index']);
-Route::get('/accessioriesCms/{id}/edit', [AccessioriesCmsController::class, 'edit']);
-Route::put('/accessioriesCms/{id}', [AccessioriesCmsController::class, 'update']);
-Route::delete('/accessioriesCms/{id}', [AccessioriesCmsController::class, 'destroy']);
+    //=======Accessiories=======
+    // Route::get('/accessioriesCms', [AccessioriesCmsController::class, 'index']);
+    Route::get('/accessioriesCms/{id}/edit', [AccessioriesCmsController::class, 'edit']);
+    Route::put('/accessioriesCms/{id}', [AccessioriesCmsController::class, 'update']);
+    Route::delete('/accessioriesCms/{id}', [AccessioriesCmsController::class, 'destroy']);
 
 
-//======Mice ======
-// Route::get('/miceCms/{id}', [MiceCmsController::class, 'index']);
-Route::get('/miceCms/{id}/edit', [MiceCmsController::class, 'edit']);
-Route::put('/miceCms/{id}', [MiceCmsController::class, 'update']);
-Route::delete('/miceCms/{id}', [MiceCmsController::class, 'destroy']);
+    //======Mice ======
+    // Route::get('/miceCms/{id}', [MiceCmsController::class, 'index']);
+    Route::get('/miceCms/{id}/edit', [MiceCmsController::class, 'edit']);
+    Route::put('/miceCms/{id}', [MiceCmsController::class, 'update']);
+    Route::delete('/miceCms/{id}', [MiceCmsController::class, 'destroy']);
 
 
-//=======Blog=======
-// Route::get('/blogCms', [BlogCmsController::class, 'index']);
-Route::get('/blogCms/{id}/edit', [BlogCmsController::class, 'edit']);
-Route::put('/blogCms/{id}', [BlogCmsController::class, 'update']);
-Route::delete('/blogCms/{id}', [BlogCmsController::class, 'destroy']);
+    //=======Blog=======
+    // Route::get('/blogCms', [BlogCmsController::class, 'index']);
+    Route::get('/blogCms/{id}/edit', [BlogCmsController::class, 'edit']);
+    Route::put('/blogCms/{id}', [BlogCmsController::class, 'update']);
+    Route::delete('/blogCms/{id}', [BlogCmsController::class, 'destroy']);
 
 
-//=====Vacancy======
-// Route::get('/vacancyCms', [VacancyCmsController::class, 'index']);
-Route::get('/vacancyCms/{id}/edit', [VacancyCmsController::class, 'edit']);
-Route::put('/vacancyCms/{id}', [VacancyCmsController::class, 'update']);
-Route::delete('/vacancyCms/{id}', [VacancyCmsController::class, 'destroy']);
+    //=====Vacancy======
+    // Route::get('/vacancyCms', [VacancyCmsController::class, 'index']);
+    Route::get('/vacancyCms/{id}/edit', [VacancyCmsController::class, 'edit']);
+    Route::put('/vacancyCms/{id}', [VacancyCmsController::class, 'update']);
+    Route::delete('/vacancyCms/{id}', [VacancyCmsController::class, 'destroy']);
 
 
-//========Review========
-// Route::get('/reviewCms', [ReviewCmsController::class, 'index']);
-Route::get('/reviewCms/{id}/edit', [ReviewCmsController::class, 'edit']);
-Route::put('/reviewCms/{id}', [ReviewCmsController::class, 'update']);
-Route::delete('/reviewCms/{id}', [ReviewCmsController::class, 'destroy']);
+    //========Review========
+    // Route::get('/reviewCms', [ReviewCmsController::class, 'index']);
+    Route::get('/reviewCms/{id}/edit', [ReviewCmsController::class, 'edit']);
+    Route::put('/reviewCms/{id}', [ReviewCmsController::class, 'update']);
+    Route::delete('/reviewCms/{id}', [ReviewCmsController::class, 'destroy']);
 
 
 
-//=========TourCreator Destination=========
-Route::get('/admin/destination', [AdminDestinationController::class, 'index']);
-Route::post('/storeYerevan', [AdminDestinationController::class, 'storeYerevan']);
-Route::post('/storeDilijans', [AdminDestinationController::class, 'storeDilijans']);
-Route::post('/storeGyumri', [AdminDestinationController::class, 'storeGyumris']);
-Route::post('/storeJermuks', [AdminDestinationController::class, 'storeJermuks']);
-Route::post('/storeStepanakerts', [AdminDestinationController::class, 'storeStepanakerts']);
-Route::post('/storeTbilisis', [AdminDestinationController::class, 'storeTbilisis']);
+    //=========TourCreator Destination=========
+    Route::get('/admin/destination', [AdminDestinationController::class, 'index']);
+    Route::post('/storeYerevan', [AdminDestinationController::class, 'storeYerevan']);
+    Route::post('/storeDilijans', [AdminDestinationController::class, 'storeDilijans']);
+    Route::post('/storeGyumri', [AdminDestinationController::class, 'storeGyumris']);
+    Route::post('/storeJermuks', [AdminDestinationController::class, 'storeJermuks']);
+    Route::post('/storeStepanakerts', [AdminDestinationController::class, 'storeStepanakerts']);
+    Route::post('/storeTbilisis', [AdminDestinationController::class, 'storeTbilisis']);
 
 
-//============ Add facility page==============
-
-Route::get('/AddFacility', function () {
-    return view('Backend.Admin.Tours.classicTours.AddFacility');
-});
-
-//================add highlight===========
-
-Route::get('/AddHighlight', function () {
-    return view('Backend.Admin.Tours.classicTours.AddHighlights');
-});
-
-
-//----- dashboard page ---------
-
-Route::get("/main", [DashboardController::class, 'index']);
-
-
-//---- tour page ---------
-
-Route::get("/admin/tours/{name}", [TourController::class, "index"]);
-Route::get("/admin/tours/detail/{id}", [TourController::class, "show"]);
-Route::post("/admin/tours/add", [TourController::class, "store"]);
-Route::get('/admin/CreateClassicTour', [TourController::class, "create"]);
-Route::delete("/admin/tour/delete/{id}", [TourController::class, "destroy"])->name('tourDelete');
-Route::get('/admin/UpdateTourPage/{id}', [TourController::class, 'edit']);
-Route::put('/admin/tour/update/{id}', [TourController::class, 'update']);
-Route::post("/admin/highlight/{id}", [TourController::class, "addTourHighlights"])->name('addHighlight');
-Route::post("/admin/addRelated/{id}", [TourController::class, "addRelated"]);
-Route::get("/admin/createRelated/{id}", [TourController::class, "createRelated"]);
-Route::post("/admin/adduseful/{id}", [TourController::class, "adduseful"])->name('adduseful');
-Route::post("/admin/departure/{id}", [TourController::class, "addDeparture"])->name('addDeparture');
-
-Route::post("/admin/facility/{id}", [TourController::class, "addTourFacility"])->name('addFacility');
-Route::post("/admin/tourprogram/{id}", [TourController::class, "addTourProgram"])->name('addTourProgram');
-Route::delete("/admin/highlight/delete/{id}", [TourController::class, "deleteHighlights"])->name('highlightDelete');
-Route::delete("/admin/facility/delete/{id}", [TourController::class, "deleteTourFacility"])->name('facilityDelete');
-Route::delete("/admin/tourprogram/delete/{id}", [TourController::class, "deleteTourProgram"])->name('tourProgramDelete');
-Route::delete("/admin/departure/delete/{id}", [TourController::class, "deleteTourDeparture"])->name('deleteTourDeparture');
-Route::get('/getTourByCategory/{id}', [TourController::class, 'getToursByCategory']);
-Route::post("/admin/type/{id}", [TourController::class, "type"])->name('type');
-Route::get('/check', [TourController::class, 'index']);
-Route::post('/checkpost', [TourController::class, 'checkStore']);
-
-//========Admin Car=========
-
-Route::get('/cars', [CarController::class, 'index'])->named('cars');
-Route::get('/car/create', [CarController::class, 'create']);
-Route::get('/carShow/{id}', [CarController::class, 'show']);
-Route::post('/car/store', [CarController::class, 'store']);
-Route::get('/car/edit/{id}', [CarController::class, 'edit']);
-Route::put('/car/update/{id}', [CarController::class, 'update']);
-Route::delete('/car/delete/{id}', [CarController::class, 'destroy']);
-
-
-//========Admin CarAirport=========
-
-Route::get('/admin/CarAtAirport', [CarAirportController::class, 'index']);
-Route::get('/admin/CarAtAirport/create', [CarAirportController::class, 'create']);
-Route::get('/admin/CarAtAirport/{id}', [CarAirportController::class, 'show']);
-Route::post('/admin/CarAtAirport/store', [CarAirportController::class, 'store']);
-Route::get('/admin/CarAtAirport/edit/{id}', [CarAirportController::class, 'edit']);
-Route::put('/admin/CarAtAirport/update/{id}', [CarAirportController::class, 'update']);
-
-
-
-//==========Admin Accessiories=========
-
-Route::get('/admin/Accessiories', [AccessioriesController::class, 'index']);
-Route::get('/admin/accessiories/create', [AccessioriesController::class, 'create']);
-Route::get('/admin/accessiories/{id}', [AccessioriesController::class, 'show']);
-Route::post('/admin/accessiories/store', [AccessioriesController::class, 'store']);
-Route::get('/admin/accessiories/edit/{id}', [AccessioriesController::class, 'edit']);
-Route::put('/admin/accessiories/update/{id}', [AccessioriesController::class, 'update']);
-Route::delete('/admin/accessiories/delete/{id}', [AccessioriesController::class, 'destroy']);
-
-
-//==========Admin Hotel=========
-
-Route::get('/admin/Hotel', [HotelController::class, 'index']);
-Route::get('/admin/Hotel/create', [HotelController::class, 'create']);
-Route::get('/admin/Hotel/{id}', [HotelController::class, 'show']);
-Route::get('/admin/Hotel/edit/{id}', [HotelController::class, 'edit']);
-Route::post('/admin/Hotel/store', [HotelController::class, 'store']);
-Route::put('/admin/Hotel/update/{id}', [HotelController::class, 'update']);
-Route::delete('/admin/Hotel/delete/{id}', [HotelController::class, 'destroy']);
-Route::post("/admin/hotel/highlight/{id}", [HotelController::class, "addHotelHighlights"]);
-Route::delete('/hotelHighlight/delete/{id}', [HotelController::class, 'deleteHotelHighlight']);
-Route::post("/admin/hotel/room/{id}", [HotelController::class, "addHotelRoom"]);
-Route::delete('/hotelRoom/delete/{id}', [HotelController::class, 'deleteHotelRoom']);
-Route::post("/admin/hotel/facility/{id}", [HotelController::class, "addFacility"]);
-Route::delete('/hotelFacility/delete/{id}', [HotelController::class, 'FacilityDelete']);
-Route::post("/admin/addHotelInfo/{id}", [HotelController::class, "addHotelInfo"]);
-Route::delete('/hotelInfo/delete/{id}', [HotelController::class, 'deleteHotelInfo']);
-Route::post("/admin/addHotelKey/{id}", [HotelController::class, "addHotelKey"]);
-
-//===========Admin Mice=========
-Route::get('/admin/Mice', [MiceController::class, 'index']);
-Route::get('/admin/Mice/create', [MiceController::class, 'create']);
-Route::get('/admin/Mice/{id}', [MiceController::class, 'show']);
-Route::get('/admin/Mice/edit/{id}', [MiceController::class, 'edit']);
-Route::post('/admin/Mice/store', [MiceController::class, 'store']);
-Route::put('/admin/Mice/update/{id}', [MiceController::class, 'update']);
-Route::delete('/admin/Mice/delete/{id}', [MiceController::class, 'destroy']);
-
-//===========Admin Tour Events=========
-Route::get('/admin/events', [TourEventController::class, 'index']);
-Route::get('/admin/events/create', [TourEventController::class, 'create']);
-Route::get('/admin/events/{id}', [TourEventController::class, 'show']);
-Route::get('/admin/events/edit/{id}', [TourEventController::class, 'edit']);
-Route::post('/admin/events/store', [TourEventController::class, 'store']);
-Route::put('/admin/events/update/{id}', [TourEventController::class, 'update']);
-Route::delete('/admin/events/delete/{id}', [TourEventController::class, 'destroy']);
-
-
-
-//===========Admin Things to see=========
-Route::get('/admin/thingsToSee', [ThingsToSeeController::class, 'index']);
-Route::get('/admin//admin/thingstoSeeCreate', [ThingsToSeeController::class, 'create']);
-Route::get('/admin/thingsToSee/{id}', [ThingsToSeeController::class, 'show']);
-Route::get('/admin/thingsToSee/edit/{id}', [ThingsToSeeController::class, 'edit']);
-Route::post('/admin/thingsToSee/store', [ThingsToSeeController::class, 'store']);
-Route::put('/admin/thingsToSee/update/{id}', [ThingsToSeeController::class, 'update']);
-Route::delete('/admin/thingsToSee/delete/{id}', [ThingsToSeeController::class, 'destroy']);
-Route::post("/admin/addRelatedsee/{id}", [ThingsToSeeController::class, "addRelated"]);
-Route::get("/admin/createRelatedsee/{id}", [ThingsToSeeController::class, "createRelated"]);
+    //============ Add facility page==============
+
+    Route::get('/AddFacility', function () {
+        return view('Backend.Admin.Tours.classicTours.AddFacility');
+    });
+
+    //================add highlight===========
+
+    Route::get('/AddHighlight', function () {
+        return view('Backend.Admin.Tours.classicTours.AddHighlights');
+    });
+
+
+    //----- dashboard page ---------
+
+    Route::get("/main", [DashboardController::class, 'index']);
+
+
+    //---- tour page ---------
+
+    Route::get("/admin/tours/{name}", [TourController::class, "index"]);
+    Route::get("/admin/tours/detail/{id}", [TourController::class, "show"]);
+    Route::post("/admin/tours/add", [TourController::class, "store"]);
+    Route::get('/admin/CreateClassicTour', [TourController::class, "create"]);
+    Route::delete("/admin/tour/delete/{id}", [TourController::class, "destroy"])->name('tourDelete');
+    Route::get('/admin/UpdateTourPage/{id}', [TourController::class, 'edit']);
+    Route::put('/admin/tour/update/{id}', [TourController::class, 'update']);
+    Route::post("/admin/highlight/{id}", [TourController::class, "addTourHighlights"])->name('addHighlight');
+    Route::post("/admin/addRelated/{id}", [TourController::class, "addRelated"]);
+    Route::get("/admin/createRelated/{id}", [TourController::class, "createRelated"]);
+    Route::post("/admin/adduseful/{id}", [TourController::class, "adduseful"])->name('adduseful');
+    Route::post("/admin/departure/{id}", [TourController::class, "addDeparture"])->name('addDeparture');
+
+    Route::post("/admin/facility/{id}", [TourController::class, "addTourFacility"])->name('addFacility');
+    Route::post("/admin/tourprogram/{id}", [TourController::class, "addTourProgram"])->name('addTourProgram');
+    Route::delete("/admin/highlight/delete/{id}", [TourController::class, "deleteHighlights"])->name('highlightDelete');
+    Route::delete("/admin/facility/delete/{id}", [TourController::class, "deleteTourFacility"])->name('facilityDelete');
+    Route::delete("/admin/tourprogram/delete/{id}", [TourController::class, "deleteTourProgram"])->name('tourProgramDelete');
+    Route::delete("/admin/departure/delete/{id}", [TourController::class, "deleteTourDeparture"])->name('deleteTourDeparture');
+    Route::get('/getTourByCategory/{id}', [TourController::class, 'getToursByCategory']);
+    Route::post("/admin/type/{id}", [TourController::class, "type"])->name('type');
+    Route::get('/check', [TourController::class, 'index']);
+    Route::post('/checkpost', [TourController::class, 'checkStore']);
+
+    //========Admin Car=========
+
+    Route::get('/cars', [CarController::class, 'index'])->named('cars');
+    Route::get('/car/create', [CarController::class, 'create']);
+    Route::get('/carShow/{id}', [CarController::class, 'show']);
+    Route::post('/car/store', [CarController::class, 'store']);
+    Route::get('/car/edit/{id}', [CarController::class, 'edit']);
+    Route::put('/car/update/{id}', [CarController::class, 'update']);
+    Route::delete('/car/delete/{id}', [CarController::class, 'destroy']);
+
+
+    //========Admin CarAirport=========
+
+    Route::get('/admin/CarAtAirport', [CarAirportController::class, 'index']);
+    Route::get('/admin/CarAtAirport/create', [CarAirportController::class, 'create']);
+    Route::get('/admin/CarAtAirport/{id}', [CarAirportController::class, 'show']);
+    Route::post('/admin/CarAtAirport/store', [CarAirportController::class, 'store']);
+    Route::get('/admin/CarAtAirport/edit/{id}', [CarAirportController::class, 'edit']);
+    Route::put('/admin/CarAtAirport/update/{id}', [CarAirportController::class, 'update']);
+
+
+
+    //==========Admin Accessiories=========
+
+    Route::get('/admin/Accessiories', [AccessioriesController::class, 'index']);
+    Route::get('/admin/accessiories/create', [AccessioriesController::class, 'create']);
+    Route::get('/admin/accessiories/{id}', [AccessioriesController::class, 'show']);
+    Route::post('/admin/accessiories/store', [AccessioriesController::class, 'store']);
+    Route::get('/admin/accessiories/edit/{id}', [AccessioriesController::class, 'edit']);
+    Route::put('/admin/accessiories/update/{id}', [AccessioriesController::class, 'update']);
+    Route::delete('/admin/accessiories/delete/{id}', [AccessioriesController::class, 'destroy']);
+
+
+    //==========Admin Hotel=========
+
+    Route::get('/admin/Hotel', [HotelController::class, 'index']);
+    Route::get('/admin/Hotel/create', [HotelController::class, 'create']);
+    Route::get('/admin/Hotel/{id}', [HotelController::class, 'show']);
+    Route::get('/admin/Hotel/edit/{id}', [HotelController::class, 'edit']);
+    Route::post('/admin/Hotel/store', [HotelController::class, 'store']);
+    Route::put('/admin/Hotel/update/{id}', [HotelController::class, 'update']);
+    Route::delete('/admin/Hotel/delete/{id}', [HotelController::class, 'destroy']);
+    Route::post("/admin/hotel/highlight/{id}", [HotelController::class, "addHotelHighlights"]);
+    Route::delete('/hotelHighlight/delete/{id}', [HotelController::class, 'deleteHotelHighlight']);
+    Route::post("/admin/hotel/room/{id}", [HotelController::class, "addHotelRoom"]);
+    Route::delete('/hotelRoom/delete/{id}', [HotelController::class, 'deleteHotelRoom']);
+    Route::post("/admin/hotel/facility/{id}", [HotelController::class, "addFacility"]);
+    Route::delete('/hotelFacility/delete/{id}', [HotelController::class, 'FacilityDelete']);
+    Route::post("/admin/addHotelInfo/{id}", [HotelController::class, "addHotelInfo"]);
+    Route::delete('/hotelInfo/delete/{id}', [HotelController::class, 'deleteHotelInfo']);
+    Route::post("/admin/addHotelKey/{id}", [HotelController::class, "addHotelKey"]);
+
+    //===========Admin Mice=========
+    Route::get('/admin/Mice', [MiceController::class, 'index']);
+    Route::get('/admin/Mice/create', [MiceController::class, 'create']);
+    Route::get('/admin/Mice/{id}', [MiceController::class, 'show']);
+    Route::get('/admin/Mice/edit/{id}', [MiceController::class, 'edit']);
+    Route::post('/admin/Mice/store', [MiceController::class, 'store']);
+    Route::put('/admin/Mice/update/{id}', [MiceController::class, 'update']);
+    Route::delete('/admin/Mice/delete/{id}', [MiceController::class, 'destroy']);
+
+    //===========Admin Tour Events=========
+    Route::get('/admin/events', [TourEventController::class, 'index']);
+    Route::get('/admin/events/create', [TourEventController::class, 'create']);
+    Route::get('/admin/events/{id}', [TourEventController::class, 'show']);
+    Route::get('/admin/events/edit/{id}', [TourEventController::class, 'edit']);
+    Route::post('/admin/events/store', [TourEventController::class, 'store']);
+    Route::put('/admin/events/update/{id}', [TourEventController::class, 'update']);
+    Route::delete('/admin/events/delete/{id}', [TourEventController::class, 'destroy']);
+
+
+
+    //===========Admin Things to see=========
+    Route::get('/admin/thingsToSee', [ThingsToSeeController::class, 'index']);
+    Route::get('/admin//admin/thingstoSeeCreate', [ThingsToSeeController::class, 'create']);
+    Route::get('/admin/thingsToSee/{id}', [ThingsToSeeController::class, 'show']);
+    Route::get('/admin/thingsToSee/edit/{id}', [ThingsToSeeController::class, 'edit']);
+    Route::post('/admin/thingsToSee/store', [ThingsToSeeController::class, 'store']);
+    Route::put('/admin/thingsToSee/update/{id}', [ThingsToSeeController::class, 'update']);
+    Route::delete('/admin/thingsToSee/delete/{id}', [ThingsToSeeController::class, 'destroy']);
+    Route::post("/admin/addRelatedsee/{id}", [ThingsToSeeController::class, "addRelated"]);
+    Route::get("/admin/createRelatedsee/{id}", [ThingsToSeeController::class, "createRelated"]);
 
-//=====Admin things to do=========
-Route::get('/admin/thingsToDo', [ThingsToDoController::class, 'index']);
-Route::get('/admin/admin/thingstoDoCreate', [ThingsToDoController::class, 'create']);
-Route::get('/admin/thingsToDo/{id}', [ThingsToDoController::class, 'show']);
-Route::get('/admin/thingsToDo/edit/{id}', [ThingsToDoController::class, 'edit']);
-Route::post('/admin/thingsToDo/store', [ThingsToDoController::class, 'store']);
-Route::put('/admin/thingsToDo/update/{id}', [ThingsToDoController::class, 'update']);
-Route::delete('/admin/thingsToDo/delete/{id}', [ThingsToDoController::class, 'destroy']);
-Route::post("/admin/addRelatedDo/{id}", [ThingsToDoController::class, "addRelated"]);
-Route::get("/admin/createRelatedDo/{id}", [ThingsToDoController::class, "createRelated"]);
+    //=====Admin things to do=========
+    Route::get('/admin/thingsToDo', [ThingsToDoController::class, 'index']);
+    Route::get('/admin/admin/thingstoDoCreate', [ThingsToDoController::class, 'create']);
+    Route::get('/admin/thingsToDo/{id}', [ThingsToDoController::class, 'show']);
+    Route::get('/admin/thingsToDo/edit/{id}', [ThingsToDoController::class, 'edit']);
+    Route::post('/admin/thingsToDo/store', [ThingsToDoController::class, 'store']);
+    Route::put('/admin/thingsToDo/update/{id}', [ThingsToDoController::class, 'update']);
+    Route::delete('/admin/thingsToDo/delete/{id}', [ThingsToDoController::class, 'destroy']);
+    Route::post("/admin/addRelatedDo/{id}", [ThingsToDoController::class, "addRelated"]);
+    Route::get("/admin/createRelatedDo/{id}", [ThingsToDoController::class, "createRelated"]);
 
 
 
-//=====ways to book=========
-Route::get('/admin/waysToBook', [WaysToBookController::class, 'index']);
-Route::get('/admin/admin/waystoBookCreate', [WaysToBookController::class, 'create']);
-Route::get('/admin/waysToBook/{id}', [WaysToBookController::class, 'show']);
-Route::get('/admin/waysToBook/edit/{id}', [WaysToBookController::class, 'edit']);
-Route::post('/admin/waysToBook/store', [WaysToBookController::class, 'store']);
-Route::put('/admin/waysToBook/update/{id}', [WaysToBookController::class, 'update']);
-Route::delete('/admin/waysToBook/delete/{id}', [WaysToBookController::class, 'destroy']);
+    //=====ways to book=========
+    Route::get('/admin/waysToBook', [WaysToBookController::class, 'index']);
+    Route::get('/admin/admin/waystoBookCreate', [WaysToBookController::class, 'create']);
+    Route::get('/admin/waysToBook/{id}', [WaysToBookController::class, 'show']);
+    Route::get('/admin/waysToBook/edit/{id}', [WaysToBookController::class, 'edit']);
+    Route::post('/admin/waysToBook/store', [WaysToBookController::class, 'store']);
+    Route::put('/admin/waysToBook/update/{id}', [WaysToBookController::class, 'update']);
+    Route::delete('/admin/waysToBook/delete/{id}', [WaysToBookController::class, 'destroy']);
 
 
 
 
-//=====Admin Vacancy=========
-Route::get('/admin/vacancy', [VacancyController::class, 'index']);
-Route::get('/admin/admin/vacancyCreate', [VacancyController::class, 'create']);
-Route::get('/admin/vacancy/{id}', [VacancyController::class, 'show']);
-Route::get('/admin/vacancy/edit/{id}', [VacancyController::class, 'edit']);
-Route::post('/admin/vacancy/store', [VacancyController::class, 'store']);
-Route::put('/admin/vacancy/update/{id}', [VacancyController::class, 'update']);
-Route::delete('/admin/vacancy/delete/{id}', [VacancyController::class, 'destroy']);
+    //=====Admin Vacancy=========
+    Route::get('/admin/vacancy', [VacancyController::class, 'index']);
+    Route::get('/admin/admin/vacancyCreate', [VacancyController::class, 'create']);
+    Route::get('/admin/vacancy/{id}', [VacancyController::class, 'show']);
+    Route::get('/admin/vacancy/edit/{id}', [VacancyController::class, 'edit']);
+    Route::post('/admin/vacancy/store', [VacancyController::class, 'store']);
+    Route::put('/admin/vacancy/update/{id}', [VacancyController::class, 'update']);
+    Route::delete('/admin/vacancy/delete/{id}', [VacancyController::class, 'destroy']);
 
 
 
 
 
-//========admin brochure=========
-Route::get('/admin/brochure', [BrochureController::class, 'index']);
-Route::get('/admin/brochure/create', [BrochureController::class, 'create']);
-Route::get('/admin/brochure/{id}', [BrochureController::class, 'show']);
-Route::get('/admin/brochure/edit/{id}', [BrochureController::class, 'edit']);
-Route::post('/admin/brochure/store', [BrochureController::class, 'store']);
-Route::put('/admin/brochure/update/{id}', [BrochureController::class, 'update']);
-Route::delete('/admin/brochure/delete/{id}', [BrochureController::class, 'destroy']);
+    //========admin brochure=========
+    Route::get('/admin/brochure', [BrochureController::class, 'index']);
+    Route::get('/admin/brochure/create', [BrochureController::class, 'create']);
+    Route::get('/admin/brochure/{id}', [BrochureController::class, 'show']);
+    Route::get('/admin/brochure/edit/{id}', [BrochureController::class, 'edit']);
+    Route::post('/admin/brochure/store', [BrochureController::class, 'store']);
+    Route::put('/admin/brochure/update/{id}', [BrochureController::class, 'update']);
+    Route::delete('/admin/brochure/delete/{id}', [BrochureController::class, 'destroy']);
 
 
 
 
 
-//========Admin Nearby=========
-Route::get('/admin/nearby', [NearbyArmeniaController::class, 'index']);
-Route::get('/admin/nearby/Create', [NearbyArmeniaController::class, 'create']);
-Route::get('/admin/nearby/{id}', [NearbyArmeniaController::class, 'show']);
-Route::get('/admin/nearby/edit/{id}', [NearbyArmeniaController::class, 'edit']);
-Route::post('/admin/nearby/store', [NearbyArmeniaController::class, 'store']);
-Route::put('/admin/nearby/update/{id}', [NearbyArmeniaController::class, 'update']);
-Route::delete('/admin/nearby/delete/{id}', [NearbyArmeniaController::class, 'destroy']);
+    //========Admin Nearby=========
+    Route::get('/admin/nearby', [NearbyArmeniaController::class, 'index']);
+    Route::get('/admin/nearby/Create', [NearbyArmeniaController::class, 'create']);
+    Route::get('/admin/nearby/{id}', [NearbyArmeniaController::class, 'show']);
+    Route::get('/admin/nearby/edit/{id}', [NearbyArmeniaController::class, 'edit']);
+    Route::post('/admin/nearby/store', [NearbyArmeniaController::class, 'store']);
+    Route::put('/admin/nearby/update/{id}', [NearbyArmeniaController::class, 'update']);
+    Route::delete('/admin/nearby/delete/{id}', [NearbyArmeniaController::class, 'destroy']);
 
-//=========About us=========
+    //=========About us=========
 
-Route::get('/aboutUs/create', [AboutUsController::class, 'create']);
-// Route::get('/aboutUs/{id}', [AboutUsController::class, 'show']);
-Route::post('/aboutUs/store', [AboutUsController::class, 'store']);
-Route::put('/aboutUs/update/{id}', [AboutUsController::class, 'update']);
-Route::delete('/aboutUs/delete/{id}', [AboutUsController::class, 'destroy']);
-Route::get('/admin/aboutUs', [AboutUsController::class, 'index2']);
+    Route::get('/aboutUs/create', [AboutUsController::class, 'create']);
+    // Route::get('/aboutUs/{id}', [AboutUsController::class, 'show']);
+    Route::post('/aboutUs/store', [AboutUsController::class, 'store']);
+    Route::put('/aboutUs/update/{id}', [AboutUsController::class, 'update']);
+    Route::delete('/aboutUs/delete/{id}', [AboutUsController::class, 'destroy']);
+    Route::get('/admin/aboutUs', [AboutUsController::class, 'index2']);
 
 
 
 
-//==========Admin useful info ======
+    //==========Admin useful info ======
 
-Route::get('/admin/usefulToKnow', [UsefulInfoController::class, 'index']);
-Route::get('/admin/usefulToKnow/create', [UsefulInfoController::class, 'create']);
-Route::get('/admin/usefulToKnow/{id}', [UsefulInfoController::class, 'show']);
-Route::post('/admin/usefulToKnow/store', [UsefulInfoController::class, 'store']);
-Route::put('/admin/usefulToKnow/update/{id}', [UsefulInfoController::class, 'update']);
-Route::delete('/admin/usefulToKnow/delete/{id}', [UsefulInfoController::class, 'destroy']);
+    Route::get('/admin/usefulToKnow', [UsefulInfoController::class, 'index']);
+    Route::get('/admin/usefulToKnow/create', [UsefulInfoController::class, 'create']);
+    Route::get('/admin/usefulToKnow/{id}', [UsefulInfoController::class, 'show']);
+    Route::post('/admin/usefulToKnow/store', [UsefulInfoController::class, 'store']);
+    Route::put('/admin/usefulToKnow/update/{id}', [UsefulInfoController::class, 'update']);
+    Route::delete('/admin/usefulToKnow/delete/{id}', [UsefulInfoController::class, 'destroy']);
 
 
-//==========Armenia admin food=========
-Route::get('/admin/foods', [FoodArmeniaController::class, 'index']);
-Route::get('/admin/foods/create', [FoodArmeniaController::class, 'create']);
-Route::get('/admin/foods/{id}', [FoodArmeniaController::class, 'show']);
-Route::post('/admin/foods/store', [FoodArmeniaController::class, 'store']);
-Route::get('/admin/foods/edit/{id}', [FoodArmeniaController::class, 'edit']);
-Route::put('/admin/foods/update/{id}', [FoodArmeniaController::class, 'update']);
-Route::delete('/admin/foods/delete/{id}', [FoodArmeniaController::class, 'destroy']);
+    //==========Armenia admin food=========
+    Route::get('/admin/foods', [FoodArmeniaController::class, 'index']);
+    Route::get('/admin/foods/create', [FoodArmeniaController::class, 'create']);
+    Route::get('/admin/foods/{id}', [FoodArmeniaController::class, 'show']);
+    Route::post('/admin/foods/store', [FoodArmeniaController::class, 'store']);
+    Route::get('/admin/foods/edit/{id}', [FoodArmeniaController::class, 'edit']);
+    Route::put('/admin/foods/update/{id}', [FoodArmeniaController::class, 'update']);
+    Route::delete('/admin/foods/delete/{id}', [FoodArmeniaController::class, 'destroy']);
 
 
 
@@ -368,36 +366,35 @@ Route::delete('/admin/foods/delete/{id}', [FoodArmeniaController::class, 'destro
 
 
 
-//===============admin travel blogs===============
-Route::get('/admin/TravelBlog', [TravelBlogController::class, 'index']);
-Route::get('/admin/travelBlogs/create', [TravelBlogController::class, 'create']);
-Route::get('/admin/travelBlogs/{id}', [TravelBlogController::class, 'show']);
-Route::get('/admin/travelBlogs/edit/{id}', [TravelBlogController::class, 'edit']);
-Route::post('/admin/travelBlogs/store', [TravelBlogController::class, 'store']);
-Route::put('/admin/travelBlogs/update/{id}', [TravelBlogController::class, 'update']);
-Route::delete('/admin/travelBlogs/delete/{id}', [TravelBlogController::class, 'destroy']);
+    //===============admin travel blogs===============
+    Route::get('/admin/TravelBlog', [TravelBlogController::class, 'index']);
+    Route::get('/admin/travelBlogs/create', [TravelBlogController::class, 'create']);
+    Route::get('/admin/travelBlogs/{id}', [TravelBlogController::class, 'show']);
+    Route::get('/admin/travelBlogs/edit/{id}', [TravelBlogController::class, 'edit']);
+    Route::post('/admin/travelBlogs/store', [TravelBlogController::class, 'store']);
+    Route::put('/admin/travelBlogs/update/{id}', [TravelBlogController::class, 'update']);
+    Route::delete('/admin/travelBlogs/delete/{id}', [TravelBlogController::class, 'destroy']);
 
 
-Route::get("/dashboard/hello", [TourController::class, "index"]);
+    Route::get("/dashboard/hello", [TourController::class, "index"]);
 
-//================ Car with driver ================
-Route::get('/admin/CarWithDriver', [CarWithDriverController::class,"index"]);
-Route::get('/admin/CarWithDriver/create', [CarWithDriverController::class,"create"]);
-Route::get('/admin/CarWithDriver/createInfo', [CarWithDriverController::class,"createInfo"]);
-Route::post('/admin/CarWithDriverInfo/store', [CarWithDriverController::class,"storeInfo"]);
-Route::get('/admin/CarWithDriver/{id}', [CarWithDriverController::class,"show"]);
-Route::post('/admin/CarWithDriver/store', [CarWithDriverController::class,"store"]);
-Route::get('/admin/CarWithDriver/edit/{id}', [CarWithDriverController::class,"edit"]);
-Route::put('/admin/CarWithDriver/update/{id}', [CarWithDriverController::class,"update"]);
-Route::delete('/admin/CarWithDriver/delete/{id}', [CarWithDriverController::class,"destroy"]);
+    //================ Car with driver ================
+    Route::get('/admin/CarWithDriver', [CarWithDriverController::class, "index"]);
+    Route::get('/admin/CarWithDriver/create', [CarWithDriverController::class, "create"]);
+    Route::get('/admin/CarWithDriver/createInfo', [CarWithDriverController::class, "createInfo"]);
+    Route::post('/admin/CarWithDriverInfo/store', [CarWithDriverController::class, "storeInfo"]);
+    Route::get('/admin/CarWithDriver/{id}', [CarWithDriverController::class, "show"]);
+    Route::post('/admin/CarWithDriver/store', [CarWithDriverController::class, "store"]);
+    Route::get('/admin/CarWithDriver/edit/{id}', [CarWithDriverController::class, "edit"]);
+    Route::put('/admin/CarWithDriver/update/{id}', [CarWithDriverController::class, "update"]);
+    Route::delete('/admin/CarWithDriver/delete/{id}', [CarWithDriverController::class, "destroy"]);
 
 
-//============destination routes=============
+    //============destination routes=============
 
-Route::get('/admin/d', function () {
-    return view('Backend.Admin.Destination.view');
-});
-
+    Route::get('/admin/d', function () {
+        return view('Backend.Admin.Destination.view');
+    });
 });
 
 
@@ -453,7 +450,7 @@ Route::get('/mices/{locale?}', [MiceController::class, 'showMice']);
 Route::get('/mices/{id}/{locale?}', [MiceController::class, 'showMiceDetails']);
 
 //=======ways to book frontend=========
-Route::get('/ways/{locale?}', [WaysToBookController::class,"GetAll"]);
+Route::get('/ways/{locale?}', [WaysToBookController::class, "GetAll"]);
 
 //=========Vacancy frontend=========
 Route::get('/vacancyAll/{locale?}', [VacancyController::class, "GetAll"]);
@@ -486,8 +483,8 @@ Route::get('/getThingsToDoById/{id}/{locale?}', [ThingsToDoController::class, 'g
 
 
 //==========Frontend Article=========
-Route::get('/Articles/{locale?}',[TravelBlogController::class, 'getTravelBlog']);
-Route::get('/Article/{id}/{locale?}',[TravelBlogController::class, 'getTravelBlogById']);
+Route::get('/Articles/{locale?}', [TravelBlogController::class, 'getTravelBlog']);
+Route::get('/Article/{id}/{locale?}', [TravelBlogController::class, 'getTravelBlogById']);
 
 
 //==========Frontend Hotel=========
