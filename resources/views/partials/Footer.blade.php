@@ -19,21 +19,21 @@
                 <div class="col-sm-3 col-md-2 item">
                     <h3>Services</h3>
                     <ul>
-                        <li><a href="#">Rent a transport</a></li>
-                        <li><a href="#">Book an accommodation</a></li>
-                        <li><a href="#">Meals and entertainments</a></li>
-                        <li><a href="#">Tours to Armenia,Georgia and Iran</a></li>
-                        <li><a href="#">Transfer Form and to Airport</a></li>
-                        <li><a href="#">MICE</a></li>
+                        <li><a href="{{ url('/driver') }}">Rent a transport</a></li>
+                        <li><a href="{{ url('/caa') }}">Rent a transport without driver</a></li>
+                        <li><a href="{{ url('/hs') }}">Book an accommodation</a></li>
+
+                        <li><a href="{{ url('/nearbyByCategoryId/1') }}">Tours to Armenia,Georgia and Iran</a></li>
+                        <li><a href="{{ url('/MT') }}">Transfer Form and to Airport</a></li>
+                        <li><a href="{{ url('/mices') }}">MICE</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3 col-md-2 item">
                     <h3>For Tourists</h3>
                     <ul>
-                        <li><a href="#">Who are we</a></li>
-                        <li><a href="#">What expect from us</a></li>
-                        <li><a href="#">Why Tour Academy</a></li>
-                        <li><a href="#">Discover Armenia</a></li>
+                        <li><a href="{{ url('/aboutUs') }}">Who are we</a></li>
+                        <li><a href="{{ url('/ways') }}">How to book a tour</a></li>
+                        
                         <li><a href="#">FAQ's</a></li>
                         <li><a href="#">Reviews</a></li>
                     </ul>

@@ -63,7 +63,10 @@ Route::post('/loginTo', [LoginController::class, 'loginTo'])->name('loginTo');
 //logout
 Route::post('/logout', [AdminController::class, 'logout'])->name('logout');
 
-
+//===============reviews===============
+Route::get('/reviews', [ReviewController::class, 'index']);
+Route::get('/AddReview/', [ReviewController::class, 'create']);
+Route::post('/review/store', [ReviewController::class, 'store']);
 
 Route::group(['middleware' => ['admin']], function () {
 
@@ -360,10 +363,7 @@ Route::put('/admin/foods/update/{id}', [FoodArmeniaController::class, 'update'])
 Route::delete('/admin/foods/delete/{id}', [FoodArmeniaController::class, 'destroy']);
 
 
-//===============reviews===============
-Route::get('/reviews/{locale?}', [ReviewController::class, 'index']);
-Route::get('/AddReview/{locale?}', [ReviewController::class, 'create']);
-Route::post('/review/store', [ReviewController::class, 'store']);
+
 
 
 

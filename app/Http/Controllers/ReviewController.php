@@ -9,11 +9,11 @@ use Illuminate\Http\Request;
 
 class ReviewController extends Controller
 {
-    public function index($locale = null)
+    public function index()
     {
-        if (isset($locale) && in_array($locale, config('app.available_locales'))) {
-            app()->setLocale($locale);
-        }
+        // if (isset($locale) && in_array($locale, config('app.available_locales'))) {
+        //     app()->setLocale($locale);
+        // }
         $reviews = Review::with('images', 'category')->get();
         return view('Frontend.About.reviews', compact('reviews'));
     }
@@ -27,7 +27,7 @@ class ReviewController extends Controller
         return view('Frontend.Reviews.AddReview', compact('categories'));
     }
 
-    
+
 
     public function store(Request $request)
     {
@@ -43,7 +43,7 @@ class ReviewController extends Controller
         ]);
 
         //use create method and pass the request data to create a new review
-       
+
         $review = Review::create(
             [
                 'category_id' => $request->category_id,
@@ -76,7 +76,7 @@ class ReviewController extends Controller
             $image["filename"] = $imageName;
             $image["path"] = "Review/" . $review->id . "/" . $imageName;
             $image->save();
-            $review->images()->attach($image->id);  
+            $review->images()->attach($image->id);
         }
         return redirect()->back()
             ->with("msg", "Added successfully!")
