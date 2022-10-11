@@ -1,50 +1,49 @@
 <div class="footer-clean">
     <div class="container-fluid">
         <div class="footerImage" style="text-align: center">
-            <a href="{{url('/Articles')}}">
-            <img src="http://127.0.0.1:8000/images/footerImage.png" style="width: 95%" alt="">
-        </a>
+            <a href="{{ url('/Articles') }}">
+                <img src="http://127.0.0.1:8000/images/footerImage.png" style="width: 95%" alt="">
+            </a>
         </div>
         <footer style="width: 95%;display: flow-root;margin-left: 6%;">
             <div class="row justify-content-center">
                 <div class="col-sm-3 col-md-2 item">
-                    <h3>Tours</h3>
+                    <h3>{{ __('Tours') }}</h3>
                     <ul>
-                        <li><a href="{{ url('/Bv') }}">Classic Tours</a></li>
-                        <li><a href="{{ url('/guaranteeTour') }}">Guarantee Departures</a></li>
-                        <li><a href="{{ url('/GastroTours') }}">Gastro Tours</a></li>
-                        <li><a href="{{ url('/activeTours') }}">Active Tours</a></li>
-                        <li><a href="{{ url('/oneDay') }}">One Day Tours</a></li>
-                        <li><a href="{{ url('/themed') }}">Themed Tours</a></li>
+                        <li><a href="{{ url('/Bv') }}">{{ __('Classic Tours') }}</a></li>
+                        <li><a href="{{ url('/guaranteeTour') }}">{{ __('Guarantee Departures') }}</a></li>
+                        <li><a href="{{ url('/GastroTours') }}">{{ __('Gastro Tours') }}</a></li>
+                        <li><a href="{{ url('/activeTours') }}">{{ __('Active Tours') }}</a></li>
+                        <li><a href="{{ url('/oneDay') }}">{{ __('One Day Tours') }}</a></li>
+                        <li><a href="{{ url('/themed') }}">{{ __('Themed Tours') }}</a></li>
                     </ul>
                 </div>
                 <div class="col-sm-3 col-md-2 item">
-                    <h3>Services</h3>
+                    <h3>{{ __('Services') }}</h3>
                     <ul>
-                        <li><a href="{{ url('/driver') }}">Rent a transport</a></li>
-                        <li><a href="{{ url('/caa') }}">Transport without driver</a></li>
-                        <li><a href="{{ url('/hs') }}">Book an accommodation</a></li>
+                        <li><a href="{{ url('/driver') }}">{{ __('Rent a transport') }}</a></li>
+                        <li><a href="{{ url('/caa') }}">{{ __('Transport without driver') }}</a></li>
+                        <li><a href="{{ url('/hs') }}">{{ __('Book an accommodation') }}</a></li>
+                        <li><a href="{{ url('/nearbyByCategoryId/1') }}">{{ __('Tours to Armenia,Georgia') }}</a></li>
+                        <li><a href="{{ url('/MT') }}">{{ __('Transfer Form Airport') }}</a></li>
+                        <li><a href="{{ url('/mices') }}">{{ __('MICE') }}</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-3 col-md-2 item">
+                    <h3>{{ __('For Tourists') }}</h3>
+                    <ul>
+                        <li><a href="{{ url('/aboutUs') }}">{{ __('Who are we') }}</a></li>
+                        <li><a href="{{ url('/ways') }}">{{ __('How to book a tour') }}</a></li>
+                        <li><a href="{{ url('/reviews') }}">{{ __('Reviews') }}</a></li>
+                        <li><a href="{{ url('/getAllThingsToDo') }}">{{ __('What to do in Armenia') }}</a></li>
+                        <li><a href="{{ url('/getThingsToSeeByCategoryId/1') }}">{{ __('What to see in Armenia') }}</a></li>
+                        <li><a href="{{ url('/getfoodsByCategory/1') }}">{{ __('Food and Drink') }}</a></li>
+                        <li><a href="{{ url('/usefulToKnow') }}">{{ __('Useful to know') }}</a></li>
+                    </ul>
+                </div>
 
-                        <li><a href="{{ url('/nearbyByCategoryId/1') }}">Tours to Armenia,Georgia</a></li>
-                        <li><a href="{{ url('/MT') }}">Transfer Form Airport</a></li>
-                        <li><a href="{{ url('/mices') }}">MICE</a></li>
-                    </ul>
-                </div>
                 <div class="col-sm-3 col-md-2 item">
-                    <h3>For Tourists</h3>
-                    <ul>
-                        <li><a href="{{ url('/aboutUs') }}">Who are we</a></li>
-                        <li><a href="{{ url('/ways') }}">How to book a tour</a></li>
-                        <li><a href="{{ url('/reviews') }}">Reviews</a></li>
-                        <li><a href="{{ url('/getAllThingsToDo') }}">What to do in Armenia</a></li>
-                        <li><a href="{{ url('/getThingsToSeeByCategoryId/1') }}">What to see in Armenia</a></li>
-                        <li><a href="{{ url('/getfoodsByCategory/1') }}">Food and Drink</a></li>
-                        <li><a href="{{ url('/usefulToKnow') }}">Useful to know</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-sm-3 col-md-2 item">
-                    <h3>Contact us</h3>
+                    <h3>{{ __('Contact us') }}</h3>
                     <ul>
                         <li><a href="#">Mail: info@2expediti
                                 on.com
@@ -119,7 +118,7 @@
                                     <text id="Follow_us" data-name="Follow us" transform="translate(54.801 22)"
                                         fill="#f1e6be" font-size="24" font-family="Arial-BoldItalicMT, Arial"
                                         font-weight="500" font-style="italic">
-                                        <tspan x="-55" y="0">Follow us</tspan>
+                                        <tspan x="-55" y="0">{{ __('Follow us') }}</tspan>
                                     </text>
                                 </g>
                             </g>
@@ -247,7 +246,7 @@
                                     <text id="Call_Write" data-name="Call / Write" transform="translate(61.801 22)"
                                         fill="#f1e6be" font-size="24" font-family="Arial-BoldItalicMT, Arial"
                                         font-weight="700" font-style="italic">
-                                        <tspan x="-61" y="0">Call / Write</tspan>
+                                        <tspan x="-61" y="0">{{ __('Call / Write') }}</tspan>
                                     </text>
                                 </g>
                             </g>
@@ -285,7 +284,7 @@
     </div>
     <div>
         <p style="float: right; color:rgb(231, 228, 228); padding-left: 40px; padding-right:40px; font-size:14px">
-            Designed by <span>
+            {{ __('Designed by') }} <span>
                 <a href="https://www.upwork.com/freelancers/lilitpoghosyan15"
                     style="color: rgb(231, 228, 228); text-decoration:underline ">Lilit</a>
             </span>
@@ -293,7 +292,7 @@
                 &
             </span>
             <span style="margin-left: 5px; font-size:14px">
-                Created by <span>
+                {{ __('Developed by') }} <span>
                     <a href="https://www.linkedin.com/in/bimasha-zaman/"
                         style="color: rgb(231, 228, 228); text-decoration:underline ">
                         Bimasha
@@ -311,6 +310,6 @@
 
 <div style=" background-color:#284525; color:azure;padding:5px">
     <center>
-        © “EXPEDITION” LLC 2022, ALL RIGHTS RESERVED
+       {{__(' © “EXPEDITION” LLC 2022, ALL RIGHTS RESERVED')}}
     </center>
 </div>

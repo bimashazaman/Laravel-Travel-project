@@ -156,9 +156,9 @@
                                 <div class="col-md-12 col-xs-12">
                                     <Select id="Starting Destination" style="width:100%" class="reqTourInput"
                                         name="meals">
-                                        <option value="No Meal">--Select Additional--</option>
+                                        <option value="No Meal">{{__('--Select Additional--')}}</option>
                                         <option value="With Meals">
-                                            Meals (15$ per pax)
+                                           {{ __('Meals (15$ per pax)')}}
                                         </option>
                                     </Select>
                                 </div>
