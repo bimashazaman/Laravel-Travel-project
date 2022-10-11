@@ -14,56 +14,37 @@ use Illuminate\Http\Request;
 class FrontendController extends Controller
 {
 
-   public function filter(Request $request)
+    public function filter(Request $request)
     {
 
         $data = $request->all();
 
-        // $tours = Tour::all();
+
 
         $destination = Destination::all();
         $types = TourCategory::all();
 
-        // if($data['destination'] != null){
-        //     $tours = $tours->where('destination_id', $data['destination']);
-        // }
+
 
         $tours = Tour::where('category_id', $data['name'])->get();
 
 
-            if($data['destination'] != null){
-                $tours = $tours->where('destination_id', $data['destination']);
-            }
+        if ($data['destination'] != null) {
+            $tours = $tours->where('destination_id', $data['destination']);
+        }
 
-            //seach
-            if($data['search'] != null){
-                $tours = $tours->where('name', 'like', '%'.$data['search'].'%');
-            }
-
-        // if(isset($data['name'])){
-        //     $tours = $tours->where('type_id', $data['name']);
-        // }
-        // $filter = $types->filter(function ($item) use ($data) {
-        //     return $item->id == $data['name'];
-        // })->random();
+        //seach
+        if ($data['search'] != null) {
+            $tours = $tours->where('name', 'like', '%' . $data['search'] . '%');
+        }
 
 
 
-        // if (isset($data['id'])) {
-        //     $tours = $tours->where('id', $data['name']);
-        // }
-
-
-
-        // $tour_category = TourCategory::where('id', $data['name'])->first();
-
-        // $tours = $tours->where('tour_category_id', $tour_category->id);
-
-        return view('Frontend.Filter.index', compact( 'tours','destination','types'));
-
+        return view('Frontend.Filter.index', compact('tours', 'destination', 'types'));
     }
 
-    public function searchTour($id){
+    public function searchTour($id)
+    {
 
         $tour = Tour::with('images')
             ->with('highlights')
@@ -87,10 +68,7 @@ class FrontendController extends Controller
             ->take(3)
             ->get();
 
-        // $related = relatedTour::where($id, 'tour_id');
 
-
-        //get reviews
 
         $reviews = Review::with('images')->where('category_id', $id)->get();
 
@@ -105,25 +83,26 @@ class FrontendController extends Controller
     }
 
 
-   public function getTours($name) {
-    $cat = TourCategory::where('name', $name)->first();
-    if ($cat) {
+    public function getTours($name)
+    {
+        $cat = TourCategory::where('name', $name)->first();
+        if ($cat) {
 
-        $tours = Tour::with('images')
-            ->with('highlights')
-            ->with('types')
-            ->with('facility')
-            ->where('home_tour_id', 1)
-            ->where("category_id", $cat->id)
-            ->whereNull('deleted_at')
-        ->get();
-        // return response()->json(["tour"=>$tours]);
-        return view("Frontend.Tours.Tour", [
-            "tour" => $tours,
+            $tours = Tour::with('images')
+                ->with('highlights')
+                ->with('types')
+                ->with('facility')
+                ->where('home_tour_id', 1)
+                ->where("category_id", $cat->id)
+                ->whereNull('deleted_at')
+                ->get();
+            // return response()->json(["tour"=>$tours]);
+            return view("Frontend.Tours.Tour", [
+                "tour" => $tours,
 
-        ]);
+            ]);
+        }
     }
-   }
 
     public function index($locale = null, Request $request)
     {
@@ -167,11 +146,6 @@ class FrontendController extends Controller
     }
 
 
-    // public function getToursByType()
-    // {
-    //    $types =  TourCategory::all();
-    //      return view('partials.FindTour', compact('types'));
-    // }
 
     public function tourDescription($id)
     {
@@ -187,7 +161,4 @@ class FrontendController extends Controller
             "tour" => $tour
         ]);
     }
-
-
-
 }

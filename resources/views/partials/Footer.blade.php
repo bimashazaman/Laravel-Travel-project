@@ -121,9 +121,12 @@
                             </g>
                             <g id="Group_597" data-name="Group 597" transform="translate(84 35)">
                                 <g transform="matrix(1, 0, 0, 1, -93.2, -35)" filter="url(#Rectangle_478)">
-                                    <rect id="Rectangle_478-2" data-name="Rectangle 478" width="48"
-                                        height="48" rx="8" transform="translate(93 35)" fill="#284525">
-                                    </rect>
+                                    <a href="https://www.facebook.com/toexpedition">
+                                        <rect id="Rectangle_478-2" data-name="Rectangle 478" width="48"
+                                            height="48" rx="8" transform="translate(93 35)"
+                                            fill="#284525">
+                                        </rect>
+                                    </a>
                                 </g>
                                 <path id="Icon_feather-facebook" data-name="Icon feather-facebook"
                                     d="M27,3H22.5A7.5,7.5,0,0,0,15,10.5V15H10.5v6H15V33h6V21h4.5L27,15H21V10.5A1.5,1.5,0,0,1,22.5,9H27Z"
@@ -132,9 +135,12 @@
                             </g>
                             <g id="Group_602" data-name="Group 602" transform="translate(0 107)">
                                 <g transform="matrix(1, 0, 0, 1, -9.2, -107)" filter="url(#Rectangle_479)">
-                                    <rect id="Rectangle_479-2" data-name="Rectangle 479" width="48"
-                                        height="48" rx="8" transform="translate(9 107)" fill="#284525">
-                                    </rect>
+                                    <a href="https://www.instagram.com/2expedition.com_/">
+                                        <rect id="Rectangle_479-2" data-name="Rectangle 479" width="48"
+                                            height="48" rx="8" transform="translate(9 107)"
+                                            fill="#284525">
+                                        </rect>
+                                    </a>
                                 </g>
                                 <g id="Icon_ionic-logo-instagram" data-name="Icon ionic-logo-instagram"
                                     transform="translate(11 11)">
@@ -151,9 +157,11 @@
                             </g>
                             <g id="Group_601" data-name="Group 601" transform="translate(167 107)">
                                 <g transform="matrix(1, 0, 0, 1, -176.2, -107)" filter="url(#Rectangle_480)">
+                                    <a href="https://vk.com/public214460114">
                                     <rect id="Rectangle_480-2" data-name="Rectangle 480" width="48"
                                         height="48" rx="8" transform="translate(176 107)" fill="#284525">
                                     </rect>
+                                </a>
                                 </g>
                                 <path id="Icon_ionic-logo-vk" data-name="Icon ionic-logo-vk"
                                     d="M30.023,21.03c-.6-.562-1.1-.9-1.3-1.441a1.024,1.024,0,0,1-.07-.534c.028-.422.387-.97,2.784-4.141,1-1.322,2.3-2.918,2.3-4.113,0-.773-.316-.963-1.463-.963h-5.2c-.457,0-.766.626-.956,1.153a28.811,28.811,0,0,1-1.5,3.08A11.082,11.082,0,0,1,21.8,17.754a.645.645,0,0,1-.387.056.665.665,0,0,1-.436-.26c-.162-.2-.415-.541-.316-3.79.056-1.814.26-3.08-.12-3.853A1.333,1.333,0,0,0,20.2,9.52a7.689,7.689,0,0,0-3.375-.527,11.069,11.069,0,0,0-2.813.3,2.784,2.784,0,0,0-1.329.844c-.176.232.3.113.766.323a1.437,1.437,0,0,1,.788.654,8.161,8.161,0,0,1,.373,4.69,5.205,5.205,0,0,1-.464,1.793.634.634,0,0,1-.668.218c-1.132-.345-2.011-1.828-2.9-3.565-.921-1.814-1.392-3.087-1.645-3.607a1.3,1.3,0,0,0-1.294-.8H2.974a.693.693,0,0,0-.7.633c0,.773,1.308,3.023,2.1,4.641a35.067,35.067,0,0,0,5.794,8.452A10.817,10.817,0,0,0,17.529,27a16.811,16.811,0,0,0,2.341-.105,1.028,1.028,0,0,0,.4-.176c.5-.387.408-1.125.443-1.7a3.207,3.207,0,0,1,.492-1.828.977.977,0,0,1,1.308-.288,4.359,4.359,0,0,1,1.209,1.062,17.626,17.626,0,0,0,2.2,2.264,4.1,4.1,0,0,0,1.259.612A5.057,5.057,0,0,0,28.962,27c.682-.028,1.2-.021,2.039-.021a5.515,5.515,0,0,0,2.327-.246.929.929,0,0,0,.422-.795C33.75,25.1,32.892,23.709,30.023,21.03Z"
@@ -161,9 +169,11 @@
                             </g>
                             <g id="Group_600" data-name="Group 600" transform="translate(167 35)">
                                 <g transform="matrix(1, 0, 0, 1, -176.2, -35)" filter="url(#Rectangle_481)">
+                                    <a href="https://www.tripadvisor.com/Attraction_Review-g293932-d23954458-Reviews-2expedition_Tour_OperatorYerevan.html">
                                     <rect id="Rectangle_481-2" data-name="Rectangle 481" width="48"
                                         height="48" rx="8" transform="translate(176 35)" fill="#284525">
                                     </rect>
+                                </a>
                                 </g>
                                 <path id="Icon_awesome-tripadvisor" data-name="Icon awesome-tripadvisor"
                                     d="M11.7,19.724a1.685,1.685,0,1,1-1.685-1.685A1.685,1.685,0,0,1,11.7,19.724ZM30.33,18.04a1.684,1.684,0,1,0,1.684,1.684A1.684,1.684,0,0,0,30.33,18.04Zm6.285,9.808a10.136,10.136,0,0,1-14.23-1.727l-2.178,3.257-2.157-3.23A10.127,10.127,0,0,1,1.984,13.821,13.132,13.132,0,0,0,0,9.8l6.348,0A25.206,25.206,0,0,1,20.2,6,24.636,24.636,0,0,1,33.717,9.751l6.765.005a13.058,13.058,0,0,0-1.993,4.053A10.136,10.136,0,0,1,36.615,27.848ZM18.237,19.811A8.092,8.092,0,1,0,10.146,27.9a8.092,8.092,0,0,0,8.091-8.092v0Zm2.01-.735a10.1,10.1,0,0,1,9.782-9.353A23.846,23.846,0,0,0,20.2,7.768a25.053,25.053,0,0,0-9.855,1.916,10.141,10.141,0,0,1,9.9,9.392Zm17.7-2.023a8.092,8.092,0,0,0-15.184,5.6v0a8.092,8.092,0,0,0,15.184-5.6ZM15.02,19.724v.008a5.01,5.01,0,1,1,0-.008Zm-1.724,0v-.006a3.287,3.287,0,1,0,0,.006Zm22.038,0v0a5.007,5.007,0,1,1-5-5.01,5.007,5.007,0,0,1,5,5.01Zm-1.723,0a3.283,3.283,0,1,0-3.281,3.284,3.283,3.283,0,0,0,3.281-3.284h0Z"
@@ -171,9 +181,11 @@
                             </g>
                             <g id="Group_599" data-name="Group 599" transform="translate(84 107)">
                                 <g transform="matrix(1, 0, 0, 1, -93.2, -107)" filter="url(#Rectangle_482)">
+                                    <a href="https://www.youtube.com/channel/UCSXv156bR57PHei3QdMlBtw">
                                     <rect id="Rectangle_482-2" data-name="Rectangle 482" width="48"
                                         height="48" rx="8" transform="translate(93 107)" fill="#284525">
                                     </rect>
+                                </a>
                                 </g>
                                 <g id="Icon_feather-youtube" data-name="Icon feather-youtube"
                                     transform="translate(7 12)">
