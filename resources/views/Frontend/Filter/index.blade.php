@@ -62,7 +62,7 @@
                                         <span class=""><i class="fa-solid fa-star"></i></span>
                                     </div>
                                     <div class="package-btn">
-                                        <a href="{{ url('/Bv') }}"> <button class="package-view">
+                                        <a href="{{ url('/tour/search/'.$tour->id) }}"> <button class="package-view">
                                                {{__('Details')}}
                                             </button>
                                         </a>

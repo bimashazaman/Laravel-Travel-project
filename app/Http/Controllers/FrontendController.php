@@ -6,6 +6,7 @@ use App\Models\CreatorDestination;
 use App\Models\Destination;
 use App\Models\HomeCMS;
 use App\Models\Meal;
+use App\Models\Review;
 use App\Models\Tour;
 use App\Models\TourCategory;
 use Illuminate\Http\Request;
@@ -60,6 +61,40 @@ class FrontendController extends Controller
 
         return view('Frontend.Filter.index', compact( 'tours','destination','types'));
 
+    }
+
+    public function searchTour($id){
+
+        $tour = Tour::with('images')
+            ->with('highlights')
+            ->with('facility')
+            ->with('program')
+            ->with('types')
+            ->with('useful')
+            ->with('departureTable')
+            ->where('id', $id)->first();
+
+        $category = TourCategory::where('id', 1)->first();
+
+
+        //admin will select from the option tour to show in related tours sections
+
+        $relatedTour = Tour::where('related_id', $id)
+            ->with('category')
+            // ->where('id', '!=', $tour->id)
+            ->with('images')
+            ->inRandomOrder()
+            ->take(3)
+            ->get();
+
+        // $related = relatedTour::where($id, 'tour_id');
+
+
+        //get reviews
+
+        $reviews = Review::with('images')->where('category_id', $id)->get();
+
+        return view('Frontend.BasicTours.BasicTour', compact('tour', 'category', 'relatedTour',  'reviews'));
     }
 
 

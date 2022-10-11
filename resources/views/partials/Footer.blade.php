@@ -42,10 +42,13 @@
                 <div class="col-sm-3 col-md-2 item">
                     <h3>Contact us</h3>
                     <ul>
-                        <li><a href="#">Mail: touracademy@gmail.com</a></li>
-                        <li><a href="#">Mobile: +37498300852 </a></li>
-                        <li><a href="#">Phone: +37410525225</a></li>
-                        <li><a href="#">Address: Yerevan</a></li>
+                        <li><a href="#">Mail: info@2expediti
+                                on.com
+                            </a></li>
+                        <li><a href="#">Mobile: +37494
+                                494 674
+                            </a></li>
+
                     </ul>
                 </div>
                 <br>

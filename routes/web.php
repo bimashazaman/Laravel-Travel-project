@@ -405,7 +405,9 @@ Route::get('/admin/d', function () {
 
 
 
-Route::any('/search/', [FrontendController::class, 'search']);
+Route::any('/search/{locale?}', [FrontendController::class, 'search']);
+
+Route::get('/tour/search/{id}', [FrontendController::class, 'searchTour']);
 
 
 Route::get('/home/{locale?}', [FrontendController::class, 'index'])->name('blaaaaa');
