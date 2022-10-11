@@ -20,11 +20,11 @@
                     <h3>Services</h3>
                     <ul>
                         <li><a href="{{ url('/driver') }}">Rent a transport</a></li>
-                        <li><a href="{{ url('/caa') }}">Rent a transport without driver</a></li>
+                        <li><a href="{{ url('/caa') }}">Transport without driver</a></li>
                         <li><a href="{{ url('/hs') }}">Book an accommodation</a></li>
 
-                        <li><a href="{{ url('/nearbyByCategoryId/1') }}">Tours to Armenia,Georgia and Iran</a></li>
-                        <li><a href="{{ url('/MT') }}">Transfer Form and to Airport</a></li>
+                        <li><a href="{{ url('/nearbyByCategoryId/1') }}">Tours to Armenia,Georgia</a></li>
+                        <li><a href="{{ url('/MT') }}">Transfer Form Airport</a></li>
                         <li><a href="{{ url('/mices') }}">MICE</a></li>
                     </ul>
                 </div>
@@ -33,9 +33,11 @@
                     <ul>
                         <li><a href="{{ url('/aboutUs') }}">Who are we</a></li>
                         <li><a href="{{ url('/ways') }}">How to book a tour</a></li>
-                        
-                        <li><a href="#">FAQ's</a></li>
-                        <li><a href="#">Reviews</a></li>
+                        <li><a href="{{ url('/reviews') }}">Reviews</a></li>
+                        <li><a href="{{ url('/getAllThingsToDo') }}">What to do in Armenia</a></li>
+                        <li><a href="{{ url('/getThingsToSeeByCategoryId/1') }}">What to see in Armenia</a></li>
+                        <li><a href="{{ url('/getfoodsByCategory/1') }}">Food and Drink</a></li>
+                        <li><a href="{{ url('/usefulToKnow') }}">Useful to know</a></li>
                     </ul>
                 </div>
 
