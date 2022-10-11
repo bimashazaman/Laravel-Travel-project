@@ -9,8 +9,8 @@
                     <h3>Tours</h3>
                     <ul>
                         <li><a href="{{ url('/Bv') }}">Classic Tours</a></li>
-                        <li><a href="{{ url('/guaranteeTour')}}">Guarantee Departures</a></li>
-                        <li><a href="{{ url('/GastroTours')}}">Gastro Tours</a></li>
+                        <li><a href="{{ url('/guaranteeTour') }}">Guarantee Departures</a></li>
+                        <li><a href="{{ url('/GastroTours') }}">Gastro Tours</a></li>
                         <li><a href="{{ url('/activeTours') }}">Active Tours</a></li>
                         <li><a href="{{ url('/oneDay') }}">One Day Tours</a></li>
                         <li><a href="{{ url('/themed') }}">Themed Tours</a></li>
@@ -257,14 +257,16 @@
     <div>
         <p style="float: right; color:rgb(231, 228, 228); padding-left: 40px; padding-right:40px; font-size:14px">
             Designed by <span>
-                <a href="https://www.upwork.com/freelancers/lilitpoghosyan15" style="color: rgb(231, 228, 228); text-decoration:underline ">Lilit</a>
+                <a href="https://www.upwork.com/freelancers/lilitpoghosyan15"
+                    style="color: rgb(231, 228, 228); text-decoration:underline ">Lilit</a>
             </span>
             <span>
                 &
             </span>
-            <span style="margin-left: 5px; font-size:14px" >
+            <span style="margin-left: 5px; font-size:14px">
                 Created by <span>
-                    <a href="https://www.linkedin.com/in/bimasha-zaman/" style="color: rgb(231, 228, 228); text-decoration:underline ">
+                    <a href="https://www.linkedin.com/in/bimasha-zaman/"
+                        style="color: rgb(231, 228, 228); text-decoration:underline ">
                         Bimasha
                     </a>
                 </span>
@@ -276,4 +278,10 @@
         </div>
     </div>
 
+</div>
+
+<div style=" background-color:#284525; color:azure;padding:5px">
+    <center>
+        © “EXPEDITION” LLC 2022, ALL RIGHTS RESERVED
+    </center>
 </div>
