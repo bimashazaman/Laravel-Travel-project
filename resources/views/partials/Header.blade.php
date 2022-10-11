@@ -170,6 +170,7 @@
                                          </a>
 
 
+
                                          <a class="dropdown-item" href="{{ url(url()->current() . '/' . 'en') }}">
                                              {{ __('English') }}
 
