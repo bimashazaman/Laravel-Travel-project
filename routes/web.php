@@ -49,8 +49,18 @@ use App\Http\Controllers\UsefulInfoController;
 use App\Http\Controllers\VacancyCmsController;
 use App\Http\Controllers\VacancyController;
 use App\Http\Controllers\WaysToBookController;
+use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use Illuminate\Support\Facades\Route;
+
+// php artosan optimize
+Route::get('/optimize', function () {
+    Artisan::call('optimize');
+
+
+    return 'DONE'; //Return anything
+});
+
 
 
 //============login===============
