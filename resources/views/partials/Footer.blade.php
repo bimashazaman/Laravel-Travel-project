@@ -2,7 +2,7 @@
     <div class="container-fluid">
         <div class="footerImage" style="text-align: center">
             <a href="{{ url('/Articles') }}">
-                <img src="http://127.0.0.1:8000/images/footerImage.png" style="width: 95%" alt="">
+                <img src="{{ asset('/images/footerImage.png') }}" style="width: 95%" alt="">
             </a>
         </div>
         <footer style="width: 95%;display: flow-root;margin-left: 6%;">
@@ -36,7 +36,9 @@
                         <li><a href="{{ url('/ways') }}">{{ __('How to book a tour') }}</a></li>
                         <li><a href="{{ url('/reviews') }}">{{ __('Reviews') }}</a></li>
                         <li><a href="{{ url('/getAllThingsToDo') }}">{{ __('What to do in Armenia') }}</a></li>
-                        <li><a href="{{ url('/getThingsToSeeByCategoryId/1') }}">{{ __('What to see in Armenia') }}</a></li>
+                        <li><a
+                                href="{{ url('/getThingsToSeeByCategoryId/1') }}">{{ __('What to see in Armenia') }}</a>
+                        </li>
                         <li><a href="{{ url('/getfoodsByCategory/1') }}">{{ __('Food and Drink') }}</a></li>
                         <li><a href="{{ url('/usefulToKnow') }}">{{ __('Useful to know') }}</a></li>
                     </ul>
@@ -56,6 +58,11 @@
                 </div>
                 <br>
                 <div class="col-sm-3 col-md-2 item" style="/* display: flex; */margin-left: -1%;">
+                    <div class="footerIcon">
+                        <a href="https://t.me/toexpedition">
+                            <img src="{{ asset('images/icon/telegram.png') }}" alt="" style="   ">
+                        </a>
+                    </div>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200"
                         height="167" viewBox="0 0 233 167" style="margin-top: -9%;">
                         <defs>
@@ -108,11 +115,7 @@
                                 <feComposite in="SourceGraphic"></feComposite>
                             </filter>
                         </defs>
-                        <g id="Group_605" data-name="Group 605" transform="translate(9.199)"
-                            style="
-    /* width: 20%; */
-    /* height: 20%; */
-">
+                        <g id="Group_605" data-name="Group 605" transform="translate(9.199)">
                             <g id="Group_485" data-name="Group 485" transform="translate(0)">
                                 <g id="Group_424" data-name="Group 424">
                                     <text id="Follow_us" data-name="Follow us" transform="translate(54.801 22)"
@@ -122,6 +125,8 @@
                                     </text>
                                 </g>
                             </g>
+
+
                             <g id="Group_597" data-name="Group 597" transform="translate(84 35)">
                                 <g transform="matrix(1, 0, 0, 1, -93.2, -35)" filter="url(#Rectangle_478)">
                                     <a href="https://www.facebook.com/toexpedition">
@@ -205,19 +210,23 @@
                                         fill="none" stroke="#fff" stroke-linecap="round" stroke-linejoin="round"
                                         stroke-width="3"></path>
                                 </g>
+
+
                             </g>
+
                             <g id="Group_596" data-name="Group 596" transform="translate(0 35)">
                                 <g transform="matrix(1, 0, 0, 1, -9.2, -35)" filter="url(#Rectangle_483)">
                                     <rect id="Rectangle_483-2" data-name="Rectangle 483" width="48"
                                         height="48" rx="8" transform="translate(9 35)" fill="#284525">
                                     </rect>
                                 </g>
-                                <path id="Icon_metro-pinterest" data-name="Icon metro-pinterest"
-                                    d="M15.862,21.944c-.811,4.248-1.8,8.32-4.732,10.447-.9-6.42,1.328-11.24,2.366-16.357-1.769-2.977.213-8.965,3.941-7.488,4.589,1.814-3.973,11.062,1.774,12.219,6,1.2,8.451-10.411,4.729-14.189C18.564,1.118,8.29,6.447,9.555,14.26c.307,1.91,2.28,2.488.788,5.124-3.441-.762-4.468-3.477-4.336-7.1C6.22,6.366,11.327,2.221,16.451,1.646c6.48-.726,12.562,2.38,13.4,8.474C30.8,17,26.929,24.454,20,23.917c-1.879-.147-2.665-1.078-4.137-1.973Z"
-                                    transform="translate(6.004 7.458)" fill="#fff"></path>
+
                             </g>
+
                         </g>
                     </svg>
+
+
                 </div>
                 <div class="col-sm-3 col-md-2 item">
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="129"
@@ -252,7 +261,7 @@
                             </g>
                             <g id="Group_595" data-name="Group 595" transform="translate(1651.199 3415)">
                                 <g transform="matrix(1, 0, 0, 1, -92.2, -35)" filter="url(#Rectangle_477)">
-                                    <a href="mailto:info@2expedition.com">
+                                    <a href="{{ url('/contact') }}">
                                         <rect id="Rectangle_477-2" data-name="Rectangle 477" width="48"
                                             height="48" rx="8" transform="translate(92 35)"
                                             fill="#fff">
@@ -265,7 +274,7 @@
                             </g>
                             <g id="Group_598" data-name="Group 598" transform="translate(1568.199 3415)">
                                 <g transform="matrix(1, 0, 0, 1, -9.2, -35)" filter="url(#Rectangle_476)">
-                                    <a href="tel:+37494494674">
+                                    <a href="{{ url('/call') }}">
                                         <rect id="Rectangle_476-2" data-name="Rectangle 476" width="48"
                                             height="48" rx="8" transform="translate(9 35)"
                                             fill="#fff">
@@ -310,6 +319,6 @@
 
 <div style=" background-color:#284525; color:azure;padding:5px">
     <center>
-       {{__(' © “EXPEDITION” LLC 2022, ALL RIGHTS RESERVED')}}
+        {{ __(' © “EXPEDITION” LLC 2022, ALL RIGHTS RESERVED') }}
     </center>
 </div>

@@ -57,9 +57,63 @@ use Illuminate\Support\Facades\Route;
 Route::get('/optimize', function () {
     Artisan::call('optimize');
 
+    return 'DONE'; //Return anything
+});
+
+// php artisan config:cache
+Route::get('/config-cache', function () {
+    Artisan::call('config:cache');
 
     return 'DONE'; //Return anything
 });
+
+// php artisan route:cache
+Route::get('/route-cache', function () {
+    Artisan::call('route:cache');
+
+    return 'DONE'; //Return anything
+});
+
+// php artisan route:clear
+Route::get('/route-clear', function () {
+    Artisan::call('route:clear');
+
+    return 'DONE'; //Return anything
+});
+
+// php artisan cache:clear
+Route::get('/cache-clear', function () {
+    Artisan::call('cache:clear');
+
+    return 'DONE'; //Return anything
+});
+
+
+// php artisan view:clear
+Route::get('/view-clear', function () {
+    Artisan::call('view:clear');
+
+    return 'DONE'; //Return anything
+});
+
+// php artisan config:clear
+
+Route::get('/config-clear', function () {
+    Artisan::call('config:clear');
+
+    return 'DONE'; //Return anything
+});
+
+// php artisan clear-compiled
+
+Route::get('/clear-compiled', function () {
+    Artisan::call('clear-compiled');
+
+    return 'DONE'; //Return anything
+});
+
+// php artisan optimize:clear
+
 
 
 

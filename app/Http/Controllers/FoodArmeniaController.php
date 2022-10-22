@@ -21,14 +21,14 @@ class FoodArmeniaController extends Controller
         return view('Backend.Admin.Armenia.FoodAndDrink.view', compact('categories','foods'));
     }
 
-   
+
     public function create()
     {
         $categories = FoodArmeniaCategory::all();
         return view('Backend.Admin.Armenia.FoodAndDrink.create', compact('categories'));
     }
 
-  
+
     public function store(Request $request)
     {
         $request->validate([
@@ -58,7 +58,7 @@ class FoodArmeniaController extends Controller
 
 
 
-       
+
      foreach ($request->file('images') as  $image) {
 
          $imageName = $image->getClientOriginalName();
@@ -68,15 +68,15 @@ class FoodArmeniaController extends Controller
          $image["path"] = "Food/" . $things->id . "/" . $imageName;
          $image->save();
          $things->images()->attach($image->id);
-     
+
      }
 
      return redirect()->back()->with("msg", "Created successfully!")
      ->with("success", true);
-        
+
     }
 
- 
+
 
 
     public function edit($id)
@@ -86,7 +86,7 @@ class FoodArmeniaController extends Controller
         return view('Backend.Admin.Armenia.FoodAndDrink.update', compact('categories','food'));
     }
 
-  
+
     public function update(Request $request, $id)
     {
         $validate = Validator::make($request->all(), [
@@ -99,27 +99,27 @@ class FoodArmeniaController extends Controller
             "distance" => "required|string",
             "price" => "required|numeric",
             "category_id" => "required",
-            
+
         ]);
         if ($validate->fails()) {
-           
+
             return redirect()
                 ->back()
                 ->with("msg", $validate->errors()->first())
                 ->with("fail", true);
         }
         try {
-           
+
             DB::beginTransaction();
-            
+
             $things = FoodArmenia::find($id);
             $things->fill($request->all());
             $things->save();
 
-            
+
 
             DB::commit();
-            
+
             return redirect()
                 ->back()
                 ->with("msg", "Updated successfully!")
@@ -132,17 +132,17 @@ class FoodArmeniaController extends Controller
 
     }
 
-  
+
     public function destroy($id)
     {
         try {
-           
+
             DB::beginTransaction();
-            
+
             $things = FoodArmenia::find($id);
             $things->delete();
             DB::commit();
-            
+
             return redirect()
                 ->back()
                 ->with("msg", "Deleted successfully!")
@@ -162,10 +162,10 @@ class FoodArmeniaController extends Controller
         }
         $foods = FoodArmenia::with('images')->where('category_id', $id)->simplePaginate(9);
         $category = FoodArmeniaCategory::where('id', $id)->first();
-        return view('Frontend.Armenia.foods', compact('foods', 'category'));
+        return view('Frontend.Armenia.Foods', compact('Foods', 'category'));
     }
 
-    
+
 
     public function getfoodsById($id, $locale= null)
     {

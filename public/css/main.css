@@ -3941,3 +3941,63 @@ form .submit-rating:hover {
 /* .ReqBox:hover {
     background-color: #FAEFD7; box-shadow:none; border:0.1px solid rgb(212, 211, 211)
 } */
+
+.footerIcon  {
+    position: absolute;
+    top: 34px;
+    left: 27px;
+    border: #140b0a;
+    border-radius: 50%;
+
+    color: #fff;
+
+
+}
+
+/* // media query for phone */
+
+@media screen and (max-width: 600px) {
+    .footerIcon {
+        position: absolute;
+        top: 34px;
+        right: 5px;
+        left: 5px;
+        border: #140b0a;
+        border-radius: 50%;
+
+        color: #fff;
+    }
+
+    .footerIcon img {
+        position: absolute;
+       bottom: 0px;
+
+        right: 62%;
+        border: #140b0a;
+        border-radius: 50%;
+
+        color: #fff;
+    }
+
+
+}
+
+
+
+
+
+
+/* @media screen and (max-width: 300px) {
+    .footerIcon {
+        position: absolute;
+        top: 34px;
+        left: 80px;
+
+        border: #140b0a;
+        border-radius: 50%;
+        background-color: #140b0a;
+        color: #fff;
+    }
+} */
+
+
