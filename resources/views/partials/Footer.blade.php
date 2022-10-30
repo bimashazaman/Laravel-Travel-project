@@ -60,7 +60,10 @@
                 <div class="col-sm-3 col-md-2 item" style="/* display: flex; */margin-left: -1%;">
                     <div class="footerIcon">
                         <a href="https://t.me/toexpedition">
-                            <img src="{{ asset('images/icon/telegram.png') }}" alt="" style="   ">
+                            <img src="{{ asset('images/icon/telegram.png') }}" alt=""
+                                style="
+    position: relative;   top: 60px; left: 10px;
+                            ">
                         </a>
                     </div>
                     <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="200"
