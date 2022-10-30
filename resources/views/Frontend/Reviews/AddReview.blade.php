@@ -15,13 +15,17 @@
         </div>
     @endif
 
-    <div class="container" style="padding: 30px">
+    <div class="container">
         <h2 style="text-align: center; margin-bottom: -70px">
             {{ __('Add Review') }}
         </h2>
 
         <div class="row" style="padding: 40px; margin:auto">
-            <div class="col-md-9 card" style="padding:30px; margin: 120px; box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px">
+            <div class="col-md-9 card" style="padding:30px;
+
+
+
+            box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px">
                 <form action="/review/store"method="POST" enctype="multipart/form-data">
                     {{ csrf_field() }}
                     <input type="text" style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px; margin-bottom:10px"
@@ -39,7 +43,7 @@
                     </select>
                     <br>
 
-                    <input style="box-shadow: rgba(17, 17, 26, 0.1) 0px 0px 16px;" type="file" name="images[]"
+                    <input type="file" name="images[]"
                         multiple="">
 
 
